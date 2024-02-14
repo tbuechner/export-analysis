@@ -1,1542 +1,1491 @@
 <export>
-    <workspace>
-        <name>OKR</name>
-        <types>
-            <type>
-                <name>cf.cplace.solution.okr.cycle</name>
-                <localizedNameSingular>{"de":"Zyklus","en":"Cycle"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Zyklen","en":"Cycles"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-redo</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.solution.okr.year&gt; / &lt;cf.cplace.solution.okr.quarter&gt; / &lt;cf.cplace.solution.okr.statusForNameGenerationPattern&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.year</name>
-                        <localizedName>{"de":"Jahr","en":"Year"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.quarter</name>
-                        <localizedName>{"de":"Quartal","en":"Quarter"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.status</name>
-                        <localizedName>{"de":"Status","en":"Status"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["s#15 Next","s#25 Current","s#35 Closed","s#45 Draft"]</enumerationValues>
-                        <enumerationValues2icons>[]</enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#25
-                            Current":{"localizations":{"de":{"language":"de","value":"Aktuell"},"en":{"language":"en","value":"Current"}}},"s#35
-                            Closed":{"localizations":{"de":{"language":"de","value":"Geschlossen"},"en":{"language":"en","value":"Closed"}}},"s#45
-                            Draft":{"localizations":{"de":{"language":"de","value":"Entwurf"},"en":{"language":"en","value":"Draft"}}},"s#15
-                            Next":{"localizations":{"de":{"language":"de","value":"Nächster"},"en":{"language":"en","value":"Next"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cyclesDashboard</name>
-                        <localizedName>{"de":"Zyklen Dashboard","en":"Cycles Dashboard"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>["lpage\/u6t0du1tsgeax1xsba85ycm3t"]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cyclesDashboard</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.start</name>
-                        <localizedName>{"de":"Start","en":"Start"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.end</name>
-                        <localizedName>{"de":"Ende","en":"End"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.statusForNameGenerationPattern</name>
-                        <localizedName>{"de":"Status für die Namensgenerierung","en":"Status for name generation pattern"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.set</name>
-                <localizedNameSingular>{"de":"Set","en":"Set"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Sets","en":"Sets"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-align-justify</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.solution.okr.organizationalUnit&gt; &lt;cf.cplace.solution.okr.cycle&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cycle</name>
-                        <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.level</name>
-                        <localizedName>{"de":"Level","en":"Level"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["sOrganization","sDepartment","sTeam"]</enumerationValues>
-                        <enumerationValues2icons>[]</enumerationValues2icons>
-                        <enumerationValues2localizedLabels/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.setLead</name>
-                        <localizedName>{"de":"Set Leiter","en":"Set Lead"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity/>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>person</linkEntityKind>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.setContributors</name>
-                        <localizedName>{"de":"Set Mitarbeiter","en":"Set Contributor"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity/>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>person</linkEntityKind>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.organizationalUnit</name>
-                        <localizedName>{"de":"Organisationseinheit","en":"Organizational Unit"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.parentSet</name>
-                        <localizedName>{"de":"Übergeordnetes Set","en":"Parent Set"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.objective</name>
-                <localizedNameSingular>{"de":"Objective","en":"Objective"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Objectives","en":"Objectives"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-bullseye</iconName>
-                <nameGenerationPattern>O&lt;cf.cplace.solution.okr.number&gt; &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.number</name>
-                        <localizedName>{"de":"Nummer","en":"Number"}</localizedName>
-                        <localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter>{}</localizedNumberTextAfter>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Number</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.title</name>
-                        <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.set</name>
-                        <localizedName>{"de":"Set","en":"Set"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.accomplished</name>
-                        <localizedName>{"de":"Erreicht","en":"Accomplished"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s#25 - no"]</defaultValues>
-                        <enumerationValues>["s#15 - yes","s#25 - no"]</enumerationValues>
-                        <enumerationValues2icons>[{"element":"s#25 - no","icon":"x-103-cplace-square-red-close"},{"element":"s#15 -
-                            yes","icon":"x-112-cplace-square-green-check"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#25 -
-                            no":{"localizations":{"de":{"language":"de","value":"Nein"},"en":{"language":"en","value":"No"}}},"s#15 -
-                            yes":{"localizations":{"de":{"language":"de","value":"Ja"},"en":{"language":"en","value":"Yes"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cycle</name>
-                        <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.description</name>
-                        <localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>RichString</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.keyResult</name>
-                <localizedNameSingular>{"de":"Schlüsselergebnis","en":"Key Result"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Schlüsselergebnisse","en":"Key Results"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-key</iconName>
-                <nameGenerationPattern>KR&lt;cf.cplace.solution.okr.number&gt; &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.number</name>
-                        <localizedName>{"de":"Nummer","en":"Number"}</localizedName>
-                        <localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter>{}</localizedNumberTextAfter>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Number</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.title</name>
-                        <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.progressIndicator</name>
-                        <localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["s#15 green","s#25 yellow","s#35 red","s#45 outdated"]</enumerationValues>
-                        <enumerationValues2icons>[{"element":"s#15 green","icon":"circle-003-green"},{"element":"s#25
-                            yellow","icon":"circle-002-yellow"},{"element":"s#45 outdated","icon":"circle-000-gray"},{"element":"s#35
-                            red","icon":"circle-001-red"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#35 red":{"localizations":{"de":{"language":"de","value":"Off
-                            track"},"en":{"language":"en","value":"Off track"}}},"s#15 green":{"localizations":{"de":{"language":"de","value":"On
-                            track"},"en":{"language":"en","value":"On track"}}},"s#25
-                            yellow":{"localizations":{"de":{"language":"de","value":"Progressing"},"en":{"language":"en","value":"Progressing"}}},"s#45
-                            outdated":{"localizations":{"de":{"language":"de","value":"Outdated"},"en":{"language":"en","value":"Outdated"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.confidenceLevel</name>
-                        <localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s0.5"]</defaultValues>
-                        <enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
-                        <enumerationValues2icons>
-                            [{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>
-                            {"s0.6":{"localizations":{"de":{"language":"de","value":"0.6"},"en":{"language":"en","value":"0.6"}}},"s0.5":{"localizations":{"de":{"language":"de","value":"0.5"},"en":{"language":"en","value":"0.5"}}},"s0.8":{"localizations":{"de":{"language":"de","value":"0.8"},"en":{"language":"en","value":"0.8"}}},"s0.7":{"localizations":{"de":{"language":"de","value":"0.7"},"en":{"language":"en","value":"0.7"}}},"s0.2":{"localizations":{"de":{"language":"de","value":"0.2"},"en":{"language":"en","value":"0.2"}}},"s0.1":{"localizations":{"de":{"language":"de","value":"0.1"},"en":{"language":"en","value":"0.1"}}},"s1.0":{"localizations":{"de":{"language":"de","value":"1.0"},"en":{"language":"en","value":"1.0"}}},"s0.4":{"localizations":{"de":{"language":"de","value":"0.4"},"en":{"language":"en","value":"0.4"}}},"s0.3":{"localizations":{"de":{"language":"de","value":"0.3"},"en":{"language":"en","value":"0.3"}}},"s0.9":{"localizations":{"de":{"language":"de","value":"0.9"},"en":{"language":"en","value":"0.9"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.gradingForecast</name>
-                        <localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
-                        <enumerationValues2icons>
-                            [{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.smallSupport</name>
-                        <localizedName>{"de":"Receive Small Support","en":"Receive Small Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity/>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.bigSupport</name>
-                        <localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity/>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.giveBigSupport</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.organizationalUnit</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.giveBigSupport</name>
-                        <localizedName>{"de":"Give Big Support","en":"Give Big Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity/>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.receiveBigSupport</name>
-                        <localizedName>{"de":"Receive Big Support","en":"Receive Big Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity/>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.objective</name>
-                        <localizedName>{"de":"Objective","en":"Objective"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.objective</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.progress</name>
-                        <localizedName>{"de":"Fortschritt","en":"Progress"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.progress</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.set</name>
-                        <localizedName>{"de":"Set","en":"Set"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.objective</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.set</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cycle</name>
-                        <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.organizationalUnit</name>
-                        <localizedName>{"de":"Organsationseinheit","en":"Organizational Unit"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.organizationalUnit</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.lastUpdate</name>
-                        <localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.progress</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.lastUpdate</referencedAttributeName>
-                        </derivable>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.progress</name>
-                <localizedNameSingular>{"de":"Fortschritt","en":"Progress"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Fortschritt","en":"Progress"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-folder</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.solution.okr.keyResult&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.result</name>
-                        <localizedName>{"de":"Ergebnise","en":"Results"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.problem</name>
-                        <localizedName>{"de":"Probleme","en":"Problems"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.lessonsLearned</name>
-                        <localizedName>{"de":"Learnings","en":"Learnings"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.nextSteps</name>
-                        <localizedName>{"de":"Nächste Schritte","en":"Next Steps"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.keyResult</name>
-                        <localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cycle</name>
-                        <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.objective</name>
-                        <localizedName>{"de":"Objective","en":"Objective"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.objective</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.objective</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.smallSupport</name>
-                        <localizedName>{"de":"Small Support","en":"Small Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity/>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.smallSupport</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.bigSupport</name>
-                        <localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity/>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.bigSupport</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.progressIndicator</name>
-                        <localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["s#15 green","s#25 yellow","s#35 red","s#45 outdated"]</enumerationValues>
-                        <enumerationValues2icons>[{"element":"s#15 green","icon":"circle-003-green"},{"element":"s#25
-                            yellow","icon":"circle-002-yellow"},{"element":"s#45 outdated","icon":"circle-000-gray"},{"element":"s#35
-                            red","icon":"circle-001-red"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#35 red":{"localizations":{"de":{"language":"de","value":"Off
-                            track"},"en":{"language":"en","value":"Off track"}}},"s#15 green":{"localizations":{"de":{"language":"de","value":"On
-                            track"},"en":{"language":"en","value":"On track"}}},"s#25
-                            yellow":{"localizations":{"de":{"language":"de","value":"Progressing"},"en":{"language":"en","value":"Progressing"}}},"s#45
-                            outdated":{"localizations":{"de":{"language":"de","value":"Outdated"},"en":{"language":"en","value":"Outdated"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.confidenceLevel</name>
-                        <localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s0.5"]</defaultValues>
-                        <enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
-                        <enumerationValues2icons>
-                            [{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.gradingForecast</name>
-                        <localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
-                        <enumerationValues2icons>
-                            [{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.lastUpdate</name>
-                        <localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.set</name>
-                        <localizedName>{"de":"Set","en":"Set"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp/>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>true</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <derivable>
-                            <referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
-                            <referencedAttributeName>cf.cplace.solution.okr.set</referencedAttributeName>
-                        </derivable>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.task</name>
-                <localizedNameSingular>{"de":"Aufgabe","en":"Task"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Aufgaben","en":"Tasks"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>cf-task</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.digitalBoard.title&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.title</name>
-                        <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.responsible</name>
-                        <localizedName>{"de":"Verantwortliche(r)","en":"Responsible"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>person</linkEntityKind>
-                        <linkSameWorkspace>false</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.description</name>
-                        <localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.status</name>
-                        <localizedName>{"de":"Status","en":"Status"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s#15 planned"]</defaultValues>
-                        <enumerationValues>["s#15 planned","s#25 in progress","s#35 done","s#45 cancelled"]</enumerationValues>
-                        <enumerationValues2icons>[]</enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#15
-                            planned":{"localizations":{"de":{"language":"de","value":"Geplant"},"en":{"language":"en","value":"Planned"}}},"s#25 in
-                            progress":{"localizations":{"de":{"language":"de","value":"In Arbeit"},"en":{"language":"en","value":"In
-                            progress"}}},"s#45
-                            cancelled":{"localizations":{"de":{"language":"de","value":"Abgebrochen"},"en":{"language":"en","value":"Cancelled"}}},"s#35
-                            done":{"localizations":{"de":{"language":"de","value":"Fertig"},"en":{"language":"en","value":"Done"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.dueDate</name>
-                        <localizedName>{"de":"Fälligkeitsdatum","en":"Due Date"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.keyResult</name>
-                        <localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.digitalBoard.escalationLevel</name>
-                        <localizedName>{"de":"Eskalationslevel","en":"Escalation Level"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s#15 - none"]</defaultValues>
-                        <enumerationValues>["s#15 - none","s#25 - handRaised"]</enumerationValues>
-                        <enumerationValues2icons>[{"element":"s#25 - handRaised","icon":"cf.cplace.enumerationIcons|yellowhand"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>{"s#15 -
-                            none":{"localizations":{"de":{"language":"de","value":"Kein"},"en":{"language":"en","value":"None"}}},"s#25 -
-                            handRaised":{"localizations":{"de":{"language":"de","value":"Hand gehoben"},"en":{"language":"en","value":"Hand
-                            Raised"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.priority</name>
-                <localizedNameSingular>{"de":"Priorität","en":"Priority"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Prioritäten","en":"Priorities"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-list-ol</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.date</name>
-                        <localizedName>{"de":"Datum","en":"Date"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter>{}</localizedNumberTextAfter>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.title</name>
-                        <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.dimension</name>
-                        <localizedName>{"de":"Dimension","en":"Dimension"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.strategyDashboard</name>
-                        <localizedName>{"de":"Strategie","en":"Strategy"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.strategyDashbaord</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.meeting</name>
-                <localizedNameSingular>{"de":"OKR Meeting","en":"OKR Meeting"}</localizedNameSingular>
-                <localizedNamePlural>{"de":"Meetings","en":"Meetings"}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>optional</localizedPageNamesMode>
-                <iconName>fa-calendar-alt</iconName>
-                <nameGenerationPattern>&lt;cf.cplace.solution.okr.meetingType&gt; - &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.title</name>
-                        <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Text</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <textRegExp/>
-                        <textRegExpErrorMessage/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.meetingType</name>
-                        <localizedName>{"de":"Meeting Typ","en":"Meeting Type"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>TextEnumeration</typeConstraint>
-                        <defaultValues>["s1on1"]</defaultValues>
-                        <enumerationValues>["s1on1","sLeadership","sWorkshop"]</enumerationValues>
-                        <enumerationValues2icons>
-                            [{"element":"sLeadership","icon":"circle-005-lightblue"},{"element":"s1on1","icon":"circle-003-green"},{"element":"sWorkshop","icon":"circle-004-orange"}]
-                        </enumerationValues2icons>
-                        <enumerationValues2localizedLabels>
-                            {"sLeadership":{"localizations":{"de":{"language":"de","value":"Leadership"},"en":{"language":"en","value":"Leadership"}}},"s1on1":{"localizations":{"de":{"language":"de","value":"1on1"},"en":{"language":"en","value":"1on1"}}},"sWorkshop":{"localizations":{"de":{"language":"de","value":"Workshop"},"en":{"language":"en","value":"Workshop"}}}}
-                        </enumerationValues2localizedLabels>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.date</name>
-                        <localizedName>{"de":"Datum","en":"Date"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName/>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>DAY_YEAR_LONG</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Date</typeConstraint>
-                        <defaultValues/>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.cycle</name>
-                        <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-                        <localizedShortName>{"de":"Zyklus","en":"Cycle"}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.set</name>
-                        <localizedName>{"de":"Set","en":"Set"}</localizedName>
-                        <localizedShortName>{"de":"Sets","en":"Sets"}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>maximalOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.meetingsDashbaord</name>
-                        <localizedName>{"de":"Meeting Dashbaord","en":"Meeting Dashbaord"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>["lpage\/80ys7f2zyb6co9y45mu7zl2h7"]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.meetingsDashbaord</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>true</linkIsHierarchy>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-            <type>
-                <name>cf.cplace.solution.okr.selectNextCycle</name>
-                <localizedNameSingular>{"de":"Select next Cycle","en":"Select next Cycle"}</localizedNameSingular>
-                <localizedNamePlural>{}</localizedNamePlural>
-                <description/>
-                <localizedPageNamesMode>none</localizedPageNamesMode>
-                <iconName>fa-list</iconName>
-                <nameGenerationPattern/>
-                <displayNameGenerationPattern/>
-                <internalAttributeNamePrefix/>
-                <isTuple>false</isTuple>
-                <namesAreUnique>false</namesAreUnique>
-                <attributeDefinitions>
-                    <attributeDefinition>
-                        <name>cf.cplace.solution.okr.nextCycle</name>
-                        <localizedName>{"de":"Nächster Zyklus","en":"Next Cycle"}</localizedName>
-                        <localizedShortName>{}</localizedShortName>
-                        <localizedShortHelp>{}</localizedShortHelp>
-                        <localizedInverseRoleName>{}</localizedInverseRoleName>
-                        <multiplicity>exactlyOne</multiplicity>
-                        <isReadOnly>false</isReadOnly>
-                        <numberPrecision>-1</numberPrecision>
-                        <numberTextAfter/>
-                        <localizedNumberTextAfter/>
-                        <dateSpecificity>DAY</dateSpecificity>
-                        <dateFormat>-</dateFormat>
-                        <dateWithTime>false</dateWithTime>
-                        <typeConstraint>Link</typeConstraint>
-                        <defaultValues>[]</defaultValues>
-                        <linkEntityKind>page</linkEntityKind>
-                        <linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
-                        <linkSameWorkspace>true</linkSameWorkspace>
-                        <linkIsHierarchy>false</linkIsHierarchy>
-                    </attributeDefinition>
-                </attributeDefinitions>
-            </type>
-        </types>
-    </workspace>
+<workspace>
+<name>OKR</name>
+<types>
+<type>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedNameSingular>{"de":"Zyklus","en":"Cycle"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Zyklen","en":"Cycles"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-redo</iconName>
+<nameGenerationPattern>&lt;cf.cplace.solution.okr.year&gt; / &lt;cf.cplace.solution.okr.quarter&gt; / &lt;cf.cplace.solution.okr.statusForNameGenerationPattern&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.year</name>
+<localizedName>{"de":"Jahr","en":"Year"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.quarter</name>
+<localizedName>{"de":"Quartal","en":"Quarter"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.status</name>
+<localizedName>{"de":"Status","en":"Status"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["s#15 Next","s#25 Current","s#35 Closed","s#45 Draft"]</enumerationValues>
+<enumerationValues2icons>[]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#25 Current":{"localizations":{"de":{"language":"de","value":"Aktuell"},"en":{"language":"en","value":"Current"}}},"s#35 Closed":{"localizations":{"de":{"language":"de","value":"Geschlossen"},"en":{"language":"en","value":"Closed"}}},"s#45 Draft":{"localizations":{"de":{"language":"de","value":"Entwurf"},"en":{"language":"en","value":"Draft"}}},"s#15 Next":{"localizations":{"de":{"language":"de","value":"Nächster"},"en":{"language":"en","value":"Next"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cyclesDashboard</name>
+<localizedName>{"de":"Zyklen Dashboard","en":"Cycles Dashboard"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>["lpage\/u6t0du1tsgeax1xsba85ycm3t"]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cyclesDashboard</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.start</name>
+<localizedName>{"de":"Start","en":"Start"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.end</name>
+<localizedName>{"de":"Ende","en":"End"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.statusForNameGenerationPattern</name>
+<localizedName>{"de":"Status für die Namensgenerierung","en":"Status for name generation pattern"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.set</name>
+<localizedNameSingular>{"de":"Set","en":"Set"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Sets","en":"Sets"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-align-justify</iconName>
+<nameGenerationPattern>&lt;cf.cplace.solution.okr.organizationalUnit&gt; &lt;cf.cplace.solution.okr.cycle&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.level</name>
+<localizedName>{"de":"Level","en":"Level"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["sOrganization","sDepartment","sTeam"]</enumerationValues>
+<enumerationValues2icons>[]</enumerationValues2icons>
+<enumerationValues2localizedLabels />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.setLead</name>
+<localizedName>{"de":"Set Leiter","en":"Set Lead"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity />
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>person</linkEntityKind>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.setContributors</name>
+<localizedName>{"de":"Set Mitarbeiter","en":"Set Contributor"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity />
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>person</linkEntityKind>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.organizationalUnit</name>
+<localizedName>{"de":"Organisationseinheit","en":"Organizational Unit"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.parentSet</name>
+<localizedName>{"de":"Übergeordnetes Set","en":"Parent Set"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.objective</name>
+<localizedNameSingular>{"de":"Objective","en":"Objective"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Objectives","en":"Objectives"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-bullseye</iconName>
+<nameGenerationPattern>O&lt;cf.cplace.solution.okr.number&gt;  &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.number</name>
+<localizedName>{"de":"Nummer","en":"Number"}</localizedName>
+<localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter>{}</localizedNumberTextAfter>
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Number</typeConstraint>
+<defaultValues>[]</defaultValues>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.title</name>
+<localizedName>{"de":"Titel","en":"Title"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.set</name>
+<localizedName>{"de":"Set","en":"Set"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.accomplished</name>
+<localizedName>{"de":"Erreicht","en":"Accomplished"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s#25 - no"]</defaultValues>
+<enumerationValues>["s#15 - yes","s#25 - no"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s#25 - no","icon":"x-103-cplace-square-red-close"},{"element":"s#15 - yes","icon":"x-112-cplace-square-green-check"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#25 - no":{"localizations":{"de":{"language":"de","value":"Nein"},"en":{"language":"en","value":"No"}}},"s#15 - yes":{"localizations":{"de":{"language":"de","value":"Ja"},"en":{"language":"en","value":"Yes"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.description</name>
+<localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>RichString</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.keyResult</name>
+<localizedNameSingular>{"de":"Schlüsselergebnis","en":"Key Result"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Schlüsselergebnisse","en":"Key Results"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-key</iconName>
+<nameGenerationPattern>KR&lt;cf.cplace.solution.okr.number&gt; &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.number</name>
+<localizedName>{"de":"Nummer","en":"Number"}</localizedName>
+<localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter>{}</localizedNumberTextAfter>
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Number</typeConstraint>
+<defaultValues>[]</defaultValues>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.title</name>
+<localizedName>{"de":"Titel","en":"Title"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.progressIndicator</name>
+<localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["s#15 green","s#25 yellow","s#35 red","s#45 outdated"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s#15 green","icon":"circle-003-green"},{"element":"s#25 yellow","icon":"circle-002-yellow"},{"element":"s#45 outdated","icon":"circle-000-gray"},{"element":"s#35 red","icon":"circle-001-red"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#35 red":{"localizations":{"de":{"language":"de","value":"Off track"},"en":{"language":"en","value":"Off track"}}},"s#15 green":{"localizations":{"de":{"language":"de","value":"On track"},"en":{"language":"en","value":"On track"}}},"s#25 yellow":{"localizations":{"de":{"language":"de","value":"Progressing"},"en":{"language":"en","value":"Progressing"}}},"s#45 outdated":{"localizations":{"de":{"language":"de","value":"Outdated"},"en":{"language":"en","value":"Outdated"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.confidenceLevel</name>
+<localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s0.5"]</defaultValues>
+<enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s0.6":{"localizations":{"de":{"language":"de","value":"0.6"},"en":{"language":"en","value":"0.6"}}},"s0.5":{"localizations":{"de":{"language":"de","value":"0.5"},"en":{"language":"en","value":"0.5"}}},"s0.8":{"localizations":{"de":{"language":"de","value":"0.8"},"en":{"language":"en","value":"0.8"}}},"s0.7":{"localizations":{"de":{"language":"de","value":"0.7"},"en":{"language":"en","value":"0.7"}}},"s0.2":{"localizations":{"de":{"language":"de","value":"0.2"},"en":{"language":"en","value":"0.2"}}},"s0.1":{"localizations":{"de":{"language":"de","value":"0.1"},"en":{"language":"en","value":"0.1"}}},"s1.0":{"localizations":{"de":{"language":"de","value":"1.0"},"en":{"language":"en","value":"1.0"}}},"s0.4":{"localizations":{"de":{"language":"de","value":"0.4"},"en":{"language":"en","value":"0.4"}}},"s0.3":{"localizations":{"de":{"language":"de","value":"0.3"},"en":{"language":"en","value":"0.3"}}},"s0.9":{"localizations":{"de":{"language":"de","value":"0.9"},"en":{"language":"en","value":"0.9"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.gradingForecast</name>
+<localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.smallSupport</name>
+<localizedName>{"de":"Receive Small Support","en":"Receive Small Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity />
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.bigSupport</name>
+<localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity />
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.giveBigSupport</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.organizationalUnit</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.giveBigSupport</name>
+<localizedName>{"de":"Give Big Support","en":"Give Big Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity />
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.receiveBigSupport</name>
+<localizedName>{"de":"Receive Big Support","en":"Receive Big Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity />
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.objective</name>
+<localizedName>{"de":"Objective","en":"Objective"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.objective</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.progress</name>
+<localizedName>{"de":"Fortschritt","en":"Progress"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.progress</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.set</name>
+<localizedName>{"de":"Set","en":"Set"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.objective</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.set</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.organizationalUnit</name>
+<localizedName>{"de":"Organsationseinheit","en":"Organizational Unit"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.set</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.organizationalUnit</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.lastUpdate</name>
+<localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.progress</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.lastUpdate</referencedAttributeName>
+</derivable>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.progress</name>
+<localizedNameSingular>{"de":"Fortschritt","en":"Progress"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Fortschritt","en":"Progress"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-folder</iconName>
+<nameGenerationPattern>&lt;cf.cplace.solution.okr.keyResult&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.result</name>
+<localizedName>{"de":"Ergebnise","en":"Results"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.problem</name>
+<localizedName>{"de":"Probleme","en":"Problems"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.lessonsLearned</name>
+<localizedName>{"de":"Learnings","en":"Learnings"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.nextSteps</name>
+<localizedName>{"de":"Nächste Schritte","en":"Next Steps"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.keyResult</name>
+<localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.cycle</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.objective</name>
+<localizedName>{"de":"Objective","en":"Objective"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.objective</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.objective</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.smallSupport</name>
+<localizedName>{"de":"Small Support","en":"Small Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity />
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.smallSupport</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.bigSupport</name>
+<localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity />
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.bigSupport</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.progressIndicator</name>
+<localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["s#15 green","s#25 yellow","s#35 red","s#45 outdated"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s#15 green","icon":"circle-003-green"},{"element":"s#25 yellow","icon":"circle-002-yellow"},{"element":"s#45 outdated","icon":"circle-000-gray"},{"element":"s#35 red","icon":"circle-001-red"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#35 red":{"localizations":{"de":{"language":"de","value":"Off track"},"en":{"language":"en","value":"Off track"}}},"s#15 green":{"localizations":{"de":{"language":"de","value":"On track"},"en":{"language":"en","value":"On track"}}},"s#25 yellow":{"localizations":{"de":{"language":"de","value":"Progressing"},"en":{"language":"en","value":"Progressing"}}},"s#45 outdated":{"localizations":{"de":{"language":"de","value":"Outdated"},"en":{"language":"en","value":"Outdated"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.confidenceLevel</name>
+<localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s0.5"]</defaultValues>
+<enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.gradingForecast</name>
+<localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>[]</defaultValues>
+<enumerationValues>["s0.1","s0.2","s0.3","s0.4","s0.5","s0.6","s0.7","s0.8","s0.9","s1.0"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s0.1","icon":"circle-001-red"},{"element":"s1.0","icon":"circle-003-green"},{"element":"s0.2","icon":"circle-001-red"},{"element":"s0.3","icon":"circle-001-red"},{"element":"s0.4","icon":"circle-002-yellow"},{"element":"s0.5","icon":"circle-002-yellow"},{"element":"s0.6","icon":"circle-002-yellow"},{"element":"s0.7","icon":"circle-003-green"},{"element":"s0.8","icon":"circle-003-green"},{"element":"s0.9","icon":"circle-003-green"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.lastUpdate</name>
+<localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.set</name>
+<localizedName>{"de":"Set","en":"Set"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp />
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>true</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<derivable>
+<referencingAttributeName>cf.cplace.solution.okr.keyResult</referencingAttributeName>
+<referencedAttributeName>cf.cplace.solution.okr.set</referencedAttributeName>
+</derivable>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.task</name>
+<localizedNameSingular>{"de":"Aufgabe","en":"Task"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Aufgaben","en":"Tasks"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>cf-task</iconName>
+<nameGenerationPattern>&lt;cf.cplace.digitalBoard.title&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.title</name>
+<localizedName>{"de":"Titel","en":"Title"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.responsible</name>
+<localizedName>{"de":"Verantwortliche(r)","en":"Responsible"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>person</linkEntityKind>
+<linkSameWorkspace>false</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.description</name>
+<localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.status</name>
+<localizedName>{"de":"Status","en":"Status"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s#15 planned"]</defaultValues>
+<enumerationValues>["s#15 planned","s#25 in progress","s#35 done","s#45 cancelled"]</enumerationValues>
+<enumerationValues2icons>[]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#15 planned":{"localizations":{"de":{"language":"de","value":"Geplant"},"en":{"language":"en","value":"Planned"}}},"s#25 in progress":{"localizations":{"de":{"language":"de","value":"In Arbeit"},"en":{"language":"en","value":"In progress"}}},"s#45 cancelled":{"localizations":{"de":{"language":"de","value":"Abgebrochen"},"en":{"language":"en","value":"Cancelled"}}},"s#35 done":{"localizations":{"de":{"language":"de","value":"Fertig"},"en":{"language":"en","value":"Done"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.dueDate</name>
+<localizedName>{"de":"Fälligkeitsdatum","en":"Due Date"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.keyResult</name>
+<localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.keyResult</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.digitalBoard.escalationLevel</name>
+<localizedName>{"de":"Eskalationslevel","en":"Escalation Level"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s#15 - none"]</defaultValues>
+<enumerationValues>["s#15 - none","s#25 - handRaised"]</enumerationValues>
+<enumerationValues2icons>[{"element":"s#25 - handRaised","icon":"cf.cplace.enumerationIcons|yellowhand"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"s#15 - none":{"localizations":{"de":{"language":"de","value":"Kein"},"en":{"language":"en","value":"None"}}},"s#25 - handRaised":{"localizations":{"de":{"language":"de","value":"Hand gehoben"},"en":{"language":"en","value":"Hand Raised"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.priority</name>
+<localizedNameSingular>{"de":"Priorität","en":"Priority"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Prioritäten","en":"Priorities"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-list-ol</iconName>
+<nameGenerationPattern>&lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.date</name>
+<localizedName>{"de":"Datum","en":"Date"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter>{}</localizedNumberTextAfter>
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues>[]</defaultValues>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.title</name>
+<localizedName>{"de":"Titel","en":"Title"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.dimension</name>
+<localizedName>{"de":"Dimension","en":"Dimension"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.organizationalUnit</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.strategyDashboard</name>
+<localizedName>{"de":"Strategie","en":"Strategy"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.strategyDashbaord</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.meeting</name>
+<localizedNameSingular>{"de":"OKR Meeting","en":"OKR Meeting"}</localizedNameSingular>
+<localizedNamePlural>{"de":"Meetings","en":"Meetings"}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>optional</localizedPageNamesMode>
+<iconName>fa-calendar-alt</iconName>
+<nameGenerationPattern>&lt;cf.cplace.solution.okr.meetingType&gt; - &lt;cf.cplace.solution.okr.title&gt;</nameGenerationPattern>
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix>cf.cplace.solution.okr</internalAttributeNamePrefix>
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.title</name>
+<localizedName>{"de":"Titel","en":"Title"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Text</typeConstraint>
+<defaultValues>[]</defaultValues>
+<textRegExp />
+<textRegExpErrorMessage />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.meetingType</name>
+<localizedName>{"de":"Meeting Typ","en":"Meeting Type"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>TextEnumeration</typeConstraint>
+<defaultValues>["s1on1"]</defaultValues>
+<enumerationValues>["s1on1","sLeadership","sWorkshop"]</enumerationValues>
+<enumerationValues2icons>[{"element":"sLeadership","icon":"circle-005-lightblue"},{"element":"s1on1","icon":"circle-003-green"},{"element":"sWorkshop","icon":"circle-004-orange"}]</enumerationValues2icons>
+<enumerationValues2localizedLabels>{"sLeadership":{"localizations":{"de":{"language":"de","value":"Leadership"},"en":{"language":"en","value":"Leadership"}}},"s1on1":{"localizations":{"de":{"language":"de","value":"1on1"},"en":{"language":"en","value":"1on1"}}},"sWorkshop":{"localizations":{"de":{"language":"de","value":"Workshop"},"en":{"language":"en","value":"Workshop"}}}}</enumerationValues2localizedLabels>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.date</name>
+<localizedName>{"de":"Datum","en":"Date"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName />
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>DAY_YEAR_LONG</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Date</typeConstraint>
+<defaultValues />
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.cycle</name>
+<localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
+<localizedShortName>{"de":"Zyklus","en":"Cycle"}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.set</name>
+<localizedName>{"de":"Set","en":"Set"}</localizedName>
+<localizedShortName>{"de":"Sets","en":"Sets"}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>maximalOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.set</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.meetingsDashbaord</name>
+<localizedName>{"de":"Meeting Dashbaord","en":"Meeting Dashbaord"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>["lpage\/80ys7f2zyb6co9y45mu7zl2h7"]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.meetingsDashbaord</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>true</linkIsHierarchy>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+<type>
+<name>cf.cplace.solution.okr.selectNextCycle</name>
+<localizedNameSingular>{"de":"Select next Cycle","en":"Select next Cycle"}</localizedNameSingular>
+<localizedNamePlural>{}</localizedNamePlural>
+<description />
+<localizedPageNamesMode>none</localizedPageNamesMode>
+<iconName>fa-list</iconName>
+<nameGenerationPattern />
+<displayNameGenerationPattern />
+<internalAttributeNamePrefix />
+<isTuple>false</isTuple>
+<namesAreUnique>false</namesAreUnique>
+<attributeDefinitions>
+<attributeDefinition>
+<name>cf.cplace.solution.okr.nextCycle</name>
+<localizedName>{"de":"Nächster Zyklus","en":"Next Cycle"}</localizedName>
+<localizedShortName>{}</localizedShortName>
+<localizedShortHelp>{}</localizedShortHelp>
+<localizedInverseRoleName>{}</localizedInverseRoleName>
+<multiplicity>exactlyOne</multiplicity>
+<isReadOnly>false</isReadOnly>
+<numberPrecision>-1</numberPrecision>
+<numberTextAfter />
+<localizedNumberTextAfter />
+<dateSpecificity>DAY</dateSpecificity>
+<dateFormat>-</dateFormat>
+<dateWithTime>false</dateWithTime>
+<typeConstraint>Link</typeConstraint>
+<defaultValues>[]</defaultValues>
+<linkEntityKind>page</linkEntityKind>
+<linkTypeName>cf.cplace.solution.okr.cycle</linkTypeName>
+<linkSameWorkspace>true</linkSameWorkspace>
+<linkIsHierarchy>false</linkIsHierarchy>
+</attributeDefinition>
+</attributeDefinitions>
+</type>
+</types>
+</workspace>
 </export>
