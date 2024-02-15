@@ -1,6 +1,8 @@
 import json
 import xml.etree.ElementTree as ET
 
+
+
 def remove(root, parent_map, xpath):
     # Find elements by XPath and remove them
     for target in root.findall(xpath):
@@ -59,9 +61,9 @@ def rewriteLocalizedNameAttributes(doc):
             rewriteLocalizedNameAttributes(item)
     elif isinstance(doc, dict):
         for key, value in doc.items():
-            if key == 'localizedName' or key == 'localizedNameSingular' or key == 'localizedNamePlural':
+            if key == 'localizedName' or key == 'localizedNameSingular' or key == 'localizedNamePlural' or key == 'localizedShortName':
                 # parse the value as json and replace the value with the parsed json
-                print(json.loads(value))
+                # print(json.loads(value))
                 doc[key] = json.loads(value)
                 # print(value)
             rewriteLocalizedNameAttributes(value)
@@ -74,8 +76,8 @@ def rewriteAttributes(doc):
         for key, value in doc.items():
             if key == 'attributeDefinitions':
                 attributeDefinition = value['attributeDefinition']
-                print(attributeDefinition)
-                print(type(attributeDefinition))
+                # print(attributeDefinition)
+                # print(type(attributeDefinition))
                 # if attributeDefinition is a list, then create a new list
                 if isinstance(attributeDefinition, list):
 
@@ -94,3 +96,51 @@ def rewriteAttributes(doc):
                     doc[key] = newList
 
             rewriteAttributes(value)
+
+
+def removeGenericElements(root, parent_map):
+    remove(root, parent_map, './/customCssClasses')
+    remove(root, parent_map, './/localizedAppName')
+    remove(root, parent_map, './/isAppDefSpace')
+    remove(root, parent_map, './/apps')
+    remove(root, parent_map, './/pluginSpaceConfigurations')
+    remove(root, parent_map, './/rootPage')
+    remove(root, parent_map, './/lowCodeJobs')
+    remove(root, parent_map, './/lowCodeChangeListeners')
+    remove(root, parent_map, './/lowCodeTypeMessages')
+    remove(root, parent_map, './/lowCodePageActions')
+    remove(root, parent_map, './/alternativeLayout')
+    remove(root, parent_map, './/widgetContainer')
+    remove(root, parent_map, './/maps')
+    remove(root, parent_map, './/orderable')
+    remove(root, parent_map, './/alternativeValueRepresentation')
+    remove(root, parent_map, './/showInverseRoleAsList')
+    remove(root, parent_map, './/showInverseRoleAsList')
+    remove(root, parent_map, './/showInTables')
+    remove(root, parent_map, './/showInAttributesWidget')
+    remove(root, parent_map, './/showInColumnSelection')
+    remove(root, parent_map, './/showInNewDialog')
+    remove(root, parent_map, './/showInMenuIfHierarchy')
+    remove(root, parent_map, './/showValuesWithLineBreak')
+    remove(root, parent_map, './/showMultiLine')
+    remove(root, parent_map, './/duplicatesAreAllowed')
+    remove(root, parent_map, './/showCreateNewButton')
+    remove(root, parent_map, './/validateAdditionalFilters')
+    remove(root, parent_map, './/refreshAfterSetting')
+    remove(root, parent_map, './/tableColumnWidth')
+    remove(root, parent_map, './/additionalConstraintData')
+    remove(root, parent_map, './/customConstraintName')
+    remove(root, parent_map, './/isShownInExplorer')
+    remove(root, parent_map, './/nameGenerationInstanceCount')
+    remove(root, parent_map, './/showNewButton')
+    remove(root, parent_map, './/hideTabVersions')
+    remove(root, parent_map, './/allowDivergentLayouts')
+    remove(root, parent_map, './/showInGlobalNewDialog')
+    remove(root, parent_map, './/instancesPage')
+    remove(root, parent_map, './/enableIconLink')
+    remove(root, parent_map, './/showInGlobalSearch')
+    remove(root, parent_map, './/defaultPageInPackageStrategy')
+    remove(root, parent_map, './/nameTableColumnWidth')
+    remove(root, parent_map, './/appliesTo')
+    remove(root, parent_map, './/autocompleteDetailsPattern')
+    remove(root, parent_map, './/id')
