@@ -2,7 +2,6 @@ import json
 import xml.etree.ElementTree as ET
 
 
-
 def remove(root, parent_map, xpath):
     # Find elements by XPath and remove them
     for target in root.findall(xpath):
@@ -166,3 +165,25 @@ def removeGenericElements(root, parent_map):
     remove(root, parent_map, './/enumerationValues')
     remove(root, parent_map, './/enumerationValues2icons')
     remove(root, parent_map, './/enumerationValues2localizedLabels')
+
+
+def removeOkrTypes(root, parent_map):
+    remove(root, parent_map, './/type[name="default.file"]')
+    remove(root, parent_map, './/type[name="default.page"]')
+    remove(root, parent_map, './/type[name="cf.cplace.enumerationIcons.page"]')
+    remove(root, parent_map, './/type[name="cf.cplace.simpleCalendar.eventClassConfiguration"]')
+    remove(root, parent_map, './/type[name="cf.cplace.simpleCalendar.eventTypeConfiguration"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.administrationDashboard"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.okrManualDashboard"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.meetingsDashbaord"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.cyclesDashboard"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.strategyDashbaord"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.myDashboard"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.okrDashboard"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.settings"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.updateKeyResult"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.organizationalUnit"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.topic"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.meeting"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.set"]')
+    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.priority"]')
