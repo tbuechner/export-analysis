@@ -1,6 +1,10 @@
 import json
 import xml.etree.ElementTree as ET
 
+import xmltodict
+
+import os
+
 
 def remove(root, parent_map, xpath):
     # Find elements by XPath and remove them
@@ -170,23 +174,52 @@ def removeGenericElements(root, parent_map):
     remove(root, parent_map, './/enumerationValues2localizedLabels')
 
 
-def removeOkrTypes(root, parent_map):
-    remove(root, parent_map, './/type[name="default.file"]')
-    remove(root, parent_map, './/type[name="default.page"]')
-    remove(root, parent_map, './/type[name="cf.cplace.enumerationIcons.page"]')
-    remove(root, parent_map, './/type[name="cf.cplace.simpleCalendar.eventClassConfiguration"]')
-    remove(root, parent_map, './/type[name="cf.cplace.simpleCalendar.eventTypeConfiguration"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.administrationDashboard"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.okrManualDashboard"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.meetingsDashbaord"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.cyclesDashboard"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.strategyDashbaord"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.myDashboard"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.okrDashboard"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.settings"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.updateKeyResult"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.organizationalUnit"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.topic"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.meeting"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.set"]')
-    remove(root, parent_map, './/type[name="cf.cplace.solution.okr.priority"]')
+def runForFolder(name):
+
+    pretty_json_ = name + '/pretty.json'
+    compressed_json_ = name + '/compressed.json'
+
+    if os.path.exists(pretty_json_):
+        os.remove(pretty_json_)
+    if os.path.exists(compressed_json_):
+        os.remove(compressed_json_)
+
+    # read from file name + '/typesToBeRemoved.txt'
+    with open(name + '/typesToBeRemoved.txt') as f:
+        # read each line and store it in a list
+        typesToBeRemoved = f.read().splitlines()
+
+    # Load and parse the XML document
+    tree = ET.parse(name + '/export.xml')
+    root = tree.getroot()
+
+    # Create a dictionary that maps from children to their parents
+    parent_map = {c: p for p in tree.iter() for c in p}
+
+    removeGenericElements(root, parent_map)
+
+    # iterate through the list and print each line
+    for type in typesToBeRemoved:
+        remove(root, parent_map, './/type[name="' + type + '"]')
+
+    remove_empty_elements(root)
+
+    print ("After removing the types:")
+    printAllTypes(root)
+
+    # store XML to a string
+    asString = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
+
+    doc = xmltodict.parse(asString)
+
+    rewriteLocalizedNameAttributes(doc)
+
+    rewriteAttributes(doc)
+
+    with open(compressed_json_, 'w') as file:
+        # remove as many spaces as possible
+        file.write(json.dumps(doc, separators=(',', ':')))
+
+    with open(pretty_json_, 'w') as file:
+        # pretty-print the json
+        file.write(json.dumps(doc, indent=4))
