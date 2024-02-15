@@ -1,6 +1,10 @@
+import json
 import xml.etree.ElementTree as ET
 
-from utils import remove, printAllTypes, is_empty, remove_empty_elements, writeCompressedToFile, removeNonReferenceAttributes
+import xmltodict
+
+from utils import remove, printAllTypes, remove_empty_elements, writeCompressedToFile, removeNonReferenceAttributes, \
+    rewriteLocalizedNameAttributes, rewriteAttributes
 
 # Load and parse the XML document
 tree = ET.parse('export.xml')
@@ -87,9 +91,59 @@ writeCompressedToFile(root, 'modified')
 
 tree = ET.parse('modified-compressed.xml')
 root = tree.getroot()
-
 parent_map = {c: p for p in root.iter() for c in p}
 
 removeNonReferenceAttributes(root, parent_map)
 
 writeCompressedToFile(root, 'modified-only-references')
+
+tree = ET.parse('modified-compressed.xml')
+root = tree.getroot()
+parent_map = {c: p for p in root.iter() for c in p}
+
+remove(root, parent_map, './/localizedPageNamesMode')
+remove(root, parent_map, './/iconName')
+remove(root, parent_map, './/nameGenerationPattern')
+remove(root, parent_map, './/displayNameGenerationPattern')
+remove(root, parent_map, './/internalAttributeNamePrefix')
+remove(root, parent_map, './/isTuple')
+remove(root, parent_map, './/namesAreUnique')
+remove(root, parent_map, './/isReadOnly')
+remove(root, parent_map, './/localizedInverseRoleName')
+remove(root, parent_map, './/numberPrecision')
+remove(root, parent_map, './/numberTextAfter')
+remove(root, parent_map, './/localizedNumberTextAfter')
+remove(root, parent_map, './/dateSpecificity')
+remove(root, parent_map, './/dateFormat')
+remove(root, parent_map, './/dateWithTime')
+remove(root, parent_map, './/defaultValues')
+remove(root, parent_map, './/textRegExp')
+remove(root, parent_map, './/textRegExpErrorMessage')
+remove(root, parent_map, './/enumerationValues')
+remove(root, parent_map, './/enumerationValues2icons')
+remove(root, parent_map, './/enumerationValues2localizedLabels')
+
+writeCompressedToFile(root, 'modified-thinned-out')
+
+remove(root, parent_map, './/type[name="cf.cplace.solution.okr.meeting"]')
+remove(root, parent_map, './/type[name="cf.cplace.solution.okr.set"]')
+remove(root, parent_map, './/type[name="cf.cplace.solution.okr.priority"]')
+
+print ("After removing the types:")
+printAllTypes(root)
+
+writeCompressedToFile(root, 'modified-thinned-out-removed-types')
+
+# convert the XML to json
+with open('modified-thinned-out-removed-types-pretty.xml') as fd:
+    doc = xmltodict.parse(fd.read())
+
+rewriteLocalizedNameAttributes(doc)
+
+rewriteAttributes(doc)
+
+# print(doc)
+# write doc to a file
+with open('modified-thinned-out-removed-types-pretty.json', 'w') as file:
+    # remove as many spaces as possible
+    file.write(json.dumps(doc, separators=(',', ':')))

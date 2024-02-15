@@ -1,3 +1,4 @@
+import json
 import xml.etree.ElementTree as ET
 
 def remove(root, parent_map, xpath):
@@ -24,6 +25,10 @@ def remove_empty_elements(element, parent=None):
     if parent is not None and is_empty(element):
         parent.remove(element)
 
+    # If the element is equals to "{}", remove it
+    if element.text == "{}":
+        parent.remove(element)
+
 def writeCompressedToFile(root, fileName):
     global file
     # Convert the XML tree to a string
@@ -47,3 +52,26 @@ def removeNonReferenceAttributes(root, parent_map):
             # print("Removing: ", attributeDefinition)
             parent = parent_map[attributeDefinition]
             parent.remove(attributeDefinition)
+
+def rewriteLocalizedNameAttributes(doc):
+    if isinstance(doc, list):
+        for item in doc:
+            rewriteLocalizedNameAttributes(item)
+    elif isinstance(doc, dict):
+        for key, value in doc.items():
+            if key == 'localizedName' or key == 'localizedNameSingular' or key == 'localizedNamePlural':
+                # parse the value as json and replace the value with the parsed json
+                print(json.loads(value))
+                doc[key] = json.loads(value)
+                # print(value)
+            rewriteLocalizedNameAttributes(value)
+
+def rewriteAttributes(doc):
+    if isinstance(doc, list):
+        for item in doc:
+            rewriteAttributes(item)
+    elif isinstance(doc, dict):
+        for key, value in doc.items():
+            if key == 'attributeDefinitions':
+                print(key)
+            rewriteAttributes(value)

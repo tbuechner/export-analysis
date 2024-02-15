@@ -18,9 +18,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.year</name>
 <localizedName>{"de":"Jahr","en":"Year"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -37,8 +34,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.quarter</name>
 <localizedName>{"de":"Quartal","en":"Quarter"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -56,8 +51,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.status</name>
 <localizedName>{"de":"Status","en":"Status"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -76,9 +69,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.cyclesDashboard</name>
 <localizedName>{"de":"Zyklen Dashboard","en":"Cycles Dashboard"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -97,8 +87,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.start</name>
 <localizedName>{"de":"Start","en":"Start"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -114,8 +102,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.end</name>
 <localizedName>{"de":"Ende","en":"End"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -131,8 +117,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.statusForNameGenerationPattern</name>
 <localizedName>{"de":"Status für die Namensgenerierung","en":"Status for name generation pattern"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>true</isReadOnly>
@@ -165,9 +149,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.cycle</name>
 <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -186,8 +167,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.level</name>
 <localizedName>{"de":"Level","en":"Level"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -206,9 +185,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.setLead</name>
 <localizedName>{"de":"Set Leiter","en":"Set Lead"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity />
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -226,9 +202,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.setContributors</name>
 <localizedName>{"de":"Set Mitarbeiter","en":"Set Contributor"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity />
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -246,9 +219,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.organizationalUnit</name>
 <localizedName>{"de":"Organisationseinheit","en":"Organizational Unit"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -267,9 +237,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.parentSet</name>
 <localizedName>{"de":"Übergeordnetes Set","en":"Parent Set"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -304,13 +271,11 @@
 <name>cf.cplace.solution.okr.number</name>
 <localizedName>{"de":"Nummer","en":"Number"}</localizedName>
 <localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
 <numberTextAfter />
-<localizedNumberTextAfter>{}</localizedNumberTextAfter>
 <dateSpecificity>DAY</dateSpecificity>
 <dateFormat>-</dateFormat>
 <dateWithTime>false</dateWithTime>
@@ -320,8 +285,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.title</name>
 <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -339,9 +302,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.set</name>
 <localizedName>{"de":"Set","en":"Set"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -360,8 +320,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.accomplished</name>
 <localizedName>{"de":"Erreicht","en":"Accomplished"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -380,7 +338,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.cycle</name>
 <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -405,8 +362,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.description</name>
 <localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -438,13 +393,11 @@
 <name>cf.cplace.solution.okr.number</name>
 <localizedName>{"de":"Nummer","en":"Number"}</localizedName>
 <localizedShortName>{"de":"Nr.","en":"No."}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
 <numberTextAfter />
-<localizedNumberTextAfter>{}</localizedNumberTextAfter>
 <dateSpecificity>DAY</dateSpecificity>
 <dateFormat>-</dateFormat>
 <dateWithTime>false</dateWithTime>
@@ -454,8 +407,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.title</name>
 <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -473,8 +424,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.progressIndicator</name>
 <localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -493,8 +442,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.confidenceLevel</name>
 <localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -513,8 +460,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.gradingForecast</name>
 <localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -533,9 +478,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.smallSupport</name>
 <localizedName>{"de":"Receive Small Support","en":"Receive Small Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity />
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -554,7 +496,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.bigSupport</name>
 <localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity />
@@ -579,9 +520,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.giveBigSupport</name>
 <localizedName>{"de":"Give Big Support","en":"Give Big Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity />
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -600,9 +538,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.receiveBigSupport</name>
 <localizedName>{"de":"Receive Big Support","en":"Receive Big Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity />
 <isReadOnly>true</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -621,9 +556,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.objective</name>
 <localizedName>{"de":"Objective","en":"Objective"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -642,9 +574,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.progress</name>
 <localizedName>{"de":"Fortschritt","en":"Progress"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -663,7 +592,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.set</name>
 <localizedName>{"de":"Set","en":"Set"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -688,7 +616,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.cycle</name>
 <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -713,7 +640,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.organizationalUnit</name>
 <localizedName>{"de":"Organsationseinheit","en":"Organizational Unit"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -738,7 +664,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.lastUpdate</name>
 <localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -774,8 +699,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.result</name>
 <localizedName>{"de":"Ergebnise","en":"Results"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -793,8 +716,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.problem</name>
 <localizedName>{"de":"Probleme","en":"Problems"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -812,8 +733,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.lessonsLearned</name>
 <localizedName>{"de":"Learnings","en":"Learnings"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -831,8 +750,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.nextSteps</name>
 <localizedName>{"de":"Nächste Schritte","en":"Next Steps"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -850,9 +767,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.keyResult</name>
 <localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -871,7 +785,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.cycle</name>
 <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -896,7 +809,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.objective</name>
 <localizedName>{"de":"Objective","en":"Objective"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -921,7 +833,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.smallSupport</name>
 <localizedName>{"de":"Small Support","en":"Small Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity />
@@ -946,7 +857,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.bigSupport</name>
 <localizedName>{"de":"Big Support","en":"Big Support"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity />
@@ -971,8 +881,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.progressIndicator</name>
 <localizedName>{"de":"Fortschrittsindikator","en":"Progress Indicator"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -991,8 +899,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.confidenceLevel</name>
 <localizedName>{"de":"Confidence Level","en":"Confidence Level"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1011,8 +917,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.gradingForecast</name>
 <localizedName>{"de":"Fortschritt Vorhersage","en":"Grading Forecast"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1031,8 +935,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.lastUpdate</name>
 <localizedName>{"de":"Letztes Update","en":"Last Update"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1048,7 +950,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.set</name>
 <localizedName>{"de":"Set","en":"Set"}</localizedName>
-<localizedShortName>{}</localizedShortName>
 <localizedShortHelp />
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
@@ -1088,8 +989,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.title</name>
 <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1107,9 +1006,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.responsible</name>
 <localizedName>{"de":"Verantwortliche(r)","en":"Responsible"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1127,8 +1023,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.description</name>
 <localizedName>{"de":"Beschreibung","en":"Description"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1146,8 +1040,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.status</name>
 <localizedName>{"de":"Status","en":"Status"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1166,8 +1058,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.dueDate</name>
 <localizedName>{"de":"Fälligkeitsdatum","en":"Due Date"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1183,9 +1073,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.keyResult</name>
 <localizedName>{"de":"Key Result","en":"Key Result"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1204,8 +1091,6 @@
 <attributeDefinition>
 <name>cf.cplace.digitalBoard.escalationLevel</name>
 <localizedName>{"de":"Eskalationslevel","en":"Escalation Level"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1239,14 +1124,11 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.date</name>
 <localizedName>{"de":"Datum","en":"Date"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
 <numberTextAfter />
-<localizedNumberTextAfter>{}</localizedNumberTextAfter>
 <dateSpecificity>DAY</dateSpecificity>
 <dateFormat>DAY_YEAR_LONG</dateFormat>
 <dateWithTime>false</dateWithTime>
@@ -1256,8 +1138,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.title</name>
 <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1275,9 +1155,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.dimension</name>
 <localizedName>{"de":"Dimension","en":"Dimension"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1296,9 +1173,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.strategyDashboard</name>
 <localizedName>{"de":"Strategie","en":"Strategy"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1332,8 +1206,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.title</name>
 <localizedName>{"de":"Titel","en":"Title"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1351,8 +1223,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.meetingType</name>
 <localizedName>{"de":"Meeting Typ","en":"Meeting Type"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1371,8 +1241,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.date</name>
 <localizedName>{"de":"Datum","en":"Date"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
 <localizedInverseRoleName />
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
@@ -1389,8 +1257,6 @@
 <name>cf.cplace.solution.okr.cycle</name>
 <localizedName>{"de":"Zyklus","en":"Cycle"}</localizedName>
 <localizedShortName>{"de":"Zyklus","en":"Cycle"}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1410,8 +1276,6 @@
 <name>cf.cplace.solution.okr.set</name>
 <localizedName>{"de":"Set","en":"Set"}</localizedName>
 <localizedShortName>{"de":"Sets","en":"Sets"}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>maximalOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1430,9 +1294,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.meetingsDashbaord</name>
 <localizedName>{"de":"Meeting Dashbaord","en":"Meeting Dashbaord"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
@@ -1453,7 +1314,6 @@
 <type>
 <name>cf.cplace.solution.okr.selectNextCycle</name>
 <localizedNameSingular>{"de":"Select next Cycle","en":"Select next Cycle"}</localizedNameSingular>
-<localizedNamePlural>{}</localizedNamePlural>
 <description />
 <localizedPageNamesMode>none</localizedPageNamesMode>
 <iconName>fa-list</iconName>
@@ -1466,9 +1326,6 @@
 <attributeDefinition>
 <name>cf.cplace.solution.okr.nextCycle</name>
 <localizedName>{"de":"Nächster Zyklus","en":"Next Cycle"}</localizedName>
-<localizedShortName>{}</localizedShortName>
-<localizedShortHelp>{}</localizedShortHelp>
-<localizedInverseRoleName>{}</localizedInverseRoleName>
 <multiplicity>exactlyOne</multiplicity>
 <isReadOnly>false</isReadOnly>
 <numberPrecision>-1</numberPrecision>
