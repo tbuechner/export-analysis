@@ -115,6 +115,7 @@ def removeGenericElements(root, parent_map):
     remove(root, parent_map, './/lowCodeChangeListeners')
     remove(root, parent_map, './/lowCodeTypeMessages')
     remove(root, parent_map, './/lowCodePageActions')
+    remove(root, parent_map, './/lowCodeValidator')
     remove(root, parent_map, './/alternativeLayout')
     remove(root, parent_map, './/widgetContainer')
     remove(root, parent_map, './/maps')
