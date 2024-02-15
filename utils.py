@@ -73,5 +73,24 @@ def rewriteAttributes(doc):
     elif isinstance(doc, dict):
         for key, value in doc.items():
             if key == 'attributeDefinitions':
-                print(key)
+                attributeDefinition = value['attributeDefinition']
+                print(attributeDefinition)
+                print(type(attributeDefinition))
+                # if attributeDefinition is a list, then create a new list
+                if isinstance(attributeDefinition, list):
+
+                    newList = []
+                    for attribute in attributeDefinition:
+                        newList.append(attribute)
+
+                    # replace the value with the list object
+                    doc[key] = newList
+
+                elif isinstance(attributeDefinition, dict):
+                    newList = []
+                    newList.append(attributeDefinition)
+
+                    # replace the value with the list object
+                    doc[key] = newList
+
             rewriteAttributes(value)
