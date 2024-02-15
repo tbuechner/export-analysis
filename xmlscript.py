@@ -14,11 +14,9 @@ parent_map = {c: p for p in tree.iter() for c in p}
 
 removeGenericElements(root, parent_map)
 
-removeOkrTypes(root, parent_map)
+# removeOkrTypes(root, parent_map)
 
 remove_empty_elements(root)
-
-parent_map = {c: p for p in root.iter() for c in p}
 
 print ("After removing the types:")
 printAllTypes(root)

@@ -63,8 +63,10 @@ def rewriteLocalizedNameAttributes(doc):
             if key == 'localizedName' or key == 'localizedNameSingular' or key == 'localizedNamePlural' or key == 'localizedShortName':
                 # parse the value as json and replace the value with the parsed json
                 # print(json.loads(value))
-                doc[key] = json.loads(value)
                 # print(value)
+                if value is not None:
+                    doc[key] = json.loads(value)
+
             rewriteLocalizedNameAttributes(value)
 
 def rewriteAttributes(doc):
@@ -73,7 +75,8 @@ def rewriteAttributes(doc):
             rewriteAttributes(item)
     elif isinstance(doc, dict):
         for key, value in doc.items():
-            if key == 'attributeDefinitions':
+            if value is not None and key == 'attributeDefinitions':
+                # print (value)
                 attributeDefinition = value['attributeDefinition']
                 # print(attributeDefinition)
                 # print(type(attributeDefinition))
