@@ -1,0 +1,77 @@
+[
+    [
+        {
+            "uid": "person/mj1ho3dkz6t0yud70ab7xd7dh"
+        }
+    ],
+    [
+        {
+            "uid": "person/9gllbr5rqy25uo89lo9tinlrn"
+        }
+    ],
+    [
+        {
+            "uid": "person/aq3jmaolqf19omx2sw5cgy1hk"
+        }
+    ],
+    [
+        {
+            "uid": "person/7yi0s331prdxnpuvpcenex752"
+        }
+    ],
+    [
+        {
+            "uid": "person/9pdld9qx2eixnou7vp3b3aoar"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle",
+                "cf.cplace.solution.okr.keyResult",
+                "cf.cplace.solution.okr.objective",
+                "cf.cplace.solution.okr.set"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeUid": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle",
+                "cf.cplace.solution.okr.keyResult",
+                "cf.cplace.solution.okr.objective",
+                "cf.cplace.solution.okr.set"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeUid": "embeddingCustomEntity"
+        }
+    ]
+]

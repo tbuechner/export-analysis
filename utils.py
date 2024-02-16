@@ -218,6 +218,9 @@ def runForFolder(folderName):
     print("Searches: ", searches)
     writeToFile(folderName, "searches", searches)
 
+    searches = searches[:10]
+    writeToFile(folderName, "searches-10", searches)
+
     removeGenericElements(root, parent_map)
 
     # iterate through the list and print each line

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "or": { "$ref": "#/definitions/criteriaArray" },
+        "and": { "$ref": "#/definitions/criteriaArray" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "definitions": {
+    "criteriaArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/criteria" }
+    },
+    "criteria": {
+      "type": "object",
+      "properties": {
+        "relativeSpace": { "type": "string" },
+        "types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "relativeCustomReference": { "type": "string" },
+        "referenceOperator": { "type": "string" },
+        "customOutgoingSubSearch": { "type": "string" },
+        "search": { "$ref": "#/definitions/search" }
+      },
+      "additionalProperties": false
+    },
+    "search": {
+      "type": "object",
+      "properties": {
+        "filters": { "$ref": "#/definitions/criteriaArray" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

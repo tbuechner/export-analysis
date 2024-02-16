@@ -1,0 +1,264 @@
+[
+    [
+        {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.safe.capability"
+                            ]
+                        },
+                        {
+                            "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                            "referenceOperator": "ca_cf.cplace.solution.safe.currentPi"
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.safe.confidenceVote"
+                            ]
+                        },
+                        {
+                            "relativeCustomReference": "cf.cplace.solution.safe.confidenceVote.PI",
+                            "referenceOperator": "ca_cf.cplace.solution.safe.currentPi"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.safe.programIncrement"
+                            ]
+                        },
+                        {
+                            "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                            "referenceOperator": "embeddingCustomEntity"
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.safe.safeMilestone"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.safe.event"
+                            ]
+                        },
+                        {
+                            "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                            "referenceOperator": "embeddingCustomEntity"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.agileReleaseTrain"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.safe.program",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.safe.program"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.team"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.safe.agileReleaseTrain",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.safe.agileReleaseTrain"
+                        ]
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.safe.program",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.safe.program"
+                                    ]
+                                },
+                                {
+                                    "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                                    "referenceOperator": "embeddingCustomEntity"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": true
+        },
+        {
+            "types": [
+                "cf.cplace.solution.safe.capability"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.safe.solution.reference",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.feature"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.safe.capability",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.safe.capability"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.safe.solution.reference",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.feature"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.feature"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.safe.capability",
+            "referenceOperator": "connectedTable"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.safe.capability"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "types": [
+                "cf.cplace.solution.safe.story"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.safe.feature",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.safe.feature"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ]
+]
