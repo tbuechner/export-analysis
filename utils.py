@@ -193,13 +193,25 @@ def returnAllSearches(root, parent_map):
         result[i] = search["filters"]
     return result
 
+def returnAllLowCodeScripts(root, parent_map):
+    # create a list which will store the text of the elements
+    result = []
+    # iterate over all elements in the tree
+    for element in root.iter():
+        # if the name of the element is "cplaceJSScript"
+        if element.text is not None and element.tag == "cplaceJSScript":
+            # add the text of the element
+            result.append(element.text)
+            # print(element.text)
+    return result
+
 
 def runForFolder(folderName):
 
     # delete all files with name *.json in folder name
     files = os.listdir(folderName)
     for file in files:
-        if file.endswith('.json'):
+        if file.endswith('.json') or file.endswith('.js'):
             os.remove(folderName + '/' + file)
 
     # read from file name + '/typesToBeRemoved.txt'
@@ -216,10 +228,14 @@ def runForFolder(folderName):
 
     searches = returnAllSearches(root, parent_map)
     print("Searches: ", searches)
-    writeToFile(folderName, "searches", searches)
+    writeJsonToFile(folderName, "searches", searches)
 
     searches = searches[:10]
-    writeToFile(folderName, "searches-10", searches)
+    writeJsonToFile(folderName, "searches-10", searches)
+
+    lowCodeScripts = returnAllLowCodeScripts(root, parent_map)
+    print("LowCodeScripts: ", lowCodeScripts)
+    writeToFile(folderName, "lowCodeScripts", lowCodeScripts)
 
     removeGenericElements(root, parent_map)
 
@@ -241,11 +257,20 @@ def runForFolder(folderName):
 
     rewriteAttributes(doc)
 
-    writeToFile(folderName, "types", doc)
+    writeJsonToFile(folderName, "types", doc)
 
 
-def writeToFile(folderName, fileName, object):
+def writeJsonToFile(folderName, fileName, object):
     with open(folderName + '/' + fileName + '-pretty.json', 'w') as file:
         file.write(json.dumps(object, indent=4))
     with open(folderName + '/' + fileName + '-compressed.json', 'w') as file:
         file.write(json.dumps(object, separators=(',', ':')))
+
+def writeToFile(folderName, fileName, lowCodeScripts):
+    with open(folderName + '/' + fileName + '.js', 'w') as file:
+        for lowCodeScript in lowCodeScripts:
+            # separate the lowCodeScripts by a new line and "---------------------------------------------------"
+            file.write(lowCodeScript + "\n")
+            file.write("\n")
+            file.write("//------------------------------------------------------------------------------------------------------\n")
+            file.write("\n")

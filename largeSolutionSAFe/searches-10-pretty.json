@@ -162,7 +162,7 @@
     ],
     [
         {
-            "relativeSpace": true
+            "relativeSpace": "true"
         },
         {
             "types": [
