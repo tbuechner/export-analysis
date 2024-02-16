@@ -175,15 +175,32 @@ def removeGenericElements(root, parent_map):
     remove(root, parent_map, './/enumerationValues2localizedLabels')
 
 
+def returnAllSearches(root, parent_map):
+    # create a list which will store the text of the elements
+    result = []
+    # iterate over all elements in the tree
+    for element in root.iter():
+        # if the text of the element starts with "s{"filters":"
+        if element.text is not None and element.text.startswith('s{"filters":'):
+            # add the text of the element stripped of the leading "s"
+            result.append(element.text[1:])
+            # print(element.text)
+    # iterate over result
+    for i in range(len(result)):
+        # replace the text of the element with the result of the search
+        search = json.loads(result[i])
+        # access the "filters" key of the search
+        result[i] = search["filters"]
+    return result
+
+
 def runForFolder(name):
 
-    pretty_json_ = name + '/pretty.json'
-    compressed_json_ = name + '/compressed.json'
-
-    if os.path.exists(pretty_json_):
-        os.remove(pretty_json_)
-    if os.path.exists(compressed_json_):
-        os.remove(compressed_json_)
+    # delete all files with name *.json in folder name
+    files = os.listdir(name)
+    for file in files:
+        if file.endswith('.json'):
+            os.remove(name + '/' + file)
 
     # read from file name + '/typesToBeRemoved.txt'
     with open(name + '/typesToBeRemoved.txt') as f:
@@ -196,6 +213,14 @@ def runForFolder(name):
 
     # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
+
+    searches = returnAllSearches(root, parent_map)
+    print("Searches: ", searches)
+    with open(name + '/searches-pretty.json', 'w') as file:
+        file.write(json.dumps(searches, indent=4))
+
+    with open(name + '/searches-compressed.json', 'w') as file:
+        file.write(json.dumps(searches, separators=(',', ':')))
 
     removeGenericElements(root, parent_map)
 
@@ -217,10 +242,10 @@ def runForFolder(name):
 
     rewriteAttributes(doc)
 
-    with open(compressed_json_, 'w') as file:
+    with open(name + '/types-compressed.json', 'w') as file:
         # remove as many spaces as possible
         file.write(json.dumps(doc, separators=(',', ':')))
 
-    with open(pretty_json_, 'w') as file:
+    with open(name + '/types-pretty.json', 'w') as file:
         # pretty-print the json
         file.write(json.dumps(doc, indent=4))
