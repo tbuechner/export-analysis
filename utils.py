@@ -194,21 +194,21 @@ def returnAllSearches(root, parent_map):
     return result
 
 
-def runForFolder(name):
+def runForFolder(folderName):
 
     # delete all files with name *.json in folder name
-    files = os.listdir(name)
+    files = os.listdir(folderName)
     for file in files:
         if file.endswith('.json'):
-            os.remove(name + '/' + file)
+            os.remove(folderName + '/' + file)
 
     # read from file name + '/typesToBeRemoved.txt'
-    with open(name + '/typesToBeRemoved.txt') as f:
+    with open(folderName + '/typesToBeRemoved.txt') as f:
         # read each line and store it in a list
         typesToBeRemoved = f.read().splitlines()
 
     # Load and parse the XML document
-    tree = ET.parse(name + '/export.xml')
+    tree = ET.parse(folderName + '/export.xml')
     root = tree.getroot()
 
     # Create a dictionary that maps from children to their parents
@@ -216,11 +216,7 @@ def runForFolder(name):
 
     searches = returnAllSearches(root, parent_map)
     print("Searches: ", searches)
-    with open(name + '/searches-pretty.json', 'w') as file:
-        file.write(json.dumps(searches, indent=4))
-
-    with open(name + '/searches-compressed.json', 'w') as file:
-        file.write(json.dumps(searches, separators=(',', ':')))
+    writeToFile(folderName, "searches", searches)
 
     removeGenericElements(root, parent_map)
 
@@ -242,10 +238,11 @@ def runForFolder(name):
 
     rewriteAttributes(doc)
 
-    with open(name + '/types-compressed.json', 'w') as file:
-        # remove as many spaces as possible
-        file.write(json.dumps(doc, separators=(',', ':')))
+    writeToFile(folderName, "types", doc)
 
-    with open(name + '/types-pretty.json', 'w') as file:
-        # pretty-print the json
-        file.write(json.dumps(doc, indent=4))
+
+def writeToFile(folderName, fileName, object):
+    with open(folderName + '/' + fileName + '-pretty.json', 'w') as file:
+        file.write(json.dumps(object, indent=4))
+    with open(folderName + '/' + fileName + '-compressed.json', 'w') as file:
+        file.write(json.dumps(object, separators=(',', ':')))
