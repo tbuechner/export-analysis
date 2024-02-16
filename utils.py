@@ -206,6 +206,24 @@ def returnAllLowCodeScripts(root, parent_map):
     return result
 
 
+def findAllWidgets(root, parent_map):
+    # Find elements by XPath and remove them
+    for target in root.findall('.//widgetContainer'):
+        # convert target from xml to json
+        asJson = xmltodict.parse(ET.tostring(target, encoding='utf-8', method='xml').decode('utf-8'))
+
+        print(asJson)
+
+        widgetContainer = asJson['widgetContainer']
+
+        # parse widgetsLayout value of widgetContainer as json
+        print(widgetContainer['widgetsLayout'])
+        layout_ = widgetContainer['widgetsLayout']
+        if layout_ is not None:
+            widgetContainer['widgetsLayout'] = json.loads(layout_)
+            print(json.dumps(asJson, separators=(',', ':')))
+
+
 def runForFolder(folderName):
 
     # delete all files with name *.json in folder name
@@ -236,6 +254,8 @@ def runForFolder(folderName):
     lowCodeScripts = returnAllLowCodeScripts(root, parent_map)
     print("LowCodeScripts: ", lowCodeScripts)
     writeToFile(folderName, "lowCodeScripts", lowCodeScripts)
+
+    findAllWidgets(root, parent_map)
 
     removeGenericElements(root, parent_map)
 
