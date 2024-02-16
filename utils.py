@@ -206,22 +206,93 @@ def returnAllLowCodeScripts(root, parent_map):
     return result
 
 
+
+
 def findAllWidgets(root, parent_map):
     # Find elements by XPath and remove them
     for target in root.findall('.//widgetContainer'):
         # convert target from xml to json
         asJson = xmltodict.parse(ET.tostring(target, encoding='utf-8', method='xml').decode('utf-8'))
 
-        print(asJson)
+        # print(asJson)
 
         widgetContainer = asJson['widgetContainer']
 
         # parse widgetsLayout value of widgetContainer as json
-        print(widgetContainer['widgetsLayout'])
+        # print(widgetContainer['widgetsLayout'])
+
+        widgetId2widget = {}
+
         layout_ = widgetContainer['widgetsLayout']
         if layout_ is not None:
-            widgetContainer['widgetsLayout'] = json.loads(layout_)
-            print(json.dumps(asJson, separators=(',', ':')))
+            layoutAsJson = json.loads(layout_)
+            widgetContainer['widgetsLayout'] = layoutAsJson
+
+            widgets = widgetContainer['widgets']
+            if widgets is not None:
+                actualWidgets = widgets['widget']
+                if actualWidgets is not None:
+                    if isinstance(actualWidgets, list):
+                        for widget in actualWidgets:
+                            widgetId = widget['widgetId']
+                            widgetId2widget[widgetId] = widget
+                            # print ("adding: ", widgetId, widget)
+                    elif isinstance(actualWidgets, dict):
+                        widgetId = actualWidgets['widgetId']
+                        widgetId2widget[widgetId] = actualWidgets
+                        # print ("is dict")
+                        # print (actualWidgets)
+                    # else:
+                    #     # print type of actualWidgets
+                    #     # print("No list nor dict" + str(type(actualWidgets)))
+                # else:
+                #     # print("No widgets found - 2")
+            # else:
+            #     print("No widgets found - 1")
+
+            for row in layoutAsJson['rows']:
+                for column in row['columns']:
+                    for widget in column['widgets']:
+                        widgetId = widget['id']
+                        # print(widgetId)
+                        # print("widgetId2widget: " + str(widgetId2widget))
+
+                        # test if the widgetId is in the map widgetId2widget
+                        if widgetId in widgetId2widget:
+                            widgetFromMap = widgetId2widget[widgetId]
+
+                            # iterate over the keys of the widgetFromMap
+                            for key in widgetFromMap:
+                                # if the key is not in the widget, then add it
+                                if key not in widget:
+                                    value = widgetFromMap[key]
+                                    if key == 'attributes' and value is not None:
+                                        # print ("value: ", json.dumps(value, separators=(',', ':')))
+                                        newValue = value['attribute']
+                                        if isinstance(newValue, list):
+                                            for eachValue in newValue:
+                                                # print(eachValue['values'])
+                                                eachValue['value'] = eachValue['values']['value']
+                                                del eachValue['values']
+                                        else:
+                                            print("Not a list: ", newValue)
+                                            newValue['value'] = newValue['values']['value']
+                                            del newValue['values']
+                                            print("Now: ", newValue)
+
+                                        widget[key] = newValue
+                                    else:
+                                        widget[key] = value
+
+
+                            del widget['widgetId']
+                        else:
+                            print("Widget not found: ", widgetId, widgetId2widget)
+
+
+
+
+            print(json.dumps(layoutAsJson, separators=(',', ':')))
 
 
 def runForFolder(folderName):
