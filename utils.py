@@ -274,11 +274,13 @@ def findAllWidgets(root, parent_map):
                                                 # print(eachValue['values'])
                                                 eachValue['value'] = eachValue['values']['value']
                                                 del eachValue['values']
+                                                if 'embeddedWidgets_values' in eachValue:
+                                                    del eachValue['embeddedWidgets_values']
                                         else:
-                                            print("Not a list: ", newValue)
                                             newValue['value'] = newValue['values']['value']
                                             del newValue['values']
-                                            print("Now: ", newValue)
+                                            if 'embeddedWidgets_values' in newValue:
+                                                del newValue['embeddedWidgets_values']
 
                                         widget[key] = newValue
                                     else:
@@ -288,8 +290,6 @@ def findAllWidgets(root, parent_map):
                             del widget['widgetId']
                         else:
                             print("Widget not found: ", widgetId, widgetId2widget)
-
-
 
 
             print(json.dumps(layoutAsJson, separators=(',', ':')))
