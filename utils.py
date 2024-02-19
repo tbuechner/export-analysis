@@ -211,6 +211,7 @@ def returnAllLowCodeScripts(root, parent_map):
 
 
 def findAllWidgets(root, parent_map):
+    result = []
     # Find elements by XPath and remove them
     for target in root.findall('.//widgetContainer'):
         # convert target from xml to json
@@ -293,9 +294,9 @@ def findAllWidgets(root, parent_map):
                         else:
                             print("Widget not found: ", widgetId, widgetId2widget)
 
-
-            print(json.dumps(layoutAsJson, separators=(',', ':')))
-
+            # print(json.dumps(layoutAsJson, separators=(',', ':')))
+            result.append(layoutAsJson)
+    return result
 
 def runForFolder(folderName):
 
@@ -318,7 +319,7 @@ def runForFolder(folderName):
     parent_map = {c: p for p in tree.iter() for c in p}
 
     searches = returnAllSearches(root, parent_map)
-    print("Searches: ", searches)
+    # print("Searches: ", searches)
     writeJsonToFile(folderName, "searches", searches)
 
     searches = searches[:10]
@@ -328,7 +329,9 @@ def runForFolder(folderName):
     print("LowCodeScripts: ", lowCodeScripts)
     writeToFile(folderName, "lowCodeScripts", lowCodeScripts)
 
-    findAllWidgets(root, parent_map)
+    widgets = findAllWidgets(root, parent_map)
+    # print("Widgets: ", widgets)
+    writeJsonToFile(folderName, "widgets", widgets)
 
     removeGenericElements(root, parent_map)
 
