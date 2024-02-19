@@ -5,6 +5,8 @@ import xmltodict
 
 import os
 
+from tokenizer import count_large_files, count_tokens_in_file
+
 
 def remove(root, parent_map, xpath):
     # Find elements by XPath and remove them
@@ -349,6 +351,9 @@ def runForFolder(folderName):
     rewriteAttributes(doc)
 
     writeJsonToFile(folderName, "types", doc)
+
+    print("tokens types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")))
+    print("tokens types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
 
 
 def writeJsonToFile(folderName, fileName, object):
