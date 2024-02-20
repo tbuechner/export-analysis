@@ -1,0 +1,94 @@
+{
+    "export": {
+        "workspace": {
+            "name": "OKR",
+            "types": [
+                {
+                    "name": "cf.cplace.solution.okr.objective",
+                    "localizedNameSingular": {
+                        "de": "Objective",
+                        "en": "Objective"
+                    },
+                    "localizedNamePlural": {
+                        "de": "Objectives",
+                        "en": "Objectives"
+                    },
+                    "description": null,
+                    "attributeDefinitions": [
+                        {
+                            "name": "cf.cplace.solution.okr.number",
+                            "localizedName": {
+                                "de": "Nummer",
+                                "en": "Number"
+                            },
+                            "localizedShortName": {
+                                "de": "Nr.",
+                                "en": "No."
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Number"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.title",
+                            "localizedName": {
+                                "de": "Titel",
+                                "en": "Title"
+                            },
+                            "multiplicity": "maximalOne",
+                            "typeConstraint": "Text"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.set",
+                            "localizedName": {
+                                "de": "Set",
+                                "en": "Set"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Link",
+                            "linkEntityKind": "page",
+                            "linkTypeName": "cf.cplace.solution.okr.set",
+                            "linkSameWorkspace": "true",
+                            "linkIsHierarchy": "true"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.accomplished",
+                            "localizedName": {
+                                "de": "Erreicht",
+                                "en": "Accomplished"
+                            },
+                            "multiplicity": "maximalOne",
+                            "typeConstraint": "TextEnumeration"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.cycle",
+                            "localizedName": {
+                                "de": "Zyklus",
+                                "en": "Cycle"
+                            },
+                            "localizedShortHelp": null,
+                            "multiplicity": "maximalOne",
+                            "typeConstraint": "Link",
+                            "derivable": {
+                                "referencingAttributeName": "cf.cplace.solution.okr.set",
+                                "referencedAttributeName": "cf.cplace.solution.okr.cycle"
+                            },
+                            "linkEntityKind": "page",
+                            "linkTypeName": "cf.cplace.solution.okr.cycle",
+                            "linkSameWorkspace": "false",
+                            "linkIsHierarchy": "false"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.description",
+                            "localizedName": {
+                                "de": "Beschreibung",
+                                "en": "Description"
+                            },
+                            "multiplicity": "maximalOne",
+                            "typeConstraint": "RichString"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

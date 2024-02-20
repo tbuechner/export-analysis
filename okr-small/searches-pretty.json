@@ -1,0 +1,2644 @@
+[
+    [
+        {
+            "uid": "person/mj1ho3dkz6t0yud70ab7xd7dh"
+        }
+    ],
+    [
+        {
+            "uid": "person/9gllbr5rqy25uo89lo9tinlrn"
+        }
+    ],
+    [
+        {
+            "uid": "person/aq3jmaolqf19omx2sw5cgy1hk"
+        }
+    ],
+    [
+        {
+            "uid": "person/7yi0s331prdxnpuvpcenex752"
+        }
+    ],
+    [
+        {
+            "uid": "person/9pdld9qx2eixnou7vp3b3aoar"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle",
+                "cf.cplace.solution.okr.keyResult",
+                "cf.cplace.solution.okr.objective",
+                "cf.cplace.solution.okr.set"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeUid": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle",
+                "cf.cplace.solution.okr.keyResult",
+                "cf.cplace.solution.okr.objective",
+                "cf.cplace.solution.okr.set"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeUid": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.set",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.objective",
+            "referenceOperator": "connectedTable"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.set",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.progress"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.keyResult",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.set",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult",
+                "cf.cplace.solution.okr.objective",
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.set",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.smallSupport",
+            "referenceOperator": "ca_cf.cplace.solution.okr.organizationalUnit"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.giveBigSupport",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "spaceIds": [
+                            "root"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.set",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.set",
+            "referenceOperator": "embeddingCustomEntity"
+        },
+        {
+            "not": {
+                "and": [
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.smallSupport",
+                        "operator": "equals"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        },
+        {
+            "customIncomingSubSearch": "cf.cplace.solution.okr.giveBigSupport",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.set",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.set",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.objective",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.progress"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.keyResult",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.objective",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.objective",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Marketing",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Marketing",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Sales",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Sales",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Engineering",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Engineering",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Product",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Product",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Company",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Company",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.organizationalUnit"
+            ]
+        },
+        {
+            "customAttributeValue": "cf.cplace.solution.okr.organizationalUnit",
+            "operator": "equals"
+        }
+    ],
+    [
+        {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.keyResult"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.keyResult"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setContributors",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.objective",
+            "referenceOperator": "connectedTable"
+        }
+    ],
+    [
+        {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.objective"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.objective"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setContributors",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.progress"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "contentTypes": [
+                                            "page"
+                                        ]
+                                    },
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "and": [
+                        {
+                            "relativeSpace": "true"
+                        },
+                        {
+                            "types": [
+                                "cf.cplace.solution.okr.progress"
+                            ]
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.set"
+                                        ]
+                                    },
+                                    {
+                                        "relativeCustomReference": "cf.cplace.solution.okr.setContributors",
+                                        "referenceOperator": "sessionUser"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+                            "search": {
+                                "filters": [
+                                    {
+                                        "contentTypes": [
+                                            "page"
+                                        ]
+                                    },
+                                    {
+                                        "types": [
+                                            "cf.cplace.solution.okr.cycle"
+                                        ]
+                                    },
+                                    {
+                                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                                        "values": [
+                                            "s#15 Next",
+                                            "s#25 Current"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#15 Next",
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.smallSupport",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.assignedEmployee",
+                        "referenceOperator": "sessionUser"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#15 Next",
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                        "referenceOperator": "sessionUser"
+                    }
+                ]
+            }
+        },
+        {
+            "not": {
+                "and": [
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.smallSupport",
+                        "operator": "equals"
+                    }
+                ]
+            }
+        },
+        {
+            "not": {
+                "and": [
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.smallSupport",
+                        "operator": "equals"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#15 Next",
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customIncomingSubSearch": "cf.cplace.solution.okr.giveBigSupport",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.set"
+                                    ]
+                                },
+                                {
+                                    "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                                    "referenceOperator": "sessionUser"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#15 Next",
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.giveBigSupport",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "spaceIds": [
+                            "root"
+                        ]
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+                        "search": {
+                            "filters": [
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.set"
+                                    ]
+                                },
+                                {
+                                    "relativeCustomReference": "cf.cplace.solution.okr.setLead",
+                                    "referenceOperator": "sessionUser"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.topic"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.assignedEmployee",
+                        "referenceOperator": "sessionUser"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.priority"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.strategyDashboard",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Marketing",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Marketing",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Sales",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Sales",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Engineering",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Engineering",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Product",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Product",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.status",
+                        "textValue": "#25 Current",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.organizationalUnit"
+                        ]
+                    },
+                    {
+                        "customAttributeValue": "cf.cplace.solution.okr.title",
+                        "textValue": "Company",
+                        "operator": "equals"
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.objective"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.set",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.set"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "customOutgoingSubSearch": "cf.cplace.solution.okr.organizationalUnit",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.organizationalUnit"
+                                    ]
+                                },
+                                {
+                                    "customAttributeValue": "cf.cplace.solution.okr.title",
+                                    "textValue": "Company",
+                                    "operator": "equals"
+                                },
+                                {
+                                    "relativeSpace": "true"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.cycle",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "customAttributeMultiExactValues": "cf.cplace.solution.okr.status",
+                        "values": [
+                            "s#25 Current"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.meeting"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle"
+            ]
+        },
+        {
+            "not": {
+                "and": [
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.cycle"
+                        ]
+                    },
+                    {
+                        "uid": "page/e5xbc5szfvf7jh4471rv7qehq"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle"
+            ]
+        },
+        {
+            "customIncomingSubSearch": "cf.cplace.solution.okr.cycleTemplate",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.settings"
+                        ]
+                    },
+                    {
+                        "customIncomingSubSearch": "cf.cplace.solution.okr.settings",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.administrationDashboard"
+                                    ]
+                                },
+                                {
+                                    "relativeUid": "embeddingCustomEntity"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.organizationalUnit"
+            ]
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.set"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "connectedTable"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.cycle"
+            ]
+        },
+        {
+            "customIncomingSubSearch": "cf.cplace.solution.okr.cycleTemplate",
+            "search": {
+                "filters": [
+                    {
+                        "contentTypes": [
+                            "page"
+                        ]
+                    },
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.settings"
+                        ]
+                    },
+                    {
+                        "customIncomingSubSearch": "cf.cplace.solution.okr.settings",
+                        "search": {
+                            "filters": [
+                                {
+                                    "contentTypes": [
+                                        "page"
+                                    ]
+                                },
+                                {
+                                    "types": [
+                                        "cf.cplace.solution.okr.administrationDashboard"
+                                    ]
+                                },
+                                {
+                                    "relativeUid": "embeddingCustomEntity"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.objective",
+            "referenceOperator": "embeddingCustomEntity"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.progress"
+            ]
+        },
+        {
+            "customOutgoingSubSearch": "cf.cplace.solution.okr.keyResult",
+            "search": {
+                "filters": [
+                    {
+                        "types": [
+                            "cf.cplace.solution.okr.keyResult"
+                        ]
+                    },
+                    {
+                        "relativeSpace": "true"
+                    },
+                    {
+                        "relativeCustomReference": "cf.cplace.solution.okr.objective",
+                        "referenceOperator": "embeddingCustomEntity"
+                    }
+                ]
+            }
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.progress"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        }
+    ],
+    [
+        {
+            "relativeSpace": "true"
+        },
+        {
+            "types": [
+                "cf.cplace.solution.okr.keyResult"
+            ]
+        },
+        {
+            "relativeCustomReference": "cf.cplace.solution.okr.cycle",
+            "referenceOperator": "ca_cf.cplace.solution.okr.cycle"
+        }
+    ]
+]

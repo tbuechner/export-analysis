@@ -5,6 +5,7 @@ import xmltodict
 
 import os
 
+from jsonToCode import generate_code_snippets
 from tokenizer import count_large_files, count_tokens_in_file
 
 
@@ -74,6 +75,29 @@ def rewriteLocalizedNameAttributes(doc):
                     doc[key] = json.loads(value)
 
             rewriteLocalizedNameAttributes(value)
+
+def rewriteTypes(doc):
+    # print("rewriteTypes: " + str(doc))
+    if isinstance(doc, list):
+        for item in doc:
+            rewriteTypes(item)
+    elif isinstance(doc, dict):
+        for key, value in doc.items():
+            if value is not None and key == 'workspace':
+                types = value['types']
+                # print ("workspace: " + str(value))
+                # print("type of types: " + str(type(value['types'])))
+
+                type_ = types['type']
+                # print("type of type: " + str(type(type_)))
+
+                if isinstance(type_, list):
+                    value['types'] = value['types']['type']
+                else:
+                    value['types'] = []
+                    value['types'].append(type_)
+
+            rewriteTypes(value)
 
 def rewriteAttributes(doc):
     if isinstance(doc, list):
@@ -298,6 +322,7 @@ def findAllWidgets(root, parent_map):
             result.append(layoutAsJson)
     return result
 
+
 def runForFolder(folderName):
 
     # delete all files with name *.json in folder name
@@ -326,8 +351,8 @@ def runForFolder(folderName):
     writeJsonToFile(folderName, "searches-10", searches)
 
     lowCodeScripts = returnAllLowCodeScripts(root, parent_map)
-    print("LowCodeScripts: ", lowCodeScripts)
-    writeToFile(folderName, "lowCodeScripts", lowCodeScripts)
+    # print("LowCodeScripts: ", lowCodeScripts)
+    writeLowCodeScriptsToFile(folderName, "lowCodeScripts", lowCodeScripts)
 
     widgets = findAllWidgets(root, parent_map)
     # print("Widgets: ", widgets)
@@ -352,8 +377,13 @@ def runForFolder(folderName):
     rewriteLocalizedNameAttributes(doc)
 
     rewriteAttributes(doc)
+    rewriteTypes(doc)
 
     writeJsonToFile(folderName, "types", doc)
+
+    snippets = generate_code_snippets(doc)
+    print(snippets)
+    writeSnippetsToFile(folderName, "snippets", snippets)
 
     print("tokens types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")))
     print("tokens types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
@@ -365,11 +395,19 @@ def writeJsonToFile(folderName, fileName, object):
     with open(folderName + '/' + fileName + '-compressed.json', 'w') as file:
         file.write(json.dumps(object, separators=(',', ':')))
 
-def writeToFile(folderName, fileName, lowCodeScripts):
+def writeLowCodeScriptsToFile(folderName, fileName, lowCodeScripts):
     with open(folderName + '/' + fileName + '.js', 'w') as file:
         for lowCodeScript in lowCodeScripts:
             # separate the lowCodeScripts by a new line and "---------------------------------------------------"
             file.write(lowCodeScript + "\n")
+            file.write("\n")
+            file.write("//------------------------------------------------------------------------------------------------------\n")
+            file.write("\n")
+
+def writeSnippetsToFile(folderName, fileName, snippets):
+    with open(folderName + '/' + fileName + '.js', 'w') as file:
+        for snippet in snippets:
+            file.write(snippet + "\n")
             file.write("\n")
             file.write("//------------------------------------------------------------------------------------------------------\n")
             file.write("\n")
