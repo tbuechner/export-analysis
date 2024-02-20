@@ -23,7 +23,7 @@ cplace.setLogName("Create Progress Page");
  *
  */
 
-const ATTRIBUTES = {
+const TYPES = {
     KEY_RESULT: {
         TYPE: 'cf.cplace.solution.okr.keyResult',
         ATTR: {
@@ -47,7 +47,7 @@ const ATTRIBUTES = {
  */
 const page = changeEvent.getEntity();
 
-const keyResultProgress = page.get(ATTRIBUTES.KEY_RESULT.ATTR.PROGRESS);
+const keyResultProgress = page.get(TYPES.KEY_RESULT.ATTR.PROGRESS);
 const currentUser = cplace.utils().getCurrentUser();
 
 
@@ -55,24 +55,27 @@ const currentUser = cplace.utils().getCurrentUser();
 if (pageIsNew() || keyResultProgress === null) {
 
     // ca['cf.cplace.solution.okr.keyResult'] = page;
-    cplace.log('page'+page);
+    cplace.log('page: '+page);
     let newProgress = cplace.actions().createPage( {
-        customType: ATTRIBUTES.PROGRESS.TYPE,
+        customType: TYPES.PROGRESS.TYPE,
         space: page.getSpaceId(),
         customAttributes: {
-            [ATTRIBUTES.PROGRESS.ATTR.KEY_RESULT] : page
+            [TYPES.PROGRESS.ATTR.KEY_RESULT] : page
         },
     }, {
         setGeneratedName: true
     });
 
+    cplace.log('created page: ' + newProgress);
+
     //Ändere Progress von Key Result auf neues Objekt
     cplace.actions().updatePage(page, {
         customAttributes: {
-            [ATTRIBUTES.KEY_RESULT.ATTR.PROGRESS]: newProgress
+            [TYPES.KEY_RESULT.ATTR.PROGRESS]: newProgress
         }
     });
-    page.registerAttributeForRefresh(ATTRIBUTES.KEY_RESULT.ATTR.PROGRESS);
+    page.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.PROGRESS);
+    cplace.log('updated page: ' + page);
 }
 return;
 

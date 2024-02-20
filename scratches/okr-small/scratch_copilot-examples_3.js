@@ -72,6 +72,27 @@ function createCycle(year, quarter, status, cyclesDashboard, start, end, statusF
     });
 }
 
+function updateCycle(cycle, year, quarter, status, cyclesDashboard, start, end, statusForNameGenerationPattern) {
+    cplace.actions().updatePage(cycle, {
+        customAttributes: {
+            [TYPES.CYCLE.ATTR.YEAR]: year,
+            [TYPES.CYCLE.ATTR.QUARTER]: quarter,
+            [TYPES.CYCLE.ATTR.STATUS]: status,
+            [TYPES.CYCLE.ATTR.CYCLES_DASHBOARD]: cyclesDashboard,
+            [TYPES.CYCLE.ATTR.START]: start,
+            [TYPES.CYCLE.ATTR.END]: end,
+            [TYPES.CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN]: statusForNameGenerationPattern
+        }
+    });
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.YEAR);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.QUARTER);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.STATUS);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.CYCLES_DASHBOARD);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.START);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.END);
+    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN);
+}
+
 function readFromObjective(order) {
     const number = order.get(TYPES.OBJECTIVE.ATTR.NUMBER);
     const title = order.get(TYPES.OBJECTIVE.ATTR.TITLE);
@@ -95,6 +116,25 @@ function createObjective(number, title, set, accomplished, cycle, description) {
     }, {
         setGeneratedName: true
     });
+}
+
+function updateObjective(objective, number, title, set, accomplished, cycle, description) {
+    cplace.actions().updatePage(objective, {
+        customAttributes: {
+            [TYPES.OBJECTIVE.ATTR.NUMBER]: number,
+            [TYPES.OBJECTIVE.ATTR.TITLE]: title,
+            [TYPES.OBJECTIVE.ATTR.SET]: set,
+            [TYPES.OBJECTIVE.ATTR.ACCOMPLISHED]: accomplished,
+            [TYPES.OBJECTIVE.ATTR.CYCLE]: cycle,
+            [TYPES.OBJECTIVE.ATTR.DESCRIPTION]: description
+        }
+    });
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.NUMBER);
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.TITLE);
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.SET);
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.ACCOMPLISHED);
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.CYCLE);
+    objective.registerAttributeForRefresh(TYPES.OBJECTIVE.ATTR.DESCRIPTION);
 }
 
 function readFromKeyResult(order) {
@@ -138,4 +178,41 @@ function createKeyResult(number, title, progressIndicator, confidenceLevel, grad
     }, {
         setGeneratedName: true
     });
+}
+
+function updateKeyResult(keyResult, number, title, progressIndicator, confidenceLevel, gradingForecast, smallSupport, bigSupport, giveBigSupport, receiveBigSupport, objective, progress, set, cycle, organizationalUnit, lastUpdate) {
+    cplace.actions().updatePage(keyResult, {
+        customAttributes: {
+            [TYPES.KEY_RESULT.ATTR.NUMBER]: number,
+            [TYPES.KEY_RESULT.ATTR.TITLE]: title,
+            [TYPES.KEY_RESULT.ATTR.PROGRESS_INDICATOR]: progressIndicator,
+            [TYPES.KEY_RESULT.ATTR.CONFIDENCE_LEVEL]: confidenceLevel,
+            [TYPES.KEY_RESULT.ATTR.GRADING_FORECAST]: gradingForecast,
+            [TYPES.KEY_RESULT.ATTR.SMALL_SUPPORT]: smallSupport,
+            [TYPES.KEY_RESULT.ATTR.BIG_SUPPORT]: bigSupport,
+            [TYPES.KEY_RESULT.ATTR.GIVE_BIG_SUPPORT]: giveBigSupport,
+            [TYPES.KEY_RESULT.ATTR.RECEIVE_BIG_SUPPORT]: receiveBigSupport,
+            [TYPES.KEY_RESULT.ATTR.OBJECTIVE]: objective,
+            [TYPES.KEY_RESULT.ATTR.PROGRESS]: progress,
+            [TYPES.KEY_RESULT.ATTR.SET]: set,
+            [TYPES.KEY_RESULT.ATTR.CYCLE]: cycle,
+            [TYPES.KEY_RESULT.ATTR.ORGANIZATIONAL_UNIT]: organizationalUnit,
+            [TYPES.KEY_RESULT.ATTR.LAST_UPDATE]: lastUpdate
+        }
+    });
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.NUMBER);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.TITLE);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.PROGRESS_INDICATOR);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.CONFIDENCE_LEVEL);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.GRADING_FORECAST);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.SMALL_SUPPORT);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.BIG_SUPPORT);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.GIVE_BIG_SUPPORT);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.RECEIVE_BIG_SUPPORT);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.OBJECTIVE);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.PROGRESS);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.SET);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.CYCLE);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.ORGANIZATIONAL_UNIT);
+    keyResult.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.LAST_UPDATE);
 }
