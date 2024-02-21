@@ -17,6 +17,27 @@ function accessBuiltInPageAttributes(page) {
     const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
 }
 
+function updatePage(page) {
+    cplace.actions().updatePage(page, {
+        customAttributes: {
+            [ATTRIBUTE_NAME_1]: value1,
+            [ATTRIBUTE_NAME_2]: value2
+        },
+    });
+}
+
+function createPage() {
+    return cplace.actions().createPage({
+        customType: TYPE_NAME,
+        customAttributes: {
+            [ATTRIBUTE_NAME_1]: value1,
+            [ATTRIBUTE_NAME_2]: value2
+        }
+    }, {
+        setGeneratedName: true
+    });
+}
+    
 function readFromCycle(cycle) {
     const year = cycle.get(ATTR_CYCLE_YEAR);
     const quarter = cycle.get(ATTR_CYCLE_QUARTER);

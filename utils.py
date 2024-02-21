@@ -231,8 +231,6 @@ def returnAllLowCodeScripts(root, parent_map):
             # print(element.text)
 
 
-    # create a list which will store the text of the elements
-    result = []
     # iterate over all elements in the tree
     for element in root.iter():
         # if the text of the element starts with "s{"filters":"

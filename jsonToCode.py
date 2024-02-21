@@ -10,25 +10,51 @@ def getConstantName(simple_type_name_SnakeCase, simple_attr_name):
 
 
 def generate_copilot_examples(data):
-    snippet = f"function accessBuiltInPageAttributes(page) {{\n"
-    snippet += "    const absoluteUrl = page.getBuiltinFeatureValue(\"absoluteUrl\");\n"
-    snippet += f"    const comments = page.getBuiltinFeatureValue(\"comments\");\n"
-    snippet += f"    const commentsForVersioning = page.getBuiltinFeatureValue(\"commentsForVersioning\");\n"
-    snippet += f"    const content = page.getBuiltinFeatureValue(\"content\");\n"
-    snippet += f"    const creator = page.getBuiltinFeatureValue(\"creator\");\n"
-    snippet += f"    const created = page.getBuiltinFeatureValue(\"created\");\n"
-    snippet += f"    const customType = page.getBuiltinFeatureValue(\"customType\");\n"
-    snippet += f"    const documents = page.getBuiltinFeatureValue(\"documents\");\n"
-    snippet += f"    const id = page.getBuiltinFeatureValue(\"id\");\n"
-    snippet += f"    const localizedName = page.getBuiltinFeatureValue(\"localizedName\");\n"
-    snippet += f"    const name = page.getBuiltinFeatureValue(\"name\");\n"
-    snippet += f"    const orderIndex = page.getBuiltinFeatureValue(\"orderIndex\");\n"
-    snippet += f"    const readers = page.getBuiltinFeatureValue(\"readers\");\n"
-    snippet += f"    const readersAreDefault = page.getBuiltinFeatureValue(\"readersAreDefault\");\n"
-    snippet += f"    const space = page.getBuiltinFeatureValue(\"space\");\n"
-    snippet += f"    const writersAreDefault = page.getBuiltinFeatureValue(\"writersAreDefault\");\n"
-    snippet += f"}}\n"
-    snippet += f"\n"
+
+    snippet = """function accessBuiltInPageAttributes(page) {
+    const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
+    const comments = page.getBuiltinFeatureValue("comments");
+    const commentsForVersioning = page.getBuiltinFeatureValue("commentsForVersioning");
+    const content = page.getBuiltinFeatureValue("content");
+    const creator = page.getBuiltinFeatureValue("creator");
+    const created = page.getBuiltinFeatureValue("created");
+    const customType = page.getBuiltinFeatureValue("customType");
+    const documents = page.getBuiltinFeatureValue("documents");
+    const id = page.getBuiltinFeatureValue("id");
+    const localizedName = page.getBuiltinFeatureValue("localizedName");
+    const name = page.getBuiltinFeatureValue("name");
+    const orderIndex = page.getBuiltinFeatureValue("orderIndex");
+    const readers = page.getBuiltinFeatureValue("readers");
+    const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
+    const space = page.getBuiltinFeatureValue("space");
+    const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+}
+
+"""
+
+    snippet += """function updatePage(page) {
+    cplace.actions().updatePage(page, {
+        customAttributes: {
+            [ATTRIBUTE_NAME_1]: value1,
+            [ATTRIBUTE_NAME_2]: value2
+        },
+    });
+}
+
+function createPage() {
+    return cplace.actions().createPage({
+        customType: TYPE_NAME,
+        customAttributes: {
+            [ATTRIBUTE_NAME_1]: value1,
+            [ATTRIBUTE_NAME_2]: value2
+        }
+    }, {
+        setGeneratedName: true
+    });
+}
+
+"""
+
 
 
     types = data['export']['workspace']['types']
@@ -50,6 +76,9 @@ def generate_copilot_examples(data):
         simple_type_name_firstLetterCapital = simple_type_name[0].upper() + simple_type_name[1:]
         function_name = "readFrom" + simple_type_name_firstLetterCapital
         attributes = eachType['attributeDefinitions']
+
+        # q: is there a way to set a string variale with a multi-line string?
+        #
 
         # Start building the function snippet
         snippet += f"function {function_name}({simple_type_name}) {{\n"
