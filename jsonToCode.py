@@ -1,3 +1,14 @@
+import re
+
+def convertToSnakeUpperCase(input):
+    # convert from camel case to snake case with a regular expression
+    return re.sub('([A-Z])', r'_\1', input).upper()
+
+
+
+
+
+
 def generate_code_snippets(data):
     snippets = []
 
@@ -23,6 +34,13 @@ def generate_code_snippets(data):
         fully_qualified_type_name = eachType['name']
         simple_type_name = fully_qualified_type_name.split(".")[-1]
         print("type_name: " + simple_type_name)
+
+        # convert from camel case to snake case
+        # q: how to convert from camel case to snake case?
+        # a: use regular expressions
+        simple_type_name_SnakeCase = convertToSnakeUpperCase(simple_type_name)
+        print("type_name_snake_case: " + simple_type_name_SnakeCase)
+
         # convert first letter to uppercase
         simple_type_name_firstLetterCapital = simple_type_name[0].upper() + simple_type_name[1:]
         function_name = "readFrom" + simple_type_name_firstLetterCapital
@@ -36,6 +54,11 @@ def generate_code_snippets(data):
         snippet += "}\n"
         snippet += "\n"
 
+        snippet += f"const TYPE_{simple_type_name_SnakeCase} = '{fully_qualified_type_name}';\n"
+        for attr in attributes:
+            attr_name = attr['name']
+            simple_attr_name = attr_name.split(".")[-1]
+            snippet += f"const ATTR_{simple_type_name_SnakeCase}_{convertToSnakeUpperCase(simple_attr_name)} = '{attr_name}';\n"
 
         snippets.append(snippet)
 
