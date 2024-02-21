@@ -400,6 +400,9 @@ def runForFolder(folderName):
           ", types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")) +
           ", types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
 
+    # q: how to prevent a warning to be printed?
+    # a: use the following command to suppress the warning:
+    # warnings.simplefilter("ignore", exceptions.SecurityWarning)
 
 def writeJsonToFile(folderName, fileName, object):
     with open(folderName + '/' + fileName + '-pretty.json', 'w') as file:
