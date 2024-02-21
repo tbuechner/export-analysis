@@ -657,6 +657,94 @@
                     ]
                 },
                 {
+                    "name": "cf.cplace.solution.okr.meeting",
+                    "localizedNameSingular": {
+                        "de": "OKR Meeting",
+                        "en": "OKR Meeting"
+                    },
+                    "localizedNamePlural": {
+                        "de": "Meetings",
+                        "en": "Meetings"
+                    },
+                    "description": null,
+                    "attributeDefinitions": [
+                        {
+                            "name": "cf.cplace.solution.okr.title",
+                            "localizedName": {
+                                "de": "Titel",
+                                "en": "Title"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Text"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.meetingType",
+                            "localizedName": {
+                                "de": "Meeting Typ",
+                                "en": "Meeting Type"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "TextEnumeration"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.date",
+                            "localizedName": {
+                                "de": "Datum",
+                                "en": "Date"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Date"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.cycle",
+                            "localizedName": {
+                                "de": "Zyklus",
+                                "en": "Cycle"
+                            },
+                            "localizedShortName": {
+                                "de": "Zyklus",
+                                "en": "Cycle"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Link",
+                            "linkEntityKind": "page",
+                            "linkTypeName": "cf.cplace.solution.okr.cycle",
+                            "linkSameWorkspace": "true",
+                            "linkIsHierarchy": "false"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.set",
+                            "localizedName": {
+                                "de": "Set",
+                                "en": "Set"
+                            },
+                            "localizedShortName": {
+                                "de": "Sets",
+                                "en": "Sets"
+                            },
+                            "multiplicity": "maximalOne",
+                            "typeConstraint": "Link",
+                            "linkEntityKind": "page",
+                            "linkTypeName": "cf.cplace.solution.okr.set",
+                            "linkSameWorkspace": "true",
+                            "linkIsHierarchy": "false"
+                        },
+                        {
+                            "name": "cf.cplace.solution.okr.meetingsDashbaord",
+                            "localizedName": {
+                                "de": "Meeting Dashbaord",
+                                "en": "Meeting Dashbaord"
+                            },
+                            "multiplicity": "exactlyOne",
+                            "typeConstraint": "Link",
+                            "linkEntityKind": "page",
+                            "linkTypeName": "cf.cplace.solution.okr.meetingsDashbaord",
+                            "linkSameWorkspace": "true",
+                            "linkIsHierarchy": "true"
+                        }
+                    ]
+                },
+                {
                     "name": "cf.cplace.solution.okr.selectNextCycle",
                     "localizedNameSingular": {
                         "de": "Select next Cycle",

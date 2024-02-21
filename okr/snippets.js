@@ -136,6 +136,26 @@ const ATTR_TASK_ESCALATION_LEVEL = 'cf.cplace.digitalBoard.escalationLevel';
 
 //------------------------------------------------------------------------------------------------------
 
+function readFromMeeting(meeting) {
+    const title = meeting.get(ATTR_MEETING_TITLE);
+    const meetingType = meeting.get(ATTR_MEETING_MEETING_TYPE);
+    const date = meeting.get(ATTR_MEETING_DATE);
+    const cycle = meeting.get(ATTR_MEETING_CYCLE);
+    const set = meeting.get(ATTR_MEETING_SET);
+    const meetingsDashbaord = meeting.get(ATTR_MEETING_MEETINGS_DASHBAORD);
+}
+
+const TYPE_MEETING = 'cf.cplace.solution.okr.meeting';
+const ATTR_MEETING_TITLE = 'cf.cplace.solution.okr.title';
+const ATTR_MEETING_MEETING_TYPE = 'cf.cplace.solution.okr.meetingType';
+const ATTR_MEETING_DATE = 'cf.cplace.solution.okr.date';
+const ATTR_MEETING_CYCLE = 'cf.cplace.solution.okr.cycle';
+const ATTR_MEETING_SET = 'cf.cplace.solution.okr.set';
+const ATTR_MEETING_MEETINGS_DASHBAORD = 'cf.cplace.solution.okr.meetingsDashbaord';
+
+
+//------------------------------------------------------------------------------------------------------
+
 function readFromSelectNextCycle(selectNextCycle) {
     const nextCycle = selectNextCycle.get(ATTR_SELECT_NEXT_CYCLE_NEXT_CYCLE);
 }
