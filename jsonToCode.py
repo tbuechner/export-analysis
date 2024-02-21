@@ -5,8 +5,8 @@ def convertToSnakeUpperCase(input):
     return re.sub('([A-Z])', r'_\1', input).upper()
 
 
-
-
+def getConstantName(simple_type_name_SnakeCase, simple_attr_name):
+    return f"ATTR_{simple_type_name_SnakeCase}_{convertToSnakeUpperCase(simple_attr_name)}"
 
 
 def generate_code_snippets(data):
@@ -50,7 +50,9 @@ def generate_code_snippets(data):
         snippet = f"function {function_name}({simple_type_name}) {{\n"
         for attr in attributes:
             attr_name = attr['name']
-            snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get('{attr_name}');\n"
+            simple_attr_name = attr_name.split(".")[-1]
+            constant_name = getConstantName(simple_type_name_SnakeCase, simple_attr_name)
+            snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get({constant_name});\n"
         snippet += "}\n"
         snippet += "\n"
 
@@ -58,7 +60,8 @@ def generate_code_snippets(data):
         for attr in attributes:
             attr_name = attr['name']
             simple_attr_name = attr_name.split(".")[-1]
-            snippet += f"const ATTR_{simple_type_name_SnakeCase}_{convertToSnakeUpperCase(simple_attr_name)} = '{attr_name}';\n"
+            constant_name = getConstantName(simple_type_name_SnakeCase, simple_attr_name)
+            snippet += f"const {constant_name} = '{attr_name}';\n"
 
         snippets.append(snippet)
 
