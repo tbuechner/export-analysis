@@ -47,6 +47,7 @@ function readFromObjective(objective) {
     const description = objective.get(ATTR_OBJECTIVE_DESCRIPTION);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.okr.objective' ---
 const TYPE_OBJECTIVE = 'cf.cplace.solution.okr.objective';
 const ATTR_OBJECTIVE_NUMBER = 'cf.cplace.solution.okr.number';
 const ATTR_OBJECTIVE_TITLE = 'cf.cplace.solution.okr.title';
@@ -54,4 +55,5 @@ const ATTR_OBJECTIVE_SET = 'cf.cplace.solution.okr.set';
 const ATTR_OBJECTIVE_ACCOMPLISHED = 'cf.cplace.solution.okr.accomplished';
 const ATTR_OBJECTIVE_CYCLE = 'cf.cplace.solution.okr.cycle';
 const ATTR_OBJECTIVE_DESCRIPTION = 'cf.cplace.solution.okr.description';
+// --- end: Constants for Type 'cf.cplace.solution.okr.objective' ---
 

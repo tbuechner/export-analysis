@@ -90,12 +90,21 @@ function createPage() {
         snippet += "}\n"
         snippet += "\n"
 
+    # q: what is a f" string?
+    # a: f-strings are a way to embed expressions inside string literals, using curly braces
+        # q: how to escape "/" in a f-string?
+        #
+
+
+
+        snippet += f"// --- start: Constants for Type '{fully_qualified_type_name}' ---\n"
         snippet += f"const TYPE_{simple_type_name_SnakeCase} = '{fully_qualified_type_name}';\n"
         for attr in attributes:
             attr_name = attr['name']
             simple_attr_name = attr_name.split(".")[-1]
             constant_name = getConstantName(simple_type_name_SnakeCase, simple_attr_name)
             snippet += f"const {constant_name} = '{attr_name}';\n"
+        snippet += f"// --- end: Constants for Type '{fully_qualified_type_name}' ---\n"
         snippet += "\n"
 
     return snippet

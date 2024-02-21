@@ -57,6 +57,7 @@ function readFromSolution(solution) {
     const horizon = solution.get(ATTR_SOLUTION_HORIZON);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.solution' ---
 const TYPE_SOLUTION = 'cf.cplace.solution.safe.solution';
 const ATTR_SOLUTION_DESCRIPTION = 'cf.cplace.solution.safe.description';
 const ATTR_SOLUTION_SOLUTION_TRAIN_ENGINEER = 'cf.cplace.solution.safe.solutionTrainEngineer';
@@ -74,6 +75,7 @@ const ATTR_SOLUTION_DEPLOYING_W_I_P_LIMIT = 'cf.cplace.solution.safe.deployingWI
 const ATTR_SOLUTION_RELEASING_W_I_P_LIMIT = 'cf.cplace.solution.safe.releasingWIPLimit';
 const ATTR_SOLUTION_SHORT_NAME = 'cf.cplace.solution.safe.shortName';
 const ATTR_SOLUTION_HORIZON = 'cf.cplace.solution.safe.horizon';
+// --- end: Constants for Type 'cf.cplace.solution.safe.solution' ---
 
 function readFromProgramIncrement(programIncrement) {
     const title = programIncrement.get(ATTR_PROGRAM_INCREMENT_TITLE);
@@ -88,6 +90,7 @@ function readFromProgramIncrement(programIncrement) {
     const statsJson = programIncrement.get(ATTR_PROGRAM_INCREMENT_STATS_JSON);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.programIncrement' ---
 const TYPE_PROGRAM_INCREMENT = 'cf.cplace.solution.safe.programIncrement';
 const ATTR_PROGRAM_INCREMENT_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_PROGRAM_INCREMENT_SOLUTION = 'cf.cplace.solution.safe.solution';
@@ -99,6 +102,7 @@ const ATTR_PROGRAM_INCREMENT_CONFIDENCE_VOTE = 'cf.cplace.solution.safe.confiden
 const ATTR_PROGRAM_INCREMENT_CAPACITY = 'cf.cplace.solution.safe.capacity';
 const ATTR_PROGRAM_INCREMENT__RESULT = 'cf.cplace.solution.safe.confidenceVote.Result';
 const ATTR_PROGRAM_INCREMENT_STATS_JSON = 'cf.cplace.solution.safe.statsJson';
+// --- end: Constants for Type 'cf.cplace.solution.safe.programIncrement' ---
 
 function readFromIteration(iteration) {
     const title = iteration.get(ATTR_ITERATION_TITLE);
@@ -108,12 +112,14 @@ function readFromIteration(iteration) {
     const predecessor = iteration.get(ATTR_ITERATION_PREDECESSOR);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.iteration' ---
 const TYPE_ITERATION = 'cf.cplace.solution.safe.iteration';
 const ATTR_ITERATION_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_ITERATION_PROGRAM_INCREMENT = 'cf.cplace.solution.safe.programIncrement';
 const ATTR_ITERATION_START_DATE = 'cf.cplace.solution.safe.startDate';
 const ATTR_ITERATION_END_DATE = 'cf.cplace.solution.safe.endDate';
 const ATTR_ITERATION_PREDECESSOR = 'cf.cplace.solution.safe.predecessor';
+// --- end: Constants for Type 'cf.cplace.solution.safe.iteration' ---
 
 function readFromCapability(capability) {
     const title = capability.get(ATTR_CAPABILITY_TITLE);
@@ -145,6 +151,7 @@ function readFromCapability(capability) {
     const features = capability.get(ATTR_CAPABILITY_FEATURES);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.capability' ---
 const TYPE_CAPABILITY = 'cf.cplace.solution.safe.capability';
 const ATTR_CAPABILITY_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_CAPABILITY_REFERENCE = 'cf.cplace.solution.safe.solution.reference';
@@ -173,6 +180,7 @@ const ATTR_CAPABILITY_ACCEPTANCE_CRITERIA = 'cf.cplace.solution.safe.acceptanceC
 const ATTR_CAPABILITY_BENEFIT_HYPOTHESIS = 'cf.cplace.solution.safe.benefitHypothesis';
 const ATTR_CAPABILITY_CONFLICT_STATE = 'cf.cplace.solution.safe.conflictState';
 const ATTR_CAPABILITY_FEATURES = 'cf.cplace.solution.safe.features';
+// --- end: Constants for Type 'cf.cplace.solution.safe.capability' ---
 
 function readFromDependency(dependency) {
     const title = dependency.get(ATTR_DEPENDENCY_TITLE);
@@ -185,6 +193,7 @@ function readFromDependency(dependency) {
     const plannedEndB = dependency.get(ATTR_DEPENDENCY_PLANNED_END_B);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.dependency' ---
 const TYPE_DEPENDENCY = 'cf.cplace.solution.safe.dependency';
 const ATTR_DEPENDENCY_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_DEPENDENCY_SUCCESSOR = 'cf.cplace.solution.safe.successor';
@@ -194,6 +203,7 @@ const ATTR_DEPENDENCY_STATUS = 'cf.cplace.solution.safe.status';
 const ATTR_DEPENDENCY_DESCRIPTION = 'cf.cplace.solution.safe.description';
 const ATTR_DEPENDENCY_PLANNED_START_A = 'cf.cplace.solution.safe.plannedStartA';
 const ATTR_DEPENDENCY_PLANNED_END_B = 'cf.cplace.solution.safe.plannedEndB';
+// --- end: Constants for Type 'cf.cplace.solution.safe.dependency' ---
 
 function readFromSafeMilestone(safeMilestone) {
     const title = safeMilestone.get(ATTR_SAFE_MILESTONE_TITLE);
@@ -204,6 +214,7 @@ function readFromSafeMilestone(safeMilestone) {
     const plannedEnd = safeMilestone.get(ATTR_SAFE_MILESTONE_PLANNED_END);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.safeMilestone' ---
 const TYPE_SAFE_MILESTONE = 'cf.cplace.solution.safe.safeMilestone';
 const ATTR_SAFE_MILESTONE_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_SAFE_MILESTONE_DATE = 'cf.cplace.solution.safe.date';
@@ -211,13 +222,16 @@ const ATTR_SAFE_MILESTONE_TYPE = 'cf.cplace.solution.safe.type';
 const ATTR_SAFE_MILESTONE_RELEVANT_FOR = 'cf.cplace.solution.safe.relevantFor';
 const ATTR_SAFE_MILESTONE_PLANNED_START = 'cf.cplace.solution.safe.plannedStart';
 const ATTR_SAFE_MILESTONE_PLANNED_END = 'cf.cplace.solution.safe.plannedEnd';
+// --- end: Constants for Type 'cf.cplace.solution.safe.safeMilestone' ---
 
 function readFromPeriodStatus(periodStatus) {
     const order = periodStatus.get(ATTR_PERIOD_STATUS_ORDER);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.periodStatus' ---
 const TYPE_PERIOD_STATUS = 'cf.cplace.solution.safe.periodStatus';
 const ATTR_PERIOD_STATUS_ORDER = 'cf.cplace.solution.safe.order';
+// --- end: Constants for Type 'cf.cplace.solution.safe.periodStatus' ---
 
 function readFromFlowMetric(flowMetric) {
     const artifactType = flowMetric.get(ATTR_FLOW_METRIC_ARTIFACT_TYPE);
@@ -227,12 +241,14 @@ function readFromFlowMetric(flowMetric) {
     const jsonMetricData = flowMetric.get(ATTR_FLOW_METRIC_JSON_METRIC_DATA);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.flowMetric' ---
 const TYPE_FLOW_METRIC = 'cf.cplace.solution.safe.flowMetric';
 const ATTR_FLOW_METRIC_ARTIFACT_TYPE = 'cf.cplace.solution.safe.artifactType';
 const ATTR_FLOW_METRIC_SNAPSHOT_DATE = 'cf.cplace.solution.safe.snapshotDate';
 const ATTR_FLOW_METRIC__REFERENCE = 'cf.cplace.solution.safe.SAFeLevel.Reference';
 const ATTR_FLOW_METRIC_TIMEBOX = 'cf.cplace.solution.safe.timebox';
 const ATTR_FLOW_METRIC_JSON_METRIC_DATA = 'cf.cplace.solution.safe.jsonMetricData';
+// --- end: Constants for Type 'cf.cplace.solution.safe.flowMetric' ---
 
 function readFromObjective(objective) {
     const objectivetitle = objective.get(ATTR_OBJECTIVE_OBJECTIVETITLE);
@@ -245,6 +261,7 @@ function readFromObjective(objective) {
     const statement = objective.get(ATTR_OBJECTIVE_STATEMENT);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.objective' ---
 const TYPE_OBJECTIVE = 'cf.cplace.solution.safe.objective';
 const ATTR_OBJECTIVE_OBJECTIVETITLE = 'cf.cplace.solution.safe.objectivetitle';
 const ATTR_OBJECTIVE_TIMEBOX = 'cf.cplace.solution.safe.timebox';
@@ -254,6 +271,7 @@ const ATTR_OBJECTIVE_BUSINESS_VALUE = 'cf.cplace.solution.safe.businessValue';
 const ATTR_OBJECTIVE_ACTUAL_VALUE = 'cf.cplace.solution.safe.actualValue';
 const ATTR_OBJECTIVE_COMMITMENT = 'cf.cplace.solution.safe.commitment';
 const ATTR_OBJECTIVE_STATEMENT = 'cf.cplace.solution.safe.statement';
+// --- end: Constants for Type 'cf.cplace.solution.safe.objective' ---
 
 function readFromEvent(event) {
     const title = event.get(ATTR_EVENT_TITLE);
@@ -262,11 +280,13 @@ function readFromEvent(event) {
     const solution = event.get(ATTR_EVENT_SOLUTION);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.event' ---
 const TYPE_EVENT = 'cf.cplace.solution.safe.event';
 const ATTR_EVENT_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_EVENT_START_DATE = 'cf.cplace.solution.safe.startDate';
 const ATTR_EVENT_END_DATE = 'cf.cplace.solution.safe.endDate';
 const ATTR_EVENT_SOLUTION = 'cf.cplace.solution.safe.solution';
+// --- end: Constants for Type 'cf.cplace.solution.safe.event' ---
 
 function readFromConfidenceVote(confidenceVote) {
     const PI = confidenceVote.get(ATTR_CONFIDENCE_VOTE__P_I);
@@ -279,6 +299,7 @@ function readFromConfidenceVote(confidenceVote) {
     const solution = confidenceVote.get(ATTR_CONFIDENCE_VOTE_SOLUTION);
 }
 
+// --- start: Constants for Type 'cf.cplace.solution.safe.confidenceVote' ---
 const TYPE_CONFIDENCE_VOTE = 'cf.cplace.solution.safe.confidenceVote';
 const ATTR_CONFIDENCE_VOTE__P_I = 'cf.cplace.solution.safe.confidenceVote.PI';
 const ATTR_CONFIDENCE_VOTE_RESULT = 'cf.cplace.solution.safe.confidenceVote.result';
@@ -288,4 +309,5 @@ const ATTR_CONFIDENCE_VOTE_THREE_FINGERS = 'cf.cplace.solution.safe.confidenceVo
 const ATTR_CONFIDENCE_VOTE_FOUR_FINGERS = 'cf.cplace.solution.safe.confidenceVote.fourFingers';
 const ATTR_CONFIDENCE_VOTE_FIVE_FINGERS = 'cf.cplace.solution.safe.confidenceVote.fiveFingers';
 const ATTR_CONFIDENCE_VOTE_SOLUTION = 'cf.cplace.solution.safe.confidenceVote.solution';
+// --- end: Constants for Type 'cf.cplace.solution.safe.confidenceVote' ---
 
