@@ -229,9 +229,22 @@ def returnAllLowCodeScripts(root, parent_map):
             # add the text of the element
             result.append(element.text)
             # print(element.text)
+
+
+    # create a list which will store the text of the elements
+    result = []
+    # iterate over all elements in the tree
+    for element in root.iter():
+        # if the text of the element starts with "s{"filters":"
+        if element.text is not None and element.text.startswith('s{') and element.text.endswith('}'):
+            text = element.text[1:]
+            # parse text as json
+            textAsJson = json.loads(text)
+            # if the key "script" exists in the json
+            if "script" in textAsJson:
+                result.append(textAsJson["script"])
+
     return result
-
-
 
 
 def findAllWidgets(root, parent_map):

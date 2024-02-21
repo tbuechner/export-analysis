@@ -19,18 +19,24 @@ def generate_code_snippets(data):
     # iterate over each type in the list
     # print("types: " + str(types))
     for eachType in types:
-        print("eachType: " + str(eachType))
 
-        type_name = eachType['name']
-        function_name = "examples_" + type_name.split(".")[-1]
+        fully_qualified_type_name = eachType['name']
+        simple_type_name = fully_qualified_type_name.split(".")[-1]
+        print("type_name: " + simple_type_name)
+        # convert first letter to uppercase
+        simple_type_name_firstLetterCapital = simple_type_name[0].upper() + simple_type_name[1:]
+        function_name = "readFrom" + simple_type_name_firstLetterCapital
         attributes = eachType['attributeDefinitions']
 
         # Start building the function snippet
-        snippet = f"function {function_name}(order) {{\n"
+        snippet = f"function {function_name}({simple_type_name}) {{\n"
         for attr in attributes:
             attr_name = attr['name']
-            snippet += f"    const {attr_name.split('.')[-1]} = order.get('{attr_name}');\n"
+            snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get('{attr_name}');\n"
         snippet += "}\n"
+        snippet += "\n"
+
+
         snippets.append(snippet)
 
     return snippets
