@@ -70,12 +70,12 @@ if (pageIsNew() || keyResultProgress === null) {
 
     // ca['cf.cplace.solution.okr.keyResult'] = page;
     cplace.log('page: '+page);
-    let newProgress = cplace.actions().createPage( {
+    // create new progress page for key result
+    const newProgress = cplace.actions().createPage({
         customType: TYPE_PROGRESS.TYPE,
-        space: page.getSpaceId(),
         customAttributes: {
-            [TYPE_PROGRESS.ATTR.KEY_RESULT] : page
-        },
+            [TYPE_PROGRESS.ATTR.KEY_RESULT]: page,
+        }
     }, {
         setGeneratedName: true
     });

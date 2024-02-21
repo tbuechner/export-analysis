@@ -1,7 +1,6 @@
 const TYPE_CYCLE = {
     TYPE: 'cf.cplace.solution.okr.cycle',
     ATTR: {
-        YEAR: 'cf.cplace.solution.okr.year',
         QUARTER: 'cf.cplace.solution.okr.quarter',
         STATUS: 'cf.cplace.solution.okr.status',
         CYCLES_DASHBOARD: 'cf.cplace.solution.okr.cyclesDashboard',
@@ -11,17 +10,17 @@ const TYPE_CYCLE = {
     },
 }
 
-function readFromCycle(order) {
-    const year = order.get(TYPE_CYCLE.ATTR.YEAR);
-    const quarter = order.get(TYPE_CYCLE.ATTR.QUARTER);
-    const status = order.get(TYPE_CYCLE.ATTR.STATUS);
-    const cyclesDashboard = order.get(TYPE_CYCLE.ATTR.CYCLES_DASHBOARD);
-    const start = order.get(TYPE_CYCLE.ATTR.START);
-    const end = order.get(TYPE_CYCLE.ATTR.END);
-    const statusForNameGenerationPattern = order.get(TYPE_CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN);
+function readFromCycle(cycle) {
+    const year = cycle.get(TYPE_CYCLE.ATTR.YEAR);
+    const quarter = cycle.get(TYPE_CYCLE.ATTR.QUARTER);
+    const status = cycle.get(TYPE_CYCLE.ATTR.STATUS);
+    const cyclesDashboard = cycle.get(TYPE_CYCLE.ATTR.CYCLES_DASHBOARD);
+    const start = cycle.get(TYPE_CYCLE.ATTR.START);
+    const end = cycle.get(TYPE_CYCLE.ATTR.END);
+    const statusForNameGenerationPattern = cycle.get(TYPE_CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN);
 }
 
-function createCycle(year, quarter, status, cyclesDashboard, start, end, statusForNameGenerationPattern) {
+function createCycleWithAllAttributes(year, quarter, status, cyclesDashboard, start, end, statusForNameGenerationPattern) {
     return cplace.actions().createPage({
         customType: TYPE_CYCLE.TYPE,
         customAttributes: {
@@ -38,25 +37,24 @@ function createCycle(year, quarter, status, cyclesDashboard, start, end, statusF
     });
 }
 
-function updateCycle(cycle, year, quarter, status, cyclesDashboard, start, end, statusForNameGenerationPattern) {
+function createCycleWithSingleAttribute(start) {
+    return cplace.actions().createPage({
+        customType: TYPE_CYCLE.TYPE,
+        customAttributes: {
+            [TYPE_CYCLE.ATTR.START]: start
+        }
+    }, {
+        setGeneratedName: true
+    });
+}
+
+function updateSingleAttributeOfCycle(cycle, start) {
     cplace.actions().updatePage(cycle, {
         customAttributes: {
-            [TYPE_CYCLE.ATTR.YEAR]: year,
-            [TYPE_CYCLE.ATTR.QUARTER]: quarter,
-            [TYPE_CYCLE.ATTR.STATUS]: status,
-            [TYPE_CYCLE.ATTR.CYCLES_DASHBOARD]: cyclesDashboard,
             [TYPE_CYCLE.ATTR.START]: start,
-            [TYPE_CYCLE.ATTR.END]: end,
-            [TYPE_CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN]: statusForNameGenerationPattern
         }
     });
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.YEAR);
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.QUARTER);
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.STATUS);
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.CYCLES_DASHBOARD);
     cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.START);
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.END);
-    cycle.registerAttributeForRefresh(TYPE_CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN);
 }
 
 const TYPE_OBJECTIVE = {
@@ -71,13 +69,13 @@ const TYPE_OBJECTIVE = {
     }
 }
 
-function readFromObjective(order) {
-    const number = order.get(TYPE_OBJECTIVE.ATTR.NUMBER);
-    const title = order.get(TYPE_OBJECTIVE.ATTR.TITLE);
-    const set = order.get(TYPE_OBJECTIVE.ATTR.SET);
-    const accomplished = order.get(TYPE_OBJECTIVE.ATTR.ACCOMPLISHED);
-    const cycle = order.get(TYPE_OBJECTIVE.ATTR.CYCLE);
-    const description = order.get(TYPE_OBJECTIVE.ATTR.DESCRIPTION);
+function readFromObjective(objective) {
+    const number = objective.get(TYPE_OBJECTIVE.ATTR.NUMBER);
+    const title = objective.get(TYPE_OBJECTIVE.ATTR.TITLE);
+    const set = objective.get(TYPE_OBJECTIVE.ATTR.SET);
+    const accomplished = objective.get(TYPE_OBJECTIVE.ATTR.ACCOMPLISHED);
+    const cycle = objective.get(TYPE_OBJECTIVE.ATTR.CYCLE);
+    const description = objective.get(TYPE_OBJECTIVE.ATTR.DESCRIPTION);
 }
 
 function createObjective(number, title, set, accomplished, cycle, description) {
@@ -136,22 +134,22 @@ const TYPE_KEY_RESULT = {
     }
 }
 
-function readFromKeyResult(order) {
-    const number = order.get(TYPE_KEY_RESULT.ATTR.NUMBER);
-    const title = order.get(TYPE_KEY_RESULT.ATTR.TITLE);
-    const progressIndicator = order.get(TYPE_KEY_RESULT.ATTR.PROGRESS_INDICATOR);
-    const confidenceLevel = order.get(TYPE_KEY_RESULT.ATTR.CONFIDENCE_LEVEL);
-    const gradingForecast = order.get(TYPE_KEY_RESULT.ATTR.GRADING_FORECAST);
-    const smallSupport = order.get(TYPE_KEY_RESULT.ATTR.SMALL_SUPPORT);
-    const bigSupport = order.get(TYPE_KEY_RESULT.ATTR.BIG_SUPPORT);
-    const giveBigSupport = order.get(TYPE_KEY_RESULT.ATTR.GIVE_BIG_SUPPORT);
-    const receiveBigSupport = order.get(TYPE_KEY_RESULT.ATTR.RECEIVE_BIG_SUPPORT);
-    const objective = order.get(TYPE_KEY_RESULT.ATTR.OBJECTIVE);
-    const progress = order.get(TYPE_KEY_RESULT.ATTR.PROGRESS);
-    const set = order.get(TYPE_KEY_RESULT.ATTR.SET);
-    const cycle = order.get(TYPE_KEY_RESULT.ATTR.CYCLE);
-    const organizationalUnit = order.get(TYPE_KEY_RESULT.ATTR.ORGANIZATIONAL_UNIT);
-    const lastUpdate = order.get(TYPE_KEY_RESULT.ATTR.LAST_UPDATE);
+function readFromKeyResult(keyResult) {
+    const number = keyResult.get(TYPE_KEY_RESULT.ATTR.NUMBER);
+    const title = keyResult.get(TYPE_KEY_RESULT.ATTR.TITLE);
+    const progressIndicator = keyResult.get(TYPE_KEY_RESULT.ATTR.PROGRESS_INDICATOR);
+    const confidenceLevel = keyResult.get(TYPE_KEY_RESULT.ATTR.CONFIDENCE_LEVEL);
+    const gradingForecast = keyResult.get(TYPE_KEY_RESULT.ATTR.GRADING_FORECAST);
+    const smallSupport = keyResult.get(TYPE_KEY_RESULT.ATTR.SMALL_SUPPORT);
+    const bigSupport = keyResult.get(TYPE_KEY_RESULT.ATTR.BIG_SUPPORT);
+    const giveBigSupport = keyResult.get(TYPE_KEY_RESULT.ATTR.GIVE_BIG_SUPPORT);
+    const receiveBigSupport = keyResult.get(TYPE_KEY_RESULT.ATTR.RECEIVE_BIG_SUPPORT);
+    const objective = keyResult.get(TYPE_KEY_RESULT.ATTR.OBJECTIVE);
+    const progress = keyResult.get(TYPE_KEY_RESULT.ATTR.PROGRESS);
+    const set = keyResult.get(TYPE_KEY_RESULT.ATTR.SET);
+    const cycle = keyResult.get(TYPE_KEY_RESULT.ATTR.CYCLE);
+    const organizationalUnit = keyResult.get(TYPE_KEY_RESULT.ATTR.ORGANIZATIONAL_UNIT);
+    const lastUpdate = keyResult.get(TYPE_KEY_RESULT.ATTR.LAST_UPDATE);
 }
 
 function createKeyResult(number, title, progressIndicator, confidenceLevel, gradingForecast, smallSupport, bigSupport, giveBigSupport, receiveBigSupport, objective, progress, set, cycle, organizationalUnit, lastUpdate) {

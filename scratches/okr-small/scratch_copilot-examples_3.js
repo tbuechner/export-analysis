@@ -84,7 +84,7 @@ function updateCycle(cycle, year, quarter, status, cyclesDashboard, start, end, 
             [TYPES.CYCLE.ATTR.STATUS_FOR_NAME_GENERATION_PATTERN]: statusForNameGenerationPattern
         }
     });
-    cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.YEAR);
+    cycle.registerAttributeForRefresh('cf.cplace.solution.okr.year');
     cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.QUARTER);
     cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.STATUS);
     cycle.registerAttributeForRefresh(TYPES.KEY_RESULT.ATTR.CYCLES_DASHBOARD);
