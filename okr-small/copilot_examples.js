@@ -37,7 +37,7 @@ function createPage() {
         setGeneratedName: true
     });
 }
-    
+
 function readFromObjective(objective) {
     const number = objective.get(ATTR_OBJECTIVE_NUMBER);
     const title = objective.get(ATTR_OBJECTIVE_TITLE);

@@ -396,6 +396,7 @@ def runForFolder(folderName):
     # print(copilot_examples)
     writeCopilotExamplesToFile(folderName, "copilot_examples", copilot_examples)
 
+    print("tokens copilot_examples: " + str(count_tokens_in_file(folderName + "/copilot_examples.js")))
     print("tokens types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")))
     print("tokens types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
 

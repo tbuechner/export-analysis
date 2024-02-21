@@ -37,7 +37,7 @@ function createPage() {
         setGeneratedName: true
     });
 }
-    
+
 function readFromSolution(solution) {
     const description = solution.get(ATTR_SOLUTION_DESCRIPTION);
     const solutionTrainEngineer = solution.get(ATTR_SOLUTION_SOLUTION_TRAIN_ENGINEER);

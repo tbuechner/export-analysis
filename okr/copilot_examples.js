@@ -37,7 +37,7 @@ function createPage() {
         setGeneratedName: true
     });
 }
-    
+
 function readFromCycle(cycle) {
     const year = cycle.get(ATTR_CYCLE_YEAR);
     const quarter = cycle.get(ATTR_CYCLE_QUARTER);
