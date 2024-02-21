@@ -5,7 +5,7 @@ import xmltodict
 
 import os
 
-from jsonToCode import generate_code_snippets
+from jsonToCode import generate_copilot_examples
 from tokenizer import count_large_files, count_tokens_in_file
 
 
@@ -394,9 +394,9 @@ def runForFolder(folderName):
 
     writeJsonToFile(folderName, "types", doc)
 
-    snippets = generate_code_snippets(doc)
-    print(snippets)
-    writeSnippetsToFile(folderName, "snippets", snippets)
+    copilot_examples = generate_copilot_examples(doc)
+    # print(copilot_examples)
+    writeCopilotExamplesToFile(folderName, "copilot_examples", copilot_examples)
 
     print("tokens types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")))
     print("tokens types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
@@ -417,10 +417,6 @@ def writeLowCodeScriptsToFile(folderName, fileName, lowCodeScripts):
             file.write("//------------------------------------------------------------------------------------------------------\n")
             file.write("\n")
 
-def writeSnippetsToFile(folderName, fileName, snippets):
+def writeCopilotExamplesToFile(folderName, fileName, copilot_examples):
     with open(folderName + '/' + fileName + '.js', 'w') as file:
-        for snippet in snippets:
-            file.write(snippet + "\n")
-            file.write("\n")
-            file.write("//------------------------------------------------------------------------------------------------------\n")
-            file.write("\n")
+        file.write(copilot_examples)

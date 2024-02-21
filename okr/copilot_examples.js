@@ -1,3 +1,22 @@
+function accessBuiltInPageAttributes(page) {
+    const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
+    const comments = page.getBuiltinFeatureValue("comments");
+    const commentsForVersioning = page.getBuiltinFeatureValue("commentsForVersioning");
+    const content = page.getBuiltinFeatureValue("content");
+    const creator = page.getBuiltinFeatureValue("creator");
+    const created = page.getBuiltinFeatureValue("created");
+    const customType = page.getBuiltinFeatureValue("customType");
+    const documents = page.getBuiltinFeatureValue("documents");
+    const id = page.getBuiltinFeatureValue("id");
+    const localizedName = page.getBuiltinFeatureValue("localizedName");
+    const name = page.getBuiltinFeatureValue("name");
+    const orderIndex = page.getBuiltinFeatureValue("orderIndex");
+    const readers = page.getBuiltinFeatureValue("readers");
+    const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
+    const space = page.getBuiltinFeatureValue("space");
+    const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+}
+
 function readFromCycle(cycle) {
     const year = cycle.get(ATTR_CYCLE_YEAR);
     const quarter = cycle.get(ATTR_CYCLE_QUARTER);
@@ -17,9 +36,6 @@ const ATTR_CYCLE_START = 'cf.cplace.solution.okr.start';
 const ATTR_CYCLE_END = 'cf.cplace.solution.okr.end';
 const ATTR_CYCLE_STATUS_FOR_NAME_GENERATION_PATTERN = 'cf.cplace.solution.okr.statusForNameGenerationPattern';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromObjective(objective) {
     const number = objective.get(ATTR_OBJECTIVE_NUMBER);
     const title = objective.get(ATTR_OBJECTIVE_TITLE);
@@ -36,9 +52,6 @@ const ATTR_OBJECTIVE_SET = 'cf.cplace.solution.okr.set';
 const ATTR_OBJECTIVE_ACCOMPLISHED = 'cf.cplace.solution.okr.accomplished';
 const ATTR_OBJECTIVE_CYCLE = 'cf.cplace.solution.okr.cycle';
 const ATTR_OBJECTIVE_DESCRIPTION = 'cf.cplace.solution.okr.description';
-
-
-//------------------------------------------------------------------------------------------------------
 
 function readFromKeyResult(keyResult) {
     const number = keyResult.get(ATTR_KEY_RESULT_NUMBER);
@@ -75,9 +88,6 @@ const ATTR_KEY_RESULT_CYCLE = 'cf.cplace.solution.okr.cycle';
 const ATTR_KEY_RESULT_ORGANIZATIONAL_UNIT = 'cf.cplace.solution.okr.organizationalUnit';
 const ATTR_KEY_RESULT_LAST_UPDATE = 'cf.cplace.solution.okr.lastUpdate';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromProgress(progress) {
     const result = progress.get(ATTR_PROGRESS_RESULT);
     const problem = progress.get(ATTR_PROGRESS_PROBLEM);
@@ -111,9 +121,6 @@ const ATTR_PROGRESS_GRADING_FORECAST = 'cf.cplace.solution.okr.gradingForecast';
 const ATTR_PROGRESS_LAST_UPDATE = 'cf.cplace.solution.okr.lastUpdate';
 const ATTR_PROGRESS_SET = 'cf.cplace.solution.okr.set';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromTask(task) {
     const title = task.get(ATTR_TASK_TITLE);
     const responsible = task.get(ATTR_TASK_RESPONSIBLE);
@@ -133,36 +140,10 @@ const ATTR_TASK_DUE_DATE = 'cf.cplace.digitalBoard.dueDate';
 const ATTR_TASK_KEY_RESULT = 'cf.cplace.solution.okr.keyResult';
 const ATTR_TASK_ESCALATION_LEVEL = 'cf.cplace.digitalBoard.escalationLevel';
 
-
-//------------------------------------------------------------------------------------------------------
-
-function readFromMeeting(meeting) {
-    const title = meeting.get(ATTR_MEETING_TITLE);
-    const meetingType = meeting.get(ATTR_MEETING_MEETING_TYPE);
-    const date = meeting.get(ATTR_MEETING_DATE);
-    const cycle = meeting.get(ATTR_MEETING_CYCLE);
-    const set = meeting.get(ATTR_MEETING_SET);
-    const meetingsDashbaord = meeting.get(ATTR_MEETING_MEETINGS_DASHBAORD);
-}
-
-const TYPE_MEETING = 'cf.cplace.solution.okr.meeting';
-const ATTR_MEETING_TITLE = 'cf.cplace.solution.okr.title';
-const ATTR_MEETING_MEETING_TYPE = 'cf.cplace.solution.okr.meetingType';
-const ATTR_MEETING_DATE = 'cf.cplace.solution.okr.date';
-const ATTR_MEETING_CYCLE = 'cf.cplace.solution.okr.cycle';
-const ATTR_MEETING_SET = 'cf.cplace.solution.okr.set';
-const ATTR_MEETING_MEETINGS_DASHBAORD = 'cf.cplace.solution.okr.meetingsDashbaord';
-
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromSelectNextCycle(selectNextCycle) {
     const nextCycle = selectNextCycle.get(ATTR_SELECT_NEXT_CYCLE_NEXT_CYCLE);
 }
 
 const TYPE_SELECT_NEXT_CYCLE = 'cf.cplace.solution.okr.selectNextCycle';
 const ATTR_SELECT_NEXT_CYCLE_NEXT_CYCLE = 'cf.cplace.solution.okr.nextCycle';
-
-
-//------------------------------------------------------------------------------------------------------
 

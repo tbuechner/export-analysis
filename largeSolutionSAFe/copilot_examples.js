@@ -1,3 +1,22 @@
+function accessBuiltInPageAttributes(page) {
+    const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
+    const comments = page.getBuiltinFeatureValue("comments");
+    const commentsForVersioning = page.getBuiltinFeatureValue("commentsForVersioning");
+    const content = page.getBuiltinFeatureValue("content");
+    const creator = page.getBuiltinFeatureValue("creator");
+    const created = page.getBuiltinFeatureValue("created");
+    const customType = page.getBuiltinFeatureValue("customType");
+    const documents = page.getBuiltinFeatureValue("documents");
+    const id = page.getBuiltinFeatureValue("id");
+    const localizedName = page.getBuiltinFeatureValue("localizedName");
+    const name = page.getBuiltinFeatureValue("name");
+    const orderIndex = page.getBuiltinFeatureValue("orderIndex");
+    const readers = page.getBuiltinFeatureValue("readers");
+    const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
+    const space = page.getBuiltinFeatureValue("space");
+    const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+}
+
 function readFromSolution(solution) {
     const description = solution.get(ATTR_SOLUTION_DESCRIPTION);
     const solutionTrainEngineer = solution.get(ATTR_SOLUTION_SOLUTION_TRAIN_ENGINEER);
@@ -35,9 +54,6 @@ const ATTR_SOLUTION_RELEASING_W_I_P_LIMIT = 'cf.cplace.solution.safe.releasingWI
 const ATTR_SOLUTION_SHORT_NAME = 'cf.cplace.solution.safe.shortName';
 const ATTR_SOLUTION_HORIZON = 'cf.cplace.solution.safe.horizon';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromProgramIncrement(programIncrement) {
     const title = programIncrement.get(ATTR_PROGRAM_INCREMENT_TITLE);
     const solution = programIncrement.get(ATTR_PROGRAM_INCREMENT_SOLUTION);
@@ -63,9 +79,6 @@ const ATTR_PROGRAM_INCREMENT_CAPACITY = 'cf.cplace.solution.safe.capacity';
 const ATTR_PROGRAM_INCREMENT__RESULT = 'cf.cplace.solution.safe.confidenceVote.Result';
 const ATTR_PROGRAM_INCREMENT_STATS_JSON = 'cf.cplace.solution.safe.statsJson';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromIteration(iteration) {
     const title = iteration.get(ATTR_ITERATION_TITLE);
     const programIncrement = iteration.get(ATTR_ITERATION_PROGRAM_INCREMENT);
@@ -80,9 +93,6 @@ const ATTR_ITERATION_PROGRAM_INCREMENT = 'cf.cplace.solution.safe.programIncreme
 const ATTR_ITERATION_START_DATE = 'cf.cplace.solution.safe.startDate';
 const ATTR_ITERATION_END_DATE = 'cf.cplace.solution.safe.endDate';
 const ATTR_ITERATION_PREDECESSOR = 'cf.cplace.solution.safe.predecessor';
-
-
-//------------------------------------------------------------------------------------------------------
 
 function readFromCapability(capability) {
     const title = capability.get(ATTR_CAPABILITY_TITLE);
@@ -143,9 +153,6 @@ const ATTR_CAPABILITY_BENEFIT_HYPOTHESIS = 'cf.cplace.solution.safe.benefitHypot
 const ATTR_CAPABILITY_CONFLICT_STATE = 'cf.cplace.solution.safe.conflictState';
 const ATTR_CAPABILITY_FEATURES = 'cf.cplace.solution.safe.features';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromDependency(dependency) {
     const title = dependency.get(ATTR_DEPENDENCY_TITLE);
     const successor = dependency.get(ATTR_DEPENDENCY_SUCCESSOR);
@@ -167,9 +174,6 @@ const ATTR_DEPENDENCY_DESCRIPTION = 'cf.cplace.solution.safe.description';
 const ATTR_DEPENDENCY_PLANNED_START_A = 'cf.cplace.solution.safe.plannedStartA';
 const ATTR_DEPENDENCY_PLANNED_END_B = 'cf.cplace.solution.safe.plannedEndB';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromSafeMilestone(safeMilestone) {
     const title = safeMilestone.get(ATTR_SAFE_MILESTONE_TITLE);
     const date = safeMilestone.get(ATTR_SAFE_MILESTONE_DATE);
@@ -187,18 +191,12 @@ const ATTR_SAFE_MILESTONE_RELEVANT_FOR = 'cf.cplace.solution.safe.relevantFor';
 const ATTR_SAFE_MILESTONE_PLANNED_START = 'cf.cplace.solution.safe.plannedStart';
 const ATTR_SAFE_MILESTONE_PLANNED_END = 'cf.cplace.solution.safe.plannedEnd';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromPeriodStatus(periodStatus) {
     const order = periodStatus.get(ATTR_PERIOD_STATUS_ORDER);
 }
 
 const TYPE_PERIOD_STATUS = 'cf.cplace.solution.safe.periodStatus';
 const ATTR_PERIOD_STATUS_ORDER = 'cf.cplace.solution.safe.order';
-
-
-//------------------------------------------------------------------------------------------------------
 
 function readFromFlowMetric(flowMetric) {
     const artifactType = flowMetric.get(ATTR_FLOW_METRIC_ARTIFACT_TYPE);
@@ -214,9 +212,6 @@ const ATTR_FLOW_METRIC_SNAPSHOT_DATE = 'cf.cplace.solution.safe.snapshotDate';
 const ATTR_FLOW_METRIC__REFERENCE = 'cf.cplace.solution.safe.SAFeLevel.Reference';
 const ATTR_FLOW_METRIC_TIMEBOX = 'cf.cplace.solution.safe.timebox';
 const ATTR_FLOW_METRIC_JSON_METRIC_DATA = 'cf.cplace.solution.safe.jsonMetricData';
-
-
-//------------------------------------------------------------------------------------------------------
 
 function readFromObjective(objective) {
     const objectivetitle = objective.get(ATTR_OBJECTIVE_OBJECTIVETITLE);
@@ -239,9 +234,6 @@ const ATTR_OBJECTIVE_ACTUAL_VALUE = 'cf.cplace.solution.safe.actualValue';
 const ATTR_OBJECTIVE_COMMITMENT = 'cf.cplace.solution.safe.commitment';
 const ATTR_OBJECTIVE_STATEMENT = 'cf.cplace.solution.safe.statement';
 
-
-//------------------------------------------------------------------------------------------------------
-
 function readFromEvent(event) {
     const title = event.get(ATTR_EVENT_TITLE);
     const startDate = event.get(ATTR_EVENT_START_DATE);
@@ -254,9 +246,6 @@ const ATTR_EVENT_TITLE = 'cf.cplace.solution.safe.title';
 const ATTR_EVENT_START_DATE = 'cf.cplace.solution.safe.startDate';
 const ATTR_EVENT_END_DATE = 'cf.cplace.solution.safe.endDate';
 const ATTR_EVENT_SOLUTION = 'cf.cplace.solution.safe.solution';
-
-
-//------------------------------------------------------------------------------------------------------
 
 function readFromConfidenceVote(confidenceVote) {
     const PI = confidenceVote.get(ATTR_CONFIDENCE_VOTE__P_I);
@@ -278,7 +267,4 @@ const ATTR_CONFIDENCE_VOTE_THREE_FINGERS = 'cf.cplace.solution.safe.confidenceVo
 const ATTR_CONFIDENCE_VOTE_FOUR_FINGERS = 'cf.cplace.solution.safe.confidenceVote.fourFingers';
 const ATTR_CONFIDENCE_VOTE_FIVE_FINGERS = 'cf.cplace.solution.safe.confidenceVote.fiveFingers';
 const ATTR_CONFIDENCE_VOTE_SOLUTION = 'cf.cplace.solution.safe.confidenceVote.solution';
-
-
-//------------------------------------------------------------------------------------------------------
 

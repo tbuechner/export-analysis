@@ -9,26 +9,31 @@ def getConstantName(simple_type_name_SnakeCase, simple_attr_name):
     return f"ATTR_{simple_type_name_SnakeCase}_{convertToSnakeUpperCase(simple_attr_name)}"
 
 
-def generate_code_snippets(data):
-    snippets = []
+def generate_copilot_examples(data):
+    snippet = f"function accessBuiltInPageAttributes(page) {{\n"
+    snippet += "    const absoluteUrl = page.getBuiltinFeatureValue(\"absoluteUrl\");\n"
+    snippet += f"    const comments = page.getBuiltinFeatureValue(\"comments\");\n"
+    snippet += f"    const commentsForVersioning = page.getBuiltinFeatureValue(\"commentsForVersioning\");\n"
+    snippet += f"    const content = page.getBuiltinFeatureValue(\"content\");\n"
+    snippet += f"    const creator = page.getBuiltinFeatureValue(\"creator\");\n"
+    snippet += f"    const created = page.getBuiltinFeatureValue(\"created\");\n"
+    snippet += f"    const customType = page.getBuiltinFeatureValue(\"customType\");\n"
+    snippet += f"    const documents = page.getBuiltinFeatureValue(\"documents\");\n"
+    snippet += f"    const id = page.getBuiltinFeatureValue(\"id\");\n"
+    snippet += f"    const localizedName = page.getBuiltinFeatureValue(\"localizedName\");\n"
+    snippet += f"    const name = page.getBuiltinFeatureValue(\"name\");\n"
+    snippet += f"    const orderIndex = page.getBuiltinFeatureValue(\"orderIndex\");\n"
+    snippet += f"    const readers = page.getBuiltinFeatureValue(\"readers\");\n"
+    snippet += f"    const readersAreDefault = page.getBuiltinFeatureValue(\"readersAreDefault\");\n"
+    snippet += f"    const space = page.getBuiltinFeatureValue(\"space\");\n"
+    snippet += f"    const writersAreDefault = page.getBuiltinFeatureValue(\"writersAreDefault\");\n"
+    snippet += f"}}\n"
+    snippet += f"\n"
 
-    # print(type(data))
 
-    # print(type(data['export']))
-    # print(type(data['export']['workspace']))
     types = data['export']['workspace']['types']
     # print("type of types: " + str(type(types)))
 
-    # iterate over all keys in the dictionary types
-    # for eachType in types:
-    #     print("eachType: " + eachType)
-    #     print(type(eachType))
-
-    # data is a dictionary, we know it has the key 'export'
-    # access key 'export' and then access key 'workspace'
-    # then access key 'types' to get the list of types
-    # iterate over each type in the list
-    # print("types: " + str(types))
     for eachType in types:
 
         fully_qualified_type_name = eachType['name']
@@ -47,7 +52,7 @@ def generate_code_snippets(data):
         attributes = eachType['attributeDefinitions']
 
         # Start building the function snippet
-        snippet = f"function {function_name}({simple_type_name}) {{\n"
+        snippet += f"function {function_name}({simple_type_name}) {{\n"
         for attr in attributes:
             attr_name = attr['name']
             simple_attr_name = attr_name.split(".")[-1]
@@ -62,10 +67,9 @@ def generate_code_snippets(data):
             simple_attr_name = attr_name.split(".")[-1]
             constant_name = getConstantName(simple_type_name_SnakeCase, simple_attr_name)
             snippet += f"const {constant_name} = '{attr_name}';\n"
+        snippet += "\n"
 
-        snippets.append(snippet)
-
-    return snippets
+    return snippet
 
 
 
