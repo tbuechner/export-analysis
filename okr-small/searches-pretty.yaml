@@ -1,0 +1,1059 @@
+- - uid: person/mj1ho3dkz6t0yud70ab7xd7dh
+- - uid: person/9gllbr5rqy25uo89lo9tinlrn
+- - uid: person/aq3jmaolqf19omx2sw5cgy1hk
+- - uid: person/7yi0s331prdxnpuvpcenex752
+- - uid: person/9pdld9qx2eixnou7vp3b3aoar
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.cycle
+    - cf.cplace.solution.okr.keyResult
+    - cf.cplace.solution.okr.objective
+    - cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+- - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.cycle
+    - cf.cplace.solution.okr.keyResult
+    - cf.cplace.solution.okr.objective
+    - cf.cplace.solution.okr.set
+- - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.okr.objective
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.set
+- []
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.progress
+  - customOutgoingSubSearch: cf.cplace.solution.okr.keyResult
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - relativeSpace: 'true'
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+    - cf.cplace.solution.okr.objective
+    - cf.cplace.solution.okr.set
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+  - referenceOperator: ca_cf.cplace.solution.okr.organizationalUnit
+    relativeCustomReference: cf.cplace.solution.okr.smallSupport
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+  - customOutgoingSubSearch: cf.cplace.solution.okr.giveBigSupport
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - spaceIds:
+        - root
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.set
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - customAttributeValue: cf.cplace.solution.okr.smallSupport
+        operator: equals
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+  - customIncomingSubSearch: cf.cplace.solution.okr.giveBigSupport
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - relativeSpace: 'true'
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.set
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.objective
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.progress
+  - customOutgoingSubSearch: cf.cplace.solution.okr.keyResult
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - relativeSpace: 'true'
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.okr.objective
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.objective
+- []
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Marketing
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Marketing
+          - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Sales
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Sales
+          - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Engineering
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Engineering
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Product
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Product
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Company
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Company
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.organizationalUnit
+  - customAttributeValue: cf.cplace.solution.okr.organizationalUnit
+    operator: equals
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setLead
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setContributors
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.okr.objective
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.objective
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setLead
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.objective
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setContributors
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.progress
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setLead
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.progress
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setContributors
+      - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.cycle
+          - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+            values:
+            - s#15 Next
+            - s#25 Current
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#15 Next
+        - s#25 Current
+  - customOutgoingSubSearch: cf.cplace.solution.okr.smallSupport
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - referenceOperator: sessionUser
+        relativeCustomReference: cf.cplace.solution.okr.assignedEmployee
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#15 Next
+        - s#25 Current
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.set
+      - referenceOperator: sessionUser
+        relativeCustomReference: cf.cplace.solution.okr.setLead
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - customAttributeValue: cf.cplace.solution.okr.smallSupport
+        operator: equals
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - customAttributeValue: cf.cplace.solution.okr.smallSupport
+        operator: equals
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#15 Next
+        - s#25 Current
+  - customIncomingSubSearch: cf.cplace.solution.okr.giveBigSupport
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setLead
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#15 Next
+        - s#25 Current
+  - customOutgoingSubSearch: cf.cplace.solution.okr.giveBigSupport
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - spaceIds:
+        - root
+      - customOutgoingSubSearch: cf.cplace.solution.okr.set
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.okr.set
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.okr.setLead
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.topic
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - referenceOperator: sessionUser
+        relativeCustomReference: cf.cplace.solution.okr.assignedEmployee
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.priority
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.strategyDashboard
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Marketing
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Marketing
+          - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Sales
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Sales
+          - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Engineering
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Engineering
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Product
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Product
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeValue: cf.cplace.solution.okr.status
+        operator: equals
+        textValue: '#25 Current'
+      - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.organizationalUnit
+      - customAttributeValue: cf.cplace.solution.okr.title
+        operator: equals
+        textValue: Company
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.objective
+  - customOutgoingSubSearch: cf.cplace.solution.okr.set
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.set
+      - relativeSpace: 'true'
+      - customOutgoingSubSearch: cf.cplace.solution.okr.organizationalUnit
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.organizationalUnit
+          - customAttributeValue: cf.cplace.solution.okr.title
+            operator: equals
+            textValue: Company
+          - relativeSpace: 'true'
+  - customOutgoingSubSearch: cf.cplace.solution.okr.cycle
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - customAttributeMultiExactValues: cf.cplace.solution.okr.status
+        values:
+        - s#25 Current
+      - relativeSpace: 'true'
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.meeting
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.cycle
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.okr.cycle
+      - uid: page/e5xbc5szfvf7jh4471rv7qehq
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.cycle
+  - customIncomingSubSearch: cf.cplace.solution.okr.cycleTemplate
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.settings
+      - customIncomingSubSearch: cf.cplace.solution.okr.settings
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.administrationDashboard
+          - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.organizationalUnit
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.set
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.cycle
+  - customIncomingSubSearch: cf.cplace.solution.okr.cycleTemplate
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.okr.settings
+      - customIncomingSubSearch: cf.cplace.solution.okr.settings
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.okr.administrationDashboard
+          - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.okr.objective
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.progress
+  - customOutgoingSubSearch: cf.cplace.solution.okr.keyResult
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.okr.keyResult
+      - relativeSpace: 'true'
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.okr.objective
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.progress
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.okr.keyResult
+  - referenceOperator: ca_cf.cplace.solution.okr.cycle
+    relativeCustomReference: cf.cplace.solution.okr.cycle

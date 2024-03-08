@@ -1,0 +1,898 @@
+export:
+  workspace:
+    types:
+    - attributeDefinitions:
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.description
+        typeConstraint: RichString
+      - linkEntityKind: person
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        localizedName:
+          de: Solution Train Engineer
+          en: Solution Train Engineer
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.solutionTrainEngineer
+        typeConstraint: Link
+      - linkEntityKind: person
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        localizedName:
+          de: Solution Train Architekt
+          en: Solution Train Architect
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.solutionTrainArchitect
+        typeConstraint: Link
+      - linkEntityKind: person
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        localizedName:
+          de: Solution Management
+          en: Solution Management
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.solutionManagement
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Vorheriges PI
+          en: Previous PI
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.previousPi
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Laufendes PI
+          en: Current PI
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.currentPi
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: "N\xE4chstes PI"
+          en: Next PI
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.nextPi
+        typeConstraint: Link
+      - localizedName:
+          de: Funnel WIP Limit
+          en: Funnel WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.funnelWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Analyzing WIP Limit
+          en: Analyzing WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.analyzingWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Backlog WIP Limit
+          en: Backlog WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.backlogWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Implementing WIP Limit
+          en: Implementing WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.implementingWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Validating WIP Limit
+          en: Validating WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.validatingWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Deploying WIP Limit
+          en: Deploying WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.deployingWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: Releasing WIP Limit
+          en: Releasing WIP Limit
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.releasingWIPLimit
+        typeConstraint: Number
+      - localizedName:
+          de: "K\xFCrzel"
+          en: Short Name
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.shortName
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.safe.horizon
+        localizedName:
+          de: Horizon
+          en: Horizon
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.horizon
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Solutions
+        en: Solutions
+      localizedNameSingular:
+        de: Solution
+        en: Solution
+      name: cf.cplace.solution.safe.solution
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.solution
+        localizedName:
+          de: Solution
+          en: Solution
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.solution
+        typeConstraint: Link
+      - localizedName:
+          de: Startdatum
+          en: Start Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.startDate
+        typeConstraint: Date
+      - localizedName:
+          de: Enddatum
+          en: End Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.endDate
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: "Vorg\xE4nger"
+          en: Predecessor
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.predecessor
+        typeConstraint: Link
+      - localizedName:
+          de: Period Status
+          en: Period Status
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.periodStatus
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.confidenceVote
+        localizedName:
+          en: Confidence Vote
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote
+        typeConstraint: Link
+      - localizedName:
+          de: Capacity
+          en: Capacity
+        localizedShortHelp: '{"de":"Capacity defined by Solution Train Engineer","en":"Capacity
+          defined by Solution Train Engineer"}'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.capacity
+        typeConstraint: Number
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.confidenceVote.result
+          referencingAttributeName: cf.cplace.solution.safe.confidenceVote
+        localizedName:
+          de: Confidence Vote Result
+          en: Confidence Vote Result
+        localizedShortName:
+          de: Confidence Vote
+          en: Confidence Vote
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.Result
+        typeConstraint: Text
+      - localizedName:
+          en: Statistics JSON
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.statsJson
+        typeConstraint: LongText
+      description: null
+      localizedNamePlural:
+        de: Program Increments
+        en: Program Increments
+      localizedNameSingular:
+        de: Program Increment
+        en: Program Increment
+      name: cf.cplace.solution.safe.programIncrement
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Programminkrement
+          en: Program Increment
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.programIncrement
+        typeConstraint: Link
+      - localizedName:
+          de: Startdatum
+          en: Start Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.startDate
+        typeConstraint: Date
+      - localizedName:
+          de: Enddatum
+          en: End Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.endDate
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.iteration
+        localizedName:
+          de: "Vorg\xE4nger"
+          en: Predecessor
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.predecessor
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Iterationen
+        en: Iterations
+      localizedNameSingular:
+        de: Iteration
+        en: Iteration
+      name: cf.cplace.solution.safe.iteration
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.solution
+        localizedName:
+          de: Solution
+          en: Solution
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.solution.reference
+        typeConstraint: Link
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.description
+        typeConstraint: RichString
+      - localizedName:
+          de: Capability Type
+          en: Capability Type
+        localizedShortName:
+          de: Feature Type
+          en: Feature Type
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.capabilityType
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Status
+          en: State
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.state
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: WSJF
+          en: WSJF
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.wsjf
+        typeConstraint: Number
+      - localizedName:
+          de: User Business Value
+          en: User Business Value
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.businessValue
+        typeConstraint: NumberEnumeration
+      - localizedName:
+          de: "Zeitliche Kritikalit\xE4t"
+          en: Time Criticality
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.timeCriticality
+        typeConstraint: NumberEnumeration
+      - localizedName:
+          de: Risk Reduction
+          en: Risk Reduction
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.riskReduction
+        typeConstraint: NumberEnumeration
+      - localizedName:
+          de: Job Size
+          en: Job Size
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.jobSize
+        typeConstraint: NumberEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Program Increment
+          en: Program Increment
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.programIncrement
+        typeConstraint: Link
+      - localizedName:
+          de: Actual Start Date
+          en: Actual Start Date
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.actualStartDate
+        typeConstraint: Date
+      - localizedName:
+          de: Actual End Date
+          en: Actual End Date
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.actualEndDate
+        typeConstraint: Date
+      - localizedName:
+          de: Flow time
+          en: Flow time
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.flowTime
+        typeConstraint: Number
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.safe.program
+        localizedName:
+          de: Program
+          en: Program
+        multiplicity: null
+        name: cf.cplace.solution.safe.program
+        typeConstraint: Link
+      - linkEntityKind: person
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        localizedName:
+          de: Capability Owner
+          en: Capability Owner
+        localizedShortName:
+          de: Owner
+          en: Owner
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.capabilityowner
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.safe.epic
+        localizedName:
+          en: Portfolio Epic
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.portfolioEpic
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.shortName
+          referencingAttributeName: cf.cplace.solution.safe.solution.reference
+        localizedName:
+          de: "Solution K\xFCrzel"
+          en: Solution Short Name
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.solutionShortName
+        typeConstraint: Text
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.startDate
+          referencingAttributeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Geplanter Start
+          en: Planned Start
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.plannedStart
+        typeConstraint: Date
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.endDate
+          referencingAttributeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Geplantes Ende
+          en: Planned End
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.plannedEnd
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.iteration
+        localizedName:
+          de: Iterations
+          en: Iterations
+        localizedShortHelp: '{"en":"This is a workaround attribute to bypass duplicated
+          type definitions and messed up references in Solution and Program level.
+          For production the references should be derived from Features"}'
+        multiplicity: null
+        name: cf.cplace.solution.safe.iteration
+        typeConstraint: Link
+      - localizedName:
+          de: Definition of Ready
+          en: Definition of Ready
+        localizedShortName:
+          de: DoR
+          en: DoR
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.definitionOfReady
+        typeConstraint: Boolean
+      - localizedName:
+          de: Definition of Done
+          en: Definition of Done
+        localizedShortName:
+          de: DoD
+          en: DoD
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.definitionOfDone
+        typeConstraint: Boolean
+      - localizedName:
+          de: Akzeptanzkriterien
+          en: Acceptance Criteria
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.acceptanceCriteria
+        typeConstraint: RichString
+      - localizedName:
+          de: Benefit Hypothesis
+          en: Benefit Hypothesis
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.benefitHypothesis
+        typeConstraint: RichString
+      - localizedName:
+          de: Datumskonflikt
+          en: Conflict State
+        localizedShortName:
+          de: Konflikt
+          en: Conflict
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.conflictState
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.safe.feature
+        localizedName:
+          de: Features
+          en: Features
+        multiplicity: null
+        name: cf.cplace.solution.safe.features
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Capabilities
+        en: Capabilities
+      localizedNameSingular:
+        de: Capability
+        en: Capability
+      name: cf.cplace.solution.safe.capability
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.capability
+        - cf.cplace.solution.safe.safeMilestone
+        localizedName:
+          de: A
+          en: A
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.successor
+        typeConstraint: Link
+      - localizedName:
+          de: Typ
+          en: Type
+        localizedShortHelp: "{\"de\":\"\\\"Verbunden mit\\\" - lose Abh\xE4ngigkeit\
+          \ ohne potentielle Konflikte\\n\\\"Blockiert durch\\\" - Abh\xE4ngigkeit,\
+          \ die zeitliche Konflikte ausl\xF6sen kann\",\"en\":\"\\\"related to\\\"\
+          \ - loose dependency without potential conflicts\\n\\\"blocked by\\\" -\
+          \ dependency that can lead to timing conflicts\"}"
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.type
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.capability
+        - cf.cplace.solution.safe.safeMilestone
+        localizedName:
+          de: B
+          en: B
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.predecessor
+        typeConstraint: Link
+      - localizedName:
+          de: Status
+          en: Status
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.status
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.description
+        typeConstraint: Text
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.plannedStart
+          referencingAttributeName: cf.cplace.solution.safe.successor
+        localizedName:
+          de: Geplanter Start A
+          en: Planned Start A
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.plannedStartA
+        typeConstraint: Date
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.safe.plannedEnd
+          referencingAttributeName: cf.cplace.solution.safe.predecessor
+        localizedName:
+          de: Geplantes Ende B
+          en: Planned End B
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.plannedEndB
+        typeConstraint: Date
+      description: null
+      localizedNamePlural:
+        de: "Abh\xE4ngigkeiten"
+        en: Dependencies
+      localizedNameSingular:
+        de: "Abh\xE4ngigkeit"
+        en: Dependency
+      name: cf.cplace.solution.safe.dependency
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - localizedName:
+          de: Datum
+          en: Date
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.date
+        typeConstraint: Date
+      - localizedName:
+          de: Typ
+          en: Type
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.type
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.program
+        - cf.cplace.solution.safe.solution
+        localizedName:
+          de: "Relevant F\xFCr"
+          en: Relevant For
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.relevantFor
+        typeConstraint: Link
+      - localizedName:
+          de: Startdatum
+          en: Start Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.plannedStart
+        typeConstraint: Date
+      - localizedName:
+          de: Enddatum
+          en: End Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.plannedEnd
+        typeConstraint: Date
+      description: null
+      localizedNamePlural:
+        de: SAFe Meilensteine
+        en: SAFe Milestones
+      localizedNameSingular:
+        de: SAFe Meilenstein
+        en: SAFe Milestone
+      name: cf.cplace.solution.safe.safeMilestone
+    - attributeDefinitions:
+      - localizedName:
+          en: Order
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.order
+        typeConstraint: Number
+      description: null
+      localizedNamePlural:
+        de: Period Status
+        en: Period Status
+      localizedNameSingular:
+        de: Period Status
+        en: Period Status
+      name: cf.cplace.solution.safe.periodStatus
+    - attributeDefinitions:
+      - localizedName:
+          de: Artefakttyp
+          en: Artifact type
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.artifactType
+        typeConstraint: Text
+      - localizedName:
+          de: Schnappschuss-Datum
+          en: Snapshot date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.snapshotDate
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.program
+        - cf.cplace.solution.safe.solution
+        - cf.cplace.solution.safe.team
+        localizedName:
+          de: SAFe Level Reference
+          en: SAFe Level Reference
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.SAFeLevel.Reference
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.iteration
+        - cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Program Increment/Iteration
+          en: Program Increment/Iteration
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.timebox
+        typeConstraint: Link
+      - localizedName:
+          de: JSON Metric Data
+          en: JSON Metric Data
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.jsonMetricData
+        typeConstraint: LongText
+      description: null
+      localizedNamePlural:
+        de: Durchflussmetriken
+        en: Flow Metrics
+      localizedNameSingular:
+        de: Durchflussmetrik
+        en: Flow Metric
+      name: cf.cplace.solution.safe.flowMetric
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.objectivetitle
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.iteration
+        - cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Program Increment/Iteration
+          en: Program Increment/Iteration
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.timebox
+        typeConstraint: Link
+      - localizedName:
+          de: SAFe Level
+          en: SAFe Level
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.SAFeLevel
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName:
+        - cf.cplace.solution.safe.program
+        - cf.cplace.solution.safe.solution
+        - cf.cplace.solution.safe.team
+        localizedName:
+          de: SAFe Level Reference
+          en: SAFe Level Reference
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.SAFeLevel.Reference
+        typeConstraint: Link
+      - localizedName:
+          de: Planned Business Value
+          en: Planned Business Value
+        localizedShortName:
+          de: PBV
+          en: PBV
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.businessValue
+        typeConstraint: NumberEnumeration
+      - localizedName:
+          de: Actual Business Value
+          en: Actual Business Value
+        localizedShortName:
+          de: ABV
+          en: ABV
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.actualValue
+        typeConstraint: NumberEnumeration
+      - localizedName:
+          de: Commitment
+          en: Commitment
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.commitment
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Statement
+          en: Statement
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.statement
+        typeConstraint: RichString
+      description: null
+      localizedNamePlural:
+        de: Zielsetzungen
+        en: Objectives
+      localizedNameSingular:
+        de: Zielsetzung
+        en: Objective
+      name: cf.cplace.solution.safe.objective
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.title
+        typeConstraint: Text
+      - localizedName:
+          de: Start Datum
+          en: Start Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.startDate
+        typeConstraint: Date
+      - localizedName:
+          de: End-Datum
+          en: End Date
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.endDate
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.solution
+        localizedName:
+          de: Solution
+          en: Solution
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.safe.solution
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Events
+        en: Events
+      localizedNameSingular:
+        de: Event
+        en: Event
+      name: cf.cplace.solution.safe.event
+    - attributeDefinitions:
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.programIncrement
+        localizedName:
+          de: Program Increment
+          en: Program Increment
+        localizedShortName:
+          de: PI
+          en: PI
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.PI
+        typeConstraint: Link
+      - localizedName:
+          de: Ergebnis
+          en: Result
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.result
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: One Finger
+          en: One Finger
+        localizedShortHelp: '{"de":"Number of people who voted one finger in the Confidence
+          Vote.","en":"Number of people who voted one finger in the Confidence Vote."}'
+        localizedShortName:
+          de: '1'
+          en: '1'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.oneFinger
+        typeConstraint: Number
+      - localizedName:
+          de: Two Fingers
+          en: Two Fingers
+        localizedShortHelp: '{"de":"Number of people who voted two fingers in the
+          Confidence Vote.","en":"Number of people who voted two fingers in the Confidence
+          Vote."}'
+        localizedShortName:
+          de: '2'
+          en: '2'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.twoFingers
+        typeConstraint: Number
+      - localizedName:
+          de: Three Fingers
+          en: Three Fingers
+        localizedShortHelp: '{"de":"Number of people who voted three fingers in the
+          Confidence Vote.","en":"Number of people who voted three fingers in the
+          Confidence Vote."}'
+        localizedShortName:
+          de: '3'
+          en: '3'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.threeFingers
+        typeConstraint: Number
+      - localizedName:
+          de: Four Fingers
+          en: Four Fingers
+        localizedShortHelp: '{"de":"Number of people who voted four fingers in the
+          Confidence Vote.","en":"Number of people who voted four fingers in the Confidence
+          Vote."}'
+        localizedShortName:
+          de: '4'
+          en: '4'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.fourFingers
+        typeConstraint: Number
+      - localizedName:
+          de: Five Fingers
+          en: Five Fingers
+        localizedShortHelp: '{"de":"Number of people who voted five fingers in the
+          Confidence Vote.","en":"Number of people who voted five fingers in the Confidence
+          Vote."}'
+        localizedShortName:
+          de: '5'
+          en: '5'
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.fiveFingers
+        typeConstraint: Number
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.safe.solution
+        localizedName:
+          de: Solution
+          en: Solution
+        multiplicity: maximalOne
+        name: cf.cplace.solution.safe.confidenceVote.solution
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Confidence Votes
+        en: Confidence Votes
+      localizedNameSingular:
+        de: Confidence Vote
+        en: Confidence Vote
+      name: cf.cplace.solution.safe.confidenceVote

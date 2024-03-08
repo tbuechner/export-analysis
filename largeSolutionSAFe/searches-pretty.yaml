@@ -1,0 +1,709 @@
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.programIncrement
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.confidenceVote
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.safeMilestone
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.event
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+- - types:
+    - cf.cplace.solution.safe.agileReleaseTrain
+  - customOutgoingSubSearch: cf.cplace.solution.safe.program
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.program
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+- - types:
+    - cf.cplace.solution.safe.team
+  - customOutgoingSubSearch: cf.cplace.solution.safe.agileReleaseTrain
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.agileReleaseTrain
+      - customOutgoingSubSearch: cf.cplace.solution.safe.program
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.program
+          - referenceOperator: embeddingCustomEntity
+            relativeCustomReference: cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - types:
+    - cf.cplace.solution.safe.feature
+  - customOutgoingSubSearch: cf.cplace.solution.safe.capability
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.safe.capability
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.story
+  - customOutgoingSubSearch: cf.cplace.solution.safe.feature
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.safe.feature
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.objective
+  - relativeSpace: 'true'
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.timebox
+- - types:
+    - cf.cplace.solution.safe.iteration
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+  - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+  - relativeUid: embeddingCustomEntity
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+  - relativeUid: embeddingCustomEntity
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+    - and:
+      - types:
+        - cf.cplace.solution.safe.story
+      - customOutgoingSubSearch: cf.cplace.solution.safe.feature
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.safe.feature
+          - referenceOperator: embeddingCustomEntity
+            relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.capability
+- - types:
+    - cf.cplace.solution.safe.dependency
+  - relativeSpace: 'true'
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.predecessor
+- - types:
+    - cf.cplace.solution.safe.dependency
+  - relativeSpace: 'true'
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.successor
+- - relativeUid: embeddingCustomEntity
+  - types:
+    - cf.cplace.solution.safe.capability
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - referenceOperator: ca_cf.cplace.solution.safe.solution.reference
+        relativeCustomReference: cf.cplace.solution.safe.solution
+    - types:
+      - cf.cplace.solution.safe.safeMilestone
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.event
+      - referenceOperator: ca_cf.cplace.solution.safe.solution.reference
+        relativeCustomReference: cf.cplace.solution.safe.solution
+- - or:
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.successor
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.predecessor
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: sessionUser
+    relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#15 - Funnel
+    - s#25 - Analyzing
+    - s#35 - Backlog
+    - s#45 - Implementing
+    - s#55 - Validating
+    - s#65 - Deploying
+    - s#75 - Releasing
+- - or:
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: sessionUser
+    relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+  - referenceOperator: ca_cf.cplace.solution.safe.parent
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+        search:
+          filters:
+          - relativeSpace: 'true'
+          - types:
+            - cf.cplace.solution.safe.capability
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+        search:
+          filters:
+          - types:
+            - cf.cplace.solution.safe.capability
+          - relativeSpace: 'true'
+          - referenceOperator: sessionUser
+            relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: sessionUser
+    relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#10 - Draft
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: sessionUser
+    relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#15 - Funnel
+    - s#25 - Analyzing
+    - s#35 - Backlog
+    - s#45 - Implementing
+    - s#55 - Validating
+    - s#65 - Deploying
+    - s#75 - Releasing
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - or:
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: connectedTable
+        relativeCustomReference: cf.cplace.solution.safe.successor
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: connectedTable
+        relativeCustomReference: cf.cplace.solution.safe.predecessor
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#15 - Funnel
+    - s#25 - Analyzing
+    - s#35 - Backlog
+    - s#45 - Implementing
+    - s#55 - Validating
+    - s#65 - Deploying
+    - s#75 - Releasing
+    - s#85 - Done
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#15 - Funnel
+    - s#25 - Analyzing
+    - s#35 - Backlog
+    - s#45 - Implementing
+    - s#55 - Validating
+    - s#65 - Deploying
+    - s#75 - Releasing
+    - s#85 - Done
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#35 - Backlog
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.safe.capability
+- - types:
+    - cf.cplace.solution.safe.epic
+  - not:
+      and:
+      - types:
+        - cf.cplace.solution.safe.epic
+      - customIncomingSubSearch: cf.cplace.solution.safe.portfolioEpic
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.safe.portfolioEpic
+  - referenceOperator: ca_cf.cplace.solution.safe.parent
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - customIncomingSubSearch: cf.cplace.solution.safe.capability
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.feature
+- - types:
+    - cf.cplace.solution.safe.epic
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.safe.portfolioEpic
+  - referenceOperator: ca_cf.cplace.solution.safe.parent
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - types:
+    - cf.cplace.solution.safe.dependency
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.status
+    values:
+    - s25 - conflict
+    - s35 - resolved
+- - types:
+    - cf.cplace.solution.safe.feature
+  - customOutgoingSubSearch: cf.cplace.solution.safe.capability
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: ca_cf.cplace.solution.safe.parent
+        relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.dependency
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.status
+    values:
+    - s25 - conflict
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+- - spaceIds:
+    - myr36hpwtfxg07r7mn2p2akfj
+  - types:
+    - cf.cplace.solution.safe.epic
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#25 - Analyzing
+    - s#35 - Backlog
+- - or:
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+            relativeCustomReference: cf.cplace.solution.safe.programIncrement
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+            relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.confidenceVote
+  - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+    relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.objective
+  - customOutgoingSubSearch: cf.cplace.solution.safe.timebox
+    search:
+      filters:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.solution
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
+    values:
+    - s#25 - Program
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.objective
+  - customOutgoingSubSearch: cf.cplace.solution.safe.timebox
+    search:
+      filters:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.solution
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
+    values:
+    - s#15 - Solution
+  - customAttributeValue: cf.cplace.solution.safe.SAFeLevel.Reference
+    linkValue: page/vaz9x2vt9b4szlugpaz3h8w4p
+    operator: equals
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - spaceIds:
+        - yzsjfzcs3f2n1gs8a27u8o38z
+      - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+        values:
+        - s#25 - active
+- - or:
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: connectedTable
+        relativeCustomReference: cf.cplace.solution.safe.successor
+      - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+            search:
+              filters:
+              - contentTypes:
+                - page
+              - types:
+                - cf.cplace.solution.safe.programIncrement
+              - spaceIds:
+                - yzsjfzcs3f2n1gs8a27u8o38z
+              - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+                values:
+                - s#25 - active
+    - and:
+      - types:
+        - cf.cplace.solution.safe.dependency
+      - referenceOperator: connectedTable
+        relativeCustomReference: cf.cplace.solution.safe.predecessor
+      - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.capability
+            - cf.cplace.solution.safe.safeMilestone
+          - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+            search:
+              filters:
+              - contentTypes:
+                - page
+              - types:
+                - cf.cplace.solution.safe.programIncrement
+              - spaceIds:
+                - yzsjfzcs3f2n1gs8a27u8o38z
+              - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+                values:
+                - s#25 - active
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.programIncrement
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.confidenceVote
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.solution
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.programIncrement
+          - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+            search:
+              filters:
+              - contentTypes:
+                - page
+              - types:
+                - cf.cplace.solution.safe.solution
+      - customIncomingSubSearch: cf.cplace.solution.safe.capability
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.feature
+          - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+            search:
+              filters:
+              - contentTypes:
+                - page
+              - types:
+                - cf.cplace.solution.safe.programIncrement
+              - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+                search:
+                  filters:
+                  - contentTypes:
+                    - page
+                  - types:
+                    - cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+    values:
+    - s#35 - Backlog
+  - not:
+      and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.programIncrement
+          - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+            search:
+              filters:
+              - contentTypes:
+                - page
+              - types:
+                - cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.solution
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - referenceOperator: parentOfEmbeddingPage
+        relativeCustomReference: cf.cplace.solution.safe.solution
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.safeMilestone
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.event
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.event
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+  - referenceOperator: parentOfEmbeddingPage
+    relativeCustomReference: cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.safeMilestone
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.programIncrement
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.visualDomainModel.graph

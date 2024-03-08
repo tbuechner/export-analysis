@@ -5,6 +5,9 @@ import xmltodict
 
 import os
 
+import yaml
+
+
 from jsonToCode import generate_copilot_examples
 from tokenizer import count_large_files, count_tokens_in_file
 
@@ -339,7 +342,7 @@ def runForFolder(folderName):
     # delete all files with name *.json in folder name
     files = os.listdir(folderName)
     for file in files:
-        if file.endswith('.json') or file.endswith('.js'):
+        if file.endswith('.json') or file.endswith('.js') or file.endswith('.yaml'):
             os.remove(folderName + '/' + file)
 
     # read from file name + '/typesToBeRemoved.txt'
@@ -409,6 +412,13 @@ def writeJsonToFile(folderName, fileName, object):
         file.write(json.dumps(object, indent=4))
     with open(folderName + '/' + fileName + '-compressed.json', 'w') as file:
         file.write(json.dumps(object, separators=(',', ':')))
+
+    with open(folderName + '/' + fileName + '-pretty.yaml', 'w') as file:
+        # convert object to yaml and write it to file
+        # q: how to convert an object to yaml?
+        # a: use the yaml.dump function
+        file.write(yaml.dump(object))
+
 
 def writeLowCodeScriptsToFile(folderName, fileName, lowCodeScripts):
     with open(folderName + '/' + fileName + '.js', 'w') as file:

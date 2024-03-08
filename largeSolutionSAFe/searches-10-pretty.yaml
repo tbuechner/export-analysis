@@ -1,0 +1,97 @@
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.programIncrement
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.confidenceVote
+      - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+        relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+- - or:
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.programIncrement
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.safeMilestone
+    - and:
+      - relativeSpace: 'true'
+      - types:
+        - cf.cplace.solution.safe.event
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+- - types:
+    - cf.cplace.solution.safe.agileReleaseTrain
+  - customOutgoingSubSearch: cf.cplace.solution.safe.program
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.program
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution
+- - types:
+    - cf.cplace.solution.safe.team
+  - customOutgoingSubSearch: cf.cplace.solution.safe.agileReleaseTrain
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.agileReleaseTrain
+      - customOutgoingSubSearch: cf.cplace.solution.safe.program
+        search:
+          filters:
+          - contentTypes:
+            - page
+          - types:
+            - cf.cplace.solution.safe.program
+          - referenceOperator: embeddingCustomEntity
+            relativeCustomReference: cf.cplace.solution.safe.solution
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - types:
+    - cf.cplace.solution.safe.feature
+  - customOutgoingSubSearch: cf.cplace.solution.safe.capability
+    search:
+      filters:
+      - contentTypes:
+        - page
+      - types:
+        - cf.cplace.solution.safe.capability
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.solution.reference
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.feature
+  - referenceOperator: connectedTable
+    relativeCustomReference: cf.cplace.solution.safe.capability
+- - relativeSpace: 'true'
+  - types:
+    - cf.cplace.solution.safe.capability
+  - referenceOperator: embeddingCustomEntity
+    relativeCustomReference: cf.cplace.solution.safe.programIncrement
+- - types:
+    - cf.cplace.solution.safe.story
+  - customOutgoingSubSearch: cf.cplace.solution.safe.feature
+    search:
+      filters:
+      - types:
+        - cf.cplace.solution.safe.feature
+      - referenceOperator: embeddingCustomEntity
+        relativeCustomReference: cf.cplace.solution.safe.programIncrement

@@ -1,0 +1,488 @@
+export:
+  workspace:
+    name: OKR
+    types:
+    - attributeDefinitions:
+      - localizedName:
+          de: Jahr
+          en: Year
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.year
+        typeConstraint: Text
+      - localizedName:
+          de: Quartal
+          en: Quarter
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.quarter
+        typeConstraint: Text
+      - localizedName:
+          de: Status
+          en: Status
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.status
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'true'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.cyclesDashboard
+        localizedName:
+          de: Zyklen Dashboard
+          en: Cycles Dashboard
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.cyclesDashboard
+        typeConstraint: Link
+      - localizedName:
+          de: Start
+          en: Start
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.start
+        typeConstraint: Date
+      - localizedName:
+          de: Ende
+          en: End
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.end
+        typeConstraint: Date
+      - localizedName:
+          de: "Status f\xFCr die Namensgenerierung"
+          en: Status for name generation pattern
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.statusForNameGenerationPattern
+        typeConstraint: Text
+      description: null
+      localizedNamePlural:
+        de: Zyklen
+        en: Cycles
+      localizedNameSingular:
+        de: Zyklus
+        en: Cycle
+      name: cf.cplace.solution.okr.cycle
+    - attributeDefinitions:
+      - localizedName:
+          de: Nummer
+          en: Number
+        localizedShortName:
+          de: Nr.
+          en: No.
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.number
+        typeConstraint: Number
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'true'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.set
+        localizedName:
+          de: Set
+          en: Set
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.set
+        typeConstraint: Link
+      - localizedName:
+          de: Erreicht
+          en: Accomplished
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.accomplished
+        typeConstraint: TextEnumeration
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.cycle
+          referencingAttributeName: cf.cplace.solution.okr.set
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.cycle
+        localizedName:
+          de: Zyklus
+          en: Cycle
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.cycle
+        typeConstraint: Link
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.description
+        typeConstraint: RichString
+      description: null
+      localizedNamePlural:
+        de: Objectives
+        en: Objectives
+      localizedNameSingular:
+        de: Objective
+        en: Objective
+      name: cf.cplace.solution.okr.objective
+    - attributeDefinitions:
+      - localizedName:
+          de: Nummer
+          en: Number
+        localizedShortName:
+          de: Nr.
+          en: No.
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.number
+        typeConstraint: Number
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.title
+        typeConstraint: Text
+      - localizedName:
+          de: Fortschrittsindikator
+          en: Progress Indicator
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.progressIndicator
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Confidence Level
+          en: Confidence Level
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.confidenceLevel
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Fortschritt Vorhersage
+          en: Grading Forecast
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.gradingForecast
+        typeConstraint: TextEnumeration
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.organizationalUnit
+        localizedName:
+          de: Receive Small Support
+          en: Receive Small Support
+        multiplicity: null
+        name: cf.cplace.solution.okr.smallSupport
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.organizationalUnit
+          referencingAttributeName: cf.cplace.solution.okr.giveBigSupport
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.organizationalUnit
+        localizedName:
+          de: Big Support
+          en: Big Support
+        localizedShortHelp: null
+        multiplicity: null
+        name: cf.cplace.solution.okr.bigSupport
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.keyResult
+        localizedName:
+          de: Give Big Support
+          en: Give Big Support
+        multiplicity: null
+        name: cf.cplace.solution.okr.giveBigSupport
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.keyResult
+        localizedName:
+          de: Receive Big Support
+          en: Receive Big Support
+        multiplicity: null
+        name: cf.cplace.solution.okr.receiveBigSupport
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'true'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.objective
+        localizedName:
+          de: Objective
+          en: Objective
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.objective
+        typeConstraint: Link
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.progress
+        localizedName:
+          de: Fortschritt
+          en: Progress
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.progress
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.set
+          referencingAttributeName: cf.cplace.solution.okr.objective
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.set
+        localizedName:
+          de: Set
+          en: Set
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.set
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.cycle
+          referencingAttributeName: cf.cplace.solution.okr.set
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.cycle
+        localizedName:
+          de: Zyklus
+          en: Cycle
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.cycle
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.organizationalUnit
+          referencingAttributeName: cf.cplace.solution.okr.set
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.organizationalUnit
+        localizedName:
+          de: Organsationseinheit
+          en: Organizational Unit
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.organizationalUnit
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.lastUpdate
+          referencingAttributeName: cf.cplace.solution.okr.progress
+        localizedName:
+          de: Letztes Update
+          en: Last Update
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.lastUpdate
+        typeConstraint: Date
+      description: null
+      localizedNamePlural:
+        de: "Schl\xFCsselergebnisse"
+        en: Key Results
+      localizedNameSingular:
+        de: "Schl\xFCsselergebnis"
+        en: Key Result
+      name: cf.cplace.solution.okr.keyResult
+    - attributeDefinitions:
+      - localizedName:
+          de: Ergebnise
+          en: Results
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.result
+        typeConstraint: Text
+      - localizedName:
+          de: Probleme
+          en: Problems
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.problem
+        typeConstraint: Text
+      - localizedName:
+          de: Learnings
+          en: Learnings
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.lessonsLearned
+        typeConstraint: Text
+      - localizedName:
+          de: "N\xE4chste Schritte"
+          en: Next Steps
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.nextSteps
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.keyResult
+        localizedName:
+          de: Key Result
+          en: Key Result
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.keyResult
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.cycle
+          referencingAttributeName: cf.cplace.solution.okr.keyResult
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.cycle
+        localizedName:
+          de: Zyklus
+          en: Cycle
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.cycle
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.objective
+          referencingAttributeName: cf.cplace.solution.okr.keyResult
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.objective
+        localizedName:
+          de: Objective
+          en: Objective
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.objective
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.smallSupport
+          referencingAttributeName: cf.cplace.solution.okr.keyResult
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.organizationalUnit
+        localizedName:
+          de: Small Support
+          en: Small Support
+        localizedShortHelp: null
+        multiplicity: null
+        name: cf.cplace.solution.okr.smallSupport
+        typeConstraint: Link
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.bigSupport
+          referencingAttributeName: cf.cplace.solution.okr.keyResult
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.organizationalUnit
+        localizedName:
+          de: Big Support
+          en: Big Support
+        localizedShortHelp: null
+        multiplicity: null
+        name: cf.cplace.solution.okr.bigSupport
+        typeConstraint: Link
+      - localizedName:
+          de: Fortschrittsindikator
+          en: Progress Indicator
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.progressIndicator
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Confidence Level
+          en: Confidence Level
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.confidenceLevel
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Fortschritt Vorhersage
+          en: Grading Forecast
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.gradingForecast
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: Letztes Update
+          en: Last Update
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.lastUpdate
+        typeConstraint: Date
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.set
+          referencingAttributeName: cf.cplace.solution.okr.keyResult
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.set
+        localizedName:
+          de: Set
+          en: Set
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.set
+        typeConstraint: Link
+      description: null
+      localizedNamePlural:
+        de: Fortschritt
+        en: Progress
+      localizedNameSingular:
+        de: Fortschritt
+        en: Progress
+      name: cf.cplace.solution.okr.progress
+    - attributeDefinitions:
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.digitalBoard.title
+        typeConstraint: Text
+      - linkEntityKind: person
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        localizedName:
+          de: Verantwortliche(r)
+          en: Responsible
+        multiplicity: maximalOne
+        name: cf.cplace.digitalBoard.responsible
+        typeConstraint: Link
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.digitalBoard.description
+        typeConstraint: Text
+      - localizedName:
+          de: Status
+          en: Status
+        multiplicity: exactlyOne
+        name: cf.cplace.digitalBoard.status
+        typeConstraint: TextEnumeration
+      - localizedName:
+          de: "F\xE4lligkeitsdatum"
+          en: Due Date
+        multiplicity: maximalOne
+        name: cf.cplace.digitalBoard.dueDate
+        typeConstraint: Date
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.keyResult
+        localizedName:
+          de: Key Result
+          en: Key Result
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.keyResult
+        typeConstraint: Link
+      - localizedName:
+          de: Eskalationslevel
+          en: Escalation Level
+        multiplicity: exactlyOne
+        name: cf.cplace.digitalBoard.escalationLevel
+        typeConstraint: TextEnumeration
+      description: null
+      localizedNamePlural:
+        de: Aufgaben
+        en: Tasks
+      localizedNameSingular:
+        de: Aufgabe
+        en: Task
+      name: cf.cplace.solution.okr.task
+    - attributeDefinitions:
+      - linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.cycle
+        localizedName:
+          de: "N\xE4chster Zyklus"
+          en: Next Cycle
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.nextCycle
+        typeConstraint: Link
+      description: null
+      localizedNameSingular:
+        de: Select next Cycle
+        en: Select next Cycle
+      name: cf.cplace.solution.okr.selectNextCycle

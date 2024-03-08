@@ -38,35 +38,6 @@ function createPage() {
     });
 }
 
-function readFromCycle(cycle) {
-    const year = cycle.get(ATTR_CYCLE_YEAR);
-    const quarter = cycle.get(ATTR_CYCLE_QUARTER);
-    const status = cycle.get(ATTR_CYCLE_STATUS);
-    const cyclesDashboard = cycle.get(ATTR_CYCLE_CYCLES_DASHBOARD);
-    const start = cycle.get(ATTR_CYCLE_START);
-    const end = cycle.get(ATTR_CYCLE_END);
-    const statusForNameGenerationPattern = cycle.get(ATTR_CYCLE_STATUS_FOR_NAME_GENERATION_PATTERN);
-}
-
-// --- start: Constants for Type 'cf.cplace.solution.okr.cycle' ---
-const TYPE_CYCLE = 'cf.cplace.solution.okr.cycle';
-const ATTR_CYCLE_YEAR = 'cf.cplace.solution.okr.year';
-const ATTR_CYCLE_QUARTER = 'cf.cplace.solution.okr.quarter';
-const ATTR_CYCLE_STATUS = 'cf.cplace.solution.okr.status';
-const ATTR_CYCLE_CYCLES_DASHBOARD = 'cf.cplace.solution.okr.cyclesDashboard';
-const ATTR_CYCLE_START = 'cf.cplace.solution.okr.start';
-const ATTR_CYCLE_END = 'cf.cplace.solution.okr.end';
-const ATTR_CYCLE_STATUS_FOR_NAME_GENERATION_PATTERN = 'cf.cplace.solution.okr.statusForNameGenerationPattern';
-// --- end: Constants for Type 'cf.cplace.solution.okr.cycle' ---
-
-function readFromObjective(objective) {
-    const number = objective.get(ATTR_OBJECTIVE_NUMBER);
-    const title = objective.get(ATTR_OBJECTIVE_TITLE);
-    const set = objective.get(ATTR_OBJECTIVE_SET);
-    const accomplished = objective.get(ATTR_OBJECTIVE_ACCOMPLISHED);
-    const cycle = objective.get(ATTR_OBJECTIVE_CYCLE);
-    const description = objective.get(ATTR_OBJECTIVE_DESCRIPTION);
-}
 
 // --- start: Constants for Type 'cf.cplace.solution.okr.objective' ---
 const TYPE_OBJECTIVE = 'cf.cplace.solution.okr.objective';

@@ -1,0 +1,64 @@
+export:
+  workspace:
+    name: OKR
+    types:
+    - attributeDefinitions:
+      - localizedName:
+          de: Nummer
+          en: Number
+        localizedShortName:
+          de: Nr.
+          en: No.
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.number
+        typeConstraint: Number
+      - localizedName:
+          de: Titel
+          en: Title
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.title
+        typeConstraint: Text
+      - linkEntityKind: page
+        linkIsHierarchy: 'true'
+        linkSameWorkspace: 'true'
+        linkTypeName: cf.cplace.solution.okr.set
+        localizedName:
+          de: Set
+          en: Set
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.set
+        typeConstraint: Link
+      - localizedName:
+          de: Erreicht
+          en: Accomplished
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.accomplished
+        typeConstraint: TextEnumeration
+      - derivable:
+          referencedAttributeName: cf.cplace.solution.okr.cycle
+          referencingAttributeName: cf.cplace.solution.okr.set
+        linkEntityKind: page
+        linkIsHierarchy: 'false'
+        linkSameWorkspace: 'false'
+        linkTypeName: cf.cplace.solution.okr.cycle
+        localizedName:
+          de: Zyklus
+          en: Cycle
+        localizedShortHelp: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.cycle
+        typeConstraint: Link
+      - localizedName:
+          de: Beschreibung
+          en: Description
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.description
+        typeConstraint: RichString
+      description: null
+      localizedNamePlural:
+        de: Objectives
+        en: Objectives
+      localizedNameSingular:
+        de: Objective
+        en: Objective
+      name: cf.cplace.solution.okr.objective
