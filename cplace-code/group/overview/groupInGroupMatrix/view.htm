@@ -1,0 +1,133 @@
+<div class="cplace-group-user-matrix-wrapper" cplace-group-in-group-matrix="$state$">
+    <div class="alert alert-warning" ng-cloak ng-if="matrixCtrl.state.data.excessiveData">
+        $[(too_many_entries)$
+        {{matrixCtrl.state.data.nestedGroups.length}} $|$ {{matrixCtrl.state.data.numberOfFilteredNestedGroups}} $|$ {{matrixCtrl.state.data.groups.length}} $|$
+        {{matrixCtrl.state.data.numberOfFilteredGroups}}
+        $too_many_entries]$
+    </div>
+
+    <div class="cplace-group-user-matrix">
+        <div class="cplace-fixed-pane-scroll" cplace-fixed-pane-scroll>
+            <cplace-fixed-pane-corner>
+                <div class="info-area">
+                    <div class="matrix-legends">
+                        <h6>$(legend)$</h6>
+                        <ul class="legends">
+                            <li>
+                                <i class="fa fa-check"></i> $(member)$
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i> $(indirect_member)$
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column-title header-title">
+                        <div class="column-header">
+                            <span><i class="far fa-users"></i> $(group)$</span>
+                            <div class="btn-group btn-group-xs pull-right">
+                                <a href="" class="btn btn-xs column_filter" ng-click="::matrixCtrl.filterGroups()"
+                                   ng-class="matrixCtrl.hasGroupFilters() ? 'btn-primary' : 'btn-default'">
+                                    <i class="fa fa-filter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap-filler"></div>
+                    <div class="row-title header-title">
+                        <div class="btn-group btn-group-xs pull-right" ng-if="::matrixCtrl.state.nestedGroupFiltersEnabled">
+                            <a href="" class="btn " ng-click="::matrixCtrl.filterNestedGroups()"
+                               ng-class="matrixCtrl.hasNestedGroupFilters() ? 'btn-primary' : 'btn-default'">
+                                <i class="fa fa-fw fa-filter"></i>
+                            </a>
+                        </div>
+                        <div class="header-user-message">
+                            <i class="fa fa-fw fa-users"></i> $(group)$
+                        </div>
+                        <div class="cell-empty"></div>
+                    </div>
+                </div>
+            </cplace-fixed-pane-corner>
+            <cplace-fixed-pane-top>
+                <div class="matrix-header-top">
+                    <table class="column-headers" cellpadding="0" ng-cloak>
+                        <tr>
+                            <th ng-repeat="group in matrixCtrl.state.data.groups"
+                                cplace-on-finish-render="{{::matrixCtrl.state.data.groups.length}}"
+                                after-render-event="{{::matrixCtrl.afterRenderEvent}}">
+                                <div class="column-header-wrapper">
+                                    <div class="column-header" cplace-tooltipster>
+                                        <a ng-href="{{::group.url}}">{{::group.name}}</a>
+                                    </div>
+                                </div>
+                                <div class="text-center helper-arrow">
+                                    <i class="fa fa-arrow-up"></i>
+                                </div>
+                            </th>
+                            <th ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                                <div class="column-header-wrapper">
+                                    <div class="column-header">
+                                        <button class="btn btn-xs btn-primary" ng-click="matrixCtrl.loadMore('group')">$(load_more)$</button>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </cplace-fixed-pane-top>
+            <cplace-fixed-pane-left>
+                <div class="matrix-header-left">
+                    <table class="row-headers" cellpadding="0" ng-cloak>
+                        <tr ng-repeat="nestedGroup in matrixCtrl.state.data.nestedGroups">
+                            <th>
+                                <div class="row-header" cplace-tooltipster>
+                                    <a ng-href="{{::nestedGroup.url}}">{{::nestedGroup.name}}</a>
+                                </div>
+                            </th>
+                            <td class="helper-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </td>
+                        </tr>
+                        <tr ng-if="matrixCtrl.state.data.excessiveDataNestedGroups">
+                            <td colspan="2">
+                                <div class="load-more">
+                                    <button class="btn btn-xs btn-primary" ng-click="matrixCtrl.loadMore('nestedGroup')">$(load_more)$</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </cplace-fixed-pane-left>
+            <cplace-fixed-pane-content>
+                <table class="matrix-data" cellpadding="0" ng-cloak>
+                    <tr ng-repeat="nestedGroup in matrixCtrl.state.data.nestedGroups">
+                        <td class="edge-container" ng-repeat="group in matrixCtrl.state.data.groups"
+                            ng-class="matrixCtrl.canBeToggledClass(nestedGroup,group)" ng-click="::matrixCtrl.toggleEdge(nestedGroup, group)">
+                            <div class="cell-edge" ng-class="matrixCtrl.getEdge(nestedGroup, group).isAdmin ? 'admin' : ''">
+                                <i class="fa"
+                                   ng-class="matrixCtrl.getEdge(nestedGroup, group).iconClass"
+                                   ng-if="matrixCtrl.getEdge(nestedGroup, group)"
+                                   cplace-tooltipster="{{matrixCtrl.getEdge(nestedGroup, group).tooltip}}"></i>
+
+                            </div>
+                        </td>
+                        <td class="cell-edge" ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                            &hellip;
+                        </td>
+                    </tr>
+                    <tr ng-if="matrixCtrl.state.data.excessiveDataNestedGroups">
+                        <td class="cell-edge"
+                            ng-repeat="group in matrixCtrl.state.data.groups">
+                            &vellip;
+                        </td>
+                        <td class="cell-edge" ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                            &#x22F1;
+                        </td>
+                    </tr>
+                </table>
+                <div class="loading" ng-if="!matrixCtrl.state.data">
+                    <i class="fa fa-spin fa-spinner"></i> <i>$(loading)$</i>
+                </div>
+            </cplace-fixed-pane-content>
+        </div>
+    </div>
+</div>

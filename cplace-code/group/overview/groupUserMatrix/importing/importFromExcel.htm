@@ -1,0 +1,14 @@
+<form method="post" action="$submitUrl$" enctype="multipart/form-data" class="tricia-edit-form modal-form form-horizontal" cplace-validated-form cplace-form-provider>
+	$[defaultDialogHeader()$
+		<h1>$(title)$</h1>
+	$defaultDialogHeader]$
+	<div class="modal-body">
+		$messages()$
+		$showPart1()$
+			$(excelFile)$
+		$showPart2()$
+			<input type="file" name="file" size="40" style="max-width:315px;" class="required" accept=".xlsx"/>
+		$showPart3()$
+	</div>
+	$defaultDialogButtonBar(submit="save",cancel="cancel")$
+</form>

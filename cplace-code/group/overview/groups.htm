@@ -1,0 +1,26 @@
+$[mayEditAllTypes()$
+	<div class="btn-group">
+		<a href="$groupTypeUrl$" class="btn btn-primary cplace-pjax-link">
+			<i class="fa fa-pencil"></i> $(edit_group_type)$
+		</a>
+	</div>
+$mayEditAllTypes]$
+
+$[widgetLight()$
+	$(all_groups)$
+	$|$
+
+	$table$
+$widgetLight]$
+
+$[widgetLight()$
+	$(system_groups)$
+	$|$
+	<ul>
+		$[systemGroups g$
+			<li>
+				$g.link(hideIcon)$
+			</li>
+		$systemGroups]$
+	</ul>
+$widgetLight]$
