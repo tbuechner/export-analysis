@@ -1,0 +1,22 @@
+<form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
+    $[defaultDialogHeader()$
+        <h1>$(delete)$</h1>
+    $defaultDialogHeader]$
+    <div class="modal-body alert-danger">
+        <fieldset>
+            <p>
+            	$[errorMessage$
+					<strong>$errorMessage$</strong>
+            	$]errorMessage[$
+	                <strong>$(delete_confirmation)$</strong>
+            	$errorMessage]$
+            </p>
+    </fieldset>
+    </div>
+    <div class="modal-footer">
+    	$[!errorMessage$
+			<a href="#" class="btn btn-primary" cplace-modal-form-submit>$(delete)$</a>
+    	$errorMessage]$
+        <a href="#" class="btn btn-default" data-dismiss="modal">$(cancel)$</a>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
+    $[defaultDialogHeader()$
+    <h1>$(title)$</h1>
+    $defaultDialogHeader]$
+    <div class="modal-body">
+        <cplace-control-component-boolean name="filterForGroupAdmin"></cplace-control-component-boolean>
+        $(filterForGroupAdminHelp)$
+        <input type="hidden" name="userFilters" value="$userFilters$" id="userFilters"/>
+        <input type="hidden" name="groupFilters" value="$groupFilters$" id="groupFilters"/>
+    </div>
+    $defaultDialogButtonBar(submit="next",cancel="cancel")$
+</form>
