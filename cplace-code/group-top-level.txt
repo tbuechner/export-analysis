@@ -1,0 +1,1358 @@
+
+######### start - content of file "group-top-level/ActivateHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import javax.annotation.Nonnull;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Membership;
+import cf.cplace.platform.core.application.principal.MembershipStates;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.application.principal.Principal;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.server.session.SessionLocal;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.Modality;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.frontend.handler.groupActivation.EditHandler;
+import cf.cplace.platform.frontend.handler.person.GroupActivationMail;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.frontend.handler.ErrorMessageException;
+import cf.cplace.platform.core.datamodel.persistence.Join;
+import cf.cplace.platform.core.datamodel.persistence.Queries;
+import cf.cplace.platform.core.datamodel.persistence.Query;
+import cf.cplace.platform.commonlib.template.Template;
+import cf.cplace.platform.commonlib.template.TemplateSubstitution;
+
+public class ActivateHandler extends Handler {
+
+    final Station VALID = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.goWithId(EditHandler.class, ga);
+        }
+    };
+
+    private Group group;
+
+    private GroupActivationMail ga;
+
+    private Query query;
+
+    private static final Message NO_INACTIVE_PERSONS = new Message() {
+    };
+
+    private static final Message targetLabel = new Message() {
+    };
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityAndCheckMayEdit(Parameters.getString("id"));
+        Query groupQuery = Queries.equals(Membership.SCHEMA.prototype()._group(), group);
+        Query notActive = Queries.not(Queries.equals(Membership.SCHEMA.prototype()._state(), MembershipStates.active));
+        Join j = new Join(Person.SCHEMA.prototype()._id(), Membership.SCHEMA.prototype()._member().getColumn());
+        query = Queries.and(groupQuery, notActive);
+        query.addJoin(j);
+        if (Membership.SCHEMA.countEntities(query) == 0) {
+            throw new ErrorMessageException(ActivateHandler.NO_INACTIVE_PERSONS);
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        ga = GroupActivationMail.SCHEMA.createRegisteredSessionEntity();
+        ga._sender().set(SessionLocal.getUser());
+        for (Membership m : Membership.SCHEMA.queryEntities(query)) {
+            Principal member = m._member().get();
+            if (member instanceof Person) {
+                ga._persons().create((Person) member);
+            }
+        }
+        if (ga._persons().count() == 0) {
+            throw new ErrorMessageException(ActivateHandler.NO_INACTIVE_PERSONS);
+        } else {
+            ga._subject().set(Template.getStringSubstituteOnlyMessages(activateMailSubject()));
+            ga._body().set(Template.getStringSubstituteOnlyMessages(activateMail()));
+            ga._group().set(group);
+        }
+        return VALID;
+    }
+
+    private TemplateSubstitution activateMail() {
+        return new TemplateSubstitution() {
+        };
+    }
+
+    private TemplateSubstitution activateMailSubject() {
+        return new TemplateSubstitution() {
+        };
+    }
+
+    @Override
+    public String getActionIconName() {
+        return "fa-cog";
+    }
+
+    @Nonnull
+    @Override
+    public Modality getModality() {
+        return Modality.LARGE;
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+
+}
+
+######### end - content of file "group-top-level/ActivateHandler.java" #########
+
+
+######### start - content of file "group-top-level/BecomeMemberHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import java.util.function.Function;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import cf.cplace.platform.commonlib.mail.api.MailSenderException;
+import cf.cplace.platform.commonlib.mail.api.TemplateMail;
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Group.GroupApplicationState;
+import cf.cplace.platform.core.application.principal.Membership;
+import cf.cplace.platform.core.application.principal.MembershipStates;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.application.principal.Principal;
+import cf.cplace.platform.core.datamodel.builtin.assets.links.Linkable;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.server.session.SessionLocal;
+import cf.cplace.platform.core.frontend.handler.navigation.Action;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.FullPageHandler;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
+import cf.cplace.platform.PlatformComponentRegistry;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
+import cf.cplace.platform.core.server.TenantResources;
+import cf.cplace.platform.core.frontend.handler.ErrorMessageException;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+
+public class BecomeMemberHandler extends Handler implements FullPageHandler {
+
+    class ValidLine extends SubmitLine {
+        @Override
+        public void doNext(Forwarder f) {
+            f.go(group);
+        }
+    }
+
+    private static final Logger log = LoggerFactory.getLogger(BecomeMemberHandler.class);
+
+    private static final Message requestSaved = new Message() {
+    };
+
+    private static final Message isMember = new Message() {
+    };
+
+    private static final Message applyForMembershipTargetLabel = new Message() {
+    };
+
+    private static final Message becomeMemberTargetLabel = new Message() {
+    };
+
+    private static final Message notLoggedInError = new Message() {
+    };
+
+    private static final Message cannotBecomeMemberError = new Message() {
+    };
+
+    private static final ParameterizedMessage alreadyMemberError = new ParameterizedMessage() {
+    };
+
+    final Station VALID_APPLIES = new ValidLine() {
+        @Override
+        public Message getConfirmationMessage() {
+            return requestSaved;
+        }
+    };
+
+    final Station VALID_MEMBER = new ValidLine() {
+        @Override
+        public Message getConfirmationMessage() {
+            return isMember;
+        }
+    };
+
+    protected Message errorMessage;
+
+    final Station IN_VALID = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.go(group);
+        }
+
+        @Override
+        public Message getErrorMessage() {
+            return errorMessage;
+        }
+    };
+
+    private Group group;
+
+    private Person p;
+
+    private GroupApplicationState canBecomeMember;
+
+    @Override
+    public void checkAccess() {
+        checkLoggedIn();
+        group = Group.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+
+        if (group._isTechnicalGroup().get()) {
+            throw new ProtectedActionException();
+        }
+
+        canBecomeMember = group.canBecomeMember();
+        if (Group.GroupApplicationState.NOT_LOGGED_IN.equals(canBecomeMember)) {
+            throw new MyErrormessageException(notLoggedInError);
+        }
+        p = SessionLocal.getUser();
+        if (Group.GroupApplicationState.YES_APPLY.equals(canBecomeMember) || Group.GroupApplicationState.YES_BECOME_MEMBER.equals(canBecomeMember)) {
+            Membership existingMembership = Membership.getMembership(group, p);
+            if (existingMembership != null) {
+                throwAlreadyMemberException();
+            } else {
+                return;
+            }
+        } else {
+            if (canBecomeMember.equals(Group.GroupApplicationState.ALREADY_MEMBER)) {
+                throwAlreadyMemberException();
+            } else if (canBecomeMember.equals(Group.GroupApplicationState.NOT_AUTO_APPLY_OR_BECOME_MEMBER)) {
+                throw new MyErrormessageException(cannotBecomeMemberError);
+            }
+        }
+    }
+
+    private void throwAlreadyMemberException() {
+        throw new MyErrormessageException(alreadyMemberError.setParameters(group.adapt(Linkable.class).getName()));
+    }
+
+    class MyErrormessageException extends ErrorMessageException {
+
+        public MyErrormessageException(Message m) {
+            super(m);
+        }
+
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public void go(Forwarder f) {
+            f.go(group);
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        Membership m = Membership.SCHEMA.createWritableEntity();
+        m._group().set(group);
+        m._member().set(p);
+        if (Group.GroupApplicationState.YES_APPLY.equals(canBecomeMember)) {
+            m._state().set(MembershipStates.appliesFor);
+            m.persist();
+            sendMails(BecomeMemberMailBuilder::buildApplyForMembershipMail);
+            return VALID_APPLIES;
+        } else {
+            m._state().set(MembershipStates.active);
+            m.persist();
+            sendMails(BecomeMemberMailBuilder::buildRegisterMembershipMail);
+            return VALID_MEMBER;
+        }
+    }
+
+    private void sendMails(Function<BecomeMemberMailBuilder, TemplateMail> builderFunction) {
+        Principal.getAllActivePersons(group._notified()).forEach(person -> sendMail(person, builderFunction));
+    }
+
+    private void sendMail(Person recepient, Function<BecomeMemberMailBuilder, TemplateMail> builderFunction) {
+        TemplateMail mail = builderFunction.apply(createMailBuilder(recepient));
+        try {
+            PlatformComponentRegistry.INSTANCE().getMailSender().sendMail(mail);
+        } catch (MailSenderException e) {
+            log.error("Error sending become membership mail", e);
+        }
+    }
+
+    private BecomeMemberMailBuilder createMailBuilder(Person recepient) {
+        return new BecomeMemberMailBuilder()
+                .withRecepient(recepient.getMailAddress())
+                .withLocale(recepient.getLanguage(TenantResources.getTenantDefaultLocale()))
+                .withGroupName(group.getName())
+                .withGroupUrl(group.getAbsoluteUrl())
+                .withUserName(p.getName())
+                .withUserUrl(p.getAbsoluteUrl())
+                .withPendingRequests(group.getPendingRequestsCount())
+                .withActiveMembers(group.getActiveMembershipCount());
+    }
+
+    @Override
+    public String getActionIconName() {
+        return "fa-cog";
+    }
+
+    public abstract static class BecomeMemberAction extends Action {
+
+        protected abstract Group getGroup();
+
+        @Override
+        public Message overrideHandlerTargetLabel() {
+            return becomeMemberTargetLabel;
+        }
+
+        @Override
+        protected boolean show() {
+            GroupApplicationState cbm = getGroup().canBecomeMember();
+            return cbm.equals(GroupApplicationState.NOT_LOGGED_IN) || cbm.equals(GroupApplicationState.YES_BECOME_MEMBER);
+        }
+
+        @Override
+        public void target(Forwarder f) {
+            f.goWithId(BecomeMemberHandler.class, getGroup());
+        }
+    }
+
+    public abstract static class ApplyForMembershipAction extends Action {
+
+        protected abstract Group getGroup();
+
+        @Override
+        public Message overrideHandlerTargetLabel() {
+            return applyForMembershipTargetLabel;
+        }
+
+        @Override
+        protected boolean show() {
+            GroupApplicationState cbm = getGroup().canBecomeMember();
+            return cbm.equals(GroupApplicationState.YES_APPLY);
+        }
+
+        @Override
+        public void target(Forwarder f) {
+            f.goWithId(BecomeMemberHandler.class, getGroup());
+        }
+    }
+}
+
+######### end - content of file "group-top-level/BecomeMemberHandler.java" #########
+
+
+######### start - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
+package cf.cplace.platform.frontend.handler.group;
+
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableSet;
+
+import cf.cplace.platform.commonlib.mail.api.TemplateMail;
+import cf.cplace.platform.core.server.TenantResources;
+
+/**
+ * Builds a {@link TemplateMail} for the use cases:
+ * <ul>
+ *     <li>A user self-registers for a group membership</li>
+ *     <li>A user applies for a group membership</li>
+ * </ul>
+ */
+@ParametersAreNonnullByDefault
+class BecomeMemberMailBuilder {
+
+    private final String applicationTitle;
+
+    private String recepient;
+    private Locale locale;
+    private String groupName;
+    private String groupUrl;
+    private String userName;
+    private String userUrl;
+    private int pendingRequests;
+    private int activeMembers;
+
+    BecomeMemberMailBuilder() {
+        this(TenantResources.INSTANCE().getTitleMessage());
+    }
+
+    BecomeMemberMailBuilder(String applicationTitle) {
+        this.applicationTitle = applicationTitle;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withRecepient(String recepient) {
+        this.recepient = recepient;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withLocale(Locale locale) {
+        this.locale = locale;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withGroupUrl(String groupUrl) {
+        this.groupUrl = groupUrl;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withUserUrl(String userUrl) {
+        this.userUrl = userUrl;
+        return this;
+    }
+
+    @Nonnull
+    BecomeMemberMailBuilder withPendingRequests(int pendingRequests) {
+        this.pendingRequests = pendingRequests;
+        return this;
+    }
+
+    @Nonnull
+    public BecomeMemberMailBuilder withActiveMembers(int activeMembers) {
+        this.activeMembers = activeMembers;
+        return this;
+    }
+
+    @Nonnull
+    TemplateMail buildApplyForMembershipMail() {
+        return getGeneralBuilder()
+                .withSubjectTemplatePath("cf/cplace/platform/handler/group/templates/applyForMembershipMailSubject.txt")
+                .withBodyTemplatePath("cf/cplace/platform/handler/group/templates/applyForMembershipMailContent.html")
+                .build();
+    }
+
+    @Nonnull
+    TemplateMail buildRegisterMembershipMail() {
+        return getGeneralBuilder()
+                .withSubjectTemplatePath("cf/cplace/platform/handler/group/templates/registerMembershipMailSubject.txt")
+                .withBodyTemplatePath("cf/cplace/platform/handler/group/templates/registerMembershipMailContent.html")
+                .build();
+    }
+
+    @Nonnull
+    private TemplateMail.TemplateMailBuilder getGeneralBuilder() {
+        return new TemplateMail.TemplateMailBuilder()
+                .withRecipients(ImmutableSet.of(Preconditions.checkNotNull(recepient, "recepient must not be null")))
+                .withLocale(Preconditions.checkNotNull(locale, "locale must not be null"))
+                .withContext(getContext());
+    }
+
+    @Nonnull
+    private Map<String, Object> getContext() {
+        Map<String, Object> context = new HashMap<>();
+        context.put("application_title", Preconditions.checkNotNull(applicationTitle, "applicationTitle must not be null"));
+        context.put("group_name", Preconditions.checkNotNull(groupName, "groupName must not be null"));
+        context.put("group_url", Preconditions.checkNotNull(groupUrl, "groupUrl must not be null"));
+        context.put("user_name", Preconditions.checkNotNull(userName, "userName must not be null"));
+        context.put("user_url", Preconditions.checkNotNull(userUrl, "userUrl must not be null"));
+        context.put("pending_requests", pendingRequests);
+        context.put("active_members", activeMembers);
+        return context;
+    }
+}
+
+######### end - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
+
+
+######### start - content of file "group-top-level/CancelMembershipHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Membership;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.application.principal.Principal;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.navigation.Action;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.FullPageHandler;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+
+public class CancelMembershipHandler extends Handler implements FullPageHandler {
+
+    private static final Message successMessage = new Message() {
+    };
+
+    private static final Message targetLabel = new Message() {
+    };
+
+    final Station VALID = new SubmitLine() {
+        @Override
+        public void doNext(Forwarder f) {
+            f.go(group);
+        }
+
+        @Override
+        public Message getConfirmationMessage() {
+            return successMessage;
+        }
+    };
+
+    private Group group;
+
+    private Person p;
+
+    private Membership m;
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+        p = checkLoggedIn();
+        m = Membership.getMembership(group, p);
+
+        if (m == null) {
+            throw new ProtectedActionException();
+        }
+
+        if (group._isTechnicalGroup().get()) {
+            throw new ProtectedActionException("Members are not allowed to manually leave a technical group");
+        }
+
+        if (Principal.sessionUserMatchesOneOfThese(group._administrators())) {
+            // If the user is a group admin, we need to check whether removing him from the group would also remove him from the group admins,
+            // which would not be allowed for the last admin, and may be unwanted otherwise.
+            // For now, we just forbid it completely.
+            throw new ProtectedActionException("A group admin cannot simply cancel its membership.");
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        m.remove();
+        return VALID;
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+
+    public abstract static class CancelMembershipAction extends Action {
+
+        protected abstract Group getGroup();
+
+        @Override
+        public void target(Forwarder f) {
+            f.goWithId(CancelMembershipHandler.class, getGroup());
+        }
+    }
+}
+
+######### end - content of file "group-top-level/CancelMembershipHandler.java" #########
+
+
+######### start - content of file "group-top-level/CloneHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.authorization.GlobalPermissions;
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Membership;
+import cf.cplace.platform.core.application.principal.MembershipStates;
+import cf.cplace.platform.core.datamodel.builtin.assets.links.Linkable;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.FullPageHandler;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+
+public class CloneHandler extends Handler implements FullPageHandler {
+
+    private static final Message targetLabel = new Message() {
+    };
+
+    private static final Message successMessage = new Message() {
+    };
+
+    private static final ParameterizedMessage cloneName = new ParameterizedMessage() {
+    };
+
+    Line NEXT = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.go(newGroup);
+        }
+
+        @Override
+        public Message getConfirmationMessage() {
+            return successMessage;
+        }
+    };
+
+    private Group oldGroup;
+
+    private Group newGroup;
+
+    @Override
+    public void checkAccess() {
+        if (!GlobalPermissions.mayCreateGroup()) {
+            throw new ProtectedActionException();
+        }
+
+        oldGroup = Group.SCHEMA.getEntityAndCheckMayEdit(Parameters.getString("id"));
+
+        if (oldGroup._isTechnicalGroup().get()) {
+            throw new ProtectedActionException();
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        newGroup = Group.SCHEMA.createWritableEntity();
+        newGroup.applyForAllButExclude(oldGroup,
+                oldGroup._membershipsForVersioning(),
+                oldGroup._memberships(),
+                oldGroup._pageEditors(),
+                oldGroup._pageReaders(),
+                oldGroup._typeEditors(),
+                oldGroup._typeReaders(),
+                oldGroup._spaceAdmins(),
+                oldGroup._spaceLayouters(),
+                oldGroup._spaceEditors(),
+                oldGroup._spaceReaders(),
+                oldGroup._emailSentTo(),
+                oldGroup._batchJobs());
+        String name = oldGroup.adapt(Linkable.class).getName();
+        String newName = cloneName.setParameters(name).get();
+        newGroup.setValueOfNameProperty(newName);
+        int count = 2;
+        while (newGroup.getNamePropertyForQueries().preventWrite()) {
+            newGroup.setValueOfNameProperty(newName + " - " + count++);
+        }
+        newGroup.persist();
+
+        for (Membership mOld : oldGroup._memberships().getAssets()) {
+            Membership m = Membership.SCHEMA.createWritableEntity();
+            m._group().set(newGroup);
+            m._state().set(MembershipStates.active);
+            m._member().set(mOld._member().get());
+            m.persist();
+        }
+
+        return NEXT;
+    }
+
+    @Override
+    public String getActionIconName() {
+        return "fa-clone";
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+}
+
+######### end - content of file "group-top-level/CloneHandler.java" #########
+
+
+######### start - content of file "group-top-level/DeleteHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+import cf.cplace.platform.commonlib.util.text.Escaping;
+import cf.cplace.platform.commonlib.template.PrintSubstitution;
+import cf.cplace.platform.commonlib.template.Template;
+
+public class DeleteHandler extends Handler {
+
+    private static final Message targetLabel = new Message() {
+    };
+
+    private static final Message successMessage = new Message() {
+    };
+
+    final Station VALID = new JsonPage() {
+        @Override
+        public void putSubstitutions(Template template) {
+            template.put("submitUrl", PrintSubstitution.printing(Escaping.html, () -> Forwarder.getFullUrl(SubmitDeleteHandler.class, group)));
+            template.put("errorMessage", PrintSubstitution.printing(() -> errorMessage == null ? "" : errorMessage.get()));
+        }
+
+        @Override
+        public Group getScopeObject() {
+            return group;
+        }
+    };
+
+    private Group group;
+
+    private Message errorMessage;
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+
+        if (group._isTechnicalGroup().get()) {
+            throw new ProtectedActionException();
+        }
+
+        checkMayRemove(group);
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        errorMessage = group.canBeDeleted();
+        return VALID;
+    }
+
+    @Override
+    public String getActionIconName() {
+        return "fa-trash";
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+}
+
+######### end - content of file "group-top-level/DeleteHandler.java" #########
+
+
+######### start - content of file "group-top-level/EditNewHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.util.text.Escaping;
+import cf.cplace.platform.commonlib.template.PrintSubstitution;
+import cf.cplace.platform.commonlib.template.Template;
+
+public class EditNewHandler extends Handler {
+
+    private Group group;
+
+    final Station SHOW = new JsonPage() {
+        @Override
+        public void putSubstitutions(Template template) {
+            template.put("submitUrl", PrintSubstitution.printing(Escaping.htmlAttribute, () -> Forwarder.getFullUrl(SubmitNewHandler.class, group)));
+        }
+
+        @Override
+        public Group getScopeObject() {
+            return group;
+        }
+    };
+
+    @Override
+    public void checkAccess() {
+        String id = Parameters.getString("id");
+        group = Group.SCHEMA.getEntityAndCheckMayEdit(id);
+        checkIsWritableCopy(group);
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        return SHOW;
+    }
+}
+
+######### end - content of file "group-top-level/EditNewHandler.java" #########
+
+
+######### start - content of file "group-top-level/GroupsSubstitutions.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Principal;
+import cf.cplace.platform.core.application.principal.SystemGroup;
+import cf.cplace.platform.commonlib.template.PrintSubstitution;
+import cf.cplace.platform.commonlib.template.SubstitutionGenerator;
+import cf.cplace.platform.commonlib.template.Template;
+
+public abstract class GroupsSubstitutions extends SubstitutionGenerator {
+
+    /**
+     * might be a {@link SystemGroup}!
+     */
+    protected abstract Principal getCurrent();
+
+    @Override
+    public void putSubstitutions(Template template) {
+        template.put("activeMembers", PrintSubstitution.printing(() -> {
+            Principal current = getCurrent();
+            if (current instanceof Group) {
+                return Integer.toString(((Group) current).getActiveMembershipCount());
+            } else {
+                return "";
+            }
+        }));
+        template.put("pendingRequests", PrintSubstitution.printing(() -> {
+            Principal current = getCurrent();
+            if (current instanceof Group) {
+                return Integer.toString(((Group) current).getPendingRequestsCount());
+            } else {
+                return "";
+            }
+        }));
+    }
+}
+
+######### end - content of file "group-top-level/GroupsSubstitutions.java" #########
+
+
+######### start - content of file "group-top-level/GroupsTableButtonsHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.TableButton;
+import cf.cplace.platform.frontend.handler.flexigrid.AbstractButtonsHandler;
+
+public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
+
+    @Override
+    protected void doDoBusinessLogic() {
+        buttons.add(TableButton.modalButton("create-new-button",
+                Forwarder.getFullUrl(NewHandler.class),
+                "fa-plus",
+                NewHandler.targetLabel,
+                false,
+                TableButton.ButtonType.PRIMARY)
+        );
+    }
+}
+
+######### end - content of file "group-top-level/GroupsTableButtonsHandler.java" #########
+
+
+######### start - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.MembershipVisibility;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.server.session.SessionLocal;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.template.ConditionalSubstitution;
+import cf.cplace.platform.commonlib.template.SimpleListSubstitution;
+import cf.cplace.platform.commonlib.template.Template;
+
+public class LoadGroupChildrenHandler extends Handler {
+
+    final Station SHOW = new JsonPage() {
+        @Override
+        public void putSubstitutions(Template template) {
+            template.put("membershipsAreVisible", ConditionalSubstitution.testing(() -> {
+                if (group.getEntityPermissions().mayEdit()) {
+                    return true;
+                } else if (group._membershipVisibility().isEquals(MembershipVisibility.thisGroup)) {
+                    return group.isActiveMemberInThisGroup(SessionLocal.getUser());
+                } else {
+                    return true;
+                }
+            }));
+            template.put("children", SimpleListSubstitution.forItems(() ->
+                    group.getActiveMembersSortedByNameIgnoringMembershipReadAccess()));
+        }
+    };
+
+    Group group;
+
+    @Override
+    protected void checkAccess() {
+        group = Group.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+    }
+
+    @Override
+    protected Station doBusinessLogic() {
+        return SHOW;
+    }
+}
+
+######### end - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
+
+
+######### start - content of file "group-top-level/NewHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.authorization.GlobalPermissions;
+import cf.cplace.platform.core.datamodel.builtin.assets.taggable.Taggable;
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.server.session.SessionLocal;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.internationalization.Message;
+
+public class NewHandler extends Handler {
+
+    static final Message targetLabel = new Message() {
+    };
+
+    private Group group;
+
+    private String[] tags;
+
+    final Station EDIT = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.goWithId(EditNewHandler.class, group);
+        }
+    };
+
+    @Override
+    public void checkAccess() {
+        tags = Parameters.getStrings(Handler.PARAMETER_TAG);
+        GlobalPermissions.checkMayCreateGroup();
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        group = Group.SCHEMA.createRegisteredWritableEntity();
+        if (tags != null) {
+            for (String tag : tags) {
+                group.adapt(Taggable.class).assignTag(tag);
+            }
+        }
+        Person current = SessionLocal.getUser();
+        if (current != null) {
+            group._administrators().create(current);
+        }
+        return EDIT;
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+
+}
+
+######### end - content of file "group-top-level/NewHandler.java" #########
+
+
+######### start - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.commonlib.pluginextension.PluginExtension;
+import cf.cplace.platform.commonlib.template.IgnoreTemplateSubstitutionTestFailure;
+import cf.cplace.platform.commonlib.template.TemplateFinder;
+import cf.cplace.platform.commonlib.template.TemplateSubstitution;
+
+@CplaceApi
+@IgnoreTemplateSubstitutionTestFailure("No concrete subclass in the platform")
+public abstract class ShowAdditionalIncomingGroupPermissionReferencesExtension extends PluginExtension {
+    public TemplateSubstitution content(final Group group){
+        return new TemplateSubstitution() {
+            @Override
+            public void specifyTemplate(TemplateFinder tf) {
+                tf.use(ShowAdditionalIncomingGroupPermissionReferencesExtension.this);
+            }
+
+            @Override
+            public Object getScopeObject() {
+                return group;
+            }
+        };
+    }
+}
+
+######### end - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
+
+
+######### start - content of file "group-top-level/SubmitDeleteHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.json.JsonSuccessStation;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.frontend.handler.group.overview.GroupsHandler;
+import cf.cplace.platform.commonlib.internationalization.Message;
+
+public class SubmitDeleteHandler extends Handler {
+
+    private static final Message successMessage = new Message() {
+    };
+
+    final Station VALID = new JsonSuccessStation() {
+        @Override
+        public Message getConfirmationMessage() {
+            return successMessage;
+        }
+
+        @Override
+        protected String getTargetUrl() {
+            return Forwarder.getFullUrl(GroupsHandler.class);
+        }
+    };
+
+    Group group;
+
+    String gotoLocation;
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityAndCheckMayRemove(Parameters.getString("id"));
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        group.remove();
+        return VALID;
+    }
+}
+
+######### end - content of file "group-top-level/SubmitDeleteHandler.java" #########
+
+
+######### start - content of file "group-top-level/SubmitNewHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.json.JsonSuccessStation;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
+import cf.cplace.platform.commonlib.internationalization.Message;
+
+public class SubmitNewHandler extends Handler implements PostOnlyHandler {
+
+    Group group;
+
+    final Station VALID = new JsonSuccessStation() {
+        @Override
+        protected String getTargetUrl() {
+            return group.getUrl();
+        }
+
+        @Override
+        protected Message getConfirmationMessage() {
+            return SubmitLine.confirmationMessage;
+        }
+    };
+
+    final Station INVALID = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.goWithId(EditNewHandler.class, group, JsonPage.ERROR_PARAMETER);
+        }
+    };
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityAndCheckMayEdit(Parameters.getString("id"));
+        checkIsWritableCopy(group);
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        group.applyParameters();
+        if (group.isUiSubmitValidAndNotModifiedAndGenerateErrorMessagesIfNot()) {
+            group.persist();
+            return VALID;
+        } else {
+            return INVALID;
+        }
+    }
+}
+
+######### end - content of file "group-top-level/SubmitNewHandler.java" #########
+
+
+######### start - content of file "group-top-level/ViewHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.group;
+
+import javax.annotation.Nullable;
+
+import cf.cplace.platform.core.application.principal.Group;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.FullPageHandler;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.MainPage;
+import cf.cplace.platform.core.frontend.handler.ShowTagsAndModificationDate;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.core.frontend.handler.TitleAndHeadingProvider;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.datamodel.builtin.Entity;
+import cf.cplace.platform.core.datamodel.builtin.EntityHandler;
+import cf.cplace.platform.frontend.templating.FunctionsHelper;
+import cf.cplace.platform.frontend.templating.ObjectFunctions;
+import cf.cplace.platform.commonlib.template.ConditionalSubstitution;
+import cf.cplace.platform.commonlib.template.Template;
+
+public class ViewHandler extends Handler implements FullPageHandler, EntityHandler, TitleAndHeadingProvider, ShowTagsAndModificationDate {
+    private static final Message targetLabel = new Message() {
+    };
+
+    private Group group;
+    private boolean showAllMemberships;
+
+    final Station SHOW = new MainPage() {
+        @Override
+        public Group getScopeObject() {
+            return group;
+        }
+
+        @Override
+        protected void putContentBodySubstitutions(Template template) {
+            template.put("showAllMemberships", ConditionalSubstitution.testing(() -> showAllMemberships));
+        }
+    };
+
+    @Override
+    public void checkAccess() {
+        group = Group.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        showAllMemberships = Parameters.getBoolean(ObjectFunctions.SHOW_ALL_MEMBERSHIPS_PARAM);
+        return SHOW;
+    }
+
+    @Override
+    public Entity getEntity() {
+        return group;
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+
+    @Nullable
+    @Override
+    public String getActionIconName() {
+        return "cf-master-detail";
+    }
+
+    @Override
+    public Message getTitleAndHeading() {
+        return Message.dynamicHtmlUnsafeMessage(FunctionsHelper.proxy("titleAndHeading", group.getNamePropertyForQueries()));
+    }
+}
+
+######### end - content of file "group-top-level/ViewHandler.java" #########
+
+
+######### start - content of file "group-top-level/activate/activateMail.htm" #########
+$(hello)$ $personName$,
+
+$(text_1)$ $groupName$ $(text_2)$
+
+$(text_3)$
+
+$groupUrl$
+
+######### end - content of file "group-top-level/activate/activateMail.htm" #########
+
+
+######### start - content of file "group-top-level/activate/activateMailSubject.htm" #########
+$(subject)$ $groupName$
+######### end - content of file "group-top-level/activate/activateMailSubject.htm" #########
+
+
+######### start - content of file "group-top-level/delete.htm" #########
+<form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
+    $[defaultDialogHeader()$
+        <h1>$(delete)$</h1>
+    $defaultDialogHeader]$
+    <div class="modal-body alert-danger">
+        <fieldset>
+            <p>
+            	$[errorMessage$
+					<strong>$errorMessage$</strong>
+            	$]errorMessage[$
+	                <strong>$(delete_confirmation)$</strong>
+            	$errorMessage]$
+            </p>
+    </fieldset>
+    </div>
+    <div class="modal-footer">
+    	$[!errorMessage$
+			<a href="#" class="btn btn-primary" cplace-modal-form-submit>$(delete)$</a>
+    	$errorMessage]$
+        <a href="#" class="btn btn-default" data-dismiss="modal">$(cancel)$</a>
+    </div>
+</form>
+
+######### end - content of file "group-top-level/delete.htm" #########
+
+
+######### start - content of file "group-top-level/editNew.htm" #########
+<form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
+    $[defaultDialogHeader()$
+        <h1>$(title)$</h1>
+    $defaultDialogHeader]$
+    <div class="modal-body">
+        $messages()$
+        $this.name.edit()$
+        $this.tagsDummyProperty.edit()$
+        $this.applicationState.edit()$
+        $this.notified.edit()$
+        $this.administrators.edit()$
+        $this.membershipVisibility.edit()$
+        $this.allowMembersToSendMails.edit()$
+    </div>
+    $defaultDialogButtonBar(submit="save",cancel="cancel")$
+</form>
+
+######### end - content of file "group-top-level/editNew.htm" #########
+
+
+######### start - content of file "group-top-level/loadGroupChildren.htm" #########
+<div>
+    $[!membershipsAreVisible$
+        $(memberships_are_not_visible)$
+    $]membershipsAreVisible[$
+        $[children c$
+            <div>
+                $c.link(expandable)$
+            </div>
+        $children]$
+    $membershipsAreVisible]$
+</div>
+
+######### end - content of file "group-top-level/loadGroupChildren.htm" #########
+
+
+######### start - content of file "group-top-level/view.htm" #########
+$[this.isTechnicalGroup()$
+<div class="alert alert-info">
+    <p>$(technicalGroupInfo)$</p>
+</div>
+$isTechnicalGroup]$
+
+<p>
+    $this.description.show(noLabel,modalEditing="false")$
+<p>
+
+    $[widgetLight()$
+    $(members)$
+    $|$
+$[this.isReader()$
+    $[showAllMemberships$
+        $this.membershipsForViewAndEdit.show(noInPlaceEditing,noLabel,showAllMemberships)$
+    $]showAllMemberships[$
+        $this.membershipsForViewAndEdit.show(noInPlaceEditing,noLabel)$
+    $showAllMemberships]$
+$]isReader[$
+    $(members_not_visible)$
+$isReader]$
+$widgetLight]$
+
+    $[widgetLight()$
+    $(subGroups)$
+    $|$
+    $this.dummyGroupMemberships.show(noLabel,noInPlaceEditing)$
+$widgetLight]$
+
+    $[widgetLight()$
+    $(attributes)$
+$|$
+    $this.attributes(includeRichStringAttributes="true",hideReadOnlyAttributes="false",includeHiddenInAttributesWidgetAttributes="false")$
+$widgetLight]$
+
+    $[widgetLight()$
+    $(settings)$
+    $|$
+    $this.editableBlock(functionName="settings")$
+$widgetLight]$
+
+$[this.widgetLightWithLazyLoading(collapsed="true",functionName="permissions")$
+    $(permissions)$
+$widgetLightWithLazyLoading]$
+
+######### end - content of file "group-top-level/view.htm" #########
+

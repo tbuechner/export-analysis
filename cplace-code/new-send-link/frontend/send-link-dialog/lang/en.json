@@ -1,0 +1,6 @@
+{
+  "cf-platform-lib-send-link-dialog": {
+    "title": "Send Link via Email",
+    "info": "In the message below, [recipient] will be replaced by each individual recipient's name, and [group_info] will be replaced by the names of all recipient groups."
+  }
+}

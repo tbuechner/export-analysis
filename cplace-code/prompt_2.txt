@@ -1,0 +1,3 @@
+Please convert this code into an implementation that works with the current Angular and Spring REST controllers.
+
+Just give me all the code - without any instructions on how to set it up.

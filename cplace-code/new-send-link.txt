@@ -1,0 +1,351 @@
+
+######### start - content of file "new-send-link/backend/SendLinkController.java" #########
+package cf.cplace.platform.frontend.rest.dialogs.sendlink;
+
+import static cf.cplace.platform.Constants.PLATFORM_PLUGIN_NAME;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import cf.cplace.platform.core.frontend.controller.annotation.CplaceFrontendRequestMapping;
+import cf.cplace.platform.frontend.rest.dialogs.DialogService;
+import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetRequest;
+import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkPostRequest;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderGetResponse;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostRequest;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostResponse;
+
+@ParametersAreNonnullByDefault
+@RestController
+@CplaceFrontendRequestMapping(path = "/" + PLATFORM_PLUGIN_NAME + "/dialogs/send-link")
+public class SendLinkController {
+    private final DialogService<SendLinkGetRequest, SendLinkPostRequest> sendLinkService;
+
+    public SendLinkController(DialogService<SendLinkGetRequest, SendLinkPostRequest> sendLinkService) {
+        this.sendLinkService = sendLinkService;
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public CplaceFormProviderGetResponse getFormData(@RequestParam String entityUid, @RequestParam(required = false) String activeTabsInfo) {
+        return sendLinkService.getFormData(new SendLinkGetRequest(entityUid, activeTabsInfo));
+    }
+
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public CplaceFormProviderPostResponse postFormData(@RequestBody CplaceFormProviderPostRequest<SendLinkPostRequest> request) {
+        return sendLinkService.postFormData(request);
+    }
+}
+
+######### end - content of file "new-send-link/backend/SendLinkController.java" #########
+
+
+######### start - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
+package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
+public record SendLinkGetRequest(String entityUid, @Nullable String activeTabInfo) {
+}
+
+######### end - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
+
+
+######### start - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
+package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
+public record SendLinkGetResponse(String sessionEntityId) {}
+
+######### end - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
+
+
+######### start - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
+package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
+public record SendLinkPostRequest(String sessionEntityId) {}
+
+######### end - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
+
+
+######### start - content of file "new-send-link/backend/service/SendLinkService.java" #########
+package cf.cplace.platform.frontend.rest.dialogs.sendlink.service;
+
+import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.commonlib.template.Template;
+import cf.cplace.platform.core.application.job.assets.PersistentJob;
+import cf.cplace.platform.core.application.page.assets.Page;
+import cf.cplace.platform.core.application.versioning.AwarenessSessionEntitiesExtension.SessionTypes.SEND_LINK_DATA;
+import cf.cplace.platform.core.application.versioning.SendLinkData;
+import cf.cplace.platform.core.datamodel.custom.CustomSessionEntity;
+import cf.cplace.platform.core.server.session.SessionLocal;
+import cf.cplace.platform.frontend.handler.awareness.SendLinkJob;
+import cf.cplace.platform.frontend.handler.awareness.SendLinkMailBody;
+import cf.cplace.platform.frontend.rest.dialogs.DialogService;
+import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetRequest;
+import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetResponse;
+import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkPostRequest;
+import cf.cplace.platform.frontend.rest.shared.dto.control.change.ControlChangeConflict;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderGetResponse;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostRequest;
+import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostResponse;
+
+/**
+ * Provides the form data for the Send Link dialog.
+ */
+@ParametersAreNonnullByDefault
+public class SendLinkService implements DialogService<SendLinkGetRequest, SendLinkPostRequest> {
+    private static final Message sendLinkErrorMessage = new Message() {
+    };
+    private static final Message sendLinkSuccessMessage = new Message() {
+    };
+
+    @Override
+    public CplaceFormProviderGetResponse getFormData(SendLinkGetRequest getRequest) {
+        Page pageByUid = Page.getPageByUid(getRequest.entityUid());
+        CustomSessionEntity data = CustomSessionEntity.SCHEMA.create(SEND_LINK_DATA.TYPE);
+        String currentUserName = Objects.requireNonNull(SessionLocal.getUser()).getValueOfNameProperty();
+        String messageBodyPart = Template.getString(new SendLinkMailBody(pageByUid, currentUserName, getRequest.activeTabInfo()));
+        data.set(SEND_LINK_DATA.MESSAGE, messageBodyPart);
+        data.setCustomReference(SEND_LINK_DATA.ENTITY.name, pageByUid);
+        data.set(SEND_LINK_DATA.SENDER, SessionLocal.getUser());
+        return CplaceFormProviderGetResponse.Builder.getInstance()
+                .setControlStates(
+                        data.getControlState(SEND_LINK_DATA.RECIPIENTS), data.getControlState(SEND_LINK_DATA.MESSAGE))
+                .setData(new SendLinkGetResponse(data.getId()))
+                .build();
+    }
+
+    @Override
+    public CplaceFormProviderPostResponse postFormData(CplaceFormProviderPostRequest<SendLinkPostRequest> request) {
+        CustomSessionEntity customSessionEntity = CustomSessionEntity.SCHEMA.getEntityNotNull(request.getData().sessionEntityId());
+        List<ControlChangeConflict> conflicts = customSessionEntity.applyControlChanges(request.getControlChanges());
+        if (conflicts != null) {
+            return CplaceFormProviderPostResponse.Builder.getInstance()
+                    .setConflicts(conflicts)
+                    .setErrorMessage(sendLinkErrorMessage.get())
+                    .build();
+        }
+
+        String jobParam = new SendLinkData(
+                customSessionEntity.get(SEND_LINK_DATA.RECIPIENTS),
+                customSessionEntity.optCustomReference(SEND_LINK_DATA.ENTITY.name).orElseThrow(() -> new IllegalArgumentException("entity")),
+                customSessionEntity.getNotNull(SEND_LINK_DATA.SENDER),
+                customSessionEntity.getNotEmpty(SEND_LINK_DATA.MESSAGE))
+                .toJson();
+        PersistentJob.createJobAndStartInSeparateThread(SendLinkJob.class, jobParam);
+
+        return CplaceFormProviderPostResponse.Builder.getInstance()
+                .setSuccessMessage(sendLinkSuccessMessage.get())
+                .build();
+    }
+}
+
+######### end - content of file "new-send-link/backend/service/SendLinkService.java" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/index.ts" #########
+export * from './send-link-dialog.component';
+export * from './send-link-dialog.module';
+export * from './types';
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/index.ts" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/lang/de.json" #########
+{
+  "cf-platform-lib-send-link-dialog": {
+    "title": "Link per E-Mail senden",
+    "info": "In der untenstehenden Nachricht wird [recipient] durch den Namen des jeweiligen Empfängers ersetzt und [group_info] durch alle angegebenen Gruppennamen."
+  }
+}
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/lang/de.json" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/lang/en.json" #########
+{
+  "cf-platform-lib-send-link-dialog": {
+    "title": "Send Link via Email",
+    "info": "In the message below, [recipient] will be replaced by each individual recipient's name, and [group_info] will be replaced by the names of all recipient groups."
+  }
+}
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/lang/en.json" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.html" #########
+<cf-frontend-sdk-cplace-dialog-skeleton
+  [title]="'cf-platform-lib-send-link-dialog.title' | translate"
+  [submitButtonLabelVariant]="submitButtonLabelVariant"
+  [cancelButtonLabelVariant]="cancelButtonLabelVariant"
+  [(visible)]="visible"
+  cf-frontend-sdk-d-cplace-form-provider
+  [formModel]="formModel"
+>
+  <div class="flex flex-column">
+    <cf-frontend-sdk-control [controlState]="recipientsControlState" [singleColumn]="true"></cf-frontend-sdk-control>
+    <p-message severity="info" [text]="'cf-platform-lib-send-link-dialog.info' | translate" class="mb-3 p-1"></p-message>
+    <cf-frontend-sdk-control [controlState]="messageControlState" [showLabel]="false"></cf-frontend-sdk-control>
+  </div>
+</cf-frontend-sdk-cplace-dialog-skeleton>
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.html" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { SendLink } from '@cplace-next/api/cf-cplace-platform';
+import {
+  ControlState,
+  ControlStateMap,
+  CplaceDialogComponent,
+  CplaceDialogSubmitButtonLabelVariantEnum,
+  CplaceMessageService,
+  CplaceSingletonRootProviderEnum,
+  FormModel,
+} from '@cplace-next/cf-frontend-sdk';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { SendLinkDialogContext } from './types';
+
+@UntilDestroy()
+@Component({
+  selector: 'cf-platform-lib-send-link-dialog',
+  templateUrl: './send-link-dialog.component.html',
+  styleUrls: ['./styles/send-link-dialog.component.scss'],
+})
+export class SendLinkDialogComponent extends CplaceDialogComponent<SendLinkDialogContext> implements OnInit {
+  public static readonly SEND_LINK_DIALOG_ENDPOINT = '/cf.cplace.platform/dialogs/send-link';
+
+  @Input() public entityUid = '';
+
+  public recipientsControlState?: ControlState;
+  public messageControlState?: ControlState;
+  public sessionEntityId?: string;
+  public formModel: FormModel = [
+    {
+      url: SendLinkDialogComponent.SEND_LINK_DIALOG_ENDPOINT,
+      getResponse: (response: SendLink) => {
+        const controlStates = response.controlStates as ControlStateMap;
+        this.recipientsControlState = controlStates.get("'cf.cplace.sendLinkData.recipients'");
+        this.messageControlState = controlStates.get("'cf.cplace.sendLinkData.message'");
+        this.sessionEntityId = response.data.sessionEntityId;
+      },
+      getParams: () => {
+        return {
+          entityUid: this.entityUid,
+          activeTabsInfo: this.readTabInfo(),
+        };
+      },
+      postBody: () => {
+        return {
+          sessionEntityId: this.sessionEntityId,
+        };
+      },
+      postResponse: () => {
+        // need to keep an empty method for things to work properly
+      },
+    },
+  ];
+
+  public constructor(@Inject(CplaceSingletonRootProviderEnum.CplaceMessageService) private cplaceMessageService: CplaceMessageService) {
+    super();
+  }
+
+  public ngOnInit() {
+    this.submitButtonLabelVariant = CplaceDialogSubmitButtonLabelVariantEnum.ok;
+    this.$context.pipe(untilDestroyed(this)).subscribe((context) => {
+      if (context) {
+        this.entityUid = context.entityUid;
+        this.visible = true;
+      }
+    });
+  }
+
+  protected getDialogInstance(): CplaceDialogComponent<SendLinkDialogContext> {
+    return this;
+  }
+
+  private readTabInfo(): string | undefined {
+    const tabsInfo = window.location.hash.substring(1);
+    return tabsInfo && tabsInfo.trim().length > 0 ? tabsInfo : undefined;
+  }
+}
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
+import { CommonModule } from '@angular/common';
+import { Inject, NgModule } from '@angular/core';
+import {
+  CplaceControlModule,
+  CplaceDialogModule,
+  CplaceFormProviderService,
+  CplaceSingletonRootProviderEnum,
+  I18nModule,
+  TranslationService,
+} from '@cplace-next/cf-frontend-sdk';
+import { MessageModule } from 'primeng/message';
+import * as de from './lang/de.json';
+import * as en from './lang/en.json';
+import { SendLinkDialogComponent } from './send-link-dialog.component';
+
+@NgModule({
+  declarations: [SendLinkDialogComponent],
+  exports: [SendLinkDialogComponent],
+  providers: [CplaceFormProviderService],
+  imports: [CommonModule, CplaceDialogModule, MessageModule, CplaceControlModule, I18nModule],
+})
+export class SendLinkDialogModule {
+  constructor(@Inject(CplaceSingletonRootProviderEnum.TranslationService) private translationService: TranslationService) {
+    this.translationService.addTranslation({
+      translations: {
+        en: en,
+        de: de,
+      },
+    });
+  }
+}
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/styles/send-link-dialog.component.scss" #########
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/styles/send-link-dialog.component.scss" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/types/index.ts" #########
+export * from './send-link-dialog-context.types';
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/types/index.ts" #########
+
+
+######### start - content of file "new-send-link/frontend/send-link-dialog/types/send-link-dialog-context.types.ts" #########
+export type SendLinkDialogContext = {
+  entityUid: string;
+};
+
+######### end - content of file "new-send-link/frontend/send-link-dialog/types/send-link-dialog-context.types.ts" #########
+

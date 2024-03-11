@@ -9,53 +9,63 @@ def concatenate(folder_name):
     # get the list of files in the directory group
     output_file_name = folder_name + '.txt'
 
-    concatenate_files_in_folder(folder_name, output_file_name)
+    # print('concatenating files in directory: ' + folder_name)
+
+    concatenated = concatenate_files_in_folder(folder_name)
+
+    # write the concatenated contents to a file
+    with open(output_file_name, 'w') as outfile:
+        outfile.write(concatenated)
 
     print('tokens of ' + output_file_name + ': ' + str(count_tokens_in_file(output_file_name)))
 
 
-def concatenate_files_in_folder(folder_name, output_file_name):
-    print('concatenating files in directory: ' + folder_name)
+def concatenate_files_in_folder(folder_name):
+    # print('concatenating files in directory: ' + folder_name)
     files = os.listdir(folder_name)
     # order files alphabetically
     files.sort()
-    # open the file group-all.txt in write mode
-    with open(output_file_name, 'w') as outfile:
-        # for each file in the directory group
-        for file in files:
+
+    result = ""
+
+    # for each file in the directory group
+    for file in files:
+        if not file.startswith('.'):
             # file might be a directory
             if os.path.isdir(folder_name + '/' + file):
-                concatenate_files_in_folder(folder_name + '/' + file, output_file_name)
+                # ignore folders starting with a dot
+                result += concatenate_files_in_folder(folder_name + '/' + file)
             else:
-                concatenate_file(file, folder_name, outfile)
+                result += concatenate_file(file, folder_name)
 
-# q: What best practices do exist for method names in Python?
-# a: https://stackoverflow.com/questions/159720/what-are-some-best-practices-for-method-names
+    return result
 
 
-def concatenate_file(file, folder_name, outfile):
-    print('concatenating file: ' + folder_name + '/' + file)
+def concatenate_file(file, folder_name):
+    # print('concatenating file: ' + folder_name + '/' + file)
     # open the file in read mode
     with open(folder_name + '/' + file, 'r') as infile:
         # read the contents of the file
         contents = infile.read()
 
-        # insert a line break
-        outfile.write('\n')
+        result = ""
+
+        result += '\n'
 
         # insert a comment which contains the name of the file
-        outfile.write('######### start - content of file "' + folder_name + '/' + file + '" #########\n')
+        result += '######### start - content of file "' + folder_name + '/' + file + '" #########\n'
 
-        # write the contents of the file to group-all.txt
-        outfile.write(contents)
+        result += contents
 
-        outfile.write('\n')
-        outfile.write('######### end - content of file "' + folder_name + '/' + file + '" #########\n')
-        outfile.write('\n')
+        result += '\n'
+        result += '######### end - content of file "' + folder_name + '/' + file + '" #########\n'
+        result += '\n'
+    return result
 
 
-# call the concatenate function with the directory group as the argument
-
-# concatenate('group-all')
+concatenate('group-all')
 concatenate('group-top-level')
-# concatenate('group-user-matrix')
+concatenate('group-user-matrix')
+concatenate('old-send-link')
+concatenate('new-send-link')
+concatenate('old-edit-ldap-identifier')

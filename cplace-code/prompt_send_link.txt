@@ -1,0 +1,16 @@
+An existing and working implementation of a functionality on a proprietary technology looks like this:
+
+```
+```
+
+The same functionality on the new technology looks like this:
+
+```
+```
+
+Please convert this implementation to the new technology:
+
+```
+```
+
+

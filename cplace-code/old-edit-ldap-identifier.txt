@@ -1,0 +1,168 @@
+
+######### start - content of file "old-edit-ldap-identifier/EditExternalIdHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.person;
+
+import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
+import cf.cplace.platform.core.application.authorization.GlobalPermissions;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+import cf.cplace.platform.commonlib.template.PrintSubstitution;
+import cf.cplace.platform.commonlib.template.Template;
+
+@CplaceApi
+public class EditExternalIdHandler extends Handler {
+
+    public static final Message targetLabel = new Message() {
+    };
+
+    final Station SHOW = new JsonPage() {
+        @Override
+        public void putSubstitutions(Template template) {
+            template.put("submitUrl", PrintSubstitution.printing(() -> Forwarder.getFullUrl(SubmitLdapIdentifierHandler.class, person)));
+        }
+
+        @Override
+        public Person getScopeObject() {
+            return person;
+        }
+    };
+
+    private Person person;
+
+    @Override
+    public void checkAccess() {
+        person = Person.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+        // person may be read-only or writable, depending on how this handler is called
+
+        if (!GlobalPermissions.mayCreateAndEditPerson()) {
+            throw new ProtectedActionException("Not allowed to edit");
+        }
+        if (!person.hasLdapIdentifier()) {
+            throw new ProtectedActionException("User has no LDAP identifier");
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        if (person.isReadOnlyEntity()) {
+            person = person.createRegisteredWritableCopy();
+        }
+        return SHOW;
+    }
+
+    @Override
+    public String getActionIconName() {
+        return "fa-edit";
+    }
+
+    @Override
+    public Message getTargetLabel() {
+        return targetLabel;
+    }
+
+}
+
+######### end - content of file "old-edit-ldap-identifier/EditExternalIdHandler.java" #########
+
+
+######### start - content of file "old-edit-ldap-identifier/SubmitLdapIdentifierHandler.java" #########
+/*
+ * Copyright 2015, collaboration Factory AG. All rights reserved.
+ */
+package cf.cplace.platform.frontend.handler.person;
+
+import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
+import cf.cplace.platform.core.application.authorization.GlobalPermissions;
+import cf.cplace.platform.core.application.principal.Person;
+import cf.cplace.platform.core.server.request.Parameters;
+import cf.cplace.platform.core.frontend.handler.Forwarder;
+import cf.cplace.platform.core.frontend.handler.Handler;
+import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
+import cf.cplace.platform.core.frontend.handler.station.json.JsonSuccessStation;
+import cf.cplace.platform.core.frontend.handler.station.Line;
+import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
+import cf.cplace.platform.core.frontend.handler.station.Station;
+import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
+import cf.cplace.platform.commonlib.internationalization.Message;
+import cf.cplace.platform.core.datamodel.builtin.ServerMode;
+import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
+
+@CplaceApi
+public class SubmitLdapIdentifierHandler extends Handler implements PostOnlyHandler {
+
+    final Station VALID = new JsonSuccessStation() {
+        @Override
+        protected String getTargetUrl() {
+            return person.getUrl();
+        }
+
+        @Override
+        protected Message getConfirmationMessage() {
+            return SubmitLine.confirmationMessage;
+        }
+    };
+
+    final Line INVALID = new Line() {
+        @Override
+        public void next(Forwarder f) {
+            f.goWithId(EditExternalIdHandler.class, person, JsonPage.ERROR_PARAMETER);
+        }
+    };
+
+    private Person person;
+
+    @Override
+    public void checkAccess() {
+        person = Person.SCHEMA.getEntityNotNull(Parameters.getString("id"));
+        checkIsWritableCopy(person);
+        if (!GlobalPermissions.mayCreateAndEditPerson()) {
+            throw new ProtectedActionException("Not allowed to edit");
+        }
+        if (!person.hasLdapIdentifier()) {
+            throw new ProtectedActionException("User has no LDAP identifier");
+        }
+    }
+
+    @Override
+    public Station doBusinessLogic() {
+        person.applyParameters();
+        if (person.isUiSubmitValidAndNotModifiedAndGenerateErrorMessagesIfNot()) {
+            ServerMode.noWriteAccessCheck(() -> {
+                person.persist();
+            });
+            return VALID;
+        } else {
+            return INVALID;
+        }
+    }
+}
+
+######### end - content of file "old-edit-ldap-identifier/SubmitLdapIdentifierHandler.java" #########
+
+
+######### start - content of file "old-edit-ldap-identifier/editExternalId.htm" #########
+<form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
+	$[defaultDialogHeader()$
+		<h1>$(title)$</h1>
+	$defaultDialogHeader]$
+	<div class="modal-body">
+		$messages()$
+		$this.externalId.edit()$
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary" cplace-modal-form-submit>$(save)$</a>
+		<a href="#" class="btn btn-default" data-dismiss="modal">$(cancel)$</a>
+	</div>
+</form>
+
+######### end - content of file "old-edit-ldap-identifier/editExternalId.htm" #########
+

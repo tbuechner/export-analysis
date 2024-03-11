@@ -1,0 +1,21 @@
+<form method="post" action="$submitUrl$" class="modal-form form-horizontal" cplace-form-provider>
+    $[defaultDialogHeader()$
+        <h1>$(title)$</h1>
+    $defaultDialogHeader]$
+    <div class="modal-body">
+        $messages()$
+
+        $this.'cf.cplace.sendLinkData.recipients'.edit()$
+
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            $(recipient_help_message)$
+        </div>
+
+        $this.'cf.cplace.sendLinkData.message'.edit(noLabel,cols="5000",rows="10")$
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-primary" cplace-modal-form-submit data-ua-name="send-link-modal-button">$(send_link)$</a>
+        <a href="#" class="btn btn-default" data-dismiss="modal" data-ua-name="send-link-cancel-modal-button">$(cancel)$</a>
+    </div>
+</form>
