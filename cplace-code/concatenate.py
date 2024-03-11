@@ -45,15 +45,34 @@ def concatenate_file(file, folder_name):
     # print('concatenating file: ' + folder_name + '/' + file)
     # open the file in read mode
     with open(folder_name + '/' + file, 'r') as infile:
-        # read the contents of the file
-        contents = infile.read()
-
         result = ""
 
         result += '\n'
 
         # insert a comment which contains the name of the file
         result += '######### start - content of file "' + folder_name + '/' + file + '" #########\n'
+
+        # read the contents of the file
+        contents = infile.read()
+
+        # if file ends with .java filter all lines which start with "import "
+        if file.endswith('.java'):
+            lines = contents.split('\n')
+            contents = ''
+            for line in lines:
+                if not line.startswith('import '):
+                    contents += line + '\n'
+
+        if file.endswith('.ts'):
+            lines = contents.split('\n')
+            for line in lines:
+                if line.strip().startswith('import'):
+                    skip = True
+                if skip and line.strip().endswith(';'):
+                    skip = False
+                    continue
+                if not skip:
+                    contents += line + '\n'
 
         result += contents
 

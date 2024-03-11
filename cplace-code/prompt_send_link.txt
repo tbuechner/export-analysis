@@ -1,4 +1,4 @@
-An existing and working implementation of a functionality on a proprietary technology looks like this:
+An existing and working implementation of a functionality in a given proprietary technology looks like this:
 
 ```
 ```
@@ -8,10 +8,12 @@ The same functionality on the new technology looks like this:
 ```
 ```
 
-Please convert this implementation to the new technology:
+This is an implementation of another functionality in the same proprietary technology:
 
 ```
 ```
+
+Please convert this implementation to the new technology.
 
 I am especially interested in the frontend part of the code.
 

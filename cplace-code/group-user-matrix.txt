@@ -296,25 +296,10 @@ export abstract class AbstractMatrixCtrl {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Collections;
-import java.util.Set;
 
-import javax.annotation.Nonnull;
 
-import org.json.JSONObject;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Sets;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.MembershipVisibility;
-import cf.cplace.platform.core.datamodel.search.filter.Filters;
-import cf.cplace.platform.core.datamodel.search.filter.Operator;
-import cf.cplace.platform.core.datamodel.search.Search;
-import cf.cplace.platform.core.datamodel.search.filter.SearchFilter;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.frontend.handler.flexigrid.FlexiComponentUtils;
-import cf.cplace.platform.core.datamodel.builtin.Schema;
 
 /**
  * Search to be utilized to find groups according to filters set in the group user matrix.
@@ -382,6 +367,7 @@ public class CandidateGroupSearch {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/CandidateGroupSearch.java" #########
 
 
@@ -392,18 +378,10 @@ public class CandidateGroupSearch {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Set;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-import org.json.JSONObject;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.SetMultimap;
-import com.google.common.collect.Sets;
 
-import cf.cplace.platform.core.application.principal.groupusermatrix.GroupUserMatrixFilters;
 
 /**
  * Search to be utilized to find users, groups and group memberships of users according to filters set in the group user matrix.
@@ -474,6 +452,7 @@ public class CandidateUserAndGroupSearch {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/CandidateUserAndGroupSearch.java" #########
 
 
@@ -484,31 +463,9 @@ public class CandidateUserAndGroupSearch {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
-import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.SetMultimap;
-import com.google.common.collect.Sets;
 
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.datamodel.search.filter.Filters;
-import cf.cplace.platform.core.datamodel.search.filter.Operator;
-import cf.cplace.platform.core.datamodel.search.Search;
-import cf.cplace.platform.core.datamodel.search.filter.SearchFilter;
-import cf.cplace.platform.core.datamodel.search.indexing.SearchIndexFields;
-import cf.cplace.platform.core.datamodel.search.result.SearchableIndex;
-import cf.cplace.platform.frontend.handler.flexigrid.FlexiComponentUtils;
-import cf.cplace.platform.core.datamodel.builtin.BooleanAttribute;
-import cf.cplace.platform.core.datamodel.builtin.Schema;
-import cf.cplace.platform.core.datamodel.search.elasticsearch.EsClient;
-import cf.cplace.platform.core.datamodel.search.elasticsearch.EsClientHolder;
 
 /**
  * Search to be utilized to find users and group memberships of users according to filters set in the group user matrix.
@@ -571,6 +528,7 @@ public class CandidateUserSearch {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/CandidateUserSearch.java" #########
 
 
@@ -581,9 +539,7 @@ public class CandidateUserSearch {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Set;
 
-import com.google.common.collect.SetMultimap;
 
 /**
  * Generic result object for searches (e.g.  {@link CandidateUserSearch}, {@link CandidateGroupSearch}, {@link CandidateUserAndGroupSearch}) utilized in the context of the group user matrix.
@@ -612,6 +568,7 @@ public class CandidateUsersAndGroups {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/CandidateUsersAndGroups.java" #########
 
 
@@ -622,18 +579,7 @@ public class CandidateUsersAndGroups {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Collections;
-import java.util.List;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.datamodel.custom.TypeDefinition;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.PersonSpace;
-import cf.cplace.platform.core.datamodel.search.filter.Filters;
-import cf.cplace.platform.core.datamodel.search.Search;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.TableSpecificationHandler;
-import cf.cplace.platform.frontend.handler.group.NewHandler;
 
 /**
  * Represents the filter dialog on the group dimension in the user and group matrix.
@@ -686,6 +632,7 @@ public class FilterGroupsSpecificationHandler extends TableSpecificationHandler 
     }
 }
 
+
 ######### end - content of file "group-user-matrix/FilterGroupsSpecificationHandler.java" #########
 
 
@@ -696,22 +643,8 @@ public class FilterGroupsSpecificationHandler extends TableSpecificationHandler 
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Collections;
-import java.util.List;
 
-import javax.annotation.Nullable;
 
-import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.datamodel.custom.TypeDefinition;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.PersonSpace;
-import cf.cplace.platform.core.datamodel.search.filter.Filters;
-import cf.cplace.platform.core.datamodel.search.Search;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.TableSpecificationHandler;
-import cf.cplace.platform.frontend.handler.page.AbstractActionHandler;
-import cf.cplace.platform.frontend.handler.systemGroup.UsersActionsHandler;
 
 /**
  * Represents the filter dialog on the user dimension in the user and group matrix.
@@ -760,6 +693,7 @@ public class FilterUsersSpecificationHandler extends TableSpecificationHandler {
         return Collections.emptyList();
     }
 }
+
 
 ######### end - content of file "group-user-matrix/FilterUsersSpecificationHandler.java" #########
 
@@ -1021,28 +955,8 @@ export class GroupUserMatrixCtrl {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-import java.util.regex.Pattern;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.SetMultimap;
-import com.google.common.collect.Sets;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.groupusermatrix.GroupUserMatrixFilters;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.station.json.GsonAnswerStation;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state.Data;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state.Edge;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state.Node;
 
 public class LoadDataHandler extends Handler implements PostOnlyHandler {
     public static final int PAGE_SIZE = 50;
@@ -1193,27 +1107,15 @@ public class LoadDataHandler extends Handler implements PostOnlyHandler {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/LoadDataHandler.java" #########
 
 
 ######### start - content of file "group-user-matrix/ToggleMembershipHandler.java" #########
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Map;
 
-import com.google.common.collect.Maps;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.station.json.GsonAnswerStation;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state.Edge;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
 
 public class ToggleMembershipHandler extends Handler implements PostOnlyHandler {
 
@@ -1276,6 +1178,7 @@ public class ToggleMembershipHandler extends Handler implements PostOnlyHandler 
     }
 }
 
+
 ######### end - content of file "group-user-matrix/ToggleMembershipHandler.java" #########
 
 
@@ -1286,21 +1189,9 @@ public class ToggleMembershipHandler extends Handler implements PostOnlyHandler 
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.Arrays;
-import java.util.function.Function;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
 
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.Strings;
 
-import cf.cplace.platform.commonlib.apiannotation.CplaceInternal;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting.Export2ExcelJob;
 
 /**
  * Allows to configure the excel to be created by the {@link Export2ExcelJob}
@@ -1386,42 +1277,16 @@ public class UserExcelSheetDefinition {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/UserExcelSheetDefinition.java" #########
 
 
 ######### start - content of file "group-user-matrix/ViewHandler.java" #########
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
 
-import java.util.List;
-import java.util.Set;
 
-import javax.annotation.Nullable;
 
-import com.google.common.base.Preconditions;
-import com.google.common.base.Strings;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-import com.google.gson.Gson;
 
-import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.FullPageHandler;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.HistoryEntryNameProvider;
-import cf.cplace.platform.core.frontend.handler.station.template.MainPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.core.frontend.handler.navigation.TargetProvider;
-import cf.cplace.platform.core.frontend.handler.TitleAndHeadingProvider;
-import cf.cplace.platform.frontend.handler.group.overview.DefaultActionsAndViews;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state.State;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
 
 @CplaceApi
 public class ViewHandler extends Handler implements FullPageHandler, TitleAndHeadingProvider, HistoryEntryNameProvider {
@@ -1512,6 +1377,7 @@ public class ViewHandler extends Handler implements FullPageHandler, TitleAndHea
         return "fa-check-square-o";
     }
 }
+
 
 ######### end - content of file "group-user-matrix/ViewHandler.java" #########
 
@@ -1673,20 +1539,6 @@ export function cplaceMatrixGrid() {
  */
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.commonlib.template.Template;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.util.NameValue;
 
 /**
  * Entry point for the export of group memberships. Shows the user a modal that allows a user to only export memberships in groups in which the user is admin.
@@ -1741,6 +1593,7 @@ public class Export2ExcelHandler extends Handler implements PostOnlyHandler {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/exporting/Export2ExcelHandler.java" #########
 
 
@@ -1751,47 +1604,10 @@ public class Export2ExcelHandler extends Handler implements PostOnlyHandler {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
-import java.util.stream.Collectors;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbookType;
 
-import com.google.common.collect.Streams;
 
-import cf.cplace.platform.core.application.job.assets.PersistentJob;
-import cf.cplace.platform.core.application.job.QueuedBatchJob;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.frontend.handler.custom.DownloadExportHelper;
-import cf.cplace.platform.frontend.handler.excel.ExcelExporter;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.UserExcelSheetDefinition;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.CandidateUserAndGroupSearch;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.CandidateUsersAndGroups;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.datamodel.builtin.PersistentEntity;
-import cf.cplace.platform.core.server.TenantResources;
-import cf.cplace.platform.core.application.job.data.DistributionType;
-import cf.cplace.platform.commonlib.template.Template;
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
-import cf.cplace.platform.commonlib.util.io.gson.Gsonable;
-import cf.cplace.platform.commonlib.util.Utilities;
 
 /**
  * Exports direct memberships of the group user matrix to an excel file.
@@ -1972,6 +1788,7 @@ public class Export2ExcelJob extends QueuedBatchJob {
 
 }
 
+
 ######### end - content of file "group-user-matrix/exporting/Export2ExcelJob.java" #########
 
 
@@ -1981,17 +1798,7 @@ public class Export2ExcelJob extends QueuedBatchJob {
  */
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
 
-import javax.annotation.Nullable;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.application.job.assets.PersistentJob;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.station.template.JobCreatedJsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.LoadDataHandler;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
 
 /**
  * Subsequently to the {@link Export2ExcelHandler}, creates and starts the {@link Export2ExcelJob}.
@@ -2043,6 +1850,7 @@ public class SubmitExportHandler extends LoadDataHandler {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/exporting/SubmitExportHandler.java" #########
 
 
@@ -2069,19 +1877,7 @@ public class SubmitExportHandler extends LoadDataHandler {
  */
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
 
-import javax.annotation.Nullable;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
 
 /**
  * Entry point for the import of group memberships. Shows the user a modal that allows a user to select an excel file to be imported.
@@ -2127,6 +1923,7 @@ public class ImportFromExcelHandler extends Handler {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/importing/ImportFromExcelHandler.java" #########
 
 
@@ -2137,54 +1934,10 @@ public class ImportFromExcelHandler extends Handler {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.json.JSONObject;
 
-import com.google.common.base.Predicates;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Streams;
 
-import cf.cplace.platform.core.application.job.assets.PersistentJob;
-import cf.cplace.platform.core.application.job.QueuedBatchJob;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.Principal;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.frontend.handler.custom.ExcelUtilities;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.CandidateGroupSearch;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.UserExcelSheetDefinition;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
-import cf.cplace.platform.core.datamodel.builtin.PersistentSchema;
-import cf.cplace.platform.commonlib.util.log.CountAndThrottleLog;
-import cf.cplace.platform.core.application.job.data.DistributionType;
-import cf.cplace.platform.core.application.job.data.ShutdownCancellationType;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.util.text.SafeHtml;
-import cf.cplace.platform.commonlib.util.collect.MoreCollectors;
 
 /**
  * Imports direct group memberships from an excel file.
@@ -2464,6 +2217,7 @@ public class ImportFromExcelJob extends QueuedBatchJob {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/importing/ImportFromExcelJob.java" #########
 
 
@@ -2473,24 +2227,8 @@ public class ImportFromExcelJob extends QueuedBatchJob {
  */
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
 
-import java.io.File;
-import java.io.IOException;
 
-import org.apache.poi.xssf.usermodel.XSSFWorkbookType;
-import org.springframework.web.multipart.MultipartFile;
 
-import cf.cplace.platform.core.application.job.assets.PersistentJob;
-import cf.cplace.platform.core.server.request.RequestLocal;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JobCreatedJsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.ViewHandler;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.server.TenantResources;
-import cf.cplace.platform.commonlib.util.Utilities;
 
 /**
  * Subsequently to the {@link ImportFromExcelHandler}, creates and starts the {@link ImportFromExcelJob}.
@@ -2564,6 +2302,7 @@ public class SubmitImportHandler extends Handler implements PostOnlyHandler {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/importing/SubmitImportHandler.java" #########
 
 
@@ -2593,13 +2332,8 @@ public class SubmitImportHandler extends Handler implements PostOnlyHandler {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
 
-import java.util.List;
-import java.util.Map;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
 
 public class Data {
     public boolean excessiveData = false;
@@ -2627,6 +2361,7 @@ public class Data {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/state/Data.java" #########
 
 
@@ -2637,13 +2372,7 @@ public class Data {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
 
-import javax.annotation.Nonnull;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
 
 public class Edge {
 
@@ -2706,6 +2435,7 @@ public class Edge {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/state/Edge.java" #########
 
 
@@ -2716,8 +2446,6 @@ public class Edge {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
 
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.Principal;
 
 public class Node {
     public final String id;
@@ -2738,6 +2466,7 @@ public class Node {
     }
 }
 
+
 ######### end - content of file "group-user-matrix/state/Node.java" #########
 
 
@@ -2748,20 +2477,6 @@ public class Node {
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
 
-import cf.cplace.platform.core.application.application.Application;
-import cf.cplace.platform.core.datamodel.builtin.assets.readaccess.ReadProtected;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.frontend.handler.flexigrid.TableColumnFilterDialogHandler;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.FilterGroupsSpecificationHandler;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.FilterUsersSpecificationHandler;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.LoadDataHandler;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.ToggleMembershipHandler;
-import cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting.Export2ExcelHandler;
-import cf.cplace.platform.frontend.handler.page.NewPageConfig;
-import cf.cplace.platform.commonlib.util.io.gson.GsonUtil;
-import cf.cplace.platform.commonlib.util.NameValue;
 
 public class State {
 
@@ -2791,6 +2506,7 @@ public class State {
         return GsonUtil.getGsonWithModifiedDateSerializer().toJson(this, this.getClass());
     }
 }
+
 
 ######### end - content of file "group-user-matrix/state/State.java" #########
 

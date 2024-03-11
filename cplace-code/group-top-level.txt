@@ -5,29 +5,7 @@
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import javax.annotation.Nonnull;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.MembershipStates;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.Principal;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.Modality;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.groupActivation.EditHandler;
-import cf.cplace.platform.frontend.handler.person.GroupActivationMail;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ErrorMessageException;
-import cf.cplace.platform.core.datamodel.persistence.Join;
-import cf.cplace.platform.core.datamodel.persistence.Queries;
-import cf.cplace.platform.core.datamodel.persistence.Query;
-import cf.cplace.platform.commonlib.template.Template;
-import cf.cplace.platform.commonlib.template.TemplateSubstitution;
 
 public class ActivateHandler extends Handler {
 
@@ -111,6 +89,7 @@ public class ActivateHandler extends Handler {
 
 }
 
+
 ######### end - content of file "group-top-level/ActivateHandler.java" #########
 
 
@@ -120,35 +99,8 @@ public class ActivateHandler extends Handler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import java.util.function.Function;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import cf.cplace.platform.commonlib.mail.api.MailSenderException;
-import cf.cplace.platform.commonlib.mail.api.TemplateMail;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Group.GroupApplicationState;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.MembershipStates;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.Principal;
-import cf.cplace.platform.core.datamodel.builtin.assets.links.Linkable;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.navigation.Action;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.FullPageHandler;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
-import cf.cplace.platform.PlatformComponentRegistry;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
-import cf.cplace.platform.core.server.TenantResources;
-import cf.cplace.platform.core.frontend.handler.ErrorMessageException;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
 
 public class BecomeMemberHandler extends Handler implements FullPageHandler {
 
@@ -355,24 +307,16 @@ public class BecomeMemberHandler extends Handler implements FullPageHandler {
     }
 }
 
+
 ######### end - content of file "group-top-level/BecomeMemberHandler.java" #########
 
 
 ######### start - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
 package cf.cplace.platform.frontend.handler.group;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ImmutableSet;
 
-import cf.cplace.platform.commonlib.mail.api.TemplateMail;
-import cf.cplace.platform.core.server.TenantResources;
 
 /**
  * Builds a {@link TemplateMail} for the use cases:
@@ -489,6 +433,7 @@ class BecomeMemberMailBuilder {
     }
 }
 
+
 ######### end - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
 
 
@@ -498,19 +443,6 @@ class BecomeMemberMailBuilder {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.application.principal.Principal;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.navigation.Action;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.FullPageHandler;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
 
 public class CancelMembershipHandler extends Handler implements FullPageHandler {
 
@@ -582,6 +514,7 @@ public class CancelMembershipHandler extends Handler implements FullPageHandler 
     }
 }
 
+
 ######### end - content of file "group-top-level/CancelMembershipHandler.java" #########
 
 
@@ -591,20 +524,6 @@ public class CancelMembershipHandler extends Handler implements FullPageHandler 
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Membership;
-import cf.cplace.platform.core.application.principal.MembershipStates;
-import cf.cplace.platform.core.datamodel.builtin.assets.links.Linkable;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.FullPageHandler;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.internationalization.ParameterizedMessage;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
 
 public class CloneHandler extends Handler implements FullPageHandler {
 
@@ -693,6 +612,7 @@ public class CloneHandler extends Handler implements FullPageHandler {
     }
 }
 
+
 ######### end - content of file "group-top-level/CloneHandler.java" #########
 
 
@@ -702,17 +622,6 @@ public class CloneHandler extends Handler implements FullPageHandler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.frontend.handler.ProtectedActionException;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
 
 public class DeleteHandler extends Handler {
 
@@ -767,6 +676,7 @@ public class DeleteHandler extends Handler {
     }
 }
 
+
 ######### end - content of file "group-top-level/DeleteHandler.java" #########
 
 
@@ -776,15 +686,6 @@ public class DeleteHandler extends Handler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.util.text.Escaping;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
 
 public class EditNewHandler extends Handler {
 
@@ -815,6 +716,7 @@ public class EditNewHandler extends Handler {
     }
 }
 
+
 ######### end - content of file "group-top-level/EditNewHandler.java" #########
 
 
@@ -824,12 +726,6 @@ public class EditNewHandler extends Handler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Principal;
-import cf.cplace.platform.core.application.principal.SystemGroup;
-import cf.cplace.platform.commonlib.template.PrintSubstitution;
-import cf.cplace.platform.commonlib.template.SubstitutionGenerator;
-import cf.cplace.platform.commonlib.template.Template;
 
 public abstract class GroupsSubstitutions extends SubstitutionGenerator {
 
@@ -859,6 +755,7 @@ public abstract class GroupsSubstitutions extends SubstitutionGenerator {
     }
 }
 
+
 ######### end - content of file "group-top-level/GroupsSubstitutions.java" #########
 
 
@@ -868,9 +765,6 @@ public abstract class GroupsSubstitutions extends SubstitutionGenerator {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.TableButton;
-import cf.cplace.platform.frontend.handler.flexigrid.AbstractButtonsHandler;
 
 public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
 
@@ -886,22 +780,13 @@ public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
     }
 }
 
+
 ######### end - content of file "group-top-level/GroupsTableButtonsHandler.java" #########
 
 
 ######### start - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.MembershipVisibility;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.template.ConditionalSubstitution;
-import cf.cplace.platform.commonlib.template.SimpleListSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
 
 public class LoadGroupChildrenHandler extends Handler {
 
@@ -935,6 +820,7 @@ public class LoadGroupChildrenHandler extends Handler {
     }
 }
 
+
 ######### end - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
 
 
@@ -944,17 +830,6 @@ public class LoadGroupChildrenHandler extends Handler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.authorization.GlobalPermissions;
-import cf.cplace.platform.core.datamodel.builtin.assets.taggable.Taggable;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.application.principal.Person;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.commonlib.internationalization.Message;
 
 public class NewHandler extends Handler {
 
@@ -1000,18 +875,13 @@ public class NewHandler extends Handler {
 
 }
 
+
 ######### end - content of file "group-top-level/NewHandler.java" #########
 
 
 ######### start - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.commonlib.apiannotation.CplaceApi;
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.commonlib.pluginextension.PluginExtension;
-import cf.cplace.platform.commonlib.template.IgnoreTemplateSubstitutionTestFailure;
-import cf.cplace.platform.commonlib.template.TemplateFinder;
-import cf.cplace.platform.commonlib.template.TemplateSubstitution;
 
 @CplaceApi
 @IgnoreTemplateSubstitutionTestFailure("No concrete subclass in the platform")
@@ -1031,6 +901,7 @@ public abstract class ShowAdditionalIncomingGroupPermissionReferencesExtension e
     }
 }
 
+
 ######### end - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 
 
@@ -1040,14 +911,6 @@ public abstract class ShowAdditionalIncomingGroupPermissionReferencesExtension e
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.json.JsonSuccessStation;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.frontend.handler.group.overview.GroupsHandler;
-import cf.cplace.platform.commonlib.internationalization.Message;
 
 public class SubmitDeleteHandler extends Handler {
 
@@ -1082,6 +945,7 @@ public class SubmitDeleteHandler extends Handler {
     }
 }
 
+
 ######### end - content of file "group-top-level/SubmitDeleteHandler.java" #########
 
 
@@ -1091,17 +955,6 @@ public class SubmitDeleteHandler extends Handler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.Forwarder;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.JsonPage;
-import cf.cplace.platform.core.frontend.handler.station.json.JsonSuccessStation;
-import cf.cplace.platform.core.frontend.handler.station.Line;
-import cf.cplace.platform.core.frontend.handler.PostOnlyHandler;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.core.frontend.handler.station.SubmitLine;
-import cf.cplace.platform.commonlib.internationalization.Message;
 
 public class SubmitNewHandler extends Handler implements PostOnlyHandler {
 
@@ -1144,6 +997,7 @@ public class SubmitNewHandler extends Handler implements PostOnlyHandler {
     }
 }
 
+
 ######### end - content of file "group-top-level/SubmitNewHandler.java" #########
 
 
@@ -1153,23 +1007,7 @@ public class SubmitNewHandler extends Handler implements PostOnlyHandler {
  */
 package cf.cplace.platform.frontend.handler.group;
 
-import javax.annotation.Nullable;
 
-import cf.cplace.platform.core.application.principal.Group;
-import cf.cplace.platform.core.server.request.Parameters;
-import cf.cplace.platform.core.frontend.handler.FullPageHandler;
-import cf.cplace.platform.core.frontend.handler.Handler;
-import cf.cplace.platform.core.frontend.handler.station.template.MainPage;
-import cf.cplace.platform.core.frontend.handler.ShowTagsAndModificationDate;
-import cf.cplace.platform.core.frontend.handler.station.Station;
-import cf.cplace.platform.core.frontend.handler.TitleAndHeadingProvider;
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.core.datamodel.builtin.Entity;
-import cf.cplace.platform.core.datamodel.builtin.EntityHandler;
-import cf.cplace.platform.frontend.templating.FunctionsHelper;
-import cf.cplace.platform.frontend.templating.ObjectFunctions;
-import cf.cplace.platform.commonlib.template.ConditionalSubstitution;
-import cf.cplace.platform.commonlib.template.Template;
 
 public class ViewHandler extends Handler implements FullPageHandler, EntityHandler, TitleAndHeadingProvider, ShowTagsAndModificationDate {
     private static final Message targetLabel = new Message() {
@@ -1222,6 +1060,7 @@ public class ViewHandler extends Handler implements FullPageHandler, EntityHandl
         return Message.dynamicHtmlUnsafeMessage(FunctionsHelper.proxy("titleAndHeading", group.getNamePropertyForQueries()));
     }
 }
+
 
 ######### end - content of file "group-top-level/ViewHandler.java" #########
 

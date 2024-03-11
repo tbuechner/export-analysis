@@ -2,25 +2,9 @@
 ######### start - content of file "new-send-link/backend/SendLinkController.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink;
 
-import static cf.cplace.platform.Constants.PLATFORM_PLUGIN_NAME;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-import cf.cplace.platform.core.frontend.controller.annotation.CplaceFrontendRequestMapping;
-import cf.cplace.platform.frontend.rest.dialogs.DialogService;
-import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetRequest;
-import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkPostRequest;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderGetResponse;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostRequest;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostResponse;
 
 @ParametersAreNonnullByDefault
 @RestController
@@ -45,18 +29,18 @@ public class SendLinkController {
     }
 }
 
+
 ######### end - content of file "new-send-link/backend/SendLinkController.java" #########
 
 
 ######### start - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
 
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 public record SendLinkGetRequest(String entityUid, @Nullable String activeTabInfo) {
 }
+
 
 ######### end - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
 
@@ -64,10 +48,10 @@ public record SendLinkGetRequest(String entityUid, @Nullable String activeTabInf
 ######### start - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 public record SendLinkGetResponse(String sessionEntityId) {}
+
 
 ######### end - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
 
@@ -75,10 +59,10 @@ public record SendLinkGetResponse(String sessionEntityId) {}
 ######### start - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 public record SendLinkPostRequest(String sessionEntityId) {}
+
 
 ######### end - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
 
@@ -86,29 +70,8 @@ public record SendLinkPostRequest(String sessionEntityId) {}
 ######### start - content of file "new-send-link/backend/service/SendLinkService.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.service;
 
-import java.util.List;
-import java.util.Objects;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-import cf.cplace.platform.commonlib.internationalization.Message;
-import cf.cplace.platform.commonlib.template.Template;
-import cf.cplace.platform.core.application.job.assets.PersistentJob;
-import cf.cplace.platform.core.application.page.assets.Page;
-import cf.cplace.platform.core.application.versioning.AwarenessSessionEntitiesExtension.SessionTypes.SEND_LINK_DATA;
-import cf.cplace.platform.core.application.versioning.SendLinkData;
-import cf.cplace.platform.core.datamodel.custom.CustomSessionEntity;
-import cf.cplace.platform.core.server.session.SessionLocal;
-import cf.cplace.platform.frontend.handler.awareness.SendLinkJob;
-import cf.cplace.platform.frontend.handler.awareness.SendLinkMailBody;
-import cf.cplace.platform.frontend.rest.dialogs.DialogService;
-import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetRequest;
-import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkGetResponse;
-import cf.cplace.platform.frontend.rest.dialogs.sendlink.dto.SendLinkPostRequest;
-import cf.cplace.platform.frontend.rest.shared.dto.control.change.ControlChangeConflict;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderGetResponse;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostRequest;
-import cf.cplace.platform.frontend.rest.shared.dto.form.CplaceFormProviderPostResponse;
 
 /**
  * Provides the form data for the Send Link dialog.
@@ -160,6 +123,7 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
                 .build();
     }
 }
+
 
 ######### end - content of file "new-send-link/backend/service/SendLinkService.java" #########
 
