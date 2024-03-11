@@ -13,4 +13,6 @@ Please convert this implementation to the new technology:
 ```
 ```
 
+I am especially interested in the frontend part of the code.
 
+I am not interested in explanations, just the code.

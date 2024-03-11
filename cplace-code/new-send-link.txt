@@ -330,22 +330,3 @@ export class SendLinkDialogModule {
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
 
-
-######### start - content of file "new-send-link/frontend/send-link-dialog/styles/send-link-dialog.component.scss" #########
-
-######### end - content of file "new-send-link/frontend/send-link-dialog/styles/send-link-dialog.component.scss" #########
-
-
-######### start - content of file "new-send-link/frontend/send-link-dialog/types/index.ts" #########
-export * from './send-link-dialog-context.types';
-
-######### end - content of file "new-send-link/frontend/send-link-dialog/types/index.ts" #########
-
-
-######### start - content of file "new-send-link/frontend/send-link-dialog/types/send-link-dialog-context.types.ts" #########
-export type SendLinkDialogContext = {
-  entityUid: string;
-};
-
-######### end - content of file "new-send-link/frontend/send-link-dialog/types/send-link-dialog-context.types.ts" #########
-
