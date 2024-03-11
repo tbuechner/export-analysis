@@ -65,8 +65,9 @@ def concatenate_file(file, folder_name):
 
         if file.endswith('.ts'):
             lines = contents.split('\n')
+            contents = ''
             for line in lines:
-                if line.strip().startswith('import'):
+                if line.strip().startswith('import '):
                     skip = True
                 if skip and line.strip().endswith(';'):
                     skip = False

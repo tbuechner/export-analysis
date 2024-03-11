@@ -1,10 +1,5 @@
 
 ######### start - content of file "group-user-matrix/AbstractMatrixCtrl.ts" #########
-import { IAngularEvent, IAugmentedJQuery, IHttpPromiseCallbackArg, IHttpService, IScope } from 'angular';
-import { EVENT_RESIZE_FIXED_PANE_SCROLL_CONTAINERS } from '../cplaceFixedPaneScroll';
-import { ColumnFiltersDialogCtrl, IFiltersDialogSavedEventData } from '../../flexigrid/controllers/ColumnFiltersDialogCtrl';
-import * as _ from 'underscore';
-import { PostHeadersService } from '../../services/PostHeadersService';
 
 export interface IMatrixState {
   loadDataUrl: string;
@@ -285,6 +280,7 @@ export abstract class AbstractMatrixCtrl {
     });
   }
 }
+
 
 ######### end - content of file "group-user-matrix/AbstractMatrixCtrl.ts" #########
 
@@ -699,10 +695,6 @@ public class FilterUsersSpecificationHandler extends TableSpecificationHandler {
 
 
 ######### start - content of file "group-user-matrix/GroupUserMatrixCtrl.ts" #########
-import { IAngularEvent, IAugmentedJQuery, IHttpService, IScope } from 'angular';
-import { EVENT_RESIZE_FIXED_PANE_SCROLL_CONTAINERS } from '../../directives/cplaceFixedPaneScroll';
-import { PostHeadersService } from '../../services/PostHeadersService';
-import { ColumnFiltersDialogCtrl, IFiltersDialogSavedEventData } from '../../flexigrid/controllers/ColumnFiltersDialogCtrl';
 
 export interface IGroupUserMatrixState {
     toggleMembershipUrl: string;
@@ -944,6 +936,7 @@ export class GroupUserMatrixCtrl {
         (this.hasUserFilters() || this.hasGroupFilters() || this.onlyUnassignedUsers || this.filterUsersByGroups || this.filterGroupsByUsers);
     }
 }
+
 
 ######### end - content of file "group-user-matrix/GroupUserMatrixCtrl.ts" #########
 
@@ -1383,8 +1376,6 @@ public class ViewHandler extends Handler implements FullPageHandler, TitleAndHea
 
 
 ######### start - content of file "group-user-matrix/cplaceGroupUserMatrix.ts" #########
-import { IAugmentedJQuery, IDirective, IScope } from 'angular';
-import { GroupUserMatrixCtrl, IGroupUserMatrixState } from '../../controllers/groupUserMatrix/GroupUserMatrixCtrl';
 
 export const CPLACE_GROUP_USER_MATRIX = 'cplaceGroupUserMatrix';
 
@@ -1405,13 +1396,11 @@ export function cplaceGroupUserMatrix(): IDirective {
     };
 }
 
+
 ######### end - content of file "group-user-matrix/cplaceGroupUserMatrix.ts" #########
 
 
 ######### start - content of file "group-user-matrix/cplaceMatrix.ts" #########
-import { IDirective } from 'angular';
-import { AbstractMatrixCtrl } from './AbstractMatrixCtrl';
-import * as _ from 'underscore';
 
 /**
  * "name" property allows us to bind a dynamic controller. Generally when angular creates a controller instance it is named after directive,
@@ -1529,6 +1518,7 @@ export function cplaceMatrixGrid() {
         }
     };
 }
+
 
 ######### end - content of file "group-user-matrix/cplaceMatrix.ts" #########
 

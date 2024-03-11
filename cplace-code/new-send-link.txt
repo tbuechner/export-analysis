@@ -128,14 +128,6 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
 ######### end - content of file "new-send-link/backend/service/SendLinkService.java" #########
 
 
-######### start - content of file "new-send-link/frontend/send-link-dialog/index.ts" #########
-export * from './send-link-dialog.component';
-export * from './send-link-dialog.module';
-export * from './types';
-
-######### end - content of file "new-send-link/frontend/send-link-dialog/index.ts" #########
-
-
 ######### start - content of file "new-send-link/frontend/send-link-dialog/lang/de.json" #########
 {
   "cf-platform-lib-send-link-dialog": {
@@ -178,19 +170,6 @@ export * from './types';
 
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
-import { Component, Inject, Input, OnInit } from '@angular/core';
-import { SendLink } from '@cplace-next/api/cf-cplace-platform';
-import {
-  ControlState,
-  ControlStateMap,
-  CplaceDialogComponent,
-  CplaceDialogSubmitButtonLabelVariantEnum,
-  CplaceMessageService,
-  CplaceSingletonRootProviderEnum,
-  FormModel,
-} from '@cplace-next/cf-frontend-sdk';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { SendLinkDialogContext } from './types';
 
 @UntilDestroy()
 @Component({
@@ -256,24 +235,11 @@ export class SendLinkDialogComponent extends CplaceDialogComponent<SendLinkDialo
   }
 }
 
+
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
 
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
-import { CommonModule } from '@angular/common';
-import { Inject, NgModule } from '@angular/core';
-import {
-  CplaceControlModule,
-  CplaceDialogModule,
-  CplaceFormProviderService,
-  CplaceSingletonRootProviderEnum,
-  I18nModule,
-  TranslationService,
-} from '@cplace-next/cf-frontend-sdk';
-import { MessageModule } from 'primeng/message';
-import * as de from './lang/de.json';
-import * as en from './lang/en.json';
-import { SendLinkDialogComponent } from './send-link-dialog.component';
 
 @NgModule({
   declarations: [SendLinkDialogComponent],
@@ -291,6 +257,7 @@ export class SendLinkDialogModule {
     });
   }
 }
+
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
 
