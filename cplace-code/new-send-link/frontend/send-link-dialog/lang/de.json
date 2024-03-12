@@ -1,6 +1,0 @@
-{
-  "cf-platform-lib-send-link-dialog": {
-    "title": "Link per E-Mail senden",
-    "info": "In der untenstehenden Nachricht wird [recipient] durch den Namen des jeweiligen Empfängers ersetzt und [group_info] durch alle angegebenen Gruppennamen."
-  }
-}

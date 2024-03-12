@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Python.iml" filepath="$PROJECT_DIR$/Python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/export-analysis.iml" filepath="$PROJECT_DIR$/export-analysis.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,0 @@
-Give me an implementation of the html template of the User-Group Matrix component based on the existing implementation in `group-user-matrix/view.htm`.
-
-Use the template in `group-user-matrix/view.htm` as a reference to create the html template for `group-user-matrix.component.ts`.
-
-I am not interested in any explanations. I am only interested in the code.
-
