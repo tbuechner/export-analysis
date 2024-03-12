@@ -43,18 +43,17 @@ def remove_empty_elements(element, parent=None):
         parent.remove(element)
 
 
-def write_compressed_to_file(root, fileName):
-    global file
+def write_compressed_to_file(root, file_name):
     # Convert the XML tree to a string
     xml_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
 
-    with open(fileName + '-pretty.xml', 'w') as file:
+    with open(file_name + '-pretty.xml', 'w') as file:
         file.write(xml_string)
 
     # Remove all line breaks and extra spaces
     compressed_xml_string = xml_string.replace('\n', '').replace('\t', '').replace('  ', '')
     # Save the compressed XML string to a file
-    with open(fileName + '-compressed.xml', 'w') as file:
+    with open(file_name + '-compressed.xml', 'w') as file:
         file.write(compressed_xml_string)
 
 
@@ -121,21 +120,20 @@ def rewrite_attributes(doc):
                 # print(attributeDefinition)
                 # print(type(attributeDefinition))
                 # if attributeDefinition is a list, then create a new list
-                if isinstance(attribute_definition, list):
 
-                    newList = []
+                new_list = []
+                if isinstance(attribute_definition, list):
                     for attribute in attribute_definition:
-                        newList.append(attribute)
+                        new_list.append(attribute)
 
                     # replace the value with the list object
-                    doc[key] = newList
+                    doc[key] = new_list
 
                 elif isinstance(attribute_definition, dict):
-                    newList = []
-                    newList.append(attribute_definition)
+                    new_list.append(attribute_definition)
 
                     # replace the value with the list object
-                    doc[key] = newList
+                    doc[key] = new_list
 
             rewrite_attributes(value)
 
@@ -248,10 +246,10 @@ def return_all_low_code_scripts(root, parent_map):
         if element.text is not None and element.text.startswith('s{') and element.text.endswith('}'):
             text = element.text[1:]
             # parse text as json
-            textAsJson = json.loads(text)
+            text_as_json = json.loads(text)
             # if the key "script" exists in the json
-            if "script" in textAsJson:
-                result.append(textAsJson["script"])
+            if "script" in text_as_json:
+                result.append(text_as_json["script"])
 
     return result
 
@@ -261,11 +259,11 @@ def find_all_widgets(root, parent_map):
     # Find elements by XPath and remove them
     for target in root.findall('.//widgetContainer'):
         # convert target from xml to json
-        asJson = xmltodict.parse(ET.tostring(target, encoding='utf-8', method='xml').decode('utf-8'))
+        as_json = xmltodict.parse(ET.tostring(target, encoding='utf-8', method='xml').decode('utf-8'))
 
         # print(asJson)
 
-        widget_container = asJson['widgetContainer']
+        widget_container = as_json['widgetContainer']
 
         # parse widgetsLayout value of widgetContainer as json
         # print(widgetContainer['widgetsLayout'])
@@ -344,11 +342,11 @@ def find_all_widgets(root, parent_map):
     return result
 
 
-def print_token_counts(folderName):
-    print_token_count_for_file(folderName, "copilot_examples.js")
-    print_token_count_for_file(folderName, "types-compressed.json")
-    print_token_count_for_file(folderName, "types-pretty.json")
-    print_token_count_for_file(folderName, "types-pretty.yaml")
+def print_token_counts(folder_name):
+    print_token_count_for_file(folder_name, "copilot_examples.js")
+    print_token_count_for_file(folder_name, "types-compressed.json")
+    print_token_count_for_file(folder_name, "types-pretty.json")
+    print_token_count_for_file(folder_name, "types-pretty.yaml")
 
 
 def print_token_count_for_file(folder_name, file_name):
