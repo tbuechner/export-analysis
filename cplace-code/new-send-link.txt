@@ -2,10 +2,6 @@
 ######### start - content of file "new-send-link/backend/SendLinkController.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink;
 
-
-
-
-
 @ParametersAreNonnullByDefault
 @RestController
 @CplaceFrontendRequestMapping(path = "/" + PLATFORM_PLUGIN_NAME + "/dialogs/send-link")
@@ -29,49 +25,35 @@ public class SendLinkController {
     }
 }
 
-
 ######### end - content of file "new-send-link/backend/SendLinkController.java" #########
-
 
 ######### start - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
-
 
 @ParametersAreNonnullByDefault
 public record SendLinkGetRequest(String entityUid, @Nullable String activeTabInfo) {
 }
 
-
 ######### end - content of file "new-send-link/backend/dto/SendLinkGetRequest.java" #########
-
 
 ######### start - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
 
-
 @ParametersAreNonnullByDefault
 public record SendLinkGetResponse(String sessionEntityId) {}
 
-
 ######### end - content of file "new-send-link/backend/dto/SendLinkGetResponse.java" #########
-
 
 ######### start - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.dto;
 
-
 @ParametersAreNonnullByDefault
 public record SendLinkPostRequest(String sessionEntityId) {}
 
-
 ######### end - content of file "new-send-link/backend/dto/SendLinkPostRequest.java" #########
-
 
 ######### start - content of file "new-send-link/backend/service/SendLinkService.java" #########
 package cf.cplace.platform.frontend.rest.dialogs.sendlink.service;
-
-
-
 
 /**
  * Provides the form data for the Send Link dialog.
@@ -124,9 +106,7 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
     }
 }
 
-
 ######### end - content of file "new-send-link/backend/service/SendLinkService.java" #########
-
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/lang/de.json" #########
 {
@@ -138,7 +118,6 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/lang/de.json" #########
 
-
 ######### start - content of file "new-send-link/frontend/send-link-dialog/lang/en.json" #########
 {
   "cf-platform-lib-send-link-dialog": {
@@ -148,7 +127,6 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
 }
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/lang/en.json" #########
-
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.html" #########
 <cf-frontend-sdk-cplace-dialog-skeleton
@@ -167,7 +145,6 @@ public class SendLinkService implements DialogService<SendLinkGetRequest, SendLi
 </cf-frontend-sdk-cplace-dialog-skeleton>
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.html" #########
-
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
 
@@ -235,9 +212,7 @@ export class SendLinkDialogComponent extends CplaceDialogComponent<SendLinkDialo
   }
 }
 
-
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.component.ts" #########
-
 
 ######### start - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
 
@@ -257,7 +232,6 @@ export class SendLinkDialogModule {
     });
   }
 }
-
 
 ######### end - content of file "new-send-link/frontend/send-link-dialog/send-link-dialog.module.ts" #########
 

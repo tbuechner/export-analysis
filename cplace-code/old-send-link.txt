@@ -1,12 +1,7 @@
 
 ######### start - content of file "old-send-link/SendLinkHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.handler.page;
-
-
-
 
 @CplaceApi
 public class SendLinkHandler extends Handler {
@@ -73,18 +68,11 @@ public class SendLinkHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "old-send-link/SendLinkHandler.java" #########
 
-
 ######### start - content of file "old-send-link/SubmitSendLinkHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.handler.page;
-
-
-
 
 public class SubmitSendLinkHandler extends Handler implements PostOnlyHandler {
 
@@ -157,12 +145,9 @@ public class SubmitSendLinkHandler extends Handler implements PostOnlyHandler {
         }
     }
 
-
 }
 
-
 ######### end - content of file "old-send-link/SubmitSendLinkHandler.java" #########
-
 
 ######### start - content of file "old-send-link/sendLink.htm" #########
 <form method="post" action="$submitUrl$" class="modal-form form-horizontal" cplace-form-provider>

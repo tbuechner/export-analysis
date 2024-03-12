@@ -1,11 +1,7 @@
 
 ######### start - content of file "group-top-level/ActivateHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
 
 public class ActivateHandler extends Handler {
 
@@ -89,18 +85,11 @@ public class ActivateHandler extends Handler {
 
 }
 
-
 ######### end - content of file "group-top-level/ActivateHandler.java" #########
 
-
 ######### start - content of file "group-top-level/BecomeMemberHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
-
 
 public class BecomeMemberHandler extends Handler implements FullPageHandler {
 
@@ -307,16 +296,10 @@ public class BecomeMemberHandler extends Handler implements FullPageHandler {
     }
 }
 
-
 ######### end - content of file "group-top-level/BecomeMemberHandler.java" #########
-
 
 ######### start - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
-
-
-
 
 /**
  * Builds a {@link TemplateMail} for the use cases:
@@ -433,16 +416,11 @@ class BecomeMemberMailBuilder {
     }
 }
 
-
 ######### end - content of file "group-top-level/BecomeMemberMailBuilder.java" #########
 
-
 ######### start - content of file "group-top-level/CancelMembershipHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class CancelMembershipHandler extends Handler implements FullPageHandler {
 
@@ -514,16 +492,11 @@ public class CancelMembershipHandler extends Handler implements FullPageHandler 
     }
 }
 
-
 ######### end - content of file "group-top-level/CancelMembershipHandler.java" #########
 
-
 ######### start - content of file "group-top-level/CloneHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class CloneHandler extends Handler implements FullPageHandler {
 
@@ -612,16 +585,11 @@ public class CloneHandler extends Handler implements FullPageHandler {
     }
 }
 
-
 ######### end - content of file "group-top-level/CloneHandler.java" #########
 
-
 ######### start - content of file "group-top-level/DeleteHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class DeleteHandler extends Handler {
 
@@ -676,16 +644,11 @@ public class DeleteHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-top-level/DeleteHandler.java" #########
 
-
 ######### start - content of file "group-top-level/EditNewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class EditNewHandler extends Handler {
 
@@ -716,16 +679,11 @@ public class EditNewHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-top-level/EditNewHandler.java" #########
 
-
 ######### start - content of file "group-top-level/GroupsSubstitutions.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public abstract class GroupsSubstitutions extends SubstitutionGenerator {
 
@@ -755,16 +713,11 @@ public abstract class GroupsSubstitutions extends SubstitutionGenerator {
     }
 }
 
-
 ######### end - content of file "group-top-level/GroupsSubstitutions.java" #########
 
-
 ######### start - content of file "group-top-level/GroupsTableButtonsHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
 
@@ -780,13 +733,10 @@ public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
     }
 }
 
-
 ######### end - content of file "group-top-level/GroupsTableButtonsHandler.java" #########
-
 
 ######### start - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
 
 public class LoadGroupChildrenHandler extends Handler {
 
@@ -820,16 +770,11 @@ public class LoadGroupChildrenHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-top-level/LoadGroupChildrenHandler.java" #########
 
-
 ######### start - content of file "group-top-level/NewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class NewHandler extends Handler {
 
@@ -875,13 +820,10 @@ public class NewHandler extends Handler {
 
 }
 
-
 ######### end - content of file "group-top-level/NewHandler.java" #########
-
 
 ######### start - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
 
 @CplaceApi
 @IgnoreTemplateSubstitutionTestFailure("No concrete subclass in the platform")
@@ -901,16 +843,11 @@ public abstract class ShowAdditionalIncomingGroupPermissionReferencesExtension e
     }
 }
 
-
 ######### end - content of file "group-top-level/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 
-
 ######### start - content of file "group-top-level/SubmitDeleteHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class SubmitDeleteHandler extends Handler {
 
@@ -945,16 +882,11 @@ public class SubmitDeleteHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-top-level/SubmitDeleteHandler.java" #########
 
-
 ######### start - content of file "group-top-level/SubmitNewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class SubmitNewHandler extends Handler implements PostOnlyHandler {
 
@@ -997,17 +929,11 @@ public class SubmitNewHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-top-level/SubmitNewHandler.java" #########
 
-
 ######### start - content of file "group-top-level/ViewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
 
 public class ViewHandler extends Handler implements FullPageHandler, EntityHandler, TitleAndHeadingProvider, ShowTagsAndModificationDate {
     private static final Message targetLabel = new Message() {
@@ -1061,9 +987,7 @@ public class ViewHandler extends Handler implements FullPageHandler, EntityHandl
     }
 }
 
-
 ######### end - content of file "group-top-level/ViewHandler.java" #########
-
 
 ######### start - content of file "group-top-level/activate/activateMail.htm" #########
 $(hello)$ $personName$,
@@ -1076,11 +1000,9 @@ $groupUrl$
 
 ######### end - content of file "group-top-level/activate/activateMail.htm" #########
 
-
 ######### start - content of file "group-top-level/activate/activateMailSubject.htm" #########
 $(subject)$ $groupName$
 ######### end - content of file "group-top-level/activate/activateMailSubject.htm" #########
-
 
 ######### start - content of file "group-top-level/delete.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
@@ -1108,7 +1030,6 @@ $(subject)$ $groupName$
 
 ######### end - content of file "group-top-level/delete.htm" #########
 
-
 ######### start - content of file "group-top-level/editNew.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
     $[defaultDialogHeader()$
@@ -1129,7 +1050,6 @@ $(subject)$ $groupName$
 
 ######### end - content of file "group-top-level/editNew.htm" #########
 
-
 ######### start - content of file "group-top-level/loadGroupChildren.htm" #########
 <div>
     $[!membershipsAreVisible$
@@ -1144,7 +1064,6 @@ $(subject)$ $groupName$
 </div>
 
 ######### end - content of file "group-top-level/loadGroupChildren.htm" #########
-
 
 ######### start - content of file "group-top-level/view.htm" #########
 $[this.isTechnicalGroup()$

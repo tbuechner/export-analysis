@@ -1,10 +1,7 @@
 
 ######### start - content of file "old-edit-ldap-identifier/EditExternalIdHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.person;
 
+package cf.cplace.platform.frontend.handler.person;
 
 @CplaceApi
 public class EditExternalIdHandler extends Handler {
@@ -59,16 +56,11 @@ public class EditExternalIdHandler extends Handler {
 
 }
 
-
 ######### end - content of file "old-edit-ldap-identifier/EditExternalIdHandler.java" #########
 
-
 ######### start - content of file "old-edit-ldap-identifier/SubmitLdapIdentifierHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.person;
 
+package cf.cplace.platform.frontend.handler.person;
 
 @CplaceApi
 public class SubmitLdapIdentifierHandler extends Handler implements PostOnlyHandler {
@@ -120,9 +112,7 @@ public class SubmitLdapIdentifierHandler extends Handler implements PostOnlyHand
     }
 }
 
-
 ######### end - content of file "old-edit-ldap-identifier/SubmitLdapIdentifierHandler.java" #########
-
 
 ######### start - content of file "old-edit-ldap-identifier/editExternalId.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>

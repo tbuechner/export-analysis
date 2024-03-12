@@ -1,11 +1,7 @@
 
 ######### start - content of file "group-all/ActivateHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
 
 public class ActivateHandler extends Handler {
 
@@ -89,18 +85,11 @@ public class ActivateHandler extends Handler {
 
 }
 
-
 ######### end - content of file "group-all/ActivateHandler.java" #########
 
-
 ######### start - content of file "group-all/BecomeMemberHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
-
 
 public class BecomeMemberHandler extends Handler implements FullPageHandler {
 
@@ -307,16 +296,10 @@ public class BecomeMemberHandler extends Handler implements FullPageHandler {
     }
 }
 
-
 ######### end - content of file "group-all/BecomeMemberHandler.java" #########
-
 
 ######### start - content of file "group-all/BecomeMemberMailBuilder.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
-
-
-
 
 /**
  * Builds a {@link TemplateMail} for the use cases:
@@ -433,16 +416,11 @@ class BecomeMemberMailBuilder {
     }
 }
 
-
 ######### end - content of file "group-all/BecomeMemberMailBuilder.java" #########
 
-
 ######### start - content of file "group-all/CancelMembershipHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class CancelMembershipHandler extends Handler implements FullPageHandler {
 
@@ -514,16 +492,11 @@ public class CancelMembershipHandler extends Handler implements FullPageHandler 
     }
 }
 
-
 ######### end - content of file "group-all/CancelMembershipHandler.java" #########
 
-
 ######### start - content of file "group-all/CloneHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class CloneHandler extends Handler implements FullPageHandler {
 
@@ -612,16 +585,11 @@ public class CloneHandler extends Handler implements FullPageHandler {
     }
 }
 
-
 ######### end - content of file "group-all/CloneHandler.java" #########
 
-
 ######### start - content of file "group-all/DeleteHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class DeleteHandler extends Handler {
 
@@ -676,16 +644,11 @@ public class DeleteHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-all/DeleteHandler.java" #########
 
-
 ######### start - content of file "group-all/EditNewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class EditNewHandler extends Handler {
 
@@ -716,16 +679,11 @@ public class EditNewHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-all/EditNewHandler.java" #########
 
-
 ######### start - content of file "group-all/GroupsSubstitutions.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public abstract class GroupsSubstitutions extends SubstitutionGenerator {
 
@@ -755,16 +713,11 @@ public abstract class GroupsSubstitutions extends SubstitutionGenerator {
     }
 }
 
-
 ######### end - content of file "group-all/GroupsSubstitutions.java" #########
 
-
 ######### start - content of file "group-all/GroupsTableButtonsHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
 
@@ -780,13 +733,10 @@ public class GroupsTableButtonsHandler extends AbstractButtonsHandler {
     }
 }
 
-
 ######### end - content of file "group-all/GroupsTableButtonsHandler.java" #########
-
 
 ######### start - content of file "group-all/LoadGroupChildrenHandler.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
 
 public class LoadGroupChildrenHandler extends Handler {
 
@@ -820,16 +770,11 @@ public class LoadGroupChildrenHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-all/LoadGroupChildrenHandler.java" #########
 
-
 ######### start - content of file "group-all/NewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class NewHandler extends Handler {
 
@@ -875,13 +820,10 @@ public class NewHandler extends Handler {
 
 }
 
-
 ######### end - content of file "group-all/NewHandler.java" #########
-
 
 ######### start - content of file "group-all/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 package cf.cplace.platform.frontend.handler.group;
-
 
 @CplaceApi
 @IgnoreTemplateSubstitutionTestFailure("No concrete subclass in the platform")
@@ -901,16 +843,11 @@ public abstract class ShowAdditionalIncomingGroupPermissionReferencesExtension e
     }
 }
 
-
 ######### end - content of file "group-all/ShowAdditionalIncomingGroupPermissionReferencesExtension.java" #########
 
-
 ######### start - content of file "group-all/SubmitDeleteHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class SubmitDeleteHandler extends Handler {
 
@@ -945,16 +882,11 @@ public class SubmitDeleteHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-all/SubmitDeleteHandler.java" #########
 
-
 ######### start - content of file "group-all/SubmitNewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group;
 
+package cf.cplace.platform.frontend.handler.group;
 
 public class SubmitNewHandler extends Handler implements PostOnlyHandler {
 
@@ -997,17 +929,11 @@ public class SubmitNewHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-all/SubmitNewHandler.java" #########
 
-
 ######### start - content of file "group-all/ViewHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group;
-
-
 
 public class ViewHandler extends Handler implements FullPageHandler, EntityHandler, TitleAndHeadingProvider, ShowTagsAndModificationDate {
     private static final Message targetLabel = new Message() {
@@ -1061,9 +987,7 @@ public class ViewHandler extends Handler implements FullPageHandler, EntityHandl
     }
 }
 
-
 ######### end - content of file "group-all/ViewHandler.java" #########
-
 
 ######### start - content of file "group-all/activate/activateMail.htm" #########
 $(hello)$ $personName$,
@@ -1076,11 +1000,9 @@ $groupUrl$
 
 ######### end - content of file "group-all/activate/activateMail.htm" #########
 
-
 ######### start - content of file "group-all/activate/activateMailSubject.htm" #########
 $(subject)$ $groupName$
 ######### end - content of file "group-all/activate/activateMailSubject.htm" #########
-
 
 ######### start - content of file "group-all/delete.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
@@ -1108,7 +1030,6 @@ $(subject)$ $groupName$
 
 ######### end - content of file "group-all/delete.htm" #########
 
-
 ######### start - content of file "group-all/editNew.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
     $[defaultDialogHeader()$
@@ -1129,7 +1050,6 @@ $(subject)$ $groupName$
 
 ######### end - content of file "group-all/editNew.htm" #########
 
-
 ######### start - content of file "group-all/loadGroupChildren.htm" #########
 <div>
     $[!membershipsAreVisible$
@@ -1145,14 +1065,9 @@ $(subject)$ $groupName$
 
 ######### end - content of file "group-all/loadGroupChildren.htm" #########
 
-
 ######### start - content of file "group-all/overview/DefaultActionsAndViews.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group.overview;
-
-
 
 public class DefaultActionsAndViews implements TargetProvider {
     @CplaceInternal
@@ -1245,17 +1160,11 @@ public class DefaultActionsAndViews implements TargetProvider {
 
 }
 
-
 ######### end - content of file "group-all/overview/DefaultActionsAndViews.java" #########
 
-
 ######### start - content of file "group-all/overview/GroupsHandler.java" #########
-/*
- * Copyright 2015, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group.overview;
-
-
 
 @CplaceApi
 public class GroupsHandler extends Handler implements FullPageHandler, TitleAndHeadingProvider, HistoryEntryNameProvider {
@@ -1313,15 +1222,10 @@ public class GroupsHandler extends Handler implements FullPageHandler, TitleAndH
     }
 }
 
-
-
 ######### end - content of file "group-all/overview/GroupsHandler.java" #########
-
 
 ######### start - content of file "group-all/overview/UsersHandler.java" #########
 package cf.cplace.platform.frontend.handler.group.overview;
-
-
 
 @CplaceApi
 public class UsersHandler extends Handler implements FullPageHandler, TitleAndHeadingProvider, HistoryEntryNameProvider {
@@ -1399,18 +1303,11 @@ public class UsersHandler extends Handler implements FullPageHandler, TitleAndHe
     }
 }
 
-
 ######### end - content of file "group-all/overview/UsersHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupAndGroupSearch.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
 
 /**
  * Search to be utilized to find groups and group memberships of groups according to filters set in the group vs group matrix.
@@ -1446,21 +1343,11 @@ public class CandidateGroupAndGroupSearch {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupAndGroupSearch.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupSearch.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
-
-
-
 
 /**
  * Search to be utilized to find groups according to filters set in the group vs group matrix.
@@ -1530,18 +1417,11 @@ public class CandidateGroupSearch {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupSearch.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupsAndGroups.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
 
 /**
  * Generic result object for searches (e.g.  {@link CandidateGroupSearch}, {@link CandidateGroupAndGroupSearch}) utilized in the context of the group vs group matrix.
@@ -1566,18 +1446,11 @@ public class CandidateGroupsAndGroups {
 
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/CandidateGroupsAndGroups.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/FilterGroupsSpecificationHandler.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
 
 /**
  * Represents the filter dialog on the group dimension in the group vs group matrix.
@@ -1628,14 +1501,9 @@ public class FilterGroupsSpecificationHandler extends TableSpecificationHandler 
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/FilterGroupsSpecificationHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/GroupInGroupMatrixFilters.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
 
@@ -1665,20 +1533,11 @@ public class GroupInGroupMatrixFilters {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/GroupInGroupMatrixFilters.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/LoadDataHandler.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
-
-
 
 @ParametersAreNonnullByDefault
 public class LoadDataHandler extends Handler implements PostOnlyHandler {
@@ -1845,20 +1704,11 @@ public class LoadDataHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/LoadDataHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/ToggleMembershipHandler.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
-
-
 
 public class ToggleMembershipHandler extends Handler implements PostOnlyHandler {
 
@@ -1951,18 +1801,11 @@ public class ToggleMembershipHandler extends Handler implements PostOnlyHandler 
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/ToggleMembershipHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/ViewHandler.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix;
-
-
 
 @CplaceApi
 public class ViewHandler extends Handler implements FullPageHandler, TitleAndHeadingProvider, HistoryEntryNameProvider {
@@ -2022,19 +1865,11 @@ public class ViewHandler extends Handler implements FullPageHandler, TitleAndHea
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/ViewHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/state/Data.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix.state;
-
-
-
 
 public class Data {
     public boolean excessiveData = false;
@@ -2062,18 +1897,11 @@ public class Data {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/state/Data.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/state/Edge.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix.state;
-
-
 
 @ParametersAreNonnullByDefault
 public class Edge {
@@ -2121,18 +1949,11 @@ public class Edge {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/state/Edge.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/state/Node.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix.state;
-
-
 
 @ParametersAreNonnullByDefault
 public class Node {
@@ -2149,17 +1970,11 @@ public class Node {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/state/Node.java" #########
 
-
 ######### start - content of file "group-all/overview/groupInGroupMatrix/state/State.java" #########
-/*
- * Copyright 2023, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupInGroupMatrix.state;
-
 
 public class State {
 
@@ -2186,9 +2001,7 @@ public class State {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupInGroupMatrix/state/State.java" #########
-
 
 ######### start - content of file "group-all/overview/groupInGroupMatrix/view.htm" #########
 <div class="cplace-group-user-matrix-wrapper" cplace-group-in-group-matrix="$state$">
@@ -2327,18 +2140,9 @@ public class State {
 
 ######### end - content of file "group-all/overview/groupInGroupMatrix/view.htm" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/CandidateGroupSearch.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
-
-
 
 /**
  * Search to be utilized to find groups according to filters set in the group user matrix.
@@ -2406,21 +2210,11 @@ public class CandidateGroupSearch {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/CandidateGroupSearch.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/CandidateUserAndGroupSearch.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
-
-
 
 /**
  * Search to be utilized to find users, groups and group memberships of users according to filters set in the group user matrix.
@@ -2491,20 +2285,11 @@ public class CandidateUserAndGroupSearch {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/CandidateUserAndGroupSearch.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/CandidateUserSearch.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
-
 
 /**
  * Search to be utilized to find users and group memberships of users according to filters set in the group user matrix.
@@ -2567,18 +2352,11 @@ public class CandidateUserSearch {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/CandidateUserSearch.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/CandidateUsersAndGroups.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
 
 /**
  * Generic result object for searches (e.g.  {@link CandidateUserSearch}, {@link CandidateGroupSearch}, {@link CandidateUserAndGroupSearch}) utilized in the context of the group user matrix.
@@ -2607,18 +2385,11 @@ public class CandidateUsersAndGroups {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/CandidateUsersAndGroups.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/FilterGroupsSpecificationHandler.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
 
 /**
  * Represents the filter dialog on the group dimension in the user and group matrix.
@@ -2671,19 +2442,11 @@ public class FilterGroupsSpecificationHandler extends TableSpecificationHandler 
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/FilterGroupsSpecificationHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/FilterUsersSpecificationHandler.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
 
 /**
  * Represents the filter dialog on the user dimension in the user and group matrix.
@@ -2733,19 +2496,11 @@ public class FilterUsersSpecificationHandler extends TableSpecificationHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/FilterUsersSpecificationHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/LoadDataHandler.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
 
 public class LoadDataHandler extends Handler implements PostOnlyHandler {
     public static final int PAGE_SIZE = 50;
@@ -2896,15 +2651,10 @@ public class LoadDataHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/LoadDataHandler.java" #########
-
 
 ######### start - content of file "group-all/overview/groupUserMatrix/ToggleMembershipHandler.java" #########
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
 
 public class ToggleMembershipHandler extends Handler implements PostOnlyHandler {
 
@@ -2967,20 +2717,11 @@ public class ToggleMembershipHandler extends Handler implements PostOnlyHandler 
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/ToggleMembershipHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/UserExcelSheetDefinition.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
-
 
 /**
  * Allows to configure the excel to be created by the {@link Export2ExcelJob}
@@ -3066,16 +2807,10 @@ public class UserExcelSheetDefinition {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/UserExcelSheetDefinition.java" #########
-
 
 ######### start - content of file "group-all/overview/groupUserMatrix/ViewHandler.java" #########
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix;
-
-
-
-
 
 @CplaceApi
 public class ViewHandler extends Handler implements FullPageHandler, TitleAndHeadingProvider, HistoryEntryNameProvider {
@@ -3167,16 +2902,11 @@ public class ViewHandler extends Handler implements FullPageHandler, TitleAndHea
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/ViewHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/exporting/Export2ExcelHandler.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
-package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
 
+package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
 
 /**
  * Entry point for the export of group memberships. Shows the user a modal that allows a user to only export memberships in groups in which the user is admin.
@@ -3231,21 +2961,11 @@ public class Export2ExcelHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/exporting/Export2ExcelHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/exporting/Export2ExcelJob.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
-
-
-
-
-
 
 /**
  * Exports direct memberships of the group user matrix to an excel file.
@@ -3293,7 +3013,6 @@ public class Export2ExcelJob extends QueuedBatchJob {
     public boolean isUserJob() {
         return true;
     }
-
 
     @Override
     protected void execute(PersistentJob job) throws Exception {
@@ -3347,7 +3066,6 @@ public class Export2ExcelJob extends QueuedBatchJob {
         headerCells(sheetUsersGroupMatrix.createRow(0), groups, rowStyle);
     }
 
-
     /**
      * Creates and starts an {@link Export2ExcelJob} in a separate thread.
      * @param userFilters set in the group user matrix
@@ -3383,7 +3101,6 @@ public class Export2ExcelJob extends QueuedBatchJob {
         params.filterForGroupAdmin = filterForGroupAdmin;
         return params.toJson();
     }
-
 
     private void headerCells(Row row, List<Group> groups, CellStyle style) {
         userExcelSheetDefinition.createHeaderCells(row, style);
@@ -3426,17 +3143,11 @@ public class Export2ExcelJob extends QueuedBatchJob {
 
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/exporting/Export2ExcelJob.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/exporting/SubmitExportHandler.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.exporting;
-
-
 
 /**
  * Subsequently to the {@link Export2ExcelHandler}, creates and starts the {@link Export2ExcelJob}.
@@ -3488,9 +3199,7 @@ public class SubmitExportHandler extends LoadDataHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/exporting/SubmitExportHandler.java" #########
-
 
 ######### start - content of file "group-all/overview/groupUserMatrix/exporting/export2Excel.htm" #########
 <form method="post" action="$submitUrl$" class="tricia-edit-form modal-form form-horizontal" cplace-form-provider>
@@ -3508,14 +3217,9 @@ public class SubmitExportHandler extends LoadDataHandler {
 
 ######### end - content of file "group-all/overview/groupUserMatrix/exporting/export2Excel.htm" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/importing/ImportFromExcelHandler.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
-
-
 
 /**
  * Entry point for the import of group memberships. Shows the user a modal that allows a user to select an excel file to be imported.
@@ -3561,21 +3265,11 @@ public class ImportFromExcelHandler extends Handler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/importing/ImportFromExcelHandler.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/importing/ImportFromExcelJob.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
-
-
-
-
-
 
 /**
  * Imports direct group memberships from an excel file.
@@ -3855,18 +3549,11 @@ public class ImportFromExcelJob extends QueuedBatchJob {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/importing/ImportFromExcelJob.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/importing/SubmitImportHandler.java" #########
-/*
- * Copyright 2019, collaboration Factory AG. All rights reserved.
- */
+
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.importing;
-
-
-
 
 /**
  * Subsequently to the {@link ImportFromExcelHandler}, creates and starts the {@link ImportFromExcelJob}.
@@ -3940,9 +3627,7 @@ public class SubmitImportHandler extends Handler implements PostOnlyHandler {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/importing/SubmitImportHandler.java" #########
-
 
 ######### start - content of file "group-all/overview/groupUserMatrix/importing/importFromExcel.htm" #########
 <form method="post" action="$submitUrl$" enctype="multipart/form-data" class="tricia-edit-form modal-form form-horizontal" cplace-validated-form cplace-form-provider>
@@ -3962,16 +3647,9 @@ public class SubmitImportHandler extends Handler implements PostOnlyHandler {
 
 ######### end - content of file "group-all/overview/groupUserMatrix/importing/importFromExcel.htm" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/state/Data.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
-
-
-
 
 public class Data {
     public boolean excessiveData = false;
@@ -3999,18 +3677,11 @@ public class Data {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/state/Data.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/state/Edge.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
-
-
 
 public class Edge {
 
@@ -4073,17 +3744,11 @@ public class Edge {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/state/Edge.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/state/Node.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
-
 
 public class Node {
     public final String id;
@@ -4104,17 +3769,11 @@ public class Node {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/state/Node.java" #########
 
-
 ######### start - content of file "group-all/overview/groupUserMatrix/state/State.java" #########
-/*
- * Copyright 2016, collaboration Factory AG. All rights reserved.
- */
 
 package cf.cplace.platform.frontend.handler.group.overview.groupUserMatrix.state;
-
 
 public class State {
 
@@ -4145,9 +3804,7 @@ public class State {
     }
 }
 
-
 ######### end - content of file "group-all/overview/groupUserMatrix/state/State.java" #########
-
 
 ######### start - content of file "group-all/overview/groupUserMatrix/view.htm" #########
 <div class="cplace-group-user-matrix-wrapper" cplace-group-user-matrix="$state$">
@@ -4321,7 +3978,6 @@ public class State {
 
 ######### end - content of file "group-all/overview/groupUserMatrix/view.htm" #########
 
-
 ######### start - content of file "group-all/overview/groups.htm" #########
 $[mayEditAllTypes()$
 	<div class="btn-group">
@@ -4351,7 +4007,6 @@ $[widgetLight()$
 $widgetLight]$
 
 ######### end - content of file "group-all/overview/groups.htm" #########
-
 
 ######### start - content of file "group-all/overview/users.htm" #########
 $[widgetLight()$
@@ -4403,7 +4058,6 @@ $[widgetLight()$
 $widgetLight]$
 
 ######### end - content of file "group-all/overview/users.htm" #########
-
 
 ######### start - content of file "group-all/view.htm" #########
 $[this.isTechnicalGroup()$
