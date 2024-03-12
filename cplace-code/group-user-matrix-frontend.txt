@@ -1,0 +1,846 @@
+
+######### start - content of file "group-user-matrix-frontend/AbstractMatrixCtrl.ts" #########
+
+export interface IMatrixState {
+  loadDataUrl: string;
+  filterRowsDialogUrl?: string;
+  filterColumnsDialogUrl?: string;
+  toggleUrl?: string;
+  matrixCustomInlineStyles: IMatrixCustomInlineStyle;
+  additionalData: any;
+}
+
+export interface IEdge {
+  rowId: string;
+  columnId: string;
+  iconClass: string;
+  tooltip: string;
+  edgeClass: string;
+
+  [name: string]: string;
+}
+
+export interface INode {
+  id: string;
+  name: string;
+  url: string;
+}
+
+export interface IMatrixData {
+  rowPage: number;
+  columnPage: number;
+  rows: Array<INode>;
+  columns: Array<INode>;
+  edges: {
+    [rowId: string]: {
+      [columnId: string]: IEdge;
+    };
+  };
+  excessiveDataColumns: boolean;
+  excessiveDataRows: boolean;
+}
+
+export interface IMatrixCustomInlineStyle {
+  columnHeadlineStyles: string;
+  rowHeadlineStyles: string;
+  wrappingTableStyles: string;
+  matrixInfoStyles: string;
+}
+
+export abstract class AbstractMatrixCtrl {
+  state: IMatrixState;
+  data: IMatrixData;
+  afterRenderEvent = EVENT_RESIZE_FIXED_PANE_SCROLL_CONTAINERS;
+  loading = false;
+  private filterForRows: boolean;
+  private rowFilters: Object;
+  private columnFilters: Object;
+  private rowPage: number;
+  private columnPage: number;
+
+  constructor(protected $scope: IScope, protected $element: IAugmentedJQuery, protected $http: IHttpService, protected postHeadersService: PostHeadersService) {
+    $scope.$on(ColumnFiltersDialogCtrl.EVENT_SAVED, (e: IAngularEvent, data: IFiltersDialogSavedEventData) => {
+      e.stopPropagation();
+      if (this.filterForRows) {
+        this.rowFilters = data.filters;
+      } else {
+        this.columnFilters = data.filters;
+      }
+      this.loadData();
+    });
+    $scope.$on(ColumnFiltersDialogCtrl.EVENT_RESTORE, (e: IAngularEvent) => {
+      e.stopPropagation();
+      if (this.filterForRows) {
+        this.rowFilters = null;
+      } else {
+        this.columnFilters = null;
+      }
+      this.loadData();
+    });
+  }
+
+  /**
+   * Do NOT override this method. Override doInitialize to setup stuff. doInitialize is called at the end of initialize method
+   */
+  initialize(state: IMatrixState) {
+    this.state = state;
+    this.doInitialize();
+    this.loadData();
+  }
+
+  /**
+   * class names returned by this will be added to the top level element of matrix for custom styling
+   */
+  abstract getMatrixClass(): string;
+
+  filterRows() {
+    this.filterForRows = true;
+    presentURLinModal(this.state.filterRowsDialogUrl, {
+      data: {
+        filters: this.rowFilters ? JSON.stringify(this.rowFilters) : null
+      },
+      isLarge: true,
+      angularScope: this.$scope
+    });
+  }
+
+  filterColumns() {
+    this.filterForRows = false;
+    presentURLinModal(this.state.filterColumnsDialogUrl, {
+      data: {
+        filters: this.columnFilters ? JSON.stringify(this.columnFilters) : null
+      },
+      isLarge: true,
+      angularScope: this.$scope
+    });
+  }
+
+  hasRowFilters() {
+    return this.rowFilters && !!Object.keys(this.rowFilters).length;
+  }
+
+  hasColumnFilters() {
+    return this.columnFilters && !!Object.keys(this.columnFilters).length;
+  }
+
+  /**
+   * return an object containing data that will be set to toggle handler
+   * rowId and columnId are added later
+   */
+  getDataForToggleHandler(): object {
+    return {};
+  }
+
+  /**
+   * handle click event on grid, this method will be passed rowId and columnId
+   */
+  toggleEdge(rowId: string, columnId: string) {
+    if (!this.canBeToggled(rowId, columnId)) {
+      return;
+    }
+    if (!this.state.toggleUrl) {
+      throw new Error('No url provided to handle toggle action');
+    }
+    this.doToggle(rowId, columnId);
+  }
+
+  loadMore(type: 'row' | 'column') {
+    if (type == 'row') {
+      this.rowPage = this.data.rowPage + 1;
+    }
+    if (type == 'column') {
+      this.columnPage = this.data.columnPage + 1;
+    }
+    this.loadData();
+  }
+
+  highlightRowColumn(rowIndex, columnIndex) {
+    this.$element.find('.cf-cplace-matrix-rows tr').eq(rowIndex).addClass('hovered');
+    this.$element.find('.cf-cplace-matrix-columns th').eq(columnIndex).addClass('hovered');
+  }
+
+  unhighlightRowColumn(rowIndex, columnIndex) {
+    this.$element.find('.cf-cplace-matrix-rows tr').eq(rowIndex).removeClass('hovered');
+    this.$element.find('.cf-cplace-matrix-columns th').eq(columnIndex).removeClass('hovered');
+  }
+
+  addRowWidthChangeHandler(handler: Function): Function {
+    let $matrixRowsElement: JQuery = this.$element.find('.matrix-rows');
+    let unwatchMatrixRows: Function = angular.noop;
+    const throttledResizeHandler = _.throttle(() => {
+      handler($matrixRowsElement.width());
+    }, 100);
+    const addResizeHandler = (): void => {
+      $matrixRowsElement.resize(throttledResizeHandler);
+    };
+    const removeResizeHandler = () => {
+      unwatchMatrixRows();
+      $matrixRowsElement.off('resize', throttledResizeHandler);
+    };
+    if ($matrixRowsElement.length) {
+      addResizeHandler();
+    } else {
+      unwatchMatrixRows = this.$scope.$watch(() => {
+        return this.$element.find('.matrix-rows')[0];
+      }, (newValue) => {
+        if (newValue instanceof HTMLElement) {
+          $matrixRowsElement = angular.element(newValue);
+          addResizeHandler();
+          unwatchMatrixRows();
+        }
+      });
+    }
+    return removeResizeHandler;
+  }
+
+  getStylesObject(styles: string): { [key: string]: string } {
+    let stylesObject = {};
+
+    if (styles) {
+      styles.split(';')
+        .filter(item => item.length > 0)
+        .map(style => style.trim().split(':'))
+        .forEach(stylePair => stylesObject[stylePair[0]] = stylePair[1]);
+    }
+
+    return stylesObject;
+  }
+
+  protected doInitialize() {
+  }
+
+  protected getEdge(rowId: string, columnId: string) {
+    let edges = this.data.edges[rowId];
+    if (edges) {
+      return edges[columnId];
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Override this function to return a custom CSS class, which will be added to each grid cell.
+   */
+  protected getCustomCellClass(rowId: string, columnId: string){
+  }
+
+  /**
+   * Determines if the grid cell can be clicked.
+   * sub classes should implement this method to provide their own logic to decide
+   */
+  protected canBeToggled(rowId: string, columnId: string): boolean {
+    return true;
+  }
+
+  /**
+   * may be overridden to customize the behaviour when toggling
+   * e.g. open a modal confirmation dialog prior to toggling
+   */
+  protected doToggle(rowId: string, columnId: string) {
+    let data: any = angular.extend({}, this.getDataForToggleHandler(), {
+      rowId: rowId,
+      columnId: columnId
+    });
+    this.loading = true;
+    this.$http
+      .post(this.state.toggleUrl, data, this.postHeadersService.postHeaders())
+      .then((result: ng.IHttpPromiseCallbackArg<any>) => {
+        this.processToggleResult(rowId, columnId, result);
+      }).finally(() => {
+      this.loading = false;
+    });
+  }
+
+  /**
+   * may be overriden for additional/alternative processing of the toggle result
+   * e.g. open a modal window
+   */
+  protected processToggleResult(rowId: string, columnId: string, result: IHttpPromiseCallbackArg<any>) {
+    if (result.data.rowEdges) {
+      this.data.edges[rowId] = result.data.rowEdges;
+    }
+  }
+
+  private loadData() {
+    if (!this.state.loadDataUrl) {
+      throw new Error('Cannot load data, no url provided');
+    }
+    this.loading = true;
+    this.$http
+      .post(this.state.loadDataUrl, {
+        rowFilters: this.rowFilters ? JSON.stringify(this.rowFilters) : null,
+        columnFilters: this.columnFilters ? JSON.stringify(this.columnFilters) : null,
+        rowPage: this.rowPage,
+        columnPage: this.columnPage
+      }, this.postHeadersService.postHeaders())
+      .then((result: ng.IHttpPromiseCallbackArg<any>) => {
+        this.data = result.data;
+      }).finally(() => {
+      this.loading = false;
+    });
+  }
+}
+
+######### end - content of file "group-user-matrix-frontend/AbstractMatrixCtrl.ts" #########
+
+######### start - content of file "group-user-matrix-frontend/GroupUserMatrixCtrl.ts" #########
+
+export interface IGroupUserMatrixState {
+    toggleMembershipUrl: string;
+    filterUsersDialogUrl: string;
+    filterGroupsDialogUrl: string;
+    loadDataUrl: string;
+    exportDataUrl: string;
+    mayExportGroupMemberships: boolean;
+    userFiltersEnabled: boolean;
+    data: IData;
+}
+
+export interface IData {
+    excessiveData: boolean;
+    excessiveDataUsers: boolean;
+    excessiveDataGroups: boolean;
+    userId2groupId2edge: {
+        [userId: string]: {
+            [groupId: string]: IEdge;
+        };
+    };
+    users: Array<INode>;
+    groups: Array<INode>;
+    userPage: number;
+    groupPage: number;
+}
+
+export interface IEdge {
+    userId: string;
+    groupId: string;
+    directMembership: boolean;
+    iconClass: string;
+    tooltip: string;
+}
+
+export interface INode {
+    id: string;
+    name: string;
+    url: string;
+}
+
+export class GroupUserMatrixCtrl {
+    static CTRL_NAME = 'cf.cplace.platform.controllers.GroupUserMatrixCtrl';
+    afterRenderEvent = EVENT_RESIZE_FIXED_PANE_SCROLL_CONTAINERS;
+    state: IGroupUserMatrixState;
+    onlyUnassignedUsers = false;
+    private userFilters: Object;
+    private groupFilters: Object;
+    private filterForUsers = false;
+    private filterUsersByGroups = false;
+    private filterGroupsByUsers = false;
+    private userPage: number;
+    private groupPage: number;
+
+    constructor(private $scope: IScope, $element: IAugmentedJQuery, private $http: IHttpService, private postHeadersService: PostHeadersService) {
+        $scope.$on(ColumnFiltersDialogCtrl.EVENT_SAVED, (e: IAngularEvent, data: IFiltersDialogSavedEventData) => {
+            e.stopPropagation();
+            if (this.filterForUsers) {
+                this.userFilters = data.filters;
+            }
+            else {
+                this.groupFilters = data.filters;
+            }
+            this.reloadData();
+        });
+        $scope.$on(ColumnFiltersDialogCtrl.EVENT_RESTORE, (e: IAngularEvent) => {
+            e.stopPropagation();
+            if (this.filterForUsers) {
+                this.userFilters = null;
+            }
+            else {
+                this.groupFilters = null;
+            }
+            this.reloadData();
+        });
+        $element.on('mouseenter', '.matrix-data tr', function() {
+            const index = jQuery(this).index();
+            $element.find('.row-headers tr').eq(index).addClass('hovered');
+        });
+        $element.on('mouseleave', '.matrix-data tr', function() {
+            const index = jQuery(this).index();
+            $element.find('.row-headers tr').eq(index).removeClass('hovered');
+        });
+        $element.on('mouseenter', '.matrix-data td.edge-container', function() {
+            const index = jQuery(this).index();
+            $element.find('.column-headers th').eq(index).addClass('hovered');
+        });
+        $element.on('mouseleave', '.matrix-data td.edge-container', function() {
+            const index = jQuery(this).index();
+            $element.find('.column-headers th').eq(index).removeClass('hovered');
+        });
+    }
+
+    initialize(matrix: IGroupUserMatrixState) {
+        this.state = matrix;
+        this.reloadData();
+    }
+
+    hasUserFilters() {
+        return this.state.userFiltersEnabled && this.userFilters && !!Object.keys(this.userFilters).length;
+    }
+
+    hasGroupFilters() {
+        return this.groupFilters && !!Object.keys(this.groupFilters).length;
+    }
+
+    filterUsers() {
+        this.filterForUsers = true;
+        presentURLinModal(this.state.filterUsersDialogUrl, {
+            data: {
+                filters: this.userFilters ? JSON.stringify(this.userFilters) : null
+            },
+            isLarge: true,
+            angularScope: this.$scope
+        });
+    }
+
+    filterGroups() {
+        this.filterForUsers = false;
+        presentURLinModal(this.state.filterGroupsDialogUrl, {
+            data: {
+                filters: this.groupFilters ? JSON.stringify(this.groupFilters) : null
+            },
+            isLarge: true,
+            angularScope: this.$scope
+        });
+    }
+
+    toggleOnlyUnassignedUsers() {
+        this.onlyUnassignedUsers = !this.onlyUnassignedUsers;
+        this.reloadData();
+    }
+
+    filterUsersForSelectedGroups() {
+        this.userPage = 1;
+        this.filterUsersByGroups = !this.filterUsersByGroups;
+        this.onlyUnassignedUsers = false;
+        this.reloadData();
+    }
+
+    filterGroupsForSelectedUsers() {
+        this.groupPage = 1;
+        this.filterGroupsByUsers = !this.filterGroupsByUsers;
+        this.reloadData();
+    }
+
+    loadMore(type: string) {
+        if (type == 'user') {
+            this.userPage = this.state.data.userPage + 1;
+        }
+        if (type == 'group') {
+            this.groupPage = this.state.data.groupPage + 1;
+        }
+        this.reloadData();
+    }
+
+    getEdge(user, group) {
+        let edges = this.state.data.userId2groupId2edge[user.id];
+        if (edges) {
+            return edges[group.id];
+        }
+        else {
+            return null;
+        }
+    }
+
+    toggleEdge(user, group) {
+        this.$http
+            .post(this.state.toggleMembershipUrl, {
+                userId: user.id,
+                groupId: group.id
+            }, this.postHeadersService.postHeaders())
+            .then((result: any) => {
+                const data = result.data;
+                if (data.success) {
+                    this.state.data.userId2groupId2edge[user.id] = data.groupId2edge;
+                }
+                else if (data.errorMessage) {
+                    jQuery.bootstrapGrowl(data.errorMessage, {
+                        ele: 'body',
+                        type: 'danger',
+                        delay: 4000,
+                        allow_dismiss: true,
+                        stackup_spacing: 10 // spacing between consecutively stacked growls.
+                    });
+                }
+            });
+    }
+
+    canBeToggledClass(user, group) {
+        var edge = this.getEdge(user, group);
+        if ((edge && edge.directMembership) || edge == null) {
+            return 'cell-edge-can-be-toggled';
+        }
+        else {
+            return '';
+        }
+    }
+
+    private reloadData() {
+        this.state.data = null;
+        this.$http
+            .post(this.state.loadDataUrl, {
+                userFilters: this.userFilters ? JSON.stringify(this.userFilters) : null,
+                groupFilters: this.groupFilters ? JSON.stringify(this.groupFilters) : null,
+                onlyUnassignedUsers: this.onlyUnassignedUsers,
+                filterUsersByGroups: this.filterUsersByGroups,
+                filterGroupsByUsers: this.filterGroupsByUsers,
+                groupPage: this.groupPage,
+                userPage: this.userPage
+            }, this.postHeadersService.postHeaders())
+            .then((result: any) => {
+                this.state.data = result.data;
+            });
+    }
+
+    exportData() {
+        presentURLinModal(this.state.exportDataUrl, {
+            data: {
+                userFilters: this.userFilters ? JSON.stringify(this.userFilters) : null,
+                groupFilters: this.groupFilters ? JSON.stringify(this.groupFilters) : null,
+                onlyUnassignedUsers: this.onlyUnassignedUsers,
+                filterUsersByGroups: this.filterUsersByGroups,
+                filterGroupsByUsers: this.filterGroupsByUsers,
+                groupPage: this.groupPage,
+                userPage: this.userPage,
+                mayExportGroupMemberships: this.state.mayExportGroupMemberships
+            },
+            angularScope: this.$scope
+        });
+    }
+
+    /**
+     * Checks whether the export group memberships button should be shown in the group user matrix.
+     * @returns {boolean} true if the export group memberships button in the matrix should be shown.
+     */
+    showExportMembershipsButton(): boolean {
+        return this.state.mayExportGroupMemberships &&
+        (this.hasUserFilters() || this.hasGroupFilters() || this.onlyUnassignedUsers || this.filterUsersByGroups || this.filterGroupsByUsers);
+    }
+}
+
+######### end - content of file "group-user-matrix-frontend/GroupUserMatrixCtrl.ts" #########
+
+######### start - content of file "group-user-matrix-frontend/cplaceGroupUserMatrix.ts" #########
+
+export const CPLACE_GROUP_USER_MATRIX = 'cplaceGroupUserMatrix';
+
+export function cplaceGroupUserMatrix(): IDirective {
+    return {
+        restrict: 'A',
+        require: CPLACE_GROUP_USER_MATRIX,
+        controller: GroupUserMatrixCtrl.CTRL_NAME,
+        controllerAs: 'matrixCtrl',
+        compile: () => {
+            return {
+                pre: (scope: IScope, element: IAugmentedJQuery, attrs: any, ctrl: GroupUserMatrixCtrl) => {
+                    const state: IGroupUserMatrixState = JSON.parse(attrs[CPLACE_GROUP_USER_MATRIX]);
+                    ctrl.initialize(state);
+                }
+            };
+        }
+    };
+}
+
+######### end - content of file "group-user-matrix-frontend/cplaceGroupUserMatrix.ts" #########
+
+######### start - content of file "group-user-matrix-frontend/cplaceMatrix.ts" #########
+
+/**
+ * "name" property allows us to bind a dynamic controller. Generally when angular creates a controller instance it is named after directive,
+ * since we change the name explicitly, internally, name of the controller becomes the value of "name" property in this case "theMatrix".
+ * When requiring this directive(controller) in sibling/child directives this directive will be referred using the value of name property.
+ *
+ */
+export function cplaceMatrix(): IDirective {
+    return {
+        restrict: 'E',
+        templateUrl: '/cf.cplace.platform.matrix/matrix',
+        name: 'theMatrix',
+        controller: '@',
+        controllerAs: 'matrixCtrl',
+        transclude: true,
+        priority: 1500,
+        bindToController: true,
+        link: ($scope, $element, $attrs, $ctrl: AbstractMatrixCtrl) => {
+            $ctrl.initialize(JSON.parse($attrs.state));
+        }
+    };
+}
+
+export function cplaceMatrixInfo(): IDirective {
+    return {
+        require: '^theMatrix',
+        restrict: 'A',
+        link: (scope, element, attrs, matrixCtrl: AbstractMatrixCtrl) => {
+            const throttledResizeHandler = _.throttle(() => {
+                infoWidthChangeHandler(infoElm.children().width());
+            }, 100);
+            let infoElm = element.find('.cf-cplace-matrix-info');
+            const detachRowWidthChangeHandler: Function = matrixCtrl.addRowWidthChangeHandler(rowsWidthChangeHandler);
+            let infoWidth: number = infoElm.children().width(), rowsWidth: number = 0;
+            infoElm.children().resize(throttledResizeHandler);
+            scope.$on('$destroy', () => {
+                infoElm.children().off('resize', throttledResizeHandler);
+                detachRowWidthChangeHandler();
+            });
+
+            function updateWidthIfNecessary(newVal: number, oldVal: number) {
+                if (newVal > oldVal) {
+                    infoElm.css('width', newVal);
+                }
+            }
+
+            function infoWidthChangeHandler(width: number): void {
+                infoWidth = width;
+                updateWidthIfNecessary(infoWidth, rowsWidth);
+            }
+
+            function rowsWidthChangeHandler(width: number) {
+                rowsWidth = width;
+                updateWidthIfNecessary(rowsWidth, infoWidth);
+            }
+        }
+    };
+}
+
+export function cplaceMatrixRows(): IDirective {
+    return {
+        require: '^theMatrix',
+        restrict: 'A'
+    };
+}
+
+export function cplaceMatrixColumns(): IDirective {
+    return {
+        require: '^theMatrix',
+        restrict: 'A'
+    };
+}
+
+export function cplaceMatrixGrid() {
+    return {
+        require: '^theMatrix',
+        restrict: 'A',
+        link: (scope, element, attrs, ctrl: AbstractMatrixCtrl) => {
+            const gridTableElm = element.find('.cf-cplace-matrix-data');
+            const busyIndicator = element.find('.busy-indicator');
+            gridTableElm.on('click', 'td', handleMatrixGridClick);
+            gridTableElm.on('mouseenter', 'td', function() {
+                const colIndex = jQuery(this).index();
+                const rowIndex = angular.element(this).parent().index();
+                ctrl.highlightRowColumn(rowIndex, colIndex);
+            });
+            gridTableElm.on('mouseleave', 'td', function() {
+                const colIndex = jQuery(this).index();
+                const rowIndex = angular.element(this).parent().index();
+                ctrl.unhighlightRowColumn(rowIndex, colIndex);
+            });
+
+            function handleMatrixGridClick(event) {
+                const cell = angular.element(event.currentTarget);
+                const rowId = cell.attr('row-id');
+                const columnId = cell.attr('column-id');
+                ctrl.toggleEdge(rowId, columnId);
+            }
+
+            scope.$watch(() => {
+                return ctrl.loading;
+            }, (newVal, oldVal) => {
+                let width = !!gridTableElm.width() ? gridTableElm.width() : '200px';
+                let height = !!gridTableElm.height() ? gridTableElm.height() : '200px';
+                busyIndicator.css({
+                    width: width,
+                    height: height,
+                    left: gridTableElm.position().left,
+                    top: gridTableElm.position().top
+                });
+            });
+            scope.$on('$destroy', () => {
+                gridTableElm.off('click', handleMatrixGridClick);
+            });
+        }
+    };
+}
+
+######### end - content of file "group-user-matrix-frontend/cplaceMatrix.ts" #########
+
+######### start - content of file "group-user-matrix-frontend/view.html" #########
+<div class="cplace-group-user-matrix-wrapper" cplace-group-user-matrix="$state$">
+    <div class="alert alert-warning" ng-cloak ng-if="matrixCtrl.state.data.excessiveData">
+        $[(too_many_entries)$
+        {{matrixCtrl.state.data.users.length}} $|$ {{matrixCtrl.state.data.numberOfFilteredUsers}} $|$ {{matrixCtrl.state.data.groups.length}} $|$
+        {{matrixCtrl.state.data.numberOfFilteredGroups}}
+        $too_many_entries]$
+    </div>
+
+    <div class="cplace-group-user-matrix">
+        <div class="cplace-fixed-pane-scroll" cplace-fixed-pane-scroll>
+            <cplace-fixed-pane-corner>
+                <div class="info-area">
+                    <div class="matrix-legends">
+                        <h6>$(legend)$</h6>
+                        <ul class="legends">
+                            <li>
+                                <i class="fa fa-check"></i> $(member)$
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i> $(indirect_member)$
+                            </li>
+                            <li>
+                                <i class="fa fa-square"></i> $(group_admin)$
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column-title header-title">
+                        <div class="column-header">
+                            <span><i class="far fa-users"></i> $(group)$</span>
+                            <div class="btn-group btn-group-xs pull-right">
+                                <a href="" class="btn btn-xs column_filter" ng-click="::matrixCtrl.filterGroups()"
+                                   ng-class="matrixCtrl.hasGroupFilters() ? 'btn-primary' : 'btn-default'">
+                                    <i class="fa fa-filter"></i>
+                                </a>
+                                <a href="" class="btn btn-xs column_filter" ng-click="::matrixCtrl.filterGroupsForSelectedUsers()"
+                                   ng-class="matrixCtrl.filterGroupsByUsers ? 'btn-primary' : 'btn-default'"
+                                   cplace-tooltipster="$(filter_groups_for_selected_users)$">
+                                <span class="cf-stack">
+                                    <i class="far fa-users main"></i>
+                                    <i class="fa fa-filter stacked"></i>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap-filler"></div>
+                    <div class="row-title header-title">
+                        <div class="btn-group btn-group-xs pull-right" ng-if="::matrixCtrl.state.userFiltersEnabled">
+                            <a href="" class="btn " ng-click="::matrixCtrl.filterUsers()"
+                               ng-class="matrixCtrl.hasUserFilters() ? 'btn-primary' : 'btn-default'">
+                                <i class="fa fa-fw fa-filter"></i>
+                            </a>
+                            <a href="" class="btn" ng-click="::matrixCtrl.toggleOnlyUnassignedUsers()"
+                               ng-class="matrixCtrl.onlyUnassignedUsers ? 'btn-primary' : 'btn-default'"
+                               cplace-tooltipster="$(only_unassigned_users)$">
+                                <i class="fa fa-fw fa-user-times"></i>
+                            </a>
+                            <a href="" class="btn" ng-click="::matrixCtrl.filterUsersForSelectedGroups()"
+                               ng-class="matrixCtrl.filterUsersByGroups ? 'btn-primary' : 'btn-default'"
+                               cplace-tooltipster="$(filter_users_for_selected_groups)$">
+                                    <span class="cf-stack">
+                                            <i class="fa fa-fw fa-user main"></i>
+                                            <i class="fa fa-fw fa-filter stacked"></i>
+                                        </span>
+                            </a>
+                            <a href="" class="btn btn-warning btn-xs export-button"
+                               ng-show="matrixCtrl.showExportMembershipsButton()"
+                               ng-click="::matrixCtrl.exportData()"
+                               ng-cloak
+                               cplace-tooltipster="$(export_memberships_tooltip)$">
+                                <i class="fa fa-fw fa-download"></i>
+                            </a>
+                        </div>
+                        <div class="header-user-message">
+                            <i class="fa fa-fw fa-user"></i> $(user)$
+                        </div>
+                        <div class="cell-empty"></div>
+                    </div>
+                </div>
+            </cplace-fixed-pane-corner>
+            <cplace-fixed-pane-top>
+                <div class="matrix-header-top">
+                    <table class="column-headers" cellpadding="0" ng-cloak>
+                        <tr>
+                            <th ng-repeat="group in matrixCtrl.state.data.groups"
+                                cplace-on-finish-render="{{::matrixCtrl.state.data.groups.length}}"
+                                after-render-event="{{::matrixCtrl.afterRenderEvent}}">
+                                <div class="column-header-wrapper">
+                                    <div class="column-header" cplace-tooltipster>
+                                        <a ng-href="{{::group.url}}">{{::group.name}}</a>
+                                    </div>
+                                </div>
+                                <div class="text-center helper-arrow">
+                                    <i class="fa fa-arrow-up"></i>
+                                </div>
+                            </th>
+                            <th ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                                <div class="column-header-wrapper">
+                                    <div class="column-header">
+                                        <button class="btn btn-xs btn-primary" ng-click="matrixCtrl.loadMore('group')">$(load_more)$</button>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </cplace-fixed-pane-top>
+            <cplace-fixed-pane-left>
+                <div class="matrix-header-left">
+                    <table class="row-headers" cellpadding="0" ng-cloak>
+                        <tr ng-repeat="user in matrixCtrl.state.data.users">
+                            <th>
+                                <div class="row-header" cplace-tooltipster>
+                                    <a ng-href="{{::user.url}}">{{::user.name}}
+                                        <span class="tricia-user-disabled" cplace-tooltipster="$(disabled)$" ng-if="!user.active">
+	                                        <i class="fa fa-times"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </th>
+                            <td class="helper-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </td>
+                        </tr>
+                        <tr ng-if="matrixCtrl.state.data.excessiveDataUsers">
+                            <td colspan="2">
+                                <div class="load-more">
+                                    <button class="btn btn-xs btn-primary" ng-click="matrixCtrl.loadMore('user')">$(load_more)$</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </cplace-fixed-pane-left>
+            <cplace-fixed-pane-content>
+                <table class="matrix-data" cellpadding="0" ng-cloak>
+                    <tr ng-repeat="user in matrixCtrl.state.data.users">
+                        <td class="edge-container" ng-repeat="group in matrixCtrl.state.data.groups"
+                            ng-class="matrixCtrl.canBeToggledClass(user,group)" ng-click="::matrixCtrl.toggleEdge(user, group)">
+                            <div class="cell-edge" ng-class="matrixCtrl.getEdge(user, group).isAdmin ? 'admin' : ''">
+                                <i class="fa"
+                                   ng-class="matrixCtrl.getEdge(user, group).iconClass"
+                                   ng-if="matrixCtrl.getEdge(user, group)"
+                                   cplace-tooltipster="{{matrixCtrl.getEdge(user, group).tooltip}}"></i>
+
+                            </div>
+                        </td>
+                        <td class="cell-edge" ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                            &hellip;
+                        </td>
+                    </tr>
+                    <tr ng-if="matrixCtrl.state.data.excessiveDataUsers">
+                        <td class="cell-edge"
+                            ng-repeat="group in matrixCtrl.state.data.groups">
+                            &vellip;
+                        </td>
+                        <td class="cell-edge" ng-if="matrixCtrl.state.data.excessiveDataGroups">
+                            &#x22F1;
+                        </td>
+                    </tr>
+                </table>
+                <div class="loading" ng-if="!matrixCtrl.state.data">
+                    <i class="fa fa-spin fa-spinner"></i> <i>$(loading)$</i>
+                </div>
+            </cplace-fixed-pane-content>
+        </div>
+    </div>
+</div>
+
+######### end - content of file "group-user-matrix-frontend/view.html" #########
+

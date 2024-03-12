@@ -104,6 +104,7 @@ def filter_code(contents, file):
 concatenate('group-all')
 concatenate('group-top-level')
 concatenate('group-user-matrix')
+concatenate('group-user-matrix-frontend')
 concatenate('old-send-link')
 concatenate('new-send-link')
 concatenate('old-edit-ldap-identifier')
