@@ -15,17 +15,19 @@ from tokenizer import count_large_files, count_tokens_in_file
 def remove(root, parent_map, xpath):
     # Find elements by XPath and remove them
     for target in root.findall(xpath):
-        parent = parent_map[target]  # Get the parent element from the map
-        parent.remove(target)  # Remove the target element from its parent
+        p = parent_map[target]  # Get the parent element from the map
+        p.remove(target)  # Remove the target element from its parent
 
-def printAllTypes(root):
+
+def print_all_types(root):
     # find all <name> elements of root which sit under a <type> element
     for name in root.findall('.//type/name'):
         print(name.text)
-    pass
+
 
 def is_empty(element):
     return (not element.text or element.text.isspace()) and not element.tail and len(element) == 0
+
 
 def remove_empty_elements(element, parent=None):
     # Recursively check all children of the current element
@@ -40,7 +42,8 @@ def remove_empty_elements(element, parent=None):
     if element.text == "{}":
         parent.remove(element)
 
-def writeCompressedToFile(root, fileName):
+
+def write_compressed_to_file(root, fileName):
     global file
     # Convert the XML tree to a string
     xml_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
@@ -54,20 +57,22 @@ def writeCompressedToFile(root, fileName):
     with open(fileName + '-compressed.xml', 'w') as file:
         file.write(compressed_xml_string)
 
-def removeNonReferenceAttributes(root, parent_map):
-    global parent
-    for attributeDefinition in root.findall('.//attributeDefinition'):
-        typeConstraint = attributeDefinition.find('typeConstraint')
-        # print("typeConstraint: ", typeConstraint)
-        if typeConstraint is not None and typeConstraint.text != 'Link':
-            # print("Removing: ", attributeDefinition)
-            parent = parent_map[attributeDefinition]
-            parent.remove(attributeDefinition)
 
-def rewriteLocalizedNameAttributes(doc):
+def remove_non_reference_attributes(root, parent_map):
+    global parent
+    for attribute_definition in root.findall('.//attributeDefinition'):
+        type_constraint = attribute_definition.find('typeConstraint')
+        # print("typeConstraint: ", typeConstraint)
+        if type_constraint is not None and type_constraint.text != 'Link':
+            # print("Removing: ", attributeDefinition)
+            parent = parent_map[attribute_definition]
+            parent.remove(attribute_definition)
+
+
+def rewrite_localized_name_attributes(doc):
     if isinstance(doc, list):
         for item in doc:
-            rewriteLocalizedNameAttributes(item)
+            rewrite_localized_name_attributes(item)
     elif isinstance(doc, dict):
         for key, value in doc.items():
             if key == 'localizedName' or key == 'localizedNameSingular' or key == 'localizedNamePlural' or key == 'localizedShortName':
@@ -77,13 +82,14 @@ def rewriteLocalizedNameAttributes(doc):
                 if value is not None:
                     doc[key] = json.loads(value)
 
-            rewriteLocalizedNameAttributes(value)
+            rewrite_localized_name_attributes(value)
 
-def rewriteTypes(doc):
+
+def rewrite_types(doc):
     # print("rewriteTypes: " + str(doc))
     if isinstance(doc, list):
         for item in doc:
-            rewriteTypes(item)
+            rewrite_types(item)
     elif isinstance(doc, dict):
         for key, value in doc.items():
             if value is not None and key == 'workspace':
@@ -100,40 +106,41 @@ def rewriteTypes(doc):
                     value['types'] = []
                     value['types'].append(type_)
 
-            rewriteTypes(value)
+            rewrite_types(value)
 
-def rewriteAttributes(doc):
+
+def rewrite_attributes(doc):
     if isinstance(doc, list):
         for item in doc:
-            rewriteAttributes(item)
+            rewrite_attributes(item)
     elif isinstance(doc, dict):
         for key, value in doc.items():
             if value is not None and key == 'attributeDefinitions':
                 # print (value)
-                attributeDefinition = value['attributeDefinition']
+                attribute_definition = value['attributeDefinition']
                 # print(attributeDefinition)
                 # print(type(attributeDefinition))
                 # if attributeDefinition is a list, then create a new list
-                if isinstance(attributeDefinition, list):
+                if isinstance(attribute_definition, list):
 
                     newList = []
-                    for attribute in attributeDefinition:
+                    for attribute in attribute_definition:
                         newList.append(attribute)
 
                     # replace the value with the list object
                     doc[key] = newList
 
-                elif isinstance(attributeDefinition, dict):
+                elif isinstance(attribute_definition, dict):
                     newList = []
-                    newList.append(attributeDefinition)
+                    newList.append(attribute_definition)
 
                     # replace the value with the list object
                     doc[key] = newList
 
-            rewriteAttributes(value)
+            rewrite_attributes(value)
 
 
-def removeGenericElements(root, parent_map):
+def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/customCssClasses')
     remove(root, parent_map, './/localizedAppName')
     remove(root, parent_map, './/isAppDefSpace')
@@ -204,7 +211,7 @@ def removeGenericElements(root, parent_map):
     remove(root, parent_map, './/enumerationValues2localizedLabels')
 
 
-def returnAllSearches(root, parent_map):
+def return_all_searches(root, parent_map):
     # create a list which will store the text of the elements
     result = []
     # iterate over all elements in the tree
@@ -222,7 +229,8 @@ def returnAllSearches(root, parent_map):
         result[i] = search["filters"]
     return result
 
-def returnAllLowCodeScripts(root, parent_map):
+
+def return_all_low_code_scripts(root, parent_map):
     # create a list which will store the text of the elements
     result = []
     # iterate over all elements in the tree
@@ -248,7 +256,7 @@ def returnAllLowCodeScripts(root, parent_map):
     return result
 
 
-def findAllWidgets(root, parent_map):
+def find_all_widgets(root, parent_map):
     result = []
     # Find elements by XPath and remove them
     for target in root.findall('.//widgetContainer'):
@@ -257,30 +265,30 @@ def findAllWidgets(root, parent_map):
 
         # print(asJson)
 
-        widgetContainer = asJson['widgetContainer']
+        widget_container = asJson['widgetContainer']
 
         # parse widgetsLayout value of widgetContainer as json
         # print(widgetContainer['widgetsLayout'])
 
-        widgetId2widget = {}
+        widget_id2widget = {}
 
-        layout_ = widgetContainer['widgetsLayout']
+        layout_ = widget_container['widgetsLayout']
         if layout_ is not None:
-            layoutAsJson = json.loads(layout_)
-            widgetContainer['widgetsLayout'] = layoutAsJson
+            layout_as_json = json.loads(layout_)
+            widget_container['widgetsLayout'] = layout_as_json
 
-            widgets = widgetContainer['widgets']
+            widgets = widget_container['widgets']
             if widgets is not None:
-                actualWidgets = widgets['widget']
-                if actualWidgets is not None:
-                    if isinstance(actualWidgets, list):
-                        for widget in actualWidgets:
-                            widgetId = widget['widgetId']
-                            widgetId2widget[widgetId] = widget
+                actual_widgets = widgets['widget']
+                if actual_widgets is not None:
+                    if isinstance(actual_widgets, list):
+                        for widget in actual_widgets:
+                            widget_id = widget['widgetId']
+                            widget_id2widget[widget_id] = widget
                             # print ("adding: ", widgetId, widget)
-                    elif isinstance(actualWidgets, dict):
-                        widgetId = actualWidgets['widgetId']
-                        widgetId2widget[widgetId] = actualWidgets
+                    elif isinstance(actual_widgets, dict):
+                        widget_id = actual_widgets['widgetId']
+                        widget_id2widget[widget_id] = actual_widgets
                         # print ("is dict")
                         # print (actualWidgets)
                     # else:
@@ -291,144 +299,154 @@ def findAllWidgets(root, parent_map):
             # else:
             #     print("No widgets found - 1")
 
-            for row in layoutAsJson['rows']:
+            for row in layout_as_json['rows']:
                 for column in row['columns']:
                     for widget in column['widgets']:
-                        widgetId = widget['id']
+                        widget_id = widget['id']
                         # print(widgetId)
                         # print("widgetId2widget: " + str(widgetId2widget))
 
                         # test if the widgetId is in the map widgetId2widget
-                        if widgetId in widgetId2widget:
-                            widgetFromMap = widgetId2widget[widgetId]
+                        if widget_id in widget_id2widget:
+                            widget_from_map = widget_id2widget[widget_id]
 
                             # iterate over the keys of the widgetFromMap
-                            for key in widgetFromMap:
+                            for key in widget_from_map:
                                 # if the key is not in the widget, then add it
                                 if key not in widget:
-                                    value = widgetFromMap[key]
+                                    value = widget_from_map[key]
                                     if key == 'attributes' and value is not None:
                                         # print ("value: ", json.dumps(value, separators=(',', ':')))
-                                        newValue = value['attribute']
-                                        if isinstance(newValue, list):
-                                            for eachValue in newValue:
+                                        new_value = value['attribute']
+                                        if isinstance(new_value, list):
+                                            for eachValue in new_value:
                                                 # print(eachValue['values'])
                                                 eachValue['value'] = eachValue['values']['value']
                                                 del eachValue['values']
                                                 if 'embeddedWidgets_values' in eachValue:
                                                     del eachValue['embeddedWidgets_values']
                                         else:
-                                            newValue['value'] = newValue['values']['value']
-                                            del newValue['values']
-                                            if 'embeddedWidgets_values' in newValue:
-                                                del newValue['embeddedWidgets_values']
+                                            new_value['value'] = new_value['values']['value']
+                                            del new_value['values']
+                                            if 'embeddedWidgets_values' in new_value:
+                                                del new_value['embeddedWidgets_values']
 
-                                        widget[key] = newValue
+                                        widget[key] = new_value
                                     else:
                                         widget[key] = value
 
-
                             del widget['widgetId']
                         else:
-                            print("Widget not found: ", widgetId, widgetId2widget)
+                            print("Widget not found: ", widget_id, widget_id2widget)
 
             # print(json.dumps(layoutAsJson, separators=(',', ':')))
-            result.append(layoutAsJson)
+            result.append(layout_as_json)
     return result
 
 
-def runForFolder(folderName):
+def print_token_counts(folderName):
+    print_token_count_for_file(folderName, "copilot_examples.js")
+    print_token_count_for_file(folderName, "types-compressed.json")
+    print_token_count_for_file(folderName, "types-pretty.json")
+    print_token_count_for_file(folderName, "types-pretty.yaml")
+
+
+def print_token_count_for_file(folder_name, file_name):
+    print("tokens " + file_name + ": " + str(count_tokens_in_file(folder_name + "/" + file_name)))
+
+
+def run_for_folder(folder_name):
 
     # delete all files with name *.json in folder name
-    files = os.listdir(folderName)
-    for file in files:
-        if file.endswith('.json') or file.endswith('.js') or file.endswith('.yaml'):
-            os.remove(folderName + '/' + file)
+    files = os.listdir(folder_name)
+    for f in files:
+        if f.endswith('.json') or f.endswith('.js') or f.endswith('.yaml'):
+            os.remove(folder_name + '/' + f)
 
     # read from file name + '/typesToBeRemoved.txt'
-    with open(folderName + '/typesToBeRemoved.txt') as f:
+    with open(folder_name + '/typesToBeRemoved.txt') as f:
         # read each line and store it in a list
-        typesToBeRemoved = f.read().splitlines()
+        types_to_be_removed = f.read().splitlines()
 
     # Load and parse the XML document
-    tree = ET.parse(folderName + '/export.xml')
+    tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
     # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
 
-    searches = returnAllSearches(root, parent_map)
+    searches = return_all_searches(root, parent_map)
     # print("Searches: ", searches)
-    writeJsonToFile(folderName, "searches", searches)
+    write_json_to_file(folder_name, "searches", searches)
 
     searches = searches[:10]
-    writeJsonToFile(folderName, "searches-10", searches)
+    write_json_to_file(folder_name, "searches-10", searches)
 
-    lowCodeScripts = returnAllLowCodeScripts(root, parent_map)
+    low_code_scripts = return_all_low_code_scripts(root, parent_map)
     # print("LowCodeScripts: ", lowCodeScripts)
-    writeLowCodeScriptsToFile(folderName, "lowCodeScripts", lowCodeScripts)
+    write_low_code_scripts_to_file(folder_name, "lowCodeScripts", low_code_scripts)
 
-    widgets = findAllWidgets(root, parent_map)
+    widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
-    writeJsonToFile(folderName, "widgets", widgets)
+    write_json_to_file(folder_name, "widgets", widgets)
 
-    removeGenericElements(root, parent_map)
+    remove_generic_elements(root, parent_map)
 
     # iterate through the list and print each line
-    for type in typesToBeRemoved:
-        remove(root, parent_map, './/type[name="' + type + '"]')
+    for t in types_to_be_removed:
+        remove(root, parent_map, './/type[name="' + t + '"]')
 
     remove_empty_elements(root)
 
     print ("After removing the types:")
-    printAllTypes(root)
+    print_all_types(root)
 
     # store XML to a string
-    asString = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
+    as_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
 
-    doc = xmltodict.parse(asString)
+    doc = xmltodict.parse(as_string)
 
-    rewriteLocalizedNameAttributes(doc)
+    rewrite_localized_name_attributes(doc)
 
-    rewriteAttributes(doc)
-    rewriteTypes(doc)
+    rewrite_attributes(doc)
+    rewrite_types(doc)
 
-    writeJsonToFile(folderName, "types", doc)
+    write_json_to_file(folder_name, "types", doc)
 
     copilot_examples = generate_copilot_examples(doc)
     # print(copilot_examples)
-    writeCopilotExamplesToFile(folderName, "copilot_examples", copilot_examples)
+    write_copilot_examples_to_file(folder_name, "copilot_examples", copilot_examples)
 
-    print("tokens copilot_examples: " + str(count_tokens_in_file(folderName + "/copilot_examples.js")) +
-          ", types-compressed: " + str(count_tokens_in_file(folderName + "/types-compressed.json")) +
-          ", types-pretty: " + str(count_tokens_in_file(folderName + "/types-pretty.json")))
+    print_token_counts(folder_name)
 
     # q: how to prevent a warning to be printed?
     # a: use the following command to suppress the warning:
     # warnings.simplefilter("ignore", exceptions.SecurityWarning)
 
-def writeJsonToFile(folderName, fileName, object):
-    with open(folderName + '/' + fileName + '-pretty.json', 'w') as file:
-        file.write(json.dumps(object, indent=4))
-    with open(folderName + '/' + fileName + '-compressed.json', 'w') as file:
-        file.write(json.dumps(object, separators=(',', ':')))
 
-    with open(folderName + '/' + fileName + '-pretty.yaml', 'w') as file:
+def write_json_to_file(folder_name, file_name, o):
+    with open(folder_name + '/' + file_name + '-pretty.json', 'w') as f:
+        f.write(json.dumps(o, indent=4))
+    with open(folder_name + '/' + file_name + '-compressed.json', 'w') as f:
+        f.write(json.dumps(o, separators=(',', ':')))
+
+    with open(folder_name + '/' + file_name + '-pretty.yaml', 'w') as f:
         # convert object to yaml and write it to file
         # q: how to convert an object to yaml?
         # a: use the yaml.dump function
-        file.write(yaml.dump(object))
+        f.write(yaml.dump(o))
 
 
-def writeLowCodeScriptsToFile(folderName, fileName, lowCodeScripts):
-    with open(folderName + '/' + fileName + '.js', 'w') as file:
-        for lowCodeScript in lowCodeScripts:
+def write_low_code_scripts_to_file(folder_name, file_name, low_code_scripts):
+    with open(folder_name + '/' + file_name + '.js', 'w') as f:
+        for low_code_script in low_code_scripts:
             # separate the lowCodeScripts by a new line and "---------------------------------------------------"
-            file.write(lowCodeScript + "\n")
-            file.write("\n")
-            file.write("//------------------------------------------------------------------------------------------------------\n")
-            file.write("\n")
+            f.write(low_code_script + "\n")
+            f.write("\n")
+            f.write("//------------------------------------------------------------------------------------------------------\n")
+            f.write("\n")
 
-def writeCopilotExamplesToFile(folderName, fileName, copilot_examples):
-    with open(folderName + '/' + fileName + '.js', 'w') as file:
-        file.write(copilot_examples)
+
+def write_copilot_examples_to_file(folder_name, file_name, copilot_examples):
+    with open(folder_name + '/' + file_name + '.js', 'w') as f:
+        f.write(copilot_examples)

@@ -1,15 +1,15 @@
 import warnings
 
-from utils import runForFolder
+from utils import run_for_folder
 
 # ignore all warnings
 warnings.filterwarnings("ignore")
 
-runForFolder('okr-small')
+run_for_folder('okr-small')
 
-runForFolder('okr')
+run_for_folder('okr')
 
-runForFolder('largeSolutionSAFe')
+run_for_folder('largeSolutionSAFe')
 
 
 
