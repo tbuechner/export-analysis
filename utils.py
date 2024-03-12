@@ -25,6 +25,17 @@ def print_all_types(root):
         print(name.text)
 
 
+def write_types(root, folder_name, file_name):
+    # find all <name> elements of root which sit under a <type> element
+    type_names = []
+    for name in root.findall('.//type/name'):
+        type_names.append(name.text)
+
+    with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
+        for item in type_names:
+            f.write("%s\n" % item)
+
+
 def is_empty(element):
     return (not element.text or element.text.isspace()) and not element.tail and len(element) == 0
 
@@ -361,14 +372,15 @@ def run_for_folder(folder_name):
         if f.endswith('.json') or f.endswith('.js') or f.endswith('.yaml'):
             os.remove(folder_name + '/' + f)
 
-    # read from file name + '/typesToBeRemoved.txt'
-    with open(folder_name + '/typesToBeRemoved.txt') as f:
+    with open(folder_name + '/types-to-be-removed.txt') as f:
         # read each line and store it in a list
         types_to_be_removed = f.read().splitlines()
 
     # Load and parse the XML document
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
+
+    write_types(root, folder_name, 'types-all')
 
     # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
@@ -396,8 +408,7 @@ def run_for_folder(folder_name):
 
     remove_empty_elements(root)
 
-    print ("After removing the types:")
-    print_all_types(root)
+    write_types(root, folder_name, 'types-after-removal')
 
     # store XML to a string
     as_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')

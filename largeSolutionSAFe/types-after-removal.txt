@@ -1,0 +1,11 @@
+cf.cplace.solution.safe.solution
+cf.cplace.solution.safe.programIncrement
+cf.cplace.solution.safe.iteration
+cf.cplace.solution.safe.capability
+cf.cplace.solution.safe.dependency
+cf.cplace.solution.safe.safeMilestone
+cf.cplace.solution.safe.periodStatus
+cf.cplace.solution.safe.flowMetric
+cf.cplace.solution.safe.objective
+cf.cplace.solution.safe.event
+cf.cplace.solution.safe.confidenceVote
