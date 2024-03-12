@@ -1,0 +1,4 @@
+tokens copilot_examples.js: 565
+tokens types-compressed.json: 380
+tokens types-pretty.json: 623
+tokens types-pretty.yaml: 438

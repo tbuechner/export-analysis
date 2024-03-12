@@ -353,23 +353,29 @@ def find_all_widgets(root, parent_map):
     return result
 
 
-def print_token_counts(folder_name):
-    print_token_count_for_file(folder_name, "copilot_examples.js")
-    print_token_count_for_file(folder_name, "types-compressed.json")
-    print_token_count_for_file(folder_name, "types-pretty.json")
-    print_token_count_for_file(folder_name, "types-pretty.yaml")
+def write_token_counts(folder_name):
+    with open(folder_name + '/' + 'token-counts.txt', 'w') as f:
+        write_token_count(f, folder_name, "copilot_examples.js")
+        write_token_count(f, folder_name, "types-compressed.json")
+        write_token_count(f, folder_name, "types-pretty.json")
+        write_token_count(f, folder_name, "types-pretty.yaml")
 
 
-def print_token_count_for_file(folder_name, file_name):
-    print("tokens " + file_name + ": " + str(count_tokens_in_file(folder_name + "/" + file_name)))
+def write_token_count(f, folder_name, file_name):
+    f.write("tokens " + file_name + ": " + str(count_tokens_in_file(folder_name + "/" + file_name)))
+    f.write("\n")
 
 
 def run_for_folder(folder_name):
+
+    print("processing folder: " + folder_name)
 
     # delete all files with name *.json in folder name
     files = os.listdir(folder_name)
     for f in files:
         if f.endswith('.json') or f.endswith('.js') or f.endswith('.yaml'):
+            os.remove(folder_name + '/' + f)
+        if f.endswith('.txt') and (f.startswith('types-all') or f.startswith('types-after-removal') or f.startswith('token-counts')):
             os.remove(folder_name + '/' + f)
 
     with open(folder_name + '/types-to-be-removed.txt') as f:
@@ -426,7 +432,7 @@ def run_for_folder(folder_name):
     # print(copilot_examples)
     write_copilot_examples_to_file(folder_name, "copilot_examples", copilot_examples)
 
-    print_token_counts(folder_name)
+    write_token_counts(folder_name)
 
     # q: how to prevent a warning to be printed?
     # a: use the following command to suppress the warning:
