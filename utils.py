@@ -238,17 +238,26 @@ def return_all_searches(root, parent_map):
         result[i] = search["filters"]
     return result
 
+# q: how to create a type which holds two attributes: type and code?
+# a: use a class and define two attributes: type and code
+class LowCodeScript:
+    def __init__(self, type, code):
+        self.type = type
+        self.code = code
+
 
 def return_all_low_code_scripts(root, parent_map):
     # create a list which will store the text of the elements
     result = []
+    scripts = []
     # iterate over all elements in the tree
     for element in root.iter():
-        # if the name of the element is "cplaceJSScript"
+        if element.text is not None and element.tag == "lowCodeScript":
+            script = LowCodeScript(element.find('scriptType').text, element.find('cplaceJSScript').text)
+            scripts.append(script)
+
         if element.text is not None and element.tag == "cplaceJSScript":
-            # add the text of the element
             result.append(element.text)
-            # print(element.text)
 
 
     # iterate over all elements in the tree
@@ -258,11 +267,18 @@ def return_all_low_code_scripts(root, parent_map):
             text = element.text[1:]
             # parse text as json
             text_as_json = json.loads(text)
+
             # if the key "script" exists in the json
             if "script" in text_as_json:
-                result.append(text_as_json["script"])
+                # print all keys of text_as_json
+                # print(text_as_json.keys())
+                code = text_as_json["script"]
+                result.append(code)
+                script = LowCodeScript('custom_attribute', code)
+                scripts.append(script)
+                # print(text_as_json["script"])
 
-    return result
+    return scripts
 
 
 def find_all_widgets(root, parent_map):
@@ -401,7 +417,7 @@ def run_for_folder(folder_name):
 
     low_code_scripts = return_all_low_code_scripts(root, parent_map)
     # print("LowCodeScripts: ", lowCodeScripts)
-    write_low_code_scripts_to_file(folder_name_generated, "lowCodeScripts", low_code_scripts)
+    write_low_code_scripts_to_file(folder_name_generated, "low-code-scripts", low_code_scripts)
 
     widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
@@ -457,7 +473,7 @@ def write_low_code_scripts_to_file(folder_name, file_name, low_code_scripts):
     with open(folder_name + '/' + file_name + '.js', 'w') as f:
         for low_code_script in low_code_scripts:
             # separate the lowCodeScripts by a new line and "---------------------------------------------------"
-            f.write(low_code_script + "\n")
+            f.write(low_code_script.code + "\n")
             f.write("\n")
             f.write("//------------------------------------------------------------------------------------------------------\n")
             f.write("\n")
