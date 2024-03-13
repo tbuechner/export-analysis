@@ -368,15 +368,16 @@ def write_token_count(f, folder_name, file_name):
 
 def run_for_folder(folder_name):
 
+    folder_name_generated = folder_name + '/generated'
+
     print("processing folder: " + folder_name)
 
-    # delete all files with name *.json in folder name
-    files = os.listdir(folder_name)
-    for f in files:
-        if f.endswith('.json') or f.endswith('.js') or f.endswith('.yaml'):
-            os.remove(folder_name + '/' + f)
-        if f.endswith('.txt') and (f.startswith('types-all') or f.startswith('types-after-removal') or f.startswith('token-counts')):
-            os.remove(folder_name + '/' + f)
+    # delete folder folder_name_generated if it exists with all its content
+    if os.path.exists(folder_name_generated):
+        os.system("rm -r " + folder_name_generated)
+
+    # create folder folder_name_generated
+    os.mkdir(folder_name_generated)
 
     with open(folder_name + '/types-to-be-removed.txt') as f:
         # read each line and store it in a list
@@ -386,25 +387,25 @@ def run_for_folder(folder_name):
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
-    write_types(root, folder_name, 'types-all')
+    write_types(root, folder_name_generated, 'types-all')
 
     # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
 
     searches = return_all_searches(root, parent_map)
     # print("Searches: ", searches)
-    write_json_to_file(folder_name, "searches", searches)
+    write_json_to_file(folder_name_generated, "searches", searches)
 
     searches = searches[:10]
-    write_json_to_file(folder_name, "searches-10", searches)
+    write_json_to_file(folder_name_generated, "searches-10", searches)
 
     low_code_scripts = return_all_low_code_scripts(root, parent_map)
     # print("LowCodeScripts: ", lowCodeScripts)
-    write_low_code_scripts_to_file(folder_name, "lowCodeScripts", low_code_scripts)
+    write_low_code_scripts_to_file(folder_name_generated, "lowCodeScripts", low_code_scripts)
 
     widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
-    write_json_to_file(folder_name, "widgets", widgets)
+    write_json_to_file(folder_name_generated, "widgets", widgets)
 
     remove_generic_elements(root, parent_map)
 
@@ -414,7 +415,7 @@ def run_for_folder(folder_name):
 
     remove_empty_elements(root)
 
-    write_types(root, folder_name, 'types-after-removal')
+    write_types(root, folder_name_generated, 'types-after-removal')
 
     # store XML to a string
     as_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
@@ -426,13 +427,13 @@ def run_for_folder(folder_name):
     rewrite_attributes(doc)
     rewrite_types(doc)
 
-    write_json_to_file(folder_name, "types", doc)
+    write_json_to_file(folder_name_generated, "types", doc)
 
     copilot_examples = generate_copilot_examples(doc)
     # print(copilot_examples)
-    write_copilot_examples_to_file(folder_name, "copilot_examples", copilot_examples)
+    write_copilot_examples_to_file(folder_name_generated, "copilot_examples", copilot_examples)
 
-    write_token_counts(folder_name)
+    write_token_counts(folder_name_generated)
 
     # q: how to prevent a warning to be printed?
     # a: use the following command to suppress the warning:
