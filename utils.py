@@ -238,27 +238,38 @@ def return_all_searches(root, parent_map):
         result[i] = search["filters"]
     return result
 
-# q: how to create a type which holds two attributes: type and code?
-# a: use a class and define two attributes: type and code
+
 class LowCodeScript:
-    def __init__(self, type, code):
-        self.type = type
+    def __init__(self, script_type, code, type_name=None, attributes=None):
+        self.type = script_type
         self.code = code
+        self.attributes = attributes
+        self.type_name = type_name
 
 
 def return_all_low_code_scripts(root, parent_map):
-    # create a list which will store the text of the elements
-    result = []
     scripts = []
-    # iterate over all elements in the tree
+
     for element in root.iter():
         if element.text is not None and element.tag == "lowCodeScript":
-            script = LowCodeScript(element.find('scriptType').text, element.find('cplaceJSScript').text)
+            script_type = element.find('scriptType').text
+            code = element.find('cplaceJSScript').text
+            # q: how to access the parent of an element?
+            # a: use the parent_map to access the parent of an element
+            parent_parent = parent_map[parent_map[element]]
+            type_name = parent_parent.find('name').text
+            script = LowCodeScript(script_type, code, type_name)
+            additional_data = element.find('additionalData')
+            if additional_data is not None:
+                # parse the additionalData as json
+                if additional_data.text is not None:
+                    additional_data_as_json = json.loads(additional_data.text)
+                    # if the key "attributeNames" exists in the json
+                    if "attributeNames" in additional_data_as_json:
+                        # print all keys of additionalDataAsJson
+                        # print(additionalDataAsJson.keys())
+                        script.attributes = additional_data_as_json["attributeNames"]
             scripts.append(script)
-
-        if element.text is not None and element.tag == "cplaceJSScript":
-            result.append(element.text)
-
 
     # iterate over all elements in the tree
     for element in root.iter():
@@ -273,7 +284,6 @@ def return_all_low_code_scripts(root, parent_map):
                 # print all keys of text_as_json
                 # print(text_as_json.keys())
                 code = text_as_json["script"]
-                result.append(code)
                 script = LowCodeScript('custom_attribute', code)
                 scripts.append(script)
                 # print(text_as_json["script"])
@@ -417,7 +427,7 @@ def run_for_folder(folder_name):
 
     low_code_scripts = return_all_low_code_scripts(root, parent_map)
     # print("LowCodeScripts: ", lowCodeScripts)
-    write_low_code_scripts_to_file(folder_name_generated, "low-code-scripts", low_code_scripts)
+    write_low_code_scripts_to_file(folder_name_generated, low_code_scripts)
 
     widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
@@ -469,8 +479,8 @@ def write_json_to_file(folder_name, file_name, o):
         f.write(yaml.dump(o))
 
 
-def write_low_code_scripts_to_file(folder_name, file_name, low_code_scripts):
-    with open(folder_name + '/' + file_name + '.js', 'w') as f:
+def write_low_code_scripts_to_file(folder_name, low_code_scripts):
+    with open(folder_name + '/low-code-scripts.js', 'w') as f:
         for low_code_script in low_code_scripts:
             # separate the lowCodeScripts by a new line and "---------------------------------------------------"
             f.write(low_code_script.code + "\n")
@@ -478,6 +488,9 @@ def write_low_code_scripts_to_file(folder_name, file_name, low_code_scripts):
             f.write("//------------------------------------------------------------------------------------------------------\n")
             f.write("\n")
 
+    # write the low_code_scripts to a json file
+    with open(folder_name + '/low-code-scripts-pretty.json', 'w') as f:
+        f.write(json.dumps([ob.__dict__ for ob in low_code_scripts], indent=4))
 
 def write_copilot_examples_to_file(folder_name, file_name, copilot_examples):
     with open(folder_name + '/' + file_name + '.js', 'w') as f:

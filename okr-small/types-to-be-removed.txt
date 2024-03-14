@@ -15,10 +15,11 @@ cf.cplace.solution.okr.updateKeyResult
 cf.cplace.solution.okr.organizationalUnit
 cf.cplace.solution.okr.topic
 cf.cplace.solution.okr.meeting
-cf.cplace.solution.okr.set
 cf.cplace.solution.okr.priority
 cf.cplace.solution.okr.progress
 cf.cplace.solution.okr.task
 cf.cplace.solution.okr.selectNextCycle
 cf.cplace.solution.okr.cycle
+
+cf.cplace.solution.okr.set
 cf.cplace.solution.okr.keyResult
