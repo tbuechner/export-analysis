@@ -20,6 +20,9 @@ let cyclesDashboardAttribute = cycleType.assertAttribute("cf.cplace.solution.okr
 cyclesDashboardAttribute.setType(Type.LINK);
 cyclesDashboardAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 cyclesDashboardAttribute.setLocalizedNames({"de": "Zyklen Dashboard", "en": "Cycles Dashboard"});
+cyclesDashboardAttribute.setEntityKind("page");
+cyclesDashboardAttribute.setReferenceSameWorkspace(true);
+cyclesDashboardAttribute.setReferenceIsHierarchy(true);
 
 let startAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.start");
 startAttribute.setType(Type.DATE);
@@ -53,6 +56,9 @@ let setAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.set");
 setAttribute.setType(Type.LINK);
 setAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
+setAttribute.setEntityKind("page");
+setAttribute.setReferenceSameWorkspace(true);
+setAttribute.setReferenceIsHierarchy(true);
 
 let accomplishedAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.accomplished");
 accomplishedAttribute.setType(Type.TEXTENUMERATION);
@@ -63,6 +69,9 @@ let cycleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.cycle
 cycleAttribute.setType(Type.LINK);
 cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+cycleAttribute.setEntityKind("page");
+cycleAttribute.setReferenceSameWorkspace(false);
+cycleAttribute.setReferenceIsHierarchy(false);
 
 let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
 descriptionAttribute.setType(Type.RICHSTRING);
@@ -101,46 +110,73 @@ let smallSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.ok
 smallSupportAttribute.setType(Type.LINK);
 smallSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 smallSupportAttribute.setLocalizedNames({"de": "Receive Small Support", "en": "Receive Small Support"});
+smallSupportAttribute.setEntityKind("page");
+smallSupportAttribute.setReferenceSameWorkspace(true);
+smallSupportAttribute.setReferenceIsHierarchy(false);
 
 let bigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.bigSupport");
 bigSupportAttribute.setType(Type.LINK);
 bigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
+bigSupportAttribute.setEntityKind("page");
+bigSupportAttribute.setReferenceSameWorkspace(false);
+bigSupportAttribute.setReferenceIsHierarchy(false);
 
 let giveBigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.giveBigSupport");
 giveBigSupportAttribute.setType(Type.LINK);
 giveBigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 giveBigSupportAttribute.setLocalizedNames({"de": "Give Big Support", "en": "Give Big Support"});
+giveBigSupportAttribute.setEntityKind("page");
+giveBigSupportAttribute.setReferenceSameWorkspace(true);
+giveBigSupportAttribute.setReferenceIsHierarchy(false);
 
 let receiveBigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.receiveBigSupport");
 receiveBigSupportAttribute.setType(Type.LINK);
 receiveBigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 receiveBigSupportAttribute.setLocalizedNames({"de": "Receive Big Support", "en": "Receive Big Support"});
+receiveBigSupportAttribute.setEntityKind("page");
+receiveBigSupportAttribute.setReferenceSameWorkspace(true);
+receiveBigSupportAttribute.setReferenceIsHierarchy(false);
 
 let objectiveAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.objective");
 objectiveAttribute.setType(Type.LINK);
 objectiveAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 objectiveAttribute.setLocalizedNames({"de": "Objective", "en": "Objective"});
+objectiveAttribute.setEntityKind("page");
+objectiveAttribute.setReferenceSameWorkspace(true);
+objectiveAttribute.setReferenceIsHierarchy(true);
 
 let progressAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.progress");
 progressAttribute.setType(Type.LINK);
 progressAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 progressAttribute.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
+progressAttribute.setEntityKind("page");
+progressAttribute.setReferenceSameWorkspace(true);
+progressAttribute.setReferenceIsHierarchy(false);
 
 let setAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.set");
 setAttribute.setType(Type.LINK);
 setAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
+setAttribute.setEntityKind("page");
+setAttribute.setReferenceSameWorkspace(false);
+setAttribute.setReferenceIsHierarchy(false);
 
 let cycleAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.cycle");
 cycleAttribute.setType(Type.LINK);
 cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+cycleAttribute.setEntityKind("page");
+cycleAttribute.setReferenceSameWorkspace(false);
+cycleAttribute.setReferenceIsHierarchy(false);
 
 let organizationalUnitAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.organizationalUnit");
 organizationalUnitAttribute.setType(Type.LINK);
 organizationalUnitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 organizationalUnitAttribute.setLocalizedNames({"de": "Organsationseinheit", "en": "Organizational Unit"});
+organizationalUnitAttribute.setEntityKind("page");
+organizationalUnitAttribute.setReferenceSameWorkspace(false);
+organizationalUnitAttribute.setReferenceIsHierarchy(false);
 
 let lastUpdateAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.lastUpdate");
 lastUpdateAttribute.setType(Type.DATE);
@@ -174,26 +210,41 @@ let keyResultAttribute = progressType.assertAttribute("cf.cplace.solution.okr.ke
 keyResultAttribute.setType(Type.LINK);
 keyResultAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 keyResultAttribute.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
+keyResultAttribute.setEntityKind("page");
+keyResultAttribute.setReferenceSameWorkspace(true);
+keyResultAttribute.setReferenceIsHierarchy(false);
 
 let cycleAttribute = progressType.assertAttribute("cf.cplace.solution.okr.cycle");
 cycleAttribute.setType(Type.LINK);
 cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+cycleAttribute.setEntityKind("page");
+cycleAttribute.setReferenceSameWorkspace(false);
+cycleAttribute.setReferenceIsHierarchy(false);
 
 let objectiveAttribute = progressType.assertAttribute("cf.cplace.solution.okr.objective");
 objectiveAttribute.setType(Type.LINK);
 objectiveAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 objectiveAttribute.setLocalizedNames({"de": "Objective", "en": "Objective"});
+objectiveAttribute.setEntityKind("page");
+objectiveAttribute.setReferenceSameWorkspace(false);
+objectiveAttribute.setReferenceIsHierarchy(false);
 
 let smallSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.smallSupport");
 smallSupportAttribute.setType(Type.LINK);
 smallSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 smallSupportAttribute.setLocalizedNames({"de": "Small Support", "en": "Small Support"});
+smallSupportAttribute.setEntityKind("page");
+smallSupportAttribute.setReferenceSameWorkspace(false);
+smallSupportAttribute.setReferenceIsHierarchy(false);
 
 let bigSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.bigSupport");
 bigSupportAttribute.setType(Type.LINK);
 bigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
+bigSupportAttribute.setEntityKind("page");
+bigSupportAttribute.setReferenceSameWorkspace(false);
+bigSupportAttribute.setReferenceIsHierarchy(false);
 
 let progressIndicatorAttribute = progressType.assertAttribute("cf.cplace.solution.okr.progressIndicator");
 progressIndicatorAttribute.setType(Type.TEXTENUMERATION);
@@ -219,6 +270,9 @@ let setAttribute = progressType.assertAttribute("cf.cplace.solution.okr.set");
 setAttribute.setType(Type.LINK);
 setAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
+setAttribute.setEntityKind("page");
+setAttribute.setReferenceSameWorkspace(false);
+setAttribute.setReferenceIsHierarchy(false);
 
 let taskType = workspace.assertType("cf.cplace.solution.okr.task");
 taskType.setLocalizedNames({"de": "Aufgabe", "en": "Task"});
@@ -232,6 +286,9 @@ let responsibleAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.resp
 responsibleAttribute.setType(Type.LINK);
 responsibleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 responsibleAttribute.setLocalizedNames({"de": "Verantwortliche(r)", "en": "Responsible"});
+responsibleAttribute.setEntityKind("person");
+responsibleAttribute.setReferenceSameWorkspace(false);
+responsibleAttribute.setReferenceIsHierarchy(false);
 
 let descriptionAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.description");
 descriptionAttribute.setType(Type.TEXT);
@@ -252,6 +309,9 @@ let keyResultAttribute = taskType.assertAttribute("cf.cplace.solution.okr.keyRes
 keyResultAttribute.setType(Type.LINK);
 keyResultAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 keyResultAttribute.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
+keyResultAttribute.setEntityKind("page");
+keyResultAttribute.setReferenceSameWorkspace(true);
+keyResultAttribute.setReferenceIsHierarchy(false);
 
 let escalationLevelAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.escalationLevel");
 escalationLevelAttribute.setType(Type.TEXTENUMERATION);
@@ -265,3 +325,6 @@ let nextCycleAttribute = selectNextCycleType.assertAttribute("cf.cplace.solution
 nextCycleAttribute.setType(Type.LINK);
 nextCycleAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 nextCycleAttribute.setLocalizedNames({"de": "N\u00e4chster Zyklus", "en": "Next Cycle"});
+nextCycleAttribute.setEntityKind("page");
+nextCycleAttribute.setReferenceSameWorkspace(true);
+nextCycleAttribute.setReferenceIsHierarchy(false);

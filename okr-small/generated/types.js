@@ -15,6 +15,9 @@ let setAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.set");
 setAttribute.setType(Type.LINK);
 setAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
+setAttribute.setEntityKind("page");
+setAttribute.setReferenceSameWorkspace(true);
+setAttribute.setReferenceIsHierarchy(true);
 
 let accomplishedAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.accomplished");
 accomplishedAttribute.setType(Type.TEXTENUMERATION);
@@ -25,6 +28,9 @@ let cycleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.cycle
 cycleAttribute.setType(Type.LINK);
 cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+cycleAttribute.setEntityKind("page");
+cycleAttribute.setReferenceSameWorkspace(false);
+cycleAttribute.setReferenceIsHierarchy(false);
 
 let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
 descriptionAttribute.setType(Type.RICHSTRING);

@@ -10,31 +10,49 @@ let solutionTrainEngineerAttribute = solutionType.assertAttribute("cf.cplace.sol
 solutionTrainEngineerAttribute.setType(Type.LINK);
 solutionTrainEngineerAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 solutionTrainEngineerAttribute.setLocalizedNames({"de": "Solution Train Engineer", "en": "Solution Train Engineer"});
+solutionTrainEngineerAttribute.setEntityKind("person");
+solutionTrainEngineerAttribute.setReferenceSameWorkspace(false);
+solutionTrainEngineerAttribute.setReferenceIsHierarchy(false);
 
 let solutionTrainArchitectAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.solutionTrainArchitect");
 solutionTrainArchitectAttribute.setType(Type.LINK);
 solutionTrainArchitectAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 solutionTrainArchitectAttribute.setLocalizedNames({"de": "Solution Train Architekt", "en": "Solution Train Architect"});
+solutionTrainArchitectAttribute.setEntityKind("person");
+solutionTrainArchitectAttribute.setReferenceSameWorkspace(false);
+solutionTrainArchitectAttribute.setReferenceIsHierarchy(false);
 
 let solutionManagementAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.solutionManagement");
 solutionManagementAttribute.setType(Type.LINK);
 solutionManagementAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 solutionManagementAttribute.setLocalizedNames({"de": "Solution Management", "en": "Solution Management"});
+solutionManagementAttribute.setEntityKind("person");
+solutionManagementAttribute.setReferenceSameWorkspace(false);
+solutionManagementAttribute.setReferenceIsHierarchy(false);
 
 let previousPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.previousPi");
 previousPiAttribute.setType(Type.LINK);
 previousPiAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 previousPiAttribute.setLocalizedNames({"de": "Vorheriges PI", "en": "Previous PI"});
+previousPiAttribute.setEntityKind("page");
+previousPiAttribute.setReferenceSameWorkspace(true);
+previousPiAttribute.setReferenceIsHierarchy(false);
 
 let currentPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.currentPi");
 currentPiAttribute.setType(Type.LINK);
 currentPiAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 currentPiAttribute.setLocalizedNames({"de": "Laufendes PI", "en": "Current PI"});
+currentPiAttribute.setEntityKind("page");
+currentPiAttribute.setReferenceSameWorkspace(true);
+currentPiAttribute.setReferenceIsHierarchy(false);
 
 let nextPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.nextPi");
 nextPiAttribute.setType(Type.LINK);
 nextPiAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 nextPiAttribute.setLocalizedNames({"de": "N\u00e4chstes PI", "en": "Next PI"});
+nextPiAttribute.setEntityKind("page");
+nextPiAttribute.setReferenceSameWorkspace(true);
+nextPiAttribute.setReferenceIsHierarchy(false);
 
 let funnelWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.funnelWIPLimit");
 funnelWIPLimitAttribute.setType(Type.NUMBER);
@@ -80,6 +98,9 @@ let horizonAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.hor
 horizonAttribute.setType(Type.LINK);
 horizonAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 horizonAttribute.setLocalizedNames({"de": "Horizon", "en": "Horizon"});
+horizonAttribute.setEntityKind("page");
+horizonAttribute.setReferenceSameWorkspace(false);
+horizonAttribute.setReferenceIsHierarchy(false);
 
 let programIncrementType = workspace.assertType("cf.cplace.solution.safe.programIncrement");
 programIncrementType.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
@@ -93,6 +114,9 @@ let solutionAttribute = programIncrementType.assertAttribute("cf.cplace.solution
 solutionAttribute.setType(Type.LINK);
 solutionAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+solutionAttribute.setEntityKind("page");
+solutionAttribute.setReferenceSameWorkspace(true);
+solutionAttribute.setReferenceIsHierarchy(false);
 
 let startDateAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.startDate");
 startDateAttribute.setType(Type.DATE);
@@ -108,6 +132,9 @@ let predecessorAttribute = programIncrementType.assertAttribute("cf.cplace.solut
 predecessorAttribute.setType(Type.LINK);
 predecessorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 predecessorAttribute.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
+predecessorAttribute.setEntityKind("page");
+predecessorAttribute.setReferenceSameWorkspace(true);
+predecessorAttribute.setReferenceIsHierarchy(false);
 
 let periodStatusAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.periodStatus");
 periodStatusAttribute.setType(Type.TEXTENUMERATION);
@@ -118,6 +145,9 @@ let confidenceVoteAttribute = programIncrementType.assertAttribute("cf.cplace.so
 confidenceVoteAttribute.setType(Type.LINK);
 confidenceVoteAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 confidenceVoteAttribute.setLocalizedNames({"en": "Confidence Vote"});
+confidenceVoteAttribute.setEntityKind("page");
+confidenceVoteAttribute.setReferenceSameWorkspace(true);
+confidenceVoteAttribute.setReferenceIsHierarchy(false);
 
 let capacityAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.capacity");
 capacityAttribute.setType(Type.NUMBER);
@@ -146,6 +176,9 @@ let programIncrementAttribute = iterationType.assertAttribute("cf.cplace.solutio
 programIncrementAttribute.setType(Type.LINK);
 programIncrementAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 programIncrementAttribute.setLocalizedNames({"de": "Programminkrement", "en": "Program Increment"});
+programIncrementAttribute.setEntityKind("page");
+programIncrementAttribute.setReferenceSameWorkspace(true);
+programIncrementAttribute.setReferenceIsHierarchy(false);
 
 let startDateAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.startDate");
 startDateAttribute.setType(Type.DATE);
@@ -161,6 +194,9 @@ let predecessorAttribute = iterationType.assertAttribute("cf.cplace.solution.saf
 predecessorAttribute.setType(Type.LINK);
 predecessorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 predecessorAttribute.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
+predecessorAttribute.setEntityKind("page");
+predecessorAttribute.setReferenceSameWorkspace(true);
+predecessorAttribute.setReferenceIsHierarchy(false);
 
 let capabilityType = workspace.assertType("cf.cplace.solution.safe.capability");
 capabilityType.setLocalizedNames({"de": "Capability", "en": "Capability"});
@@ -174,6 +210,9 @@ let referenceAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe
 referenceAttribute.setType(Type.LINK);
 referenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 referenceAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+referenceAttribute.setEntityKind("page");
+referenceAttribute.setReferenceSameWorkspace(true);
+referenceAttribute.setReferenceIsHierarchy(false);
 
 let descriptionAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.description");
 descriptionAttribute.setType(Type.RICHSTRING);
@@ -219,6 +258,9 @@ let programIncrementAttribute = capabilityType.assertAttribute("cf.cplace.soluti
 programIncrementAttribute.setType(Type.LINK);
 programIncrementAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 programIncrementAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+programIncrementAttribute.setEntityKind("page");
+programIncrementAttribute.setReferenceSameWorkspace(true);
+programIncrementAttribute.setReferenceIsHierarchy(false);
 
 let actualStartDateAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.actualStartDate");
 actualStartDateAttribute.setType(Type.DATE);
@@ -239,16 +281,25 @@ let programAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.p
 programAttribute.setType(Type.LINK);
 programAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 programAttribute.setLocalizedNames({"de": "Program", "en": "Program"});
+programAttribute.setEntityKind("page");
+programAttribute.setReferenceSameWorkspace(false);
+programAttribute.setReferenceIsHierarchy(false);
 
 let capabilityownerAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.capabilityowner");
 capabilityownerAttribute.setType(Type.LINK);
 capabilityownerAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 capabilityownerAttribute.setLocalizedNames({"de": "Capability Owner", "en": "Capability Owner"});
+capabilityownerAttribute.setEntityKind("person");
+capabilityownerAttribute.setReferenceSameWorkspace(false);
+capabilityownerAttribute.setReferenceIsHierarchy(false);
 
 let portfolioEpicAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.portfolioEpic");
 portfolioEpicAttribute.setType(Type.LINK);
 portfolioEpicAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 portfolioEpicAttribute.setLocalizedNames({"en": "Portfolio Epic"});
+portfolioEpicAttribute.setEntityKind("page");
+portfolioEpicAttribute.setReferenceSameWorkspace(false);
+portfolioEpicAttribute.setReferenceIsHierarchy(false);
 
 let solutionShortNameAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.solutionShortName");
 solutionShortNameAttribute.setType(Type.TEXT);
@@ -269,6 +320,9 @@ let iterationAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe
 iterationAttribute.setType(Type.LINK);
 iterationAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 iterationAttribute.setLocalizedNames({"de": "Iterations", "en": "Iterations"});
+iterationAttribute.setEntityKind("page");
+iterationAttribute.setReferenceSameWorkspace(true);
+iterationAttribute.setReferenceIsHierarchy(false);
 
 let definitionOfReadyAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.definitionOfReady");
 definitionOfReadyAttribute.setType(Type.BOOLEAN);
@@ -299,6 +353,9 @@ let featuresAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.
 featuresAttribute.setType(Type.LINK);
 featuresAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
 featuresAttribute.setLocalizedNames({"de": "Features", "en": "Features"});
+featuresAttribute.setEntityKind("page");
+featuresAttribute.setReferenceSameWorkspace(false);
+featuresAttribute.setReferenceIsHierarchy(false);
 
 let dependencyType = workspace.assertType("cf.cplace.solution.safe.dependency");
 dependencyType.setLocalizedNames({"de": "Abh\u00e4ngigkeit", "en": "Dependency"});
@@ -312,6 +369,9 @@ let successorAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe
 successorAttribute.setType(Type.LINK);
 successorAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 successorAttribute.setLocalizedNames({"de": "A", "en": "A"});
+successorAttribute.setEntityKind("page");
+successorAttribute.setReferenceSameWorkspace(false);
+successorAttribute.setReferenceIsHierarchy(false);
 
 let typeAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.type");
 typeAttribute.setType(Type.TEXTENUMERATION);
@@ -322,6 +382,9 @@ let predecessorAttribute = dependencyType.assertAttribute("cf.cplace.solution.sa
 predecessorAttribute.setType(Type.LINK);
 predecessorAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 predecessorAttribute.setLocalizedNames({"de": "B", "en": "B"});
+predecessorAttribute.setEntityKind("page");
+predecessorAttribute.setReferenceSameWorkspace(false);
+predecessorAttribute.setReferenceIsHierarchy(false);
 
 let statusAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.status");
 statusAttribute.setType(Type.TEXTENUMERATION);
@@ -365,6 +428,9 @@ let relevantForAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution
 relevantForAttribute.setType(Type.LINK);
 relevantForAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 relevantForAttribute.setLocalizedNames({"de": "Relevant F\u00fcr", "en": "Relevant For"});
+relevantForAttribute.setEntityKind("page");
+relevantForAttribute.setReferenceSameWorkspace(false);
+relevantForAttribute.setReferenceIsHierarchy(false);
 
 let plannedStartAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.plannedStart");
 plannedStartAttribute.setType(Type.DATE);
@@ -401,11 +467,17 @@ let ReferenceAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe
 ReferenceAttribute.setType(Type.LINK);
 ReferenceAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+ReferenceAttribute.setEntityKind("page");
+ReferenceAttribute.setReferenceSameWorkspace(false);
+ReferenceAttribute.setReferenceIsHierarchy(false);
 
 let timeboxAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.timebox");
 timeboxAttribute.setType(Type.LINK);
 timeboxAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 timeboxAttribute.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
+timeboxAttribute.setEntityKind("page");
+timeboxAttribute.setReferenceSameWorkspace(false);
+timeboxAttribute.setReferenceIsHierarchy(false);
 
 let jsonMetricDataAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.jsonMetricData");
 jsonMetricDataAttribute.setType(Type.LONGTEXT);
@@ -424,6 +496,9 @@ let timeboxAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.ti
 timeboxAttribute.setType(Type.LINK);
 timeboxAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 timeboxAttribute.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
+timeboxAttribute.setEntityKind("page");
+timeboxAttribute.setReferenceSameWorkspace(false);
+timeboxAttribute.setReferenceIsHierarchy(false);
 
 let SAFeLevelAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel");
 SAFeLevelAttribute.setType(Type.TEXTENUMERATION);
@@ -434,6 +509,9 @@ let ReferenceAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.
 ReferenceAttribute.setType(Type.LINK);
 ReferenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+ReferenceAttribute.setEntityKind("page");
+ReferenceAttribute.setReferenceSameWorkspace(false);
+ReferenceAttribute.setReferenceIsHierarchy(false);
 
 let businessValueAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.businessValue");
 businessValueAttribute.setType(Type.NUMBERENUMERATION);
@@ -477,6 +555,9 @@ let solutionAttribute = eventType.assertAttribute("cf.cplace.solution.safe.solut
 solutionAttribute.setType(Type.LINK);
 solutionAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+solutionAttribute.setEntityKind("page");
+solutionAttribute.setReferenceSameWorkspace(true);
+solutionAttribute.setReferenceIsHierarchy(false);
 
 let confidenceVoteType = workspace.assertType("cf.cplace.solution.safe.confidenceVote");
 confidenceVoteType.setLocalizedNames({"de": "Confidence Vote", "en": "Confidence Vote"});
@@ -485,6 +566,9 @@ let PIAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.co
 PIAttribute.setType(Type.LINK);
 PIAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 PIAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+PIAttribute.setEntityKind("page");
+PIAttribute.setReferenceSameWorkspace(true);
+PIAttribute.setReferenceIsHierarchy(false);
 
 let resultAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.result");
 resultAttribute.setType(Type.TEXTENUMERATION);
@@ -520,3 +604,6 @@ let solutionAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.s
 solutionAttribute.setType(Type.LINK);
 solutionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+solutionAttribute.setEntityKind("page");
+solutionAttribute.setReferenceSameWorkspace(true);
+solutionAttribute.setReferenceIsHierarchy(false);
