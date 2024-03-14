@@ -131,29 +131,45 @@ def convert_json_to_js(data, use_chained_calls=False):
             # convert the first character to lower case
             attr_name_variable_name = attr_name_variable_name[0].lower() + attr_name_variable_name[1:]
 
-            js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}");\n'
-            js_code += f'{attr_name_variable_name}.setType(Type.{type_constraint.upper()});\n'
-            js_code += f'{attr_name_variable_name}.setMultiplicity(Multiplicity.{multiplicity});\n'
-            js_code += f'{attr_name_variable_name}.setLocalizedNames({json.dumps(localized_name)});\n'
+            if use_chained_calls:
+                js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}");\n'
+                js_code += f'{attr_name_variable_name}.setType(Type.{type_constraint.upper()})'
+                js_code += f'.setMultiplicity(Multiplicity.{multiplicity});\n'
+                js_code += f'{attr_name_variable_name}.setLocalizedNames({json.dumps(localized_name)});'
+            else:
+                js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}");\n'
+                js_code += f'{attr_name_variable_name}.setType(Type.{type_constraint.upper()});\n'
+                js_code += f'{attr_name_variable_name}.setMultiplicity(Multiplicity.{multiplicity});\n'
+                js_code += f'{attr_name_variable_name}.setLocalizedNames({json.dumps(localized_name)});\n'
 
             if type_constraint == "Link":
                 link_entity_kind = attr_def["linkEntityKind"]
                 link_same_workspace = "true" if attr_def["linkSameWorkspace"].lower() == "true" else "false"
                 link_is_hierarchy = "true" if attr_def["linkIsHierarchy"].lower() == "true" else "false"
-
-                js_code += f'{attr_name_variable_name}.setEntityKind("{link_entity_kind}");\n'
-                js_code += f'{attr_name_variable_name}.setReferenceSameWorkspace({link_same_workspace});\n'
-                js_code += f'{attr_name_variable_name}.setReferenceIsHierarchy({link_is_hierarchy});\n'
+                if use_chained_calls:
+                    js_code += f'\n{attr_name_variable_name}.setEntityKind("{link_entity_kind}")'
+                    js_code += f'.setReferenceSameWorkspace({link_same_workspace})'
+                    js_code += f'.setReferenceIsHierarchy({link_is_hierarchy});'
+                else:
+                    js_code += f'{attr_name_variable_name}.setEntityKind("{link_entity_kind}");\n'
+                    js_code += f'{attr_name_variable_name}.setReferenceSameWorkspace({link_same_workspace});\n'
+                    js_code += f'{attr_name_variable_name}.setReferenceIsHierarchy({link_is_hierarchy});\n'
 
             if "derivable" in attr_def:
                 derivable_config = attr_def["derivable"]
                 referencing_attribute_name = derivable_config["referencingAttributeName"]
                 referenced_attribute_name = derivable_config["referencedAttributeName"]
+                if use_chained_calls:
+                    js_code += f'\n{attr_name_variable_name}.setDerivableReferencingAttributeName("{referencing_attribute_name}")'
+                    js_code += f'.setDerivableReferencedAttributeName("{referenced_attribute_name}");'
+                else:
+                    js_code += f'{attr_name_variable_name}.setDerivableReferencingAttributeName("{referencing_attribute_name}");\n'
+                    js_code += f'{attr_name_variable_name}.setDerivableReferencedAttributeName("{referenced_attribute_name}");\n'
 
-                js_code += f'{attr_name_variable_name}.setDerivableReferencingAttributeName("{referencing_attribute_name}");\n'
-                js_code += f'{attr_name_variable_name}.setDerivableReferencedAttributeName("{referenced_attribute_name}");\n'
+            if use_chained_calls:
+                js_code += f'\n\n'
+            else:
+                js_code += f'\n'
 
-            js_code += f'\n'
-
-# Remove the last two newlines for cleaner ouput
     return js_code.rstrip('\n')
+
