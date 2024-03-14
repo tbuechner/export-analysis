@@ -106,7 +106,7 @@ function createPage() {
 
     return snippet
 
-def convert_json_to_js(data):
+def convert_json_to_js(data, use_chained_calls=False):
     js_code = ""
     for type_def in data["export"]["workspace"]["types"]:
         type_name = type_def["name"]
