@@ -1,3 +1,4 @@
+import json
 import re
 
 def convertToSnakeUpperCase(input):
@@ -55,8 +56,6 @@ function createPage() {
 
 """
 
-
-
     types = data['export']['workspace']['types']
     # print("type of types: " + str(type(types)))
 
@@ -95,8 +94,6 @@ function createPage() {
         # q: how to escape "/" in a f-string?
         #
 
-
-
         snippet += f"// --- start: Constants for Type '{fully_qualified_type_name}' ---\n"
         snippet += f"const TYPE_{simple_type_name_SnakeCase} = '{fully_qualified_type_name}';\n"
         for attr in attributes:
@@ -109,29 +106,28 @@ function createPage() {
 
     return snippet
 
+def convert_json_to_js(data):
+    js_code = ""
+    for type_def in data["export"]["workspace"]["types"]:
+        type_name = type_def["name"]
+        localized_name_singular = type_def["localizedNameSingular"]
+        js_code += f'const {type_name.split(".")[-1]} = workspace.assertType("{type_name}");\n'
+        js_code += f'{type_name.split(".")[-1]}.setLocalizedNames({json.dumps(localized_name_singular)});\n\n'
 
+        for attr_def in type_def["attributeDefinitions"]:
+            attr_name = attr_def["name"]
+            localized_name = attr_def["localizedName"]
+            m = attr_def["multiplicity"]
+            if m is not None:
+                multiplicity = attr_def["multiplicity"].replace("exactlyOne", "EXACTLY_ONE").replace("maximalOne", "AT_MOST_ONE").replace("atLeastOne", "AT_LEAST_ONE")
+            else:
+                multiplicity = "ANY_NUMBER"
+            type_constraint = attr_def["typeConstraint"]
 
+            js_code += f'const {attr_name.split(".")[-1]} = {type_name.split(".")[-1]}.assertAttribute("{attr_name}");\n'
+            js_code += f'{attr_name.split(".")[-1]}.setType(Type.{type_constraint.upper()});\n'
+            js_code += f'{attr_name.split(".")[-1]}.setMultiplicity(Multiplicity.{multiplicity});\n'
+            js_code += f'{attr_name.split(".")[-1]}.setLocalizedNames({json.dumps(localized_name)});\n\n'
 
-
-
-
-
-
-
-
-
-# This function is designed to iterate over each type in the given data model,
-# construct a function snippet for each, and then gather these snippets into a list.
-# Below is an example output for the "cf.cplace.solution.okr.cycle" type:
-
-"""
-function examples_cycle(order) {
-    const year = order.get('cf.cplace.solution.okr.year');
-    const quarter = order.get('cf.cplace.solution.okr.quarter');
-    const status = order.get('cf.cplace.solution.okr.status');
-    const cyclesDashboard = order.get('cf.cplace.solution.okr.cyclesDashboard');
-    const start = order.get('cf.cplace.solution.okr.start');
-    const end = order.get('cf.cplace.solution.okr.end');
-    const statusForNameGenerationPattern = order.get('cf.cplace.solution.okr.statusForNameGenerationPattern');
-}
-"""
+    # Remove the last two newlines for cleaner ouput
+    return js_code.rstrip('\n')

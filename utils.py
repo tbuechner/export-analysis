@@ -8,7 +8,7 @@ import os
 import yaml
 
 
-from jsonToCode import generate_copilot_examples
+from jsonToCode import generate_copilot_examples, convert_json_to_js
 from tokenizer import count_large_files, count_tokens_in_file
 
 
@@ -385,6 +385,7 @@ def write_token_counts(folder_name):
         write_token_count(f, folder_name, "types-compressed.json")
         write_token_count(f, folder_name, "types-pretty.json")
         write_token_count(f, folder_name, "types-pretty.yaml")
+        write_token_count(f, folder_name, "types.js")
 
 
 def write_token_count(f, folder_name, file_name):
@@ -457,7 +458,10 @@ def run_for_folder(folder_name):
 
     copilot_examples = generate_copilot_examples(doc)
     # print(copilot_examples)
-    write_copilot_examples_to_file(folder_name_generated, "copilot_examples", copilot_examples)
+    write_to_file(folder_name_generated, "copilot_examples.js", copilot_examples)
+
+    js_representation = convert_json_to_js(doc)
+    write_to_file(folder_name_generated, "types.js", js_representation)
 
     write_token_counts(folder_name_generated)
 
@@ -492,6 +496,8 @@ def write_low_code_scripts_to_file(folder_name, low_code_scripts):
     with open(folder_name + '/low-code-scripts-pretty.json', 'w') as f:
         f.write(json.dumps([ob.__dict__ for ob in low_code_scripts], indent=4))
 
-def write_copilot_examples_to_file(folder_name, file_name, copilot_examples):
-    with open(folder_name + '/' + file_name + '.js', 'w') as f:
-        f.write(copilot_examples)
+
+def write_to_file(folder_name, file_name, content):
+    with open(folder_name + '/' + file_name, 'w') as f:
+        f.write(content)
+
