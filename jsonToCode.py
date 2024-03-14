@@ -111,8 +111,9 @@ def convert_json_to_js(data):
     for type_def in data["export"]["workspace"]["types"]:
         type_name = type_def["name"]
         localized_name_singular = type_def["localizedNameSingular"]
-        js_code += f'const {type_name.split(".")[-1]} = workspace.assertType("{type_name}");\n'
-        js_code += f'{type_name.split(".")[-1]}.setLocalizedNames({json.dumps(localized_name_singular)});\n\n'
+        type_name_variable_name = type_name.split(".")[-1] + "Type"
+        js_code += f'let {type_name_variable_name} = workspace.assertType("{type_name}");\n'
+        js_code += f'{type_name_variable_name}.setLocalizedNames({json.dumps(localized_name_singular)});\n\n'
 
         for attr_def in type_def["attributeDefinitions"]:
             attr_name = attr_def["name"]
@@ -124,10 +125,11 @@ def convert_json_to_js(data):
                 multiplicity = "ANY_NUMBER"
             type_constraint = attr_def["typeConstraint"]
 
-            js_code += f'const {attr_name.split(".")[-1]} = {type_name.split(".")[-1]}.assertAttribute("{attr_name}");\n'
-            js_code += f'{attr_name.split(".")[-1]}.setType(Type.{type_constraint.upper()});\n'
-            js_code += f'{attr_name.split(".")[-1]}.setMultiplicity(Multiplicity.{multiplicity});\n'
-            js_code += f'{attr_name.split(".")[-1]}.setLocalizedNames({json.dumps(localized_name)});\n\n'
+            attr_name_variable_name = attr_name.split(".")[-1] + "Attribute"
+            js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}");\n'
+            js_code += f'{attr_name_variable_name}.setType(Type.{type_constraint.upper()});\n'
+            js_code += f'{attr_name_variable_name}.setMultiplicity(Multiplicity.{multiplicity});\n'
+            js_code += f'{attr_name_variable_name}.setLocalizedNames({json.dumps(localized_name)});\n\n'
 
     # Remove the last two newlines for cleaner ouput
     return js_code.rstrip('\n')

@@ -1,267 +1,267 @@
-const cycle = workspace.assertType("cf.cplace.solution.okr.cycle");
-cycle.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+let cycleType = workspace.assertType("cf.cplace.solution.okr.cycle");
+cycleType.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 
-const year = cycle.assertAttribute("cf.cplace.solution.okr.year");
-year.setType(Type.TEXT);
-year.setMultiplicity(Multiplicity.EXACTLY_ONE);
-year.setLocalizedNames({"de": "Jahr", "en": "Year"});
+let yearAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.year");
+yearAttribute.setType(Type.TEXT);
+yearAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+yearAttribute.setLocalizedNames({"de": "Jahr", "en": "Year"});
 
-const quarter = cycle.assertAttribute("cf.cplace.solution.okr.quarter");
-quarter.setType(Type.TEXT);
-quarter.setMultiplicity(Multiplicity.EXACTLY_ONE);
-quarter.setLocalizedNames({"de": "Quartal", "en": "Quarter"});
+let quarterAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.quarter");
+quarterAttribute.setType(Type.TEXT);
+quarterAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+quarterAttribute.setLocalizedNames({"de": "Quartal", "en": "Quarter"});
 
-const status = cycle.assertAttribute("cf.cplace.solution.okr.status");
-status.setType(Type.TEXTENUMERATION);
-status.setMultiplicity(Multiplicity.EXACTLY_ONE);
-status.setLocalizedNames({"de": "Status", "en": "Status"});
+let statusAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.status");
+statusAttribute.setType(Type.TEXTENUMERATION);
+statusAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+statusAttribute.setLocalizedNames({"de": "Status", "en": "Status"});
 
-const cyclesDashboard = cycle.assertAttribute("cf.cplace.solution.okr.cyclesDashboard");
-cyclesDashboard.setType(Type.LINK);
-cyclesDashboard.setMultiplicity(Multiplicity.AT_MOST_ONE);
-cyclesDashboard.setLocalizedNames({"de": "Zyklen Dashboard", "en": "Cycles Dashboard"});
+let cyclesDashboardAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.cyclesDashboard");
+cyclesDashboardAttribute.setType(Type.LINK);
+cyclesDashboardAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+cyclesDashboardAttribute.setLocalizedNames({"de": "Zyklen Dashboard", "en": "Cycles Dashboard"});
 
-const start = cycle.assertAttribute("cf.cplace.solution.okr.start");
-start.setType(Type.DATE);
-start.setMultiplicity(Multiplicity.AT_MOST_ONE);
-start.setLocalizedNames({"de": "Start", "en": "Start"});
+let startAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.start");
+startAttribute.setType(Type.DATE);
+startAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+startAttribute.setLocalizedNames({"de": "Start", "en": "Start"});
 
-const end = cycle.assertAttribute("cf.cplace.solution.okr.end");
-end.setType(Type.DATE);
-end.setMultiplicity(Multiplicity.AT_MOST_ONE);
-end.setLocalizedNames({"de": "Ende", "en": "End"});
+let endAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.end");
+endAttribute.setType(Type.DATE);
+endAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+endAttribute.setLocalizedNames({"de": "Ende", "en": "End"});
 
-const statusForNameGenerationPattern = cycle.assertAttribute("cf.cplace.solution.okr.statusForNameGenerationPattern");
-statusForNameGenerationPattern.setType(Type.TEXT);
-statusForNameGenerationPattern.setMultiplicity(Multiplicity.AT_MOST_ONE);
-statusForNameGenerationPattern.setLocalizedNames({"de": "Status f\u00fcr die Namensgenerierung", "en": "Status for name generation pattern"});
+let statusForNameGenerationPatternAttribute = cycleType.assertAttribute("cf.cplace.solution.okr.statusForNameGenerationPattern");
+statusForNameGenerationPatternAttribute.setType(Type.TEXT);
+statusForNameGenerationPatternAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+statusForNameGenerationPatternAttribute.setLocalizedNames({"de": "Status f\u00fcr die Namensgenerierung", "en": "Status for name generation pattern"});
 
-const objective = workspace.assertType("cf.cplace.solution.okr.objective");
-objective.setLocalizedNames({"de": "Objective", "en": "Objective"});
+let objectiveType = workspace.assertType("cf.cplace.solution.okr.objective");
+objectiveType.setLocalizedNames({"de": "Objective", "en": "Objective"});
 
-const number = objective.assertAttribute("cf.cplace.solution.okr.number");
-number.setType(Type.NUMBER);
-number.setMultiplicity(Multiplicity.EXACTLY_ONE);
-number.setLocalizedNames({"de": "Nummer", "en": "Number"});
+let numberAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.number");
+numberAttribute.setType(Type.NUMBER);
+numberAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+numberAttribute.setLocalizedNames({"de": "Nummer", "en": "Number"});
 
-const title = objective.assertAttribute("cf.cplace.solution.okr.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
+let titleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
 
-const set = objective.assertAttribute("cf.cplace.solution.okr.set");
-set.setType(Type.LINK);
-set.setMultiplicity(Multiplicity.EXACTLY_ONE);
-set.setLocalizedNames({"de": "Set", "en": "Set"});
+let setAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.set");
+setAttribute.setType(Type.LINK);
+setAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 
-const accomplished = objective.assertAttribute("cf.cplace.solution.okr.accomplished");
-accomplished.setType(Type.TEXTENUMERATION);
-accomplished.setMultiplicity(Multiplicity.AT_MOST_ONE);
-accomplished.setLocalizedNames({"de": "Erreicht", "en": "Accomplished"});
+let accomplishedAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.accomplished");
+accomplishedAttribute.setType(Type.TEXTENUMERATION);
+accomplishedAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+accomplishedAttribute.setLocalizedNames({"de": "Erreicht", "en": "Accomplished"});
 
-const cycle = objective.assertAttribute("cf.cplace.solution.okr.cycle");
-cycle.setType(Type.LINK);
-cycle.setMultiplicity(Multiplicity.AT_MOST_ONE);
-cycle.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+let cycleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.cycle");
+cycleAttribute.setType(Type.LINK);
+cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 
-const description = objective.assertAttribute("cf.cplace.solution.okr.description");
-description.setType(Type.RICHSTRING);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
+descriptionAttribute.setType(Type.RICHSTRING);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
 
-const keyResult = workspace.assertType("cf.cplace.solution.okr.keyResult");
-keyResult.setLocalizedNames({"de": "Schl\u00fcsselergebnis", "en": "Key Result"});
+let keyResultType = workspace.assertType("cf.cplace.solution.okr.keyResult");
+keyResultType.setLocalizedNames({"de": "Schl\u00fcsselergebnis", "en": "Key Result"});
 
-const number = keyResult.assertAttribute("cf.cplace.solution.okr.number");
-number.setType(Type.NUMBER);
-number.setMultiplicity(Multiplicity.EXACTLY_ONE);
-number.setLocalizedNames({"de": "Nummer", "en": "Number"});
+let numberAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.number");
+numberAttribute.setType(Type.NUMBER);
+numberAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+numberAttribute.setLocalizedNames({"de": "Nummer", "en": "Number"});
 
-const title = keyResult.assertAttribute("cf.cplace.solution.okr.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
+let titleAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
 
-const progressIndicator = keyResult.assertAttribute("cf.cplace.solution.okr.progressIndicator");
-progressIndicator.setType(Type.TEXTENUMERATION);
-progressIndicator.setMultiplicity(Multiplicity.AT_MOST_ONE);
-progressIndicator.setLocalizedNames({"de": "Fortschrittsindikator", "en": "Progress Indicator"});
+let progressIndicatorAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.progressIndicator");
+progressIndicatorAttribute.setType(Type.TEXTENUMERATION);
+progressIndicatorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+progressIndicatorAttribute.setLocalizedNames({"de": "Fortschrittsindikator", "en": "Progress Indicator"});
 
-const confidenceLevel = keyResult.assertAttribute("cf.cplace.solution.okr.confidenceLevel");
-confidenceLevel.setType(Type.TEXTENUMERATION);
-confidenceLevel.setMultiplicity(Multiplicity.AT_MOST_ONE);
-confidenceLevel.setLocalizedNames({"de": "Confidence Level", "en": "Confidence Level"});
+let confidenceLevelAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.confidenceLevel");
+confidenceLevelAttribute.setType(Type.TEXTENUMERATION);
+confidenceLevelAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+confidenceLevelAttribute.setLocalizedNames({"de": "Confidence Level", "en": "Confidence Level"});
 
-const gradingForecast = keyResult.assertAttribute("cf.cplace.solution.okr.gradingForecast");
-gradingForecast.setType(Type.TEXTENUMERATION);
-gradingForecast.setMultiplicity(Multiplicity.AT_MOST_ONE);
-gradingForecast.setLocalizedNames({"de": "Fortschritt Vorhersage", "en": "Grading Forecast"});
+let gradingForecastAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.gradingForecast");
+gradingForecastAttribute.setType(Type.TEXTENUMERATION);
+gradingForecastAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+gradingForecastAttribute.setLocalizedNames({"de": "Fortschritt Vorhersage", "en": "Grading Forecast"});
 
-const smallSupport = keyResult.assertAttribute("cf.cplace.solution.okr.smallSupport");
-smallSupport.setType(Type.LINK);
-smallSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-smallSupport.setLocalizedNames({"de": "Receive Small Support", "en": "Receive Small Support"});
+let smallSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.smallSupport");
+smallSupportAttribute.setType(Type.LINK);
+smallSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+smallSupportAttribute.setLocalizedNames({"de": "Receive Small Support", "en": "Receive Small Support"});
 
-const bigSupport = keyResult.assertAttribute("cf.cplace.solution.okr.bigSupport");
-bigSupport.setType(Type.LINK);
-bigSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-bigSupport.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
+let bigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.bigSupport");
+bigSupportAttribute.setType(Type.LINK);
+bigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
 
-const giveBigSupport = keyResult.assertAttribute("cf.cplace.solution.okr.giveBigSupport");
-giveBigSupport.setType(Type.LINK);
-giveBigSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-giveBigSupport.setLocalizedNames({"de": "Give Big Support", "en": "Give Big Support"});
+let giveBigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.giveBigSupport");
+giveBigSupportAttribute.setType(Type.LINK);
+giveBigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+giveBigSupportAttribute.setLocalizedNames({"de": "Give Big Support", "en": "Give Big Support"});
 
-const receiveBigSupport = keyResult.assertAttribute("cf.cplace.solution.okr.receiveBigSupport");
-receiveBigSupport.setType(Type.LINK);
-receiveBigSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-receiveBigSupport.setLocalizedNames({"de": "Receive Big Support", "en": "Receive Big Support"});
+let receiveBigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.receiveBigSupport");
+receiveBigSupportAttribute.setType(Type.LINK);
+receiveBigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+receiveBigSupportAttribute.setLocalizedNames({"de": "Receive Big Support", "en": "Receive Big Support"});
 
-const objective = keyResult.assertAttribute("cf.cplace.solution.okr.objective");
-objective.setType(Type.LINK);
-objective.setMultiplicity(Multiplicity.EXACTLY_ONE);
-objective.setLocalizedNames({"de": "Objective", "en": "Objective"});
+let objectiveAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.objective");
+objectiveAttribute.setType(Type.LINK);
+objectiveAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+objectiveAttribute.setLocalizedNames({"de": "Objective", "en": "Objective"});
 
-const progress = keyResult.assertAttribute("cf.cplace.solution.okr.progress");
-progress.setType(Type.LINK);
-progress.setMultiplicity(Multiplicity.AT_MOST_ONE);
-progress.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
+let progressAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.progress");
+progressAttribute.setType(Type.LINK);
+progressAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+progressAttribute.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
 
-const set = keyResult.assertAttribute("cf.cplace.solution.okr.set");
-set.setType(Type.LINK);
-set.setMultiplicity(Multiplicity.AT_MOST_ONE);
-set.setLocalizedNames({"de": "Set", "en": "Set"});
+let setAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.set");
+setAttribute.setType(Type.LINK);
+setAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 
-const cycle = keyResult.assertAttribute("cf.cplace.solution.okr.cycle");
-cycle.setType(Type.LINK);
-cycle.setMultiplicity(Multiplicity.AT_MOST_ONE);
-cycle.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+let cycleAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.cycle");
+cycleAttribute.setType(Type.LINK);
+cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 
-const organizationalUnit = keyResult.assertAttribute("cf.cplace.solution.okr.organizationalUnit");
-organizationalUnit.setType(Type.LINK);
-organizationalUnit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-organizationalUnit.setLocalizedNames({"de": "Organsationseinheit", "en": "Organizational Unit"});
+let organizationalUnitAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.organizationalUnit");
+organizationalUnitAttribute.setType(Type.LINK);
+organizationalUnitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+organizationalUnitAttribute.setLocalizedNames({"de": "Organsationseinheit", "en": "Organizational Unit"});
 
-const lastUpdate = keyResult.assertAttribute("cf.cplace.solution.okr.lastUpdate");
-lastUpdate.setType(Type.DATE);
-lastUpdate.setMultiplicity(Multiplicity.AT_MOST_ONE);
-lastUpdate.setLocalizedNames({"de": "Letztes Update", "en": "Last Update"});
+let lastUpdateAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.lastUpdate");
+lastUpdateAttribute.setType(Type.DATE);
+lastUpdateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+lastUpdateAttribute.setLocalizedNames({"de": "Letztes Update", "en": "Last Update"});
 
-const progress = workspace.assertType("cf.cplace.solution.okr.progress");
-progress.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
+let progressType = workspace.assertType("cf.cplace.solution.okr.progress");
+progressType.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
 
-const result = progress.assertAttribute("cf.cplace.solution.okr.result");
-result.setType(Type.TEXT);
-result.setMultiplicity(Multiplicity.AT_MOST_ONE);
-result.setLocalizedNames({"de": "Ergebnise", "en": "Results"});
+let resultAttribute = progressType.assertAttribute("cf.cplace.solution.okr.result");
+resultAttribute.setType(Type.TEXT);
+resultAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+resultAttribute.setLocalizedNames({"de": "Ergebnise", "en": "Results"});
 
-const problem = progress.assertAttribute("cf.cplace.solution.okr.problem");
-problem.setType(Type.TEXT);
-problem.setMultiplicity(Multiplicity.AT_MOST_ONE);
-problem.setLocalizedNames({"de": "Probleme", "en": "Problems"});
+let problemAttribute = progressType.assertAttribute("cf.cplace.solution.okr.problem");
+problemAttribute.setType(Type.TEXT);
+problemAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+problemAttribute.setLocalizedNames({"de": "Probleme", "en": "Problems"});
 
-const lessonsLearned = progress.assertAttribute("cf.cplace.solution.okr.lessonsLearned");
-lessonsLearned.setType(Type.TEXT);
-lessonsLearned.setMultiplicity(Multiplicity.AT_MOST_ONE);
-lessonsLearned.setLocalizedNames({"de": "Learnings", "en": "Learnings"});
+let lessonsLearnedAttribute = progressType.assertAttribute("cf.cplace.solution.okr.lessonsLearned");
+lessonsLearnedAttribute.setType(Type.TEXT);
+lessonsLearnedAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+lessonsLearnedAttribute.setLocalizedNames({"de": "Learnings", "en": "Learnings"});
 
-const nextSteps = progress.assertAttribute("cf.cplace.solution.okr.nextSteps");
-nextSteps.setType(Type.TEXT);
-nextSteps.setMultiplicity(Multiplicity.AT_MOST_ONE);
-nextSteps.setLocalizedNames({"de": "N\u00e4chste Schritte", "en": "Next Steps"});
+let nextStepsAttribute = progressType.assertAttribute("cf.cplace.solution.okr.nextSteps");
+nextStepsAttribute.setType(Type.TEXT);
+nextStepsAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+nextStepsAttribute.setLocalizedNames({"de": "N\u00e4chste Schritte", "en": "Next Steps"});
 
-const keyResult = progress.assertAttribute("cf.cplace.solution.okr.keyResult");
-keyResult.setType(Type.LINK);
-keyResult.setMultiplicity(Multiplicity.EXACTLY_ONE);
-keyResult.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
+let keyResultAttribute = progressType.assertAttribute("cf.cplace.solution.okr.keyResult");
+keyResultAttribute.setType(Type.LINK);
+keyResultAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+keyResultAttribute.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
 
-const cycle = progress.assertAttribute("cf.cplace.solution.okr.cycle");
-cycle.setType(Type.LINK);
-cycle.setMultiplicity(Multiplicity.AT_MOST_ONE);
-cycle.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+let cycleAttribute = progressType.assertAttribute("cf.cplace.solution.okr.cycle");
+cycleAttribute.setType(Type.LINK);
+cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 
-const objective = progress.assertAttribute("cf.cplace.solution.okr.objective");
-objective.setType(Type.LINK);
-objective.setMultiplicity(Multiplicity.AT_MOST_ONE);
-objective.setLocalizedNames({"de": "Objective", "en": "Objective"});
+let objectiveAttribute = progressType.assertAttribute("cf.cplace.solution.okr.objective");
+objectiveAttribute.setType(Type.LINK);
+objectiveAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+objectiveAttribute.setLocalizedNames({"de": "Objective", "en": "Objective"});
 
-const smallSupport = progress.assertAttribute("cf.cplace.solution.okr.smallSupport");
-smallSupport.setType(Type.LINK);
-smallSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-smallSupport.setLocalizedNames({"de": "Small Support", "en": "Small Support"});
+let smallSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.smallSupport");
+smallSupportAttribute.setType(Type.LINK);
+smallSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+smallSupportAttribute.setLocalizedNames({"de": "Small Support", "en": "Small Support"});
 
-const bigSupport = progress.assertAttribute("cf.cplace.solution.okr.bigSupport");
-bigSupport.setType(Type.LINK);
-bigSupport.setMultiplicity(Multiplicity.ANY_NUMBER);
-bigSupport.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
+let bigSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.bigSupport");
+bigSupportAttribute.setType(Type.LINK);
+bigSupportAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"});
 
-const progressIndicator = progress.assertAttribute("cf.cplace.solution.okr.progressIndicator");
-progressIndicator.setType(Type.TEXTENUMERATION);
-progressIndicator.setMultiplicity(Multiplicity.AT_MOST_ONE);
-progressIndicator.setLocalizedNames({"de": "Fortschrittsindikator", "en": "Progress Indicator"});
+let progressIndicatorAttribute = progressType.assertAttribute("cf.cplace.solution.okr.progressIndicator");
+progressIndicatorAttribute.setType(Type.TEXTENUMERATION);
+progressIndicatorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+progressIndicatorAttribute.setLocalizedNames({"de": "Fortschrittsindikator", "en": "Progress Indicator"});
 
-const confidenceLevel = progress.assertAttribute("cf.cplace.solution.okr.confidenceLevel");
-confidenceLevel.setType(Type.TEXTENUMERATION);
-confidenceLevel.setMultiplicity(Multiplicity.AT_MOST_ONE);
-confidenceLevel.setLocalizedNames({"de": "Confidence Level", "en": "Confidence Level"});
+let confidenceLevelAttribute = progressType.assertAttribute("cf.cplace.solution.okr.confidenceLevel");
+confidenceLevelAttribute.setType(Type.TEXTENUMERATION);
+confidenceLevelAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+confidenceLevelAttribute.setLocalizedNames({"de": "Confidence Level", "en": "Confidence Level"});
 
-const gradingForecast = progress.assertAttribute("cf.cplace.solution.okr.gradingForecast");
-gradingForecast.setType(Type.TEXTENUMERATION);
-gradingForecast.setMultiplicity(Multiplicity.AT_MOST_ONE);
-gradingForecast.setLocalizedNames({"de": "Fortschritt Vorhersage", "en": "Grading Forecast"});
+let gradingForecastAttribute = progressType.assertAttribute("cf.cplace.solution.okr.gradingForecast");
+gradingForecastAttribute.setType(Type.TEXTENUMERATION);
+gradingForecastAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+gradingForecastAttribute.setLocalizedNames({"de": "Fortschritt Vorhersage", "en": "Grading Forecast"});
 
-const lastUpdate = progress.assertAttribute("cf.cplace.solution.okr.lastUpdate");
-lastUpdate.setType(Type.DATE);
-lastUpdate.setMultiplicity(Multiplicity.AT_MOST_ONE);
-lastUpdate.setLocalizedNames({"de": "Letztes Update", "en": "Last Update"});
+let lastUpdateAttribute = progressType.assertAttribute("cf.cplace.solution.okr.lastUpdate");
+lastUpdateAttribute.setType(Type.DATE);
+lastUpdateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+lastUpdateAttribute.setLocalizedNames({"de": "Letztes Update", "en": "Last Update"});
 
-const set = progress.assertAttribute("cf.cplace.solution.okr.set");
-set.setType(Type.LINK);
-set.setMultiplicity(Multiplicity.AT_MOST_ONE);
-set.setLocalizedNames({"de": "Set", "en": "Set"});
+let setAttribute = progressType.assertAttribute("cf.cplace.solution.okr.set");
+setAttribute.setType(Type.LINK);
+setAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 
-const task = workspace.assertType("cf.cplace.solution.okr.task");
-task.setLocalizedNames({"de": "Aufgabe", "en": "Task"});
+let taskType = workspace.assertType("cf.cplace.solution.okr.task");
+taskType.setLocalizedNames({"de": "Aufgabe", "en": "Task"});
 
-const title = task.assertAttribute("cf.cplace.digitalBoard.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
+let titleAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
 
-const responsible = task.assertAttribute("cf.cplace.digitalBoard.responsible");
-responsible.setType(Type.LINK);
-responsible.setMultiplicity(Multiplicity.AT_MOST_ONE);
-responsible.setLocalizedNames({"de": "Verantwortliche(r)", "en": "Responsible"});
+let responsibleAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.responsible");
+responsibleAttribute.setType(Type.LINK);
+responsibleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+responsibleAttribute.setLocalizedNames({"de": "Verantwortliche(r)", "en": "Responsible"});
 
-const description = task.assertAttribute("cf.cplace.digitalBoard.description");
-description.setType(Type.TEXT);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+let descriptionAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.description");
+descriptionAttribute.setType(Type.TEXT);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
 
-const status = task.assertAttribute("cf.cplace.digitalBoard.status");
-status.setType(Type.TEXTENUMERATION);
-status.setMultiplicity(Multiplicity.EXACTLY_ONE);
-status.setLocalizedNames({"de": "Status", "en": "Status"});
+let statusAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.status");
+statusAttribute.setType(Type.TEXTENUMERATION);
+statusAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+statusAttribute.setLocalizedNames({"de": "Status", "en": "Status"});
 
-const dueDate = task.assertAttribute("cf.cplace.digitalBoard.dueDate");
-dueDate.setType(Type.DATE);
-dueDate.setMultiplicity(Multiplicity.AT_MOST_ONE);
-dueDate.setLocalizedNames({"de": "F\u00e4lligkeitsdatum", "en": "Due Date"});
+let dueDateAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.dueDate");
+dueDateAttribute.setType(Type.DATE);
+dueDateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+dueDateAttribute.setLocalizedNames({"de": "F\u00e4lligkeitsdatum", "en": "Due Date"});
 
-const keyResult = task.assertAttribute("cf.cplace.solution.okr.keyResult");
-keyResult.setType(Type.LINK);
-keyResult.setMultiplicity(Multiplicity.EXACTLY_ONE);
-keyResult.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
+let keyResultAttribute = taskType.assertAttribute("cf.cplace.solution.okr.keyResult");
+keyResultAttribute.setType(Type.LINK);
+keyResultAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+keyResultAttribute.setLocalizedNames({"de": "Key Result", "en": "Key Result"});
 
-const escalationLevel = task.assertAttribute("cf.cplace.digitalBoard.escalationLevel");
-escalationLevel.setType(Type.TEXTENUMERATION);
-escalationLevel.setMultiplicity(Multiplicity.EXACTLY_ONE);
-escalationLevel.setLocalizedNames({"de": "Eskalationslevel", "en": "Escalation Level"});
+let escalationLevelAttribute = taskType.assertAttribute("cf.cplace.digitalBoard.escalationLevel");
+escalationLevelAttribute.setType(Type.TEXTENUMERATION);
+escalationLevelAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+escalationLevelAttribute.setLocalizedNames({"de": "Eskalationslevel", "en": "Escalation Level"});
 
-const selectNextCycle = workspace.assertType("cf.cplace.solution.okr.selectNextCycle");
-selectNextCycle.setLocalizedNames({"de": "Select next Cycle", "en": "Select next Cycle"});
+let selectNextCycleType = workspace.assertType("cf.cplace.solution.okr.selectNextCycle");
+selectNextCycleType.setLocalizedNames({"de": "Select next Cycle", "en": "Select next Cycle"});
 
-const nextCycle = selectNextCycle.assertAttribute("cf.cplace.solution.okr.nextCycle");
-nextCycle.setType(Type.LINK);
-nextCycle.setMultiplicity(Multiplicity.EXACTLY_ONE);
-nextCycle.setLocalizedNames({"de": "N\u00e4chster Zyklus", "en": "Next Cycle"});
+let nextCycleAttribute = selectNextCycleType.assertAttribute("cf.cplace.solution.okr.nextCycle");
+nextCycleAttribute.setType(Type.LINK);
+nextCycleAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+nextCycleAttribute.setLocalizedNames({"de": "N\u00e4chster Zyklus", "en": "Next Cycle"});

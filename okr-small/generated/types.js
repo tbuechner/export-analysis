@@ -1,32 +1,32 @@
-const objective = workspace.assertType("cf.cplace.solution.okr.objective");
-objective.setLocalizedNames({"de": "Objective", "en": "Objective"});
+let objectiveType = workspace.assertType("cf.cplace.solution.okr.objective");
+objectiveType.setLocalizedNames({"de": "Objective", "en": "Objective"});
 
-const number = objective.assertAttribute("cf.cplace.solution.okr.number");
-number.setType(Type.NUMBER);
-number.setMultiplicity(Multiplicity.EXACTLY_ONE);
-number.setLocalizedNames({"de": "Nummer", "en": "Number"});
+let numberAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.number");
+numberAttribute.setType(Type.NUMBER);
+numberAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+numberAttribute.setLocalizedNames({"de": "Nummer", "en": "Number"});
 
-const title = objective.assertAttribute("cf.cplace.solution.okr.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
+let titleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
 
-const set = objective.assertAttribute("cf.cplace.solution.okr.set");
-set.setType(Type.LINK);
-set.setMultiplicity(Multiplicity.EXACTLY_ONE);
-set.setLocalizedNames({"de": "Set", "en": "Set"});
+let setAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.set");
+setAttribute.setType(Type.LINK);
+setAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 
-const accomplished = objective.assertAttribute("cf.cplace.solution.okr.accomplished");
-accomplished.setType(Type.TEXTENUMERATION);
-accomplished.setMultiplicity(Multiplicity.AT_MOST_ONE);
-accomplished.setLocalizedNames({"de": "Erreicht", "en": "Accomplished"});
+let accomplishedAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.accomplished");
+accomplishedAttribute.setType(Type.TEXTENUMERATION);
+accomplishedAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+accomplishedAttribute.setLocalizedNames({"de": "Erreicht", "en": "Accomplished"});
 
-const cycle = objective.assertAttribute("cf.cplace.solution.okr.cycle");
-cycle.setType(Type.LINK);
-cycle.setMultiplicity(Multiplicity.AT_MOST_ONE);
-cycle.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
+let cycleAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.cycle");
+cycleAttribute.setType(Type.LINK);
+cycleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 
-const description = objective.assertAttribute("cf.cplace.solution.okr.description");
-description.setType(Type.RICHSTRING);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
+descriptionAttribute.setType(Type.RICHSTRING);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});

@@ -1,522 +1,522 @@
-const solution = workspace.assertType("cf.cplace.solution.safe.solution");
-solution.setLocalizedNames({"de": "Solution", "en": "Solution"});
-
-const description = solution.assertAttribute("cf.cplace.solution.safe.description");
-description.setType(Type.RICHSTRING);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
-
-const solutionTrainEngineer = solution.assertAttribute("cf.cplace.solution.safe.solutionTrainEngineer");
-solutionTrainEngineer.setType(Type.LINK);
-solutionTrainEngineer.setMultiplicity(Multiplicity.AT_MOST_ONE);
-solutionTrainEngineer.setLocalizedNames({"de": "Solution Train Engineer", "en": "Solution Train Engineer"});
-
-const solutionTrainArchitect = solution.assertAttribute("cf.cplace.solution.safe.solutionTrainArchitect");
-solutionTrainArchitect.setType(Type.LINK);
-solutionTrainArchitect.setMultiplicity(Multiplicity.AT_MOST_ONE);
-solutionTrainArchitect.setLocalizedNames({"de": "Solution Train Architekt", "en": "Solution Train Architect"});
-
-const solutionManagement = solution.assertAttribute("cf.cplace.solution.safe.solutionManagement");
-solutionManagement.setType(Type.LINK);
-solutionManagement.setMultiplicity(Multiplicity.AT_MOST_ONE);
-solutionManagement.setLocalizedNames({"de": "Solution Management", "en": "Solution Management"});
-
-const previousPi = solution.assertAttribute("cf.cplace.solution.safe.previousPi");
-previousPi.setType(Type.LINK);
-previousPi.setMultiplicity(Multiplicity.AT_MOST_ONE);
-previousPi.setLocalizedNames({"de": "Vorheriges PI", "en": "Previous PI"});
-
-const currentPi = solution.assertAttribute("cf.cplace.solution.safe.currentPi");
-currentPi.setType(Type.LINK);
-currentPi.setMultiplicity(Multiplicity.EXACTLY_ONE);
-currentPi.setLocalizedNames({"de": "Laufendes PI", "en": "Current PI"});
-
-const nextPi = solution.assertAttribute("cf.cplace.solution.safe.nextPi");
-nextPi.setType(Type.LINK);
-nextPi.setMultiplicity(Multiplicity.AT_MOST_ONE);
-nextPi.setLocalizedNames({"de": "N\u00e4chstes PI", "en": "Next PI"});
-
-const funnelWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.funnelWIPLimit");
-funnelWIPLimit.setType(Type.NUMBER);
-funnelWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-funnelWIPLimit.setLocalizedNames({"de": "Funnel WIP Limit", "en": "Funnel WIP Limit"});
-
-const analyzingWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.analyzingWIPLimit");
-analyzingWIPLimit.setType(Type.NUMBER);
-analyzingWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-analyzingWIPLimit.setLocalizedNames({"de": "Analyzing WIP Limit", "en": "Analyzing WIP Limit"});
-
-const backlogWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.backlogWIPLimit");
-backlogWIPLimit.setType(Type.NUMBER);
-backlogWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-backlogWIPLimit.setLocalizedNames({"de": "Backlog WIP Limit", "en": "Backlog WIP Limit"});
-
-const implementingWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.implementingWIPLimit");
-implementingWIPLimit.setType(Type.NUMBER);
-implementingWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-implementingWIPLimit.setLocalizedNames({"de": "Implementing WIP Limit", "en": "Implementing WIP Limit"});
-
-const validatingWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.validatingWIPLimit");
-validatingWIPLimit.setType(Type.NUMBER);
-validatingWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-validatingWIPLimit.setLocalizedNames({"de": "Validating WIP Limit", "en": "Validating WIP Limit"});
-
-const deployingWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.deployingWIPLimit");
-deployingWIPLimit.setType(Type.NUMBER);
-deployingWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-deployingWIPLimit.setLocalizedNames({"de": "Deploying WIP Limit", "en": "Deploying WIP Limit"});
-
-const releasingWIPLimit = solution.assertAttribute("cf.cplace.solution.safe.releasingWIPLimit");
-releasingWIPLimit.setType(Type.NUMBER);
-releasingWIPLimit.setMultiplicity(Multiplicity.AT_MOST_ONE);
-releasingWIPLimit.setLocalizedNames({"de": "Releasing WIP Limit", "en": "Releasing WIP Limit"});
-
-const shortName = solution.assertAttribute("cf.cplace.solution.safe.shortName");
-shortName.setType(Type.TEXT);
-shortName.setMultiplicity(Multiplicity.EXACTLY_ONE);
-shortName.setLocalizedNames({"de": "K\u00fcrzel", "en": "Short Name"});
-
-const horizon = solution.assertAttribute("cf.cplace.solution.safe.horizon");
-horizon.setType(Type.LINK);
-horizon.setMultiplicity(Multiplicity.AT_MOST_ONE);
-horizon.setLocalizedNames({"de": "Horizon", "en": "Horizon"});
-
-const programIncrement = workspace.assertType("cf.cplace.solution.safe.programIncrement");
-programIncrement.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
-
-const title = programIncrement.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.EXACTLY_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const solution = programIncrement.assertAttribute("cf.cplace.solution.safe.solution");
-solution.setType(Type.LINK);
-solution.setMultiplicity(Multiplicity.EXACTLY_ONE);
-solution.setLocalizedNames({"de": "Solution", "en": "Solution"});
-
-const startDate = programIncrement.assertAttribute("cf.cplace.solution.safe.startDate");
-startDate.setType(Type.DATE);
-startDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-startDate.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
-
-const endDate = programIncrement.assertAttribute("cf.cplace.solution.safe.endDate");
-endDate.setType(Type.DATE);
-endDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-endDate.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
-
-const predecessor = programIncrement.assertAttribute("cf.cplace.solution.safe.predecessor");
-predecessor.setType(Type.LINK);
-predecessor.setMultiplicity(Multiplicity.AT_MOST_ONE);
-predecessor.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
-
-const periodStatus = programIncrement.assertAttribute("cf.cplace.solution.safe.periodStatus");
-periodStatus.setType(Type.TEXTENUMERATION);
-periodStatus.setMultiplicity(Multiplicity.EXACTLY_ONE);
-periodStatus.setLocalizedNames({"de": "Period Status", "en": "Period Status"});
-
-const confidenceVote = programIncrement.assertAttribute("cf.cplace.solution.safe.confidenceVote");
-confidenceVote.setType(Type.LINK);
-confidenceVote.setMultiplicity(Multiplicity.AT_MOST_ONE);
-confidenceVote.setLocalizedNames({"en": "Confidence Vote"});
-
-const capacity = programIncrement.assertAttribute("cf.cplace.solution.safe.capacity");
-capacity.setType(Type.NUMBER);
-capacity.setMultiplicity(Multiplicity.AT_MOST_ONE);
-capacity.setLocalizedNames({"de": "Capacity", "en": "Capacity"});
-
-const Result = programIncrement.assertAttribute("cf.cplace.solution.safe.confidenceVote.Result");
-Result.setType(Type.TEXT);
-Result.setMultiplicity(Multiplicity.AT_MOST_ONE);
-Result.setLocalizedNames({"de": "Confidence Vote Result", "en": "Confidence Vote Result"});
-
-const statsJson = programIncrement.assertAttribute("cf.cplace.solution.safe.statsJson");
-statsJson.setType(Type.LONGTEXT);
-statsJson.setMultiplicity(Multiplicity.AT_MOST_ONE);
-statsJson.setLocalizedNames({"en": "Statistics JSON"});
-
-const iteration = workspace.assertType("cf.cplace.solution.safe.iteration");
-iteration.setLocalizedNames({"de": "Iteration", "en": "Iteration"});
-
-const title = iteration.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.EXACTLY_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const programIncrement = iteration.assertAttribute("cf.cplace.solution.safe.programIncrement");
-programIncrement.setType(Type.LINK);
-programIncrement.setMultiplicity(Multiplicity.EXACTLY_ONE);
-programIncrement.setLocalizedNames({"de": "Programminkrement", "en": "Program Increment"});
-
-const startDate = iteration.assertAttribute("cf.cplace.solution.safe.startDate");
-startDate.setType(Type.DATE);
-startDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-startDate.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
-
-const endDate = iteration.assertAttribute("cf.cplace.solution.safe.endDate");
-endDate.setType(Type.DATE);
-endDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-endDate.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
-
-const predecessor = iteration.assertAttribute("cf.cplace.solution.safe.predecessor");
-predecessor.setType(Type.LINK);
-predecessor.setMultiplicity(Multiplicity.AT_MOST_ONE);
-predecessor.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
-
-const capability = workspace.assertType("cf.cplace.solution.safe.capability");
-capability.setLocalizedNames({"de": "Capability", "en": "Capability"});
-
-const title = capability.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const reference = capability.assertAttribute("cf.cplace.solution.safe.solution.reference");
-reference.setType(Type.LINK);
-reference.setMultiplicity(Multiplicity.AT_MOST_ONE);
-reference.setLocalizedNames({"de": "Solution", "en": "Solution"});
-
-const description = capability.assertAttribute("cf.cplace.solution.safe.description");
-description.setType(Type.RICHSTRING);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
-
-const capabilityType = capability.assertAttribute("cf.cplace.solution.safe.capabilityType");
-capabilityType.setType(Type.TEXTENUMERATION);
-capabilityType.setMultiplicity(Multiplicity.EXACTLY_ONE);
-capabilityType.setLocalizedNames({"de": "Capability Type", "en": "Capability Type"});
-
-const state = capability.assertAttribute("cf.cplace.solution.safe.state");
-state.setType(Type.TEXTENUMERATION);
-state.setMultiplicity(Multiplicity.EXACTLY_ONE);
-state.setLocalizedNames({"de": "Status", "en": "State"});
-
-const wsjf = capability.assertAttribute("cf.cplace.solution.safe.wsjf");
-wsjf.setType(Type.NUMBER);
-wsjf.setMultiplicity(Multiplicity.AT_MOST_ONE);
-wsjf.setLocalizedNames({"de": "WSJF", "en": "WSJF"});
-
-const businessValue = capability.assertAttribute("cf.cplace.solution.safe.businessValue");
-businessValue.setType(Type.NUMBERENUMERATION);
-businessValue.setMultiplicity(Multiplicity.AT_MOST_ONE);
-businessValue.setLocalizedNames({"de": "User Business Value", "en": "User Business Value"});
-
-const timeCriticality = capability.assertAttribute("cf.cplace.solution.safe.timeCriticality");
-timeCriticality.setType(Type.NUMBERENUMERATION);
-timeCriticality.setMultiplicity(Multiplicity.AT_MOST_ONE);
-timeCriticality.setLocalizedNames({"de": "Zeitliche Kritikalit\u00e4t", "en": "Time Criticality"});
-
-const riskReduction = capability.assertAttribute("cf.cplace.solution.safe.riskReduction");
-riskReduction.setType(Type.NUMBERENUMERATION);
-riskReduction.setMultiplicity(Multiplicity.AT_MOST_ONE);
-riskReduction.setLocalizedNames({"de": "Risk Reduction", "en": "Risk Reduction"});
-
-const jobSize = capability.assertAttribute("cf.cplace.solution.safe.jobSize");
-jobSize.setType(Type.NUMBERENUMERATION);
-jobSize.setMultiplicity(Multiplicity.AT_MOST_ONE);
-jobSize.setLocalizedNames({"de": "Job Size", "en": "Job Size"});
-
-const programIncrement = capability.assertAttribute("cf.cplace.solution.safe.programIncrement");
-programIncrement.setType(Type.LINK);
-programIncrement.setMultiplicity(Multiplicity.AT_MOST_ONE);
-programIncrement.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
-
-const actualStartDate = capability.assertAttribute("cf.cplace.solution.safe.actualStartDate");
-actualStartDate.setType(Type.DATE);
-actualStartDate.setMultiplicity(Multiplicity.AT_MOST_ONE);
-actualStartDate.setLocalizedNames({"de": "Actual Start Date", "en": "Actual Start Date"});
-
-const actualEndDate = capability.assertAttribute("cf.cplace.solution.safe.actualEndDate");
-actualEndDate.setType(Type.DATE);
-actualEndDate.setMultiplicity(Multiplicity.AT_MOST_ONE);
-actualEndDate.setLocalizedNames({"de": "Actual End Date", "en": "Actual End Date"});
-
-const flowTime = capability.assertAttribute("cf.cplace.solution.safe.flowTime");
-flowTime.setType(Type.NUMBER);
-flowTime.setMultiplicity(Multiplicity.AT_MOST_ONE);
-flowTime.setLocalizedNames({"de": "Flow time", "en": "Flow time"});
-
-const program = capability.assertAttribute("cf.cplace.solution.safe.program");
-program.setType(Type.LINK);
-program.setMultiplicity(Multiplicity.ANY_NUMBER);
-program.setLocalizedNames({"de": "Program", "en": "Program"});
-
-const capabilityowner = capability.assertAttribute("cf.cplace.solution.safe.capabilityowner");
-capabilityowner.setType(Type.LINK);
-capabilityowner.setMultiplicity(Multiplicity.EXACTLY_ONE);
-capabilityowner.setLocalizedNames({"de": "Capability Owner", "en": "Capability Owner"});
-
-const portfolioEpic = capability.assertAttribute("cf.cplace.solution.safe.portfolioEpic");
-portfolioEpic.setType(Type.LINK);
-portfolioEpic.setMultiplicity(Multiplicity.AT_MOST_ONE);
-portfolioEpic.setLocalizedNames({"en": "Portfolio Epic"});
-
-const solutionShortName = capability.assertAttribute("cf.cplace.solution.safe.solutionShortName");
-solutionShortName.setType(Type.TEXT);
-solutionShortName.setMultiplicity(Multiplicity.AT_MOST_ONE);
-solutionShortName.setLocalizedNames({"de": "Solution K\u00fcrzel", "en": "Solution Short Name"});
-
-const plannedStart = capability.assertAttribute("cf.cplace.solution.safe.plannedStart");
-plannedStart.setType(Type.DATE);
-plannedStart.setMultiplicity(Multiplicity.AT_MOST_ONE);
-plannedStart.setLocalizedNames({"de": "Geplanter Start", "en": "Planned Start"});
-
-const plannedEnd = capability.assertAttribute("cf.cplace.solution.safe.plannedEnd");
-plannedEnd.setType(Type.DATE);
-plannedEnd.setMultiplicity(Multiplicity.AT_MOST_ONE);
-plannedEnd.setLocalizedNames({"de": "Geplantes Ende", "en": "Planned End"});
-
-const iteration = capability.assertAttribute("cf.cplace.solution.safe.iteration");
-iteration.setType(Type.LINK);
-iteration.setMultiplicity(Multiplicity.ANY_NUMBER);
-iteration.setLocalizedNames({"de": "Iterations", "en": "Iterations"});
-
-const definitionOfReady = capability.assertAttribute("cf.cplace.solution.safe.definitionOfReady");
-definitionOfReady.setType(Type.BOOLEAN);
-definitionOfReady.setMultiplicity(Multiplicity.EXACTLY_ONE);
-definitionOfReady.setLocalizedNames({"de": "Definition of Ready", "en": "Definition of Ready"});
-
-const definitionOfDone = capability.assertAttribute("cf.cplace.solution.safe.definitionOfDone");
-definitionOfDone.setType(Type.BOOLEAN);
-definitionOfDone.setMultiplicity(Multiplicity.EXACTLY_ONE);
-definitionOfDone.setLocalizedNames({"de": "Definition of Done", "en": "Definition of Done"});
-
-const acceptanceCriteria = capability.assertAttribute("cf.cplace.solution.safe.acceptanceCriteria");
-acceptanceCriteria.setType(Type.RICHSTRING);
-acceptanceCriteria.setMultiplicity(Multiplicity.AT_MOST_ONE);
-acceptanceCriteria.setLocalizedNames({"de": "Akzeptanzkriterien", "en": "Acceptance Criteria"});
-
-const benefitHypothesis = capability.assertAttribute("cf.cplace.solution.safe.benefitHypothesis");
-benefitHypothesis.setType(Type.RICHSTRING);
-benefitHypothesis.setMultiplicity(Multiplicity.AT_MOST_ONE);
-benefitHypothesis.setLocalizedNames({"de": "Benefit Hypothesis", "en": "Benefit Hypothesis"});
-
-const conflictState = capability.assertAttribute("cf.cplace.solution.safe.conflictState");
-conflictState.setType(Type.TEXTENUMERATION);
-conflictState.setMultiplicity(Multiplicity.AT_MOST_ONE);
-conflictState.setLocalizedNames({"de": "Datumskonflikt", "en": "Conflict State"});
-
-const features = capability.assertAttribute("cf.cplace.solution.safe.features");
-features.setType(Type.LINK);
-features.setMultiplicity(Multiplicity.ANY_NUMBER);
-features.setLocalizedNames({"de": "Features", "en": "Features"});
-
-const dependency = workspace.assertType("cf.cplace.solution.safe.dependency");
-dependency.setLocalizedNames({"de": "Abh\u00e4ngigkeit", "en": "Dependency"});
-
-const title = dependency.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const successor = dependency.assertAttribute("cf.cplace.solution.safe.successor");
-successor.setType(Type.LINK);
-successor.setMultiplicity(Multiplicity.EXACTLY_ONE);
-successor.setLocalizedNames({"de": "A", "en": "A"});
-
-const type = dependency.assertAttribute("cf.cplace.solution.safe.type");
-type.setType(Type.TEXTENUMERATION);
-type.setMultiplicity(Multiplicity.EXACTLY_ONE);
-type.setLocalizedNames({"de": "Typ", "en": "Type"});
-
-const predecessor = dependency.assertAttribute("cf.cplace.solution.safe.predecessor");
-predecessor.setType(Type.LINK);
-predecessor.setMultiplicity(Multiplicity.EXACTLY_ONE);
-predecessor.setLocalizedNames({"de": "B", "en": "B"});
-
-const status = dependency.assertAttribute("cf.cplace.solution.safe.status");
-status.setType(Type.TEXTENUMERATION);
-status.setMultiplicity(Multiplicity.EXACTLY_ONE);
-status.setLocalizedNames({"de": "Status", "en": "Status"});
-
-const description = dependency.assertAttribute("cf.cplace.solution.safe.description");
-description.setType(Type.TEXT);
-description.setMultiplicity(Multiplicity.AT_MOST_ONE);
-description.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
-
-const plannedStartA = dependency.assertAttribute("cf.cplace.solution.safe.plannedStartA");
-plannedStartA.setType(Type.DATE);
-plannedStartA.setMultiplicity(Multiplicity.AT_MOST_ONE);
-plannedStartA.setLocalizedNames({"de": "Geplanter Start A", "en": "Planned Start A"});
-
-const plannedEndB = dependency.assertAttribute("cf.cplace.solution.safe.plannedEndB");
-plannedEndB.setType(Type.DATE);
-plannedEndB.setMultiplicity(Multiplicity.AT_MOST_ONE);
-plannedEndB.setLocalizedNames({"de": "Geplantes Ende B", "en": "Planned End B"});
-
-const safeMilestone = workspace.assertType("cf.cplace.solution.safe.safeMilestone");
-safeMilestone.setLocalizedNames({"de": "SAFe Meilenstein", "en": "SAFe Milestone"});
-
-const title = safeMilestone.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.EXACTLY_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const date = safeMilestone.assertAttribute("cf.cplace.solution.safe.date");
-date.setType(Type.DATE);
-date.setMultiplicity(Multiplicity.AT_MOST_ONE);
-date.setLocalizedNames({"de": "Datum", "en": "Date"});
-
-const type = safeMilestone.assertAttribute("cf.cplace.solution.safe.type");
-type.setType(Type.TEXTENUMERATION);
-type.setMultiplicity(Multiplicity.EXACTLY_ONE);
-type.setLocalizedNames({"de": "Typ", "en": "Type"});
-
-const relevantFor = safeMilestone.assertAttribute("cf.cplace.solution.safe.relevantFor");
-relevantFor.setType(Type.LINK);
-relevantFor.setMultiplicity(Multiplicity.AT_MOST_ONE);
-relevantFor.setLocalizedNames({"de": "Relevant F\u00fcr", "en": "Relevant For"});
-
-const plannedStart = safeMilestone.assertAttribute("cf.cplace.solution.safe.plannedStart");
-plannedStart.setType(Type.DATE);
-plannedStart.setMultiplicity(Multiplicity.EXACTLY_ONE);
-plannedStart.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
-
-const plannedEnd = safeMilestone.assertAttribute("cf.cplace.solution.safe.plannedEnd");
-plannedEnd.setType(Type.DATE);
-plannedEnd.setMultiplicity(Multiplicity.EXACTLY_ONE);
-plannedEnd.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
-
-const periodStatus = workspace.assertType("cf.cplace.solution.safe.periodStatus");
-periodStatus.setLocalizedNames({"en": "Period Status", "de": "Period Status"});
-
-const order = periodStatus.assertAttribute("cf.cplace.solution.safe.order");
-order.setType(Type.NUMBER);
-order.setMultiplicity(Multiplicity.AT_MOST_ONE);
-order.setLocalizedNames({"en": "Order"});
-
-const flowMetric = workspace.assertType("cf.cplace.solution.safe.flowMetric");
-flowMetric.setLocalizedNames({"de": "Durchflussmetrik", "en": "Flow Metric"});
-
-const artifactType = flowMetric.assertAttribute("cf.cplace.solution.safe.artifactType");
-artifactType.setType(Type.TEXT);
-artifactType.setMultiplicity(Multiplicity.EXACTLY_ONE);
-artifactType.setLocalizedNames({"de": "Artefakttyp", "en": "Artifact type"});
-
-const snapshotDate = flowMetric.assertAttribute("cf.cplace.solution.safe.snapshotDate");
-snapshotDate.setType(Type.DATE);
-snapshotDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-snapshotDate.setLocalizedNames({"de": "Schnappschuss-Datum", "en": "Snapshot date"});
-
-const Reference = flowMetric.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
-Reference.setType(Type.LINK);
-Reference.setMultiplicity(Multiplicity.EXACTLY_ONE);
-Reference.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
-
-const timebox = flowMetric.assertAttribute("cf.cplace.solution.safe.timebox");
-timebox.setType(Type.LINK);
-timebox.setMultiplicity(Multiplicity.AT_MOST_ONE);
-timebox.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
-
-const jsonMetricData = flowMetric.assertAttribute("cf.cplace.solution.safe.jsonMetricData");
-jsonMetricData.setType(Type.LONGTEXT);
-jsonMetricData.setMultiplicity(Multiplicity.AT_MOST_ONE);
-jsonMetricData.setLocalizedNames({"de": "JSON Metric Data", "en": "JSON Metric Data"});
-
-const objective = workspace.assertType("cf.cplace.solution.safe.objective");
-objective.setLocalizedNames({"de": "Zielsetzung", "en": "Objective"});
-
-const objectivetitle = objective.assertAttribute("cf.cplace.solution.safe.objectivetitle");
-objectivetitle.setType(Type.TEXT);
-objectivetitle.setMultiplicity(Multiplicity.AT_MOST_ONE);
-objectivetitle.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const timebox = objective.assertAttribute("cf.cplace.solution.safe.timebox");
-timebox.setType(Type.LINK);
-timebox.setMultiplicity(Multiplicity.AT_MOST_ONE);
-timebox.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
-
-const SAFeLevel = objective.assertAttribute("cf.cplace.solution.safe.SAFeLevel");
-SAFeLevel.setType(Type.TEXTENUMERATION);
-SAFeLevel.setMultiplicity(Multiplicity.AT_MOST_ONE);
-SAFeLevel.setLocalizedNames({"de": "SAFe Level", "en": "SAFe Level"});
-
-const Reference = objective.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
-Reference.setType(Type.LINK);
-Reference.setMultiplicity(Multiplicity.AT_MOST_ONE);
-Reference.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
-
-const businessValue = objective.assertAttribute("cf.cplace.solution.safe.businessValue");
-businessValue.setType(Type.NUMBERENUMERATION);
-businessValue.setMultiplicity(Multiplicity.AT_MOST_ONE);
-businessValue.setLocalizedNames({"de": "Planned Business Value", "en": "Planned Business Value"});
-
-const actualValue = objective.assertAttribute("cf.cplace.solution.safe.actualValue");
-actualValue.setType(Type.NUMBERENUMERATION);
-actualValue.setMultiplicity(Multiplicity.AT_MOST_ONE);
-actualValue.setLocalizedNames({"de": "Actual Business Value", "en": "Actual Business Value"});
-
-const commitment = objective.assertAttribute("cf.cplace.solution.safe.commitment");
-commitment.setType(Type.TEXTENUMERATION);
-commitment.setMultiplicity(Multiplicity.AT_MOST_ONE);
-commitment.setLocalizedNames({"de": "Commitment", "en": "Commitment"});
-
-const statement = objective.assertAttribute("cf.cplace.solution.safe.statement");
-statement.setType(Type.RICHSTRING);
-statement.setMultiplicity(Multiplicity.AT_MOST_ONE);
-statement.setLocalizedNames({"de": "Statement", "en": "Statement"});
-
-const event = workspace.assertType("cf.cplace.solution.safe.event");
-event.setLocalizedNames({"de": "Event", "en": "Event"});
-
-const title = event.assertAttribute("cf.cplace.solution.safe.title");
-title.setType(Type.TEXT);
-title.setMultiplicity(Multiplicity.AT_MOST_ONE);
-title.setLocalizedNames({"de": "Titel", "en": "Title"});
-
-const startDate = event.assertAttribute("cf.cplace.solution.safe.startDate");
-startDate.setType(Type.DATE);
-startDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-startDate.setLocalizedNames({"de": "Start Datum", "en": "Start Date"});
-
-const endDate = event.assertAttribute("cf.cplace.solution.safe.endDate");
-endDate.setType(Type.DATE);
-endDate.setMultiplicity(Multiplicity.EXACTLY_ONE);
-endDate.setLocalizedNames({"de": "End-Datum", "en": "End Date"});
-
-const solution = event.assertAttribute("cf.cplace.solution.safe.solution");
-solution.setType(Type.LINK);
-solution.setMultiplicity(Multiplicity.EXACTLY_ONE);
-solution.setLocalizedNames({"de": "Solution", "en": "Solution"});
-
-const confidenceVote = workspace.assertType("cf.cplace.solution.safe.confidenceVote");
-confidenceVote.setLocalizedNames({"de": "Confidence Vote", "en": "Confidence Vote"});
-
-const PI = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.PI");
-PI.setType(Type.LINK);
-PI.setMultiplicity(Multiplicity.AT_MOST_ONE);
-PI.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
-
-const result = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.result");
-result.setType(Type.TEXTENUMERATION);
-result.setMultiplicity(Multiplicity.AT_MOST_ONE);
-result.setLocalizedNames({"de": "Ergebnis", "en": "Result"});
-
-const oneFinger = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.oneFinger");
-oneFinger.setType(Type.NUMBER);
-oneFinger.setMultiplicity(Multiplicity.AT_MOST_ONE);
-oneFinger.setLocalizedNames({"de": "One Finger", "en": "One Finger"});
-
-const twoFingers = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.twoFingers");
-twoFingers.setType(Type.NUMBER);
-twoFingers.setMultiplicity(Multiplicity.AT_MOST_ONE);
-twoFingers.setLocalizedNames({"de": "Two Fingers", "en": "Two Fingers"});
-
-const threeFingers = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.threeFingers");
-threeFingers.setType(Type.NUMBER);
-threeFingers.setMultiplicity(Multiplicity.AT_MOST_ONE);
-threeFingers.setLocalizedNames({"de": "Three Fingers", "en": "Three Fingers"});
-
-const fourFingers = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.fourFingers");
-fourFingers.setType(Type.NUMBER);
-fourFingers.setMultiplicity(Multiplicity.AT_MOST_ONE);
-fourFingers.setLocalizedNames({"de": "Four Fingers", "en": "Four Fingers"});
-
-const fiveFingers = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.fiveFingers");
-fiveFingers.setType(Type.NUMBER);
-fiveFingers.setMultiplicity(Multiplicity.AT_MOST_ONE);
-fiveFingers.setLocalizedNames({"de": "Five Fingers", "en": "Five Fingers"});
-
-const solution = confidenceVote.assertAttribute("cf.cplace.solution.safe.confidenceVote.solution");
-solution.setType(Type.LINK);
-solution.setMultiplicity(Multiplicity.AT_MOST_ONE);
-solution.setLocalizedNames({"de": "Solution", "en": "Solution"});
+let solutionType = workspace.assertType("cf.cplace.solution.safe.solution");
+solutionType.setLocalizedNames({"de": "Solution", "en": "Solution"});
+
+let descriptionAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.description");
+descriptionAttribute.setType(Type.RICHSTRING);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+
+let solutionTrainEngineerAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.solutionTrainEngineer");
+solutionTrainEngineerAttribute.setType(Type.LINK);
+solutionTrainEngineerAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+solutionTrainEngineerAttribute.setLocalizedNames({"de": "Solution Train Engineer", "en": "Solution Train Engineer"});
+
+let solutionTrainArchitectAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.solutionTrainArchitect");
+solutionTrainArchitectAttribute.setType(Type.LINK);
+solutionTrainArchitectAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+solutionTrainArchitectAttribute.setLocalizedNames({"de": "Solution Train Architekt", "en": "Solution Train Architect"});
+
+let solutionManagementAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.solutionManagement");
+solutionManagementAttribute.setType(Type.LINK);
+solutionManagementAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+solutionManagementAttribute.setLocalizedNames({"de": "Solution Management", "en": "Solution Management"});
+
+let previousPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.previousPi");
+previousPiAttribute.setType(Type.LINK);
+previousPiAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+previousPiAttribute.setLocalizedNames({"de": "Vorheriges PI", "en": "Previous PI"});
+
+let currentPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.currentPi");
+currentPiAttribute.setType(Type.LINK);
+currentPiAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+currentPiAttribute.setLocalizedNames({"de": "Laufendes PI", "en": "Current PI"});
+
+let nextPiAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.nextPi");
+nextPiAttribute.setType(Type.LINK);
+nextPiAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+nextPiAttribute.setLocalizedNames({"de": "N\u00e4chstes PI", "en": "Next PI"});
+
+let funnelWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.funnelWIPLimit");
+funnelWIPLimitAttribute.setType(Type.NUMBER);
+funnelWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+funnelWIPLimitAttribute.setLocalizedNames({"de": "Funnel WIP Limit", "en": "Funnel WIP Limit"});
+
+let analyzingWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.analyzingWIPLimit");
+analyzingWIPLimitAttribute.setType(Type.NUMBER);
+analyzingWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+analyzingWIPLimitAttribute.setLocalizedNames({"de": "Analyzing WIP Limit", "en": "Analyzing WIP Limit"});
+
+let backlogWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.backlogWIPLimit");
+backlogWIPLimitAttribute.setType(Type.NUMBER);
+backlogWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+backlogWIPLimitAttribute.setLocalizedNames({"de": "Backlog WIP Limit", "en": "Backlog WIP Limit"});
+
+let implementingWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.implementingWIPLimit");
+implementingWIPLimitAttribute.setType(Type.NUMBER);
+implementingWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+implementingWIPLimitAttribute.setLocalizedNames({"de": "Implementing WIP Limit", "en": "Implementing WIP Limit"});
+
+let validatingWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.validatingWIPLimit");
+validatingWIPLimitAttribute.setType(Type.NUMBER);
+validatingWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+validatingWIPLimitAttribute.setLocalizedNames({"de": "Validating WIP Limit", "en": "Validating WIP Limit"});
+
+let deployingWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.deployingWIPLimit");
+deployingWIPLimitAttribute.setType(Type.NUMBER);
+deployingWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+deployingWIPLimitAttribute.setLocalizedNames({"de": "Deploying WIP Limit", "en": "Deploying WIP Limit"});
+
+let releasingWIPLimitAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.releasingWIPLimit");
+releasingWIPLimitAttribute.setType(Type.NUMBER);
+releasingWIPLimitAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+releasingWIPLimitAttribute.setLocalizedNames({"de": "Releasing WIP Limit", "en": "Releasing WIP Limit"});
+
+let shortNameAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.shortName");
+shortNameAttribute.setType(Type.TEXT);
+shortNameAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+shortNameAttribute.setLocalizedNames({"de": "K\u00fcrzel", "en": "Short Name"});
+
+let horizonAttribute = solutionType.assertAttribute("cf.cplace.solution.safe.horizon");
+horizonAttribute.setType(Type.LINK);
+horizonAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+horizonAttribute.setLocalizedNames({"de": "Horizon", "en": "Horizon"});
+
+let programIncrementType = workspace.assertType("cf.cplace.solution.safe.programIncrement");
+programIncrementType.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+
+let titleAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let solutionAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.solution");
+solutionAttribute.setType(Type.LINK);
+solutionAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+
+let startDateAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.startDate");
+startDateAttribute.setType(Type.DATE);
+startDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+startDateAttribute.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
+
+let endDateAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.endDate");
+endDateAttribute.setType(Type.DATE);
+endDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+endDateAttribute.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
+
+let predecessorAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.predecessor");
+predecessorAttribute.setType(Type.LINK);
+predecessorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+predecessorAttribute.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
+
+let periodStatusAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.periodStatus");
+periodStatusAttribute.setType(Type.TEXTENUMERATION);
+periodStatusAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+periodStatusAttribute.setLocalizedNames({"de": "Period Status", "en": "Period Status"});
+
+let confidenceVoteAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.confidenceVote");
+confidenceVoteAttribute.setType(Type.LINK);
+confidenceVoteAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+confidenceVoteAttribute.setLocalizedNames({"en": "Confidence Vote"});
+
+let capacityAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.capacity");
+capacityAttribute.setType(Type.NUMBER);
+capacityAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+capacityAttribute.setLocalizedNames({"de": "Capacity", "en": "Capacity"});
+
+let ResultAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.confidenceVote.Result");
+ResultAttribute.setType(Type.TEXT);
+ResultAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+ResultAttribute.setLocalizedNames({"de": "Confidence Vote Result", "en": "Confidence Vote Result"});
+
+let statsJsonAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.statsJson");
+statsJsonAttribute.setType(Type.LONGTEXT);
+statsJsonAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+statsJsonAttribute.setLocalizedNames({"en": "Statistics JSON"});
+
+let iterationType = workspace.assertType("cf.cplace.solution.safe.iteration");
+iterationType.setLocalizedNames({"de": "Iteration", "en": "Iteration"});
+
+let titleAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let programIncrementAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.programIncrement");
+programIncrementAttribute.setType(Type.LINK);
+programIncrementAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+programIncrementAttribute.setLocalizedNames({"de": "Programminkrement", "en": "Program Increment"});
+
+let startDateAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.startDate");
+startDateAttribute.setType(Type.DATE);
+startDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+startDateAttribute.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
+
+let endDateAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.endDate");
+endDateAttribute.setType(Type.DATE);
+endDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+endDateAttribute.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
+
+let predecessorAttribute = iterationType.assertAttribute("cf.cplace.solution.safe.predecessor");
+predecessorAttribute.setType(Type.LINK);
+predecessorAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+predecessorAttribute.setLocalizedNames({"de": "Vorg\u00e4nger", "en": "Predecessor"});
+
+let capabilityType = workspace.assertType("cf.cplace.solution.safe.capability");
+capabilityType.setLocalizedNames({"de": "Capability", "en": "Capability"});
+
+let titleAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let referenceAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.solution.reference");
+referenceAttribute.setType(Type.LINK);
+referenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+referenceAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+
+let descriptionAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.description");
+descriptionAttribute.setType(Type.RICHSTRING);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+
+let capabilityTypeAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.capabilityType");
+capabilityTypeAttribute.setType(Type.TEXTENUMERATION);
+capabilityTypeAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+capabilityTypeAttribute.setLocalizedNames({"de": "Capability Type", "en": "Capability Type"});
+
+let stateAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.state");
+stateAttribute.setType(Type.TEXTENUMERATION);
+stateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+stateAttribute.setLocalizedNames({"de": "Status", "en": "State"});
+
+let wsjfAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.wsjf");
+wsjfAttribute.setType(Type.NUMBER);
+wsjfAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+wsjfAttribute.setLocalizedNames({"de": "WSJF", "en": "WSJF"});
+
+let businessValueAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.businessValue");
+businessValueAttribute.setType(Type.NUMBERENUMERATION);
+businessValueAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+businessValueAttribute.setLocalizedNames({"de": "User Business Value", "en": "User Business Value"});
+
+let timeCriticalityAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.timeCriticality");
+timeCriticalityAttribute.setType(Type.NUMBERENUMERATION);
+timeCriticalityAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+timeCriticalityAttribute.setLocalizedNames({"de": "Zeitliche Kritikalit\u00e4t", "en": "Time Criticality"});
+
+let riskReductionAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.riskReduction");
+riskReductionAttribute.setType(Type.NUMBERENUMERATION);
+riskReductionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+riskReductionAttribute.setLocalizedNames({"de": "Risk Reduction", "en": "Risk Reduction"});
+
+let jobSizeAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.jobSize");
+jobSizeAttribute.setType(Type.NUMBERENUMERATION);
+jobSizeAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+jobSizeAttribute.setLocalizedNames({"de": "Job Size", "en": "Job Size"});
+
+let programIncrementAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.programIncrement");
+programIncrementAttribute.setType(Type.LINK);
+programIncrementAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+programIncrementAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+
+let actualStartDateAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.actualStartDate");
+actualStartDateAttribute.setType(Type.DATE);
+actualStartDateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+actualStartDateAttribute.setLocalizedNames({"de": "Actual Start Date", "en": "Actual Start Date"});
+
+let actualEndDateAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.actualEndDate");
+actualEndDateAttribute.setType(Type.DATE);
+actualEndDateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+actualEndDateAttribute.setLocalizedNames({"de": "Actual End Date", "en": "Actual End Date"});
+
+let flowTimeAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.flowTime");
+flowTimeAttribute.setType(Type.NUMBER);
+flowTimeAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+flowTimeAttribute.setLocalizedNames({"de": "Flow time", "en": "Flow time"});
+
+let programAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.program");
+programAttribute.setType(Type.LINK);
+programAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+programAttribute.setLocalizedNames({"de": "Program", "en": "Program"});
+
+let capabilityownerAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.capabilityowner");
+capabilityownerAttribute.setType(Type.LINK);
+capabilityownerAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+capabilityownerAttribute.setLocalizedNames({"de": "Capability Owner", "en": "Capability Owner"});
+
+let portfolioEpicAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.portfolioEpic");
+portfolioEpicAttribute.setType(Type.LINK);
+portfolioEpicAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+portfolioEpicAttribute.setLocalizedNames({"en": "Portfolio Epic"});
+
+let solutionShortNameAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.solutionShortName");
+solutionShortNameAttribute.setType(Type.TEXT);
+solutionShortNameAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+solutionShortNameAttribute.setLocalizedNames({"de": "Solution K\u00fcrzel", "en": "Solution Short Name"});
+
+let plannedStartAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.plannedStart");
+plannedStartAttribute.setType(Type.DATE);
+plannedStartAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+plannedStartAttribute.setLocalizedNames({"de": "Geplanter Start", "en": "Planned Start"});
+
+let plannedEndAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.plannedEnd");
+plannedEndAttribute.setType(Type.DATE);
+plannedEndAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+plannedEndAttribute.setLocalizedNames({"de": "Geplantes Ende", "en": "Planned End"});
+
+let iterationAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.iteration");
+iterationAttribute.setType(Type.LINK);
+iterationAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+iterationAttribute.setLocalizedNames({"de": "Iterations", "en": "Iterations"});
+
+let definitionOfReadyAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.definitionOfReady");
+definitionOfReadyAttribute.setType(Type.BOOLEAN);
+definitionOfReadyAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+definitionOfReadyAttribute.setLocalizedNames({"de": "Definition of Ready", "en": "Definition of Ready"});
+
+let definitionOfDoneAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.definitionOfDone");
+definitionOfDoneAttribute.setType(Type.BOOLEAN);
+definitionOfDoneAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+definitionOfDoneAttribute.setLocalizedNames({"de": "Definition of Done", "en": "Definition of Done"});
+
+let acceptanceCriteriaAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.acceptanceCriteria");
+acceptanceCriteriaAttribute.setType(Type.RICHSTRING);
+acceptanceCriteriaAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+acceptanceCriteriaAttribute.setLocalizedNames({"de": "Akzeptanzkriterien", "en": "Acceptance Criteria"});
+
+let benefitHypothesisAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.benefitHypothesis");
+benefitHypothesisAttribute.setType(Type.RICHSTRING);
+benefitHypothesisAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+benefitHypothesisAttribute.setLocalizedNames({"de": "Benefit Hypothesis", "en": "Benefit Hypothesis"});
+
+let conflictStateAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.conflictState");
+conflictStateAttribute.setType(Type.TEXTENUMERATION);
+conflictStateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+conflictStateAttribute.setLocalizedNames({"de": "Datumskonflikt", "en": "Conflict State"});
+
+let featuresAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.features");
+featuresAttribute.setType(Type.LINK);
+featuresAttribute.setMultiplicity(Multiplicity.ANY_NUMBER);
+featuresAttribute.setLocalizedNames({"de": "Features", "en": "Features"});
+
+let dependencyType = workspace.assertType("cf.cplace.solution.safe.dependency");
+dependencyType.setLocalizedNames({"de": "Abh\u00e4ngigkeit", "en": "Dependency"});
+
+let titleAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let successorAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.successor");
+successorAttribute.setType(Type.LINK);
+successorAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+successorAttribute.setLocalizedNames({"de": "A", "en": "A"});
+
+let typeAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.type");
+typeAttribute.setType(Type.TEXTENUMERATION);
+typeAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+typeAttribute.setLocalizedNames({"de": "Typ", "en": "Type"});
+
+let predecessorAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.predecessor");
+predecessorAttribute.setType(Type.LINK);
+predecessorAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+predecessorAttribute.setLocalizedNames({"de": "B", "en": "B"});
+
+let statusAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.status");
+statusAttribute.setType(Type.TEXTENUMERATION);
+statusAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+statusAttribute.setLocalizedNames({"de": "Status", "en": "Status"});
+
+let descriptionAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.description");
+descriptionAttribute.setType(Type.TEXT);
+descriptionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+descriptionAttribute.setLocalizedNames({"de": "Beschreibung", "en": "Description"});
+
+let plannedStartAAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.plannedStartA");
+plannedStartAAttribute.setType(Type.DATE);
+plannedStartAAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+plannedStartAAttribute.setLocalizedNames({"de": "Geplanter Start A", "en": "Planned Start A"});
+
+let plannedEndBAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.plannedEndB");
+plannedEndBAttribute.setType(Type.DATE);
+plannedEndBAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+plannedEndBAttribute.setLocalizedNames({"de": "Geplantes Ende B", "en": "Planned End B"});
+
+let safeMilestoneType = workspace.assertType("cf.cplace.solution.safe.safeMilestone");
+safeMilestoneType.setLocalizedNames({"de": "SAFe Meilenstein", "en": "SAFe Milestone"});
+
+let titleAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let dateAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.date");
+dateAttribute.setType(Type.DATE);
+dateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+dateAttribute.setLocalizedNames({"de": "Datum", "en": "Date"});
+
+let typeAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.type");
+typeAttribute.setType(Type.TEXTENUMERATION);
+typeAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+typeAttribute.setLocalizedNames({"de": "Typ", "en": "Type"});
+
+let relevantForAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.relevantFor");
+relevantForAttribute.setType(Type.LINK);
+relevantForAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+relevantForAttribute.setLocalizedNames({"de": "Relevant F\u00fcr", "en": "Relevant For"});
+
+let plannedStartAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.plannedStart");
+plannedStartAttribute.setType(Type.DATE);
+plannedStartAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+plannedStartAttribute.setLocalizedNames({"de": "Startdatum", "en": "Start Date"});
+
+let plannedEndAttribute = safeMilestoneType.assertAttribute("cf.cplace.solution.safe.plannedEnd");
+plannedEndAttribute.setType(Type.DATE);
+plannedEndAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+plannedEndAttribute.setLocalizedNames({"de": "Enddatum", "en": "End Date"});
+
+let periodStatusType = workspace.assertType("cf.cplace.solution.safe.periodStatus");
+periodStatusType.setLocalizedNames({"en": "Period Status", "de": "Period Status"});
+
+let orderAttribute = periodStatusType.assertAttribute("cf.cplace.solution.safe.order");
+orderAttribute.setType(Type.NUMBER);
+orderAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+orderAttribute.setLocalizedNames({"en": "Order"});
+
+let flowMetricType = workspace.assertType("cf.cplace.solution.safe.flowMetric");
+flowMetricType.setLocalizedNames({"de": "Durchflussmetrik", "en": "Flow Metric"});
+
+let artifactTypeAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.artifactType");
+artifactTypeAttribute.setType(Type.TEXT);
+artifactTypeAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+artifactTypeAttribute.setLocalizedNames({"de": "Artefakttyp", "en": "Artifact type"});
+
+let snapshotDateAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.snapshotDate");
+snapshotDateAttribute.setType(Type.DATE);
+snapshotDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+snapshotDateAttribute.setLocalizedNames({"de": "Schnappschuss-Datum", "en": "Snapshot date"});
+
+let ReferenceAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
+ReferenceAttribute.setType(Type.LINK);
+ReferenceAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+
+let timeboxAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.timebox");
+timeboxAttribute.setType(Type.LINK);
+timeboxAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+timeboxAttribute.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
+
+let jsonMetricDataAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.jsonMetricData");
+jsonMetricDataAttribute.setType(Type.LONGTEXT);
+jsonMetricDataAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+jsonMetricDataAttribute.setLocalizedNames({"de": "JSON Metric Data", "en": "JSON Metric Data"});
+
+let objectiveType = workspace.assertType("cf.cplace.solution.safe.objective");
+objectiveType.setLocalizedNames({"de": "Zielsetzung", "en": "Objective"});
+
+let objectivetitleAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.objectivetitle");
+objectivetitleAttribute.setType(Type.TEXT);
+objectivetitleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+objectivetitleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let timeboxAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.timebox");
+timeboxAttribute.setType(Type.LINK);
+timeboxAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+timeboxAttribute.setLocalizedNames({"de": "Program Increment/Iteration", "en": "Program Increment/Iteration"});
+
+let SAFeLevelAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel");
+SAFeLevelAttribute.setType(Type.TEXTENUMERATION);
+SAFeLevelAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+SAFeLevelAttribute.setLocalizedNames({"de": "SAFe Level", "en": "SAFe Level"});
+
+let ReferenceAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
+ReferenceAttribute.setType(Type.LINK);
+ReferenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+
+let businessValueAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.businessValue");
+businessValueAttribute.setType(Type.NUMBERENUMERATION);
+businessValueAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+businessValueAttribute.setLocalizedNames({"de": "Planned Business Value", "en": "Planned Business Value"});
+
+let actualValueAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.actualValue");
+actualValueAttribute.setType(Type.NUMBERENUMERATION);
+actualValueAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+actualValueAttribute.setLocalizedNames({"de": "Actual Business Value", "en": "Actual Business Value"});
+
+let commitmentAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.commitment");
+commitmentAttribute.setType(Type.TEXTENUMERATION);
+commitmentAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+commitmentAttribute.setLocalizedNames({"de": "Commitment", "en": "Commitment"});
+
+let statementAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.statement");
+statementAttribute.setType(Type.RICHSTRING);
+statementAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+statementAttribute.setLocalizedNames({"de": "Statement", "en": "Statement"});
+
+let eventType = workspace.assertType("cf.cplace.solution.safe.event");
+eventType.setLocalizedNames({"de": "Event", "en": "Event"});
+
+let titleAttribute = eventType.assertAttribute("cf.cplace.solution.safe.title");
+titleAttribute.setType(Type.TEXT);
+titleAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+titleAttribute.setLocalizedNames({"de": "Titel", "en": "Title"});
+
+let startDateAttribute = eventType.assertAttribute("cf.cplace.solution.safe.startDate");
+startDateAttribute.setType(Type.DATE);
+startDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+startDateAttribute.setLocalizedNames({"de": "Start Datum", "en": "Start Date"});
+
+let endDateAttribute = eventType.assertAttribute("cf.cplace.solution.safe.endDate");
+endDateAttribute.setType(Type.DATE);
+endDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+endDateAttribute.setLocalizedNames({"de": "End-Datum", "en": "End Date"});
+
+let solutionAttribute = eventType.assertAttribute("cf.cplace.solution.safe.solution");
+solutionAttribute.setType(Type.LINK);
+solutionAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
+
+let confidenceVoteType = workspace.assertType("cf.cplace.solution.safe.confidenceVote");
+confidenceVoteType.setLocalizedNames({"de": "Confidence Vote", "en": "Confidence Vote"});
+
+let PIAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.PI");
+PIAttribute.setType(Type.LINK);
+PIAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+PIAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+
+let resultAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.result");
+resultAttribute.setType(Type.TEXTENUMERATION);
+resultAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+resultAttribute.setLocalizedNames({"de": "Ergebnis", "en": "Result"});
+
+let oneFingerAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.oneFinger");
+oneFingerAttribute.setType(Type.NUMBER);
+oneFingerAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+oneFingerAttribute.setLocalizedNames({"de": "One Finger", "en": "One Finger"});
+
+let twoFingersAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.twoFingers");
+twoFingersAttribute.setType(Type.NUMBER);
+twoFingersAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+twoFingersAttribute.setLocalizedNames({"de": "Two Fingers", "en": "Two Fingers"});
+
+let threeFingersAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.threeFingers");
+threeFingersAttribute.setType(Type.NUMBER);
+threeFingersAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+threeFingersAttribute.setLocalizedNames({"de": "Three Fingers", "en": "Three Fingers"});
+
+let fourFingersAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.fourFingers");
+fourFingersAttribute.setType(Type.NUMBER);
+fourFingersAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+fourFingersAttribute.setLocalizedNames({"de": "Four Fingers", "en": "Four Fingers"});
+
+let fiveFingersAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.fiveFingers");
+fiveFingersAttribute.setType(Type.NUMBER);
+fiveFingersAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+fiveFingersAttribute.setLocalizedNames({"de": "Five Fingers", "en": "Five Fingers"});
+
+let solutionAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.solution");
+solutionAttribute.setType(Type.LINK);
+solutionAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+solutionAttribute.setLocalizedNames({"de": "Solution", "en": "Solution"});
