@@ -460,12 +460,14 @@ def run_for_folder(folder_name):
     # print(copilot_examples)
     write_to_file(folder_name_generated, "copilot_examples.js", copilot_examples)
 
-    write_to_file(folder_name_generated, "types.js", convert_json_to_js(doc, False))
-    write_to_file(folder_name_generated, "types-chained.js", convert_json_to_js(doc, True))
-
     types_folder_name = folder_name_generated + '/types'
     os.mkdir(types_folder_name)
-    convert_json_to_js_per_type(doc, types_folder_name, True)
+
+    convert_json_to_js(doc, folder_name_generated, True, False)
+    convert_json_to_js(doc, folder_name_generated, True, True)
+    convert_json_to_js(doc, types_folder_name, False, True)
+
+    # convert_json_to_js_per_type(doc, types_folder_name, True)
 
     write_token_counts(folder_name_generated)
 

@@ -106,7 +106,8 @@ function createPage() {
 
     return snippet
 
-def convert_json_to_js(data, use_chained_calls=False):
+
+def convert_json_to_js(data, folder_name, one_file, use_chained_calls=False):
     js_code = ""
     for type_def in data["export"]["workspace"]["types"]:
         type_name = type_def["name"]
@@ -171,7 +172,20 @@ def convert_json_to_js(data, use_chained_calls=False):
             else:
                 js_code += f'\n'
 
-    return js_code.rstrip('\n')
+        if not one_file:
+            # Determine the filename for the type
+            filename = f"{type_name_variable_name}.js"
+            # Write the generated js to a file named after the type
+            with open(folder_name + "/" + filename, 'w') as js_file:
+                js_file.write(js_code.rstrip('\n'))
+            js_code = ""
+    if one_file:
+        if use_chained_calls:
+            with open(folder_name + "/types-chained.js", 'w') as js_file:
+                js_file.write(js_code.rstrip('\n'))
+        else:
+            with open(folder_name + "/types.js", 'w') as js_file:
+                js_file.write(js_code.rstrip('\n'))
 
 def convert_json_to_js_per_type(data, folder_name, use_chained_calls=False):
     for type_def in data["export"]["workspace"]["types"]:
