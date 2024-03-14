@@ -112,6 +112,8 @@ def convert_json_to_js(data):
         type_name = type_def["name"]
         localized_name_singular = type_def["localizedNameSingular"]
         type_name_variable_name = type_name.split(".")[-1] + "Type"
+        # convert the first character to lower case
+        type_name_variable_name = type_name_variable_name[0].lower() + type_name_variable_name[1:]
         js_code += f'let {type_name_variable_name} = workspace.assertType("{type_name}");\n'
         js_code += f'{type_name_variable_name}.setLocalizedNames({json.dumps(localized_name_singular)});\n\n'
 
@@ -126,6 +128,9 @@ def convert_json_to_js(data):
             type_constraint = attr_def["typeConstraint"]
 
             attr_name_variable_name = attr_name.split(".")[-1] + "Attribute"
+            # convert the first character to lower case
+            attr_name_variable_name = attr_name_variable_name[0].lower() + attr_name_variable_name[1:]
+
             js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}");\n'
             js_code += f'{attr_name_variable_name}.setType(Type.{type_constraint.upper()});\n'
             js_code += f'{attr_name_variable_name}.setMultiplicity(Multiplicity.{multiplicity});\n'
@@ -139,6 +144,14 @@ def convert_json_to_js(data):
                 js_code += f'{attr_name_variable_name}.setEntityKind("{link_entity_kind}");\n'
                 js_code += f'{attr_name_variable_name}.setReferenceSameWorkspace({link_same_workspace});\n'
                 js_code += f'{attr_name_variable_name}.setReferenceIsHierarchy({link_is_hierarchy});\n'
+
+            if "derivable" in attr_def:
+                derivable_config = attr_def["derivable"]
+                referencing_attribute_name = derivable_config["referencingAttributeName"]
+                referenced_attribute_name = derivable_config["referencedAttributeName"]
+
+                js_code += f'{attr_name_variable_name}.setDerivableReferencingAttributeName("{referencing_attribute_name}");\n'
+                js_code += f'{attr_name_variable_name}.setDerivableReferencedAttributeName("{referenced_attribute_name}");\n'
 
             js_code += f'\n'
 

@@ -31,6 +31,8 @@ cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 cycleAttribute.setEntityKind("page");
 cycleAttribute.setReferenceSameWorkspace(false);
 cycleAttribute.setReferenceIsHierarchy(false);
+cycleAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.set");
+cycleAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.cycle");
 
 let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
 descriptionAttribute.setType(Type.RICHSTRING);

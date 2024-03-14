@@ -72,6 +72,8 @@ cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 cycleAttribute.setEntityKind("page");
 cycleAttribute.setReferenceSameWorkspace(false);
 cycleAttribute.setReferenceIsHierarchy(false);
+cycleAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.set");
+cycleAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.cycle");
 
 let descriptionAttribute = objectiveType.assertAttribute("cf.cplace.solution.okr.description");
 descriptionAttribute.setType(Type.RICHSTRING);
@@ -121,6 +123,8 @@ bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"}
 bigSupportAttribute.setEntityKind("page");
 bigSupportAttribute.setReferenceSameWorkspace(false);
 bigSupportAttribute.setReferenceIsHierarchy(false);
+bigSupportAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.giveBigSupport");
+bigSupportAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.organizationalUnit");
 
 let giveBigSupportAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.giveBigSupport");
 giveBigSupportAttribute.setType(Type.LINK);
@@ -161,6 +165,8 @@ setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 setAttribute.setEntityKind("page");
 setAttribute.setReferenceSameWorkspace(false);
 setAttribute.setReferenceIsHierarchy(false);
+setAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.objective");
+setAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.set");
 
 let cycleAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.cycle");
 cycleAttribute.setType(Type.LINK);
@@ -169,6 +175,8 @@ cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 cycleAttribute.setEntityKind("page");
 cycleAttribute.setReferenceSameWorkspace(false);
 cycleAttribute.setReferenceIsHierarchy(false);
+cycleAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.set");
+cycleAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.cycle");
 
 let organizationalUnitAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.organizationalUnit");
 organizationalUnitAttribute.setType(Type.LINK);
@@ -177,11 +185,15 @@ organizationalUnitAttribute.setLocalizedNames({"de": "Organsationseinheit", "en"
 organizationalUnitAttribute.setEntityKind("page");
 organizationalUnitAttribute.setReferenceSameWorkspace(false);
 organizationalUnitAttribute.setReferenceIsHierarchy(false);
+organizationalUnitAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.set");
+organizationalUnitAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.organizationalUnit");
 
 let lastUpdateAttribute = keyResultType.assertAttribute("cf.cplace.solution.okr.lastUpdate");
 lastUpdateAttribute.setType(Type.DATE);
 lastUpdateAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 lastUpdateAttribute.setLocalizedNames({"de": "Letztes Update", "en": "Last Update"});
+lastUpdateAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.progress");
+lastUpdateAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.lastUpdate");
 
 let progressType = workspace.assertType("cf.cplace.solution.okr.progress");
 progressType.setLocalizedNames({"de": "Fortschritt", "en": "Progress"});
@@ -221,6 +233,8 @@ cycleAttribute.setLocalizedNames({"de": "Zyklus", "en": "Cycle"});
 cycleAttribute.setEntityKind("page");
 cycleAttribute.setReferenceSameWorkspace(false);
 cycleAttribute.setReferenceIsHierarchy(false);
+cycleAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.keyResult");
+cycleAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.cycle");
 
 let objectiveAttribute = progressType.assertAttribute("cf.cplace.solution.okr.objective");
 objectiveAttribute.setType(Type.LINK);
@@ -229,6 +243,8 @@ objectiveAttribute.setLocalizedNames({"de": "Objective", "en": "Objective"});
 objectiveAttribute.setEntityKind("page");
 objectiveAttribute.setReferenceSameWorkspace(false);
 objectiveAttribute.setReferenceIsHierarchy(false);
+objectiveAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.keyResult");
+objectiveAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.objective");
 
 let smallSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.smallSupport");
 smallSupportAttribute.setType(Type.LINK);
@@ -237,6 +253,8 @@ smallSupportAttribute.setLocalizedNames({"de": "Small Support", "en": "Small Sup
 smallSupportAttribute.setEntityKind("page");
 smallSupportAttribute.setReferenceSameWorkspace(false);
 smallSupportAttribute.setReferenceIsHierarchy(false);
+smallSupportAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.keyResult");
+smallSupportAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.smallSupport");
 
 let bigSupportAttribute = progressType.assertAttribute("cf.cplace.solution.okr.bigSupport");
 bigSupportAttribute.setType(Type.LINK);
@@ -245,6 +263,8 @@ bigSupportAttribute.setLocalizedNames({"de": "Big Support", "en": "Big Support"}
 bigSupportAttribute.setEntityKind("page");
 bigSupportAttribute.setReferenceSameWorkspace(false);
 bigSupportAttribute.setReferenceIsHierarchy(false);
+bigSupportAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.keyResult");
+bigSupportAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.bigSupport");
 
 let progressIndicatorAttribute = progressType.assertAttribute("cf.cplace.solution.okr.progressIndicator");
 progressIndicatorAttribute.setType(Type.TEXTENUMERATION);
@@ -273,6 +293,8 @@ setAttribute.setLocalizedNames({"de": "Set", "en": "Set"});
 setAttribute.setEntityKind("page");
 setAttribute.setReferenceSameWorkspace(false);
 setAttribute.setReferenceIsHierarchy(false);
+setAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.okr.keyResult");
+setAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.okr.set");
 
 let taskType = workspace.assertType("cf.cplace.solution.okr.task");
 taskType.setLocalizedNames({"de": "Aufgabe", "en": "Task"});

@@ -154,10 +154,12 @@ capacityAttribute.setType(Type.NUMBER);
 capacityAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 capacityAttribute.setLocalizedNames({"de": "Capacity", "en": "Capacity"});
 
-let ResultAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.confidenceVote.Result");
-ResultAttribute.setType(Type.TEXT);
-ResultAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
-ResultAttribute.setLocalizedNames({"de": "Confidence Vote Result", "en": "Confidence Vote Result"});
+let resultAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.confidenceVote.Result");
+resultAttribute.setType(Type.TEXT);
+resultAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+resultAttribute.setLocalizedNames({"de": "Confidence Vote Result", "en": "Confidence Vote Result"});
+resultAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.confidenceVote");
+resultAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.confidenceVote.result");
 
 let statsJsonAttribute = programIncrementType.assertAttribute("cf.cplace.solution.safe.statsJson");
 statsJsonAttribute.setType(Type.LONGTEXT);
@@ -305,16 +307,22 @@ let solutionShortNameAttribute = capabilityType.assertAttribute("cf.cplace.solut
 solutionShortNameAttribute.setType(Type.TEXT);
 solutionShortNameAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 solutionShortNameAttribute.setLocalizedNames({"de": "Solution K\u00fcrzel", "en": "Solution Short Name"});
+solutionShortNameAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.solution.reference");
+solutionShortNameAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.shortName");
 
 let plannedStartAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.plannedStart");
 plannedStartAttribute.setType(Type.DATE);
 plannedStartAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 plannedStartAttribute.setLocalizedNames({"de": "Geplanter Start", "en": "Planned Start"});
+plannedStartAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.programIncrement");
+plannedStartAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.startDate");
 
 let plannedEndAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.plannedEnd");
 plannedEndAttribute.setType(Type.DATE);
 plannedEndAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 plannedEndAttribute.setLocalizedNames({"de": "Geplantes Ende", "en": "Planned End"});
+plannedEndAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.programIncrement");
+plannedEndAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.endDate");
 
 let iterationAttribute = capabilityType.assertAttribute("cf.cplace.solution.safe.iteration");
 iterationAttribute.setType(Type.LINK);
@@ -400,11 +408,15 @@ let plannedStartAAttribute = dependencyType.assertAttribute("cf.cplace.solution.
 plannedStartAAttribute.setType(Type.DATE);
 plannedStartAAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 plannedStartAAttribute.setLocalizedNames({"de": "Geplanter Start A", "en": "Planned Start A"});
+plannedStartAAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.successor");
+plannedStartAAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.plannedStart");
 
 let plannedEndBAttribute = dependencyType.assertAttribute("cf.cplace.solution.safe.plannedEndB");
 plannedEndBAttribute.setType(Type.DATE);
 plannedEndBAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
 plannedEndBAttribute.setLocalizedNames({"de": "Geplantes Ende B", "en": "Planned End B"});
+plannedEndBAttribute.setDerivableReferencingAttributeName("cf.cplace.solution.safe.predecessor");
+plannedEndBAttribute.setDerivableReferencedAttributeName("cf.cplace.solution.safe.plannedEnd");
 
 let safeMilestoneType = workspace.assertType("cf.cplace.solution.safe.safeMilestone");
 safeMilestoneType.setLocalizedNames({"de": "SAFe Meilenstein", "en": "SAFe Milestone"});
@@ -463,13 +475,13 @@ snapshotDateAttribute.setType(Type.DATE);
 snapshotDateAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
 snapshotDateAttribute.setLocalizedNames({"de": "Schnappschuss-Datum", "en": "Snapshot date"});
 
-let ReferenceAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
-ReferenceAttribute.setType(Type.LINK);
-ReferenceAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
-ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
-ReferenceAttribute.setEntityKind("page");
-ReferenceAttribute.setReferenceSameWorkspace(false);
-ReferenceAttribute.setReferenceIsHierarchy(false);
+let referenceAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
+referenceAttribute.setType(Type.LINK);
+referenceAttribute.setMultiplicity(Multiplicity.EXACTLY_ONE);
+referenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+referenceAttribute.setEntityKind("page");
+referenceAttribute.setReferenceSameWorkspace(false);
+referenceAttribute.setReferenceIsHierarchy(false);
 
 let timeboxAttribute = flowMetricType.assertAttribute("cf.cplace.solution.safe.timebox");
 timeboxAttribute.setType(Type.LINK);
@@ -500,18 +512,18 @@ timeboxAttribute.setEntityKind("page");
 timeboxAttribute.setReferenceSameWorkspace(false);
 timeboxAttribute.setReferenceIsHierarchy(false);
 
-let SAFeLevelAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel");
-SAFeLevelAttribute.setType(Type.TEXTENUMERATION);
-SAFeLevelAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
-SAFeLevelAttribute.setLocalizedNames({"de": "SAFe Level", "en": "SAFe Level"});
+let sAFeLevelAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel");
+sAFeLevelAttribute.setType(Type.TEXTENUMERATION);
+sAFeLevelAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+sAFeLevelAttribute.setLocalizedNames({"de": "SAFe Level", "en": "SAFe Level"});
 
-let ReferenceAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
-ReferenceAttribute.setType(Type.LINK);
-ReferenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
-ReferenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
-ReferenceAttribute.setEntityKind("page");
-ReferenceAttribute.setReferenceSameWorkspace(false);
-ReferenceAttribute.setReferenceIsHierarchy(false);
+let referenceAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.SAFeLevel.Reference");
+referenceAttribute.setType(Type.LINK);
+referenceAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+referenceAttribute.setLocalizedNames({"de": "SAFe Level Reference", "en": "SAFe Level Reference"});
+referenceAttribute.setEntityKind("page");
+referenceAttribute.setReferenceSameWorkspace(false);
+referenceAttribute.setReferenceIsHierarchy(false);
 
 let businessValueAttribute = objectiveType.assertAttribute("cf.cplace.solution.safe.businessValue");
 businessValueAttribute.setType(Type.NUMBERENUMERATION);
@@ -562,13 +574,13 @@ solutionAttribute.setReferenceIsHierarchy(false);
 let confidenceVoteType = workspace.assertType("cf.cplace.solution.safe.confidenceVote");
 confidenceVoteType.setLocalizedNames({"de": "Confidence Vote", "en": "Confidence Vote"});
 
-let PIAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.PI");
-PIAttribute.setType(Type.LINK);
-PIAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
-PIAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
-PIAttribute.setEntityKind("page");
-PIAttribute.setReferenceSameWorkspace(true);
-PIAttribute.setReferenceIsHierarchy(false);
+let pIAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.PI");
+pIAttribute.setType(Type.LINK);
+pIAttribute.setMultiplicity(Multiplicity.AT_MOST_ONE);
+pIAttribute.setLocalizedNames({"de": "Program Increment", "en": "Program Increment"});
+pIAttribute.setEntityKind("page");
+pIAttribute.setReferenceSameWorkspace(true);
+pIAttribute.setReferenceIsHierarchy(false);
 
 let resultAttribute = confidenceVoteType.assertAttribute("cf.cplace.solution.safe.confidenceVote.result");
 resultAttribute.setType(Type.TEXTENUMERATION);
