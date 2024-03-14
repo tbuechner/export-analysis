@@ -173,3 +173,51 @@ def convert_json_to_js(data, use_chained_calls=False):
 
     return js_code.rstrip('\n')
 
+def convert_json_to_js_per_type(data, folder_name, use_chained_calls=False):
+    for type_def in data["export"]["workspace"]["types"]:
+        type_name = type_def["name"]
+        localized_name_singular = type_def["localizedNameSingular"]
+
+        # Generate variable names
+        type_name_variable_name = type_name.split(".")[-1] + "Type"
+        type_name_variable_name = type_name_variable_name[0].lower() + type_name_variable_name[1:]  # Lowercase the first character
+
+        # Start JavaScript code
+        js_code = f'let {type_name_variable_name} = workspace.assertType("{type_name}");\n'
+        js_code += f'{type_name_variable_name}.setLocalizedNames({json.dumps(localized_name_singular)});\n\n'
+
+        for attr_def in type_def["attributeDefinitions"]:
+            attr_name = attr_def["name"]
+            localized_name = attr_def["localizedName"]
+            m = attr_def["multiplicity"]
+            multiplicity = "ANY_NUMBER" if m is None else m.replace("exactlyOne", "EXACTLY_ONE").replace("maximalOne", "AT_MOST_ONE").replace("atLeastOne", "AT_LEAST_ONE")
+            type_constraint = attr_def["typeConstraint"]
+
+            attr_name_variable_name = attr_name.split(".")[-1] + "Attribute"
+            attr_name_variable_name = attr_name_variable_name[0].lower() + attr_name_variable_name[1:]  # Lowercase the first character
+
+            chain_prefix = '' if use_chained_calls else '\n'
+            setter = f'.setType(Type.{type_constraint.upper()}).setMultiplicity(Multiplicity.{multiplicity}).setLocalizedNames({json.dumps(localized_name)});'
+            js_code += f'let {attr_name_variable_name} = {type_name_variable_name}.assertAttribute("{attr_name}"){chain_prefix}{setter}'
+
+            if type_constraint == "Link":
+                link_entity_kind = attr_def["linkEntityKind"]
+                link_same_workspace = "true" if attr_def["linkSameWorkspace"].lower() == "true" else "false"
+                link_is_hierarchy = "true" if attr_def["linkIsHierarchy"].lower() == "true" else "false"
+                chain_prefix = '' if use_chained_calls else f'{attr_name_variable_name}'
+                js_code += f'{chain_prefix}.setEntityKind("{link_entity_kind}").setReferenceSameWorkspace({link_same_workspace}).setReferenceIsHierarchy({link_is_hierarchy});'
+
+            if "derivable" in attr_def:
+                derivable_config = attr_def["derivable"]
+                referencing_attribute_name = derivable_config["referencingAttributeName"]
+                referenced_attribute_name = derivable_config["referencedAttributeName"]
+                chain_prefix = '' if use_chained_calls else f'{attr_name_variable_name}'
+                js_code += f'{chain_prefix}.setDerivableReferencingAttributeName("{referencing_attribute_name}").setDerivableReferencedAttributeName("{referenced_attribute_name}");'
+
+            js_code += f'\n\n' if use_chained_calls else f'\n'
+
+        # Determine the filename for the type
+        filename = f"{type_name_variable_name}.js"
+        # Write the generated js to a file named after the type
+        with open(folder_name + "/" + filename, 'w') as js_file:
+            js_file.write(js_code.rstrip('\n'))

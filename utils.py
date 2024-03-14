@@ -8,7 +8,7 @@ import os
 import yaml
 
 
-from jsonToCode import generate_copilot_examples, convert_json_to_js
+from jsonToCode import generate_copilot_examples, convert_json_to_js, convert_json_to_js_per_type
 from tokenizer import count_large_files, count_tokens_in_file
 
 
@@ -462,6 +462,10 @@ def run_for_folder(folder_name):
 
     write_to_file(folder_name_generated, "types.js", convert_json_to_js(doc, False))
     write_to_file(folder_name_generated, "types-chained.js", convert_json_to_js(doc, True))
+
+    types_folder_name = folder_name_generated + '/types'
+    os.mkdir(types_folder_name)
+    convert_json_to_js_per_type(doc, types_folder_name, True)
 
     write_token_counts(folder_name_generated)
 
