@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "cplace.setLogName('PI Dashboard');\n//Configurations\nconst DASHBOARD = {\n    TYPE:'cf.cplace.solution.safe.breakdownDashboard',\n    ATTR:{\n      PARENT:'cf.cplace.solution.safe.parent'\n    }\n  }\n  \n  let finallink='';\n  let link, name;\n  let dashboardSearch = new Search()\n    .add(Filters.space(embeddingPage.getSpaceId()))\n    .add(Filters.type(DASHBOARD.TYPE))\n    .add(Filters.customAttributeNonempty(DASHBOARD.ATTR.PARENT))\n    .findAllPages();\n\nlet result = Iterables.getFirst(dashboardSearch, null);\n\nif (result) {\n    link = result.getUrl();\n    name = result.getName();\n}\n  \nreturn '<a href=\"'+link+'\"class=\"current-color\">Open Capablities Dashboard</a>';",
+    "attributes": null,
+    "type_name": null,
+    "counter": 38
+}

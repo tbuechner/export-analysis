@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/**\n * CHANGE LISTENER\n * @customType cf.cplace.solution.safe.capability\n * @attribute cf.cplace.solution.safe.state\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.1\n * @description Sets the start date of the capability once it has entered the funnel and sets the end date once it has been marked as done\n */\n\nconst STATUS = /** @type {const} */ ({\n    ATTR: \"cf.cplace.solution.safe.state\",\n});\n\n/**\n * Update start and end date depending on the capability status\n */\nfunction main() {\n    /** @type {Page<'cf.cplace.solution.safe.capability'>} */\n    const page = changeEvent.getEntity();\n    const status = page.get(STATUS.ATTR);\n\n    if (status === \"#15 - Funnel\") {\n        cplace.actions().updatePage(page, {\n            customAttributes: {\n                \"cf.cplace.solution.safe.actualStartDate\": new DateTime(),\n            },\n        });\n        page.registerAttributeForRefresh(\"cf.cplace.solution.safe.actualStartDate\");\n    }\n    if (status === \"#85 - Done\") {\n        cplace.actions().updatePage(page, {\n            customAttributes: {\n                \"cf.cplace.solution.safe.actualEndDate\": new DateTime(),\n            },\n        });\n        page.registerAttributeForRefresh(\"cf.cplace.solution.safe.actualEndDate\");\n    }\n}\n\nmain();",
+    "attributes": [
+        "cf.cplace.solution.safe.state"
+    ],
+    "type_name": "cf.cplace.solution.safe.capability",
+    "counter": 16
+}

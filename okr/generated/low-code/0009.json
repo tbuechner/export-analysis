@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "const KEY_RESULT = {\n  TYPE : 'cf.cplace.solution.okr.keyResult',\n  ATTR :{\n    PROGRESS : 'cf.cplace.solution.okr.progress',\n    CONFIDENCE_LEVEL :'cf.cplace.solution.okr.confidenceLevel',\n  }\n}\nconst PROGRESS = {\n  TYPE : 'cf.cplace.solution.okr.progress',\n  ATTR : {\n    KEY_RESULT:'cf.cplace.solution.okr.keyResult',\n    CONFIDENCE_LEVEL:'cf.cplace.solution.okr.confidenceLevel',\n  }\n}\nfunction main(){\n  //const attributeToSync = 'cf.cplace.solution.okr.confidenceLevel';\n  let page = changeEvent.getEntity();\n  let confidenceLevel = page.get(PROGRESS.ATTR.CONFIDENCE_LEVEL);\n  let keyResult = page.get(PROGRESS.ATTR.KEY_RESULT);\n  if (!isSet(keyResult) || !isSet(confidenceLevel)) {\n    // Nothing to sync with\n    return;\n  }\n  let resultConfidence = keyResult.get(KEY_RESULT.ATTR.CONFIDENCE_LEVEL);\n  if (confidenceLevel === resultConfidence)  {\n    return;\n  }\n  cplace.actions().updatePage(keyResult, {\n    customAttributes: {\n      'cf.cplace.solution.okr.confidenceLevel': confidenceLevel\n    }\n  }\n                             );\n  keyResult.registerAttributeForRefresh('cf.cplace.solution.okr.confidenceLevel');\n}\n\nreturn main();\n\n// Check if a value is set\nfunction isSet(value) {\n  return !!value;\n}",
+    "attributes": [
+        "cf.cplace.solution.okr.confidenceLevel"
+    ],
+    "type_name": "cf.cplace.solution.okr.progress",
+    "counter": 9
+}

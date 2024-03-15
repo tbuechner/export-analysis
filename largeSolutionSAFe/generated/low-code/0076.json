@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "cplace.setLogName('Current PI');\n//Configurations\nconst TIMELINE_DASHBOARD = {\n    TYPE:'cf.cplace.solution.safe.timelineDashboard',\n    ATTR:{\n      PARENT:'cf.cplace.solution.safe.parent'\n    }\n  }\n  \n  let finallink='';\n  let link, name;\n  let piDashboardSearch = new Search()\n    .add(Filters.space(embeddingPage.getSpaceId()))\n    .add(Filters.type(TIMELINE_DASHBOARD.TYPE))\n    .add(Filters.customAttributeNonempty(TIMELINE_DASHBOARD.ATTR.PARENT))\n    .findAllPages();\n\nlet result = Iterables.getFirst(piDashboardSearch, null);\n\nif (result) {\n    link = result.getUrl();\n    name = result.getName();\n}\n  \nreturn '<a href=\"'+link+'\"class=\"current-color\">Open Timeline Dashboard</a>';",
+    "attributes": null,
+    "type_name": null,
+    "counter": 76
+}

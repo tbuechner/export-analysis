@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "var layoutConfig = {\n    layouts: selectedLayouts,\n    active: selectedActiveLayout\n};\n\nreturn layoutConfig;",
+    "attributes": null,
+    "type_name": null,
+    "counter": 33
+}

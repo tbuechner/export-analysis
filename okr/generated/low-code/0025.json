@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "var lang = cplace.utils().getCurrentUser().getUserLanguage();\n\nvar messages = {\n  message: {\n    en: '<p style=\"font-size: 14px; margin-left: 5px;color:#343C4C\">Enter your progress and submit your Key Result Updates. </p>',\n    de: 'Tragen sie Ihren Fortschritt ein und reichen Sie Ihr Key Result Updates ein. '\n  }\n}\n\nreturn messages.message[lang]",
+    "attributes": null,
+    "type_name": null,
+    "counter": 25
+}

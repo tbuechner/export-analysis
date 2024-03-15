@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "var currentUser = cplace.utils().getCurrentUser();\ncplace.log(currentUser);\nvar orgUnits = currentUser.getIncomingPages('cf.cplace.solution.okr.organizationalUnit', 'cf.cplace.solution.okr.assignedEmployee');\n\nvar lang = currentUser.getUserLanguage();\nvar result = \"\";\ncplace.each(orgUnits, function(orgUnit) {\n  cplace.log(orgUnit.getName());\n  var messages = {\n    message: {\n      en: 'Administration',\n      de: 'Administration'\n    }\n  }\n\n  result += \"<div class='custom-stm-dashboard-banner \" + orgUnit.getName().replace(/\\W+(.)/g) + \"'>\" + messages.message[lang] + \"</div>\"\n\n});\n\nreturn result;",
+    "attributes": null,
+    "type_name": null,
+    "counter": 45
+}

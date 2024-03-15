@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/**\n * CHANGE LISTENER\n * @customType cf.cplace.solution.safe.capability\n * @attribute cf.cplace.solution.safe.features\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.0\n * @description Sets the cf.cplace.solution.safe.program attribute of a capability to the programms, which work on features of the capability.\n */\nconst FEATURE = {\n    TYPE: \"cf.cplace.solution.safe.feature\",\n    ATTR: {\n        CAPABILITY: \"cf.cplace.solution.safe.capability\",\n    },\n};\n\n/**\n * Get all features of a capability and store a unique list of the features Programms on the capability\n */\nfunction main() {\n    /** @type {Page<'cf.cplace.solution.safe.capability'>} */\n    const capability = changeEvent.getEntity();\n    /** @type {Page<'cf.cplace.solution.safe.feature'>[]} */\n    // @ts-ignore\n    const features = capability.get(\"cf.cplace.solution.safe.features\")\n\n    const programmIds = features.map((feature) => feature.get(\"cf.cplace.solution.safe.program\")?.getId());\n    const uniqueProgrammIdeas = [...new Set(programmIds)];\n    cplace.log(`Capability ${capability.getName()} unique programms: ${uniqueProgrammIdeas}`);\n    cplace.actions().updatePage(capability, {\n        customAttributes: {\n            // @ts-ignore\n            \"cf.cplace.solution.safe.program\": uniqueProgrammIdeas,\n        },\n    });\n  capability.registerAttributeForRefresh(\"cf.cplace.solution.safe.program\");\n}\nmain();",
+    "attributes": [
+        "cf.cplace.solution.safe.features"
+    ],
+    "type_name": "cf.cplace.solution.safe.capability",
+    "counter": 15
+}

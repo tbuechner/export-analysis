@@ -1,0 +1,7 @@
+{
+    "type": "cf.cplace.platform.Validator",
+    "code": "/*\n*Validator \n*checks for progressUpdated to be true\n*/\nfunction main() {\n   let result = null;\n   let updated = page.get('cf.cplace.solution.okr.progressUpdated');\n\n   if (!updated) {\n      result = 'The progess must be updated!';\n   }\n\n   return result;\n}\n\nreturn main();",
+    "attributes": null,
+    "type_name": "cf.cplace.solution.okr.progressUpdated",
+    "counter": 15
+}

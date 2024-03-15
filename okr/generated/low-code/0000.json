@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/*\n*Changelistener\n*Type:Cycle\n*Triggering attribute: Status\n*Sets the status for the name generation pattern \n*Author :Laxmi Udapudi\n*/\n\ncplace.setLogName('Set_the_Current_Status')\nfunction main() {\n    let cycle = changeEvent.getEntity();\n    let status = cycle.get('cf.cplace.solution.okr.status');\n\n    if (status == '#25 Current') {\n        updatePage(cycle, {\n            'cf.cplace.solution.okr.statusForNameGenerationPattern': 'Current'\n        })\n    } else {\n        updatePage(cycle, {\n            'cf.cplace.solution.okr.statusForNameGenerationPattern': undefined\n        })\n\n    }\n}\n\nmain();\n\n\n/*\n*Update the cplace page whenever there is change in attributes\n* @param {Page<T>} page\n* @param {(keyof CplaceTypes[T])[]} attributes\n*/\nfunction updatePage(page, customAttributes) {\n    let key = null;\n    for (key in customAttributes) {\n        if (customAttributes.hasOwnProperty(key)) {\n            page.registerAttributeForRefresh(key)\n        }\n    }\n    return cplace.actions().updatePage(page, {\n        customAttributes: customAttributes,\n    }\n        , {\n            setGeneratedName: true\n        }\n    );\n}",
+    "attributes": [
+        "cf.cplace.solution.okr.status"
+    ],
+    "type_name": "cf.cplace.solution.okr.cycle",
+    "counter": 0
+}

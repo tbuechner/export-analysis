@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "var currentUser = cplace.utils().getCurrentUser();\n\nvar orgUnits = currentUser.getIncomingPages('cf.cplace.solution.okr.organizationalUnit', 'cf.cplace.solution.okr.assignedEmployee');\n\nvar lang = currentUser.getUserLanguage();\nvar result = \"\";\ncplace.each(orgUnits, function(orgUnit) {\n    var messages = {\n        message: {\n            en: 'Welcome ' + currentUser.getName() + '. You are assigned to the Org. Unit <b>' + orgUnit.getName() +'</b>.',\n            de: 'Hallo ' + currentUser.getName() + '. Sie sind der Org. Einheit <b>' + orgUnit.getName() + '</b> zugewiesen.'\n        }\n    }\n\n    result += \"<div class='custom-stm-set-banner \" + orgUnit.getName().replace(/\\W+(.)/g) + \"'>\" + messages.message[lang] + \"</div>\"\n    cplace.log('result'+result)\n});\n\nreturn result;",
+    "attributes": null,
+    "type_name": null,
+    "counter": 37
+}

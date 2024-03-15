@@ -238,17 +238,33 @@ def return_all_searches(root, parent_map):
         result[i] = search["filters"]
     return result
 
+# q: how to add a counter attribute to LowCodeScript?
+# a: use the following code to add a counter attribute to LowCodeScript
+# class LowCodeScript:
+#     counter = 0
+#     def __init__(self, scriptType, code, typeName=None, attributes=None):
+#         self.type = scriptType
+#         self.code = code
+#         self.attributes = attributes
+#         self.typeName = typeName
+#         LowCodeScript.counter += 1
 
 class LowCodeScript:
+
+    counter = 0
+
     def __init__(self, script_type, code, type_name=None, attributes=None):
         self.type = script_type
         self.code = code
         self.attributes = attributes
         self.type_name = type_name
+        self.counter = LowCodeScript.counter
+        LowCodeScript.counter += 1
 
 
 def return_all_low_code_scripts(root, parent_map):
     scripts = []
+    LowCodeScript.counter = 0
 
     for element in root.iter():
         if element.text is not None and element.tag == "lowCodeScript":
@@ -428,7 +444,11 @@ def run_for_folder(folder_name):
 
     low_code_scripts = return_all_low_code_scripts(root, parent_map)
     # print("LowCodeScripts: ", lowCodeScripts)
-    write_low_code_scripts_to_file(folder_name_generated, low_code_scripts)
+
+    low_code_folder_name = folder_name_generated + '/low-code'
+    os.mkdir(low_code_folder_name)
+
+    write_low_code_scripts_to_file(folder_name_generated, low_code_folder_name, low_code_scripts)
 
     widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
@@ -489,7 +509,7 @@ def write_json_to_file(folder_name, file_name, o):
         f.write(yaml.dump(o))
 
 
-def write_low_code_scripts_to_file(folder_name, low_code_scripts):
+def write_low_code_scripts_to_file(folder_name, low_code_folder_name, low_code_scripts):
     with open(folder_name + '/low-code-scripts.js', 'w') as f:
         for low_code_script in low_code_scripts:
             # separate the lowCodeScripts by a new line and "---------------------------------------------------"
@@ -501,6 +521,20 @@ def write_low_code_scripts_to_file(folder_name, low_code_scripts):
     # write the low_code_scripts to a json file
     with open(folder_name + '/low-code-scripts-pretty.json', 'w') as f:
         f.write(json.dumps([ob.__dict__ for ob in low_code_scripts], indent=4))
+
+    # iterate over all low_code_scripts
+    for low_code_script in low_code_scripts:
+        # write the code of the low_code_script to a file
+        # generate a file name which consists of the count filled with leading zeros
+        code_file_name = str(low_code_script.counter).zfill(4) + '.js'
+        write_to_file(low_code_folder_name, code_file_name, low_code_script.code)
+
+        json_file_name = str(low_code_script.counter).zfill(4) + '.json'
+        # write the low_code_script to a json file
+        # q: how to handle TypeError: Object of type LowCodeScript is not JSON serializable
+        # a: use the json.dumps function with the argument default=lambda o: o.__dict__
+        with open(low_code_folder_name + '/' + json_file_name, 'w') as f:
+            f.write(json.dumps(low_code_script, default=lambda o: o.__dict__, indent=4))
 
 
 def write_to_file(folder_name, file_name, content):

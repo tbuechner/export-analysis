@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "const KEY_RESULT = {\n  TYPE : 'cf.cplace.solution.okr.keyResult',\n  ATTR :{\n    PROGRESS : 'cf.cplace.solution.okr.progress',\n    CONFIDENCE_LEVEL :'cf.cplace.solution.okr.confidenceLevel',\n    PROGRESS_INDICATOR : 'cf.cplace.solution.okr.progressIndicator'\n  }\n}\nconst PROGRESS = {\n  TYPE : 'cf.cplace.solution.okr.progress',\n  ATTR : {\n    KEY_RESULT:'cf.cplace.solution.okr.keyResult',\n    CONFIDENCE_LEVEL:'cf.cplace.solution.okr.confidenceLevel',\n    PROGRESS_INDICATOR :'cf.cplace.solution.okr.progressIndicator'\n  }\n}\n\ncplace.setLogName('set _outdated_ProgressIndicator');\n\nfunction main(){\n  let page = changeEvent.getEntity();\n  let indicator = page.get(KEY_RESULT.ATTR.PROGRESS_INDICATOR);\n  let progress = page.get(KEY_RESULT.ATTR.PROGRESS);\n  // only update outdated, all other indicators should be updated when sync of confidencelevel happens\n  if (!isSet(progress) || !isSet(indicator)) {\n    // Nothing to sync\n    return;\n  }\n  let resultIndicator = progress.get(PROGRESS.ATTR.PROGRESS_INDICATOR);\n  if (indicator === '#45 outdated' && resultIndicator !== '#45 outdated') {\n    return updateIndicator(progress,indicator);\n  }\n  if (indicator !== '#45 outdated' && resultIndicator === '#45 outdated') {\n    return updateIndicator(progress,indicator);\n  }\n}\n\nreturn main();\n\nfunction updateIndicator(progress,indicator) {\n  cplace.log(\"Keyresult updates indicator\")\n  cplace.actions().updatePage(progress, {\n    customAttributes: {\n      'cf.cplace.solution.okr.progressIndicator': indicator\n    }\n  }\n                             );\n  progress.registerAttributeForRefresh('cf.cplace.solution.okr.progressIndicator');\n}\n// Check if a value is set\nfunction isSet(value) {\n  return !!value;\n}",
+    "attributes": [
+        "cf.cplace.solution.okr.progressIndicator"
+    ],
+    "type_name": "cf.cplace.solution.okr.keyResult",
+    "counter": 5
+}

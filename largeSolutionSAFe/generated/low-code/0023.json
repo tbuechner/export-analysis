@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/**\n * CHANGE LISTENER\n * @customType cf.cplace.solution.safe.safeMilestone\n * @attribute cf.cplace.solution.safe.date\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.0\n * @description Syncs the milestone date to the start and end date (these are needed for dependencies)\n */\n\nfunction main() {\n    /** @type {Page<'cf.cplace.solution.safe.safeMilestone'>} */\n    const safeMilestone = changeEvent.getEntity();\n\n    const date = safeMilestone.get(\"cf.cplace.solution.safe.date\");\n\n    cplace.actions().updatePage(safeMilestone, {\n        customAttributes: {\n            \"cf.cplace.solution.safe.plannedStart\": date,\n            \"cf.cplace.solution.safe.plannedEnd\": date,\n        },\n    });\n  safeMilestone.registerAttributeForRefresh('cf.cplace.solution.safe.plannedStart')\n  safeMilestone.registerAttributeForRefresh('cf.cplace.solution.safe.plannedEnd')\n}\nmain();",
+    "attributes": [
+        "cf.cplace.solution.safe.date"
+    ],
+    "type_name": "cf.cplace.solution.safe.safeMilestone",
+    "counter": 23
+}

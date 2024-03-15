@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/**\n * CHANGE LISTENER\n * @customType cf.cplace.solution.safe.programIncrement\n * @attribute cf.cplace.solution.safe.title\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.0\n * @description Automatically creates a Confidence Vote page upon creation of a Programm Increment\n */\n\ncplace.setLogName(\"listener_createConfidenceVote\")\n\nconst CONFIDENCE_VOTE = /** @type {const} */ ({\n    TYPE: \"cf.cplace.solution.safe.confidenceVote\",\n    ATTR: {\n        PROGRAMM_INCREMENT: \"cf.cplace.solution.safe.confidenceVote.PI\",\n        SOLUTION: \"cf.cplace.solution.safe.confidenceVote.solution\",\n    },\n});\n\nconst PROGRAMM_INCREMENT = /** @type {const} */ ({\n    ATTR: {\n        SOLUTION: \"cf.cplace.solution.safe.solution\",\n    },\n});\n\nfunction main() {\n    if (!changeEvent.isNew()) {\n        return;\n    }\n    /** @type {Page<'cf.cplace.solution.safe.programIncrement'>} */\n    const programmIncrement = changeEvent.getEntity();\n    const solution = programmIncrement.get(PROGRAMM_INCREMENT.ATTR.SOLUTION);\n\n    const confidenceVote = cplace.actions().createPage(\n        {\n            space: programmIncrement.getSpaceId(),\n            customType: CONFIDENCE_VOTE.TYPE,\n            customAttributes: {\n                [CONFIDENCE_VOTE.ATTR.PROGRAMM_INCREMENT]: programmIncrement,\n                [CONFIDENCE_VOTE.ATTR.SOLUTION]: solution,\n            },\n        },\n        { setGeneratedName: true }\n    );\n    cplace.log(`${confidenceVote.getName()} created`);\n}\n\nmain()",
+    "attributes": [
+        "cf.cplace.solution.safe.title"
+    ],
+    "type_name": "cf.cplace.solution.safe.programIncrement",
+    "counter": 7
+}

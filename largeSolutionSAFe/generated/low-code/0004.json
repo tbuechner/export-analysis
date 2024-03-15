@@ -1,0 +1,7 @@
+{
+    "type": "cf.cplace.platform.Validator",
+    "code": "/**\n * VALIDATOR\n * @customType cf.cplace.solution.safe.solution\n * @attribute cf.cplace.solution.safe.*WIPLimit\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.1\n * @description Checks if the WIP limit is either null or larger than 1\n */\n\nfunction checkIfWIPLimitIsCorrect() {\n    if (page.get(customAttribute) === null) {\n        return;\n    }\n    if (page.get(customAttribute) <= 0) {\n        return \"WIP Limit must be >= 1 or empty\";\n    }\n}\n\nreturn checkIfWIPLimitIsCorrect();",
+    "attributes": null,
+    "type_name": "cf.cplace.solution.safe.validatingWIPLimit",
+    "counter": 4
+}

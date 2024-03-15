@@ -1,0 +1,9 @@
+{
+    "type": "cf.cplace.platform.ChangeListener",
+    "code": "/*ChangeListener on attribute periodStatus of programIncrement type \nwhenever the periodStatus of the PI is changed the periodStatus of the associated features are also updated\nSteps followed to achieve this \n1.get the updated periodStatus of the PI\n2.if the periodStatus is not null get the feature associated with the PI using Features as Program Increment \n3.set the updated periodStatus of the PI to its Features*/\n\ncplace.setLogName('cF - syncProgramIncrementPeriodStatustoFeature');\n\n// Configuration\nconst PI={\n  TYPE:'cf.cplace.solution.safe.programIncrement',\n  ATTR:{\n    periodStatus:'cf.cplace.solution.safe.periodStatus'\n  },\n  refAttr:{\n    pIReferenceAttr:'cf.cplace.solution.safe.programIncrement',\n    mappingRefAttr:'cf.cplace.solution.safe.periodStatus',\n    orderRefAttr:'cf.cplace.solution.safe.order'\n  }\n}\n\nconst FEATURE={\n  TYPE:'cf.cplace.solution.safe.feature',\n  ATTR:{\n    PI:'cf.cplace.solution.safe.programIncrement',\n    periodStatus:'cf.cplace.solution.safe.periodStatus'\n  }\n}\n\n// get changed page\nlet page = changeEvent.getEntity();\n\nlet periodStatus=page.get(PI.ATTR.periodStatus);\ncplace.log(periodStatus);\n\nif(periodStatus == null){\n  return\n}\n\nlet features=page.getIncomingPages(FEATURE.TYPE,FEATURE.ATTR.PI);\n//cplace.log('periodStatus of feature'+features);\n\n\ncplace.each(features,function(feature){\n  cplace.actions().updatePage(feature, {\n\tcustomAttributes: {\n\t\t[FEATURE.ATTR.periodStatus]: periodStatus\n\t\t}\n    });\n \nfeature.registerAttributeForRefresh(FEATURE.ATTR.periodStatus);\n\n})",
+    "attributes": [
+        "cf.cplace.solution.safe.periodStatus"
+    ],
+    "type_name": "cf.cplace.solution.safe.programIncrement",
+    "counter": 9
+}

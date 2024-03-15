@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "const ATTRIBUTES = {\n    MEETING: {\n        TYPE: 'cf.cplace.solution.okr.meeting',\n        ATTR: {\n            MEETING_TYPE: 'cf.cplace.solution.okr.meetingType'\n        },\n        MEETING_TYPE: {\n            ONE_ON_ONE: '#15 - 1on1',\n            LEADERASHIP: '#25 - leadership',\n            WORKSHOP: '#35 - workshop'\n        }\n    },\n    LAYOUTS: {\n        ONE_ON_ONE: 'cf.cplace.solution.okr.layout.1on1',\n        LEADERASHIP: 'cf.cplace.solution.okr.layout.leadership',\n        WORKSHOP: 'cf.cplace.solution.okr.layout.workshop',\n        FILES: 'cf.cplace.solution.okr.layout.files'\n    }\n}\n\n\n\n\nlet layouts = [];\nlet meetingType = page.get(ATTRIBUTES.MEETING.ATTR.MEETING_TYPE);\n\nswitch (meetingType) {\n    case ATTRIBUTES.MEETING.MEETING_TYPE.ONE_ON_ONE:\n        layouts.push(ATTRIBUTES.LAYOUTS.ONE_ON_ONE);\n        break;\n    case ATTRIBUTES.MEETING.MEETING_TYPE.LEADERASHIP:\n        layouts.push(ATTRIBUTES.LAYOUTS.LEADERASHIP);\n        break;\n        case ATTRIBUTES.MEETING.MEETING_TYPE.WORKSHOP:\n            layouts.push(ATTRIBUTES.LAYOUTS.WORKSHOP);\n        break;\n    default:\n  }\n\n  layouts.push(ATTRIBUTES.LAYOUTS.FILES);\n\n\nlet layoutConfig = {\n    layouts: layouts,\n    active: layouts[0],\n  }\n  \n  return layoutConfig;",
+    "attributes": null,
+    "type_name": null,
+    "counter": 47
+}

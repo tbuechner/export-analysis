@@ -1,0 +1,7 @@
+{
+    "type": "custom_attribute",
+    "code": "var objective = embeddingPage;\nvar set = objective.get('cf.cplace.solution.okr.set');\nvar orgUnit = set.get('cf.cplace.solution.okr.organizationalUnit');\n\nreturn \"<div class='custom-stm-set-banner \" + orgUnit.getName().replace(/\\W+(.)/g) + \"'>\"+set.getName()+\"</div>\"",
+    "attributes": null,
+    "type_name": null,
+    "counter": 27
+}
