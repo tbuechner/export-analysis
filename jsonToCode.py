@@ -155,9 +155,24 @@ function createPage() {
     types = data['export']['workspace']['types']
     # print("type of types: " + str(type(types)))
 
-    for eachType in types:
+    link_attributes = []  # Create an empty list to store the link attributes
 
-        fully_qualified_type_name = eachType['name']
+    for each_type in types:
+
+        type_name = each_type["name"]
+
+        for attr_def in each_type["attributeDefinitions"]:
+            attr_name = attr_def["name"]
+            type_constraint = attr_def["typeConstraint"]
+
+            if type_constraint == "Link":
+                if "linkTypeName" in attr_def:
+                    link_target_type_name = attr_def["linkTypeName"]
+                    link_attributes.append(LinkAttribute(type_name, attr_name, link_target_type_name))
+
+    for each_type in types:
+
+        fully_qualified_type_name = each_type['name']
         simple_type_name = fully_qualified_type_name.split(".")[-1]
         # print("type_name: " + simple_type_name)
 
@@ -170,7 +185,7 @@ function createPage() {
         # convert first letter to uppercase
         simple_type_name_firstLetterCapital = simple_type_name[0].upper() + simple_type_name[1:]
         function_name = "readFrom" + simple_type_name_firstLetterCapital
-        attributes = eachType['attributeDefinitions']
+        attributes = each_type['attributeDefinitions']
 
         # q: is there a way to set a string variale with a multi-line string?
         #
@@ -181,6 +196,11 @@ function createPage() {
             attr_name = attr['name']
             simple_attr_name = attr_name.split(".")[-1]
             snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get('{attr_name}');\n"
+
+        for link_attr in link_attributes:
+            if link_attr.target_type_name == fully_qualified_type_name:
+                snippet += f"    const {link_attr.reference_name.split('.')[-1]} = {simple_type_name}.getIncomingPages('{fully_qualified_type_name}', '{link_attr.reference_name}');\n"
+
         snippet += "}\n"
         snippet += "\n"
 
