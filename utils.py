@@ -8,7 +8,7 @@ import os
 import yaml
 
 
-from jsonToCode import generate_copilot_examples, convert_json_to_js, convert_json_to_js_per_type
+from jsonToCode import generate_copilot_examples_constants, convert_json_to_js, convert_json_to_js_per_type, generate_copilot_examples_literals
 from tokenizer import count_large_files, count_tokens_in_file
 
 
@@ -397,7 +397,8 @@ def find_all_widgets(root, parent_map):
 
 def write_token_counts(folder_name):
     with open(folder_name + '/' + 'token-counts.txt', 'w') as f:
-        write_token_count(f, folder_name, "copilot_examples.js")
+        write_token_count(f, folder_name, "copilot_examples_constants.js")
+        write_token_count(f, folder_name, "copilot_examples_literals.js")
         write_token_count(f, folder_name, "types-compressed.json")
         write_token_count(f, folder_name, "types-pretty.json")
         write_token_count(f, folder_name, "types-pretty.yaml")
@@ -476,9 +477,11 @@ def run_for_folder(folder_name):
 
     write_json_to_file(folder_name_generated, "types", doc)
 
-    copilot_examples = generate_copilot_examples(doc)
-    # print(copilot_examples)
-    write_to_file(folder_name_generated, "copilot_examples.js", copilot_examples)
+    copilot_examples_constants = generate_copilot_examples_constants(doc)
+    write_to_file(folder_name_generated, "copilot_examples_constants.js", copilot_examples_constants)
+
+    copilot_examples_literals = generate_copilot_examples_literals(doc)
+    write_to_file(folder_name_generated, "copilot_examples_literals.js", copilot_examples_literals)
 
     types_folder_name = folder_name_generated + '/types'
     os.mkdir(types_folder_name)

@@ -10,7 +10,7 @@ def getConstantName(simple_type_name_SnakeCase, simple_attr_name):
     return f"ATTR_{simple_type_name_SnakeCase}_{convertToSnakeUpperCase(simple_attr_name)}"
 
 
-def generate_copilot_examples(data):
+def generate_copilot_examples_constants(data):
 
     snippet = """function accessBuiltInPageAttributes(page) {
     const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
@@ -105,6 +105,100 @@ function createPage() {
         snippet += "\n"
 
     return snippet
+
+def generate_copilot_examples_literals(data):
+
+    snippet = """function accessBuiltInPageAttributes(page) {
+    const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
+    const comments = page.getBuiltinFeatureValue("comments");
+    const commentsForVersioning = page.getBuiltinFeatureValue("commentsForVersioning");
+    const content = page.getBuiltinFeatureValue("content");
+    const creator = page.getBuiltinFeatureValue("creator");
+    const created = page.getBuiltinFeatureValue("created");
+    const customType = page.getBuiltinFeatureValue("customType");
+    const documents = page.getBuiltinFeatureValue("documents");
+    const id = page.getBuiltinFeatureValue("id");
+    const localizedName = page.getBuiltinFeatureValue("localizedName");
+    const name = page.getBuiltinFeatureValue("name");
+    const orderIndex = page.getBuiltinFeatureValue("orderIndex");
+    const readers = page.getBuiltinFeatureValue("readers");
+    const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
+    const space = page.getBuiltinFeatureValue("space");
+    const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+}
+
+"""
+
+    snippet += """function updatePage(page) {
+    cplace.actions().updatePage(page, {
+        customAttributes: {
+            ['attributeName1']: value1,
+            ['attributeName2']: value2
+        },
+    });
+}
+
+function createPage() {
+    return cplace.actions().createPage({
+        customType: TYPE_NAME,
+        customAttributes: {
+            ['attributeName1']: value1,
+            ['attributeName2']: value2
+        }
+    }, {
+        setGeneratedName: true
+    });
+}
+
+"""
+
+    types = data['export']['workspace']['types']
+    # print("type of types: " + str(type(types)))
+
+    for eachType in types:
+
+        fully_qualified_type_name = eachType['name']
+        simple_type_name = fully_qualified_type_name.split(".")[-1]
+        # print("type_name: " + simple_type_name)
+
+        # convert from camel case to snake case
+        # q: how to convert from camel case to snake case?
+        # a: use regular expressions
+        simple_type_name_SnakeCase = convertToSnakeUpperCase(simple_type_name)
+        # print("type_name_snake_case: " + simple_type_name_SnakeCase)
+
+        # convert first letter to uppercase
+        simple_type_name_firstLetterCapital = simple_type_name[0].upper() + simple_type_name[1:]
+        function_name = "readFrom" + simple_type_name_firstLetterCapital
+        attributes = eachType['attributeDefinitions']
+
+        # q: is there a way to set a string variale with a multi-line string?
+        #
+
+        # Start building the function snippet
+        snippet += f"function {function_name}({simple_type_name}) {{\n"
+        for attr in attributes:
+            attr_name = attr['name']
+            simple_attr_name = attr_name.split(".")[-1]
+            snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get('{attr_name}');\n"
+        snippet += "}\n"
+        snippet += "\n"
+
+        # q: what is a f" string?
+        # a: f-strings are a way to embed expressions inside string literals, using curly braces
+        # q: how to escape "/" in a f-string?
+        #
+        snippet += "\n"
+
+    return snippet
+
+
+# a class which contains the following attributes: type_name, reference_name, target_type_name
+class LinkAttribute:
+    def __init__(self, type_name, reference_name, target_type_name):
+        self.type_name = type_name
+        self.reference_name = reference_name
+        self.target_type_name = target_type_name
 
 
 def convert_json_to_js(data, folder_name, one_file, use_chained_calls=False):
