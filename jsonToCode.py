@@ -157,6 +157,14 @@ function createPage() {
 
     link_attributes = []  # Create an empty list to store the link attributes
 
+    # q: how to filter duplicate link attributes?
+    # a: use a list to store the link attributes, and check if the link attribute is already in the list
+
+    # q: how to check equality of two link attributes?
+    # a: define the __eq__ method in the LinkAttribute class
+
+
+
     for each_type in types:
 
         type_name = each_type["name"]
@@ -168,10 +176,10 @@ function createPage() {
             if type_constraint == "Link":
                 if "linkTypeName" in attr_def:
                     link_target_type_name = attr_def["linkTypeName"]
-                    link_attributes.append(LinkAttribute(type_name, attr_name, link_target_type_name))
+                    new_link_attribute = LinkAttribute(type_name, attr_name, link_target_type_name)
+                    link_attributes.append(new_link_attribute)
 
     for each_type in types:
-
         fully_qualified_type_name = each_type['name']
         simple_type_name = fully_qualified_type_name.split(".")[-1]
         # print("type_name: " + simple_type_name)
@@ -220,6 +228,14 @@ class LinkAttribute:
         self.reference_name = reference_name
         self.target_type_name = target_type_name
 
+    def __eq__(self, other):
+        result = self.type_name == other.type_name and self.reference_name == other.reference_name and self.target_type_name == other.target_type_name
+        # create a json representation of the link attribute
+        json_self = json.dumps(self.__dict__, sort_keys=True)
+        json_other = json.dumps(other.__dict__, sort_keys=True)
+
+        print(f"comparing {json_self} and {json_other}: {result}")
+        return result
 
 def convert_json_to_js(data, folder_name, one_file, use_chained_calls=False):
     js_code = ""
