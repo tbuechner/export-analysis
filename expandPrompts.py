@@ -5,9 +5,12 @@ from jinja2 import Template
 def expand_prompts():
 
     # delete folder folder_name_generated if it exists with all its content
-    if os.path.exists('prompts-templates'):
-        os.system("rm -r " + 'prompts-templates')
+    folder_name_generated = 'prompts-generated'
+    if os.path.exists(folder_name_generated):
+        os.system("rm -r " + folder_name_generated)
 
+    # create folder folder_name_generated
+    os.mkdir(folder_name_generated)
 
     # traverse all files in the directory 'prompts-templates'
     for root, dirs, files in os.walk('prompts-templates'):
