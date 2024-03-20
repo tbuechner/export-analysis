@@ -1,0 +1,15 @@
+Given this data model:
+
+```
+{{ load_file('largeSolutionSAFe/generated/types-compressed.json') }}
+```
+
+This is example code working with the data model:
+
+```
+{{ load_file('largeSolutionSAFe/generated/copilot_examples_literals.js') }}
+```
+
+Generate a javascript function with name `checkAccess`, that has one parameter 'programIncrement'. It should return a boolean value.
+
+It starts by searching for all PIs that have a non-empty period status. For each PI found, it retrieves the order of the period status and stores it in an array. Finally, it checks if the order '0' (which might represent a 'Running' status) is not present in the array, and returns true if so, indicating that the action can be performed, otherwise it returns false.

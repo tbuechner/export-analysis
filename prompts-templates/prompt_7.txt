@@ -1,7 +1,0 @@
-Given this data model:
-
-```
-
-```
-
-Generate a plantuml diagram for the whole data model.

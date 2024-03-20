@@ -1,10 +1,14 @@
 Given this data model:
 
+```
 {{ load_file('largeSolutionSAFe/generated/types-compressed.json') }}
+```
 
 This is example code working with the data model:
 
-{{ load_file('largeSolutionSAFe/generated/copilot_examples_literals.json') }}
+```
+{{ load_file('largeSolutionSAFe/generated/copilot_examples_literals.js') }}
+```
 
 Generate a javascript function with name `checkAccess`, that has one parameter 'programIncrement'. It should return a boolean value.
 

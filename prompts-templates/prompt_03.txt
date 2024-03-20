@@ -1,6 +1,7 @@
 The following code contains a representation of a data model of an application:
 
 ```
+{{ load_file('largeSolutionSAFe/generated/types-compressed.json') }}
 ```
 
 The following is a representation of a change listener in the given data model:
