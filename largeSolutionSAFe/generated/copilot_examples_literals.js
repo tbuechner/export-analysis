@@ -55,10 +55,10 @@ function readFromSolution(solution) {
     const releasingWIPLimit = solution.get('cf.cplace.solution.safe.releasingWIPLimit');
     const shortName = solution.get('cf.cplace.solution.safe.shortName');
     const horizon = solution.get('cf.cplace.solution.safe.horizon');
-    const programIncrements = solution.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.solution');
-    const capabilities = solution.getIncomingPages('cf.cplace.solution.safe.capability', 'cf.cplace.solution.safe.solution.reference');
-    const events = solution.getIncomingPages('cf.cplace.solution.safe.event', 'cf.cplace.solution.safe.solution');
-    const confidenceVotes = solution.getIncomingPages('cf.cplace.solution.safe.confidenceVote', 'cf.cplace.solution.safe.confidenceVote.solution');
+    const programIncrement = solution.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.solution');
+    const capability = solution.getIncomingPages('cf.cplace.solution.safe.capability', 'cf.cplace.solution.safe.solution.reference');
+    const event = solution.getIncomingPages('cf.cplace.solution.safe.event', 'cf.cplace.solution.safe.solution');
+    const confidenceVote = solution.getIncomingPages('cf.cplace.solution.safe.confidenceVote', 'cf.cplace.solution.safe.confidenceVote.solution');
 }
 
 
