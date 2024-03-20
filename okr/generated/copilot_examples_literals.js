@@ -46,10 +46,10 @@ function readFromCycle(cycle) {
     const start = cycle.get('cf.cplace.solution.okr.start');
     const end = cycle.get('cf.cplace.solution.okr.end');
     const statusForNameGenerationPattern = cycle.get('cf.cplace.solution.okr.statusForNameGenerationPattern');
-    const cycle = cycle.getIncomingPages('cf.cplace.solution.okr.cycle', 'cf.cplace.solution.okr.cycle');
-    const cycle = cycle.getIncomingPages('cf.cplace.solution.okr.cycle', 'cf.cplace.solution.okr.cycle');
-    const cycle = cycle.getIncomingPages('cf.cplace.solution.okr.cycle', 'cf.cplace.solution.okr.cycle');
-    const nextCycle = cycle.getIncomingPages('cf.cplace.solution.okr.cycle', 'cf.cplace.solution.okr.nextCycle');
+    const objective = cycle.getIncomingPages('cf.cplace.solution.okr.objective', 'cf.cplace.solution.okr.cycle');
+    const keyResult = cycle.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.cycle');
+    const progress = cycle.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.cycle');
+    const selectNextCycle = cycle.getIncomingPages('cf.cplace.solution.okr.selectNextCycle', 'cf.cplace.solution.okr.nextCycle');
 }
 
 
@@ -60,8 +60,8 @@ function readFromObjective(objective) {
     const accomplished = objective.get('cf.cplace.solution.okr.accomplished');
     const cycle = objective.get('cf.cplace.solution.okr.cycle');
     const description = objective.get('cf.cplace.solution.okr.description');
-    const objective = objective.getIncomingPages('cf.cplace.solution.okr.objective', 'cf.cplace.solution.okr.objective');
-    const objective = objective.getIncomingPages('cf.cplace.solution.okr.objective', 'cf.cplace.solution.okr.objective');
+    const keyResult = objective.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.objective');
+    const progress = objective.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.objective');
 }
 
 
@@ -81,10 +81,10 @@ function readFromKeyResult(keyResult) {
     const cycle = keyResult.get('cf.cplace.solution.okr.cycle');
     const organizationalUnit = keyResult.get('cf.cplace.solution.okr.organizationalUnit');
     const lastUpdate = keyResult.get('cf.cplace.solution.okr.lastUpdate');
-    const giveBigSupport = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.giveBigSupport');
-    const receiveBigSupport = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.receiveBigSupport');
-    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.keyResult');
-    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.keyResult');
+    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.giveBigSupport');
+    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.receiveBigSupport');
+    const progress = keyResult.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.keyResult');
+    const task = keyResult.getIncomingPages('cf.cplace.solution.okr.task', 'cf.cplace.solution.okr.keyResult');
 }
 
 
@@ -103,7 +103,7 @@ function readFromProgress(progress) {
     const gradingForecast = progress.get('cf.cplace.solution.okr.gradingForecast');
     const lastUpdate = progress.get('cf.cplace.solution.okr.lastUpdate');
     const set = progress.get('cf.cplace.solution.okr.set');
-    const progress = progress.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.progress');
+    const keyResult = progress.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.progress');
 }
 
 

@@ -55,10 +55,10 @@ function readFromSolution(solution) {
     const releasingWIPLimit = solution.get('cf.cplace.solution.safe.releasingWIPLimit');
     const shortName = solution.get('cf.cplace.solution.safe.shortName');
     const horizon = solution.get('cf.cplace.solution.safe.horizon');
-    const solution = solution.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.solution');
-    const reference = solution.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.solution.reference');
-    const solution = solution.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.solution');
-    const solution = solution.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.confidenceVote.solution');
+    const programIncrements = solution.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.solution');
+    const capabilities = solution.getIncomingPages('cf.cplace.solution.safe.capability', 'cf.cplace.solution.safe.solution.reference');
+    const events = solution.getIncomingPages('cf.cplace.solution.safe.event', 'cf.cplace.solution.safe.solution');
+    const confidenceVotes = solution.getIncomingPages('cf.cplace.solution.safe.confidenceVote', 'cf.cplace.solution.safe.confidenceVote.solution');
 }
 
 
@@ -73,13 +73,13 @@ function readFromProgramIncrement(programIncrement) {
     const capacity = programIncrement.get('cf.cplace.solution.safe.capacity');
     const Result = programIncrement.get('cf.cplace.solution.safe.confidenceVote.Result');
     const statsJson = programIncrement.get('cf.cplace.solution.safe.statsJson');
-    const previousPi = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.previousPi');
-    const currentPi = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.currentPi');
-    const nextPi = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.nextPi');
-    const predecessor = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.predecessor');
-    const programIncrement = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.programIncrement');
-    const programIncrement = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.programIncrement');
-    const PI = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.confidenceVote.PI');
+    const solution = programIncrement.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.previousPi');
+    const solution = programIncrement.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.currentPi');
+    const solution = programIncrement.getIncomingPages('cf.cplace.solution.safe.solution', 'cf.cplace.solution.safe.nextPi');
+    const programIncrement = programIncrement.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.predecessor');
+    const iteration = programIncrement.getIncomingPages('cf.cplace.solution.safe.iteration', 'cf.cplace.solution.safe.programIncrement');
+    const capability = programIncrement.getIncomingPages('cf.cplace.solution.safe.capability', 'cf.cplace.solution.safe.programIncrement');
+    const confidenceVote = programIncrement.getIncomingPages('cf.cplace.solution.safe.confidenceVote', 'cf.cplace.solution.safe.confidenceVote.PI');
 }
 
 
@@ -89,8 +89,8 @@ function readFromIteration(iteration) {
     const startDate = iteration.get('cf.cplace.solution.safe.startDate');
     const endDate = iteration.get('cf.cplace.solution.safe.endDate');
     const predecessor = iteration.get('cf.cplace.solution.safe.predecessor');
-    const predecessor = iteration.getIncomingPages('cf.cplace.solution.safe.iteration', 'cf.cplace.solution.safe.predecessor');
-    const iteration = iteration.getIncomingPages('cf.cplace.solution.safe.iteration', 'cf.cplace.solution.safe.iteration');
+    const iteration = iteration.getIncomingPages('cf.cplace.solution.safe.iteration', 'cf.cplace.solution.safe.predecessor');
+    const capability = iteration.getIncomingPages('cf.cplace.solution.safe.capability', 'cf.cplace.solution.safe.iteration');
 }
 
 
@@ -190,7 +190,7 @@ function readFromConfidenceVote(confidenceVote) {
     const fourFingers = confidenceVote.get('cf.cplace.solution.safe.confidenceVote.fourFingers');
     const fiveFingers = confidenceVote.get('cf.cplace.solution.safe.confidenceVote.fiveFingers');
     const solution = confidenceVote.get('cf.cplace.solution.safe.confidenceVote.solution');
-    const confidenceVote = confidenceVote.getIncomingPages('cf.cplace.solution.safe.confidenceVote', 'cf.cplace.solution.safe.confidenceVote');
+    const programIncrement = confidenceVote.getIncomingPages('cf.cplace.solution.safe.programIncrement', 'cf.cplace.solution.safe.confidenceVote');
 }
 
 

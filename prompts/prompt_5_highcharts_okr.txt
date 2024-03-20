@@ -1,4 +1,9 @@
-The following is a highcharts implementation:
+Given this data model:
+
+```
+```
+
+The following is a highcharts implementation for an application based on the given data model:
 
 ```
 /*

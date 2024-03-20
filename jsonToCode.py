@@ -205,9 +205,18 @@ function createPage() {
             simple_attr_name = attr_name.split(".")[-1]
             snippet += f"    const {attr_name.split('.')[-1]} = {simple_type_name}.get('{attr_name}');\n"
 
+        link_snippets = []
         for link_attr in link_attributes:
             if link_attr.target_type_name == fully_qualified_type_name:
-                snippet += f"    const {link_attr.reference_name.split('.')[-1]} = {simple_type_name}.getIncomingPages('{fully_qualified_type_name}', '{link_attr.reference_name}');\n"
+
+                # snippet += f"\"    incoming, reference_name: {link_attr.reference_name}, type_name: {link_attr.type_name}, target_type_name: {link_attr.target_type_name}\"\n"
+
+                link_snippet = f"    const {link_attr.type_name.split('.')[-1]} = {simple_type_name}.getIncomingPages('{link_attr.type_name}', '{link_attr.reference_name}');\n"
+                # append the link snippet to the list if it is not already in the list
+                if link_snippet not in link_snippets:
+                    link_snippets.append(link_snippet)
+
+        snippet += "".join(link_snippets)
 
         snippet += "}\n"
         snippet += "\n"
