@@ -15,6 +15,34 @@ function accessBuiltInPageAttributes(page) {
     const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
     const space = page.getBuiltinFeatureValue("space");
     const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+    const spaceId = page.getSpaceId();
+    const uid = page.getRealId();
+}
+
+function searchForPages() {
+    let search = new Search();
+    search.add(Filters.space(spaceId));
+    search.add(Filters.embeddingSpace());
+    search.add(Filters.type('type.name'));
+    search.add(Filters.customAttributeNonempty('attributeName'));
+    search.add(Filters.uid(uid));
+
+    // greater or equals
+    search.add(Filters.customAttribute('attributeName').gte(value));
+    
+    // greater than
+    search.add(Filters.customAttribute('attributeName').gt(value));
+    
+    // less or equals
+    search.add(Filters.customAttribute('attributeName').lte(value));
+    
+    // less than
+    search.add(Filters.customAttribute('attributeName').lt(value));
+    
+    // equals
+    search.add(Filters.customAttribute('attributeName').eq(value));
+    
+    let result = search.findAllPages();
 }
 
 function updatePage(page) {

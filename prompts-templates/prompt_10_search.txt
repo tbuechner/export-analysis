@@ -1,0 +1,13 @@
+Given this data model:
+
+```
+{{ load_file('okr/generated/types-compressed.json') }}
+```
+
+This is example code working with the data model:
+
+```
+{{ load_file('okr/generated/copilot_examples_literals.js') }}
+```
+
+Generate code which searches for all key results which are not completed.

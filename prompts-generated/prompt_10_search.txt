@@ -1,0 +1,166 @@
+Given this data model:
+
+```
+{"export":{"workspace":{"name":"OKR","types":[{"name":"cf.cplace.solution.okr.cycle","localizedNameSingular":{"de":"Zyklus","en":"Cycle"},"localizedNamePlural":{"de":"Zyklen","en":"Cycles"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.solution.okr.year","localizedName":{"de":"Jahr","en":"Year"},"multiplicity":"exactlyOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.quarter","localizedName":{"de":"Quartal","en":"Quarter"},"multiplicity":"exactlyOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.status","localizedName":{"de":"Status","en":"Status"},"multiplicity":"exactlyOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.cyclesDashboard","localizedName":{"de":"Zyklen Dashboard","en":"Cycles Dashboard"},"multiplicity":"maximalOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.cyclesDashboard","linkSameWorkspace":"true","linkIsHierarchy":"true"},{"name":"cf.cplace.solution.okr.start","localizedName":{"de":"Start","en":"Start"},"multiplicity":"maximalOne","typeConstraint":"Date"},{"name":"cf.cplace.solution.okr.end","localizedName":{"de":"Ende","en":"End"},"multiplicity":"maximalOne","typeConstraint":"Date"},{"name":"cf.cplace.solution.okr.statusForNameGenerationPattern","localizedName":{"de":"Status f\u00fcr die Namensgenerierung","en":"Status for name generation pattern"},"multiplicity":"maximalOne","typeConstraint":"Text"}]},{"name":"cf.cplace.solution.okr.objective","localizedNameSingular":{"de":"Objective","en":"Objective"},"localizedNamePlural":{"de":"Objectives","en":"Objectives"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.solution.okr.number","localizedName":{"de":"Nummer","en":"Number"},"localizedShortName":{"de":"Nr.","en":"No."},"multiplicity":"exactlyOne","typeConstraint":"Number"},{"name":"cf.cplace.solution.okr.title","localizedName":{"de":"Titel","en":"Title"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.set","localizedName":{"de":"Set","en":"Set"},"multiplicity":"exactlyOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.set","linkSameWorkspace":"true","linkIsHierarchy":"true"},{"name":"cf.cplace.solution.okr.accomplished","localizedName":{"de":"Erreicht","en":"Accomplished"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.cycle","localizedName":{"de":"Zyklus","en":"Cycle"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.set","referencedAttributeName":"cf.cplace.solution.okr.cycle"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.cycle","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.description","localizedName":{"de":"Beschreibung","en":"Description"},"multiplicity":"maximalOne","typeConstraint":"RichString"}]},{"name":"cf.cplace.solution.okr.keyResult","localizedNameSingular":{"de":"Schl\u00fcsselergebnis","en":"Key Result"},"localizedNamePlural":{"de":"Schl\u00fcsselergebnisse","en":"Key Results"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.solution.okr.number","localizedName":{"de":"Nummer","en":"Number"},"localizedShortName":{"de":"Nr.","en":"No."},"multiplicity":"exactlyOne","typeConstraint":"Number"},{"name":"cf.cplace.solution.okr.title","localizedName":{"de":"Titel","en":"Title"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.progressIndicator","localizedName":{"de":"Fortschrittsindikator","en":"Progress Indicator"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.confidenceLevel","localizedName":{"de":"Confidence Level","en":"Confidence Level"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.gradingForecast","localizedName":{"de":"Fortschritt Vorhersage","en":"Grading Forecast"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.smallSupport","localizedName":{"de":"Receive Small Support","en":"Receive Small Support"},"multiplicity":null,"typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.organizationalUnit","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.bigSupport","localizedName":{"de":"Big Support","en":"Big Support"},"localizedShortHelp":null,"multiplicity":null,"typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.giveBigSupport","referencedAttributeName":"cf.cplace.solution.okr.organizationalUnit"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.organizationalUnit","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.giveBigSupport","localizedName":{"de":"Give Big Support","en":"Give Big Support"},"multiplicity":null,"typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.keyResult","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.receiveBigSupport","localizedName":{"de":"Receive Big Support","en":"Receive Big Support"},"multiplicity":null,"typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.keyResult","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.objective","localizedName":{"de":"Objective","en":"Objective"},"multiplicity":"exactlyOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.objective","linkSameWorkspace":"true","linkIsHierarchy":"true"},{"name":"cf.cplace.solution.okr.progress","localizedName":{"de":"Fortschritt","en":"Progress"},"multiplicity":"maximalOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.progress","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.set","localizedName":{"de":"Set","en":"Set"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.objective","referencedAttributeName":"cf.cplace.solution.okr.set"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.set","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.cycle","localizedName":{"de":"Zyklus","en":"Cycle"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.set","referencedAttributeName":"cf.cplace.solution.okr.cycle"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.cycle","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.organizationalUnit","localizedName":{"de":"Organsationseinheit","en":"Organizational Unit"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.set","referencedAttributeName":"cf.cplace.solution.okr.organizationalUnit"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.organizationalUnit","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.lastUpdate","localizedName":{"de":"Letztes Update","en":"Last Update"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Date","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.progress","referencedAttributeName":"cf.cplace.solution.okr.lastUpdate"}}]},{"name":"cf.cplace.solution.okr.progress","localizedNameSingular":{"de":"Fortschritt","en":"Progress"},"localizedNamePlural":{"de":"Fortschritt","en":"Progress"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.solution.okr.result","localizedName":{"de":"Ergebnise","en":"Results"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.problem","localizedName":{"de":"Probleme","en":"Problems"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.lessonsLearned","localizedName":{"de":"Learnings","en":"Learnings"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.nextSteps","localizedName":{"de":"N\u00e4chste Schritte","en":"Next Steps"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.solution.okr.keyResult","localizedName":{"de":"Key Result","en":"Key Result"},"multiplicity":"exactlyOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.keyResult","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.cycle","localizedName":{"de":"Zyklus","en":"Cycle"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.keyResult","referencedAttributeName":"cf.cplace.solution.okr.cycle"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.cycle","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.objective","localizedName":{"de":"Objective","en":"Objective"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.keyResult","referencedAttributeName":"cf.cplace.solution.okr.objective"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.objective","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.smallSupport","localizedName":{"de":"Small Support","en":"Small Support"},"localizedShortHelp":null,"multiplicity":null,"typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.keyResult","referencedAttributeName":"cf.cplace.solution.okr.smallSupport"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.organizationalUnit","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.bigSupport","localizedName":{"de":"Big Support","en":"Big Support"},"localizedShortHelp":null,"multiplicity":null,"typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.keyResult","referencedAttributeName":"cf.cplace.solution.okr.bigSupport"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.organizationalUnit","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.solution.okr.progressIndicator","localizedName":{"de":"Fortschrittsindikator","en":"Progress Indicator"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.confidenceLevel","localizedName":{"de":"Confidence Level","en":"Confidence Level"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.gradingForecast","localizedName":{"de":"Fortschritt Vorhersage","en":"Grading Forecast"},"multiplicity":"maximalOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.solution.okr.lastUpdate","localizedName":{"de":"Letztes Update","en":"Last Update"},"multiplicity":"maximalOne","typeConstraint":"Date"},{"name":"cf.cplace.solution.okr.set","localizedName":{"de":"Set","en":"Set"},"localizedShortHelp":null,"multiplicity":"maximalOne","typeConstraint":"Link","derivable":{"referencingAttributeName":"cf.cplace.solution.okr.keyResult","referencedAttributeName":"cf.cplace.solution.okr.set"},"linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.set","linkSameWorkspace":"false","linkIsHierarchy":"false"}]},{"name":"cf.cplace.solution.okr.task","localizedNameSingular":{"de":"Aufgabe","en":"Task"},"localizedNamePlural":{"de":"Aufgaben","en":"Tasks"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.digitalBoard.title","localizedName":{"de":"Titel","en":"Title"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.digitalBoard.responsible","localizedName":{"de":"Verantwortliche(r)","en":"Responsible"},"multiplicity":"maximalOne","typeConstraint":"Link","linkEntityKind":"person","linkSameWorkspace":"false","linkIsHierarchy":"false"},{"name":"cf.cplace.digitalBoard.description","localizedName":{"de":"Beschreibung","en":"Description"},"multiplicity":"maximalOne","typeConstraint":"Text"},{"name":"cf.cplace.digitalBoard.status","localizedName":{"de":"Status","en":"Status"},"multiplicity":"exactlyOne","typeConstraint":"TextEnumeration"},{"name":"cf.cplace.digitalBoard.dueDate","localizedName":{"de":"F\u00e4lligkeitsdatum","en":"Due Date"},"multiplicity":"maximalOne","typeConstraint":"Date"},{"name":"cf.cplace.solution.okr.keyResult","localizedName":{"de":"Key Result","en":"Key Result"},"multiplicity":"exactlyOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.keyResult","linkSameWorkspace":"true","linkIsHierarchy":"false"},{"name":"cf.cplace.digitalBoard.escalationLevel","localizedName":{"de":"Eskalationslevel","en":"Escalation Level"},"multiplicity":"exactlyOne","typeConstraint":"TextEnumeration"}]},{"name":"cf.cplace.solution.okr.selectNextCycle","localizedNameSingular":{"de":"Select next Cycle","en":"Select next Cycle"},"description":null,"attributeDefinitions":[{"name":"cf.cplace.solution.okr.nextCycle","localizedName":{"de":"N\u00e4chster Zyklus","en":"Next Cycle"},"multiplicity":"exactlyOne","typeConstraint":"Link","linkEntityKind":"page","linkTypeName":"cf.cplace.solution.okr.cycle","linkSameWorkspace":"true","linkIsHierarchy":"false"}]}]}}}
+```
+
+This is example code working with the data model:
+
+```
+function accessBuiltInPageAttributes(page) {
+    const absoluteUrl = page.getBuiltinFeatureValue("absoluteUrl");
+    const comments = page.getBuiltinFeatureValue("comments");
+    const commentsForVersioning = page.getBuiltinFeatureValue("commentsForVersioning");
+    const content = page.getBuiltinFeatureValue("content");
+    const creator = page.getBuiltinFeatureValue("creator");
+    const created = page.getBuiltinFeatureValue("created");
+    const customType = page.getBuiltinFeatureValue("customType");
+    const documents = page.getBuiltinFeatureValue("documents");
+    const id = page.getBuiltinFeatureValue("id");
+    const localizedName = page.getBuiltinFeatureValue("localizedName");
+    const name = page.getBuiltinFeatureValue("name");
+    const orderIndex = page.getBuiltinFeatureValue("orderIndex");
+    const readers = page.getBuiltinFeatureValue("readers");
+    const readersAreDefault = page.getBuiltinFeatureValue("readersAreDefault");
+    const space = page.getBuiltinFeatureValue("space");
+    const writersAreDefault = page.getBuiltinFeatureValue("writersAreDefault");
+    const spaceId = page.getSpaceId();
+    const uid = page.getRealId();
+}
+
+function searchForPages() {
+    let search = new Search();
+    search.add(Filters.space(spaceId));
+    search.add(Filters.embeddingSpace());
+    search.add(Filters.type('type.name'));
+    search.add(Filters.customAttributeNonempty('attributeName'));
+    search.add(Filters.uid(uid));
+
+    // greater or equals
+    search.add(Filters.customAttribute('attributeName').gte(value));
+    
+    // greater than
+    search.add(Filters.customAttribute('attributeName').gt(value));
+    
+    // less or equals
+    search.add(Filters.customAttribute('attributeName').lte(value));
+    
+    // less than
+    search.add(Filters.customAttribute('attributeName').lt(value));
+    
+    // equals
+    search.add(Filters.customAttribute('attributeName').eq(value));
+    
+    let result = search.findAllPages();
+}
+
+function updatePage(page) {
+    cplace.actions().updatePage(page, {
+        customAttributes: {
+            ['attributeName1']: value1,
+            ['attributeName2']: value2
+        },
+    });
+}
+
+function createPage() {
+    return cplace.actions().createPage({
+        customType: TYPE_NAME,
+        customAttributes: {
+            ['attributeName1']: value1,
+            ['attributeName2']: value2
+        }
+    }, {
+        setGeneratedName: true
+    });
+}
+
+function readFromCycle(cycle) {
+    const year = cycle.get('cf.cplace.solution.okr.year');
+    const quarter = cycle.get('cf.cplace.solution.okr.quarter');
+    const status = cycle.get('cf.cplace.solution.okr.status');
+    const cyclesDashboard = cycle.get('cf.cplace.solution.okr.cyclesDashboard');
+    const start = cycle.get('cf.cplace.solution.okr.start');
+    const end = cycle.get('cf.cplace.solution.okr.end');
+    const statusForNameGenerationPattern = cycle.get('cf.cplace.solution.okr.statusForNameGenerationPattern');
+    const objective = cycle.getIncomingPages('cf.cplace.solution.okr.objective', 'cf.cplace.solution.okr.cycle');
+    const keyResult = cycle.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.cycle');
+    const progress = cycle.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.cycle');
+    const selectNextCycle = cycle.getIncomingPages('cf.cplace.solution.okr.selectNextCycle', 'cf.cplace.solution.okr.nextCycle');
+}
+
+
+function readFromObjective(objective) {
+    const number = objective.get('cf.cplace.solution.okr.number');
+    const title = objective.get('cf.cplace.solution.okr.title');
+    const set = objective.get('cf.cplace.solution.okr.set');
+    const accomplished = objective.get('cf.cplace.solution.okr.accomplished');
+    const cycle = objective.get('cf.cplace.solution.okr.cycle');
+    const description = objective.get('cf.cplace.solution.okr.description');
+    const keyResult = objective.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.objective');
+    const progress = objective.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.objective');
+}
+
+
+function readFromKeyResult(keyResult) {
+    const number = keyResult.get('cf.cplace.solution.okr.number');
+    const title = keyResult.get('cf.cplace.solution.okr.title');
+    const progressIndicator = keyResult.get('cf.cplace.solution.okr.progressIndicator');
+    const confidenceLevel = keyResult.get('cf.cplace.solution.okr.confidenceLevel');
+    const gradingForecast = keyResult.get('cf.cplace.solution.okr.gradingForecast');
+    const smallSupport = keyResult.get('cf.cplace.solution.okr.smallSupport');
+    const bigSupport = keyResult.get('cf.cplace.solution.okr.bigSupport');
+    const giveBigSupport = keyResult.get('cf.cplace.solution.okr.giveBigSupport');
+    const receiveBigSupport = keyResult.get('cf.cplace.solution.okr.receiveBigSupport');
+    const objective = keyResult.get('cf.cplace.solution.okr.objective');
+    const progress = keyResult.get('cf.cplace.solution.okr.progress');
+    const set = keyResult.get('cf.cplace.solution.okr.set');
+    const cycle = keyResult.get('cf.cplace.solution.okr.cycle');
+    const organizationalUnit = keyResult.get('cf.cplace.solution.okr.organizationalUnit');
+    const lastUpdate = keyResult.get('cf.cplace.solution.okr.lastUpdate');
+    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.giveBigSupport');
+    const keyResult = keyResult.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.receiveBigSupport');
+    const progress = keyResult.getIncomingPages('cf.cplace.solution.okr.progress', 'cf.cplace.solution.okr.keyResult');
+    const task = keyResult.getIncomingPages('cf.cplace.solution.okr.task', 'cf.cplace.solution.okr.keyResult');
+}
+
+
+function readFromProgress(progress) {
+    const result = progress.get('cf.cplace.solution.okr.result');
+    const problem = progress.get('cf.cplace.solution.okr.problem');
+    const lessonsLearned = progress.get('cf.cplace.solution.okr.lessonsLearned');
+    const nextSteps = progress.get('cf.cplace.solution.okr.nextSteps');
+    const keyResult = progress.get('cf.cplace.solution.okr.keyResult');
+    const cycle = progress.get('cf.cplace.solution.okr.cycle');
+    const objective = progress.get('cf.cplace.solution.okr.objective');
+    const smallSupport = progress.get('cf.cplace.solution.okr.smallSupport');
+    const bigSupport = progress.get('cf.cplace.solution.okr.bigSupport');
+    const progressIndicator = progress.get('cf.cplace.solution.okr.progressIndicator');
+    const confidenceLevel = progress.get('cf.cplace.solution.okr.confidenceLevel');
+    const gradingForecast = progress.get('cf.cplace.solution.okr.gradingForecast');
+    const lastUpdate = progress.get('cf.cplace.solution.okr.lastUpdate');
+    const set = progress.get('cf.cplace.solution.okr.set');
+    const keyResult = progress.getIncomingPages('cf.cplace.solution.okr.keyResult', 'cf.cplace.solution.okr.progress');
+}
+
+
+function readFromTask(task) {
+    const title = task.get('cf.cplace.digitalBoard.title');
+    const responsible = task.get('cf.cplace.digitalBoard.responsible');
+    const description = task.get('cf.cplace.digitalBoard.description');
+    const status = task.get('cf.cplace.digitalBoard.status');
+    const dueDate = task.get('cf.cplace.digitalBoard.dueDate');
+    const keyResult = task.get('cf.cplace.solution.okr.keyResult');
+    const escalationLevel = task.get('cf.cplace.digitalBoard.escalationLevel');
+}
+
+
+function readFromSelectNextCycle(selectNextCycle) {
+    const nextCycle = selectNextCycle.get('cf.cplace.solution.okr.nextCycle');
+}
+
+
+
+```
+
+Generate code which searches for all key results which are not completed.
