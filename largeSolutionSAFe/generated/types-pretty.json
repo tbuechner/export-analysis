@@ -257,7 +257,12 @@
                                 "en": "Period Status"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - done",
+                                "#25 - active",
+                                "#35 - planned"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.confidenceVote",
@@ -429,7 +434,11 @@
                                 "en": "Feature Type"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "capability",
+                                "enabler"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.state",
@@ -438,7 +447,18 @@
                                 "en": "State"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#10 - Draft",
+                                "#15 - Funnel",
+                                "#25 - Analyzing",
+                                "#35 - Backlog",
+                                "#45 - Implementing",
+                                "#55 - Validating",
+                                "#65 - Deploying",
+                                "#75 - Releasing",
+                                "#85 - Done"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.wsjf",
@@ -456,7 +476,16 @@
                                 "en": "User Business Value"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                1.0,
+                                2.0,
+                                3.0,
+                                5.0,
+                                8.0,
+                                13.0,
+                                20.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.timeCriticality",
@@ -465,7 +494,16 @@
                                 "en": "Time Criticality"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                1.0,
+                                2.0,
+                                3.0,
+                                5.0,
+                                8.0,
+                                13.0,
+                                20.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.riskReduction",
@@ -474,7 +512,16 @@
                                 "en": "Risk Reduction"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                1.0,
+                                2.0,
+                                3.0,
+                                5.0,
+                                8.0,
+                                13.0,
+                                20.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.jobSize",
@@ -483,7 +530,16 @@
                                 "en": "Job Size"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                1.0,
+                                2.0,
+                                3.0,
+                                5.0,
+                                8.0,
+                                13.0,
+                                20.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.programIncrement",
@@ -674,7 +730,10 @@
                                 "en": "Conflict"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#25 - conflict"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.features",
@@ -736,7 +795,11 @@
                             },
                             "localizedShortHelp": "{\"de\":\"\\\"Verbunden mit\\\" - lose Abh\u00e4ngigkeit ohne potentielle Konflikte\\n\\\"Blockiert durch\\\" - Abh\u00e4ngigkeit, die zeitliche Konflikte ausl\u00f6sen kann\",\"en\":\"\\\"related to\\\" - loose dependency without potential conflicts\\n\\\"blocked by\\\" - dependency that can lead to timing conflicts\"}",
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "blocked by",
+                                "related to"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.predecessor",
@@ -761,7 +824,12 @@
                                 "en": "Status"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "15 - identified",
+                                "25 - conflict",
+                                "35 - resolved"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.description",
@@ -837,7 +905,12 @@
                                 "en": "Type"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - PI Meilenstein",
+                                "#25 - Fixiertes Datum",
+                                "#35 - Learning Meilenstein"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.relevantFor",
@@ -1015,7 +1088,12 @@
                                 "en": "SAFe Level"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - Solution",
+                                "#25 - Program",
+                                "#35 - Team"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.SAFeLevel.Reference",
@@ -1045,7 +1123,20 @@
                                 "en": "PBV"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                0.0,
+                                1.0,
+                                2.0,
+                                3.0,
+                                4.0,
+                                5.0,
+                                6.0,
+                                7.0,
+                                8.0,
+                                9.0,
+                                10.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.actualValue",
@@ -1058,7 +1149,19 @@
                                 "en": "ABV"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "NumberEnumeration"
+                            "typeConstraint": "NumberEnumeration",
+                            "enumerationValues": [
+                                1.0,
+                                2.0,
+                                3.0,
+                                4.0,
+                                5.0,
+                                6.0,
+                                7.0,
+                                8.0,
+                                9.0,
+                                10.0
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.commitment",
@@ -1067,7 +1170,11 @@
                                 "en": "Commitment"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - Committed",
+                                "#25 - Uncommitted"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.statement",
@@ -1170,7 +1277,11 @@
                                 "en": "Result"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "Accepted",
+                                "Not Accepted"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.safe.confidenceVote.oneFinger",

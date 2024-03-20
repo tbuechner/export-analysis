@@ -28,7 +28,10 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.set
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 - yes'
+        - '#25 - no'
+        localizedName:
           de: Erreicht
           en: Accomplished
         multiplicity: maximalOne

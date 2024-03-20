@@ -41,7 +41,7 @@ function searchForPages() {
     
     // equals
     search.add(Filters.customAttribute('attributeName').eq(value));
-
+    
     // not equals
     search.add(Filters.not(Filters.customAttribute('attributeName').eq(value)));
 

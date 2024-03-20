@@ -148,6 +148,27 @@ def rewrite_attributes(doc):
 
             rewrite_attributes(value)
 
+        # if the key is "enumerationValues" and the value is not None
+        if 'enumerationValues' in doc and doc['enumerationValues'] is not None:
+            # parse the value as json and replace the value with the parsed json
+            new_value = json.loads(doc['enumerationValues'])
+            # print the type of new_value
+            if isinstance(new_value, list):
+                # print the length of new_value
+                # print(len(new_value))
+                # iterate over all elements in new_value
+                for i in range(len(new_value)):
+                    value = new_value[i]
+                    # if value is a string and starts with "s" - strip the first character and replace the value with the result
+                    if isinstance(value, str) and value.startswith('s'):
+                        new_value[i] = value[1:]
+                    # if value is a string and starts with "d" - strip the first character, convert the value to a double and replace the value with the result
+                    elif isinstance(value, str) and value.startswith('d'):
+                        new_value[i] = float(value[1:])
+
+            doc['enumerationValues'] = new_value
+
+
 
 def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/customCssClasses')
@@ -215,7 +236,7 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/defaultValues')
     remove(root, parent_map, './/textRegExp')
     remove(root, parent_map, './/textRegExpErrorMessage')
-    remove(root, parent_map, './/enumerationValues')
+    # remove(root, parent_map, './/enumerationValues')
     remove(root, parent_map, './/enumerationValues2icons')
     remove(root, parent_map, './/enumerationValues2localizedLabels')
 

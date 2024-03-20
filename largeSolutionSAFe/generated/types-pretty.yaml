@@ -170,7 +170,11 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.predecessor
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 - done'
+        - '#25 - active'
+        - '#35 - planned'
+        localizedName:
           de: Period Status
           en: Period Status
         multiplicity: exactlyOne
@@ -288,7 +292,10 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.description
         typeConstraint: RichString
-      - localizedName:
+      - enumerationValues:
+        - capability
+        - enabler
+        localizedName:
           de: Capability Type
           en: Capability Type
         localizedShortName:
@@ -297,7 +304,17 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.safe.capabilityType
         typeConstraint: TextEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '#10 - Draft'
+        - '#15 - Funnel'
+        - '#25 - Analyzing'
+        - '#35 - Backlog'
+        - '#45 - Implementing'
+        - '#55 - Validating'
+        - '#65 - Deploying'
+        - '#75 - Releasing'
+        - '#85 - Done'
+        localizedName:
           de: Status
           en: State
         multiplicity: exactlyOne
@@ -309,25 +326,57 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.wsjf
         typeConstraint: Number
-      - localizedName:
+      - enumerationValues:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 5.0
+        - 8.0
+        - 13.0
+        - 20.0
+        localizedName:
           de: User Business Value
           en: User Business Value
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.businessValue
         typeConstraint: NumberEnumeration
-      - localizedName:
+      - enumerationValues:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 5.0
+        - 8.0
+        - 13.0
+        - 20.0
+        localizedName:
           de: "Zeitliche Kritikalit\xE4t"
           en: Time Criticality
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.timeCriticality
         typeConstraint: NumberEnumeration
-      - localizedName:
+      - enumerationValues:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 5.0
+        - 8.0
+        - 13.0
+        - 20.0
+        localizedName:
           de: Risk Reduction
           en: Risk Reduction
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.riskReduction
         typeConstraint: NumberEnumeration
-      - localizedName:
+      - enumerationValues:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 5.0
+        - 8.0
+        - 13.0
+        - 20.0
+        localizedName:
           de: Job Size
           en: Job Size
         multiplicity: maximalOne
@@ -462,7 +511,9 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.benefitHypothesis
         typeConstraint: RichString
-      - localizedName:
+      - enumerationValues:
+        - '#25 - conflict'
+        localizedName:
           de: Datumskonflikt
           en: Conflict State
         localizedShortName:
@@ -508,7 +559,10 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.safe.successor
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - blocked by
+        - related to
+        localizedName:
           de: Typ
           en: Type
         localizedShortHelp: "{\"de\":\"\\\"Verbunden mit\\\" - lose Abh\xE4ngigkeit\
@@ -531,7 +585,11 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.safe.predecessor
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - 15 - identified
+        - 25 - conflict
+        - 35 - resolved
+        localizedName:
           de: Status
           en: Status
         multiplicity: exactlyOne
@@ -582,7 +640,11 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.date
         typeConstraint: Date
-      - localizedName:
+      - enumerationValues:
+        - '#15 - PI Meilenstein'
+        - '#25 - Fixiertes Datum'
+        - '#35 - Learning Meilenstein'
+        localizedName:
           de: Typ
           en: Type
         multiplicity: exactlyOne
@@ -705,7 +767,11 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.timebox
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 - Solution'
+        - '#25 - Program'
+        - '#35 - Team'
+        localizedName:
           de: SAFe Level
           en: SAFe Level
         multiplicity: maximalOne
@@ -724,7 +790,19 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.SAFeLevel.Reference
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - 0.0
+        - 1.0
+        - 2.0
+        - 3.0
+        - 4.0
+        - 5.0
+        - 6.0
+        - 7.0
+        - 8.0
+        - 9.0
+        - 10.0
+        localizedName:
           de: Planned Business Value
           en: Planned Business Value
         localizedShortName:
@@ -733,7 +811,18 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.businessValue
         typeConstraint: NumberEnumeration
-      - localizedName:
+      - enumerationValues:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 4.0
+        - 5.0
+        - 6.0
+        - 7.0
+        - 8.0
+        - 9.0
+        - 10.0
+        localizedName:
           de: Actual Business Value
           en: Actual Business Value
         localizedShortName:
@@ -742,7 +831,10 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.actualValue
         typeConstraint: NumberEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '#15 - Committed'
+        - '#25 - Uncommitted'
+        localizedName:
           de: Commitment
           en: Commitment
         multiplicity: maximalOne
@@ -813,7 +905,10 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.safe.confidenceVote.PI
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - Accepted
+        - Not Accepted
+        localizedName:
           de: Ergebnis
           en: Result
         multiplicity: maximalOne

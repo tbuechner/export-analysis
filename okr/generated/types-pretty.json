@@ -40,7 +40,13 @@
                                 "en": "Status"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 Next",
+                                "#25 Current",
+                                "#35 Closed",
+                                "#45 Draft"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.cyclesDashboard",
@@ -138,7 +144,11 @@
                                 "en": "Accomplished"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - yes",
+                                "#25 - no"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.cycle",
@@ -210,7 +220,13 @@
                                 "en": "Progress Indicator"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 green",
+                                "#25 yellow",
+                                "#35 red",
+                                "#45 outdated"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.confidenceLevel",
@@ -219,7 +235,19 @@
                                 "en": "Confidence Level"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "0.1",
+                                "0.2",
+                                "0.3",
+                                "0.4",
+                                "0.5",
+                                "0.6",
+                                "0.7",
+                                "0.8",
+                                "0.9",
+                                "1.0"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.gradingForecast",
@@ -228,7 +256,19 @@
                                 "en": "Grading Forecast"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "0.1",
+                                "0.2",
+                                "0.3",
+                                "0.4",
+                                "0.5",
+                                "0.6",
+                                "0.7",
+                                "0.8",
+                                "0.9",
+                                "1.0"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.smallSupport",
@@ -523,7 +563,13 @@
                                 "en": "Progress Indicator"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 green",
+                                "#25 yellow",
+                                "#35 red",
+                                "#45 outdated"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.confidenceLevel",
@@ -532,7 +578,19 @@
                                 "en": "Confidence Level"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "0.1",
+                                "0.2",
+                                "0.3",
+                                "0.4",
+                                "0.5",
+                                "0.6",
+                                "0.7",
+                                "0.8",
+                                "0.9",
+                                "1.0"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.gradingForecast",
@@ -541,7 +599,19 @@
                                 "en": "Grading Forecast"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "0.1",
+                                "0.2",
+                                "0.3",
+                                "0.4",
+                                "0.5",
+                                "0.6",
+                                "0.7",
+                                "0.8",
+                                "0.9",
+                                "1.0"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.lastUpdate",
@@ -621,7 +691,13 @@
                                 "en": "Status"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 planned",
+                                "#25 in progress",
+                                "#35 done",
+                                "#45 cancelled"
+                            ]
                         },
                         {
                             "name": "cf.cplace.digitalBoard.dueDate",
@@ -652,7 +728,11 @@
                                 "en": "Escalation Level"
                             },
                             "multiplicity": "exactlyOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - none",
+                                "#25 - handRaised"
+                            ]
                         }
                     ]
                 },

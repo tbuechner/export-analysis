@@ -15,7 +15,12 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.quarter
         typeConstraint: Text
-      - localizedName:
+      - enumerationValues:
+        - '#15 Next'
+        - '#25 Current'
+        - '#35 Closed'
+        - '#45 Draft'
+        localizedName:
           de: Status
           en: Status
         multiplicity: exactlyOne
@@ -83,7 +88,10 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.set
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 - yes'
+        - '#25 - no'
+        localizedName:
           de: Erreicht
           en: Accomplished
         multiplicity: maximalOne
@@ -133,19 +141,46 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.title
         typeConstraint: Text
-      - localizedName:
+      - enumerationValues:
+        - '#15 green'
+        - '#25 yellow'
+        - '#35 red'
+        - '#45 outdated'
+        localizedName:
           de: Fortschrittsindikator
           en: Progress Indicator
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.progressIndicator
         typeConstraint: TextEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '0.1'
+        - '0.2'
+        - '0.3'
+        - '0.4'
+        - '0.5'
+        - '0.6'
+        - '0.7'
+        - '0.8'
+        - '0.9'
+        - '1.0'
+        localizedName:
           de: Confidence Level
           en: Confidence Level
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.confidenceLevel
         typeConstraint: TextEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '0.1'
+        - '0.2'
+        - '0.3'
+        - '0.4'
+        - '0.5'
+        - '0.6'
+        - '0.7'
+        - '0.8'
+        - '0.9'
+        - '1.0'
+        localizedName:
           de: Fortschritt Vorhersage
           en: Grading Forecast
         multiplicity: maximalOne
@@ -366,19 +401,46 @@ export:
         multiplicity: null
         name: cf.cplace.solution.okr.bigSupport
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 green'
+        - '#25 yellow'
+        - '#35 red'
+        - '#45 outdated'
+        localizedName:
           de: Fortschrittsindikator
           en: Progress Indicator
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.progressIndicator
         typeConstraint: TextEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '0.1'
+        - '0.2'
+        - '0.3'
+        - '0.4'
+        - '0.5'
+        - '0.6'
+        - '0.7'
+        - '0.8'
+        - '0.9'
+        - '1.0'
+        localizedName:
           de: Confidence Level
           en: Confidence Level
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.confidenceLevel
         typeConstraint: TextEnumeration
-      - localizedName:
+      - enumerationValues:
+        - '0.1'
+        - '0.2'
+        - '0.3'
+        - '0.4'
+        - '0.5'
+        - '0.6'
+        - '0.7'
+        - '0.8'
+        - '0.9'
+        - '1.0'
+        localizedName:
           de: Fortschritt Vorhersage
           en: Grading Forecast
         multiplicity: maximalOne
@@ -434,7 +496,12 @@ export:
         multiplicity: maximalOne
         name: cf.cplace.digitalBoard.description
         typeConstraint: Text
-      - localizedName:
+      - enumerationValues:
+        - '#15 planned'
+        - '#25 in progress'
+        - '#35 done'
+        - '#45 cancelled'
+        localizedName:
           de: Status
           en: Status
         multiplicity: exactlyOne
@@ -456,7 +523,10 @@ export:
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.keyResult
         typeConstraint: Link
-      - localizedName:
+      - enumerationValues:
+        - '#15 - none'
+        - '#25 - handRaised'
+        localizedName:
           de: Eskalationslevel
           en: Escalation Level
         multiplicity: exactlyOne

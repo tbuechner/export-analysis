@@ -57,7 +57,11 @@
                                 "en": "Accomplished"
                             },
                             "multiplicity": "maximalOne",
-                            "typeConstraint": "TextEnumeration"
+                            "typeConstraint": "TextEnumeration",
+                            "enumerationValues": [
+                                "#15 - yes",
+                                "#25 - no"
+                            ]
                         },
                         {
                             "name": "cf.cplace.solution.okr.cycle",
