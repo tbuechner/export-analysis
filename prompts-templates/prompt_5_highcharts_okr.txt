@@ -1,0 +1,122 @@
+Given this data model:
+
+```
+```
+
+The following is a highcharts implementation for an application based on the given data model:
+
+```
+/*
+*Highchart
+*Displays the version history of the confidencelevel of keyResult type
+*/
+
+function generateData(embeddingPage) {
+    let data = [];
+
+    let confidenceValue = embeddingPage.getVersionHistoryOfAttribute('cf.cplace.solution.okr.confidenceLevel');
+    if (confidenceValue.length > 1) {
+        data = [{ y: 0, date: null }];
+        cplace.each(confidenceValue, function (cv) {
+            // cplace.log(cv.getNewValue());
+            let cvValue = cv.getNewValue() ? cv.getNewValue().toString() : '';
+            let cvDate = cv.getWhen();
+            let lastThree = cvValue.substr(cvValue.length - 3);
+            if (cvValue) {
+                data.push({
+                    y: parseFloat(lastThree),
+                    date: cvDate.toString()
+                });
+            } else {
+                data.push({
+                    y: 0.5,
+                    date: cvDate.toString()
+                })
+            }
+        })
+        data.push({ y: 1, date: null })
+    }
+    //cplace.log(data);
+    return data;
+}
+
+
+function main() {
+    const dataObj = generateData(embeddingPage);
+    return {
+        chart: {
+            height: 200,
+            backgroundColor: '#F2F4FA'
+        },
+        title: {
+            text: '<b>Confidence Value: ' + embeddingPage.get('cf.cplace.solution.okr.confidenceLevel') + '</b>',
+            align: 'center',
+            useHtml: true
+        },
+        xAxis: {
+            reversed: true,
+            min: 1,
+            max: dataObj.length - 2,
+            labels: {
+                enabled: false
+            },
+            lineColor: '#fcfcfc',
+            tickLength: 1,
+            showLastLabel: false,
+        },
+        yAxis: {
+            title: '',
+            min: 0,
+            max: 1,
+            labels: {
+                enabled: false
+            },
+            gridLineColor: 'rgba(255,255,255,0)',
+            lineColor: '#ffffff',
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 7,
+                tickWidth: 10,
+                marker: {
+                    fillColor: 'rgba(0,0,0,.1)',
+                    radius: 6
+                }
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            data: dataObj,
+            name: 'Confidence Levels',
+            color: {
+                linearGradient: {
+                    x1: 0,
+                    x2: 0,
+                    y1: 0,
+                    y2: 1
+                },
+                stops: [
+                    [0, 'rgba(174,219,60,1)'],
+                    [0.5, 'rgba(255,186,0,1)'],
+                    [1, 'rgba(219,15,53,1)']
+                ]
+            },
+        }],
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: 'Confidence Level: ' + '<b>{point.y}</b><br>',
+            pointFormat: '--<br>{point.date}',
+        }
+    }
+}
+
+return main();
+```
+
+Eplain to me in 3 sentences what the visualization looks like.

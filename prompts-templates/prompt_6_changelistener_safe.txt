@@ -1,0 +1,16 @@
+Given this data model:
+
+```
+
+```
+
+This is example code working with the data model:
+
+```
+```
+
+Implement a change listener for the "Program Increment" entity. It will be registered on the title attribute. It should only do something when a new Program Increment is created.
+
+The change listener should set the predecessor attribute to the program increment object that is closest to the given program increment.
+
+The triggering is done outside of the implementation. Just implement the logic assuming the triggering happened, and you get the program increment object bound.
