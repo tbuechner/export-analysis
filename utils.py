@@ -168,6 +168,26 @@ def rewrite_attributes(doc):
 
             doc['enumerationValues'] = new_value
 
+        # if the key is "enumerationValues2localizedLabels" and the value is not None
+        if 'enumerationValues2localizedLabels' in doc and doc['enumerationValues2localizedLabels'] is not None:
+            # parse the value as json and replace the value with the parsed json
+            parsed_value = json.loads(doc['enumerationValues2localizedLabels'])
+
+            if isinstance(parsed_value, dict):
+                # q: how to prevent "RuntimeError: dictionary keys changed during iteration"?
+                # a: create a new dictionary and iterate over the keys of the old dictionary
+
+                new_value = {}
+
+                for key, value in parsed_value.items():
+                    if isinstance(key, str) and key.startswith('s'):
+                        new_key = key[1:]
+                        new_value[new_key] = parsed_value.get(key)
+                    elif isinstance(key, str) and key.startswith('d'):
+                        new_key = float(key[1:])
+                        new_value[new_key] = parsed_value.get(key)
+
+                doc['enumerationValues2localizedLabels'] = new_value
 
 
 def remove_generic_elements(root, parent_map):
@@ -238,7 +258,7 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/textRegExpErrorMessage')
     # remove(root, parent_map, './/enumerationValues')
     remove(root, parent_map, './/enumerationValues2icons')
-    remove(root, parent_map, './/enumerationValues2localizedLabels')
+    # remove(root, parent_map, './/enumerationValues2localizedLabels')
 
 
 def return_all_searches(root, parent_map):

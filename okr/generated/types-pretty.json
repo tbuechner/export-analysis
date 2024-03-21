@@ -46,7 +46,57 @@
                                 "#25 Current",
                                 "#35 Closed",
                                 "#45 Draft"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 Current": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Aktuell"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Current"
+                                        }
+                                    }
+                                },
+                                "#35 Closed": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Geschlossen"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Closed"
+                                        }
+                                    }
+                                },
+                                "#45 Draft": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Entwurf"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Draft"
+                                        }
+                                    }
+                                },
+                                "#15 Next": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "N\u00e4chster"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Next"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.cyclesDashboard",
@@ -148,7 +198,33 @@
                             "enumerationValues": [
                                 "#15 - yes",
                                 "#25 - no"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 - no": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Nein"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "No"
+                                        }
+                                    }
+                                },
+                                "#15 - yes": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Ja"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Yes"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.cycle",
@@ -226,7 +302,57 @@
                                 "#25 yellow",
                                 "#35 red",
                                 "#45 outdated"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#35 red": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Off track"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Off track"
+                                        }
+                                    }
+                                },
+                                "#15 green": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "On track"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "On track"
+                                        }
+                                    }
+                                },
+                                "#25 yellow": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Progressing"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Progressing"
+                                        }
+                                    }
+                                },
+                                "#45 outdated": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Outdated"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Outdated"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.confidenceLevel",
@@ -247,7 +373,129 @@
                                 "0.8",
                                 "0.9",
                                 "1.0"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "0.6": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.6"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.6"
+                                        }
+                                    }
+                                },
+                                "0.5": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.5"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.5"
+                                        }
+                                    }
+                                },
+                                "0.8": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.8"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.8"
+                                        }
+                                    }
+                                },
+                                "0.7": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.7"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.7"
+                                        }
+                                    }
+                                },
+                                "0.2": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.2"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.2"
+                                        }
+                                    }
+                                },
+                                "0.1": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.1"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.1"
+                                        }
+                                    }
+                                },
+                                "1.0": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "1.0"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "1.0"
+                                        }
+                                    }
+                                },
+                                "0.4": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.4"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.4"
+                                        }
+                                    }
+                                },
+                                "0.3": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.3"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.3"
+                                        }
+                                    }
+                                },
+                                "0.9": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "0.9"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "0.9"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.gradingForecast",
@@ -268,7 +516,8 @@
                                 "0.8",
                                 "0.9",
                                 "1.0"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.okr.smallSupport",
@@ -569,7 +818,57 @@
                                 "#25 yellow",
                                 "#35 red",
                                 "#45 outdated"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#35 red": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Off track"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Off track"
+                                        }
+                                    }
+                                },
+                                "#15 green": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "On track"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "On track"
+                                        }
+                                    }
+                                },
+                                "#25 yellow": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Progressing"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Progressing"
+                                        }
+                                    }
+                                },
+                                "#45 outdated": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Outdated"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Outdated"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.confidenceLevel",
@@ -590,7 +889,8 @@
                                 "0.8",
                                 "0.9",
                                 "1.0"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.okr.gradingForecast",
@@ -611,7 +911,8 @@
                                 "0.8",
                                 "0.9",
                                 "1.0"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.okr.lastUpdate",
@@ -697,7 +998,57 @@
                                 "#25 in progress",
                                 "#35 done",
                                 "#45 cancelled"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#15 planned": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Geplant"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Planned"
+                                        }
+                                    }
+                                },
+                                "#25 in progress": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "In Arbeit"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "In progress"
+                                        }
+                                    }
+                                },
+                                "#45 cancelled": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Abgebrochen"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Cancelled"
+                                        }
+                                    }
+                                },
+                                "#35 done": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Fertig"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Done"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.digitalBoard.dueDate",
@@ -732,7 +1083,33 @@
                             "enumerationValues": [
                                 "#15 - none",
                                 "#25 - handRaised"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#15 - none": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Kein"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "None"
+                                        }
+                                    }
+                                },
+                                "#25 - handRaised": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Hand gehoben"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Hand Raised"
+                                        }
+                                    }
+                                }
+                            }
                         }
                     ]
                 },

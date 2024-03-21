@@ -262,7 +262,45 @@
                                 "#15 - done",
                                 "#25 - active",
                                 "#35 - planned"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#35 - planned": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Geplant"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Planned"
+                                        }
+                                    }
+                                },
+                                "#15 - done": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Abgeschlossen"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Done"
+                                        }
+                                    }
+                                },
+                                "#25 - active": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Aktiv"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Active"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.confidenceVote",
@@ -438,7 +476,33 @@
                             "enumerationValues": [
                                 "capability",
                                 "enabler"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "enabler": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Enabler"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Enabler"
+                                        }
+                                    }
+                                },
+                                "capability": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Capability"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Capability"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.state",
@@ -458,7 +522,117 @@
                                 "#65 - Deploying",
                                 "#75 - Releasing",
                                 "#85 - Done"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 - Analyzing": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Analyzing"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Analyzing"
+                                        }
+                                    }
+                                },
+                                "#75 - Releasing": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Releasing"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Releasing"
+                                        }
+                                    }
+                                },
+                                "#55 - Validating": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Validating on staging"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Validating on staging"
+                                        }
+                                    }
+                                },
+                                "#15 - Funnel": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Funnel"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Funnel"
+                                        }
+                                    }
+                                },
+                                "#65 - Deploying": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Deploying to production"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Deploying to production"
+                                        }
+                                    }
+                                },
+                                "#35 - Backlog": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Backlog"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Backlog"
+                                        }
+                                    }
+                                },
+                                "#85 - Done": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Done"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Done"
+                                        }
+                                    }
+                                },
+                                "#10 - Draft": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Entwurf"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Draft"
+                                        }
+                                    }
+                                },
+                                "#45 - Implementing": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Implementing"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Implementing"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.wsjf",
@@ -485,7 +659,8 @@
                                 8.0,
                                 13.0,
                                 20.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.timeCriticality",
@@ -503,7 +678,8 @@
                                 8.0,
                                 13.0,
                                 20.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.riskReduction",
@@ -521,7 +697,8 @@
                                 8.0,
                                 13.0,
                                 20.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.jobSize",
@@ -539,7 +716,8 @@
                                 8.0,
                                 13.0,
                                 20.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.programIncrement",
@@ -733,7 +911,21 @@
                             "typeConstraint": "TextEnumeration",
                             "enumerationValues": [
                                 "#25 - conflict"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 - conflict": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Ungel\u00f6ster Konflikt"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Unresolved Conflict"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.features",
@@ -799,7 +991,33 @@
                             "enumerationValues": [
                                 "blocked by",
                                 "related to"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "related to": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "verbunden mit"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "related to"
+                                        }
+                                    }
+                                },
+                                "blocked by": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "blockiert durch"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "blocked by"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.predecessor",
@@ -829,7 +1047,45 @@
                                 "15 - identified",
                                 "25 - conflict",
                                 "35 - resolved"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "35 - resolved": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Konflikt gel\u00f6st"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Conflict resolved"
+                                        }
+                                    }
+                                },
+                                "25 - conflict": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Konflikt"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Conflict"
+                                        }
+                                    }
+                                },
+                                "15 - identified": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Identifziert"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Identified"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.description",
@@ -910,7 +1166,45 @@
                                 "#15 - PI Meilenstein",
                                 "#25 - Fixiertes Datum",
                                 "#35 - Learning Meilenstein"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#35 - Learning Meilenstein": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Learning Meilenstein"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Learning Milestone"
+                                        }
+                                    }
+                                },
+                                "#15 - PI Meilenstein": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "PI Meilenstein"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "PI Milestone"
+                                        }
+                                    }
+                                },
+                                "#25 - Fixiertes Datum": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Fixiertes Datum"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Fixed-Date Milestone"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.relevantFor",
@@ -1093,7 +1387,45 @@
                                 "#15 - Solution",
                                 "#25 - Program",
                                 "#35 - Team"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#15 - Solution": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Solution"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Solution"
+                                        }
+                                    }
+                                },
+                                "#35 - Team": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Team"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Team"
+                                        }
+                                    }
+                                },
+                                "#25 - Program": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Program"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Program"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.SAFeLevel.Reference",
@@ -1136,7 +1468,8 @@
                                 8.0,
                                 9.0,
                                 10.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.actualValue",
@@ -1161,7 +1494,8 @@
                                 8.0,
                                 9.0,
                                 10.0
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.commitment",
@@ -1174,7 +1508,33 @@
                             "enumerationValues": [
                                 "#15 - Committed",
                                 "#25 - Uncommitted"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 - Uncommitted": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Uncommitted"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Uncommitted"
+                                        }
+                                    }
+                                },
+                                "#15 - Committed": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Committed"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Committed"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.safe.statement",
@@ -1281,7 +1641,8 @@
                             "enumerationValues": [
                                 "Accepted",
                                 "Not Accepted"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": null
                         },
                         {
                             "name": "cf.cplace.solution.safe.confidenceVote.oneFinger",

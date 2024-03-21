@@ -61,7 +61,33 @@
                             "enumerationValues": [
                                 "#15 - yes",
                                 "#25 - no"
-                            ]
+                            ],
+                            "enumerationValues2localizedLabels": {
+                                "#25 - no": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Nein"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "No"
+                                        }
+                                    }
+                                },
+                                "#15 - yes": {
+                                    "localizations": {
+                                        "de": {
+                                            "language": "de",
+                                            "value": "Ja"
+                                        },
+                                        "en": {
+                                            "language": "en",
+                                            "value": "Yes"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "name": "cf.cplace.solution.okr.cycle",

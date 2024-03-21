@@ -1,6 +1,6 @@
 tokens copilot_examples_constants.js: 4307
 tokens copilot_examples_literals.js: 2699
-tokens types-compressed.json: 6203
-tokens types-pretty.json: 9750
-tokens types-pretty.yaml: 7337
+tokens types-compressed.json: 7228
+tokens types-pretty.json: 11688
+tokens types-pretty.yaml: 8566
 tokens types.js: 7643
