@@ -1,0 +1,8 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('okr/generated/types-compressed.json') }}
+```
+
+Create a new data model of an application which helps planning the publishing of blog posts. Each blog post should have a publication date, a title, and a state (draft, completed, published). Use the prefix `cf.cplace.blogPlanner` for internal names.
+
