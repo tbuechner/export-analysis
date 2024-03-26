@@ -348,6 +348,94 @@ def return_all_low_code_scripts(root, parent_map):
     return scripts
 
 
+def rewrite_widgets(widgets):
+    # iterate over all widgets
+    for widget in widgets:
+        # iterate over all rows
+        for row in widget['rows']:
+            # iterate over all columns
+            for column in row['columns']:
+                # iterate over all widgets
+                for widget_ in column['widgets']:
+                    # remove 'collapsed' key from widget_
+                    if 'collapsed' in widget_:
+                        del widget_['collapsed']
+                    # remove 'id' key from widget_
+                    if 'id' in widget_:
+                        del widget_['id']
+                    if 'attributes' in widget_:
+                        attributes = widget_['attributes']
+                        if isinstance(attributes, list):
+                            for attribute in attributes:
+                                if 'value' in attribute:
+                                    value = attribute['value']
+                                    # if value is a string and starts with "s" - strip the first character and replace the value with the result
+                                    if isinstance(value, str) and (value.startswith('s') or value.startswith('m')):
+                                        new_value = value[1:]
+                                        # test if new_value is a json string or json array
+                                        if new_value.startswith('{') or new_value.startswith('['):
+                                            # parse new_value as json - catch json.decoder.JSONDecodeError
+                                            try:
+                                                new_value = json.loads(new_value)
+                                            except json.decoder.JSONDecodeError:
+                                                print("Error parsing json: ", new_value)
+
+                                            # if new_value is a dictionary and has a key "widgets" and "widgetsLayout"
+                                            if isinstance(new_value, dict) and 'widgets' in new_value and 'widgetsLayout' in new_value:
+
+                                                widget_id_2_widget = {}
+
+                                                widgets = json.loads(new_value['widgets'])
+                                                # iterate over all widgets
+                                                for widget__ in widgets:
+                                                    # if the widget has a key "configuration"
+                                                    if 'configuration' in widget__:
+                                                        # convert configuration value of widget to json
+                                                        widget__['configuration'] = json.loads(widget__['configuration'])
+                                                    # if the widget has a key "id"
+                                                    widget_id_2_widget[widget__['id']] = widget__
+
+                                                del new_value['widgets']
+                                                # new_value['widgets'] = widgets
+
+                                                # convert widgetsLayout value of new_value to json
+                                                widgets_layout = json.loads(new_value['widgetsLayout'])
+                                                new_value['widgetsLayout'] = widgets_layout
+
+                                                # iterate over all rows
+                                                for row_ in widgets_layout['rows']:
+                                                    # iterate over all columns
+                                                    for column_ in row_['columns']:
+                                                        # iterate over all widgets
+                                                        new_widgets = []
+                                                        for widget__ in column_['widgets']:
+                                                            widget_id = widget__['id']
+                                                            # test if the widgetId is in the map widgetId2widget
+                                                            if widget_id in widget_id_2_widget:
+                                                                widget_from_map = widget_id_2_widget[widget_id]
+                                                                del widget_from_map['id']
+
+                                                                new_widgets.append(widget_from_map)
+
+                                                                del widget__['id']
+                                                            else:
+                                                                print("Widget not found: ", widget_id, widget_id_2_widget)
+
+                                                        column_['widgets'] = new_widgets
+
+
+                                        attribute['value'] = new_value
+                                    # if value is a string and starts with "b" - strip the first character and convert the value to a boolean
+                                    elif isinstance(value, str) and value.startswith('b'):
+                                        attribute['value'] = value[1:] == 'true'
+                                    # if value is a string and starts with "d" - strip the first character and convert the value to a number
+                                    elif isinstance(value, str) and value.startswith('d'):
+                                        attribute['value'] = float(value[1:])
+                                    elif isinstance(value, str) and value.startswith('r'):
+                                        attribute['value'] = value[1:]
+
+    return widgets
+
 def find_all_widgets(root, parent_map):
     result = []
     # Find elements by XPath and remove them
@@ -495,6 +583,9 @@ def run_for_folder(folder_name):
     widgets = find_all_widgets(root, parent_map)
     # print("Widgets: ", widgets)
     write_json_to_file(folder_name_generated, "widgets", widgets)
+
+    widgets_rewritten = rewrite_widgets(widgets)
+    write_json_to_file(folder_name_generated, "widgets-rewritten", widgets)
 
     remove_generic_elements(root, parent_map)
 
