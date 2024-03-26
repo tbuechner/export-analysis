@@ -1,0 +1,22 @@
+{
+    "cf.platform.richString": 3,
+    "cf.cplace.platform.attributesGroup": 17,
+    "cf.cplace.visualizations.scriptingHighcharts": 22,
+    "cf.cplace.demoWidgets.demoRichString": 20,
+    "cf.platform.embeddedSearchAsTable": 37,
+    "cf.cplace.layoutTabsWidget.widget": 8,
+    "cf.platform.wiki": 18,
+    "cf.platform.attributes": 16,
+    "cf.platform.incomingReferences": 16,
+    "cf.platform.comments": 4,
+    "cf.platform.customRichStringAttribute": 3,
+    "cf.platform.attributeHistory": 1,
+    "cf.platform.files": 1,
+    "cf.cplace.visualDomainModel.modeller": 1,
+    "cf.cplace.platform.connectedAttributesGroup": 3,
+    "cf.cplace.genericInterface.api.widgets.triggerInterfaceButton": 1,
+    "de.visualistik.visualRoadmap.widget": 1,
+    "cf.platform.connectedTableFilter": 1,
+    "cf.cplace.cboard.main.board": 3,
+    "cf.cplace.lowCodeWidgets.lowCodeButton": 1
+}

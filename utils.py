@@ -348,6 +348,56 @@ def return_all_low_code_scripts(root, parent_map):
     return scripts
 
 
+def remove_attribute(widget_, name):
+    # if the widget_ has a key "attributes"
+    if 'attributes' in widget_:
+        # iterate over all attributes
+        for attribute in widget_['attributes']:
+            # if the attribute has a key "name" and the name of the attribute equals name
+            if 'name' in attribute and attribute['name'] == name:
+                # remove the attribute
+                widget_['attributes'].remove(attribute)
+
+def count_widget_types(widgets, folder_name_generated):
+    widget_type_2_count = {}
+
+    # iterate over all widgets
+    for widget in widgets:
+        # iterate over all rows
+        for row in widget['rows']:
+            # iterate over all columns
+            for column in row['columns']:
+                # iterate over all widgets
+                for widget_ in column['widgets']:
+                    widget_type = widget_['widgetType']
+
+                    # increase the count of the widgetType by 1
+                    if widget_type in widget_type_2_count:
+                        widget_type_2_count[widget_type] += 1
+                    else:
+                        widget_type_2_count[widget_type] = 1
+
+    with open(folder_name_generated + '/' + 'widget-type-to-count.json', 'w') as f:
+        f.write(json.dumps(widget_type_2_count, indent=4))
+
+def condense_widgets(widgets):
+
+    # iterate over all widgets
+    for widget in widgets:
+        # iterate over all rows
+        for row in widget['rows']:
+            # iterate over all columns
+            for column in row['columns']:
+                # iterate over all widgets
+                for widget_ in column['widgets']:
+                    widget_type = widget_['widgetType']
+
+                    # if widget_type equals 'cf.cplace.visualizations.scriptingHighcharts'
+                    if widget_type == 'cf.cplace.visualizations.scriptingHighcharts':
+                        remove_attribute(widget_, 'cf.cplace.visualization.script')
+
+
+
 def rewrite_widgets(widgets):
     # iterate over all widgets
     for widget in widgets:
@@ -533,9 +583,14 @@ def write_token_counts(folder_name):
         write_token_count(f, folder_name, "widgets-rewritten-compressed.json")
         write_token_count(f, folder_name, "widgets-rewritten-pretty.json")
         write_token_count(f, folder_name, "widgets-rewritten-pretty.yaml")
+
         write_token_count(f, folder_name, "widgets-rewritten-first-3-compressed.json")
         write_token_count(f, folder_name, "widgets-rewritten-first-3-pretty.json")
         write_token_count(f, folder_name, "widgets-rewritten-first-3-pretty.yaml")
+
+        write_token_count(f, folder_name, "widgets-condensed-compressed.json")
+        write_token_count(f, folder_name, "widgets-condensed-pretty.json")
+        write_token_count(f, folder_name, "widgets-condensed-pretty.yaml")
 
 
 def write_token_count(f, folder_name, file_name):
@@ -590,8 +645,12 @@ def run_for_folder(folder_name):
 
     rewrite_widgets(widgets)
     write_json_to_file(folder_name_generated, "widgets-rewritten", widgets)
-
     write_json_to_file(folder_name_generated, "widgets-rewritten-first-3", widgets[:3])
+
+    count_widget_types(widgets, folder_name_generated)
+
+    condense_widgets(widgets)
+    write_json_to_file(folder_name_generated, "widgets-condensed", widgets)
 
     remove_generic_elements(root, parent_map)
 
