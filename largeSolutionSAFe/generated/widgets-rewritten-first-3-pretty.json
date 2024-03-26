@@ -1,0 +1,1581 @@
+[
+    {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "proportion": 4,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.richString",
+                                "attributes": [
+                                    {
+                                        "name": "content",
+                                        "value": "<p style=\"text-align: center\"><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX2VsaTRhbXNjd2hrdGdlNHFneXBhY212NHEiLCJ3aWRnZXRUeXBlIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0IiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5kYXRhU291cmNlIiwidmFsdWVzIjpbeyJzdHJpbmciOiJzZWFyY2gifV19LHsibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5pbmNsdWRlQWxsU2VhcmNoUmVzdWx0cyIsInZhbHVlcyI6W3siYm9vbGVhbiI6ZmFsc2V9XX0seyJuYW1lIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0V2lkZ2V0LnNjcmlwdCIsInZhbHVlcyI6W3sic3RyaW5nIjoie1widmVyc2lvblwiOjEsXCJzY3JpcHRcIjpcIlwvKipcXG4gKiBTb2x1dGlvbiAtPiBTb2x1dGlvbiBUcmFpbiBFbmdpbmVlciBbMC4uMV1cXG4gKiBTb2x1dGlvbiAtPiBTb2x1dGlvbiBUcmFpbiBBcmNoaXRlY3QgWzAuLjFdXFxuICogU29sdXRpb24gLT4gU29sdXRpb24gTWFuYWdlbWVudCBbMC4uMV1cXG4gKiBcXG4gKlwvXFxuXFxuY29uc3QgU09MVVRJT04gPSB7XFxuICAgIFRZUEU6ICdjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5zb2x1dGlvbicsXFxuICAgIEFUVFI6IHtcXG4gICAgICAgIFNUX0VOR0lORUVSOiAnY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUuc29sdXRpb25UcmFpbkVuZ2luZWVyJyxcXG4gICAgICAgIFNUX0FSQ0hJVEVDVDogJ2NmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnNvbHV0aW9uVHJhaW5BcmNoaXRlY3QnLFxcbiAgICAgICAgU09MX01BTkFHRU1FTlQ6ICdjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5zb2x1dGlvbk1hbmFnZW1lbnQnXFxuICAgIH1cXG59XFxuXFxuY29uc3QgVEhVTUJOQUlMX1NJWkUgPSAnNjBweCc7XFxuXFxuXFxuXC9cL2ZpbmQgYWxsIHJlbGV2YW50IHJvbGVzIFwvIHJlc3BvbnNpYmxlc1xcblxcbmxldCBzb2x1dGlvbiA9IGVtYmVkZGluZ1BhZ2U7XFxuXFxubGV0IHVzZXJzID0gW107XFxuXFxubGV0IHN0ZSA9IHNvbHV0aW9uLmdldChTT0xVVElPTi5BVFRSLlNUX0VOR0lORUVSKTtcXG5sZXQgc3RhID0gc29sdXRpb24uZ2V0KFNPTFVUSU9OLkFUVFIuU1RfQVJDSElURUNUKTtcXG5sZXQgc29sTWFuID0gc29sdXRpb24uZ2V0KFNPTFVUSU9OLkFUVFIuU09MX01BTkFHRU1FTlQpO1xcblxcblxcbmlmIChzdGUpIHtcXG4gICAgYWRkVXNlcihzdGUsIFxcXCJTb2x1dGlvbiBUcmFpbiBFbmdpbmVlclxcXCIpXFxufVxcbmlmIChzdGEpIHtcXG4gICAgYWRkVXNlcihzdGEsIFxcXCJTb2x1dGlvbiBUcmFpbiBBcmNoaXRlY3RcXFwiKVxcbn1cXG5pZiAoc29sTWFuKSB7XFxuICAgIGFkZFVzZXIoc29sTWFuLCBcXFwiU29sdXRpb24gTWFuYWdlbWVudFxcXCIpXFxufVxcblxcblwvXC91c2Vycy5zb3J0KCh1c2VyMSwgdXNlcjIpID0-IHVzZXIxLm5hbWUgPiB1c2VyMi5uYW1lID8gMSA6IC0xKTtcXG5cXG5cXG5sZXQgb3V0cHV0ID0gJyc7XFxuXFxuXFxuZm9yIChsZXQgaSA9IDA7IGkgPCB1c2Vycy5sZW5ndGg7IGkrKykge1xcbiAgb3V0cHV0ICs9IGdlbmVyYXRlVXNlck1hcmt1cE5ldyh1c2Vyc1tpXSk7XFxufVxcblxcbnJldHVybiAnPGRpdiBzdHlsZT1cXFwiZGlzcGxheTpmbGV4O2ZsZXgtZmxvdzpyb3cgd3JhcDtcXFwiPicgKyBvdXRwdXQgKyAnPFwvZGl2Pic7XFxuXFxuXFxuZnVuY3Rpb24gYWRkVXNlcihtZW1iZXIsIHRpdGxlKSB7XFxuICAgIHVzZXJzLnB1c2goe1xcbiAgICAgICAgbmFtZTogbWVtYmVyLmdldE5hbWUoKSxcXG4gICAgICAgIGlkOiBtZW1iZXIuZ2V0SWQoKS5zcGxpdCgnXC8nKS5wb3AoKSxcXG4gICAgICAgIHVybDogbWVtYmVyLmdldFVybCgpLFxcbiAgICAgICAgdGl0bGU6IHRpdGxlXFxuICAgIH0pXFxufVxcblxcbmZ1bmN0aW9uIGdldFRlbmFudE5hbWUocGFnZSl7XFxuIGxldCB1cmw9ZW1iZWRkaW5nUGFnZS5nZXRVcmwoKS5zcGxpdCgnXC9wYWdlc1wvJylbMF07XFxuIGxldCB0ZW5hbnROYW1lPSB1cmwuc3BsaXQoJ1wvJylbM107XFxuICByZXR1cm4gdGVuYW50TmFtZTtcXG59XFxuXFxuZnVuY3Rpb24gZ2VuZXJhdGVVc2VyTWFya3VwICh1c2VyKSB7XFxuICAgIHJldHVybiAnPGRpdiBzdHlsZT1cXFwibWFyZ2luOjhweDt0ZXh0LWFsaWduOiBjZW50ZXI7XFxcIj4nXFxuICAgICAgICArICc8aW1nIGNsYXNzPVxcXCJjcGxhY2UtcGVyc29uX19pbWFnZVxcXCIgc3R5bGU9XFxcIm1hcmdpbjogNXB4XFxcIiBzcmM9XFxcIlwvcGVyc29uXC9kb3dubG9hZFRodW1ibmFpbD9pZD0nICsgdXNlci5pZCArICdcXFwiIHdpZHRoPVxcXCInICsgVEhVTUJOQUlMX1NJWkUgKyAnXFxcIiBoZWlnaHQ9XFxcIicgKyBUSFVNQk5BSUxfU0laRSArICdcXFwiIHRpdGxlPVxcXCInICsgdXNlci5uYW1lICsgJ1xcXCJcLz4nXFxuICAgICAgICArICc8ZGl2IHN0eWxlPVxcXCJmb250LXNpemU6IDlwdDttYXJnaW46M3B4O1xcXCI-JyArIHVzZXIubmFtZSArICc8XC9kaXY-J1xcbiAgICAgICAgKyAnPGRpdiBzdHlsZT1cXFwiZm9udC1zaXplOiA4cHQ7bWFyZ2luOjNweDtcXFwiPicgKyB1c2VyLnRpdGxlICsgJzxcL2Rpdj4nXFxuICAgICAgKyAnPFwvZGl2Pic7XFxuICB9XFxuXFxuXC9cLzxpbWcgY2xhc3M9XFxcImN1c3RvbS1wcm9maWxlLWltYWdlXFxcIiBzcmM9JysgdGVuYW50VXJsICsncGVyc29uXC9kb3dubG9hZFRodW1ibmFpbD9pZD0nICsgdXNlckhyZWYgKyAnPidcXG5cXG5mdW5jdGlvbiBnZW5lcmF0ZVVzZXJNYXJrdXBOZXcgKHVzZXIpIHtcXG4gICAgcmV0dXJuICc8ZGl2IHN0eWxlPVxcXCJtYXJnaW46OHB4O3RleHQtYWxpZ246IGNlbnRlcjtcXFwiPidcXG4gICAgICAgICsgJzxpbWcgY2xhc3M9XFxcImNwbGFjZS1wZXJzb25fX2ltYWdlXFxcIiBzdHlsZT1cXFwibWFyZ2luOiA1cHg7aGVpZ2h0OjYwcHg7d2lkdGg6NjBweFxcXCIgc3JjPVxcXCJcLycrZ2V0VGVuYW50TmFtZShlbWJlZGRpbmdQYWdlKSsnXC9wZXJzb25cL2Rvd25sb2FkVGh1bWJuYWlsP2lkPScgKyB1c2VyLmlkICsgJ1xcXCIgd2lkdGg9XFxcIicgKyBUSFVNQk5BSUxfU0laRSArICdcXFwiIGhlaWdodD1cXFwiJyArIFRIVU1CTkFJTF9TSVpFICsgJ1xcXCIgdGl0bGU9XFxcIicgKyB1c2VyLm5hbWUgKyAnXFxcIlwvPidcXG4gICAgICAgICsgJzxkaXYgc3R5bGU9XFxcImZvbnQtc2l6ZTogMTBwdDttYXJnaW46M3B4O1xcXCI-JyArIHVzZXIubmFtZSArICc8XC9kaXY-J1xcbiAgICAgICAgKyAnPGRpdiBzdHlsZT1cXFwiZm9udC1zaXplOiA5cHQ7bWFyZ2luOjNweDtcXFwiPicgKyB1c2VyLnRpdGxlICsgJzxcL2Rpdj4nXFxuICAgICAgKyAnPFwvZGl2Pic7XFxuICB9XCIsXCJ1cGdyYWRlQWNrXCI6dHJ1ZSxcImRlc2NyaXB0aW9uXCI6XCJcIn0ifV19LHsibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC50YWJsZVNlbGVjdGlvbk9ubHkiLCJ2YWx1ZXMiOlt7ImJvb2xlYW4iOmZhbHNlfV19LHsibmFtZSI6InNvcnRPcmRlciIsInZhbHVlcyI6W3sic3RyaW5nIjoiQXVmc3RlaWdlbmQifV19XX0</embeddedwidget></p>"
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 180.0
+                                    },
+                                    {
+                                        "name": "localizedWidgetTitle",
+                                        "value": {
+                                            "de": "Verantwortliche",
+                                            "en": "Responsibles"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "proportion": 4,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.cplace.platform.attributesGroup",
+                                "attributes": [
+                                    {
+                                        "name": "cf.cplace.platform.attributesGroup.layout",
+                                        "value": {
+                                            "widgetsLayout": {
+                                                "rows": [
+                                                    {
+                                                        "columns": [
+                                                            {
+                                                                "proportion": 12,
+                                                                "widgets": [
+                                                                    {
+                                                                        "configuration": [
+                                                                            {
+                                                                                "name": "cf.platform.inPlaceEditing",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": true
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.quotedAttributeName",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "string": "content"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.reloadAfterChange",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": false
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.singleColumn",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": false
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.useParent",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": false
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.withLabel",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": false
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "cf.platform.withValue",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "boolean": true
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ],
+                                                                        "widgetType": "cf.platform.singleAttribute"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.platform.attributesGroup.localizedTitle",
+                                        "value": {
+                                            "de": "Beschreibung",
+                                            "en": "Description"
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.platform.attributesGroup.pageSelection",
+                                        "value": "embedding"
+                                    },
+                                    {
+                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "cf.platform.singleColumn",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 180.0
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "proportion": 4,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.richString",
+                                "attributes": [
+                                    {
+                                        "name": "content",
+                                        "value": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX2tzbmMxbDJ4ZGZ1OTk0NTk3ZnNqbzVvNWIiLCJ3aWRnZXRUeXBlIjoiY2YucGxhdGZvcm0ubnVtYmVyT2ZTZWFyY2hSZXN1bHRzIiwicHJvcGVydGllcyI6W3sibmFtZSI6InNlYXJjaCIsInZhbHVlcyI6W3sic3RyaW5nIjoie1wiZmlsdGVyc1wiOlt7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLmFnaWxlUmVsZWFzZVRyYWluXCJdfSx7XCJjdXN0b21PdXRnb2luZ1N1YlNlYXJjaFwiOlwiY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUucHJvZ3JhbVwiLFwic2VhcmNoXCI6e1wiZmlsdGVyc1wiOlt7XCJjb250ZW50VHlwZXNcIjpbXCJwYWdlXCJdfSx7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnByb2dyYW1cIl19LHtcInJlbGF0aXZlQ3VzdG9tUmVmZXJlbmNlXCI6XCJjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5zb2x1dGlvblwiLFwicmVmZXJlbmNlT3BlcmF0b3JcIjpcImVtYmVkZGluZ0N1c3RvbUVudGl0eVwifV19fV19In1dfV19</embeddedwidget></span></span></h4>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX2NpYW5udjVkMXRjeTBsdXNkdGV0ZnU0YWYiLCJ3aWRnZXRUeXBlIjoiY2YucGxhdGZvcm0ubnVtYmVyT2ZTZWFyY2hSZXN1bHRzIiwicHJvcGVydGllcyI6W3sibmFtZSI6InNlYXJjaCIsInZhbHVlcyI6W3sic3RyaW5nIjoie1wiZmlsdGVyc1wiOlt7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnRlYW1cIl19LHtcImN1c3RvbU91dGdvaW5nU3ViU2VhcmNoXCI6XCJjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5hZ2lsZVJlbGVhc2VUcmFpblwiLFwic2VhcmNoXCI6e1wiZmlsdGVyc1wiOlt7XCJjb250ZW50VHlwZXNcIjpbXCJwYWdlXCJdfSx7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLmFnaWxlUmVsZWFzZVRyYWluXCJdfSx7XCJjdXN0b21PdXRnb2luZ1N1YlNlYXJjaFwiOlwiY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUucHJvZ3JhbVwiLFwic2VhcmNoXCI6e1wiZmlsdGVyc1wiOlt7XCJjb250ZW50VHlwZXNcIjpbXCJwYWdlXCJdfSx7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnByb2dyYW1cIl19LHtcInJlbGF0aXZlQ3VzdG9tUmVmZXJlbmNlXCI6XCJjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5zb2x1dGlvblwiLFwicmVmZXJlbmNlT3BlcmF0b3JcIjpcImVtYmVkZGluZ0N1c3RvbUVudGl0eVwifV19fV19fV19In1dfV19</embeddedwidget></span></span></h4>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX2g3NmxvdnBmdXJqZ2V3aGMybGU2dHFhYnkiLCJ3aWRnZXRUeXBlIjoiY2YucGxhdGZvcm0ubnVtYmVyT2ZTZWFyY2hSZXN1bHRzIiwicHJvcGVydGllcyI6W3sibmFtZSI6InNlYXJjaCIsInZhbHVlcyI6W3sic3RyaW5nIjoie1wiZmlsdGVyc1wiOlt7XCJyZWxhdGl2ZVNwYWNlXCI6XCJ0cnVlXCJ9LHtcInR5cGVzXCI6W1wiY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUuY2FwYWJpbGl0eVwiXX0se1wicmVsYXRpdmVDdXN0b21SZWZlcmVuY2VcIjpcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnNvbHV0aW9uLnJlZmVyZW5jZVwiLFwicmVmZXJlbmNlT3BlcmF0b3JcIjpcImVtYmVkZGluZ0N1c3RvbUVudGl0eVwifV19In1dfV19</embeddedwidget></span></span></h4>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX3J1aGYzdDl4dHBjdDl2ZTdzNW5vMHpiNTciLCJ3aWRnZXRUeXBlIjoiY2YucGxhdGZvcm0ubnVtYmVyT2ZTZWFyY2hSZXN1bHRzIiwicHJvcGVydGllcyI6W3sibmFtZSI6InNlYXJjaCIsInZhbHVlcyI6W3sic3RyaW5nIjoie1wiZmlsdGVyc1wiOlt7XCJ0eXBlc1wiOltcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLmZlYXR1cmVcIl19LHtcImN1c3RvbU91dGdvaW5nU3ViU2VhcmNoXCI6XCJjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5jYXBhYmlsaXR5XCIsXCJzZWFyY2hcIjp7XCJmaWx0ZXJzXCI6W3tcImNvbnRlbnRUeXBlc1wiOltcInBhZ2VcIl19LHtcInR5cGVzXCI6W1wiY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUuY2FwYWJpbGl0eVwiXX0se1wicmVsYXRpdmVDdXN0b21SZWZlcmVuY2VcIjpcImNmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnNvbHV0aW9uLnJlZmVyZW5jZVwiLFwicmVmZXJlbmNlT3BlcmF0b3JcIjpcImVtYmVkZGluZ0N1c3RvbUVudGl0eVwifV19fV19In1dfV19</embeddedwidget></span></span></h4>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center\">\n\t\t\t<h5><span style=\"color: rgb(61, 143, 140)\">ARTs</span></h5>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center\">\n\t\t\t<h5><span style=\"color: rgb(61, 143, 140)\">Teams</span></h5>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center\">\n\t\t\t<h5><span style=\"color: rgb(61, 143, 140)\">Capabilities</span></h5>\n\t\t\t</td>\n\t\t\t<td style=\"text-align: center; width: 127px\">\n\t\t\t<h5><span style=\"color: rgb(61, 143, 140)\">Features</span></h5>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>"
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 180.0
+                                    },
+                                    {
+                                        "name": "localizedWidgetTitle",
+                                        "value": {
+                                            "de": "Statistik",
+                                            "en": "Statistics"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "proportion": 4,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.richString",
+                                "attributes": [
+                                    {
+                                        "name": "content",
+                                        "value": "<p><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkXzNhNnBkNmx4bnFubjUzN3VwZjMzOG9kM3oiLCJ3aWRnZXRUeXBlIjoiY2YucGxhdGZvcm0uc2luZ2xlQXR0cmlidXRlIiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLnBsYXRmb3JtLmluUGxhY2VFZGl0aW5nIiwidmFsdWVzIjpbeyJib29sZWFuIjp0cnVlfV19LHsibmFtZSI6ImNmLnBsYXRmb3JtLnF1b3RlZEF0dHJpYnV0ZU5hbWUiLCJ2YWx1ZXMiOlt7InN0cmluZyI6IidjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5jdXJyZW50UGknIn1dfSx7Im5hbWUiOiJjZi5wbGF0Zm9ybS5yZWxvYWRBZnRlckNoYW5nZSIsInZhbHVlcyI6W3siYm9vbGVhbiI6ZmFsc2V9XX0seyJuYW1lIjoiY2YucGxhdGZvcm0uc2luZ2xlQ29sdW1uIiwidmFsdWVzIjpbeyJib29sZWFuIjp0cnVlfV19LHsibmFtZSI6ImNmLnBsYXRmb3JtLnVzZVBhcmVudCIsInZhbHVlcyI6W3siYm9vbGVhbiI6ZmFsc2V9XX0seyJuYW1lIjoiY2YucGxhdGZvcm0ud2l0aExhYmVsIiwidmFsdWVzIjpbeyJib29sZWFuIjp0cnVlfV19LHsibmFtZSI6ImNmLnBsYXRmb3JtLndpdGhWYWx1ZSIsInZhbHVlcyI6W3siYm9vbGVhbiI6dHJ1ZX1dfV19</embeddedwidget></p>\n\n<div class=\"current-pi\">\n<div class=\"cplace-ckeditor-img-full-maxwidth\" style=\"background-color: rgb(119, 222, 166); border-radius: 4px; border: 1px solid transparent; color: rgb(60, 118, 61); font-size: 14px; margin-bottom: 20px; padding: 10px; text-align: center\"><span style=\"color: rgb(0, 0, 0)\"><strong><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkX2x6cWNoYzhxMmJzY3c5bnFuZGw5MDl0bGMiLCJ3aWRnZXRUeXBlIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0IiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5zY3JpcHQiLCJ2YWx1ZXMiOlt7InN0cmluZyI6IntcInZlcnNpb25cIjoxLFwic2NyaXB0XCI6XCJjcGxhY2Uuc2V0TG9nTmFtZSgnQ3VycmVudCBQSScpO1xcblwvXC9Db25maWd1cmF0aW9uc1xcbmNvbnN0IFBJX0RBU0hCT0FSRCA9IHtcXG4gICAgVFlQRTonY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUuY3VycmVudFBpRGFzaGJvYXJkJyxcXG4gICAgQVRUUjp7XFxuICAgICAgUEFSRU5UOidjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5wYXJlbnQnXFxuICAgIH1cXG4gIH1cXG4gIFxcbiAgbGV0IGZpbmFsbGluaz0nJztcXG4gIGxldCBsaW5rLCBuYW1lO1xcbiAgbGV0IHBpRGFzaGJvYXJkU2VhcmNoID0gbmV3IFNlYXJjaCgpXFxuICAgIC5hZGQoRmlsdGVycy5zcGFjZShlbWJlZGRpbmdQYWdlLmdldFNwYWNlSWQoKSkpXFxuICAgIC5hZGQoRmlsdGVycy50eXBlKFBJX0RBU0hCT0FSRC5UWVBFKSlcXG4gICAgLmFkZChGaWx0ZXJzLmN1c3RvbUF0dHJpYnV0ZU5vbmVtcHR5KFBJX0RBU0hCT0FSRC5BVFRSLlBBUkVOVCkpXFxuICAgIC5maW5kQWxsUGFnZXMoKTtcXG5cXG5sZXQgcmVzdWx0ID0gSXRlcmFibGVzLmdldEZpcnN0KHBpRGFzaGJvYXJkU2VhcmNoLCBudWxsKTtcXG5cXG5pZiAocmVzdWx0KSB7XFxuICAgIGxpbmsgPSByZXN1bHQuZ2V0VXJsKCk7XFxuICAgIG5hbWUgPSByZXN1bHQuZ2V0TmFtZSgpO1xcbn1cXG4gIFxcbnJldHVybiAnPGEgaHJlZj1cXFwiJytsaW5rKydcXFwiY2xhc3M9XFxcImN1cnJlbnQtY29sb3JcXFwiPk9wZW4gQ3VycmVudCBQSSBEYXNoYm9hcmQ8XC9hPic7XCIsXCJ1cGdyYWRlQWNrXCI6dHJ1ZSxcImRlc2NyaXB0aW9uXCI6XCJcIn0ifV19XX0</embeddedwidget></strong></span></div>\n</div>"
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 230.0
+                                    },
+                                    {
+                                        "name": "localizedWidgetTitle",
+                                        "value": {
+                                            "de": "Laufendes PI",
+                                            "en": "Current PI"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "proportion": 8,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.cplace.visualizations.scriptingHighcharts",
+                                "attributes": [
+                                    {
+                                        "name": "cf.cplace.visualization.dataSource",
+                                        "value": "search"
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.script",
+                                        "value": {
+                                            "version": 1,
+                                            "script": "/**\n * HIGHCHART\n * @customType cf.cplace.solution.safe.solution\n * @layout default layout\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.0\n * @description Displays the PI statistics\n */\n\n/**\n * Identifier: highchart-programIncrement-progress\n * Type of chart: multi pie chart\n * Type of search pages: cf.cplace.solution.safe.team, cf.cplace.solution.safe.story\n * Functionality: visualizes different kinds of kpis\n *\n * INSTRUCTIONS TO ADD CHARTS\n * 1. Increase TOTAL_NUMBER_OF_KPIS +1\n * 2. Define Following Values\n *      - CX_TITLE\n *      - CX_ACTUAL\n *      - CX_ACTUAL_PERCENTAGE\n *      - CX_DISPLAY_NUMBER\n *      - CX_DISPLAY_TEXT\n *      - CX_COLOR\n * 3. Create chart\n *      - createChart(CX_TITLE, CX_ACTUAL_PERCENTAGE, CX_DISPLAY_NUMBER, CX_DISPLAY_TEXT, CX_COLOR) {\n *\n *\n * @author Lukas Scheiring (cF)\n * Last edited: 18.08.2022\n */\n\n//--------------------------------------------------------------------------------------//\n//                                       LOG AND DEBUG                                  //\n//--------------------------------------------------------------------------------------//\nconst DEBUG = false;\ncplace.setLogName(\"highchart-programStartPage-statistics\");\n\n//--------------------------------------------------------------------------------------//\n//                                       CONFIGURATION                                  //\n//--------------------------------------------------------------------------------------//\n\n//CHART COLOURS\nconst COLOURS = {\n    TEXT_COLOR: \"#003653\",\n    BACKGROUND_COLOR: \"#ffffff\",\n    GREY: \"gray\",\n    RED: \"#f30000\",\n    DARK_RED: \"#9e0000\",\n    YELLOW: \"#ffc700\",\n    GREEN: \"#5ab500\",\n    BLUE: \"#A6CAD8\",\n};\n\n//CHART SETTINGS\nconst TOTAL_NUMBER_OF_KPIS = 5;\nconst Y_POSITION = \"40%\";\n\n//LANGUAGE SETTINGS\nconst NAMINGS = {\n    de: {\n        CHART_TITLE: \"\",\n    },\n    en: {\n        CHART_TITLE: \"\",\n    },\n};\n\n//PLACEHOLDER\nconst PROGRAM_INCREMENT = /** @type {const} */ ({\n    TYPE: \"cf.cplace.solution.safe.programIncrement\",\n    ATTR: {\n        TITLE: \"cf.cplace.solution.safe.title\",\n        SOLUTION: \"cf.cplace.solution.safe.solution\",\n        START_DATE: \"cf.cplace.solution.safe.startDate\",\n        END_DATE: \"cf.cplace.solution.safe.endDate\",\n        PREDECESSOR: \"cf.cplace.solution.safe.predecessor\",\n        PERIOD_STATUS: \"cf.cplace.solution.safe.periodStatus\",\n        CAPACITY: \"cf.cplace.solution.safe.capacity\"\n    },\n});\n\nconst CAPABILITY = /** @type {const} */ ({\n    TYPE: \"cf.cplace.solution.safe.capability\",\n    ATTR: {\n        ACTUAL_START_DATE: \"cf.cplace.solution.safe.actualStartDate\",\n        ACTUAL_END_DATE: \"cf.cplace.solution.safe.actualEndDate\",\n        PROGRAM_INCREMENT: \"cf.cplace.solution.safe.programIncrement\",\n        STATE: \"cf.cplace.solution.safe.state\"\n    },\n    ENUM: {\n        STATE: {\n            DONE: \"#85 - Done\"\n        }\n    }\n});\n\nconst CONFIDENCE_VOTE = /** @type {const} */ ({\n    TYPE: \"cf.cplace.solution.safe.confidenceVote\",\n    ATTR: {\n        PROGRAMM_INCREMENT: \"cf.cplace.solution.safe.confidenceVote.PI\",\n        RESULT: \"cf.cplace.solution.safe.confidenceVote.result\",\n        ONE_FINGER: \"cf.cplace.solution.safe.confidenceVote.oneFinger\",\n        TWO_FINGERS: \"cf.cplace.solution.safe.confidenceVote.twoFingers\",\n        THREE_FINGERS: \"cf.cplace.solution.safe.confidenceVote.threeFingers\",\n        FOUR_FINGERS: \"cf.cplace.solution.safe.confidenceVote.fourFingers\",\n        FIVE_FINGERS: \"cf.cplace.solution.safe.confidenceVote.fiveFingers\",\n    },\n});\n\n//--------------------------------------------------------------------------------------//\n//                                       INITIALIZATION                                 //\n//--------------------------------------------------------------------------------------//\nlog(\"Start...\");\nlet currentUser = cplace.utils().getCurrentUser();\nconst userLanguage = currentUser.getUserLanguage();\n\n/** @type {Page<'cf.cplace.solution.safe.solution'>} */\nlet solution = embeddingPage;\n\nlet programIncrement = solution.get(\"cf.cplace.solution.safe.currentPi\");\n\nlet chartIndex = 0;\n\n//Container\nlet capabilities = [];\n/** @type {Page<'cf.cplace.solution.safe.confidenceVote'> | undefined} */\nlet confidenceVote;\n\nlet series = [];\nlet yAxis = [];\nlet pane = [];\n\n//Dates\nlet piStartDate = programIncrement.get(PROGRAM_INCREMENT.ATTR.START_DATE).withTimeAtStartOfDay();\nlet piEndDate = programIncrement.get(PROGRAM_INCREMENT.ATTR.END_DATE).withTimeAtStartOfDay();\nlet today = new DateTime().withTimeAtStartOfDay();\n\n//KPIs\nlet totalDaysOfPI = Days.daysBetween(piStartDate, piEndDate).getDays();\nlet passedDaysOfPI = getPassedDays(piStartDate, piEndDate, today, totalDaysOfPI);\n\nlet totalCapacity = programIncrement.get(PROGRAM_INCREMENT.ATTR.CAPACITY);\nlet velocityOfLastPI = 0;\nlet totalCapabilities = 0;\nlet capabilitiesDone = 0;\nlet confidenceVoteAverage = 0;\n\n//--------------------------------------------------------------------------------------//\n//                                       PROCESSING STAGE                               //\n//--------------------------------------------------------------------------------------//\n\n// Group pages\ncplace.each(pages, (page) => {\n    switch (page.getBuiltinFeatureValue(\"customType\")) {\n        case CAPABILITY.TYPE:\n            capabilities.push(page);\n            break;\n        case CONFIDENCE_VOTE.TYPE:\n            confidenceVote = page;\n            break;\n        default:\n            break;\n    }\n});\n\ntotalCapabilities = capabilities.length\nvelocityOfLastPI = calculateVelocityOfLastPi(programIncrement);\nconfidenceVoteAverage = calculateConfidenceVoteAverage(confidenceVote);\n\ncapabilitiesDone = capabilities.filter(\n    (/** @type {Page<'cf.cplace.solution.safe.capability'>} */ c) =>\n        c.get(CAPABILITY.ATTR.STATE) === CAPABILITY.ENUM.STATE.DONE\n).length;\n\n//--------------------------------------------------------------------------------------//\n//                                       KPIs & CHART                                   //\n//--------------------------------------------------------------------------------------//\n\n//KPI 1 - Story Points done\nconst C1_TITLE = \"Done Capabilities Last PI\";\nconst C1_ACTUAL_VALUE = velocityOfLastPI || 0;\nconst C1_DISPLAY_NUMBER = C1_ACTUAL_VALUE;\nconst C1_DISPLAY_TEXT = \"<b>VELOCITY LAST PI</b><br>\";\nconst C1_COLOR = COLOURS.GREEN;\n\ncreateChart(C1_TITLE, C1_ACTUAL_VALUE, C1_DISPLAY_NUMBER, C1_DISPLAY_TEXT, C1_COLOR);\n\n// KPI 2 - Done Capabilities\nconst C2_TITLE = \"Done Capabilities\";\nconst C2_ACTUAL_PERCENTAGE = Math.round((capabilitiesDone / totalCapabilities) * 100) || 0;\nconst C2_DISPLAY_NUMBER = C2_ACTUAL_PERCENTAGE + \"%\";\nconst C2_DISPLAY_TEXT = \"<b>DONE CAPABILITIES</b><br>\" + capabilitiesDone + \"/\" + totalCapabilities;\nconst C2_COLOR = COLOURS.GREEN;\n\ncreateChart(C2_TITLE, C2_ACTUAL_PERCENTAGE, C2_DISPLAY_NUMBER, C2_DISPLAY_TEXT, C2_COLOR);\n\n// KPI 3 - Load vs Capacity\nconst C3_TITLE = \"Load vs. Capacity\";\nconst C3_ACTUAL_PERCENTAGE = (totalCapacity && Math.round((totalCapabilities / totalCapacity) * 100)) || 0;\nconst C3_DISPLAY_NUMBER = C3_ACTUAL_PERCENTAGE + \"%\";\nconst C3_DISPLAY_TEXT = \"<b>LOAD VS. CAPACITY</b><br>\" + totalCapabilities + \"/\" + totalCapacity;\n\nlet c3_color = COLOURS.GREEN;\nif (Math.round((totalCapabilities / totalCapacity) * 100) >= 90) {\n    c3_color = COLOURS.YELLOW;\n    if (Math.round((totalCapabilities / totalCapacity) * 100) > 100) {\n        c3_color = COLOURS.RED;\n    }\n}\n\ncreateChart(C3_TITLE, C3_ACTUAL_PERCENTAGE, C3_DISPLAY_NUMBER, C3_DISPLAY_TEXT, c3_color);\n\n// KPI 4 - passed days\nconst C4_TITLE = \"Days passed\";\nconst C4_ACTUAL_PERCENTAGE = Math.round((passedDaysOfPI / totalDaysOfPI) * 100) || 0;\nconst C4_DISPLAY_NUMBER = C4_ACTUAL_PERCENTAGE + \"%\";\nconst C4_DISPLAY_TEXT = \"<b>DAYS PASSED</b><br>\" + passedDaysOfPI + \"/\" + totalDaysOfPI;\nconst C4_COLOR = COLOURS.GREEN;\n\ncreateChart(C4_TITLE, C4_ACTUAL_PERCENTAGE, C4_DISPLAY_NUMBER, C4_DISPLAY_TEXT, C4_COLOR);\n\n// KPI 5 - Confidence Vote\nconst C5_TITLE = \"Average Confidence Vote\";\nconst C5_ACTUAL_PERCENTAGE = Math.round((confidenceVoteAverage / 5) * 100) || 0;\nconst C5_DISPLAY_NUMBER = confidenceVoteAverage.toFixed(1);\nconst C5_DISPLAY_TEXT = \"<b>AVG. CONFIDENCE VOTE</b><br>\";\nconst C5_COLOR = getConvidenceVoteColors(confidenceVoteAverage);\n\ncreateChart(C5_TITLE, C5_ACTUAL_PERCENTAGE, C5_DISPLAY_NUMBER, C5_DISPLAY_TEXT, C5_COLOR);\n\nlog(\"End...\");\n\n// @ts-ignore\nreturn {\n    chart: {\n        type: \"solidgauge\",\n    },\n\n    title: {\n        text: NAMINGS[userLanguage].CHART_TITLE,\n    },\n    series: series,\n    yAxis: yAxis,\n    pane: pane,\n    tooltip: {\n        enabled: false,\n    },\n    plotOptions: {\n        solidgauge: {\n            enableMouseTracking: false,\n        },\n    },\n};\n\n//--------------------------------------------------------------------------------------//\n//                                       BUSINESS FUNCTIONS                             //\n//--------------------------------------------------------------------------------------//\n\nfunction createChart(title, actualRel, displayNumber, displayText, color) {\n    series.push(getSeriesObject(title, actualRel, displayNumber, chartIndex, color));\n    yAxis.push(getYAxisObject(displayText, chartIndex, 0, 100));\n    pane.push(getPaneObject(getXAxisPosition(chartIndex), Y_POSITION));\n    chartIndex++;\n}\n\nfunction getXAxisPosition(kpiIndex) {\n    return (120 * (kpiIndex + 1)) / (TOTAL_NUMBER_OF_KPIS + 1) - 10 + \"%\";\n}\n\nfunction getPassedDays(piStartDate, piEndDate, today, totalDaysOfPI) {\n    if (today.isBefore(piStartDate)) {\n        return 0;\n    }\n    if (piEndDate.isBefore(today)) {\n        return totalDaysOfPI;\n    }\n    // @ts-ignore\n    return Days.daysBetween(piStartDate, today).getDays();\n}\n\nfunction getSeriesObject(title, actual, label, index, color) {\n    return {\n        name: title,\n        data: [\n            {\n                name: title,\n                color: color,\n                y: actual,\n                innerRadius: \"80%\",\n                radius: \"100%\",\n                dataLabels: {\n                    format: '<span style=\"font-size:24px;font-wight: bold\">' + label + \"</span>\",\n                    borderWidth: 0,\n                    color: COLOURS.GREY,\n                    verticalAlign: \"middle\",\n                    useHTML: true,\n                },\n            },\n        ],\n        yAxis: index,\n    };\n}\n\nfunction getYAxisObject(axisTitle, index, min, max) {\n    return {\n        min: min,\n        max: max,\n        pane: index,\n        title: {\n            text: axisTitle,\n            useHTML: true,\n            y: 110,\n        },\n        labels: {\n            enabled: false,\n        },\n        /*stops: [\n            [0.1, COLOURS.GREEN], // green\n            [0.9, COLOURS.YELLOW], // yellow\n            [0.99, COLOURS.RED] // red\n        ],*/\n        lineWidth: 0,\n        tickWidth: 0,\n        tickAmount: 0,\n        minorTickWidth: 0,\n    };\n}\n\nfunction getPaneObject(xPosition, yPosition) {\n    return {\n        center: [xPosition, yPosition],\n        size: \"50%\",\n        startAngle: 0,\n        endAngle: 360,\n        background: {\n            backgroundColor: \"#EEE\",\n            borderColor: null,\n            innerRadius: \"80%\",\n            outerRadius: \"100%\",\n            shape: \"arc\",\n        },\n    };\n}\n\nfunction getConvidenceVoteColors(value) {\n    if (value <= 2) {\n        return COLOURS.RED;\n    } else if (value <= 3) {\n        return COLOURS.YELLOW;\n    } else {\n        return COLOURS.GREEN;\n    }\n}\n\n/**\n * Calculates the average confidence vote\n * @param {Page<'cf.cplace.solution.safe.confidenceVote'> | undefined | null} confidenceVote\n */\nfunction calculateConfidenceVoteAverage(confidenceVote) {\n    if (!confidenceVote) {\n        return 0;\n    }\n    const oneFinger = confidenceVote.get(CONFIDENCE_VOTE.ATTR.ONE_FINGER);\n    const twoFingers = confidenceVote.get(CONFIDENCE_VOTE.ATTR.TWO_FINGERS);\n    const threeFingers = confidenceVote.get(CONFIDENCE_VOTE.ATTR.THREE_FINGERS);\n    const fourFingers = confidenceVote.get(CONFIDENCE_VOTE.ATTR.FOUR_FINGERS);\n    const fiveFingers = confidenceVote.get(CONFIDENCE_VOTE.ATTR.FIVE_FINGERS);\n    const totalFingers = oneFinger + 2 * twoFingers + 3 * threeFingers + 4 * fourFingers + 5 * fiveFingers;\n    const numberOfConvidenceVotes = oneFinger + twoFingers + threeFingers + fourFingers + fiveFingers;\n\n    return totalFingers / numberOfConvidenceVotes;\n}\n\n/**\n * Calculate the velocity of last PI as number of capabilities that were done in the last PI\n * @param {Page<'cf.cplace.solution.safe.programIncrement'>} currentPi\n */\nfunction calculateVelocityOfLastPi(currentPi) {\n    let lastPI = currentPi.get(PROGRAM_INCREMENT.ATTR.PREDECESSOR);\n    if (!lastPI) {\n        return 0;\n    }\n    const velocity = Array.from(lastPI.getIncomingPages(CAPABILITY.TYPE, CAPABILITY.ATTR.PROGRAM_INCREMENT)).filter(\n        (/** @type {Page<'cf.cplace.solution.safe.capability'>} */ c) =>\n            c.get(CAPABILITY.ATTR.STATE) === CAPABILITY.ENUM.STATE.DONE\n    ).length;\n    return velocity;\n}\n// //--------------------------------------------------------------------------------------//\n// //                                       HELPER FUNCTIONS                               //\n// //--------------------------------------------------------------------------------------//\n\n/**\n * Log to cplace\n * @param {any} text\n */\nfunction log(text) {\n    if (!DEBUG) {\n        return;\n    }\n    let logOutput = typeof text !== \"string\" ? JSON.stringify(text) : text;\n\n    cplace.log(logOutput);\n}",
+                                            "upgradeAck": true,
+                                            "description": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "or": [
+                                                        {
+                                                            "and": [
+                                                                {
+                                                                    "relativeSpace": "true"
+                                                                },
+                                                                {
+                                                                    "types": [
+                                                                        "cf.cplace.solution.safe.capability"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                                                                    "referenceOperator": "ca_cf.cplace.solution.safe.currentPi"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "and": [
+                                                                {
+                                                                    "relativeSpace": "true"
+                                                                },
+                                                                {
+                                                                    "types": [
+                                                                        "cf.cplace.solution.safe.confidenceVote"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "relativeCustomReference": "cf.cplace.solution.safe.confidenceVote.PI",
+                                                                    "referenceOperator": "ca_cf.cplace.solution.safe.currentPi"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.showFrame",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 230.0
+                                    },
+                                    {
+                                        "name": "sortOrder",
+                                        "value": "Aufsteigend"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "value": {
+                                            "de": "Current PI Statistics",
+                                            "en": "Current PI Statistics"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "proportion": 12,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.cplace.visualizations.scriptingHighcharts",
+                                "attributes": [
+                                    {
+                                        "name": "cf.cplace.visualization.dataSource",
+                                        "value": "search"
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.script",
+                                        "value": {
+                                            "version": 1,
+                                            "script": "/**\n * HIGHCHART\n * @customType cf.cplace.solution.safe.solution\n * @layout default layout\n * @author Christopher W\u00f6lfle <christopher.woelfle@cplace.com>\n * @version 1.0\n * @description Displays the timeline with Programm Increments, Safe Events and Safe Milestones. Chart is zoomable and draggable\n */\n\n// set the distinguishing log name\ncplace.setLogName(\"Highcharts - Timeline Overview\");\n\n/***** Start configuration *****/\nconst chartBackgroundColor = \"#FFFFFF\";\nconst lineColor = \"#303038\";\n\nconst piColor = \"#dddddd\";\nconst safeMilestoneColor = \"#3D8F8C\";\nconst eventColor = \"#366C81\";\n\nconst milestonePlotBandColor = \"#E2F3F2\";\nconst eventPlotBandColor = \"#E2EEF3\";\nconst todayPlotline = \"lightgrey\";\n\nconst showMonthsBeforeToday = 3;\nconst showMonthsAfterToday = 9;\n/***** End configuration *****/\n\nconst MILESTONE = {\n    TYPE: \"cf.milestone\",\n    ATTR: {\n        SCHEDULE: \"containingSchedule\",\n        DATE: \"date\",\n        FEATURE_DEPENDENCY: \"cf.cplace.solution.safe.dependency\",\n        TASKCLASS: \"activityClass\",\n    },\n};\nconst FEATURE = {\n    TYPE: \"cf.cplace.solution.safe.feature\",\n    ATTR: {\n        PROGRAM: \"cf.cplace.solution.safe.program\",\n    },\n};\nconst SCHEDULE = {\n    TYPE: \"cf.schedule\",\n    ATTR: {},\n};\nconst TASK_CLASS = {\n    TYPE: \"cf.activityClass\",\n    ATTR: {\n        COLOR: \"barColor\",\n        BORDERCOLOR: \"borderColor\",\n        SHAPE: \"milestoneShape\",\n    },\n};\nconst SAFE_MILESTONE = {\n    TYPE: \"cf.cplace.solution.safe.safeMilestone\",\n    ATTR: {\n        DATE: \"cf.cplace.solution.safe.date\",\n    },\n};\nconst PI = {\n    TYPE: \"cf.cplace.solution.safe.programIncrement\",\n    ATTR: {\n        START: \"cf.cplace.solution.safe.startDate\",\n        END: \"cf.cplace.solution.safe.endDate\",\n    },\n};\nconst EVENT = {\n    TYPE: \"cf.cplace.solution.safe.event\",\n    ATTR: {\n        START_DATE: \"cf.cplace.solution.safe.startDate\",\n        END_DATE: \"cf.cplace.solution.safe.endDate\",\n        SOLUTION: \"cf.cplace.solution.safe.solution\",\n    },\n};\n\nfunction main() {\n    /** @type {ChartContext} */\n    const context = {\n        today: new Date(),\n        start: getStartDate(showMonthsBeforeToday),\n        end: getEndDate(showMonthsAfterToday),\n        solution: embeddingPage,\n        schedules: [],\n        programIncrements: [],\n        events: [],\n        safeMilestones: [],\n        series: [],\n        plotlines: [],\n        categories: [\"<b>Program Increments</b>\", \"<b>Events</b>\", \"<b>SAFe Milestones</b>\"],\n        yIndex: 0,\n    };\n\n    categorizeData(pages, context);\n    createPiSeries(context);\n    createEventSeries(context);\n    createMilestoneSeries(context);\n    //create plotline between SAFe parts and schedules\n    //ctx.plotLines.push(createPlotline(yIndex - 0.5, 1.25));\n    createScheduleSeries(context);\n\n    return createChartConfig(context);\n}\n\n/**\n * Sort pages by their type and them to the context\n * @param {Page[]} pages\n * @param {ChartContext} ctx\n */\nfunction categorizeData(pages, ctx) {\n    cplace.each(pages, (page) => {\n        let type = page.getBuiltinFeatureValue(\"customType\");\n        if (type === SCHEDULE.TYPE) {\n            ctx.schedules.push(page);\n        } else if (type === PI.TYPE) {\n            ctx.programIncrements.push(page);\n        } else if (type === SAFE_MILESTONE.TYPE) {\n            ctx.safeMilestones.push(page);\n        } else if (type === EVENT.TYPE) {\n            ctx.events.push(page);\n        }\n    });\n}\n\n/**\n * Create pi series\n * @param {ChartContext} ctx\n */\nfunction createPiSeries(ctx) {\n    const piData = [];\n    cplace.each(ctx.programIncrements, (pi) => {\n        piData.push(createDataItem(pi.getName(), pi.get(PI.ATTR.START), pi.get(PI.ATTR.END), ctx.yIndex, piColor));\n    });\n    ctx.yIndex++;\n    ctx.series.push({\n        name: \"Program Increments\",\n        showInLegend: false,\n          tooltip: {\n            headerFormat: \"\",\n            pointFormat: \"<b>{point.name}</b><br/>Start: {point.x: %Y-%m-%d}<br/> End: {point.x2: %Y-%m-%d}\",\n            useHTML: true,\n        },\n        data: piData,\n        dataLabels: {\n            enabled: true,\n            format: \"<b>{point.name}</b>\",\n        },\n        states: {\n            inactive: {\n                opacity: 1,\n            },\n        },\n    });\n    return piData;\n}\n\n/**\n * Create event series\n * @param {ChartContext} ctx\n */\nfunction createEventSeries(ctx) {\n    let eventData = [];\n    cplace.each(ctx.events, (event) => {\n        eventData.push(\n            createDataItem(\n                event.getName(),\n                event.get(EVENT.ATTR.START_DATE),\n                event.get(EVENT.ATTR.END_DATE),\n                ctx.yIndex,\n                eventColor\n            )\n        );\n    });\n    ctx.yIndex++;\n    ctx.series.push({\n        name: \"Events\",\n        showInLegend: false,\n          tooltip: {\n            headerFormat: \"\",\n            pointFormat: \"<b>{point.name}</b><br/>Start: {point.x: %Y-%m-%d}<br/> End: {point.x2: %Y-%m-%d}\",\n            useHTML: true,\n        },\n        data: eventData,\n        dataLabels: {\n            enabled: true,\n            format: \"<b>{point.name}</b>\",\n        },\n        states: {\n            inactive: {\n                opacity: 1,\n            },\n        },\n    });\n}\n\n/**\n * Create safe milestone series\n * @param {ChartContext} ctx\n */\nfunction createMilestoneSeries(ctx) {\n    let safeMilestoneData = [];\n    cplace.each(ctx.safeMilestones, (safeMilestone) => {\n        safeMilestoneData.push(\n            createMilestoneDataItem(\n                safeMilestone.getName(),\n                safeMilestone.get(SAFE_MILESTONE.ATTR.DATE),\n                ctx.yIndex,\n                safeMilestoneColor,\n                safeMilestoneColor\n            )\n        );\n    });\n    ctx.yIndex++;\n    ctx.series.push(createMilestoneSerie(\"SAFe Milestones\", safeMilestoneData));\n}\n/**\n * Create Chart configuration\n * @param {ChartContext} ctx\n * @returns\n */\nfunction createChartConfig(ctx) {\n    return {\n        chart: {\n            type: \"xrange\",\n            backgroundColor: chartBackgroundColor,\n            panning: true,\n            panKey: \"shift\",\n            zoomType: \"x\",\n        },\n        title: {\n            text: \"\",\n        },\n        yAxis: {\n            title: {\n                text: \"\",\n            },\n            categories: ctx.categories,\n            reversed: true,\n            type: \"category\",\n            plotBands: [\n                {\n                    color: eventPlotBandColor,\n                    from: 0.5,\n                    to: 1.5,\n                    borderColor: \"white\",\n                    borderWidth: 2,\n                    zIndex: 0,\n                },\n                {\n                    color: milestonePlotBandColor,\n                    from: 1.5,\n                    to: 2.5,\n                    borderColor: \"white\",\n                    borderWidth: 2,\n                    zIndex: 0,\n                },\n            ],\n        },\n        xAxis: {\n            type: \"datetime\",\n            min: Date.UTC(ctx.start.getFullYear(), ctx.start.getMonth(), ctx.start.getDate(), 0, 0, 0, 0),\n            max: Date.UTC(ctx.end.getFullYear(), ctx.end.getMonth(), ctx.end.getDate(), 23, 59, 59, 59),\n            plotLines: [\n                {\n                    dashStyle: \"dash\",\n                    color: todayPlotline,\n                    width: 2,\n                    value: Date.UTC(ctx.today.getFullYear(), ctx.today.getMonth(), ctx.today.getDate(), 0, 0, 0, 0),\n                    zIndex: 1,\n                },\n                ...ctx.plotlines,\n            ],\n        },\n        tooltip: {\n            enabled: true,\n        },\n        series: ctx.series,\n    };\n}\n\n/**\n * Create schedule series\n * @param {ChartContext} ctx\n */\nfunction createScheduleSeries(ctx) {\n    cplace.each(ctx.schedules, (schedule) => {\n        let relevantSchedule = false;\n        let scheduleData = [];\n        let milestones = schedule.getIncomingPages(MILESTONE.TYPE, MILESTONE.ATTR.SCHEDULE);\n        cplace.each(milestones, (milestone) => {\n            let featureDependency = milestone.get(MILESTONE.ATTR.FEATURE_DEPENDENCY);\n            let isProgramRelevant = false;\n            cplace.each(featureDependency, (feature) => {\n                let featureProgram = feature.get(FEATURE.ATTR.PROGRAM);\n                if (featureProgram && featureProgram.getId() === ctx.solution.getId()) {\n                    isProgramRelevant = true;\n                }\n            });\n            if (isProgramRelevant) {\n                relevantSchedule = true;\n                scheduleData.push(createScheduleMilestoneDataItem(milestone, ctx.yIndex));\n            }\n        });\n        if (relevantSchedule) {\n            ctx.categories.push(createCategory(schedule));\n            ctx.series.push(createMilestoneSerieSchedule(schedule.getName(), scheduleData));\n            ctx.yIndex++;\n        }\n    });\n}\n\n//FUNCTIONS\nfunction createDataItem(name, start, end, y, color) {\n    let startDate = new Date(start);\n    let endDate = new Date(end);\n    return {\n        name: name,\n        x: Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 0, 0, 0, 0),\n        x2: Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), 23, 59, 59, 99),\n        y: y,\n        color: color,\n    };\n}\n\nfunction getMilestoneShape(milestoneShape) {\n    if (milestoneShape === \"Diamond\") return \"diamond\";\n    if (milestoneShape === \"Arrow Up\") return \"diamond\";\n    if (milestoneShape === \"Arrow Down\") return \"diamond\";\n    if (milestoneShape === \"Triangle Up\") return \"triangle\";\n    if (milestoneShape === \"Triangle Down\") return \"triangle-down\";\n    if (milestoneShape === \"Triangle Left\") return \"triangle\";\n    if (milestoneShape === \"Triangle Right\") return \"triangle\";\n    if (milestoneShape === \"Circle\") return \"circle\";\n    if (milestoneShape === \"Square\") return \"square\";\n    if (milestoneShape === \"Star\") return \"diamond\";\n    if (milestoneShape === \"Ramp Down\") return \"diamond\";\n    if (milestoneShape === \"Ramp Up\") return \"diamond\";\n}\n\nfunction createMilestoneDataItem(name, date, y, color, borderColor) {\n    let milestoneDate = new Date(date);\n    return {\n        name: name,\n        x: Date.UTC(milestoneDate.getFullYear(), milestoneDate.getMonth(), milestoneDate.getDate(), 0, 0, 0, 0),\n        y: y,\n        marker: {\n            fillColor: color,\n            lineColor: borderColor,\n            lineWidth: 1,\n        },\n    };\n}\n\nfunction createScheduleMilestoneDataItem(milestone, y) {\n    let name = milestone.getName();\n    let milestoneDate = new Date(milestone.get(MILESTONE.ATTR.DATE));\n    let color = milestone.getOptional(MILESTONE.ATTR.TASKCLASS).get(TASK_CLASS.ATTR.COLOR);\n    let borderColor = milestone.getOptional(MILESTONE.ATTR.TASKCLASS).get(TASK_CLASS.ATTR.BORDERCOLOR);\n    let milestoneShape = getMilestoneShape(milestone.getOptional(MILESTONE.ATTR.TASKCLASS).get(TASK_CLASS.ATTR.SHAPE));\n    let features = milestone.get(MILESTONE.ATTR.FEATURE_DEPENDENCY);\n    let featureList = \"<b>Requested Features:</b>\";\n    cplace.each(features, (feature) => {\n        featureList = featureList + \"<br>\" + feature.getName();\n    });\n\n    return {\n        name: name,\n        x: Date.UTC(milestoneDate.getFullYear(), milestoneDate.getMonth(), milestoneDate.getDate(), 0, 0, 0, 0),\n        y: y,\n        features: featureList,\n        marker: {\n            fillColor: color,\n            lineColor: borderColor,\n            lineWidth: 1,\n            symbol: milestoneShape,\n        },\n    };\n}\n\nfunction createMilestoneSerie(name, dataSeries) {\n    return {\n        name: name,\n        type: \"scatter\",\n        //stickyTracking: false,\n        showInLegend: false,\n        marker: {\n            enabled: true,\n            symbol: \"diamond\",\n            lineWidth: 5,\n            radius: 12,\n        },\n        tooltip: {\n            headerFormat: \"<b>{point.key}</b><br>\",\n            pointFormat: \"{point.x: %Y-%m-%d}\",\n        },\n        data: dataSeries,\n        states: {\n            inactive: {\n                opacity: 1,\n            },\n        },\n    };\n}\n\nfunction createMilestoneSerieSchedule(name, dataSeries) {\n    return {\n        name: name,\n        type: \"scatter\",\n        //stickyTracking: false,\n        showInLegend: false,\n        marker: {\n            enabled: true,\n            symbol: \"diamond\",\n            lineWidth: 5,\n            radius: 12,\n        },\n        tooltip: {\n            useHTML: true,\n            headerFormat: \"<b>{point.key}</b><br>\",\n            pointFormat: \"{point.x: %Y-%m-%d}<br>{point.features}\",\n        },\n        data: dataSeries,\n        states: {\n            inactive: {\n                opacity: 1,\n            },\n        },\n    };\n}\n\nfunction createPlotline(value, width) {\n    return {\n        color: lineColor,\n        width: width,\n        value: value,\n        dashStyle: \"solid\",\n    };\n}\n\nfunction getStartDate(months) {\n    let today = new Date();\n    let startDate = today;\n    startDate.setMonth(today.getMonth() - months);\n    return startDate;\n}\n\nfunction getEndDate(months) {\n    let today = new Date();\n    let endDate = today;\n    endDate.setMonth(today.getMonth() + months);\n    return endDate;\n}\n\nfunction createCategory(object) {\n    let name = object.getName();\n    let url = object.getUrl();\n    return '<a href=\"' + url + '\">' + name + \"</a>\";\n}\n\n/**\n * Object containing context information for the chart.\n * @typedef {Object} ChartContext\n * @property {Date} today - The current date.\n * @property {Date} start - The start date for the chart.\n * @property {Date} end - The end date for the chart.\n * @property {Page} solution - The embeddingPage object representing the current solution.\n * @property {Page[]} schedules - An array of pages representing schedules.\n * @property {Page[]} programIncrements - An array of pages representing program increments.\n * @property {Page[]} events - An array of pages representing events.\n * @property {Page[]} safeMilestones - An array of pages representing SAFe milestones.\n * @property {any[]} series - An array of series\n * @property {any[]} plotlines - An array of plotlines\n * @property {string[]} categories - An array of categories\n * @property {number} yIndex - y-index\n */\n\n// @ts-ignore\nreturn main();",
+                                            "upgradeAck": true,
+                                            "description": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "or": [
+                                                        {
+                                                            "and": [
+                                                                {
+                                                                    "relativeSpace": "true"
+                                                                },
+                                                                {
+                                                                    "types": [
+                                                                        "cf.cplace.solution.safe.programIncrement"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                                                                    "referenceOperator": "embeddingCustomEntity"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "and": [
+                                                                {
+                                                                    "relativeSpace": "true"
+                                                                },
+                                                                {
+                                                                    "types": [
+                                                                        "cf.cplace.solution.safe.safeMilestone"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "and": [
+                                                                {
+                                                                    "relativeSpace": "true"
+                                                                },
+                                                                {
+                                                                    "types": [
+                                                                        "cf.cplace.solution.safe.event"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "relativeCustomReference": "cf.cplace.solution.safe.solution",
+                                                                    "referenceOperator": "embeddingCustomEntity"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.showFrame",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "cf.cplace.visualization.tableSelectionOnly",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 300.0
+                                    },
+                                    {
+                                        "name": "sortOrder",
+                                        "value": "Aufsteigend"
+                                    },
+                                    {
+                                        "name": "title",
+                                        "value": {
+                                            "en": "Timeline Overview",
+                                            "de": "Zeitplan \u00dcbersicht"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "widgetType": "cf.cplace.demoWidgets.demoRichString",
+                                "attributes": {
+                                    "name": "content",
+                                    "value": "r<p style=\"text-align: center\"><img alt=\"\" height=\"16\" src=\"/large-solution-safe/editor-icon/cplace-exclamation-circle.png\" title=\"\" width=\"16\">&nbsp;<strong>Zoom in on the chart by holding down the mouse and dragging a window around the area you want to see in more detail. Hold Shift to move forward or back in the timeline in the chart.</strong></p>"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "proportion": 6,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.embeddedSearchAsTable",
+                                "attributes": [
+                                    {
+                                        "name": "columns",
+                                        "value": [
+                                            {
+                                                "name": "'cf.cplace.solution.safe.description'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.capabilityType'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.state'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.program'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.wsjf'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.businessValue'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.timeCriticality'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.riskReduction'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.jobSize'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.capabilityowner'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.portfolioEpic'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.definitionOfReady'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.definitionOfDone'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.acceptanceCriteria'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.benefitHypothesis'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.conflictState'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.title'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.solution.reference'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.programIncrement'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualStartDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualEndDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.flowTime'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.solutionShortName'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedStart'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedEnd'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.iteration'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.features'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "readers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "content",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "createdAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "creator",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "customType",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputies",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputiesAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "entityMirrorStatus",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "hasSource",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "isShared",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "layoutName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "localizedName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifiedAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifier",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "owner",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "ownerIsDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "pageInPackageInclusion",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "readersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writersAreDefault",
+                                                "visible": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "groupOrder",
+                                        "value": "asc"
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 500.0
+                                    },
+                                    {
+                                        "name": "hideNames",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "hideTableLinks",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "relativeSpace": "true"
+                                                },
+                                                {
+                                                    "types": [
+                                                        "cf.cplace.solution.safe.capability"
+                                                    ]
+                                                },
+                                                {
+                                                    "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                                                    "referenceOperator": "embeddingCustomEntity"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "showNewButton",
+                                        "value": "Yes"
+                                    },
+                                    {
+                                        "name": "showTableActions",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableFooter",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableHeader",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "singleSpaced",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "title",
+                                        "value": {
+                                            "en": "Capabilities"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "proportion": 6,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.embeddedSearchAsTable",
+                                "attributes": [
+                                    {
+                                        "name": "columns",
+                                        "value": [
+                                            {
+                                                "name": "'cf.cplace.solution.safe.featureType'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.status'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.description'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.featureOwner'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.progress'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedStart'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedEnd'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.releaseDate'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.conflictState'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.wsjf'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.businessValue'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.timeCriticality'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.riskReduction'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.teams'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.storyPointsTotal'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.storyPointsDone'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "readers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "content",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "createdAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "creator",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "customType",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputies",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputiesAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "entityMirrorStatus",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "hasSource",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "isShared",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "layoutName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "localizedName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifiedAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifier",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "owner",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "ownerIsDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "pageInPackageInclusion",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "readersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.program'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.title'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.programIncrement'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.safeMilestone'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.capability'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.release'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.dependsOn'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.calculateDateConflicts'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.calculatedConflicts'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.acceptanceCriteria'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.benefitHypothesis'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.iterations'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.stories'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualStartDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualEndDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.flowTime'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.manualPrioritization'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesTotal'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesOpen'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesDone'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.periodStatus'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.requiresAssistenceOf'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.programKey'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.jobSize'",
+                                                "visible": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "connectedTableWidgetId",
+                                        "value": "_sy5scn4eq86ii5afxd4tmay8q"
+                                    },
+                                    {
+                                        "name": "groupOrder",
+                                        "value": "asc"
+                                    },
+                                    {
+                                        "name": "height",
+                                        "value": 500.0
+                                    },
+                                    {
+                                        "name": "hideNames",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "hideTableLinks",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "types": [
+                                                        "cf.cplace.solution.safe.feature"
+                                                    ]
+                                                },
+                                                {
+                                                    "relativeCustomReference": "cf.cplace.solution.safe.capability",
+                                                    "referenceOperator": "connectedTable"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "showNewButton",
+                                        "value": "Yes"
+                                    },
+                                    {
+                                        "name": "showTableActions",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableFooter",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableHeader",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "singleSpaced",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "title",
+                                        "value": {
+                                            "en": "Features of the Selected Capability",
+                                            "de": "Features der ausgew\u00e4hlten Capability"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "proportion": 12,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.embeddedSearchAsTable",
+                                "attributes": [
+                                    {
+                                        "name": "columns",
+                                        "value": [
+                                            {
+                                                "name": "'cf.cplace.solution.safe.title'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.storyPointsTotal'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.storyPointsDone'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesTotal'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesOpen'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.numberStoriesDone'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "readers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "content",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "createdAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "creator",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "customType",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputies",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputiesAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "entityMirrorStatus",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "hasSource",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "isShared",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "layoutName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "localizedName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifiedAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifier",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "owner",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "ownerIsDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "pageInPackageInclusion",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "readersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.program'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.dependsOn'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.status'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.progress'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.programIncrement'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedStart'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.plannedEnd'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.safeMilestone'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.capability'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.release'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.releaseDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.description'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.acceptanceCriteria'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.benefitHypothesis'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.conflictState'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.calculateDateConflicts'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.calculatedConflicts'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.wsjf'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.businessValue'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.timeCriticality'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.riskReduction'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.jobSize'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.programKey'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.featureType'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.teams'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.requiresAssistenceOf'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.periodStatus'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.iterations'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.stories'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.featureOwner'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.manualPrioritization'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualStartDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualEndDate'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.flowTime'",
+                                                "visible": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "groupOrder",
+                                        "value": "asc"
+                                    },
+                                    {
+                                        "name": "hideNames",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "hideTableLinks",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "types": [
+                                                        "cf.cplace.solution.safe.feature"
+                                                    ]
+                                                },
+                                                {
+                                                    "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                                                    "referenceOperator": "embeddingCustomEntity"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "showNewButton",
+                                        "value": "Yes"
+                                    },
+                                    {
+                                        "name": "showTableActions",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableFooter",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableHeader",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "singleSpaced",
+                                        "value": false
+                                    }
+                                ]
+                            },
+                            {
+                                "widgetType": "cf.platform.embeddedSearchAsTable",
+                                "attributes": [
+                                    {
+                                        "name": "groupOrder",
+                                        "value": "asc"
+                                    },
+                                    {
+                                        "name": "hideNames",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "hideTableLinks",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "types": [
+                                                        "cf.cplace.solution.safe.story"
+                                                    ]
+                                                },
+                                                {
+                                                    "customOutgoingSubSearch": "cf.cplace.solution.safe.feature",
+                                                    "search": {
+                                                        "filters": [
+                                                            {
+                                                                "types": [
+                                                                    "cf.cplace.solution.safe.feature"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "relativeCustomReference": "cf.cplace.solution.safe.programIncrement",
+                                                                "referenceOperator": "embeddingCustomEntity"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "showNewButton",
+                                        "value": "Yes"
+                                    },
+                                    {
+                                        "name": "showTableActions",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableFooter",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableHeader",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "singleSpaced",
+                                        "value": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "proportion": 12,
+                        "widgets": [
+                            {
+                                "widgetType": "cf.platform.embeddedSearchAsTable",
+                                "attributes": [
+                                    {
+                                        "name": "columns",
+                                        "value": [
+                                            {
+                                                "name": "'cf.cplace.solution.safe.SAFeLevel'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.SAFeLevel.Reference'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.businessValue'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.actualValue'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.commitment'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.statement'",
+                                                "visible": true
+                                            },
+                                            {
+                                                "name": "readers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "content",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "createdAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "creator",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "customType",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputies",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "deputiesAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "entityMirrorStatus",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "hasSource",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "isShared",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "layoutName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "localizedName",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifiedAt",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "modifier",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "owner",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "ownerIsDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "pageInPackageInclusion",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "readersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writers",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "writersAreDefault",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.objectivetitle'",
+                                                "visible": false
+                                            },
+                                            {
+                                                "name": "'cf.cplace.solution.safe.timebox'",
+                                                "visible": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "groupColumn",
+                                        "value": "'cf.cplace.solution.safe.SAFeLevel'"
+                                    },
+                                    {
+                                        "name": "groupOrder",
+                                        "value": "asc"
+                                    },
+                                    {
+                                        "name": "hideNames",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "hideTableLinks",
+                                        "value": false
+                                    },
+                                    {
+                                        "name": "search",
+                                        "value": {
+                                            "filters": [
+                                                {
+                                                    "types": [
+                                                        "cf.cplace.solution.safe.objective"
+                                                    ]
+                                                },
+                                                {
+                                                    "relativeSpace": "true"
+                                                },
+                                                {
+                                                    "relativeCustomReference": "cf.cplace.solution.safe.timebox",
+                                                    "referenceOperator": "embeddingCustomEntity"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "showNewButton",
+                                        "value": "Yes"
+                                    },
+                                    {
+                                        "name": "showTableActions",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableFooter",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "showTableHeader",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "singleSpaced",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "title",
+                                        "value": {
+                                            "de": "Objectives",
+                                            "en": "Objectives"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

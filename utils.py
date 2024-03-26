@@ -434,8 +434,6 @@ def rewrite_widgets(widgets):
                                     elif isinstance(value, str) and value.startswith('r'):
                                         attribute['value'] = value[1:]
 
-    return widgets
-
 def find_all_widgets(root, parent_map):
     result = []
     # Find elements by XPath and remove them
@@ -532,6 +530,12 @@ def write_token_counts(folder_name):
         write_token_count(f, folder_name, "types-pretty.json")
         write_token_count(f, folder_name, "types-pretty.yaml")
         write_token_count(f, folder_name, "types.js")
+        write_token_count(f, folder_name, "widgets-rewritten-compressed.json")
+        write_token_count(f, folder_name, "widgets-rewritten-pretty.json")
+        write_token_count(f, folder_name, "widgets-rewritten-pretty.yaml")
+        write_token_count(f, folder_name, "widgets-rewritten-first-3-compressed.json")
+        write_token_count(f, folder_name, "widgets-rewritten-first-3-pretty.json")
+        write_token_count(f, folder_name, "widgets-rewritten-first-3-pretty.yaml")
 
 
 def write_token_count(f, folder_name, file_name):
@@ -584,8 +588,10 @@ def run_for_folder(folder_name):
     # print("Widgets: ", widgets)
     write_json_to_file(folder_name_generated, "widgets", widgets)
 
-    widgets_rewritten = rewrite_widgets(widgets)
+    rewrite_widgets(widgets)
     write_json_to_file(folder_name_generated, "widgets-rewritten", widgets)
+
+    write_json_to_file(folder_name_generated, "widgets-rewritten-first-3", widgets[:3])
 
     remove_generic_elements(root, parent_map)
 

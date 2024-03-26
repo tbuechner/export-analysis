@@ -1,0 +1,14 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('okr/generated/types-compressed.json') }}
+```
+
+The following code contains a representation of 3 layouts of a page:
+
+```
+{{ load_file('okr/generated/widgets-rewritten-first-3-compressed.json') }}
+```
+
+Explain these layouts to me.
+

@@ -4,3 +4,9 @@ tokens types-compressed.json: 4481
 tokens types-pretty.json: 7407
 tokens types-pretty.yaml: 5367
 tokens types.js: 4241
+tokens widgets-rewritten-compressed.json: 106591
+tokens widgets-rewritten-pretty.json: 136692
+tokens widgets-rewritten-pretty.yaml: 118707
+tokens widgets-rewritten-first-3-compressed.json: 15090
+tokens widgets-rewritten-first-3-pretty.json: 16899
+tokens widgets-rewritten-first-3-pretty.yaml: 17260
