@@ -1381,12 +1381,6 @@
             en: Team
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         - name: height
@@ -1528,12 +1522,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -2072,12 +2060,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -2351,12 +2333,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.progress
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -2695,12 +2671,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -2795,12 +2765,6 @@
             en: Key Result
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -2981,12 +2945,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -3027,12 +2985,6 @@
             en: Desciption
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -3143,12 +3095,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -4996,12 +4942,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         - name: height
@@ -5148,12 +5088,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         - name: height
@@ -5408,12 +5342,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         - name: height
@@ -6026,12 +5954,6 @@
             en: Attributes
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -6409,12 +6331,6 @@
             en: Meeting information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -6572,12 +6488,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
@@ -6623,12 +6533,6 @@
             en: Desciption
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.cplace.platform.attributesGroup.showFrame
-          value: true
-        - name: cf.cplace.platform.attributesGroup.useNewFrontend
-          value: false
-        - name: cf.platform.attributesGroup.enableMultiEdit
-          value: true
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup

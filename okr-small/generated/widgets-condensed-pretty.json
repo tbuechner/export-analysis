@@ -2769,18 +2769,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     },
@@ -3067,18 +3055,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -4206,18 +4182,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -4876,18 +4840,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.okr.progress"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -5599,18 +5551,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -5813,18 +5753,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -6293,18 +6221,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -6402,18 +6318,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -6699,18 +6603,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -10183,18 +10075,6 @@
                                         "value": "cf.cplace.solution.okr.settings"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     },
@@ -10518,18 +10398,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.okr.settings"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -10986,18 +10854,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.okr.settings"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",
@@ -12287,18 +12143,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -13169,18 +13013,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -13541,18 +13373,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "cf.platform.singleColumn",
                                         "value": true
                                     }
@@ -13663,18 +13483,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "cf.platform.attributesGroup.enableMultiEdit",
-                                        "value": true
                                     },
                                     {
                                         "name": "cf.platform.singleColumn",

@@ -355,6 +355,13 @@ def remove_attribute(widget_, name):
                 # remove the attribute
                 widget_['attributes'].remove(attribute)
 
+def get_attribute(widget_, name):
+    if 'attributes' in widget_:
+        for attribute in widget_['attributes']:
+            if 'name' in attribute and attribute['name'] == name:
+                # remove the attribute
+                return widget_['attributes']
+
 
 def count_widget_types(widgets, folder_name_generated):
     widget_type_2_count = {}
@@ -412,6 +419,10 @@ def replace_embedded_widget_in_attribute(attribute):
             attribute['value'] = replace_embedded_widget(value)
 
 
+def condense_attributes_group(widget_):
+    pass
+
+
 def condense_widgets(widgets):
 
     # iterate over all widgets
@@ -430,6 +441,12 @@ def condense_widgets(widgets):
                     if widget_type == 'cf.cplace.visualizations.scriptingHighcharts':
                         remove_attribute(widget_, 'cf.cplace.visualization.script')
 
+                    if widget_type == 'cf.cplace.platform.attributesGroup':
+                        remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.showFrame')
+                        remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.useNewFrontend')
+                        remove_attribute(widget_, 'cf.platform.attributesGroup.enableMultiEdit')
+                        # remove_attribute(widget_, 'cf.platform.reloadAfterChange')
+                        condense_attributes_group(get_attribute(widget_, 'cf.cplace.platform.attributesGroup.layout'))
 
 
 def rewrite_widgets(widgets):
