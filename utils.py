@@ -440,6 +440,25 @@ def condense_attributes_group(value):
                 remove_configuration(widget_, 'cf.platform.singleColumn')
                 remove_configuration(widget_, 'cf.platform.withLabel')
                 remove_configuration(widget_, 'cf.platform.withValue')
+                remove_configuration(widget_, 'inPlaceEditing')
+                remove_configuration(widget_, 'reloadAfterChange')
+                remove_configuration(widget_, 'showAttributeScript')
+                remove_configuration(widget_, 'singleColumn')
+                remove_configuration(widget_, 'singleSelectionWidgetId')
+                remove_configuration(widget_, 'withLabel')
+                remove_configuration(widget_, 'withValue')
+
+
+def rewrite_search(search):
+    for filter in search['filters']:
+        if 'customAttributeMultiExactValues' in filter:
+            for value in filter['values']:
+                if isinstance(value, str) and value.startswith('s'):
+                    # replace the value in the list with the result of stripping the first character
+                    filter['values'][filter['values'].index(value)] = value[1:]
+                elif isinstance(value, str) and value.startswith('d'):
+                    filter['values'][filter['values'].index(value)] = float(value[1:])
+
 
 
 def condense_widgets(widgets):
@@ -464,6 +483,7 @@ def condense_widgets(widgets):
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.showFrame')
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.useNewFrontend')
                         remove_attribute(widget_, 'cf.platform.attributesGroup.enableMultiEdit')
+                        remove_attribute(widget_, 'cf.platform.singleColumn')
                         condense_attributes_group(get_attribute_value(widget_, 'cf.cplace.platform.attributesGroup.layout'))
 
                     if widget_type == 'cf.platform.embeddedSearchAsTable':
@@ -477,7 +497,10 @@ def condense_widgets(widgets):
                         remove_attribute(widget_, 'height')
                         remove_attribute(widget_, 'groupOrder')
                         remove_attribute(widget_, 'columns')
+                        rewrite_search(get_attribute_value(widget_, 'search'))
 
+                    if widget_['attributes'] is None:
+                        del widget_['attributes']
 
 def rewrite_widgets(widgets):
     # iterate over all widgets

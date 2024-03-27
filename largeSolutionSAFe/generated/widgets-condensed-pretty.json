@@ -77,10 +77,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 180.0
                                     }
@@ -928,10 +924,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 300.0
                                     }
@@ -1094,8 +1086,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -1107,8 +1098,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -1116,8 +1106,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -1176,10 +1165,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     }
                                 ]
                             }
@@ -1256,8 +1241,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.comments",
-                                "attributes": null
+                                "widgetType": "cf.platform.comments"
                             }
                         ]
                     }
@@ -1655,10 +1639,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 400.0
                                     }
@@ -1903,10 +1883,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 300.0
                                     }
@@ -2027,10 +2003,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     },
                                     {
                                         "name": "height",
@@ -2271,10 +2243,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 350.0
                                     }
@@ -2359,10 +2327,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.safe.successor"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     },
                                     {
                                         "name": "height",
@@ -2451,10 +2415,6 @@
                                         "value": "cf.cplace.solution.safe.predecessor"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 350.0
                                     }
@@ -2519,8 +2479,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.comments",
-                                "attributes": null
+                                "widgetType": "cf.platform.comments"
                             }
                         ]
                     }
@@ -2639,10 +2598,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 350.0
                                     }
@@ -2732,8 +2687,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -2745,8 +2699,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -2754,8 +2707,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -2771,8 +2723,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -2784,8 +2735,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.files",
-                                "attributes": null
+                                "widgetType": "cf.platform.files"
                             }
                         ]
                     },
@@ -2793,8 +2743,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.comments",
-                                "attributes": null
+                                "widgetType": "cf.platform.comments"
                             }
                         ]
                     }
@@ -2810,8 +2759,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.cplace.visualDomainModel.modeller",
-                                "attributes": null
+                                "widgetType": "cf.cplace.visualDomainModel.modeller"
                             }
                         ]
                     }
@@ -2827,8 +2775,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -2840,8 +2787,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -2849,8 +2795,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -3031,10 +2976,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     }
                                 ]
                             }
@@ -3077,13 +3018,13 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#15 - Funnel",
-                                                        "s#25 - Analyzing",
-                                                        "s#35 - Backlog",
-                                                        "s#45 - Implementing",
-                                                        "s#55 - Validating",
-                                                        "s#65 - Deploying",
-                                                        "s#75 - Releasing"
+                                                        "#15 - Funnel",
+                                                        "#25 - Analyzing",
+                                                        "#35 - Backlog",
+                                                        "#45 - Implementing",
+                                                        "#55 - Validating",
+                                                        "#65 - Deploying",
+                                                        "#75 - Releasing"
                                                     ]
                                                 }
                                             ]
@@ -3872,14 +3813,14 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#15 - Funnel",
-                                                        "s#25 - Analyzing",
-                                                        "s#35 - Backlog",
-                                                        "s#45 - Implementing",
-                                                        "s#55 - Validating",
-                                                        "s#65 - Deploying",
-                                                        "s#75 - Releasing",
-                                                        "s#85 - Done"
+                                                        "#15 - Funnel",
+                                                        "#25 - Analyzing",
+                                                        "#35 - Backlog",
+                                                        "#45 - Implementing",
+                                                        "#55 - Validating",
+                                                        "#65 - Deploying",
+                                                        "#75 - Releasing",
+                                                        "#85 - Done"
                                                     ]
                                                 },
                                                 {
@@ -4475,14 +4416,14 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#15 - Funnel",
-                                                        "s#25 - Analyzing",
-                                                        "s#35 - Backlog",
-                                                        "s#45 - Implementing",
-                                                        "s#55 - Validating",
-                                                        "s#65 - Deploying",
-                                                        "s#75 - Releasing",
-                                                        "s#85 - Done"
+                                                        "#15 - Funnel",
+                                                        "#25 - Analyzing",
+                                                        "#35 - Backlog",
+                                                        "#45 - Implementing",
+                                                        "#55 - Validating",
+                                                        "#65 - Deploying",
+                                                        "#75 - Releasing",
+                                                        "#85 - Done"
                                                     ]
                                                 }
                                             ]
@@ -4546,7 +4487,7 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#35 - Backlog"
+                                                        "#35 - Backlog"
                                                     ]
                                                 }
                                             ]
@@ -4853,8 +4794,8 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.status",
                                                     "values": [
-                                                        "s25 - conflict",
-                                                        "s35 - resolved"
+                                                        "25 - conflict",
+                                                        "35 - resolved"
                                                     ]
                                                 }
                                             ]
@@ -5344,8 +5285,8 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#25 - Analyzing",
-                                                        "s#35 - Backlog"
+                                                        "#25 - Analyzing",
+                                                        "#35 - Backlog"
                                                     ]
                                                 }
                                             ]
@@ -6003,7 +5944,7 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.SAFeLevel",
                                                     "values": [
-                                                        "s#15 - Solution"
+                                                        "#15 - Solution"
                                                     ]
                                                 },
                                                 {
@@ -6077,7 +6018,7 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.SAFeLevel",
                                                     "values": [
-                                                        "s#25 - Program"
+                                                        "#25 - Program"
                                                     ]
                                                 }
                                             ]
@@ -6261,10 +6202,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.safe.confidenceVote"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": false
                                     }
                                 ]
                             }
@@ -6652,10 +6589,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.safe.currentPi"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     },
                                     {
                                         "name": "height",
@@ -7197,7 +7130,7 @@
                                                 {
                                                     "customAttributeMultiExactValues": "cf.cplace.solution.safe.state",
                                                     "values": [
-                                                        "s#35 - Backlog"
+                                                        "#35 - Backlog"
                                                     ]
                                                 },
                                                 {
@@ -7988,10 +7921,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.safe.parent"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     }
                                 ]
                             }
@@ -8156,10 +8085,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.relativeSelection",
                                         "value": "cf.cplace.solution.safe.parent"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     }
                                 ]
                             }
@@ -8258,8 +8183,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8271,8 +8195,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8280,8 +8203,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8297,8 +8219,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8310,8 +8231,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8319,8 +8239,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8434,10 +8353,6 @@
                                         "value": "embedding"
                                     },
                                     {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
-                                    },
-                                    {
                                         "name": "height",
                                         "value": 350.0
                                     }
@@ -8449,12 +8364,10 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             },
                             {
-                                "widgetType": "cf.platform.comments",
-                                "attributes": null
+                                "widgetType": "cf.platform.comments"
                             }
                         ]
                     }
@@ -8486,8 +8399,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8499,8 +8411,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8508,8 +8419,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8694,10 +8604,6 @@
                                     {
                                         "name": "cf.cplace.platform.attributesGroup.pageSelection",
                                         "value": "embedding"
-                                    },
-                                    {
-                                        "name": "cf.platform.singleColumn",
-                                        "value": true
                                     }
                                 ]
                             }
@@ -8715,8 +8621,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8728,8 +8633,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8737,8 +8641,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8754,8 +8657,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8767,8 +8669,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8776,8 +8677,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8793,8 +8693,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8806,8 +8705,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8815,8 +8713,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8832,8 +8729,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8845,8 +8741,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8854,8 +8749,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8871,8 +8765,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8884,8 +8777,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8893,8 +8785,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8910,8 +8801,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8923,8 +8813,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8932,8 +8821,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8949,8 +8837,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -8962,8 +8849,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -8971,8 +8857,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -8988,8 +8873,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -9001,8 +8885,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -9010,8 +8893,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -9027,8 +8909,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -9040,8 +8921,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -9049,8 +8929,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }
@@ -9066,8 +8945,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.wiki",
-                                "attributes": null
+                                "widgetType": "cf.platform.wiki"
                             }
                         ]
                     }
@@ -9079,8 +8957,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.attributes",
-                                "attributes": null
+                                "widgetType": "cf.platform.attributes"
                             }
                         ]
                     },
@@ -9088,8 +8965,7 @@
                         "proportion": 6,
                         "widgets": [
                             {
-                                "widgetType": "cf.platform.incomingReferences",
-                                "attributes": null
+                                "widgetType": "cf.platform.incomingReferences"
                             }
                         ]
                     }

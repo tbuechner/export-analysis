@@ -33,8 +33,6 @@
             en: Description
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 180.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -421,8 +419,6 @@
             en: Details
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 300.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -499,17 +495,14 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 3
@@ -533,8 +526,6 @@
             en: Program
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 3
       widgets: []
@@ -567,8 +558,7 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.comments
 - rows:
   - columns:
     - proportion: 12
@@ -768,8 +758,6 @@
             en: Weighted Shortest Job First
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 400.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -869,8 +857,6 @@
             en: Details
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 300.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -920,8 +906,6 @@
             en: Dates
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 300.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -1027,8 +1011,6 @@
             en: Dependency Details
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 350.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -1065,8 +1047,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.successor
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 350.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -1103,8 +1083,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.predecessor
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 350.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -1136,8 +1114,7 @@
         widgetType: cf.platform.attributeHistory
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.comments
 - rows:
   - columns:
     - proportion: 6
@@ -1183,8 +1160,6 @@
             en: Details
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 350.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -1223,53 +1198,43 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.comments
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.cplace.visualDomainModel.modeller
+      - widgetType: cf.cplace.visualDomainModel.modeller
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
@@ -1339,8 +1304,6 @@
             en: Attributes
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
@@ -1359,13 +1322,13 @@
               relativeCustomReference: cf.cplace.solution.safe.capabilityowner
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#15 - Funnel
-              - s#25 - Analyzing
-              - s#35 - Backlog
-              - s#45 - Implementing
-              - s#55 - Validating
-              - s#65 - Deploying
-              - s#75 - Releasing
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
         - name: title
           value:
             de: Meine Capabilities
@@ -1972,14 +1935,14 @@
               - cf.cplace.solution.safe.capability
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#15 - Funnel
-              - s#25 - Analyzing
-              - s#35 - Backlog
-              - s#45 - Implementing
-              - s#55 - Validating
-              - s#65 - Deploying
-              - s#75 - Releasing
-              - s#85 - Done
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
+              - '#85 - Done'
             - referenceOperator: parentOfEmbeddingPage
               relativeCustomReference: cf.cplace.solution.safe.solution.reference
         - name: title
@@ -2320,14 +2283,14 @@
               relativeCustomReference: cf.cplace.solution.safe.solution.reference
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#15 - Funnel
-              - s#25 - Analyzing
-              - s#35 - Backlog
-              - s#45 - Implementing
-              - s#55 - Validating
-              - s#65 - Deploying
-              - s#75 - Releasing
-              - s#85 - Done
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
+              - '#85 - Done'
         - name: title
           value:
             de: Capabilities
@@ -2355,7 +2318,7 @@
               relativeCustomReference: cf.cplace.solution.safe.solution.reference
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#35 - Backlog
+              - '#35 - Backlog'
         - name: title
           value:
             de: Backlog
@@ -2489,8 +2452,8 @@
               - cf.cplace.solution.safe.dependency
             - customAttributeMultiExactValues: cf.cplace.solution.safe.status
               values:
-              - s25 - conflict
-              - s35 - resolved
+              - 25 - conflict
+              - 35 - resolved
         - name: title
           value:
             de: Konflikte
@@ -2768,8 +2731,8 @@
               - cf.cplace.solution.safe.capability
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#25 - Analyzing
-              - s#35 - Backlog
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
         - name: title
           value:
             de: Capabilities
@@ -3069,7 +3032,7 @@
                       - cf.cplace.solution.safe.solution
             - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
               values:
-              - s#15 - Solution
+              - '#15 - Solution'
             - customAttributeValue: cf.cplace.solution.safe.SAFeLevel.Reference
               linkValue: page/vaz9x2vt9b4szlugpaz3h8w4p
               operator: equals
@@ -3102,7 +3065,7 @@
                       - cf.cplace.solution.safe.solution
             - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
               values:
-              - s#25 - Program
+              - '#25 - Program'
         - name: title
           value:
             de: "Objectives f\xFCr Current PI -  Program Level"
@@ -3180,8 +3143,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.confidenceVote
-        - name: cf.platform.singleColumn
-          value: false
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
@@ -3344,8 +3305,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.currentPi
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 300.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -3664,7 +3623,7 @@
               - cf.cplace.solution.safe.capability
             - customAttributeMultiExactValues: cf.cplace.solution.safe.state
               values:
-              - s#35 - Backlog
+              - '#35 - Backlog'
             - not:
                 and:
                 - relativeSpace: 'true'
@@ -4010,8 +3969,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.parent
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
@@ -4077,8 +4034,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.safe.parent
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
@@ -4121,32 +4076,26 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 6
@@ -4190,17 +4139,13 @@
             en: Details
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 350.0
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.wiki
+      - widgetType: cf.platform.comments
   - columns:
     - proportion: 12
       widgets:
@@ -4214,17 +4159,14 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
@@ -4297,156 +4239,124 @@
             en: Attributes
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences

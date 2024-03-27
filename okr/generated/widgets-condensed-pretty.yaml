@@ -661,8 +661,6 @@
             en: Team
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 450.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -748,8 +746,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 3
       widgets:
@@ -1046,8 +1042,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 3
       widgets:
@@ -1120,8 +1114,7 @@
         widgetType: msg.scripts.imagegallery.basic
     - proportion: 3
       widgets:
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
 - rows:
   - columns:
     - proportion: 12
@@ -1193,13 +1186,10 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.progress
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 3
       widgets:
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.comments
   - columns:
     - proportion: 12
       widgets:
@@ -1423,8 +1413,6 @@
             en: General
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 4
       widgets:
@@ -1499,8 +1487,6 @@
             en: Key Result
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 3
       widgets: []
@@ -1571,8 +1557,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
       - attributes:
         - name: cf.cplace.platform.attributesGroup.layout
@@ -1593,24 +1577,19 @@
             en: Desciption
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 6
@@ -1649,8 +1628,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 6
       widgets: []
@@ -2555,8 +2532,7 @@
             de: OKR Manual Banner
             en: OKR Manual Banner
         widgetType: cf.cplace.demoWidgets.demoRichString
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
 - rows:
   - columns:
     - proportion: 9
@@ -2602,8 +2578,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 100.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -2658,8 +2632,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 100.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -2814,8 +2786,6 @@
           value: relative
         - name: cf.cplace.platform.attributesGroup.relativeSelection
           value: cf.cplace.solution.okr.settings
-        - name: cf.platform.singleColumn
-          value: true
         - name: height
           value: 225.0
         widgetType: cf.cplace.platform.attributesGroup
@@ -3055,8 +3025,7 @@
   - columns:
     - proportion: 9
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
     - proportion: 3
       widgets:
       - attributes:
@@ -3088,26 +3057,20 @@
             en: Attributes
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.comments
+      - widgetType: cf.platform.comments
 - rows:
   - columns:
     - proportion: 12
@@ -3143,8 +3106,7 @@
         widgetType: msg.scripts.imagegallery.basic
     - proportion: 4
       widgets:
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
 - rows:
   - columns:
     - proportion: 12
@@ -3229,8 +3191,6 @@
             en: Meeting information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
   - columns:
     - proportion: 12
@@ -3265,58 +3225,47 @@
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.files
+      - widgetType: cf.platform.files
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
 - rows:
   - columns:
     - proportion: 6
@@ -3350,8 +3299,6 @@
             en: Information
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
     - proportion: 6
       widgets: []
@@ -3377,21 +3324,16 @@
             en: Desciption
         - name: cf.cplace.platform.attributesGroup.pageSelection
           value: embedding
-        - name: cf.platform.singleColumn
-          value: true
         widgetType: cf.cplace.platform.attributesGroup
 - rows:
   - columns:
     - proportion: 12
       widgets:
-      - attributes: null
-        widgetType: cf.platform.wiki
+      - widgetType: cf.platform.wiki
   - columns:
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.attributes
+      - widgetType: cf.platform.attributes
     - proportion: 6
       widgets:
-      - attributes: null
-        widgetType: cf.platform.incomingReferences
+      - widgetType: cf.platform.incomingReferences
