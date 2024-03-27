@@ -355,12 +355,20 @@ def remove_attribute(widget_, name):
                 # remove the attribute
                 widget_['attributes'].remove(attribute)
 
-def get_attribute(widget_, name):
+
+def remove_configuration(widget_, name):
+    if 'configuration' in widget_:
+        for attribute in widget_['configuration']:
+            if 'name' in attribute and attribute['name'] == name:
+                # remove the attribute
+                widget_['configuration'].remove(attribute)
+
+
+def get_attribute_value(widget_, name):
     if 'attributes' in widget_:
         for attribute in widget_['attributes']:
             if 'name' in attribute and attribute['name'] == name:
-                # remove the attribute
-                return widget_['attributes']
+                return attribute['value']
 
 
 def count_widget_types(widgets, folder_name_generated):
@@ -419,8 +427,21 @@ def replace_embedded_widget_in_attribute(attribute):
             attribute['value'] = replace_embedded_widget(value)
 
 
-def condense_attributes_group(widget_):
-    pass
+def condense_attributes_group(value):
+    layout = value['widgetsLayout']
+    for row in layout['rows']:
+        # iterate over all columns
+        for column in row['columns']:
+            # iterate over all widgets
+            for widget_ in column['widgets']:
+                remove_configuration(widget_, 'cf.platform.inPlaceEditing')
+                remove_configuration(widget_, 'cf.platform.reloadAfterChange')
+                remove_configuration(widget_, 'cf.platform.useParent')
+                remove_configuration(widget_, 'cf.platform.singleColumn')
+                remove_configuration(widget_, 'cf.platform.withLabel')
+                remove_configuration(widget_, 'cf.platform.withValue')
+                print(widget_)
+
 
 
 def condense_widgets(widgets):
@@ -445,8 +466,7 @@ def condense_widgets(widgets):
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.showFrame')
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.useNewFrontend')
                         remove_attribute(widget_, 'cf.platform.attributesGroup.enableMultiEdit')
-                        # remove_attribute(widget_, 'cf.platform.reloadAfterChange')
-                        condense_attributes_group(get_attribute(widget_, 'cf.cplace.platform.attributesGroup.layout'))
+                        condense_attributes_group(get_attribute_value(widget_, 'cf.cplace.platform.attributesGroup.layout'))
 
 
 def rewrite_widgets(widgets):

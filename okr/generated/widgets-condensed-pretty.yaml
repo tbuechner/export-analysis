@@ -1330,50 +1330,14 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.setLead'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.setContributors'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -1448,73 +1412,19 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.cycle'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.organizationalUnit'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.setLead'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -1961,98 +1871,26 @@
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.accomplished'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.set'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.cycle'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -2160,170 +1998,44 @@
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.progressIndicator'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.confidenceLevel'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
               - columns:
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.result'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.problem'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.lessonsLearned'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.nextSteps'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.gradingForecast'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -2516,109 +2228,34 @@
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.localizedAlternativeLabel
                       values:
                       - localizedString: '{"de":"Titel","en":"Title"}'
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: false
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.lastUpdate'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: false
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.receiveBigSupport'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.localizedAlternativeLabel
                       values:
                       - localizedString: '{"de":"Objective","en":"Objective"}'
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.objective'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.localizedAlternativeLabel
                       values:
                       - localizedString: "{\"de\":\"Geringe Unterst\xFCtzung\",\"\
@@ -2626,44 +2263,11 @@
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.smallSupport'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.giveBigSupport'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -2737,27 +2341,9 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.keyResult'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -2787,153 +2373,45 @@
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.responsible'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.status'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.dueDate'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
               - columns:
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.keyResult'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.escalationLevel'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets: []
@@ -2957,27 +2435,9 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.digitalBoard.description'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -3016,73 +2476,19 @@
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.organizationalUnit'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.assignedEmployee'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 6
                   widgets: []
@@ -4912,27 +4318,9 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.cycleTemplate'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -5058,27 +4446,9 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: false
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.currentCycle'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -5289,50 +4659,14 @@
                       - string: h3
                     widgetType: cf.cplace.platform.heading
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.reader'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.editors'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -5880,73 +5214,19 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.dimension'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.date'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -6228,102 +5508,30 @@
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.date'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.meetingType'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.cycle'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 3
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.set'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
@@ -6432,52 +5640,16 @@
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.title'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
                 - proportion: 6
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.status'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: true
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
               - columns:
                 - proportion: 12
@@ -6505,27 +5677,9 @@
                 - proportion: 12
                   widgets:
                   - configuration:
-                    - name: cf.platform.inPlaceEditing
-                      values:
-                      - boolean: true
                     - name: cf.platform.quotedAttributeName
                       values:
                       - string: '''cf.cplace.solution.okr.description'''
-                    - name: cf.platform.reloadAfterChange
-                      values:
-                      - boolean: false
-                    - name: cf.platform.singleColumn
-                      values:
-                      - boolean: false
-                    - name: cf.platform.useParent
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withLabel
-                      values:
-                      - boolean: false
-                    - name: cf.platform.withValue
-                      values:
-                      - boolean: true
                     widgetType: cf.platform.singleAttribute
         - name: cf.cplace.platform.attributesGroup.localizedTitle
           value:
