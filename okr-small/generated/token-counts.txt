@@ -10,6 +10,6 @@ tokens widgets-rewritten-pretty.yaml: 118707
 tokens widgets-rewritten-first-3-compressed.json: 15090
 tokens widgets-rewritten-first-3-pretty.json: 16899
 tokens widgets-rewritten-first-3-pretty.yaml: 17260
-tokens widgets-condensed-compressed.json: 82501
-tokens widgets-condensed-pretty.json: 112414
-tokens widgets-condensed-pretty.yaml: 90815
+tokens widgets-condensed-compressed.json: 40991
+tokens widgets-condensed-pretty.json: 70904
+tokens widgets-condensed-pretty.yaml: 49311

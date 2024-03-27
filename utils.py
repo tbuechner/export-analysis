@@ -349,14 +349,12 @@ def return_all_low_code_scripts(root, parent_map):
 
 
 def remove_attribute(widget_, name):
-    # if the widget_ has a key "attributes"
     if 'attributes' in widget_:
-        # iterate over all attributes
         for attribute in widget_['attributes']:
-            # if the attribute has a key "name" and the name of the attribute equals name
             if 'name' in attribute and attribute['name'] == name:
                 # remove the attribute
                 widget_['attributes'].remove(attribute)
+
 
 def count_widget_types(widgets, folder_name_generated):
     widget_type_2_count = {}
@@ -380,6 +378,40 @@ def count_widget_types(widgets, folder_name_generated):
     with open(folder_name_generated + '/' + 'widget-type-to-count.json', 'w') as f:
         f.write(json.dumps(widget_type_2_count, indent=4))
 
+
+def replace_embedded_widget(value):
+
+    while '<embeddedwidget>' in value:
+        # find the index of '<embeddedwidget>'
+        start = value.find('<embeddedwidget>')
+        # find the index of '</embeddedwidget>'
+        end = value.find('</embeddedwidget>')
+        # replace the content between '<embeddedwidget>' and '</embeddedwidget>' with '<_embeddedwidget_>'
+        value = value[:start] + '<_embeddedwidget_>' + value[end + len('</embeddedwidget>'):]
+        # print("value: ", value)
+
+    return value
+
+
+def strip_embedded_widgets(widget_):
+    if 'attributes' in widget_:
+        if isinstance(widget_['attributes'], list):
+            for attribute in widget_['attributes']:
+                replace_embedded_widget_in_attribute(attribute)
+        elif isinstance(widget_['attributes'], dict):
+            replace_embedded_widget_in_attribute(widget_['attributes'])
+    else:
+        print("No attributes found: ", widget_)
+
+
+def replace_embedded_widget_in_attribute(attribute):
+    if isinstance(attribute, dict) and 'value' in attribute and attribute['value'] is not None:
+        value = attribute['value']
+        if isinstance(value, str):
+            # if value contains <embeddedwidget>any_content</embeddedwidget> at any place - strip the content between the tags
+            attribute['value'] = replace_embedded_widget(value)
+
+
 def condense_widgets(widgets):
 
     # iterate over all widgets
@@ -390,6 +422,8 @@ def condense_widgets(widgets):
             for column in row['columns']:
                 # iterate over all widgets
                 for widget_ in column['widgets']:
+                    strip_embedded_widgets(widget_)
+
                     widget_type = widget_['widgetType']
 
                     # if widget_type equals 'cf.cplace.visualizations.scriptingHighcharts'
