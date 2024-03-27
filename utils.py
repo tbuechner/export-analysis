@@ -440,8 +440,6 @@ def condense_attributes_group(value):
                 remove_configuration(widget_, 'cf.platform.singleColumn')
                 remove_configuration(widget_, 'cf.platform.withLabel')
                 remove_configuration(widget_, 'cf.platform.withValue')
-                print(widget_)
-
 
 
 def condense_widgets(widgets):
@@ -467,6 +465,18 @@ def condense_widgets(widgets):
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.useNewFrontend')
                         remove_attribute(widget_, 'cf.platform.attributesGroup.enableMultiEdit')
                         condense_attributes_group(get_attribute_value(widget_, 'cf.cplace.platform.attributesGroup.layout'))
+
+                    if widget_type == 'cf.platform.embeddedSearchAsTable':
+                        remove_attribute(widget_, 'showTableActions')
+                        remove_attribute(widget_, 'showTableFooter')
+                        remove_attribute(widget_, 'showTableHeader')
+                        remove_attribute(widget_, 'singleSpaced')
+                        remove_attribute(widget_, 'showNewButton')
+                        remove_attribute(widget_, 'hideTableLinks')
+                        remove_attribute(widget_, 'hideNames')
+                        remove_attribute(widget_, 'height')
+                        remove_attribute(widget_, 'groupOrder')
+                        remove_attribute(widget_, 'columns')
 
 
 def rewrite_widgets(widgets):
