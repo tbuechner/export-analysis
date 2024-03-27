@@ -354,7 +354,6 @@ def remove_attribute(widget_, name):
             if 'name' in attribute and attribute['name'] == name:
                 # remove the attribute
                 widget_['attributes'].remove(attribute)
-                #
 
 
 def remove_all_attributes(widget_):
