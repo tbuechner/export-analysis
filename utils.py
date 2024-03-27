@@ -354,6 +354,11 @@ def remove_attribute(widget_, name):
             if 'name' in attribute and attribute['name'] == name:
                 # remove the attribute
                 widget_['attributes'].remove(attribute)
+                #
+
+
+def remove_all_attributes(widget_):
+    del widget_['attributes']
 
 
 def remove_configuration(widget_, name):
@@ -440,6 +445,7 @@ def condense_attributes_group(value):
                 remove_configuration(widget_, 'cf.platform.singleColumn')
                 remove_configuration(widget_, 'cf.platform.withLabel')
                 remove_configuration(widget_, 'cf.platform.withValue')
+
                 remove_configuration(widget_, 'inPlaceEditing')
                 remove_configuration(widget_, 'reloadAfterChange')
                 remove_configuration(widget_, 'showAttributeScript')
@@ -479,6 +485,17 @@ def condense_widgets(widgets):
                     if widget_type == 'cf.cplace.visualizations.scriptingHighcharts':
                         remove_attribute(widget_, 'cf.cplace.visualization.script')
 
+                    if widget_type == 'de.visualistik.visualRoadmap.widget':
+                        remove_all_attributes(widget_)
+
+                    if widget_type == 'cf.cplace.platform.connectedAttributesGroup':
+                        remove_attribute(widget_, 'singleSelectionWidgetId')
+                        remove_attribute(widget_, 'singleColumn')
+                        remove_attribute(widget_, 'height')
+                        remove_attribute(widget_, 'cf.cplace.platform.useNewFrontend')
+                        remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.showFrame')
+                        condense_attributes_group(get_attribute_value(widget_, 'cf.cplace.platform.attributesGroup.layout'))
+
                     if widget_type == 'cf.cplace.platform.attributesGroup':
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.showFrame')
                         remove_attribute(widget_, 'cf.cplace.platform.attributesGroup.useNewFrontend')
@@ -499,7 +516,7 @@ def condense_widgets(widgets):
                         remove_attribute(widget_, 'columns')
                         rewrite_search(get_attribute_value(widget_, 'search'))
 
-                    if widget_['attributes'] is None:
+                    if 'attributes' in widget_ and widget_['attributes'] is None:
                         del widget_['attributes']
 
 def rewrite_widgets(widgets):

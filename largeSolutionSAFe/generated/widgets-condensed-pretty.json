@@ -3168,62 +3168,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.plannedStartA'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedStartA');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -3240,62 +3184,6 @@
                                                                                 "values": [
                                                                                     {
                                                                                         "string": "'cf.cplace.solution.safe.plannedEndB'"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedEndB');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
                                                                                     }
                                                                                 ]
                                                                             }
@@ -3320,54 +3208,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.description'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -3386,26 +3226,6 @@
                                             "de": "Details der ausgew\u00e4hlten Abh\u00e4ngigkeit",
                                             "en": "Details of selected dependency"
                                         }
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "height",
-                                        "value": 400.0
-                                    },
-                                    {
-                                        "name": "singleColumn",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "singleSelectionWidgetId",
-                                        "value": "id_3wef9j4y2fp2yhndh2tqw9fy6"
                                     }
                                 ]
                             }
@@ -3755,34 +3575,7 @@
                         "proportion": 12,
                         "widgets": [
                             {
-                                "widgetType": "de.visualistik.visualRoadmap.widget",
-                                "attributes": [
-                                    {
-                                        "name": "de.visualistik.visualRoadmap.dataSource",
-                                        "value": "connectedTable"
-                                    },
-                                    {
-                                        "name": "de.visualistik.visualRoadmap.script",
-                                        "value": {
-                                            "version": 1,
-                                            "script": "/**\n * Set to false to suspend logging\n * @type {Boolean}\n */\n const DEBUG = true;\n\n /**\n  * Get millisecond starting time of the script\n  * @type {Number}\n  */\n const START_TIME = new Date().getTime()\n \n /** @type {Number} */\n let LAST_TIME = START_TIME;\n \n /**\n  * Hint: set a declarative name for all of your logs\n  */\n cplace.setLogName('Roadmap: Solution Roadmap');\n \n //--------------------------------------------------------------------------------------//\n //                                       CONFIGURATION                                  //\n //--------------------------------------------------------------------------------------//\n \n const CUSTOM_SETTINGS = {\n   UNDEFINED_GROUP_TITLE: 'No Portfolio Epics defined', // if the ROADMAP_STRUCTURE.BASEITEM.GROUP value is changed, adjust this title\n   UNDEFINED_SWIMLANE_TITLE: '',\n   UNDEFINED_SUBSWIMLANE_TITLE: ''\n }\n const ROADMAP_STRUCTURE = {\n   CONFIGURATION: {\n     TYPE: 'de.visualistik.visualRoadmap.visualRoadmapConfiguration',\n     TYPE_MAP: 'de.visualistik.visualRoadmap.configurationTypeMap',\n     ITEM_TYPE: 'de.visualistik.visualRoadmap.itemType',\n     DISPLAYED_VALUE: 'de.visualistik.visualRoadmap.displayedValue',\n     ATTRIBUTE: 'de.visualistik.visualRoadmap.propertyKey',\n     PROPERTY_KEY_VALUES: 'de.visualistik.visualRoadmap.propertyKeyValues'\n   },\n   BASEITEM: {\n     TYPE: 'cf.cplace.solution.safe.capability',\n     GROUP: 'cf.cplace.solution.safe.portfolioEpic',\n     LABEL_PREFIX: 'cf.cplace.solution.safe.progressOfFeatures',\n     LABEL: 'cf.cplace.solution.safe.title', // not used\n     SWIMLANE: 'cf.cplace.solution.safe.solution.reference',\n \n     START_DATE: 'cf.cplace.solution.safe.plannedStart',\n     END_DATE: 'cf.cplace.solution.safe.plannedEnd',\n \n     STATE: 'cf.cplace.solution.safe.state',\n \n     // state values\n     IMPLEMENTING: '#45 - Implementing',\n     FUNNEL: '#15 - Funnel',\n     \n   },\n   SUBITEM: {\n     TYPE: 'cf.cplace.solution.safe.feature',\n     SWIMLANE: 'cf.cplace.solution.safe.program',\n     LABEL: 'cf.cplace.solution.roadmap.title',\n     PART_OF: 'cf.cplace.solution.safe.capability',\n     START_DATE: 'cf.cplace.solution.safe.plannedStart',\n     END_DATE: 'cf.cplace.solution.safe.plannedEnd',\n \n     //STATE: 'cf.cplace.solution.roadmap.workflow',\n   },\n   QUALITY_LINES: {\n     TYPE: 'cf.cplace.solution.safe.safeMilestone',\n     DATE: 'cf.cplace.solution.safe.date',\n     IS_ROADMAP_RELEVANT : 'cf.cplace.solution.safe.isRoadmapRelevant'\n   }\n }\n \n //--------------------------------------------------------------------------------------//\n //                                       INITIALIZATION                                  //\n //--------------------------------------------------------------------------------------//\n \n const enableLinks = true; // enable links on items and subitems\n const branding = true; // display branding visualistik\n const allGroupsOpen = true; // true if all groups are open on default\n \n /**\n  * @type {import(\"../templates/data-model\").Configuration}\n  */\n let config = null;\n \n /**\n  * @type {Object}\n  */\n let groups = {}\n \n /** @type {import(\"../templates/data-model\").QualityLine[]} */\n let qualityLines = null;\n \n //--------------------------------------------------------------------------------------//\n //                                       OUTPUT                                         //\n //--------------------------------------------------------------------------------------//\n \n cplace.each(pages, function (page) {\n   if (page.getBuiltinFeatureValue('customType') !== ROADMAP_STRUCTURE.BASEITEM.TYPE || page.get(ROADMAP_STRUCTURE.BASEITEM.START_DATE) == null || page.get(ROADMAP_STRUCTURE.BASEITEM.END_DATE) == null) {\n     return;\n   }\n \n   if (config === null) {\n     config = loadConfiguration(enableLinks, branding, page);\n   }\n \n   if (qualityLines === null) {\n     qualityLines = createQualityLines(page);\n   }\n \n   let groupPages = preparePages(page, ROADMAP_STRUCTURE.BASEITEM.GROUP);\n   \n   cplace.each(groupPages, function(groupPage) {\n     cplace.log('groupPages'+groupPage)\n     let group = null;\n     let groupName = CUSTOM_SETTINGS.UNDEFINED_GROUP_TITLE;\n     let groupId = CUSTOM_SETTINGS.UNDEFINED_GROUP_TITLE;\n \n     if (groupPage != null) {\n       groupName = groupPage.getName();\n       groupId = groupPage.getId();\n     }\n \n     if (groups.hasOwnProperty(groupId)) {\n       group = groups[groupId]\n     } else {\n       group = {\n         name: groupName,\n         id: groupId,\n         swimlanes: [],\n         swimlaneObject: {}\n       }\n       if (allGroupsOpen) {\n         config.groupsOpen.push(groupId);\n       }\n \n       groups[groupId] = group;\n     }\n \n     let swimlanePages = preparePages(page, ROADMAP_STRUCTURE.BASEITEM.SWIMLANE);\n     cplace.log('swimlanePages'+swimlanePages)\n \n     cplace.each(swimlanePages, function (swimlanePage) {\n       cplace.log('swimlanePage'+swimlanePage)\n       let swimlane = null;\n       let swimlaneId = CUSTOM_SETTINGS.UNDEFINED_SWIMLANE_TITLE;\n       let swimlaneName = CUSTOM_SETTINGS.UNDEFINED_SWIMLANE_TITLE;\n \n       if (swimlanePage != null) { // using !== null does not work for some reason.\n         swimlaneId = swimlanePage.getId();\n         swimlaneName = swimlanePage.getName();\n       }\n \n       if (group.swimlaneObject.hasOwnProperty(swimlaneId)) {\n         swimlane = group.swimlaneObject[swimlaneId]\n       } else {\n         swimlane = {\n           name: '', //swimlaneName,\n           baseItemElements: []\n         }\n         group.swimlaneObject[swimlaneId] = swimlane;\n       }\n \n       let baseItem = baseItemElement(page);\n       if (baseItem === null) {\n         return;\n       }\n \n       let subItemPages = page.getIncomingPagesFromAllSpaces(ROADMAP_STRUCTURE.SUBITEM.TYPE, ROADMAP_STRUCTURE.SUBITEM.PART_OF);\n       cplace.log('subItemPages'+subItemPages);\n       cplace.log('pageName'+page.getName());\n       let features = page.get('cf.cplace.solution.safe.features');\n       cplace.log('features'+features)\n       buildSubItems(baseItem, subItemPages);\n \n       swimlane.baseItemElements.push(baseItem);\n     });\n   })\n \n });\n \n return roadmap(config, qualityLines, groups);\n \n //--------------------------------------------------------------------------------------//\n //                                       BUSINESS FUNCTIONS                             //\n //--------------------------------------------------------------------------------------//\n \n /**\n  * prepare pages for swimlane creation\n  * @param {Page} page\n  * @param {Attribute} attribute\n  * @returns {Page[]}\n  */\n function preparePages(page, attribute) {\n   let result = [];\n   let value = page.get(attribute, false);\n \n   if (value == null || value.length === 0) {\n     return [null];\n   }\n \n   const className = typeof value === 'object' ? String(value.getClass()) : 'String'\n   switch (className) {\n     case 'class cf.cplace.platform.scripting.api.wrapper.entity.WrappedPage':\n     case 'class cf.cplace.platform.scripting.api.wrapper.entity.WrappedPerson':\n       result.push(page.get(attribute));\n       break;\n     case 'class com.google.common.collect.SingletonImmutableList':\n     case 'class com.google.common.collect.RegularImmutableList':\n       result = page.get(attribute);\n       break;\n     default:\n       cplace.log('Class of ' + value + ' is \"' + value.class + '\"');\n       cplace.log(typeof value.class);\n       cplace.log(typeof value);\n   }\n \n   return result;\n }\n \n /**\n  * create subItems for base items\n  * @param {Object} baseItem\n  * @param {Page[]} subItems\n  */\n function buildSubItems(baseItem, subItems) {\n \n   // iterate through all sub items\n   cplace.each(subItems, function (subItem) {\n     if (subItem === null) {\n       return;\n     }\n \n     /**\n      * Show only certain sub items\n      */\n     /*if ([ROADMAP_STRUCTURE.BASEITEM.PLANNED,ROADMAP_STRUCTURE.BASEITEM.DEVELOPMENT,ROADMAP_STRUCTURE.BASEITEM.LAUNCHED].indexOf(subItem.get(ROADMAP_STRUCTURE.SUBITEM.STATE)) === -1) {\n       return;\n     }*/\n \n     let subSwimlane = null;\n     let subItemCategory = null;\n     let subItemCategoryName = CUSTOM_SETTINGS.UNDEFINED_SUBSWIMLANE_TITLE;\n     let subItemCategoryId = CUSTOM_SETTINGS.UNDEFINED_SUBSWIMLANE_TITLE;\n     \n     // get swimlane of subitem\n     subItemCategory = subItem.get(ROADMAP_STRUCTURE.SUBITEM.SWIMLANE);\n     // if not null save id. If null, a fallback subSwimlane should be used\n     if (subItemCategory) {\n       subItemCategoryId = subItemCategory.getId();\n       subItemCategoryName = subItemCategory.getName();\n     }\n \n     if (baseItem.subSwimlaneObject.hasOwnProperty(subItemCategoryId)) {\n       // if the subSwimlane for subItem exist get this subSwimlane\n       subSwimlane = baseItem.subSwimlaneObject[subItemCategoryId];\n     } else {\n       // if there is no subSwimlane -> create the subSwimlane\n       subSwimlane = {\n         name: subItemCategoryName,\n         subItemElements: []\n       }\n       baseItem.subSwimlaneObject[subItemCategoryId] = subSwimlane;\n     }\n     // create the subItem object and push to subSwimlane\n     let createdSubItem = subItemElement(subItem);\n \n     if (createdSubItem === null) {\n       return;\n     }\n \n     subSwimlane.subItemElements.push(createdSubItem);\n   });\n }\n \n /**\n  * create roadmap output\n  * @param {import(\"../templates/data-model\").Configuration} config\n  * @param {import(\"../templates/data-model\").QualityLine[]} qualityLines\n  * @param {Object} groups\n  * @returns\n  */\n function roadmap(config, qualityLines, groups) {\n   let groupArray = [];\n   for (let key in groups) {\n     for (let keys in groups[key].swimlaneObject) {\n \n       cplace.each(groups[key].swimlaneObject[keys].baseItemElements, function (baseItemElement) {\n         for (let subSwimlaneKey in baseItemElement.subSwimlaneObject) {\n           let subSwimlane = JSON.stringify(baseItemElement.subSwimlaneObject[subSwimlaneKey]);\n           baseItemElement.subSwimlanes.push(JSON.parse(subSwimlane));\n         }\n       });\n \n       let swimlane = JSON.stringify(groups[key].swimlaneObject[keys]);\n       groups[key].swimlanes.push(JSON.parse(swimlane));\n     }\n     groupArray.push(groups[key])\n   }\n   return {\n     configuration: config,\n     qualityLines: qualityLines,\n     groups: groupArray\n   }\n }\n \n /**\n  * create baseItemElement\n  * @param {Page} page\n  */\n function baseItemElement(page) {\n   if (page === null) {\n     return null;\n   }\n \n   let startDate = null;\n   let endDate = null;\n \n   startDate = page.get(ROADMAP_STRUCTURE.BASEITEM.START_DATE);\n   endDate = page.get(ROADMAP_STRUCTURE.BASEITEM.END_DATE);\n \n   // if start or end date not set -> nothing to do\n   if (startDate === null || endDate === null) {\n     return null;\n   }\n \n   const labelPrefix = page.get(ROADMAP_STRUCTURE.BASEITEM.LABEL_PREFIX);\n   let baseItem = {\n     name:page.getName(),\n     id: page.getId(),\n     url: page.getUrl(),\n     startDate: startDate.toString('MM-dd-yyyy'),\n     endDate: endDate.toString('MM-dd-yyyy'),\n     subSwimlanes: [],\n     subSwimlaneObject: {}\n   }\n \n   if (config !== null) {\n \n     if (config.colorMap !== null && config.colorMap.baseItem !== null && config.colorMap.baseItem.length > 0) {\n       const attribute = config.colorMap.baseItem[0].attribute;\n       // baseItem.color = page.get(attribute).get('cf.cplace.solution.roadmap.color');\n       baseItem.color = page.get(attribute);\n     }\n     if (config.hatchingMap !== null && config.hatchingMap.baseItem !== null && config.hatchingMap.baseItem.length > 0) {\n       const attribute = config.hatchingMap.baseItem[0].attribute;\n       baseItem.hatching = page.get(attribute);\n     }\n \n     if (config.iconMap !== null && config.iconMap.baseItem !== null && config.iconMap.baseItem.length > 0) {\n       const attribute = config.iconMap.baseItem[0].attribute;\n       baseItem.icon = page.get(attribute);\n     }\n   }\n \n   return baseItem;\n }\n \n /**\n  * create subItemElement\n  * @param {Page} page\n  */\n function subItemElement(page) {\n   cplace.log('subItemElement'+page)\n   if (page === null) {\n     return null;\n   }\n \n   let startDate = page.get(ROADMAP_STRUCTURE.SUBITEM.START_DATE);\n   let endDate = page.get(ROADMAP_STRUCTURE.SUBITEM.END_DATE);\n \n   // if start or end date not set -> nothing to do\n   if (startDate === null || endDate === null) {\n     return null;\n   }\n \n   let subItem = {\n     name: page.getName(),\n     id: page.getId(),\n     url: page.getUrl(),\n     startDate: startDate.toString('MM-dd-yyyy'),\n     endDate: endDate.toString('MM-dd-yyyy'),\n   }\n \n   if (config !== null) {\n \n     if (config.colorMap !== null && config.colorMap.subItem !== null && config.colorMap.subItem.length > 0) {\n       const attribute = config.colorMap.subItem[0].attribute;\n       subItem.color = page.get(attribute);\n     }\n     if (config.hatchingMap !== null && config.hatchingMap.subItem !== null && config.hatchingMap.subItem.length > 0) {\n       const attribute = config.hatchingMap.subItem[0].attribute;\n       subItem.hatching = page.get(attribute);\n     }\n     if (config.iconMap !== null && config.iconMap.subItem !== null && config.iconMap.subItem.length > 0) {\n       const attribute = config.iconMap.subItem[0].attribute;\n       subItem.icon = page.get(attribute);\n     }\n   }\n   cplace.log('subItem'+subItem)\n   return subItem;\n }\n \n //--------------------------------------------------------------------------------------//\n //                                       QUALITY LINES.                                 //\n //--------------------------------------------------------------------------------------//\n \n function createQualityLines(page) {\n   let result = [];\n \n   cplace.each(getPages(ROADMAP_STRUCTURE.QUALITY_LINES.TYPE, page), function (event) {\n     let date = event.get(ROADMAP_STRUCTURE.QUALITY_LINES.DATE);\n     let isRoadmapRelevant = true //!!event.get(ROADMAP_STRUCTURE.QUALITY_LINES.IS_ROADMAP_RELEVANT)\n \n     if (date === null || !isRoadmapRelevant) {\n       return;\n     }\n \n     result.push({\n       name: event.getName(),\n       date: date.toString('MM-dd-yyyy')\n     });\n   });\n \n   return result;\n }\n \n //--------------------------------------------------------------------------------------//\n //                                       CONFIGURATION.                                 //\n //--------------------------------------------------------------------------------------//\n \n function loadConfiguration(enableLinks, branding, page) {\n   let result = {\n     hatchingMap: {\n       baseItem: [],\n       subItem: []\n     },\n     colorMap: {\n       baseItem: [],\n       subItem: []\n     },\n     iconMap: {\n       baseItem: [],\n       subItem: []\n     },\n     groupsOpen: [],\n     enableLinks: enableLinks,\n     branding: branding\n   };\n \n   cplace.each(getPages(ROADMAP_STRUCTURE.CONFIGURATION.TYPE, page), function (configurationPage) {\n     let configurationType = configurationPage.get(ROADMAP_STRUCTURE.CONFIGURATION.TYPE_MAP);\n     let itemType = configurationPage.get(ROADMAP_STRUCTURE.CONFIGURATION.ITEM_TYPE);\n     let displayedValue = configurationPage.get(ROADMAP_STRUCTURE.CONFIGURATION.DISPLAYED_VALUE);\n     let attribute = configurationPage.get(ROADMAP_STRUCTURE.CONFIGURATION.ATTRIBUTE);\n     let values = configurationPage.get(ROADMAP_STRUCTURE.CONFIGURATION.PROPERTY_KEY_VALUES);\n \n     result[configurationType][itemType].push({\n       key: displayedValue,\n       value: values,\n       attribute: attribute\n     });\n   });\n \n   return result;\n }\n \n //--------------------------------------------------------------------------------------//\n //                                       HELPER FUNCTIONS                               //\n //--------------------------------------------------------------------------------------//\n \n function getPages(type, page) {\n   return new Search()\n     .setEmbeddingEntity(page)\n     .add(Filters.embeddingSpace())\n     .add(Filters.type(type))\n     .findAllPages();\n }\n \n /**\n  * Log to cplace\n  * @param {any} text\n  */\n function log(text) {\n   if (!DEBUG) {\n     return\n   }\n   let logOutput = (typeof text !== 'string') ? JSON.stringify(text) : text;\n \n   cplace.log(logOutput);\n }\n \n \n function timeSinceStart(msg) {\n   if (!DEBUG) {\n     return\n   }\n   let now = new Date().getTime();\n   cplace.log([(now - START_TIME) + 'ms', (now - LAST_TIME) + 'ms', msg].join(' -- '))\n   LAST_TIME = now;\n }",
-                                            "upgradeAck": true,
-                                            "description": ""
-                                        }
-                                    },
-                                    {
-                                        "name": "height",
-                                        "value": 800.0
-                                    },
-                                    {
-                                        "name": "sortOrder",
-                                        "value": "Aufsteigend"
-                                    },
-                                    {
-                                        "name": "tableWidgetId",
-                                        "value": "_gi8oxtef2dwz1ph48dgp91jjp"
-                                    }
-                                ]
+                                "widgetType": "de.visualistik.visualRoadmap.widget"
                             },
                             {
                                 "widgetType": "cf.platform.connectedTableFilter",
@@ -4837,62 +4630,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.plannedStartA'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedStartA');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -4909,62 +4646,6 @@
                                                                                 "values": [
                                                                                     {
                                                                                         "string": "'cf.cplace.solution.safe.plannedEndB'"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedEndB');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
                                                                                     }
                                                                                 ]
                                                                             }
@@ -4989,54 +4670,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.description'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -5055,26 +4688,6 @@
                                             "de": "Details des ausgew\u00e4hlten Konflikts",
                                             "en": "Details of selected conflict"
                                         }
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "height",
-                                        "value": 500.0
-                                    },
-                                    {
-                                        "name": "singleColumn",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "singleSelectionWidgetId",
-                                        "value": "_rk7lmeeo9sdibkbwvu46zfyzr"
                                     }
                                 ]
                             }
@@ -5430,62 +5043,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.plannedStartA'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedStartA');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -5502,62 +5059,6 @@
                                                                                 "values": [
                                                                                     {
                                                                                         "string": "'cf.cplace.solution.safe.plannedEndB'"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "showAttributeScript",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "{\"version\":1,\"script\":\"const date = targetEntity.get('cf.cplace.solution.safe.plannedEndB');\\n\\nif (date) {\\n  return true;\\n}\\nreturn false;\",\"description\":\"\"}"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
                                                                                     }
                                                                                 ]
                                                                             }
@@ -5582,54 +5083,6 @@
                                                                                         "string": "'cf.cplace.solution.safe.description'"
                                                                                     }
                                                                                 ]
-                                                                            },
-                                                                            {
-                                                                                "name": "inPlaceEditing",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "reloadAfterChange",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleColumn",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": false
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "singleSelectionWidgetId",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "string": "<empty>"
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withLabel",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "name": "withValue",
-                                                                                "values": [
-                                                                                    {
-                                                                                        "boolean": true
-                                                                                    }
-                                                                                ]
                                                                             }
                                                                         ],
                                                                         "widgetType": "cf.platform.connectedSingleAttribute"
@@ -5648,26 +5101,6 @@
                                             "de": "Details der ausgew\u00e4hlten Abh\u00e4ngigkeit",
                                             "en": "Details of selected dependency"
                                         }
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.attributesGroup.showFrame",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "cf.cplace.platform.useNewFrontend",
-                                        "value": false
-                                    },
-                                    {
-                                        "name": "height",
-                                        "value": 400.0
-                                    },
-                                    {
-                                        "name": "singleColumn",
-                                        "value": true
-                                    },
-                                    {
-                                        "name": "singleSelectionWidgetId",
-                                        "value": "id_gb7uy80p96jb1sj4lqvqxx3e7"
                                     }
                                 ]
                             }
