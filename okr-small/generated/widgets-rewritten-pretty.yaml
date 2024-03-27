@@ -1,4 +1,9 @@
-- rows:
+- internalLayoutName: cf.cplace.solution.okr.layouts.demoCycle
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Demo-Layout
+    en: Demo-Layout
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -470,7 +475,9 @@
             de: Demo Set Leads
             en: Demo Set Leads
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.cycle
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -869,7 +876,13 @@
             de: Legende
             en: Legend
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.cycle
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -979,7 +992,13 @@
             de: Alle Key Results
             en: All Key Results
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.objectives
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -1171,7 +1190,13 @@
             de: "Key Results zum ausgew\xE4hlten Objective"
             en: Key Results of the selected Objective
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.progress
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1289,7 +1314,13 @@
             de: Fortschritt
             en: Progress
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.setOkrs
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Set OKRs
+    en: Set OKRs
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1309,7 +1340,13 @@
             - referenceOperator: embeddingCustomEntity
               relativeCustomReference: cf.cplace.solution.okr.set
         widgetType: cf.cplace.treeTableWidget
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.support
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Unterst\xFCtzung"
+    en: Support
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -1763,7 +1800,13 @@
             de: "Wir bekommen KLEINE Unterst\xFCtzung von anderen Teams"
             en: We receive SMALL support from other teams
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.tasks
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1867,7 +1910,13 @@
             spaceAfterLastColumnEnabled: true
             unmappedCardsContainerEnabled: false
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.team
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Team
+    en: Team
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -1980,7 +2029,9 @@
             de: Rollenbeschreibung
             en: Role Descriptions
         widgetType: cf.platform.richString
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -2355,7 +2406,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.details
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Beschreibung
+    en: Description
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -2380,7 +2437,13 @@
             de: "Erkl\xE4rung"
             en: Explanation
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.objective
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -2486,7 +2549,13 @@
             de: Key Results des Objectives
             en: Key Results of the Objective
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.objective
+- internalLayoutName: cf.cplace.solution.okr.layout.progress
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -2600,7 +2669,13 @@
             de: Fortschritt
             en: Progress
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.objective
+- internalLayoutName: cf.cplace.solution.okr.layout.taskBoard
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -2704,7 +2779,9 @@
             spaceAfterLastColumnEnabled: true
             unmappedCardsContainerEnabled: false
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.okr.objective
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3102,7 +3179,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.objective
+- internalLayoutName: cf.cplace.solution.okr.layout.files
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Dateien
+    en: Files
+  rows:
   - columns:
     - proportion: 9
       widgets:
@@ -3114,7 +3197,13 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.files
-- rows:
+  typeName: cf.cplace.solution.okr.keyResult
+- internalLayoutName: cf.cplace.solution.okr.layout.progress
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3378,7 +3467,13 @@
         - name: sortOrder
           value: Aufsteigend
         widgetType: cf.cplace.lowCodeWidgets.lowCodeButton
-- rows:
+  typeName: cf.cplace.solution.okr.keyResult
+- internalLayoutName: cf.cplace.solution.okr.layout.taskBoard
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3476,7 +3571,9 @@
             spaceAfterLastColumnEnabled: false
             unmappedCardsContainerEnabled: false
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.okr.keyResult
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3763,7 +3860,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.keyResult
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 3
       widgets:
@@ -3819,7 +3918,9 @@
       widgets: []
     - proportion: 3
       widgets: []
-- rows:
+  typeName: cf.cplace.solution.okr.progress
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4045,7 +4146,9 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.okr.task
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4060,7 +4163,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.solution.okr.updateKeyResult
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -4166,7 +4271,9 @@
   - columns:
     - proportion: 12
       widgets: []
-- rows:
+  typeName: cf.cplace.solution.okr.organizationalUnit
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4434,7 +4541,13 @@
             de: Dashboard Strips
             en: Dashboard Strips
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.okrDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.myKeyResults
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Key Results
+    en: My Key Results
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4576,7 +4689,13 @@
             de: Alle meine Key Results
             en: All my Key Results
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.myObjectives
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Objectives
+    en: My Objectives
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -4804,7 +4923,13 @@
             de: "Key Results zum ausgew\xE4hlten Objective"
             en: Key Results of the selected Objective
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.myProgress
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Fortschritte
+    en: My Progress
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4944,7 +5069,13 @@
             de: Fortschritt
             en: Progress
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.mySupport
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Mein Support
+    en: My Support
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -5460,7 +5591,13 @@
             de: "Wir bekommen KLEINE Unterst\xFCtzung von anderen Teams"
             en: We receive SMALL support from other teams
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.myTasks
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Mein Aufgaben
+    en: My Tasks
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5563,7 +5700,13 @@
             spaceAfterLastColumnEnabled: false
             unmappedCardsContainerEnabled: false
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.place.solution.okr.okrProposals
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "OKR Vorschl\xE4ge"
+    en: OKR Proposals
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5650,7 +5793,9 @@
             de: Themen in meiner Organisationseinheit
             en: Topics of my organizational Unit
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5687,7 +5832,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.myDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.roadmap
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Roadmap
+    en: Roadmap
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5911,7 +6062,13 @@
             de: "Priorit\xE4ten"
             en: Priorities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.strategyDashbaord
+- internalLayoutName: cf.cplace.solution.okr.layout.strategyPaper
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Strategiepapier
+    en: Strategy Paper
+  rows:
   - columns:
     - proportion: 9
       widgets:
@@ -5939,7 +6096,9 @@
         - name: height
           value: 600.0
         widgetType: cf.platform.files
-- rows:
+  typeName: cf.cplace.solution.okr.strategyDashbaord
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5962,7 +6121,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.strategyDashbaord
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6077,7 +6238,9 @@
             de: Dashboard Strips
             en: Dashboard Strips
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.cyclesDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6115,7 +6278,9 @@
             - types:
               - cf.cplace.solution.okr.meeting
         widgetType: cf.cplace.simpleCalendar.calendar
-- rows:
+  typeName: cf.cplace.solution.okr.meetingsDashbaord
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6129,7 +6294,13 @@
         widgetType: cf.cplace.demoWidgets.demoRichString
       - attributes: null
         widgetType: cf.platform.wiki
-- rows:
+  typeName: cf.cplace.solution.okr.okrManualDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.cycles
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Cycle
+    en: Cycles
+  rows:
   - columns:
     - proportion: 9
       widgets:
@@ -6522,7 +6693,13 @@
       widgets: []
     - proportion: 6
       widgets: []
-- rows:
+  typeName: cf.cplace.solution.okr.administrationDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.organizationalUnits
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Organisationseinheiten
+    en: Organizational Units
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6602,7 +6779,13 @@
             de: Organisationseinheiten
             en: Organizational Units
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.administrationDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.permissions
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Berechtigungen
+    en: Permissions
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -6692,7 +6875,13 @@
   - columns:
     - proportion: 12
       widgets: []
-- rows:
+  typeName: cf.cplace.solution.okr.administrationDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.template
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Template
+    en: Template
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -6883,7 +7072,9 @@
             de: "Set zum ausgew\xE4hlten Cycle"
             en: Set of selected Cycle
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.administrationDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6916,7 +7107,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.administrationDashboard
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7008,7 +7205,13 @@
             de: Key Results des Objectives
             en: Key Results of the Objective
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.priority
+- internalLayoutName: cf.cplace.solution.okr.layout.progress
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7102,7 +7305,13 @@
             de: Fortschritt
             en: Progress
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.priority
+- internalLayoutName: cf.cplace.solution.okr.layout.taskBoard
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7203,7 +7412,9 @@
             spaceAfterLastColumnEnabled: true
             unmappedCardsContainerEnabled: false
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.okr.priority
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 9
       widgets:
@@ -7305,7 +7516,9 @@
         widgetType: cf.cplace.platform.attributesGroup
       - attributes: null
         widgetType: cf.platform.files
-- rows:
+  typeName: cf.cplace.solution.okr.priority
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7320,7 +7533,13 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.comments
-- rows:
+  typeName: default.page
+- internalLayoutName: cf.cplace.solution.okr.layout.1on1
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: 1on1
+    en: 1on1
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7425,7 +7644,13 @@
             de: "Fortschritt im ausgew\xE4hlten Zyklus"
             en: Progress of Seleceted Cycle
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.meeting
+- internalLayoutName: cf.cplace.solution.okr.layout.files
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Dateien
+    en: Files
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -7437,7 +7662,13 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.files
-- rows:
+  typeName: cf.cplace.solution.okr.meeting
+- internalLayoutName: cf.cplace.solution.okr.layout.leadership
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Leadership
+    en: Leadership
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7547,7 +7778,13 @@
             de: "Alle Key Results des ausgew\xE4hlten Zyklus"
             en: All Key Results of the choosen cycle
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.okr.meeting
+- internalLayoutName: cf.cplace.solution.okr.layout.workshop
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Workshop
+    en: Workshop
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7561,7 +7798,9 @@
         - name: sourceUrl
           value: https://miro.com/app/live-embed/uXjVOHDpESI=/?moveToViewport=-6970,-3691,16129,7871
         widgetType: cf.platform.iframe
-- rows:
+  typeName: cf.cplace.solution.okr.meeting
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7715,7 +7954,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: advancedLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.okr.meeting
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7730,7 +7971,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.simpleCalendar.eventClassConfiguration
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7745,7 +7988,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: default.file
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7756,7 +8001,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.files
-- rows:
+  typeName: cf.cplace.enumerationIcons.page
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7771,7 +8018,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.solution.okr.settings
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -7900,7 +8149,9 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.okr.topic
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7915,3 +8166,4 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
+  typeName: cf.cplace.solution.okr.selectNextCycle

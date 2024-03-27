@@ -401,7 +401,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.solution"
     },
     {
         "rows": [
@@ -1375,7 +1377,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.pi.layout.capabilities",
+        "localizedLayoutName": {
+            "en": "Capabilities"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -1576,7 +1584,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.pi.layout.objectives",
+        "localizedLayoutName": {
+            "de": "Objectives",
+            "en": "Objectives"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -1762,7 +1777,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.overview",
+        "localizedLayoutName": {
+            "de": "Overview",
+            "en": "Overview"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -1982,7 +2004,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.pi.layout.statistics",
+        "localizedLayoutName": {
+            "de": "Statistiken",
+            "en": "Statistics"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -2732,7 +2761,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -2771,7 +2802,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.iteration"
     },
     {
         "rows": [
@@ -3235,7 +3268,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.place.solution.safe.layout.breakdown",
+        "localizedLayoutName": {
+            "de": "Breakdown",
+            "en": "Breakdown"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -3252,7 +3292,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.comments",
+        "localizedLayoutName": {
+            "de": "Comments",
+            "en": "Comments"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -3676,7 +3723,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.dependencies",
+        "localizedLayoutName": {
+            "de": "Abh\u00e4ngigkeiten",
+            "en": "Dependencies"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -3728,7 +3782,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.details",
+        "localizedLayoutName": {
+            "de": "Details",
+            "en": "Details"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -3778,7 +3839,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.definitions",
+        "localizedLayoutName": {
+            "en": "DoR/DoD"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -4217,7 +4284,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.prioritization",
+        "localizedLayoutName": {
+            "de": "Priorisierung",
+            "en": "Prioritization"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -4315,7 +4389,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.timeline",
+        "localizedLayoutName": {
+            "de": "Timeline",
+            "en": "Timeline"
+        },
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -5212,7 +5293,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.capability"
     },
     {
         "rows": [
@@ -6248,7 +6331,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.dependency"
     },
     {
         "rows": [
@@ -6797,7 +6882,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.safeMilestone"
     },
     {
         "rows": [
@@ -6836,7 +6923,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "default.file"
     },
     {
         "rows": [
@@ -6875,7 +6964,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "default.page"
     },
     {
         "rows": [
@@ -6892,7 +6983,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.visualDomainModel.graph"
     },
     {
         "rows": [
@@ -6931,7 +7024,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.flowMetric"
     },
     {
         "rows": [
@@ -7513,7 +7608,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.objective"
     },
     {
         "rows": [
@@ -7802,7 +7899,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.capabilities",
+        "localizedLayoutName": {
+            "de": "Meine Capabilites",
+            "en": "My Capabilities"
+        },
+        "typeName": "cf.cplace.solution.safe.myDashboard"
     },
     {
         "rows": [
@@ -8337,7 +8441,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.dependencies",
+        "localizedLayoutName": {
+            "de": "Meine Abh\u00e4ngigkeiten",
+            "en": "My Dependencies"
+        },
+        "typeName": "cf.cplace.solution.safe.myDashboard"
     },
     {
         "rows": [
@@ -8598,7 +8709,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.drafts",
+        "localizedLayoutName": {
+            "de": "Meine Drafts",
+            "en": "My Drafts"
+        },
+        "typeName": "cf.cplace.solution.safe.myDashboard"
     },
     {
         "rows": [
@@ -8735,7 +8853,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.myDashboard"
     },
     {
         "rows": [
@@ -9285,7 +9405,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.capabilities",
+        "localizedLayoutName": {
+            "de": "Solution PI Roadmap",
+            "en": "Capabilities"
+        },
+        "typeName": "cf.cplace.solution.safe.solutionRoadmapDashboard"
     },
     {
         "rows": [
@@ -9612,7 +9739,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.layout.solutionRoadmap",
+        "localizedLayoutName": {
+            "de": "Epen",
+            "en": "Epics"
+        },
+        "typeName": "cf.cplace.solution.safe.solutionRoadmapDashboard"
     },
     {
         "rows": [
@@ -9652,7 +9786,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.solutionRoadmapDashboard"
     },
     {
         "rows": [
@@ -9899,7 +10035,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.overview",
+        "localizedLayoutName": {
+            "de": "\u00dcberblick",
+            "en": "Overview"
+        },
+        "typeName": "cf.cplace.solution.safe.solutionKanbanDashboard"
     },
     {
         "rows": [
@@ -10150,7 +10293,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.solutionKanbanDashboard"
     },
     {
         "rows": [
@@ -10444,7 +10589,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe",
+        "localizedLayoutName": {
+            "de": "Alle Capabilities",
+            "en": "All Capabilities"
+        },
+        "typeName": "cf.cplace.solution.safe.breakdownDashboard"
     },
     {
         "rows": [
@@ -10737,7 +10889,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.backlog",
+        "localizedLayoutName": {
+            "de": "Backlog",
+            "en": "Backlog"
+        },
+        "typeName": "cf.cplace.solution.safe.breakdownDashboard"
     },
     {
         "rows": [
@@ -12166,7 +12325,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.breakdown",
+        "localizedLayoutName": {
+            "de": "Breakdown",
+            "en": "Breakdown"
+        },
+        "typeName": "cf.cplace.solution.safe.breakdownDashboard"
     },
     {
         "rows": [
@@ -12647,7 +12813,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.conflicts",
+        "localizedLayoutName": {
+            "de": "Konflikte",
+            "en": "Conflicts"
+        },
+        "typeName": "cf.cplace.solution.safe.breakdownDashboard"
     },
     {
         "rows": [
@@ -12776,7 +12949,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.breakdownDashboard"
     },
     {
         "rows": [
@@ -13068,7 +13243,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.prioritizationDashboard"
     },
     {
         "rows": [
@@ -13603,7 +13780,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.dependencies",
+        "localizedLayoutName": {
+            "de": "Abh\u00e4ngigkeiten",
+            "en": "Dependencies"
+        },
+        "typeName": "cf.cplace.solution.safe.currentPiDashboard"
     },
     {
         "rows": [
@@ -13809,7 +13993,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.currentPI.layout.kanban",
+        "localizedLayoutName": {
+            "de": "Kanban",
+            "en": "Kanban"
+        },
+        "typeName": "cf.cplace.solution.safe.currentPiDashboard"
     },
     {
         "rows": [
@@ -14764,7 +14955,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.currentPI.layout.Objectives",
+        "localizedLayoutName": {
+            "de": "Objectives",
+            "en": "Objectives"
+        },
+        "typeName": "cf.cplace.solution.safe.currentPiDashboard"
     },
     {
         "rows": [
@@ -15257,7 +15455,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.currentPI.layout.SolutionPlanning",
+        "localizedLayoutName": {
+            "de": "Solution Planning",
+            "en": "Solution Planning"
+        },
+        "typeName": "cf.cplace.solution.safe.currentPiDashboard"
     },
     {
         "rows": [
@@ -15772,7 +15977,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.currentPiDashboard"
     },
     {
         "rows": [
@@ -16935,7 +17142,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.piPlanningDashboard"
     },
     {
         "rows": [
@@ -17666,7 +17875,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.timelineDashboard"
     },
     {
         "rows": [
@@ -17727,7 +17938,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.flowDistribution",
+        "localizedLayoutName": {
+            "de": "Flow Distribution",
+            "en": "Flow Distribution"
+        },
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -17773,7 +17991,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.flowEfficiency",
+        "localizedLayoutName": {
+            "de": "Flow Efficiency",
+            "en": "Flow Efficiency"
+        },
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -17834,7 +18059,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.flowPredictability",
+        "localizedLayoutName": {
+            "de": "Flow Predictability",
+            "en": "Flow Predictability"
+        },
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -17895,7 +18127,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.flowTime",
+        "localizedLayoutName": {
+            "de": "Flow Time",
+            "en": "Flow Time"
+        },
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -17956,7 +18195,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.flowVelocity",
+        "localizedLayoutName": {
+            "de": "Flow Velocity",
+            "en": "Flow Velocity"
+        },
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -18005,7 +18251,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.metricsDashboard"
     },
     {
         "rows": [
@@ -18535,7 +18783,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.kanban",
+        "localizedLayoutName": {
+            "de": "Kanban",
+            "en": "Kanban"
+        },
+        "typeName": "cf.cplace.solution.safe.administrationDashboard"
     },
     {
         "rows": [
@@ -19051,7 +19306,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.solutionDetails",
+        "localizedLayoutName": {
+            "de": "Solution Details",
+            "en": "Solution Details"
+        },
+        "typeName": "cf.cplace.solution.safe.administrationDashboard"
     },
     {
         "rows": [
@@ -19123,7 +19385,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.layout.vdm",
+        "localizedLayoutName": {
+            "de": "Visual Domain Model",
+            "en": "Visual Domain Model"
+        },
+        "typeName": "cf.cplace.solution.safe.administrationDashboard"
     },
     {
         "rows": [
@@ -19164,7 +19433,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.administrationDashboard"
     },
     {
         "rows": [
@@ -19203,7 +19474,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.simpleCalendar.eventClassConfiguration"
     },
     {
         "rows": [
@@ -19242,7 +19515,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.simpleCalendar.eventTypeConfiguration"
     },
     {
         "rows": [
@@ -19596,7 +19871,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.event"
     },
     {
         "rows": [
@@ -19635,7 +19912,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "de.visualistik.visualRoadmap.visualRoadmapConfiguration"
     },
     {
         "rows": [
@@ -20221,7 +20500,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.confidenceVote"
     },
     {
         "rows": [
@@ -20260,7 +20541,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.errorLog.errorlog"
     },
     {
         "rows": [
@@ -20299,7 +20582,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.errorLog.errorCnt"
     },
     {
         "rows": [
@@ -20338,7 +20623,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.lowcodeConversion"
     },
     {
         "rows": [
@@ -20377,7 +20664,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.attributeMapping"
     },
     {
         "rows": [
@@ -20416,7 +20705,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.interfaceDefinition"
     },
     {
         "rows": [
@@ -20455,7 +20746,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.communicationSettings"
     },
     {
         "rows": [
@@ -20494,7 +20787,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.header"
     },
     {
         "rows": [
@@ -20533,7 +20828,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.cronSchedule"
     },
     {
         "rows": [
@@ -20572,7 +20869,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.stringConversion"
     },
     {
         "rows": [
@@ -20611,6 +20910,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.genericInterface.imageConversion"
     }
 ]

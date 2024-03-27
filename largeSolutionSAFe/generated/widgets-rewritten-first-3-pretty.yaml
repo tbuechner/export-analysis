@@ -1,4 +1,5 @@
-- rows:
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -595,7 +596,12 @@
             the mouse and dragging a window around the area you want to see in more
             detail. Hold Shift to move forward or back in the timeline in the chart.</strong></p>'
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.solution
+- internalLayoutName: cf.cplace.solution.safe.pi.layout.capabilities
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    en: Capabilities
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -1069,7 +1075,13 @@
         - name: singleSpaced
           value: false
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- internalLayoutName: cf.cplace.solution.safe.pi.layout.objectives
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1165,3 +1177,4 @@
             de: Objectives
             en: Objectives
         widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.programIncrement

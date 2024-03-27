@@ -1,4 +1,9 @@
-- rows:
+- internalLayoutName: cf.cplace.solution.okr.layouts.demoCycle
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Demo-Layout
+    en: Demo-Layout
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -470,7 +475,9 @@
             de: Demo Set Leads
             en: Demo Set Leads
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.cycle
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -869,7 +876,13 @@
             de: Legende
             en: Legend
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.okr.cycle
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -979,3 +992,4 @@
             de: Alle Key Results
             en: All Key Results
         widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.set

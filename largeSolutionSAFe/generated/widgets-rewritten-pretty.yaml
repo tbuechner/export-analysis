@@ -1,4 +1,5 @@
-- rows:
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -595,7 +596,12 @@
             the mouse and dragging a window around the area you want to see in more
             detail. Hold Shift to move forward or back in the timeline in the chart.</strong></p>'
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.solution
+- internalLayoutName: cf.cplace.solution.safe.pi.layout.capabilities
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    en: Capabilities
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -1069,7 +1075,13 @@
         - name: singleSpaced
           value: false
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- internalLayoutName: cf.cplace.solution.safe.pi.layout.objectives
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1165,7 +1177,13 @@
             de: Objectives
             en: Objectives
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- internalLayoutName: cf.cplace.solution.safe.layout.overview
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Overview
+    en: Overview
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -1254,7 +1272,13 @@
             de: Iterationen
             en: Iterations
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- internalLayoutName: cf.cplace.solution.safe.pi.layout.statistics
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Statistiken
+    en: Statistics
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -1649,7 +1673,9 @@
             de: Capabilitiy Klassifikation
             en: Capabilitiy Classification
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -2109,7 +2135,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.programIncrement
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -2124,7 +2152,13 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.solution.safe.iteration
+- internalLayoutName: cf.place.solution.safe.layout.breakdown
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Breakdown
+    en: Breakdown
+  rows:
   - columns:
     - proportion: 3
       widgets:
@@ -2341,13 +2375,25 @@
             de: Alle Features der Capability
             en: All Features of the Capability
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.comments
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Comments
+    en: Comments
+  rows:
   - columns:
     - proportion: 12
       widgets:
       - attributes: null
         widgetType: cf.platform.comments
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Abh\xE4ngigkeiten"
+    en: Dependencies
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3134,7 +3180,13 @@
             de: Artifacts with dependencies to this capability
             en: Artifacts with dependencies to this capability
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.details
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Details
+    en: Details
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3156,7 +3208,12 @@
         - name: cf.cplace.customRichStringAttribute.showFrame
           value: true
         widgetType: cf.platform.customRichStringAttribute
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.definitions
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    en: DoR/DoD
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -3209,7 +3266,13 @@
             de: DoD criteria
             en: DoD criteria
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.prioritization
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Priorisierung
+    en: Prioritization
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -3497,7 +3560,13 @@
         - name: height
           value: 400.0
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.timeline
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Timeline
+    en: Timeline
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -3744,7 +3813,9 @@
             de: "Zeitplan \xDCbersicht"
             en: Timeline Overview
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -4104,7 +4175,9 @@
             4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
             14px; margin-bottom: 20px; padding: 10px; text-align: center"><strong><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkXzVlMndzem1qenRwM3F0aHZxZ2M2OXA1bjEiLCJ3aWRnZXRUeXBlIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0IiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5zY3JpcHQiLCJ2YWx1ZXMiOlt7InN0cmluZyI6IntcInZlcnNpb25cIjoxLFwic2NyaXB0XCI6XCJjcGxhY2Uuc2V0TG9nTmFtZSgnUEkgRGFzaGJvYXJkJyk7XFxuXC9cL0NvbmZpZ3VyYXRpb25zXFxuY29uc3QgREFTSEJPQVJEID0ge1xcbiAgICBUWVBFOidjZi5jcGxhY2Uuc29sdXRpb24uc2FmZS5icmVha2Rvd25EYXNoYm9hcmQnLFxcbiAgICBBVFRSOntcXG4gICAgICBQQVJFTlQ6J2NmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnBhcmVudCdcXG4gICAgfVxcbiAgfVxcbiAgXFxuICBsZXQgZmluYWxsaW5rPScnO1xcbiAgbGV0IGxpbmssIG5hbWU7XFxuICBsZXQgZGFzaGJvYXJkU2VhcmNoID0gbmV3IFNlYXJjaCgpXFxuICAgIC5hZGQoRmlsdGVycy5zcGFjZShlbWJlZGRpbmdQYWdlLmdldFNwYWNlSWQoKSkpXFxuICAgIC5hZGQoRmlsdGVycy50eXBlKERBU0hCT0FSRC5UWVBFKSlcXG4gICAgLmFkZChGaWx0ZXJzLmN1c3RvbUF0dHJpYnV0ZU5vbmVtcHR5KERBU0hCT0FSRC5BVFRSLlBBUkVOVCkpXFxuICAgIC5maW5kQWxsUGFnZXMoKTtcXG5cXG5sZXQgcmVzdWx0ID0gSXRlcmFibGVzLmdldEZpcnN0KGRhc2hib2FyZFNlYXJjaCwgbnVsbCk7XFxuXFxuaWYgKHJlc3VsdCkge1xcbiAgICBsaW5rID0gcmVzdWx0LmdldFVybCgpO1xcbiAgICBuYW1lID0gcmVzdWx0LmdldE5hbWUoKTtcXG59XFxuICBcXG5yZXR1cm4gJzxhIGhyZWY9XFxcIicrbGluaysnXFxcImNsYXNzPVxcXCJjdXJyZW50LWNvbG9yXFxcIj5PcGVuIENhcGFibGl0aWVzIERhc2hib2FyZDxcL2E-JztcIixcInVwZ3JhZGVBY2tcIjp0cnVlLFwiZGVzY3JpcHRpb25cIjpcIlwifSJ9XX1dfQ</embeddedwidget></strong></h4>'
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.capability
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -4517,7 +4590,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.comments
-- rows:
+  typeName: cf.cplace.solution.safe.dependency
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -4750,7 +4825,9 @@
             4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
             14px; margin-bottom: 20px; padding: 10px; text-align: center"><strong><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkXzVlMndzem1qenRwM3F0aHZxZ2M2OXA1bjEiLCJ3aWRnZXRUeXBlIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0IiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5zY3JpcHQiLCJ2YWx1ZXMiOlt7InN0cmluZyI6IntcInZlcnNpb25cIjoxLFwic2NyaXB0XCI6XCJjcGxhY2Uuc2V0TG9nTmFtZSgnQ3VycmVudCBQSScpO1xcblwvXC9Db25maWd1cmF0aW9uc1xcbmNvbnN0IFRJTUVMSU5FX0RBU0hCT0FSRCA9IHtcXG4gICAgVFlQRTonY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUudGltZWxpbmVEYXNoYm9hcmQnLFxcbiAgICBBVFRSOntcXG4gICAgICBQQVJFTlQ6J2NmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnBhcmVudCdcXG4gICAgfVxcbiAgfVxcbiAgXFxuICBsZXQgZmluYWxsaW5rPScnO1xcbiAgbGV0IGxpbmssIG5hbWU7XFxuICBsZXQgcGlEYXNoYm9hcmRTZWFyY2ggPSBuZXcgU2VhcmNoKClcXG4gICAgLmFkZChGaWx0ZXJzLnNwYWNlKGVtYmVkZGluZ1BhZ2UuZ2V0U3BhY2VJZCgpKSlcXG4gICAgLmFkZChGaWx0ZXJzLnR5cGUoVElNRUxJTkVfREFTSEJPQVJELlRZUEUpKVxcbiAgICAuYWRkKEZpbHRlcnMuY3VzdG9tQXR0cmlidXRlTm9uZW1wdHkoVElNRUxJTkVfREFTSEJPQVJELkFUVFIuUEFSRU5UKSlcXG4gICAgLmZpbmRBbGxQYWdlcygpO1xcblxcbmxldCByZXN1bHQgPSBJdGVyYWJsZXMuZ2V0Rmlyc3QocGlEYXNoYm9hcmRTZWFyY2gsIG51bGwpO1xcblxcbmlmIChyZXN1bHQpIHtcXG4gICAgbGluayA9IHJlc3VsdC5nZXRVcmwoKTtcXG4gICAgbmFtZSA9IHJlc3VsdC5nZXROYW1lKCk7XFxufVxcbiAgXFxucmV0dXJuICc8YSBocmVmPVxcXCInK2xpbmsrJ1xcXCJjbGFzcz1cXFwiY3VycmVudC1jb2xvclxcXCI-T3BlbiBUaW1lbGluZSBEYXNoYm9hcmQ8XC9hPic7XCIsXCJkZXNjcmlwdGlvblwiOlwiXCJ9In1dfV19</embeddedwidget></strong></h4>'
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.safeMilestone
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4765,7 +4842,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: default.file
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4780,13 +4859,17 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.comments
-- rows:
+  typeName: default.page
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
       - attributes: null
         widgetType: cf.cplace.visualDomainModel.modeller
-- rows:
+  typeName: cf.cplace.visualDomainModel.graph
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -4801,7 +4884,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.solution.safe.flowMetric
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5023,7 +5108,13 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.objective
+- internalLayoutName: cf.cplace.solution.safe.layout.capabilities
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Capabilites
+    en: My Capabilities
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5166,7 +5257,13 @@
             de: Meine Capabilities
             en: My Capabilities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.myDashboard
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Meine Abh\xE4ngigkeiten"
+    en: My Dependencies
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -5397,7 +5494,13 @@
         - name: singleSelectionWidgetId
           value: id_3wef9j4y2fp2yhndh2tqw9fy6
         widgetType: cf.cplace.platform.connectedAttributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.myDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.drafts
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Drafts
+    en: My Drafts
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -5523,7 +5626,9 @@
             de: "Meine Capabililty Entw\xFCrfe"
             en: My Draft Capabilities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.myDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -5643,7 +5748,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.myDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.capabilities
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution PI Roadmap
+    en: Capabilities
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6417,7 +6528,13 @@
             de: "Abh\xE4ngigkeiten der ausgew\xE4hlten Capability"
             en: Dependencies of selected capability
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard
+- internalLayoutName: cf.cplace.solution.layout.solutionRoadmap
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Epen
+    en: Epics
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6795,7 +6912,9 @@
             de: Capabilities
             en: Capabilities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6815,7 +6934,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.overview
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "\xDCberblick"
+    en: Overview
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -6966,7 +7091,9 @@
             unmappedCardsContainerEnabled: false
             unmappedCardsContainerLocalizedNames: {}
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.safe.solutionKanbanDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7119,7 +7246,13 @@
             unmappedCardsContainerEnabled: false
             unmappedCardsContainerLocalizedNames: {}
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.safe.solutionKanbanDashboard
+- internalLayoutName: cf.cplace.solution.safe
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Alle Capabilities
+    en: All Capabilities
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7265,7 +7398,13 @@
             de: Capabilities
             en: Capabilities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.backlog
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Backlog
+    en: Backlog
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -7407,7 +7546,13 @@
             de: Backlog
             en: Backlog
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.breakdown
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Breakdown
+    en: Breakdown
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -8103,7 +8248,13 @@
             de: "Features der ausgew\xE4hlten Capability"
             en: Features of the selected capability
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.conflicts
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Konflikte
+    en: Conflicts
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -8313,7 +8464,9 @@
         - name: singleSelectionWidgetId
           value: _rk7lmeeo9sdibkbwvu46zfyzr
         widgetType: cf.cplace.platform.connectedAttributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 3
       widgets:
@@ -8442,7 +8595,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -8698,7 +8853,13 @@
             de: Capabilities
             en: Capabilities
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.prioritizationDashboard
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Abh\xE4ngigkeiten"
+    en: Dependencies
+  rows:
   - columns:
     - proportion: 8
       widgets:
@@ -8929,7 +9090,13 @@
         - name: singleSelectionWidgetId
           value: id_gb7uy80p96jb1sj4lqvqxx3e7
         widgetType: cf.cplace.platform.connectedAttributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.kanban
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Kanban
+    en: Kanban
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -9046,7 +9213,13 @@
             unmappedCardsContainerEnabled: false
             unmappedCardsContainerLocalizedNames: {}
         widgetType: cf.cplace.cboard.main.board
-- rows:
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.Objectives
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
   - columns:
     - proportion: 9
       widgets:
@@ -9519,7 +9692,13 @@
         - name: cf.platform.singleColumn
           value: false
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.SolutionPlanning
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution Planning
+    en: Solution Planning
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -10271,7 +10450,9 @@
             de: "Abh\xE4ngigkeiten"
             en: Dependencies
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 4
       widgets:
@@ -10667,7 +10848,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -11803,7 +11986,9 @@
             de: Backlog
             en: Backlog
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.piPlanningDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12359,7 +12544,13 @@
             de: Events
             en: Events
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.timelineDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowDistribution
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Distribution
+    en: Flow Distribution
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12439,7 +12630,13 @@
             de: Flow Distribution
             en: Flow Distribution
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowEfficiency
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Efficiency
+    en: Flow Efficiency
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12496,7 +12693,13 @@
             de: Flow Efficiency
             en: Flow Efficiency
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowPredictability
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Predictability
+    en: Flow Predictability
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12604,7 +12807,13 @@
             de: Flow Predictability
             en: Flow Predictability
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowTime
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Time
+    en: Flow Time
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12683,7 +12892,13 @@
             de: Flow Time
             en: Flow Time
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowVelocity
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Velocity
+    en: Flow Velocity
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12760,7 +12975,9 @@
             de: Flow Velocity
             en: Flow Velocity
         widgetType: cf.cplace.visualizations.scriptingHighcharts
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12787,7 +13004,13 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.kanban
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Kanban
+    en: Kanban
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -12996,7 +13219,13 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.solutionDetails
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution Details
+    en: Solution Details
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13195,7 +13424,13 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.vdm
+  layoutOwner: typeDefinitionLayout
+  localizedLayoutName:
+    de: Visual Domain Model
+    en: Visual Domain Model
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13227,7 +13462,9 @@
             de: Visual Domain Model
             en: Visual Domain Model
         widgetType: cf.platform.embeddedSearchAsTable
-- rows:
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13248,7 +13485,9 @@
         - name: cf.cplace.layoutTabsWidget.sourceForLayouts
           value: simpleLayoutSelection
         widgetType: cf.cplace.layoutTabsWidget.widget
-- rows:
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13263,7 +13502,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.simpleCalendar.eventClassConfiguration
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13278,7 +13519,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.simpleCalendar.eventTypeConfiguration
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 6
       widgets:
@@ -13419,7 +13662,9 @@
             4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
             14px; margin-bottom: 20px; padding: 10px; text-align: center"><strong><embeddedwidget>eyJ3aWRnZXRJZCI6ImlkXzVlMndzem1qenRwM3F0aHZxZ2M2OXA1bjEiLCJ3aWRnZXRUeXBlIjoiY2YuY3BsYWNlLmxvd0NvZGVXaWRnZXRzLmxvd0NvZGVUZXh0IiwicHJvcGVydGllcyI6W3sibmFtZSI6ImNmLmNwbGFjZS5sb3dDb2RlV2lkZ2V0cy5sb3dDb2RlVGV4dFdpZGdldC5zY3JpcHQiLCJ2YWx1ZXMiOlt7InN0cmluZyI6IntcInZlcnNpb25cIjoxLFwic2NyaXB0XCI6XCJjcGxhY2Uuc2V0TG9nTmFtZSgnQ3VycmVudCBQSScpO1xcblwvXC9Db25maWd1cmF0aW9uc1xcbmNvbnN0IFRJTUVMSU5FX0RBU0hCT0FSRCA9IHtcXG4gICAgVFlQRTonY2YuY3BsYWNlLnNvbHV0aW9uLnNhZmUudGltZWxpbmVEYXNoYm9hcmQnLFxcbiAgICBBVFRSOntcXG4gICAgICBQQVJFTlQ6J2NmLmNwbGFjZS5zb2x1dGlvbi5zYWZlLnBhcmVudCdcXG4gICAgfVxcbiAgfVxcbiAgXFxuICBsZXQgZmluYWxsaW5rPScnO1xcbiAgbGV0IGxpbmssIG5hbWU7XFxuICBsZXQgcGlEYXNoYm9hcmRTZWFyY2ggPSBuZXcgU2VhcmNoKClcXG4gICAgLmFkZChGaWx0ZXJzLnNwYWNlKGVtYmVkZGluZ1BhZ2UuZ2V0U3BhY2VJZCgpKSlcXG4gICAgLmFkZChGaWx0ZXJzLnR5cGUoVElNRUxJTkVfREFTSEJPQVJELlRZUEUpKVxcbiAgICAuYWRkKEZpbHRlcnMuY3VzdG9tQXR0cmlidXRlTm9uZW1wdHkoVElNRUxJTkVfREFTSEJPQVJELkFUVFIuUEFSRU5UKSlcXG4gICAgLmZpbmRBbGxQYWdlcygpO1xcblxcbmxldCByZXN1bHQgPSBJdGVyYWJsZXMuZ2V0Rmlyc3QocGlEYXNoYm9hcmRTZWFyY2gsIG51bGwpO1xcblxcbmlmIChyZXN1bHQpIHtcXG4gICAgbGluayA9IHJlc3VsdC5nZXRVcmwoKTtcXG4gICAgbmFtZSA9IHJlc3VsdC5nZXROYW1lKCk7XFxufVxcbiAgXFxucmV0dXJuICc8YSBocmVmPVxcXCInK2xpbmsrJ1xcXCJjbGFzcz1cXFwiY3VycmVudC1jb2xvclxcXCI-T3BlbiBUaW1lbGluZSBEYXNoYm9hcmQ8XC9hPic7XCIsXCJkZXNjcmlwdGlvblwiOlwiXCJ9In1dfV19</embeddedwidget></strong></h4>'
         widgetType: cf.cplace.demoWidgets.demoRichString
-- rows:
+  typeName: cf.cplace.solution.safe.event
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13434,7 +13679,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: de.visualistik.visualRoadmap.visualRoadmapConfiguration
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13659,7 +13906,9 @@
         - name: cf.platform.singleColumn
           value: true
         widgetType: cf.cplace.platform.attributesGroup
-- rows:
+  typeName: cf.cplace.solution.safe.confidenceVote
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13674,7 +13923,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.errorLog.errorlog
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13689,7 +13940,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.errorLog.errorCnt
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13704,7 +13957,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.lowcodeConversion
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13719,7 +13974,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.attributeMapping
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13734,7 +13991,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.interfaceDefinition
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13749,7 +14008,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.communicationSettings
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13764,7 +14025,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.header
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13779,7 +14042,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.cronSchedule
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13794,7 +14059,9 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
-- rows:
+  typeName: cf.cplace.genericInterface.stringConversion
+- layoutOwner: type
+  rows:
   - columns:
     - proportion: 12
       widgets:
@@ -13809,3 +14076,4 @@
       widgets:
       - attributes: null
         widgetType: cf.platform.incomingReferences
+  typeName: cf.cplace.genericInterface.imageConversion

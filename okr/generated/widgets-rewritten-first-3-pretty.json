@@ -306,7 +306,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.okr.layouts.demoCycle",
+        "localizedLayoutName": {
+            "de": "Demo-Layout",
+            "en": "Demo-Layout"
+        },
+        "typeName": "cf.cplace.solution.okr.cycle"
     },
     {
         "rows": [
@@ -599,7 +606,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.okr.cycle"
     },
     {
         "rows": [
@@ -828,6 +837,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.okr.layout.keyResults",
+        "localizedLayoutName": {
+            "de": "Key Results",
+            "en": "Key Results"
+        },
+        "typeName": "cf.cplace.solution.okr.set"
     }
 ]

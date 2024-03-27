@@ -484,6 +484,9 @@ def condense_widgets(widgets):
                     # if widget_type equals 'cf.cplace.visualizations.scriptingHighcharts'
                     if widget_type == 'cf.cplace.visualizations.scriptingHighcharts':
                         remove_attribute(widget_, 'cf.cplace.visualization.script')
+                        remove_attribute(widget_, 'cf.cplace.visualization.showFrame')
+                        remove_attribute(widget_, 'height')
+                        remove_attribute(widget_, 'sortOrder')
 
                     if widget_type == 'de.visualistik.visualRoadmap.widget':
                         remove_all_attributes(widget_)
@@ -605,10 +608,14 @@ def rewrite_widgets(widgets):
                                     elif isinstance(value, str) and value.startswith('r'):
                                         attribute['value'] = value[1:]
 
+
 def find_all_widgets(root, parent_map):
     result = []
     # Find elements by XPath and remove them
     for target in root.findall('.//widgetContainer'):
+
+        parent = parent_map[target]
+
         # convert target from xml to json
         as_json = xmltodict.parse(ET.tostring(target, encoding='utf-8', method='xml').decode('utf-8'))
 
@@ -690,6 +697,22 @@ def find_all_widgets(root, parent_map):
 
             # print(json.dumps(layoutAsJson, separators=(',', ':')))
             result.append(layout_as_json)
+            layout_as_json['layoutOwner'] = parent.tag
+            if 'typeDefinitionLayout' == parent.tag:
+                as_json = xmltodict.parse(ET.tostring(parent, encoding='utf-8', method='xml').decode('utf-8'))
+                type_definition_layout = as_json['typeDefinitionLayout']
+                layout_as_json['internalLayoutName'] = type_definition_layout['internalName']
+                layout_as_json['localizedLayoutName'] = json.loads(type_definition_layout['localizedName'])
+
+                type_ = parent_map[parent_map[parent]]
+                as_json = xmltodict.parse(ET.tostring(type_, encoding='utf-8', method='xml').decode('utf-8'))
+                layout_as_json['typeName'] = as_json['type']['name']
+
+        if 'type' == parent.tag:
+                as_json = xmltodict.parse(ET.tostring(parent, encoding='utf-8', method='xml').decode('utf-8'))
+                type_definition_layout = as_json['type']
+                layout_as_json['typeName'] = type_definition_layout['name']
+
     return result
 
 

@@ -401,7 +401,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "type",
+        "typeName": "cf.cplace.solution.safe.solution"
     },
     {
         "rows": [
@@ -1375,7 +1377,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.pi.layout.capabilities",
+        "localizedLayoutName": {
+            "en": "Capabilities"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     },
     {
         "rows": [
@@ -1576,6 +1584,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        "layoutOwner": "typeDefinitionLayout",
+        "internalLayoutName": "cf.cplace.solution.safe.pi.layout.objectives",
+        "localizedLayoutName": {
+            "de": "Objectives",
+            "en": "Objectives"
+        },
+        "typeName": "cf.cplace.solution.safe.programIncrement"
     }
 ]
