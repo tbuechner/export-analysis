@@ -375,8 +375,8 @@ def get_attribute_value(widget_, name):
                 return attribute['value']
 
 
-def count_widget_types(widgets, folder_name_generated):
-    widget_type_2_count = {}
+def count_widget_kinds(widgets, folder_name_generated):
+    widget_kind_2_count = {}
 
     # iterate over all widgets
     for widget in widgets:
@@ -389,13 +389,13 @@ def count_widget_types(widgets, folder_name_generated):
                     widget_type = widget_['widgetType']
 
                     # increase the count of the widgetType by 1
-                    if widget_type in widget_type_2_count:
-                        widget_type_2_count[widget_type] += 1
+                    if widget_type in widget_kind_2_count:
+                        widget_kind_2_count[widget_type] += 1
                     else:
-                        widget_type_2_count[widget_type] = 1
+                        widget_kind_2_count[widget_type] = 1
 
-    with open(folder_name_generated + '/' + 'widget-type-to-count.json', 'w') as f:
-        f.write(json.dumps(widget_type_2_count, indent=4))
+    with open(folder_name_generated + '/' + 'widget-kind-to-count.json', 'w') as f:
+        f.write(json.dumps(widget_kind_2_count, indent=4))
 
 
 def replace_embedded_widget(value):
@@ -464,6 +464,36 @@ def rewrite_search(search):
                 elif isinstance(value, str) and value.startswith('d'):
                     filter['values'][filter['values'].index(value)] = float(value[1:])
 
+
+def write_widgets_per_type(widgets, widgets_for_types_folder, folder_name_generated):
+    type_2_widgets = {}
+    type_2_count = {}
+
+    for widget in widgets:
+        type_name = widget['typeName']
+        if type_name is not None:
+            if type_name in type_2_widgets:
+                type_2_widgets[type_name].append(widget)
+            else:
+                type_2_widgets[type_name] = [widget]
+
+            # increase the count by 1
+            if type_name in type_2_count:
+                type_2_count[type_name] += 1
+            else:
+                type_2_count[type_name] = 1
+
+    for type_name in type_2_widgets:
+
+        simple_type_name = type_name.split(".")[-1]
+        simple_type_name = simple_type_name[0].lower() + simple_type_name[1:]
+
+        widgets = type_2_widgets[type_name]
+
+        write_json_to_file(widgets_for_types_folder, simple_type_name + '-widgets', widgets, True)
+
+    with open(folder_name_generated + '/' + 'widget-type-to-count.json', 'w') as f:
+        f.write(json.dumps(type_2_count, indent=4))
 
 
 def condense_widgets(widgets):
@@ -696,7 +726,15 @@ def find_all_widgets(root, parent_map):
 
             # print(json.dumps(layoutAsJson, separators=(',', ':')))
             result.append(layout_as_json)
-            layout_as_json['layoutOwner'] = parent.tag
+
+            layout_type = parent.tag
+            if 'page' == layout_type:
+                layout_type = 'pageLayout'
+            elif 'type' == layout_type:
+                layout_type = 'typeLayout'
+
+            layout_as_json['layoutType'] = layout_type
+
             if 'typeDefinitionLayout' == parent.tag:
                 as_json = xmltodict.parse(ET.tostring(parent, encoding='utf-8', method='xml').decode('utf-8'))
                 type_definition_layout = as_json['typeDefinitionLayout']
@@ -790,10 +828,15 @@ def run_for_folder(folder_name):
     write_json_to_file(folder_name_generated, "widgets-rewritten", widgets)
     write_json_to_file(folder_name_generated, "widgets-rewritten-first-3", widgets[:3])
 
-    count_widget_types(widgets, folder_name_generated)
+    count_widget_kinds(widgets, folder_name_generated)
 
     condense_widgets(widgets)
     write_json_to_file(folder_name_generated, "widgets-condensed", widgets)
+
+    widgets_folder_name = folder_name_generated + '/widgets-for-types'
+    os.mkdir(widgets_folder_name)
+
+    write_widgets_per_type(widgets, widgets_folder_name, folder_name_generated)
 
     remove_generic_elements(root, parent_map)
 
@@ -823,7 +866,7 @@ def run_for_folder(folder_name):
     copilot_examples_literals = generate_copilot_examples_literals(doc)
     write_to_file(folder_name_generated, "copilot_examples_literals.js", copilot_examples_literals)
 
-    types_folder_name = folder_name_generated + '/types'
+    types_folder_name = folder_name_generated + '/copilot-examples-for-types'
     os.mkdir(types_folder_name)
 
     convert_json_to_js(doc, folder_name_generated, True, False)
@@ -839,18 +882,15 @@ def run_for_folder(folder_name):
     # warnings.simplefilter("ignore", exceptions.SecurityWarning)
 
 
-def write_json_to_file(folder_name, file_name, o):
-    with open(folder_name + '/' + file_name + '-pretty.json', 'w') as f:
-        f.write(json.dumps(o, indent=4))
+def write_json_to_file(folder_name, file_name, o, omit_pretty_json=False):
+    if not omit_pretty_json:
+        with open(folder_name + '/' + file_name + '-pretty.json', 'w') as f:
+            f.write(json.dumps(o, indent=4))
     with open(folder_name + '/' + file_name + '-compressed.json', 'w') as f:
         f.write(json.dumps(o, separators=(',', ':')))
 
     with open(folder_name + '/' + file_name + '-pretty.yaml', 'w') as f:
-        # convert object to yaml and write it to file
-        # q: how to convert an object to yaml?
-        # a: use the yaml.dump function
         f.write(yaml.dump(o))
-
 
 def write_low_code_scripts_to_file(folder_name, low_code_folder_name, low_code_scripts):
     with open(folder_name + '/low-code-scripts.js', 'w') as f:

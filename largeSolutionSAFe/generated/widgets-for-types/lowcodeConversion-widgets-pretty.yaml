@@ -1,0 +1,14 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - widgetType: cf.platform.wiki
+  - columns:
+    - proportion: 6
+      widgets:
+      - widgetType: cf.platform.attributes
+    - proportion: 6
+      widgets:
+      - widgetType: cf.platform.incomingReferences
+  typeName: cf.cplace.genericInterface.lowcodeConversion

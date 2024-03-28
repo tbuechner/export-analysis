@@ -1,0 +1,281 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.buttonClass
+          value: btn-primary
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.buttonLabel
+          value:
+            de: "N\xE4chstes PI als aktiv festlegen"
+            en: Set Next PI as Active
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.confirmationDialogCancelButtonText
+          value:
+            de: Abbrechen
+            en: Cancel
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.confirmationDialogConfirmButtonText
+          value:
+            de: Ja
+            en: Ja
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.confirmationDialogText
+          value:
+            de: "Sind Sie sicher, dass sie das n\xE4chste PI als aktiv markieren m\xF6\
+              chten?"
+            en: Are you sure you want to mark the next PI as active?
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.dataSource
+          value: search
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.includeAllSearchResults
+          value: false
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.script
+          value:
+            description: ''
+            script: "/**\n * LOWCODE BUTTON\n * @customType cf.cplace.solution.safe.solution\n\
+              \ * @author Christopher W\xF6lfle <christopher.woelfle@cplace.com>\n\
+              \ * @version 1.0\n * @description Set previous current and next pi\n\
+              \ */\n\ncplace.setLogName(\"lowcodebutton_setAsCurrentPi\");\n\nconst\
+              \ DEBUG = true;\n\nconst PROGRAMM_INCREMENT = /** @type {const} */ ({\n\
+              \    TYPE: \"cf.cplace.solution.safe.programIncrement\",\n    ATTR:\
+              \ {\n        SOLUTION: \"cf.cplace.solution.safe.solution\",\n     \
+              \   START_DATE: \"cf.cplace.solution.safe.startDate\",\n        END_DATE:\
+              \ \"cf.cplace.solution.safe.endDate\",\n        PERIOD_STATUS: \"cf.cplace.solution.safe.periodStatus\"\
+              ,\n        PREDECESSOR: \"cf.cplace.solution.safe.predecessor\",\n \
+              \   },\n    ENUM: {\n        PERIOD_STATUS: {\n            DONE: \"\
+              #15 - done\",\n            ACTIVE: \"#25 - active\",\n        },\n \
+              \   },\n});\n\nconst SOLUTION = /** @type {const} */ ({\n    TYPE: \"\
+              cf.cplace.solution.safe.solution\",\n});\n\nfunction checkAccess() {\n\
+              \    return true;\n}\n\nfunction call() {\n    const newState = {\n\
+              \        \"cf.cplace.solution.safe.previousPi\": {},\n        \"cf.cplace.solution.safe.currentPi\"\
+              : {},\n        \"cf.cplace.solution.safe.nextPi\": {},\n    };\n   \
+              \ /** @type {Page<'cf.cplace.solution.safe.solution'> | null} */\n \
+              \   const solution = Iterables.getFirst(pages, null);\n    if (!solution)\
+              \ {\n        DEBUG && cplace.log(\"No solution provided\");\n      \
+              \  return {\n            message: {\n                de: \"Keine Solution\
+              \ in der Suche gefunden\",\n                en: \"No solution provided\
+              \ via Search\",\n            },\n        };\n    }\n\n    const currentPi\
+              \ = solution.get(\"cf.cplace.solution.safe.currentPi\");\n    if (!currentPi)\
+              \ {\n        DEBUG && cplace.log(\"No current PI\");\n        log.logText({\n\
+              \            de: \"Kein aktuelles PI gesetzt\",\n            en: \"\
+              No current PI\",\n        });\n        return;\n    }\n\n    const newPreviousPi\
+              \ = currentPi;\n    let newCurrentPi = solution.get(\"cf.cplace.solution.safe.nextPi\"\
+              );\n\n    if (!newCurrentPi) {\n        // If we don't have a next PI\
+              \ specified yet on the solution, we try to get the next PI where the\
+              \ predecessor is set to the current PI (newPreviousPi)\n        newCurrentPi\
+              \ = getNextPi(newPreviousPi);\n        if (!newCurrentPi) {\n      \
+              \      DEBUG && cplace.log(\"No next PI defined\");\n            log.logText({\n\
+              \                de: \"Kein n\xE4chstes PI definiert\",\n          \
+              \      en: \"No next PI defined\",\n            });\n            return;\n\
+              \        }\n    }\n    const newNextPi = getNextPi(newCurrentPi);\n\n\
+              \    if (!newNextPi) {\n        DEBUG && cplace.log(\"No next PI defined\"\
+              );\n        log.logText({\n            de: \"Kein \xFCbern\xE4chstes\
+              \ PI definiert\",\n            en: \"No PI defined after next PI\",\n\
+              \        });\n        return;\n    }\n    cplace.log(`New next PI: ${newNextPi.getName()}`);\n\
+              \n    newState[\"cf.cplace.solution.safe.previousPi\"] = newPreviousPi;\n\
+              \    newState[\"cf.cplace.solution.safe.currentPi\"] = newCurrentPi;\n\
+              \    newState[\"cf.cplace.solution.safe.nextPi\"] = newNextPi;\n\n \
+              \   cplace.actions().updatePage(solution, {\n        customAttributes:\
+              \ newState,\n    });\n\n    // Set new previous PI to done\n    cplace.actions().updatePage(currentPi,\
+              \ {\n        customAttributes: {\n            [PROGRAMM_INCREMENT.ATTR.PERIOD_STATUS]:\
+              \ PROGRAMM_INCREMENT.ENUM.PERIOD_STATUS.DONE,\n        },\n    });\n\
+              \n    // Set new current PI to active\n    cplace.actions().updatePage(newCurrentPi,\
+              \ {\n        customAttributes: {\n            [PROGRAMM_INCREMENT.ATTR.PERIOD_STATUS]:\
+              \ PROGRAMM_INCREMENT.ENUM.PERIOD_STATUS.ACTIVE,\n        },\n    });\n\
+              \    cplace.actions().refresh();\n\n    return {\n        message: {\n\
+              \            de: `Das n\xE4chste PI wurde erfolgreich auf ${newCurrentPi.getName()}\
+              \ gesetzt`,\n            en: `Successfully set the current PI to ${newCurrentPi.getName()}`,\n\
+              \        },\n    };\n}\n\n/**\n *\n * @param {Page<'cf.cplace.solution.safe.programIncrement'>}\
+              \ programIncrement\n */\nfunction getNextPi(programIncrement) {\n  \
+              \  /** @type {Page<'cf.cplace.solution.safe.programIncrement'>[]} */\n\
+              \    const results = Array.from(\n        programIncrement.getIncomingPages(PROGRAMM_INCREMENT.TYPE,\
+              \ PROGRAMM_INCREMENT.ATTR.PREDECESSOR)\n    );\n\n    if (results.length\
+              \ > 1) {\n        log.logText({\n            de: `Es gibt mehr als ein\
+              \ PI (${results\n                .map((pi) => pi.getName())\n      \
+              \          .join(\", \")}) bei dem der Vorg\xE4nger ${programIncrement.getName()}\
+              \ ist`,\n            en: `There is more than one PI (${results\n   \
+              \             .map((pi) => pi.getName())\n                .join(\",\
+              \ \")}) where the predecessor is: ${programIncrement.getName()}`,\n\
+              \        });\n        return null;\n    }\n    if (results.length ===\
+              \ 0) {\n        return null;\n    }\n    return results[0];\n}\n\n\n\
+              return { checkAccess, call };"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.showConfirmationDialog
+          value: true
+        - name: cf.cplace.lowCodeWidgets.lowCodeButtonWidget.showFrame
+          value: false
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.solution
+        - name: sortOrder
+          value: Aufsteigend
+        widgetType: cf.cplace.lowCodeWidgets.lowCodeButton
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: connectedTable
+        - name: tableWidgetId
+          value: id_21zt0dhrwiwry6tdghv6dlkyx
+        - name: title
+          value:
+            de: "Roadmap der Capabilities mit ihren Abh\xE4ngigkeiten"
+            en: Roadmap of Capabilities with Dependencies
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.wsjf'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+              search:
+                filters:
+                - contentTypes:
+                  - page
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: "Alle vorgesehenen Capabilities f\xFCr n\xE4chstes PI"
+            en: All nominated Capabilities for next PI
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+          name: content
+          value: 'r<h4 style="background-color: rgb(220, 220, 220); border-radius:
+            4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
+            14px; margin-bottom: 20px; padding: 10px">In the table below you can see
+            Capabilities, which are assigned to the next PI, but do not have any Features
+            related to it and also planned into the next PI, yet. You might want to
+            follow them up and either have Features planned or re-assign these Capabilities
+            to another upcoming PI.</h4>'
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.wsjf'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+              search:
+                filters:
+                - contentTypes:
+                  - page
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.solution
+            - not:
+                and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.capability
+                - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.programIncrement
+                    - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+                      search:
+                        filters:
+                        - contentTypes:
+                          - page
+                        - types:
+                          - cf.cplace.solution.safe.solution
+                - customIncomingSubSearch: cf.cplace.solution.safe.capability
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.feature
+                    - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+                      search:
+                        filters:
+                        - contentTypes:
+                          - page
+                        - types:
+                          - cf.cplace.solution.safe.programIncrement
+                        - customIncomingSubSearch: cf.cplace.solution.safe.nextPi
+                          search:
+                            filters:
+                            - contentTypes:
+                              - page
+                            - types:
+                              - cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: "Capabilities ohne Features f\xFCr n\xE4chstes PI"
+            en: Capabilities without Features for next PI
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.wsjf'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#35 - Backlog'
+            - not:
+                and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.capability
+                - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.programIncrement
+                    - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+                      search:
+                        filters:
+                        - contentTypes:
+                          - page
+                        - types:
+                          - cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: Backlog
+            en: Backlog
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.piPlanningDashboard

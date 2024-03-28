@@ -1,0 +1,304 @@
+- internalLayoutName: cf.cplace.solution.safe.layout.overview
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: "\xDCberblick"
+    en: Overview
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+          name: content
+          value: "r<table class=\"wip-counter\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th>&nbsp;</th>\n\
+            \t\t\t<th>Funnel</th>\n\t\t\t<th>Analyzing</th>\n\t\t\t<th>Backlog</th>\n\
+            \t\t\t<th>Implementing</th>\n\t\t\t<th>Validating</th>\n\t\t\t<th>Deploying</th>\n\
+            \t\t\t<th>Releasing</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\
+            \t\t\t<td>WIP</td>\n\t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t</tr>\n\t</tbody>\n</table>"
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.cboard.columnMapping
+          value:
+            dynamic: false
+            elements:
+            - id: g9unw5npx6wz3vkjhkjd5p43c
+              localizedNames:
+                de: Funnel
+                en: Funnel
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#15 - Funnel'
+            - id: vznjcj4c9zudtfki7zqhsropa
+              localizedNames:
+                de: Analyzing
+                en: Analyzing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#25 - Analyzing'
+            - id: g36h066uzhg2i3icylbda9uee
+              localizedNames:
+                de: Backlog
+                en: Backlog
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#35 - Backlog'
+            - id: 1l9p3wte5zpwx9hapgbfftnm4
+              localizedNames:
+                de: Implementing
+                en: Implementing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#45 - Implementing'
+            - id: znv18oi3vfjy9ts87k79v1pdz
+              localizedNames:
+                de: Validating
+                en: Validating
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#55 - Validating'
+            - id: nos4yen8sspfa702npid3fjrx
+              localizedNames:
+                de: Deploying
+                en: Deploying
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#65 - Deploying'
+            - id: 77t5tqlfkg222ka3q03d39urv
+              localizedNames:
+                de: Releasing
+                en: Releasing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#75 - Releasing'
+            - id: fhhc4zt1xa0vbknzklavwl02h
+              localizedNames:
+                de: Done
+                en: Done
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#85 - Done'
+            mappedAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.state
+              searchId: fol4wjc1jphsm3xz55lyy1y8c
+        - name: cf.cplace.cboard.height
+          value: 800.0
+        - name: cf.cplace.cboard.searchConfigurations
+          value:
+            attributeTags:
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.safe.wsjf
+              color: ''
+              valueLocalizedName: ''
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.safe.programIncrement
+              color: ''
+              valueLocalizedName: ''
+            cardActions:
+            - cardActionId: default/openInNewTab
+              enabled: true
+            - cardActionId: default/deleteCard
+              enabled: true
+            color: ''
+            colorAttribute:
+              key: cf.cplace.solution.safe.capabilityType
+              selection:
+                capability: '#0aa5ff'
+                enabler: '#ffc80c'
+            customIconAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.capabilityType
+              enabled: false
+            patternForCardDescription: '&lt;cf.cplace.solution.safe.description&gt;'
+            patternForCardTitle: ''
+            search: '{"filters":[{"relativeSpace":"true"},{"types":["cf.cplace.solution.safe.capability"]}]}'
+            searchId: fol4wjc1jphsm3xz55lyy1y8c
+            userReference: cf.cplace.solution.safe.capabilityowner
+            visibleDateAttribute: ''
+        - name: cf.cplace.cboard.swimlaneMapping
+          value:
+            dynamic: false
+            elements: []
+            mappedAttributes: []
+        - name: cf.cplace.cboard.title
+          value:
+            de: Solution Kanban
+            en: Solution Kanban
+        - name: cf.cplace.cboard.visualComponents
+          value:
+            addCardButtonEnabled: false
+            cardDetailsViewEnabled: true
+            recentHistoryButtonEnabled: false
+            recentHistoryTimeRangeWeeks: 2
+            spaceAfterLastColumnEnabled: true
+            unmappedCardsContainerEnabled: false
+            unmappedCardsContainerLocalizedNames: {}
+        widgetType: cf.cplace.cboard.main.board
+  typeName: cf.cplace.solution.safe.solutionKanbanDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+          name: content
+          value: "r<table class=\"wip-counter\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th>&nbsp;</th>\n\
+            \t\t\t<th>Funnel</th>\n\t\t\t<th>Analyzing</th>\n\t\t\t<th>Backlog</th>\n\
+            \t\t\t<th>Implementing</th>\n\t\t\t<th>Validating</th>\n\t\t\t<th>Deploying</th>\n\
+            \t\t\t<th>Releasing</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\
+            \t\t\t<td>WIP</td>\n\t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t\t<td><_embeddedwidget_></td>\n\
+            \t\t\t<td><_embeddedwidget_></td>\n\t\t</tr>\n\t</tbody>\n</table>"
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.cboard.columnMapping
+          value:
+            dynamic: false
+            elements:
+            - id: g9unw5npx6wz3vkjhkjd5p43c
+              localizedNames:
+                de: Funnel
+                en: Funnel
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#15 - Funnel'
+            - id: vznjcj4c9zudtfki7zqhsropa
+              localizedNames:
+                de: Analyzing
+                en: Analyzing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#25 - Analyzing'
+            - id: g36h066uzhg2i3icylbda9uee
+              localizedNames:
+                de: Backlog
+                en: Backlog
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#35 - Backlog'
+            - id: 1l9p3wte5zpwx9hapgbfftnm4
+              localizedNames:
+                de: Implementing
+                en: Implementing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#45 - Implementing'
+            - id: znv18oi3vfjy9ts87k79v1pdz
+              localizedNames:
+                de: Validating
+                en: Validating
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#55 - Validating'
+            - id: nos4yen8sspfa702npid3fjrx
+              localizedNames:
+                de: Deploying
+                en: Deploying
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#65 - Deploying'
+            - id: 77t5tqlfkg222ka3q03d39urv
+              localizedNames:
+                de: Releasing
+                en: Releasing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#75 - Releasing'
+            - id: fhhc4zt1xa0vbknzklavwl02h
+              localizedNames:
+                de: Done
+                en: Done
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#85 - Done'
+            mappedAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.state
+              searchId: fol4wjc1jphsm3xz55lyy1y8c
+        - name: cf.cplace.cboard.height
+          value: 700.0
+        - name: cf.cplace.cboard.searchConfigurations
+          value:
+            attributeTags:
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.safe.wsjf
+              color: ''
+              valueLocalizedName: ''
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.safe.programIncrement
+              color: ''
+              valueLocalizedName: ''
+            cardActions:
+            - cardActionId: default/openInNewTab
+              enabled: true
+            - cardActionId: default/deleteCard
+              enabled: true
+            color: ''
+            colorAttribute:
+              key: cf.cplace.solution.safe.capabilityType
+              selection:
+                capability: '#0aa5ff'
+                enabler: '#ffc80c'
+            customIconAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.capabilityType
+              enabled: false
+            - attributeSimpleName: cf.cplace.solution.safe.conflictState
+              enabled: true
+            patternForCardDescription: '&lt;cf.cplace.solution.safe.description&gt;'
+            patternForCardTitle: ''
+            search: '{"filters":[{"relativeSpace":"true"},{"types":["cf.cplace.solution.safe.capability"]}]}'
+            searchId: fol4wjc1jphsm3xz55lyy1y8c
+            userReference: cf.cplace.solution.safe.capabilityowner
+            visibleDateAttribute: ''
+        - name: cf.cplace.cboard.swimlaneMapping
+          value:
+            dynamic: false
+            elements: []
+            mappedAttributes: []
+        - name: cf.cplace.cboard.title
+          value:
+            de: Solution Kanban
+            en: Solution Kanban
+        - name: cf.cplace.cboard.visualComponents
+          value:
+            addCardButtonEnabled: false
+            cardDetailsViewEnabled: true
+            recentHistoryButtonEnabled: false
+            recentHistoryTimeRangeWeeks: 2
+            spaceAfterLastColumnEnabled: true
+            unmappedCardsContainerEnabled: false
+            unmappedCardsContainerLocalizedNames: {}
+        widgetType: cf.cplace.cboard.main.board
+  typeName: cf.cplace.solution.safe.solutionKanbanDashboard

@@ -1,0 +1,39 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: connectedTable
+        - name: tableWidgetId
+          value: _b8bymzbqgd3o78k65ngy1a4t3
+        - name: title
+          value:
+            de: Priorisierungsmatrix
+            en: Prioritization Matrix
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.wsjf'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+        - name: title
+          value:
+            de: Capabilities
+            en: Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.prioritizationDashboard

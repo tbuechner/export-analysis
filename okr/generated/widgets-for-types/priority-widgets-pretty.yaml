@@ -1,0 +1,203 @@
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.objective
+        - name: title
+          value:
+            de: Key Results des Objectives
+            en: Key Results of the Objective
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.priority
+- internalLayoutName: cf.cplace.solution.okr.layout.progress
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.objective'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.progress
+            - customOutgoingSubSearch: cf.cplace.solution.okr.keyResult
+              search:
+                filters:
+                - types:
+                  - cf.cplace.solution.okr.keyResult
+                - relativeSpace: 'true'
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.okr.objective
+        - name: title
+          value:
+            de: Fortschritt
+            en: Progress
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.priority
+- internalLayoutName: cf.cplace.solution.okr.layout.taskBoard
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.cboard.columnMapping
+          value:
+            dynamic: false
+            elements:
+            - countLabel: ''
+              id: b8emzbr9rdu22mwcdi73kjjb8
+              localizedNames:
+                de: Eingeplant
+                en: Planned
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#15 planned'
+              visible: true
+            - countLabel: ''
+              id: hod0k8ntk0p0sbmxbnumxltbb
+              localizedNames:
+                de: In Bearbeitung
+                en: In Progress
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#25 in progress'
+              visible: true
+            - countLabel: ''
+              id: n02h4le673793s13gv51m0jgk
+              localizedNames:
+                de: Fertig
+                en: Done
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#35 done'
+              visible: true
+            - countLabel: ''
+              id: vub0obod868jh9ciz6quzg7hl
+              localizedNames:
+                de: Abgelehnt
+                en: Cancelled
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#45 cancelled'
+              visible: true
+            mappedAttributes:
+            - attributeSimpleName: cf.cplace.digitalBoard.status
+              searchId: 9twltlyvvrojzi69kllwd3kn9
+        - name: cf.cplace.cboard.searchConfigurations
+          value:
+            attributeTags:
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.okr.keyResult
+              color: ''
+              valueLocalizedName: ''
+            cardActions:
+            - cardActionId: default/openInNewTab
+              enabled: true
+            - cardActionId: default/deleteCard
+              enabled: true
+            color: ''
+            colorAttribute:
+              key: cf.cplace.digitalBoard.status
+              selection:
+                '#15 planned': ''
+                '#25 in progress': ''
+                '#35 done': ''
+                '#45 cancelled': ''
+            customIconAttributes: []
+            patternForCardDescription: cf.cplace.solution.okr.title
+            patternForCardTitle: ''
+            search: '{"filters":[{"spaceIds":["root"]},{"types":["cf.cplace.solution.okr.task"]},{"customOutgoingSubSearch":"cf.cplace.solution.okr.keyResult","search":{"filters":[{"contentTypes":["page"]},{"types":["cf.cplace.solution.okr.keyResult"]},{"relativeSpace":"true"},{"relativeCustomReference":"cf.cplace.solution.okr.objective","referenceOperator":"embeddingCustomEntity"}]}
+              }]}'
+            searchId: 9twltlyvvrojzi69kllwd3kn9
+            userReference: cf.cplace.digitalBoard.responsible
+            visibleDateAttribute: cf.cplace.digitalBoard.dueDate
+        - name: cf.cplace.cboard.swimlaneMapping
+          value:
+            dynamic: false
+            elements: []
+            mappedAttributes: []
+        - name: cf.cplace.cboard.title
+          value:
+            de: Aufgaben
+            en: Tasks
+        - name: cf.cplace.cboard.visualComponents
+          value:
+            cardDetailsViewEnabled: false
+            recentHistoryButtonEnabled: false
+            recentHistoryTimeRangeWeeks: 2
+            spaceAfterLastColumnEnabled: true
+            unmappedCardsContainerEnabled: false
+        widgetType: cf.cplace.cboard.main.board
+  typeName: cf.cplace.solution.okr.priority
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 9
+      widgets:
+      - widgetType: cf.platform.wiki
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.title'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.dimension'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.date'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Attribute
+            en: Attributes
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        widgetType: cf.cplace.platform.attributesGroup
+      - widgetType: cf.platform.files
+  typeName: cf.cplace.solution.okr.priority

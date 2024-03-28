@@ -1,0 +1,266 @@
+- internalLayoutName: cf.cplace.solution.safe.layout.capabilities
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Capabilites
+    en: My Capabilities
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.state'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: sessionUser
+              relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
+        - name: title
+          value:
+            de: Meine Capabilities
+            en: My Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.myDashboard
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Meine Abh\xE4ngigkeiten"
+    en: My Dependencies
+  rows:
+  - columns:
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - or:
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - referenceOperator: sessionUser
+                      relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - referenceOperator: sessionUser
+                      relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten meiner Capabilities"
+            en: Dependencies of my capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedStartA'''
+                    widgetType: cf.platform.connectedSingleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedEndB'''
+                    widgetType: cf.platform.connectedSingleAttribute
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.description'''
+                    widgetType: cf.platform.connectedSingleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: "Details der ausgew\xE4hlten Abh\xE4ngigkeit"
+            en: Details of selected dependency
+        widgetType: cf.cplace.platform.connectedAttributesGroup
+  typeName: cf.cplace.solution.safe.myDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.drafts
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Meine Drafts
+    en: My Drafts
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: sessionUser
+              relativeCustomReference: cf.cplace.solution.safe.capabilityowner
+            - referenceOperator: ca_cf.cplace.solution.safe.parent
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+        - name: title
+          value:
+            de: "Meine Capabililty Entw\xFCrfe"
+            en: My Draft Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.myDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">My Capabilities</div>
+
+            </div>
+
+
+            <div class="cts-card-icon"><i class="cf fa-fw cf-card-expanded"></i></div>
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: My Capabilities
+            en: My Capabilities
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.genericInterface.api.widgets.simpleButton.alignment
+          value: left
+        - name: cf.cplace.genericInterface.api.widgets.simpleButton.showFrame
+          value: true
+        - name: cf.cplace.genericInterface.api.widgets.triggerInterfaceButton.exportEmbeddingPage
+          value: false
+        - name: cf.cplace.genericInterface.api.widgets.triggerInterfaceButton.interfaceDefinition
+          value: lpage/dsmbyhpe5ciakwg2h1yz4qrmf
+        - name: cf.cplace.genericInterface.api.widgets.triggerInterfaceButton.sameWorkspace
+          value: true
+        - name: cf.cplace.genericInterface.api.widgets.triggerInterfaceButton.uploadFile
+          value: false
+        widgetType: cf.cplace.genericInterface.api.widgets.triggerInterfaceButton
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">My Drafts</div>
+
+            </div>
+
+
+            <div class="cts-card-icon"><i class="fas fa-pencil-ruler"></i></div>
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: Drafts
+            en: Drafts
+        widgetType: cf.cplace.demoWidgets.demoRichString
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">My Dependencies</div>
+
+            </div>
+
+
+            <div class="cts-card-icon"><i class="far fa-fw fa-arrows-h"></i></div>
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: My Dependencies
+            en: My Dependencies
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe.layout.capabilities
+            - cf.cplace.solution.safe.layout.drafts
+            - cf.cplace.solution.safe.dependencies
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.myDashboard

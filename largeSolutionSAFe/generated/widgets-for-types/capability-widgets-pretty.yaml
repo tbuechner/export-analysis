@@ -1,0 +1,465 @@
+- internalLayoutName: cf.place.solution.safe.layout.breakdown
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Breakdown
+    en: Breakdown
+  rows:
+  - columns:
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.program'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Program
+            en: Program
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 3
+      widgets: []
+    - proportion: 6
+      widgets: []
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.featureType'''
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.status'''
+            sortOrder: asc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.feature
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.safe.capability
+        - name: title
+          value:
+            de: Alle Features der Capability
+            en: All Features of the Capability
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.comments
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Comments
+    en: Comments
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - widgetType: cf.platform.comments
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Abh\xE4ngigkeiten"
+    en: Dependencies
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten Visualisierung"
+            en: Dependency Visualization
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.dependency
+            - relativeSpace: 'true'
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.safe.successor
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten der Capability"
+            en: Dependencies of the capability
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.dependency
+            - relativeSpace: 'true'
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.safe.predecessor
+        - name: title
+          value:
+            de: Artifacts with dependencies to this capability
+            en: Artifacts with dependencies to this capability
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.details
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Details
+    en: Details
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: attributeName
+          value: cf.cplace.solution.safe.description
+        - name: cf.cplace.customRichStringAttribute.showFrame
+          value: true
+        widgetType: cf.platform.customRichStringAttribute
+      - attributes:
+        - name: attributeName
+          value: cf.cplace.solution.safe.benefitHypothesis
+        - name: cf.cplace.customRichStringAttribute.showFrame
+          value: true
+        widgetType: cf.platform.customRichStringAttribute
+      - attributes:
+        - name: attributeName
+          value: cf.cplace.solution.safe.acceptanceCriteria
+        - name: cf.cplace.customRichStringAttribute.showFrame
+          value: true
+        widgetType: cf.platform.customRichStringAttribute
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.definitions
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    en: DoR/DoD
+  rows:
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: content
+          value: "<table border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"\
+            width: 100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<h4 style=\"background-color:\
+            \ rgb(220, 220, 220); border-radius: 4px; border: 1px solid transparent;\
+            \ color: rgb(118, 118, 118); font-size: 14px; margin-bottom: 20px; padding:\
+            \ 10px\">Definition of Ready:</h4>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:\
+            \ left; vertical-align: middle; width: 20%\"><_embeddedwidget_></td>\n\
+            \t\t</tr>\n\t</tbody>\n</table>\n\n<ul>\n\t<li>Capability is Well-Defined:\
+            \ A capability must be well-defined and clear, with acceptance criteria\
+            \ that are specific and measurable.</li>\n\t<li>Dependencies Identified:\
+            \ All dependencies must be identified and resolved before the capability\
+            \ can be accepted into the sprint.</li>\n\t<li>Acceptance Criteria: The\
+            \ acceptance criteria for the capability must be agreed upon by the team,\
+            \ and they should be specific, measurable, and achievable.</li>\n\t<li>Story\
+            \ Points: The capability should be estimated in story points, which is\
+            \ an estimation technique used in Agile development to indicate the relative\
+            \ effort required to implement a capability.</li>\n\t<li>Design and Architecture:\
+            \ The design and architecture of the solution must be reviewed and approved\
+            \ by the architecture team.</li>\n\t<li>Testability: The capability must\
+            \ be testable, and the team must have a plan in place to test it thoroughly.</li>\n\
+            </ul>"
+        - name: localizedWidgetTitle
+          value:
+            de: DoR criteria
+            en: DoR criteria
+        widgetType: cf.cplace.demoWidgets.demoRichString
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: content
+          value: "<table border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"\
+            width: 100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<h4 style=\"background-color:\
+            \ rgb(220, 220, 220); border-radius: 4px; border: 1px solid transparent;\
+            \ color: rgb(118, 118, 118); font-size: 14px; margin-bottom: 20px; padding:\
+            \ 10px\">Definition of Done:</h4>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:\
+            \ left; vertical-align: middle; width: 20%\"><_embeddedwidget_></td>\n\
+            \t\t</tr>\n\t</tbody>\n</table>\n\n<ul>\n\t<li>Code is reviewed and checked\
+            \ in to the code repository.</li>\n\t<li>Automated unit tests are written\
+            \ and pass successfully.</li>\n\t<li>Code is integrated with the main\
+            \ branch.</li>\n\t<li>System and integration tests are run and pass successfully.</li>\n\
+            \t<li>Security and performance testing is completed and pass successfully.</li>\n\
+            \t<li>Documentation is created and updated, including user guides and\
+            \ technical documentation.</li>\n</ul>"
+        - name: localizedWidgetTitle
+          value:
+            de: DoD criteria
+            en: DoD criteria
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.prioritization
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Priorisierung
+    en: Prioritization
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeUid: embeddingCustomEntity
+            - types:
+              - cf.cplace.solution.safe.capability
+        - name: title
+          value:
+            de: Priorisierungsmatrix
+            en: Prioritization Matrix
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.businessValue'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.jobSize'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.wsjf'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.timeCriticality'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.riskReduction'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Weighted Shortest Job First
+            en: Weighted Shortest Job First
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 400.0
+        widgetType: cf.cplace.platform.attributesGroup
+  typeName: cf.cplace.solution.safe.capability
+- internalLayoutName: cf.cplace.solution.safe.layout.timeline
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Timeline
+    en: Timeline
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - or:
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - referenceOperator: ca_cf.cplace.solution.safe.solution.reference
+                  relativeCustomReference: cf.cplace.solution.safe.solution
+              - types:
+                - cf.cplace.solution.safe.safeMilestone
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.event
+                - referenceOperator: ca_cf.cplace.solution.safe.solution.reference
+                  relativeCustomReference: cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: "Zeitplan \xDCbersicht"
+            en: Timeline Overview
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.capability
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.localizedAlternativeLabel
+                      values:
+                      - localizedString: '{"de":"Capability Owner","en":"Capability
+                          Owner"}'
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.capabilityowner'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.portfolioEpic'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.capabilityType'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.state'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.flowTime'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.conflictState'''
+                    - name: cf.platform.showAttributeScript
+                      values:
+                      - string: '{"version":1,"script":"const conflictState = embeddingPage.get(''cf.cplace.solution.safe.conflictState'');\n\nif
+                          (conflictState) {\n  return true;\n}\nreturn false;","upgradeAck":true,"description":""}'
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Details
+            en: Details
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 300.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.programIncrement'''
+                    widgetType: cf.platform.singleAttribute
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedStart'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedEnd'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.actualStartDate'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.actualEndDate'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Dates
+            en: Dates
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 300.0
+        widgetType: cf.cplace.platform.attributesGroup
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layoutSelection
+          value: cf.cplace.solution.safe.layout.details
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe.layout.details
+            - cf.place.solution.safe.layout.breakdown
+            - cf.cplace.solution.safe.dependencies
+            - cf.cplace.solution.safe.layout.prioritization
+            - cf.cplace.solution.safe.layout.definitions
+            - cf.cplace.solution.safe.layout.comments
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+          name: content
+          value: 'r<h4 style="background-color: rgb(220, 220, 220); border-radius:
+            4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
+            14px; margin-bottom: 20px; padding: 10px; text-align: center"><strong><_embeddedwidget_></strong></h4>'
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  typeName: cf.cplace.solution.safe.capability

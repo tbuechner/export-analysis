@@ -402,7 +402,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.safe.solution"
     },
     {
@@ -1378,7 +1378,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.safe.pi.layout.capabilities",
         "localizedLayoutName": {
             "en": "Capabilities"
@@ -1585,7 +1585,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.safe.pi.layout.objectives",
         "localizedLayoutName": {
             "de": "Objectives",

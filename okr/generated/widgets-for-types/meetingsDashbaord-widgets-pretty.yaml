@@ -1,0 +1,40 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <p><_embeddedwidget_></p>
+        - name: localizedWidgetTitle
+          value:
+            de: Meetings
+            en: Meetings
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.simpleCalendar.enableEventLinks
+          value: true
+        - name: cf.cplace.simpleCalendar.showActions
+          value: true
+        - name: cf.cplace.simpleCalendar.showFrame
+          value: true
+        - name: cf.cplace.simpleCalendar.showTypeSelector
+          value: true
+        - name: cf.cplace.simpleCalendar.showYearSelector
+          value: false
+        - name: cf.cplace.simpleCalendar.shownTypes
+          value: cf.cplace.solution.okr.meeting
+        - name: cf.cplace.simpleCalendar.title
+          value:
+            de: Kalender
+            en: Calender
+        - name: cf.cplace.simpleCalendar.view
+          value: month
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.meeting
+        widgetType: cf.cplace.simpleCalendar.calendar
+  typeName: cf.cplace.solution.okr.meetingsDashbaord

@@ -1,0 +1,112 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - or:
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - referenceOperator: parentOfEmbeddingPage
+                  relativeCustomReference: cf.cplace.solution.safe.solution
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.safeMilestone
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.event
+        - name: cf.cplace.visualization.tableSelectionOnly
+          value: false
+        - name: title
+          value:
+            de: "Zeitplan \xDCbersicht"
+            en: Timeline Overview
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: '<h4 style="background-color: rgb(220, 220, 220); border-radius:
+            4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
+            14px; margin-bottom: 20px; padding: 10px"><strong>Create and manage the
+            SAFe milestones, events and PIs in the tables below. Zoom in on the chart
+            by holding down the mouse and dragging a window around the area you want
+            to see in more detail.</strong></h4>'
+        - name: localizedWidgetTitle
+          value:
+            de: Information
+            en: Information
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.startDate'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.programIncrement
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: Program Increments
+            en: Program Increments
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.date'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.safeMilestone
+        - name: title
+          value:
+            de: SAFe Meilensteine
+            en: SAFe Milestones
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.startDate'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.event
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution
+        - name: title
+          value:
+            de: Events
+            en: Events
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.timelineDashboard

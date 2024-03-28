@@ -1,0 +1,11 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - widgetType: cf.platform.wiki
+  - columns:
+    - proportion: 12
+      widgets:
+      - widgetType: cf.platform.files
+  typeName: cf.cplace.enumerationIcons.page

@@ -1,0 +1,126 @@
+- internalLayoutName: cf.cplace.solution.safe.layout.capabilities
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution PI Roadmap
+    en: Capabilities
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: connectedTable
+        - name: tableWidgetId
+          value: _c43cb19vnxdtekfbptt2pller
+        - name: title
+          value:
+            de: "Roadmap der Capabilities mit ihren Abh\xE4ngigkeiten"
+            en: Roadmap of Capabilities with Dependencies
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+        - name: title
+          value:
+            de: Capabilities
+            en: Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: connectedTableWidgetId
+          value: _c43cb19vnxdtekfbptt2pller
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - or:
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - referenceOperator: connectedTable
+                  relativeCustomReference: cf.cplace.solution.safe.successor
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - referenceOperator: connectedTable
+                  relativeCustomReference: cf.cplace.solution.safe.predecessor
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten der ausgew\xE4hlten Capability"
+            en: Dependencies of selected capability
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard
+- internalLayoutName: cf.cplace.solution.layout.solutionRoadmap
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Epen
+    en: Epics
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - widgetType: de.visualistik.visualRoadmap.widget
+      - attributes:
+          name: tableWidgetId
+          value: s_gi8oxtef2dwz1ph48dgp91jjp
+        widgetType: cf.platform.connectedTableFilter
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.state'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
+              - '#85 - Done'
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+        - name: title
+          value:
+            de: Capabilities
+            en: Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.layout.solutionRoadmap
+            - cf.cplace.solution.safe.layout.capabilities
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.solutionRoadmapDashboard

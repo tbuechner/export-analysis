@@ -277,6 +277,7 @@ class LinkAttribute:
         print(f"comparing {json_self} and {json_other}: {result}")
         return result
 
+
 def convert_json_to_js(data, folder_name, one_file, use_chained_calls=False):
     js_code = ""
     for type_def in data["export"]["workspace"]["types"]:

@@ -1,0 +1,529 @@
+- internalLayoutName: cf.cplace.solution.okr.layout.keyResults
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Key Results
+    en: Key Results
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.objective'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: Alle Key Results
+            en: All Key Results
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.objectives
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.objective
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: Objectives des Sets
+            en: Objectives of the set
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: connectedTableWidgetId
+          value: id_krxj2czydelid81fodg1x5syo
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: connectedTable
+              relativeCustomReference: cf.cplace.solution.okr.objective
+        - name: title
+          value:
+            de: "Key Results zum ausgew\xE4hlten Objective"
+            en: Key Results of the selected Objective
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.progress
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Fortschritt
+    en: Progress
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <div class="custom-stm-button-wrapper"><_embeddedwidget_><_embeddedwidget_></div>
+        - name: localizedWidgetTitle
+          value:
+            de: Flag outdated Key Results
+            en: Flag outdated Key Results
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.objective'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.progress
+            - customOutgoingSubSearch: cf.cplace.solution.okr.keyResult
+              search:
+                filters:
+                - types:
+                  - cf.cplace.solution.okr.keyResult
+                - relativeSpace: 'true'
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: Fortschritt
+            en: Progress
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.setOkrs
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Set OKRs
+    en: Set OKRs
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributes
+          value:
+          - s{"parentType":"cf.cplace.solution.okr.objective","incomingType":"cf.cplace.solution.okr.keyResult","name":"cf.cplace.solution.okr.objective"}
+          - s{"parentType":"cf.cplace.solution.okr.set","incomingType":"cf.cplace.solution.okr.objective","name":"cf.cplace.solution.okr.set"}
+        - name: cf.cplace.platform.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+              - cf.cplace.solution.okr.objective
+              - cf.cplace.solution.okr.set
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.set
+        widgetType: cf.cplace.treeTableWidget
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.support
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Unterst\xFCtzung"
+    en: Support
+  rows:
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.set'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: ca_cf.cplace.solution.okr.cycle
+              relativeCustomReference: cf.cplace.solution.okr.cycle
+            - customIncomingSubSearch: cf.cplace.solution.okr.giveBigSupport
+              search:
+                filters:
+                - contentTypes:
+                  - page
+                - types:
+                  - cf.cplace.solution.okr.keyResult
+                - relativeSpace: 'true'
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: "Wir haben GRO\xDFE Unterst\xFCtzung f\xFCr andere Teams zugesagt"
+            en: We committed BIG support for other teams
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.set'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: ca_cf.cplace.solution.okr.cycle
+              relativeCustomReference: cf.cplace.solution.okr.cycle
+            - customOutgoingSubSearch: cf.cplace.solution.okr.giveBigSupport
+              search:
+                filters:
+                - types:
+                  - cf.cplace.solution.okr.keyResult
+                - spaceIds:
+                  - root
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: "Wir bekommen GRO\xDFE Unterst\xFCtzung von anderen Teams"
+            en: We receive BIG support from other teams
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.set'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: ca_cf.cplace.solution.okr.cycle
+              relativeCustomReference: cf.cplace.solution.okr.cycle
+            - referenceOperator: ca_cf.cplace.solution.okr.organizationalUnit
+              relativeCustomReference: cf.cplace.solution.okr.smallSupport
+        - name: title
+          value:
+            de: "Wir haben KLEINE Unterst\xFCtzung f\xFCr andere Teams zugesagt"
+            en: We committed SMALL support for other teams
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.okr.smallSupport'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: ca_cf.cplace.solution.okr.cycle
+              relativeCustomReference: cf.cplace.solution.okr.cycle
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.set
+            - not:
+                and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.okr.keyResult
+                - customAttributeValue: cf.cplace.solution.okr.smallSupport
+                  operator: equals
+        - name: title
+          value:
+            de: "Wir bekommen KLEINE Unterst\xFCtzung von anderen Teams"
+            en: We receive SMALL support from other teams
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.tasks
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Tasks
+    en: Tasks
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.cboard.columnMapping
+          value:
+            dynamic: false
+            elements:
+            - countLabel: ''
+              id: b8emzbr9rdu22mwcdi73kjjb8
+              localizedNames:
+                de: Eingeplant
+                en: Planned
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#15 planned'
+              visible: true
+            - countLabel: ''
+              id: hod0k8ntk0p0sbmxbnumxltbb
+              localizedNames:
+                de: In Bearbeitung
+                en: In Progress
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#25 in progress'
+              visible: true
+            - countLabel: ''
+              id: n02h4le673793s13gv51m0jgk
+              localizedNames:
+                de: Fertig
+                en: Done
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#35 done'
+              visible: true
+            - countLabel: ''
+              id: vub0obod868jh9ciz6quzg7hl
+              localizedNames:
+                de: Abgelehnt
+                en: Cancelled
+              mappedValues:
+              - referenceValues: []
+                searchId: 9twltlyvvrojzi69kllwd3kn9
+                values:
+                - '#45 cancelled'
+              visible: true
+            mappedAttributes:
+            - attributeSimpleName: cf.cplace.digitalBoard.status
+              searchId: 9twltlyvvrojzi69kllwd3kn9
+        - name: cf.cplace.cboard.searchConfigurations
+          value:
+            attributeTags:
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.okr.keyResult
+              color: ''
+              valueLocalizedName: ''
+            cardActions:
+            - cardActionId: default/openInNewTab
+              enabled: true
+            - cardActionId: default/copyCard
+              enabled: true
+            - cardActionId: default/deleteCard
+              enabled: true
+            - cardActionId: raiseHands
+              enabled: true
+            color: '#aedb3c'
+            colorAttribute:
+              key: cf.cplace.digitalBoard.escalationLevel
+              selection:
+                '#15 - none': '#aedb3c'
+                '#25 - handRaised': '#fac036'
+            customIconAttributes:
+            - attributeSimpleName: cf.cplace.digitalBoard.escalationLevel
+              enabled: true
+            patternForCardDescription: cf.cplace.solution.okr.title
+            patternForCardTitle: ''
+            search: '{"filters":[{"types":["cf.cplace.solution.okr.task"]},{"customOutgoingSubSearch":"cf.cplace.solution.okr.keyResult","search":{"filters":[{"types":["cf.cplace.solution.okr.keyResult"]},{"relativeSpace":"true"},{"relativeCustomReference":"cf.cplace.solution.okr.set","referenceOperator":"embeddingCustomEntity"}]}},{"relativeSpace":"true"}]}'
+            searchId: 9twltlyvvrojzi69kllwd3kn9
+            userReference: cf.cplace.digitalBoard.responsible
+            visibleDateAttribute: cf.cplace.digitalBoard.dueDate
+        - name: cf.cplace.cboard.swimlaneMapping
+          value:
+            dynamic: false
+            elements: []
+            mappedAttributes: []
+        - name: cf.cplace.cboard.title
+          value:
+            de: Aufgaben
+            en: Tasks
+        - name: cf.cplace.cboard.visualComponents
+          value:
+            cardDetailsViewEnabled: false
+            recentHistoryButtonEnabled: false
+            recentHistoryTimeRangeWeeks: 2
+            spaceAfterLastColumnEnabled: true
+            unmappedCardsContainerEnabled: false
+        widgetType: cf.cplace.cboard.main.board
+  typeName: cf.cplace.solution.okr.set
+- internalLayoutName: cf.cplace.solution.okr.layout.team
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Team
+    en: Team
+  rows:
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.setLead'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.setContributors'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Team
+            en: Team
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 450.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: content
+          value: '<p><span style="font-size: 20px"><strong>Set Lead</strong></span></p>
+
+
+            <p>The Set Lead is responsible to succesfully carry out the whole set
+            including objectives and key results. The lead is responsible for the
+            cross company communication and administrational parts of the OKR method.
+            It includes setting up the meetings, like the 1 on 1&#39;s, leadership
+            meetings and OKR workshop.</p>
+
+
+            <p>Besides the own responsibilities of the assigned set, the lead needs
+            to ensure the support of the organizational unit to other departments
+            where required. It also includes adding one objective to reach the goal
+            of another department.</p>
+
+
+            <p><span style="font-size: 20px"><strong>Set Contributor</strong></span></p>
+
+
+            <p>The set contributors are the employees participating in reaching the
+            objectives of this set. It includes every involved people of the corresponding
+            department that actively works on one of the key results.</p>
+
+
+            <p>A set contributor&#39;s responsiblities are updating the progress,
+            work on the assigned key results and tasks, take part in the meetings
+            and add possible topics in the workshop for future objectives or key results.</p>'
+        - name: height
+          value: 450.0
+        - name: localizedWidgetTitle
+          value:
+            de: Rollenbeschreibung
+            en: Role Descriptions
+        widgetType: cf.platform.richString
+  typeName: cf.cplace.solution.okr.set
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <p><_embeddedwidget_></p>
+        - name: localizedWidgetTitle
+          value:
+            de: Set Banner
+            en: Set Banner
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 9
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.cycle'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.organizationalUnit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.okr.setLead'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Allgemein
+            en: General
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.keyResult
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.set
+        - name: title
+          value:
+            de: Key Results Donut Chart
+            en: Key Results Donut Chart
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+      - attributes:
+        - name: content
+          value: '<p style="text-align: center"><strong><img alt="On track" src="https://solution-templates.cplace.de/okr/__bjyw0htwau60j0x3936bdi52f/icons/enumeration/circle-003-green.svg"
+            />&nbsp;On track&nbsp;<img alt="Progressing" src="https://solution-templates.cplace.de/okr/__bjyw0htwau60j0x3936bdi52f/icons/enumeration/circle-002-yellow.svg"
+            />&nbsp;Progressing<br />
+
+            <img alt="Off track" src="https://solution-templates.cplace.de/okr/__bjyw0htwau60j0x3936bdi52f/icons/enumeration/circle-001-red.svg"
+            />&nbsp;Off track&nbsp;</strong><img alt="Outdated" src="https://solution-templates.cplace.de/okr/__bjyw0htwau60j0x3936bdi52f/icons/enumeration/circle-000-gray.svg"
+            />&nbsp;<strong>Outdated</strong></p>'
+        - name: localizedWidgetTitle
+          value:
+            de: Legende
+            en: Legend
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layoutSelection
+          value: cf.cplace.solution.okr.progress
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.okr.layout.objectives
+            - cf.cplace.solution.okr.layout.keyResults
+            - cf.cplace.solution.okr.progress
+            - cf.cplace.solution.okr.layout.tasks
+            - cf.cplace.solution.okr.support
+            - cf.cplace.solution.okr.layout.team
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.okr.set

@@ -1,0 +1,383 @@
+- internalLayoutName: cf.cplace.solution.safe
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Alle Capabilities
+    en: All Capabilities
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.state'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#15 - Funnel'
+              - '#25 - Analyzing'
+              - '#35 - Backlog'
+              - '#45 - Implementing'
+              - '#55 - Validating'
+              - '#65 - Deploying'
+              - '#75 - Releasing'
+              - '#85 - Done'
+        - name: title
+          value:
+            de: Capabilities
+            en: Capabilities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.backlog
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Backlog
+    en: Backlog
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.state'''
+        - name: multiSortColumns
+          value:
+          - sortColumn: '''cf.cplace.solution.safe.wsjf'''
+            sortOrder: desc
+            sortingPriorityIndex: 1
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: parentOfEmbeddingPage
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.state
+              values:
+              - '#35 - Backlog'
+        - name: title
+          value:
+            de: Backlog
+            en: Backlog
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.breakdown
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Breakdown
+    en: Breakdown
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.type'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.epic
+        - name: title
+          value:
+            de: Portfolio Epics
+            en: Portfolio Epics
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.type'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.epic
+            - not:
+                and:
+                - types:
+                  - cf.cplace.solution.safe.epic
+                - customIncomingSubSearch: cf.cplace.solution.safe.portfolioEpic
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+        - name: title
+          value:
+            de: Portfolio Epics ohne Capability
+            en: Portfolio Epics without Capability
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: connectedTableWidgetId
+          value: _p8bo0h21oqcdnfcoyv0wu7kl6
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.capabilityType'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: connectedTable
+              relativeCustomReference: cf.cplace.solution.safe.portfolioEpic
+            - referenceOperator: ca_cf.cplace.solution.safe.parent
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+        - name: title
+          value:
+            de: "Capabilities des ausgew\xE4hlten Epics"
+            en: Capabilities of selected epic
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+        - name: connectedTableWidgetId
+          value: _p8bo0h21oqcdnfcoyv0wu7kl6
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.capabilityType'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - referenceOperator: connectedTable
+              relativeCustomReference: cf.cplace.solution.safe.portfolioEpic
+            - referenceOperator: ca_cf.cplace.solution.safe.parent
+              relativeCustomReference: cf.cplace.solution.safe.solution.reference
+            - not:
+                and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.capability
+                - customIncomingSubSearch: cf.cplace.solution.safe.capability
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.feature
+        - name: title
+          value:
+            de: "Capabilities des ausgew\xE4hlten Epics ohne Features"
+            en: Capabilities of selected epic without features
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: connectedTableWidgetId
+          value: _v3dcxeaqrbd67hkuph769s3yt
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.featureType'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.feature
+            - referenceOperator: connectedTable
+              relativeCustomReference: cf.cplace.solution.safe.capability
+        - name: title
+          value:
+            de: "Features der ausgew\xE4hlten Capability"
+            en: Features of the selected capability
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.conflicts
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Konflikte
+    en: Conflicts
+  rows:
+  - columns:
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - types:
+              - cf.cplace.solution.safe.dependency
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.status
+              values:
+              - 25 - conflict
+              - 35 - resolved
+        - name: title
+          value:
+            de: Konflikte
+            en: Conflicts
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedStartA'''
+                    widgetType: cf.platform.connectedSingleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedEndB'''
+                    widgetType: cf.platform.connectedSingleAttribute
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.description'''
+                    widgetType: cf.platform.connectedSingleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: "Details des ausgew\xE4hlten Konflikts"
+            en: Details of selected conflict
+        widgetType: cf.cplace.platform.connectedAttributesGroup
+  typeName: cf.cplace.solution.safe.breakdownDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">Epics</div>
+
+            </div>
+
+
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            en: Epics
+        widgetType: cf.cplace.demoWidgets.demoRichString
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">Capabilities</div>
+
+            </div>
+
+
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: Capabilities
+            en: Capabilities
+        widgetType: cf.cplace.demoWidgets.demoRichString
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">Features</div>
+
+            </div>
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: Features
+            en: Features
+        widgetType: cf.cplace.demoWidgets.demoRichString
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: content
+          value: '<div class="cts-card cts-icon-square-right v2">
+
+            <div class="cts-card-body">
+
+            <div class="cts-card-description cts-card-title-top">
+
+            <div class="cts-card-title"><_embeddedwidget_></div>
+
+
+            <div class="cts-card-subtitle">Conflicts</div>
+
+            </div>
+
+
+            <div class="cts-card-icon"><i class="fa fa-ban"></i></div>
+
+            </div>
+
+            </div>'
+        - name: localizedWidgetTitle
+          value:
+            de: Conflicts
+            en: Conflicts
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe
+            - cf.cplace.solution.safe.layout.backlog
+            - cf.cplace.solution.safe.layout.breakdown
+            - cf.cplace.solution.safe.layout.conflicts
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.breakdownDashboard

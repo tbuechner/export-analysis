@@ -1,4 +1,4 @@
-- layoutOwner: type
+- layoutType: typeLayout
   rows:
   - columns:
     - proportion: 4
@@ -598,7 +598,7 @@
         widgetType: cf.cplace.demoWidgets.demoRichString
   typeName: cf.cplace.solution.safe.solution
 - internalLayoutName: cf.cplace.solution.safe.pi.layout.capabilities
-  layoutOwner: typeDefinitionLayout
+  layoutType: typeDefinitionLayout
   localizedLayoutName:
     en: Capabilities
   rows:
@@ -1077,7 +1077,7 @@
         widgetType: cf.platform.embeddedSearchAsTable
   typeName: cf.cplace.solution.safe.programIncrement
 - internalLayoutName: cf.cplace.solution.safe.pi.layout.objectives
-  layoutOwner: typeDefinitionLayout
+  layoutType: typeDefinitionLayout
   localizedLayoutName:
     de: Objectives
     en: Objectives

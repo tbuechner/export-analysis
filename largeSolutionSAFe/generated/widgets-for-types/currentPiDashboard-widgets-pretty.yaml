@@ -1,0 +1,563 @@
+- internalLayoutName: cf.cplace.solution.safe.dependencies
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: "Abh\xE4ngigkeiten"
+    en: Dependencies
+  rows:
+  - columns:
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.status'''
+        - name: search
+          value:
+            filters:
+            - or:
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                      relativeCustomReference: cf.cplace.solution.safe.programIncrement
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                      relativeCustomReference: cf.cplace.solution.safe.programIncrement
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten von Capabilities im laufenden PI"
+            en: Dependencies of capabilities in the current PI
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedStartA'''
+                    widgetType: cf.platform.connectedSingleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedEndB'''
+                    widgetType: cf.platform.connectedSingleAttribute
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: attributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.description'''
+                    widgetType: cf.platform.connectedSingleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: "Details der ausgew\xE4hlten Abh\xE4ngigkeit"
+            en: Details of selected dependency
+        widgetType: cf.cplace.platform.connectedAttributesGroup
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.kanban
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Kanban
+    en: Kanban
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.cboard.columnMapping
+          value:
+            dynamic: false
+            elements:
+            - id: g36h066uzhg2i3icylbda9uee
+              localizedNames:
+                de: Backlog
+                en: Backlog
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#35 - Backlog'
+            - id: 1l9p3wte5zpwx9hapgbfftnm4
+              localizedNames:
+                de: Implementing
+                en: Implementing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#45 - Implementing'
+            - id: znv18oi3vfjy9ts87k79v1pdz
+              localizedNames:
+                de: Validating
+                en: Validating
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#55 - Validating'
+            - id: nos4yen8sspfa702npid3fjrx
+              localizedNames:
+                de: Deploying
+                en: Deploying
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#65 - Deploying'
+            - id: 77t5tqlfkg222ka3q03d39urv
+              localizedNames:
+                de: Releasing
+                en: Releasing
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#75 - Releasing'
+            - id: fhhc4zt1xa0vbknzklavwl02h
+              localizedNames:
+                de: Done
+                en: Done
+              mappedValues:
+              - referenceValues: []
+                searchId: fol4wjc1jphsm3xz55lyy1y8c
+                values:
+                - '#85 - Done'
+            mappedAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.state
+              searchId: fol4wjc1jphsm3xz55lyy1y8c
+        - name: cf.cplace.cboard.height
+          value: 600.0
+        - name: cf.cplace.cboard.searchConfigurations
+          value:
+            attributeTags:
+            - attributeLocalizedName: ''
+              attributeSimpleName: cf.cplace.solution.safe.jobSize
+              color: ''
+              valueLocalizedName: ''
+            cardActions:
+            - cardActionId: default/openInNewTab
+              enabled: true
+            - cardActionId: default/deleteCard
+              enabled: true
+            color: ''
+            colorAttribute:
+              key: cf.cplace.solution.safe.capabilityType
+              selection:
+                capability: '#0aa5ff'
+                enabler: '#ffc80c'
+            customIconAttributes:
+            - attributeSimpleName: cf.cplace.solution.safe.capabilityType
+              enabled: false
+            - attributeSimpleName: cf.cplace.solution.safe.conflictState
+              enabled: true
+            patternForCardDescription: '&lt;cf.cplace.solution.safe.description&gt;'
+            patternForCardTitle: ''
+            search: '{"filters":[{"relativeSpace":"true"},{"types":["cf.cplace.solution.safe.capability"]},{"customOutgoingSubSearch":"cf.cplace.solution.safe.programIncrement","search":{"filters":[{"contentTypes":["page"]},{"types":["cf.cplace.solution.safe.programIncrement"]},{"spaceIds":["yzsjfzcs3f2n1gs8a27u8o38z"]},{"customAttributeMultiExactValues":"cf.cplace.solution.safe.periodStatus","values":["s#25
+              - active"]}]} }]}'
+            searchId: fol4wjc1jphsm3xz55lyy1y8c
+            userReference: cf.cplace.solution.safe.capabilityowner
+            visibleDateAttribute: ''
+        - name: cf.cplace.cboard.swimlaneMapping
+          value:
+            dynamic: false
+            elements: []
+            mappedAttributes: []
+        - name: cf.cplace.cboard.title
+          value:
+            de: Solution Kanban
+            en: Solution Kanban
+        - name: cf.cplace.cboard.visualComponents
+          value:
+            addCardButtonEnabled: true
+            cardDetailsViewEnabled: true
+            recentHistoryButtonEnabled: false
+            recentHistoryTimeRangeWeeks: 2
+            spaceAfterLastColumnEnabled: true
+            unmappedCardsContainerEnabled: false
+            unmappedCardsContainerLocalizedNames: {}
+        widgetType: cf.cplace.cboard.main.board
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.Objectives
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Objectives
+    en: Objectives
+  rows:
+  - columns:
+    - proportion: 9
+      widgets:
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.commitment'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.objective
+            - customOutgoingSubSearch: cf.cplace.solution.safe.timebox
+              search:
+                filters:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.solution
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
+              values:
+              - '#15 - Solution'
+            - customAttributeValue: cf.cplace.solution.safe.SAFeLevel.Reference
+              linkValue: page/vaz9x2vt9b4szlugpaz3h8w4p
+              operator: equals
+        - name: title
+          value:
+            de: "Objectives f\xFCr Current PI - Solution Level"
+            en: Objectives for Current PI - Solution Level
+        widgetType: cf.platform.embeddedSearchAsTable
+      - attributes:
+        - name: groupColumn
+          value: '''cf.cplace.solution.safe.commitment'''
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.objective
+            - customOutgoingSubSearch: cf.cplace.solution.safe.timebox
+              search:
+                filters:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - customIncomingSubSearch: cf.cplace.solution.safe.currentPi
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.solution
+            - customAttributeMultiExactValues: cf.cplace.solution.safe.SAFeLevel
+              values:
+              - '#25 - Program'
+        - name: title
+          value:
+            de: "Objectives f\xFCr Current PI -  Program Level"
+            en: Objectives for Current PI - Program Level
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.confidenceVote
+            - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+              relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+        - name: title
+          value:
+            de: Confidence Vote Overview
+            en: Confidence Vote Overview
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.localizedAlternativeLabel
+                      values:
+                      - localizedString: '{"de":"Confidence Vote","en":"Confidence
+                          Vote"}'
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.result'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.oneFinger'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.twoFingers'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.threeFingers'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.fourFingers'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.fiveFingers'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Confidence Vote
+            en: Confidence Vote
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.confidenceVote
+        widgetType: cf.cplace.platform.attributesGroup
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- internalLayoutName: cf.cplace.solution.safe.currentPI.layout.SolutionPlanning
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution Planning
+    en: Solution Planning
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: connectedTable
+        - name: tableWidgetId
+          value: _5gk8c2xvjaqe9uvfunoqvq53e
+        - name: title
+          value:
+            de: Solution Planning Board mit Dependencies
+            en: Solution Planning Board with Dependencies
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 9
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+            - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+              search:
+                filters:
+                - contentTypes:
+                  - page
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - spaceIds:
+                  - yzsjfzcs3f2n1gs8a27u8o38z
+                - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+                  values:
+                  - s#25 - active
+        - name: title
+          value:
+            de: Overview Capabilities Current PI
+            en: Overview Capabilities Current PI
+        widgetType: cf.platform.embeddedSearchAsTable
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: connectedTableWidgetId
+          value: _5gk8c2xvjaqe9uvfunoqvq53e
+        - name: search
+          value:
+            filters:
+            - or:
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - referenceOperator: connectedTable
+                  relativeCustomReference: cf.cplace.solution.safe.successor
+                - customOutgoingSubSearch: cf.cplace.solution.safe.predecessor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+                      search:
+                        filters:
+                        - contentTypes:
+                          - page
+                        - types:
+                          - cf.cplace.solution.safe.programIncrement
+                        - spaceIds:
+                          - yzsjfzcs3f2n1gs8a27u8o38z
+                        - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+                          values:
+                          - s#25 - active
+              - and:
+                - types:
+                  - cf.cplace.solution.safe.dependency
+                - referenceOperator: connectedTable
+                  relativeCustomReference: cf.cplace.solution.safe.predecessor
+                - customOutgoingSubSearch: cf.cplace.solution.safe.successor
+                  search:
+                    filters:
+                    - contentTypes:
+                      - page
+                    - types:
+                      - cf.cplace.solution.safe.capability
+                      - cf.cplace.solution.safe.safeMilestone
+                    - customOutgoingSubSearch: cf.cplace.solution.safe.programIncrement
+                      search:
+                        filters:
+                        - contentTypes:
+                          - page
+                        - types:
+                          - cf.cplace.solution.safe.programIncrement
+                        - spaceIds:
+                          - yzsjfzcs3f2n1gs8a27u8o38z
+                        - customAttributeMultiExactValues: cf.cplace.solution.safe.periodStatus
+                          values:
+                          - s#25 - active
+        - name: title
+          value:
+            de: "Abh\xE4ngigkeiten"
+            en: Dependencies
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.currentPiDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.title'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.localizedAlternativeLabel
+                      values:
+                      - localizedString: '{"de":"Confidence Vote","en":"Confidence
+                          Vote"}'
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.confidenceVote.Result'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.capacity'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.startDate'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.endDate'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            en: General Information
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.currentPi
+        - name: height
+          value: 300.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - or:
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.capability
+                - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                  relativeCustomReference: cf.cplace.solution.safe.programIncrement
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.confidenceVote
+                - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                  relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+        - name: title
+          value:
+            de: Solution PI Statistics
+            en: Solution PI Statistics
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layoutSelection
+          value: cf.cplace.solution.safe.currentPI.layout.SolutionPlanning
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe.currentPI.layout.SolutionPlanning
+            - cf.cplace.solution.safe.currentPI.layout.kanban
+            - cf.cplace.solution.safe.currentPI.layout.Objectives
+            - cf.cplace.solution.safe.dependencies
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.currentPiDashboard

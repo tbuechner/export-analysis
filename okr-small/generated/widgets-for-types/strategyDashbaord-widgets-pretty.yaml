@@ -1,0 +1,93 @@
+- internalLayoutName: cf.cplace.solution.okr.layout.roadmap
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Roadmap
+    en: Roadmap
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: connectedTable
+        - name: tableWidgetId
+          value: id_pa786honx76nx7q1zh1baxdwv
+        - name: title
+          value:
+            de: Strategic Priorities
+            en: Strategic Priorities
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.priority
+            - referenceOperator: embeddingCustomEntity
+              relativeCustomReference: cf.cplace.solution.okr.strategyDashboard
+        - name: title
+          value:
+            de: "Priorit\xE4ten"
+            en: Priorities
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.okr.strategyDashbaord
+- internalLayoutName: cf.cplace.solution.okr.layout.strategyPaper
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Strategiepapier
+    en: Strategy Paper
+  rows:
+  - columns:
+    - proportion: 9
+      widgets:
+      - attributes:
+        - name: imageHeight
+          value: 600.0
+        - name: showFrame
+          value: true
+        - name: showNav
+          value: when_required
+        - name: title
+          value:
+            de: Vorschau
+            en: Preview
+        widgetType: msg.scripts.imagegallery.basic
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.filesWidget.sortOrder
+          value: asc
+        - name: cf.cplace.platform.filesWidget.title
+          value:
+            de: Dateien
+            en: Files
+        - name: height
+          value: 600.0
+        widgetType: cf.platform.files
+  typeName: cf.cplace.solution.okr.strategyDashbaord
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <p><_embeddedwidget_></p>
+        - name: localizedWidgetTitle
+          value:
+            de: Strategy Banner
+            en: Strategy Banner
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.okr.strategyDashbaord

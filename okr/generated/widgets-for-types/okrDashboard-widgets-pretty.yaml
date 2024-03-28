@@ -1,0 +1,133 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.okr.organizationalUnit
+            - customAttributeValue: cf.cplace.solution.okr.organizationalUnit
+              operator: equals
+        - name: title
+          value:
+            de: Org Chart
+            en: Org Chart
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+      - attributes:
+        - name: content
+          value: '<div class="strips strips-50v">
+
+            <div class="strips__strip">
+
+            <div class="strip__content">
+
+            <h1 data-name="Marketing">Marketing</h1>
+
+
+            <div class="strip__inner-text">
+
+            <h2><_embeddedwidget_></h2>
+
+            <_embeddedwidget_></div>
+
+            </div>
+
+            </div>
+
+
+            <div class="strips__strip">
+
+            <div class="strip__content">
+
+            <h1 data-name="Sales">Sales</h1>
+
+
+            <div class="strip__inner-text">
+
+            <h2><_embeddedwidget_></h2>
+
+
+            <p><_embeddedwidget_></p>
+
+            </div>
+
+            </div>
+
+            </div>
+
+
+            <div class="strips__strip">
+
+            <div class="strip__content">
+
+            <h1 data-name="Engineering">Engineering</h1>
+
+
+            <div class="strip__inner-text">
+
+            <h2><_embeddedwidget_></h2>
+
+
+            <p><_embeddedwidget_></p>
+
+            </div>
+
+            </div>
+
+            </div>
+
+
+            <div class="strips__strip">
+
+            <div class="strip__content">
+
+            <h1 data-name="Product">Product</h1>
+
+
+            <div class="strip__inner-text">
+
+            <h2><_embeddedwidget_></h2>
+
+
+            <p><_embeddedwidget_></p>
+
+            </div>
+
+            </div>
+
+            </div>
+
+
+            <div class="strips__strip">
+
+            <div class="strip__content">
+
+            <h1 data-name="Company">Company</h1>
+
+
+            <div class="strip__inner-text">
+
+            <h2><_embeddedwidget_></h2>
+
+
+            <p><_embeddedwidget_></p>
+
+            </div>
+
+            </div>
+
+            </div>
+
+            <i class="fa fa-close strip__close"></i></div>'
+        - name: localizedWidgetTitle
+          value:
+            de: Dashboard Strips
+            en: Dashboard Strips
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  typeName: cf.cplace.solution.okr.okrDashboard

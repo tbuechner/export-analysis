@@ -307,7 +307,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layouts.demoCycle",
         "localizedLayoutName": {
             "de": "Demo-Layout",
@@ -607,7 +607,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.cycle"
     },
     {
@@ -838,7 +838,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.keyResults",
         "localizedLayoutName": {
             "de": "Key Results",

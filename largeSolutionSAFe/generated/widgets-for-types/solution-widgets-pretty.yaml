@@ -1,0 +1,160 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: '<p style="text-align: center"><_embeddedwidget_></p>'
+        - name: height
+          value: 180.0
+        - name: localizedWidgetTitle
+          value:
+            de: Verantwortliche
+            en: Responsibles
+        widgetType: cf.platform.richString
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: content
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Beschreibung
+            en: Description
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 180.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n\t<tbody>\n\
+            \t\t<tr>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\t\
+            <h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143,\
+            \ 140)\"><_embeddedwidget_></span></span></h4>\n\t\t\t</td>\n\t\t\t<td\
+            \ style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"\
+            font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><_embeddedwidget_></span></span></h4>\n\
+            \t\t\t</td>\n\t\t\t<td style=\"text-align: center; width: 25%\">\n\t\t\
+            \t<h4><span style=\"font-size: 26px\"><span style=\"color: rgb(61, 143,\
+            \ 140)\"><_embeddedwidget_></span></span></h4>\n\t\t\t</td>\n\t\t\t<td\
+            \ style=\"text-align: center; width: 25%\">\n\t\t\t<h4><span style=\"\
+            font-size: 26px\"><span style=\"color: rgb(61, 143, 140)\"><_embeddedwidget_></span></span></h4>\n\
+            \t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align: center\"\
+            >\n\t\t\t<h5><span style=\"color: rgb(61, 143, 140)\">ARTs</span></h5>\n\
+            \t\t\t</td>\n\t\t\t<td style=\"text-align: center\">\n\t\t\t<h5><span\
+            \ style=\"color: rgb(61, 143, 140)\">Teams</span></h5>\n\t\t\t</td>\n\t\
+            \t\t<td style=\"text-align: center\">\n\t\t\t<h5><span style=\"color:\
+            \ rgb(61, 143, 140)\">Capabilities</span></h5>\n\t\t\t</td>\n\t\t\t<td\
+            \ style=\"text-align: center; width: 127px\">\n\t\t\t<h5><span style=\"\
+            color: rgb(61, 143, 140)\">Features</span></h5>\n\t\t\t</td>\n\t\t</tr>\n\
+            \t</tbody>\n</table>"
+        - name: height
+          value: 180.0
+        - name: localizedWidgetTitle
+          value:
+            de: Statistik
+            en: Statistics
+        widgetType: cf.platform.richString
+  - columns:
+    - proportion: 4
+      widgets:
+      - attributes:
+        - name: content
+          value: '<p><_embeddedwidget_></p>
+
+
+            <div class="current-pi">
+
+            <div class="cplace-ckeditor-img-full-maxwidth" style="background-color:
+            rgb(119, 222, 166); border-radius: 4px; border: 1px solid transparent;
+            color: rgb(60, 118, 61); font-size: 14px; margin-bottom: 20px; padding:
+            10px; text-align: center"><span style="color: rgb(0, 0, 0)"><strong><_embeddedwidget_></strong></span></div>
+
+            </div>'
+        - name: height
+          value: 230.0
+        - name: localizedWidgetTitle
+          value:
+            de: Laufendes PI
+            en: Current PI
+        widgetType: cf.platform.richString
+    - proportion: 8
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - or:
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.capability
+                - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                  relativeCustomReference: cf.cplace.solution.safe.programIncrement
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.confidenceVote
+                - referenceOperator: ca_cf.cplace.solution.safe.currentPi
+                  relativeCustomReference: cf.cplace.solution.safe.confidenceVote.PI
+        - name: title
+          value:
+            de: Current PI Statistics
+            en: Current PI Statistics
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - or:
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.programIncrement
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.safe.solution
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.safeMilestone
+              - and:
+                - relativeSpace: 'true'
+                - types:
+                  - cf.cplace.solution.safe.event
+                - referenceOperator: embeddingCustomEntity
+                  relativeCustomReference: cf.cplace.solution.safe.solution
+        - name: cf.cplace.visualization.tableSelectionOnly
+          value: false
+        - name: title
+          value:
+            de: "Zeitplan \xDCbersicht"
+            en: Timeline Overview
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+      - attributes:
+          name: content
+          value: 'r<p style="text-align: center"><img alt="" height="16" src="/large-solution-safe/editor-icon/cplace-exclamation-circle.png"
+            title="" width="16">&nbsp;<strong>Zoom in on the chart by holding down
+            the mouse and dragging a window around the area you want to see in more
+            detail. Hold Shift to move forward or back in the timeline in the chart.</strong></p>'
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  typeName: cf.cplace.solution.safe.solution

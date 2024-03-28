@@ -156,7 +156,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layouts.demoCycle",
         "localizedLayoutName": {
             "de": "Demo-Layout",
@@ -306,7 +306,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.cycle"
     },
     {
@@ -376,7 +376,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.keyResults",
         "localizedLayoutName": {
             "de": "Key Results",
@@ -507,7 +507,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.objectives",
         "localizedLayoutName": {
             "de": "Objectives",
@@ -593,7 +593,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.progress",
         "localizedLayoutName": {
             "de": "Fortschritt",
@@ -631,7 +631,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.setOkrs",
         "localizedLayoutName": {
             "de": "Set OKRs",
@@ -876,7 +876,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.support",
         "localizedLayoutName": {
             "de": "Unterst\u00fctzung",
@@ -923,7 +923,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.tasks",
         "localizedLayoutName": {
             "de": "Tasks",
@@ -1006,7 +1006,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.team",
         "localizedLayoutName": {
             "de": "Team",
@@ -1172,7 +1172,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.set"
     },
     {
@@ -1222,7 +1222,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.details",
         "localizedLayoutName": {
             "de": "Beschreibung",
@@ -1289,7 +1289,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.keyResults",
         "localizedLayoutName": {
             "de": "Key Results",
@@ -1375,7 +1375,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.progress",
         "localizedLayoutName": {
             "de": "Fortschritt",
@@ -1422,7 +1422,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.taskBoard",
         "localizedLayoutName": {
             "de": "Tasks",
@@ -1588,7 +1588,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.objective"
     },
     {
@@ -1623,7 +1623,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.files",
         "localizedLayoutName": {
             "de": "Dateien",
@@ -1765,7 +1765,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.progress",
         "localizedLayoutName": {
             "de": "Fortschritt",
@@ -1812,7 +1812,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.taskBoard",
         "localizedLayoutName": {
             "de": "Tasks",
@@ -1974,7 +1974,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.keyResult"
     },
     {
@@ -2036,7 +2036,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.progress"
     },
     {
@@ -2121,7 +2121,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.task"
     },
     {
@@ -2168,7 +2168,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.updateKeyResult"
     },
     {
@@ -2230,7 +2230,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.organizationalUnit"
     },
     {
@@ -2295,7 +2295,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.okrDashboard"
     },
     {
@@ -2365,7 +2365,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.myKeyResults",
         "localizedLayoutName": {
             "de": "Meine Key Results",
@@ -2496,7 +2496,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.myObjectives",
         "localizedLayoutName": {
             "de": "Meine Objectives",
@@ -2567,7 +2567,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.myProgress",
         "localizedLayoutName": {
             "de": "Meine Fortschritte",
@@ -2826,7 +2826,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.mySupport",
         "localizedLayoutName": {
             "de": "Mein Support",
@@ -2873,7 +2873,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.myTasks",
         "localizedLayoutName": {
             "de": "Mein Aufgaben",
@@ -2940,7 +2940,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.place.solution.okr.okrProposals",
         "localizedLayoutName": {
             "de": "OKR Vorschl\u00e4ge",
@@ -3007,7 +3007,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.myDashboard"
     },
     {
@@ -3100,7 +3100,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.roadmap",
         "localizedLayoutName": {
             "de": "Roadmap",
@@ -3167,7 +3167,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.strategyPaper",
         "localizedLayoutName": {
             "de": "Strategiepapier",
@@ -3217,7 +3217,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.strategyDashbaord"
     },
     {
@@ -3247,7 +3247,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.cyclesDashboard"
     },
     {
@@ -3320,7 +3320,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.meetingsDashbaord"
     },
     {
@@ -3356,7 +3356,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.okrManualDashboard"
     },
     {
@@ -3657,7 +3657,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.cycles",
         "localizedLayoutName": {
             "de": "Cycle",
@@ -3728,7 +3728,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.organizationalUnits",
         "localizedLayoutName": {
             "de": "Organisationseinheiten",
@@ -3803,7 +3803,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.permissions",
         "localizedLayoutName": {
             "de": "Berechtigungen",
@@ -3934,7 +3934,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.template",
         "localizedLayoutName": {
             "de": "Template",
@@ -3992,7 +3992,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.administrationDashboard"
     },
     {
@@ -4054,7 +4054,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.keyResults",
         "localizedLayoutName": {
             "de": "Key Results",
@@ -4125,7 +4125,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.progress",
         "localizedLayoutName": {
             "de": "Fortschritt",
@@ -4172,7 +4172,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.taskBoard",
         "localizedLayoutName": {
             "de": "Tasks",
@@ -4244,7 +4244,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.priority"
     },
     {
@@ -4291,7 +4291,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "default.page"
     },
     {
@@ -4361,7 +4361,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.1on1",
         "localizedLayoutName": {
             "de": "1on1",
@@ -4401,7 +4401,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.files",
         "localizedLayoutName": {
             "de": "Dateien",
@@ -4476,7 +4476,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.leadership",
         "localizedLayoutName": {
             "de": "Leadership",
@@ -4515,7 +4515,7 @@
                 ]
             }
         ],
-        "layoutOwner": "typeDefinitionLayout",
+        "layoutType": "typeDefinitionLayout",
         "internalLayoutName": "cf.cplace.solution.okr.layout.workshop",
         "localizedLayoutName": {
             "de": "Workshop",
@@ -4594,7 +4594,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.meeting"
     },
     {
@@ -4641,7 +4641,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.simpleCalendar.eventClassConfiguration"
     },
     {
@@ -4688,7 +4688,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "default.file"
     },
     {
@@ -4724,7 +4724,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.enumerationIcons.page"
     },
     {
@@ -4771,7 +4771,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.settings"
     },
     {
@@ -4869,7 +4869,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.topic"
     },
     {
@@ -4916,7 +4916,7 @@
                 ]
             }
         ],
-        "layoutOwner": "type",
+        "layoutType": "typeLayout",
         "typeName": "cf.cplace.solution.okr.selectNextCycle"
     }
 ]

@@ -1,0 +1,143 @@
+- internalLayoutName: cf.cplace.solution.safe.layout.flowDistribution
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Distribution
+    en: Flow Distribution
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.programIncrement
+        - name: title
+          value:
+            de: Flow Distribution
+            en: Flow Distribution
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowEfficiency
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Efficiency
+    en: Flow Efficiency
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: title
+          value:
+            de: Flow Efficiency
+            en: Flow Efficiency
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowPredictability
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Predictability
+    en: Flow Predictability
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.programIncrement
+        - name: title
+          value:
+            de: Flow Predictability
+            en: Flow Predictability
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowTime
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Time
+    en: Flow Time
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.capability
+        - name: title
+          value:
+            de: Flow Time
+            en: Flow Time
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.flowVelocity
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Flow Velocity
+    en: Flow Velocity
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.visualization.dataSource
+          value: search
+        - name: cf.cplace.visualization.search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.solution.safe.programIncrement
+        - name: title
+          value:
+            de: Flow Velocity
+            en: Flow Velocity
+        widgetType: cf.cplace.visualizations.scriptingHighcharts
+  typeName: cf.cplace.solution.safe.metricsDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layoutSelection
+          value: cf.cplace.solution.safe.layout.flowTime
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe.layout.flowTime
+            - cf.cplace.solution.safe.layout.flowDistribution
+            - cf.cplace.solution.safe.layout.flowVelocity
+            - cf.cplace.solution.safe.layout.flowPredictability
+            - cf.cplace.solution.safe.layout.flowLoad
+            - cf.cplace.solution.safe.layout.flowEfficiency
+            - cf.cplace.solution.safe.layout.Predictability
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.metricsDashboard

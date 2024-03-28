@@ -1,0 +1,15 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <p><_embeddedwidget_></p>
+        - name: localizedWidgetTitle
+          value:
+            de: OKR Manual Banner
+            en: OKR Manual Banner
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - widgetType: cf.platform.wiki
+  typeName: cf.cplace.solution.okr.okrManualDashboard

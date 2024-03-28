@@ -1,0 +1,197 @@
+- internalLayoutName: cf.cplace.solution.safe.layout.kanban
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Kanban
+    en: Kanban
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: content
+          value: <p><strong>Here you can specify the Work In Progress Limits for the
+            Kanban board. If you don&#39;t want to have a limit, you can leave the
+            field empty.</strong></p>
+        - name: localizedWidgetTitle
+          value:
+            de: Information
+            en: Information
+        widgetType: cf.cplace.demoWidgets.demoRichString
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 3
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.funnelWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.analyzingWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.backlogWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.implementingWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.validatingWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.deployingWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.releasingWIPLimit'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 3
+                  widgets: []
+                - proportion: 3
+                  widgets: []
+                - proportion: 3
+                  widgets: []
+              - columns:
+                - proportion: 12
+                  widgets: []
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: WIP Limits
+            en: WIP Limits
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.parent
+        widgetType: cf.cplace.platform.attributesGroup
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.solutionDetails
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Solution Details
+    en: Solution Details
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 3
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.solutionTrainEngineer'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.solutionTrainArchitect'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.solutionManagement'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 3
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.currentPi'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.previousPi'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.nextPi'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 3
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.shortName'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 3
+                  widgets: []
+              - columns:
+                - proportion: 12
+                  widgets: []
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Solution Details
+            en: Solution Details
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.parent
+        widgetType: cf.cplace.platform.attributesGroup
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- internalLayoutName: cf.cplace.solution.safe.layout.vdm
+  layoutType: typeDefinitionLayout
+  localizedLayoutName:
+    de: Visual Domain Model
+    en: Visual Domain Model
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: search
+          value:
+            filters:
+            - relativeSpace: 'true'
+            - types:
+              - cf.cplace.visualDomainModel.graph
+        - name: title
+          value:
+            de: Visual Domain Model
+            en: Visual Domain Model
+        widgetType: cf.platform.embeddedSearchAsTable
+  typeName: cf.cplace.solution.safe.administrationDashboard
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+        - name: cf.cplace.layoutTabsWidget.cplacejsLayouts
+          value:
+            description: ''
+            script: "var layoutConfig = {\n    layouts: selectedLayouts,\n    active:\
+              \ selectedActiveLayout\n};\n\nreturn layoutConfig;"
+            upgradeAck: true
+            version: 1
+        - name: cf.cplace.layoutTabsWidget.layouts
+          value:
+            layouts:
+            - cf.cplace.solution.safe.layout.solutionDetails
+            - cf.cplace.solution.safe.layout.kanban
+            - cf.cplace.solution.safe.layout.vdm
+        - name: cf.cplace.layoutTabsWidget.sourceForLayouts
+          value: simpleLayoutSelection
+        widgetType: cf.cplace.layoutTabsWidget.widget
+  typeName: cf.cplace.solution.safe.administrationDashboard

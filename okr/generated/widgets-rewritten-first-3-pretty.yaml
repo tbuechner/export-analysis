@@ -1,5 +1,5 @@
 - internalLayoutName: cf.cplace.solution.okr.layouts.demoCycle
-  layoutOwner: typeDefinitionLayout
+  layoutType: typeDefinitionLayout
   localizedLayoutName:
     de: Demo-Layout
     en: Demo-Layout
@@ -476,7 +476,7 @@
             en: Demo Set Leads
         widgetType: cf.cplace.demoWidgets.demoRichString
   typeName: cf.cplace.solution.okr.cycle
-- layoutOwner: type
+- layoutType: typeLayout
   rows:
   - columns:
     - proportion: 12
@@ -878,7 +878,7 @@
         widgetType: cf.cplace.demoWidgets.demoRichString
   typeName: cf.cplace.solution.okr.cycle
 - internalLayoutName: cf.cplace.solution.okr.layout.keyResults
-  layoutOwner: typeDefinitionLayout
+  layoutType: typeDefinitionLayout
   localizedLayoutName:
     de: Key Results
     en: Key Results

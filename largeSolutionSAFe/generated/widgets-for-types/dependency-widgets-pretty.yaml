@@ -1,0 +1,174 @@
+- layoutType: typeLayout
+  rows:
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.localizedAlternativeLabel
+                      values:
+                      - localizedString: '{"de":"Capability/Milestone A","en":"Capability/Milestone
+                          A"}'
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.successor'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.type'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 4
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.localizedAlternativeLabel
+                      values:
+                      - localizedString: '{"de":"Capability/Milestone B","en":"Capability/Milestone
+                          B"}'
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.predecessor'''
+                    widgetType: cf.platform.singleAttribute
+              - columns:
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.title'''
+                    widgetType: cf.platform.singleAttribute
+                - proportion: 6
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.status'''
+                    widgetType: cf.platform.singleAttribute
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.description'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: "Abh\xE4ngigkeit Details"
+            en: Dependency Details
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: embedding
+        - name: height
+          value: 350.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.programIncrement'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedStart'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.date'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Details A
+            en: Details A
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.successor
+        - name: height
+          value: 350.0
+        widgetType: cf.cplace.platform.attributesGroup
+    - proportion: 3
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.attributesGroup.layout
+          value:
+            widgetsLayout:
+              rows:
+              - columns:
+                - proportion: 12
+                  widgets:
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.programIncrement'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.plannedEnd'''
+                    widgetType: cf.platform.singleAttribute
+                  - configuration:
+                    - name: cf.platform.quotedAttributeName
+                      values:
+                      - string: '''cf.cplace.solution.safe.date'''
+                    widgetType: cf.platform.singleAttribute
+        - name: cf.cplace.platform.attributesGroup.localizedTitle
+          value:
+            de: Details B
+            en: Details B
+        - name: cf.cplace.platform.attributesGroup.pageSelection
+          value: relative
+        - name: cf.cplace.platform.attributesGroup.relativeSelection
+          value: cf.cplace.solution.safe.predecessor
+        - name: height
+          value: 350.0
+        widgetType: cf.cplace.platform.attributesGroup
+  - columns:
+    - proportion: 12
+      widgets:
+      - attributes:
+          name: content
+          value: 'r<h4 style="background-color: rgb(220, 220, 220); border-radius:
+            4px; border: 1px solid transparent; color: rgb(118, 118, 118); font-size:
+            14px; margin-bottom: 20px; padding: 10px; text-align: center"><strong><_embeddedwidget_></strong></h4>'
+        widgetType: cf.cplace.demoWidgets.demoRichString
+  - columns:
+    - proportion: 6
+      widgets:
+      - attributes:
+        - name: cf.cplace.platform.script.widgets.changeSetFilter
+          value: 1.a
+        - name: cf.platform.attributeName
+          value: cf.cplace.solution.safe.status
+        - name: cf.platform.showEditor
+          value: true
+        - name: cf.platform.showFilter
+          value: false
+        - name: title
+          value:
+            de: Statushistorie
+            en: Status history
+        widgetType: cf.platform.attributeHistory
+    - proportion: 6
+      widgets:
+      - widgetType: cf.platform.comments
+  typeName: cf.cplace.solution.safe.dependency
