@@ -238,16 +238,6 @@ def return_all_searches(root, parent_map):
         result[i] = search["filters"]
     return result
 
-# q: how to add a counter attribute to LowCodeScript?
-# a: use the following code to add a counter attribute to LowCodeScript
-# class LowCodeScript:
-#     counter = 0
-#     def __init__(self, scriptType, code, typeName=None, attributes=None):
-#         self.type = scriptType
-#         self.code = code
-#         self.attributes = attributes
-#         self.typeName = typeName
-#         LowCodeScript.counter += 1
 
 class LowCodeScript:
 
@@ -509,6 +499,7 @@ def condense_widgets(widgets):
 
                     if 'attributes' in widget_ and widget_['attributes'] is None:
                         del widget_['attributes']
+
 
 def rewrite_widgets(widgets):
     # iterate over all widgets
