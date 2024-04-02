@@ -1,0 +1,13 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('okr/generated/types-compressed.json') }}
+```
+
+The following code contains a representation of layouts for objectives:
+
+```
+{{ load_file('okr/generated/widgets-for-types/objective-widgets-compressed.json') }}
+```
+
+Explain the layouts in detail.
