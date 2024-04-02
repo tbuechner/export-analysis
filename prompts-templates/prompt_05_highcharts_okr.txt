@@ -1,7 +1,7 @@
 Given this data model:
 
 ```
-{{ load_file('okr/generated/types-compressed.json') }}
+{{ load_file('ws_okr/generated/types-compressed.json') }}
 ```
 
 The following is a highcharts implementation for an application based on the given data model:

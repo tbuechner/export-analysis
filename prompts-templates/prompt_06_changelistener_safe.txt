@@ -1,13 +1,13 @@
 Given this data model:
 
 ```
-{{ load_file('largeSolutionSAFe/generated/types-compressed.json') }}
+{{ load_file('ws_largeSolutionSAFe/generated/types-compressed.json') }}
 ```
 
 This is example code working with the data model:
 
 ```
-{{ load_file('largeSolutionSAFe/generated/copilot_examples_literals.js') }}
+{{ load_file('ws_largeSolutionSAFe/generated/copilot_examples_literals.js') }}
 ```
 
 Implement a change listener for the "Program Increment" entity. It will be registered on the title attribute. It should only do something when a new Program Increment is created.
