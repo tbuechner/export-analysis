@@ -9,7 +9,7 @@ import xmltodict
 
 import textwrap
 
-from util import remove, remove_empty_elements, write_json_to_file
+from util import remove, remove_empty_elements, write_json_to_file, write_token_count
 
 
 def process_pkg(folder_name):
@@ -47,27 +47,46 @@ def process_pkg(folder_name):
 
     write_type_names(root, folder_name_generated, 'types-after-removal')
 
-    as_string = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
+    # Pretty print the XML from the root element
+    pretty_print_xml(root, 0)
+
+
+    as_string = ET.tostring(root, encoding='unicode')
 
     with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
-        f.write(reformat_xml(as_string))
+        f.write(as_string)
+
+    write_token_counts(folder_name_generated)
 
 
-def reformat_xml(xml_string, indentation=2):
-    # Parse the XML string into an ElementTree object
-    root = ET.fromstring(xml_string)
+def write_token_counts(folder_name):
+    with open(folder_name + '/' + 'token-counts.txt', 'w') as f:
+        write_token_count(f, folder_name, "thinned-out.xml")
 
-    # Convert the ElementTree object back into a string with pretty print formatting
-    rough_string = ET.tostring(root, 'utf-8')
-    reparsed = minidom.parseString(rough_string)
-    pretty_xml = reparsed.toprettyxml(indent=" " * indentation)
 
-    # Split the result into lines and filter out lines that contain only whitespace
-    lines = pretty_xml.splitlines()
-    non_empty_lines = [line for line in lines if line.strip()]
+def pretty_print_xml(elem, level=0, indentation="  "):
+    """
+    Recursively print an XML element with indentation for pretty formatting.
 
-    # Join the non-empty lines back into a single string
-    return '\n'.join(non_empty_lines)
+    Parameters:
+    - elem: The XML element to print.
+    - level: The current level in the tree (used for indentation).
+    - indentation: The string used for indentation, defaulting to two spaces.
+    """
+    # Add indentation
+    indent = "\n" + level * indentation
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = indent + indentation
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = indent
+        for elem in elem:
+            pretty_print_xml(elem, level+1, indentation)
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = indent
+    else:
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = indent
 
 
 def write_type_names(root, folder_name, file_name):
@@ -83,94 +102,96 @@ def write_type_names(root, folder_name, file_name):
 def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/workspace/pages')
 
-    remove(root, parent_map, './/customCssClasses')
-    remove(root, parent_map, './/localizedAppName')
-    remove(root, parent_map, './/isAppDefSpace')
-    remove(root, parent_map, './/apps')
-    remove(root, parent_map, './/pluginSpaceConfigurations')
-    remove(root, parent_map, './/rootPage')
-    remove(root, parent_map, './/lowCodeJobs')
-    remove(root, parent_map, './/lowCodeChangeListeners')
-    remove(root, parent_map, './/lowCodeTypeMessages')
-    remove(root, parent_map, './/lowCodePageActions')
-    remove(root, parent_map, './/lowCodeValidator')
-    remove(root, parent_map, './/alternativeLayout')
-    remove(root, parent_map, './/widgetContainer')
+    remove(root, parent_map, './/workspace/pluginSpaceConfigurations')
+    remove(root, parent_map, './/workspace/rootPage')
+    remove(root, parent_map, './/workspace/lowCodeJobs')
+    remove(root, parent_map, './/numberOfNonrootPages')
+    remove(root, parent_map, './/workspace/customCssClasses')
+    remove(root, parent_map, './/workspace/apps')
+    remove(root, parent_map, './/workspace/id')
+    remove(root, parent_map, './/workspace/numberOfNonrootPages')
+
+    remove(root, parent_map, './/package/changelog')
+    remove(root, parent_map, './/package/parentPackages')
+    remove(root, parent_map, './/package/publishDate')
+    remove(root, parent_map, './/package/cplaceRelease')
+    remove(root, parent_map, './/package/description')
+
     remove(root, parent_map, './/maps')
-    remove(root, parent_map, './/orderable')
-    remove(root, parent_map, './/alternativeValueRepresentation')
-    remove(root, parent_map, './/showInverseRoleAsList')
-    remove(root, parent_map, './/showInverseRoleAsList')
-    remove(root, parent_map, './/showInTables')
-    remove(root, parent_map, './/showInAttributesWidget')
-    remove(root, parent_map, './/showInColumnSelection')
-    remove(root, parent_map, './/showInNewDialog')
-    remove(root, parent_map, './/showInMenuIfHierarchy')
-    remove(root, parent_map, './/showValuesWithLineBreak')
-    remove(root, parent_map, './/showMultiLine')
-    remove(root, parent_map, './/duplicatesAreAllowed')
-    remove(root, parent_map, './/showCreateNewButton')
-    remove(root, parent_map, './/validateAdditionalFilters')
-    remove(root, parent_map, './/refreshAfterSetting')
-    remove(root, parent_map, './/tableColumnWidth')
-    remove(root, parent_map, './/additionalConstraintData')
-    remove(root, parent_map, './/customConstraintName')
-    remove(root, parent_map, './/isShownInExplorer')
-    remove(root, parent_map, './/nameGenerationInstanceCount')
-    remove(root, parent_map, './/showNewButton')
-    remove(root, parent_map, './/hideTabVersions')
-    remove(root, parent_map, './/allowDivergentLayouts')
-    remove(root, parent_map, './/showInGlobalNewDialog')
-    remove(root, parent_map, './/instancesPage')
-    remove(root, parent_map, './/enableIconLink')
-    remove(root, parent_map, './/showInGlobalSearch')
-    remove(root, parent_map, './/defaultPageInPackageStrategy')
-    remove(root, parent_map, './/nameTableColumnWidth')
-    remove(root, parent_map, './/appliesTo')
-    remove(root, parent_map, './/autocompleteDetailsPattern')
-    remove(root, parent_map, './/id')
 
-    remove(root, parent_map, './/localizedPageNamesMode')
-    remove(root, parent_map, './/iconName')
-    remove(root, parent_map, './/nameGenerationPattern')
-    remove(root, parent_map, './/displayNameGenerationPattern')
-    remove(root, parent_map, './/internalAttributeNamePrefix')
-    remove(root, parent_map, './/isTuple')
-    remove(root, parent_map, './/namesAreUnique')
-    remove(root, parent_map, './/isReadOnly')
-    remove(root, parent_map, './/localizedInverseRoleName')
-    remove(root, parent_map, './/numberPrecision')
-    remove(root, parent_map, './/numberTextAfter')
-    remove(root, parent_map, './/localizedNumberTextAfter')
-    remove(root, parent_map, './/dateSpecificity')
-    remove(root, parent_map, './/dateFormat')
-    remove(root, parent_map, './/dateWithTime')
-    remove(root, parent_map, './/defaultValues')
-    remove(root, parent_map, './/textRegExp')
-    remove(root, parent_map, './/textRegExpErrorMessage')
-    # remove(root, parent_map, './/enumerationValues')
-    remove(root, parent_map, './/enumerationValues2icons')
-    # remove(root, parent_map, './/enumerationValues2localizedLabels')
+    remove(root, parent_map, './/typeDef/nameTableColumnWidth')
+    remove(root, parent_map, './/typeDef/defaultPageInPackageStrategy')
+    remove(root, parent_map, './/typeDef/showInGlobalSearch')
+    remove(root, parent_map, './/typeDef/localizedPageNamesMode')
+    remove(root, parent_map, './/typeDef/appliesTo')
+    remove(root, parent_map, './/typeDef/allowDivergentLayouts')
+    remove(root, parent_map, './/typeDef/hideTabVersions')
+    remove(root, parent_map, './/typeDef/showNewButton')
+    remove(root, parent_map, './/typeDef/showInGlobalNewDialog')
+    remove(root, parent_map, './/typeDef/enableIconLink')
+    remove(root, parent_map, './/typeDef/namesAreUnique')
+    remove(root, parent_map, './/typeDef/isTuple')
+    remove(root, parent_map, './/typeDef/internalAttributeNamePrefix')
+    remove(root, parent_map, './/typeDef/autocompleteDetailsPattern')
+    remove(root, parent_map, './/typeDef/displayNameGenerationPattern')
+    remove(root, parent_map, './/typeDef/nameGenerationPattern')
+    remove(root, parent_map, './/typeDef/iconName')
+    remove(root, parent_map, './/typeDef/cplaceJSChangeListeners')
+    remove(root, parent_map, './/typeDef/cplaceJSPageActions')
 
-    remove(root, parent_map, './/fixNameGenerationPattern')
-    remove(root, parent_map, './/fixDisplayNameGenerationPattern')
-    remove(root, parent_map, './/cplaceJSEditLanguageScript')
-    remove(root, parent_map, './/fixAutocompleteDetailsPattern')
-    remove(root, parent_map, './/showInExplorer')
-    remove(root, parent_map, './/defaultWidgetContainerDef')
-    remove(root, parent_map, './/name2additionalWidgetContainerDefs')
-    remove(root, parent_map, './/cplaceJSTypeMessages')
 
-    remove(root, parent_map, './/fixedTypeNames')
-    remove(root, parent_map, './/showLinkAsTextOnly')
-    remove(root, parent_map, './/additionalFiltersSupplier')
-    remove(root, parent_map, './/additionalFilterValidationErrorMessage')
-    remove(root, parent_map, './/sortOrderForReference')
-    remove(root, parent_map, './/cplaceJSValidator')
-    remove(root, parent_map, './/readOnly')
-    remove(root, parent_map, './/isFixed')
-    remove(root, parent_map, './/queryableByApp')
-    remove(root, parent_map, './/queryableForScripting')
+    remove(root, parent_map, './/typeDef/fixNameGenerationPattern')
+    remove(root, parent_map, './/typeDef/fixDisplayNameGenerationPattern')
+    remove(root, parent_map, './/typeDef/cplaceJSEditLanguageScript')
+    remove(root, parent_map, './/typeDef/fixAutocompleteDetailsPattern')
+    remove(root, parent_map, './/typeDef/showInExplorer')
+    remove(root, parent_map, './/typeDef/defaultWidgetContainerDef')
+    remove(root, parent_map, './/typeDef/name2additionalWidgetContainerDefs')
+    remove(root, parent_map, './/typeDef/cplaceJSTypeMessages')
+    remove(root, parent_map, './/typeDef/id')
+
+    remove(root, parent_map, './/constraintFactory/fixedTypeNames')
+    remove(root, parent_map, './/constraintFactory/showLinkAsTextOnly')
+    remove(root, parent_map, './/constraintFactory/additionalFiltersSupplier')
+    remove(root, parent_map, './/constraintFactory/additionalFilterValidationErrorMessage')
+    remove(root, parent_map, './/constraintFactory/sortOrderForReference')
+    remove(root, parent_map, './/constraintFactory/cplaceJSValidator')
+    remove(root, parent_map, './/constraintFactory/readOnly')
+    remove(root, parent_map, './/constraintFactory/isFixed')
+    remove(root, parent_map, './/constraintFactory/queryableByApp')
+    remove(root, parent_map, './/constraintFactory/queryableForScripting')
+    remove(root, parent_map, './/constraintFactory/showMultiLine')
+    remove(root, parent_map, './/constraintFactory/defaultValuesSupplier')
+    remove(root, parent_map, './/constraintFactory/refreshAfterSetting')
+    remove(root, parent_map, './/constraintFactory/validateAdditionalFilters')
+    remove(root, parent_map, './/constraintFactory/showInverseRoleAsList')
+    remove(root, parent_map, './/constraintFactory/showInMenuIfHierarchy')
+
+    remove(root, parent_map, './/constraintFactory/regexp')
+    remove(root, parent_map, './/constraintFactory/regexpErrorMessage')
+
+    remove(root, parent_map, './/constraintFactory/dateFormatSupplier')
+    remove(root, parent_map, './/constraintFactory/withTime')
+
+    remove(root, parent_map, './/constraintFactory/attributeDefClass')
+    remove(root, parent_map, './/constraintFactory/dynamicEnumerationProviderClass')
+
+    remove(root, parent_map, './/attributes/alternativeValueRepresentation')
+    remove(root, parent_map, './/attributes/cplaceJSValidator')
+    remove(root, parent_map, './/attributes/readOnly')
+    remove(root, parent_map, './/attributes/queryableForScripting')
+    remove(root, parent_map, './/attributes/queryableByApp')
+    remove(root, parent_map, './/attributes/showInColumnSelection')
+    remove(root, parent_map, './/attributes/tableColumnWidth')
+    remove(root, parent_map, './/attributes/showValuesWithLineBreak')
+    remove(root, parent_map, './/attributes/showInNewDialog')
+    remove(root, parent_map, './/attributes/showInAttributesWidget')
+    remove(root, parent_map, './/attributes/showInTables')
+    remove(root, parent_map, './/attributes/isFixed')
+
+    remove(root, parent_map, './/attributes/duplicatesAreAllowed')
+    remove(root, parent_map, './/attributes/showCreateNewButton')
+    remove(root, parent_map, './/attributes/derivedAttributeDef')
 
 
 
