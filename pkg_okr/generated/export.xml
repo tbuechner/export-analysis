@@ -37,6 +37,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -51,6 +52,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -156,6 +158,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -176,6 +179,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -192,6 +196,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -208,6 +213,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -222,6 +228,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -252,6 +259,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -271,6 +279,7 @@
                   <elements>Team</elements>
                   <element2icon />
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -287,6 +296,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -303,6 +313,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -322,6 +333,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -341,6 +353,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -371,6 +384,7 @@
                   </multiplicity>
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -385,6 +399,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -404,6 +419,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -475,6 +491,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -494,6 +511,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -508,6 +526,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -538,6 +557,7 @@
                   </multiplicity>
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -552,6 +572,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -674,6 +695,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -953,6 +975,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1020,6 +1043,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1037,6 +1061,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1054,6 +1079,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1071,6 +1097,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1088,6 +1115,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1107,6 +1135,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1126,6 +1155,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1145,6 +1175,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1164,6 +1195,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1183,6 +1215,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1199,6 +1232,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -1224,6 +1258,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1238,6 +1273,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1252,6 +1288,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1266,6 +1303,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1285,6 +1323,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1304,6 +1343,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1323,6 +1363,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1340,6 +1381,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1357,6 +1399,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1479,6 +1522,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1547,6 +1591,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1614,6 +1659,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1630,6 +1676,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1649,6 +1696,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -1674,6 +1722,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1692,6 +1741,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1706,6 +1756,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1812,6 +1863,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1828,6 +1880,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1847,6 +1900,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -1914,6 +1968,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -1940,6 +1995,7 @@
                     <key>exactlyOne</key>
                   </multiplicity>
                   <defaultValues>bfalse</defaultValues>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2027,6 +2083,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2094,6 +2151,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2122,6 +2180,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2141,6 +2200,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2163,6 +2223,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2204,6 +2265,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2234,6 +2296,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2264,6 +2327,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2294,6 +2358,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2324,6 +2389,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2354,6 +2420,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2373,6 +2440,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2400,6 +2468,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2414,6 +2483,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2433,6 +2503,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2452,6 +2523,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2477,6 +2549,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2574,6 +2647,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2590,6 +2664,7 @@
                   </multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2612,6 +2687,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2634,6 +2710,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2654,6 +2731,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2682,6 +2760,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2699,6 +2778,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2716,6 +2796,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2733,6 +2814,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2752,6 +2834,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2782,6 +2865,7 @@
                   </multiplicity>
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2799,6 +2883,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2816,6 +2901,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2833,6 +2919,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2851,6 +2938,7 @@
                     <key>maximalOne</key>
                   </multiplicity>
                   <defaultValues>s#00519e</defaultValues>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2868,6 +2956,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2888,6 +2977,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -2929,6 +3019,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2946,6 +3037,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2963,6 +3055,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -2982,6 +3075,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -3007,6 +3101,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3130,6 +3225,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3144,6 +3240,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3163,6 +3260,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>
@@ -3190,6 +3288,7 @@
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
             </typeDef>

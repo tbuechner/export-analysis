@@ -12,6 +12,18 @@ import textwrap
 from util import remove, remove_empty_elements, write_json_to_file, write_token_count
 
 
+def add_reference_constraint_def_class(constraint_factory):
+    # get child element with tag 'multiplicity'
+    multiplicity = constraint_factory.find('.//multiplicity')
+    key = multiplicity.find('.//key')
+    if key is not None:
+        if key.text == 'exactlyOne' or key.text == 'maximalOne':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef')
+            return
+    add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
+
+
+
 def add_mandatory_elements(root):
     package = root.find('.//package')
     add_element(package, 'cplaceRelease', '24.1')
@@ -23,6 +35,31 @@ def add_mandatory_elements(root):
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
+
+    constraint_factories = root.findall('.//constraintFactory')
+    for constraint_factory in constraint_factories:
+        if constraint_factory.get('type') == 'textEnumerationConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+        elif constraint_factory.get('type') == 'stringConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+        elif constraint_factory.get('type') == 'dateConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef')
+        elif constraint_factory.get('type') == 'numberConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+        elif constraint_factory.get('type') == 'richStringConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef')
+        elif constraint_factory.get('type') == 'booleanConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef')
+        elif constraint_factory.get('type') == 'colorConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+        elif constraint_factory.get('type') == 'localizedStringConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef')
+        elif constraint_factory.get('type') == 'dynamicEnumerationConstraint':
+            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef')
+        elif constraint_factory.get('type') == 'referenceConstraint':
+            add_reference_constraint_def_class(constraint_factory)
+        else:
+            print(constraint_factory.get('type'))
 
 
 def add_element(package, element_name, text=None):
