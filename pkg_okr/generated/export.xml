@@ -2848,24 +2848,6 @@
                 <de>Ereignisklassenkonfigurationen</de>
               </localizedNamePlural>
               <attributes>
-                <name>cf.cplace.simpleCalendar.conditionAttributeName</name>
-                <localizedName>
-                  <en>Attribute to be tested</en>
-                  <de>Zu testendes Attribute</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>If the attribute value of an event is equal to the event class' attribute value, the event is assigned to this event class. If the attribute is a reference, the value of "attributeValue" represents the (internal) name of the referred page. Only the first event class fulfilling this condition will be applied.</en>
-                  <de>Gleicht das in der Ereignisklasse angegebene Attribut dem angegeben Wert, so wird eine Ereignisseite dieser Ereignisklasse zugeordnet. Ist das Attribut eine Referenz, so repräsentiert der angegebene Attributwert den (internen) Namen der referenzierten Seite. Trifft keine definierte Ereignisklasse zu, oder sind keine zusätzlichen Ereignisklassen definiert, wird der Ereignistyp selbst als Ereignisklasse zugeordnet.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
-                </constraintFactory>
-              </attributes>
-              <attributes>
                 <name>cf.cplace.simpleCalendar.conditionValue</name>
                 <localizedName>
                   <en>Attribute value</en>
@@ -2974,60 +2956,6 @@
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.eventTypeName</name>
-                <localizedName>
-                  <en>Event type</en>
-                  <de>Ereignistyp</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The cplace type which has to be registered as event type. In order to specifiy the start and end date attributes as well as event classes, you have to save the event type after its value was changed.</en>
-                  <de>Der cplace-Typ, welcher als Ereignistyp registriert werden soll. Um das Start- und Enddatumsattribut als auch Ereignisklassenzu definieren, müssen Sie nach dessen Aktualisierung den Ereignistyp erst speichern</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.startDateAttributeName</name>
-                <localizedName>
-                  <en>Start date attribute</en>
-                  <de>Startdatum-Attribut</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The attribute of the selected cplace type which holds the start date of the event.</en>
-                  <de>Das Attribut des gewählten cPlace-Typs, welches das Startdatum des Ereignisses enthält.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.endDateAttributeName</name>
-                <localizedName>
-                  <en>End date attribute</en>
-                  <de>Enddatum-Attribut</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The attribute of the selected cplace type which holds the end date of the event.</en>
-                  <de>Das Attribut des gewählten cPlace-Typs, welches das Enddatum des Ereignisses enthält.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>

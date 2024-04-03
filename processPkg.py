@@ -23,7 +23,7 @@ def add_reference_constraint_def_class(constraint_factory):
     add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
 
 
-def add_mandatory_elements(root):
+def add_mandatory_elements(root, parent_map):
     package = root.find('.//package')
     add_element(package, 'cplaceRelease', '24.1')
     add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
@@ -74,6 +74,12 @@ def add_mandatory_elements(root):
         key.text = 'none'
         localized_page_names_mode.append(key)
 
+    attributes = root.findall('.//attributes')
+    for attribute in attributes:
+        constraint_factory = attribute.find('.//constraintFactory')
+        if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
+            parent_map.get(attribute).remove(attribute)
+
 
 def add_element(package, element_name, text=None):
     new_element = ET.Element(element_name)
@@ -107,7 +113,6 @@ def process_pkg(folder_name):
 
     write_type_names(root, folder_name_generated, 'types-all')
 
-    # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
 
     remove_slots(root, parent_map, slots_to_be_retained)
@@ -128,7 +133,9 @@ def process_pkg(folder_name):
 
     write_token_counts(folder_name_generated)
 
-    add_mandatory_elements(root)
+    parent_map = {c: p for p in tree.iter() for c in p}
+    add_mandatory_elements(root, parent_map)
+
     pretty_print_xml(root, 0)
 
     with open(folder_name_generated + '/export.xml', 'w') as f:
