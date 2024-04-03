@@ -724,7 +724,7 @@ def write_token_counts(folder_name):
         write_token_count(f, folder_name, "widgets-condensed-pretty.yaml")
 
 
-def run_for_folder(folder_name):
+def process_ws_export(folder_name):
 
     folder_name_generated = folder_name + '/generated'
 
@@ -785,7 +785,6 @@ def run_for_folder(folder_name):
 
     remove_generic_elements(root, parent_map)
 
-    # iterate through the list and print each line
     for t in types_to_be_removed:
         remove(root, parent_map, './/type[name="' + t + '"]')
 

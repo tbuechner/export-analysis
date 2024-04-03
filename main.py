@@ -1,16 +1,19 @@
 import warnings
 
 from expandPrompts import expand_prompts
-from processExport import run_for_folder
+from processPkg import process_pkg
+from processExport import process_ws_export
 
 # ignore all warnings
 warnings.filterwarnings("ignore")
 
-run_for_folder('ws_okr-small')
+process_pkg('pkg_okr')
 
-run_for_folder('ws_okr')
+process_ws_export('ws_okr-small')
 
-run_for_folder('ws_largeSolutionSAFe')
+process_ws_export('ws_okr')
+
+process_ws_export('ws_largeSolutionSAFe')
 
 expand_prompts()
 
