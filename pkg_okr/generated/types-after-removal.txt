@@ -1,9 +1,3 @@
-cf.cplace.landingPage.level0
-cf.cplace.landingPage.level1
-cf.cplace.landingPage.quicklink
-cf.cplace.landingPage.tab
-cf.cplace.assetManagement.styles
-cf.cplace.customization.file
 cf.cplace.solution.okr.cycle
 cf.cplace.solution.okr.set
 cf.cplace.solution.okr.objective
@@ -27,4 +21,3 @@ cf.cplace.enumerationIcons.page
 cf.cplace.solution.okr.settings
 cf.cplace.solution.okr.topic
 cf.cplace.solution.okr.selectNextCycle
-cf.cplace.visualDomainModel.graph

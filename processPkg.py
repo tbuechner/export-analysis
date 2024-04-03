@@ -26,8 +26,10 @@ def process_pkg(folder_name):
     os.mkdir(folder_name_generated)
 
     with open(folder_name + '/types-to-be-removed.txt') as f:
-        # read each line and store it in a list
         types_to_be_removed = f.read().splitlines()
+
+    with open(folder_name + '/slots-to-be-retained.txt') as f:
+        slots_to_be_retained = f.read().splitlines()
 
     # Load and parse the XML document
     tree = ET.parse(folder_name + '/export.xml')
@@ -38,6 +40,8 @@ def process_pkg(folder_name):
     # Create a dictionary that maps from children to their parents
     parent_map = {c: p for p in tree.iter() for c in p}
 
+    remove_slots(root, parent_map, slots_to_be_retained)
+
     remove_generic_elements(root, parent_map)
 
     for t in types_to_be_removed:
@@ -47,9 +51,7 @@ def process_pkg(folder_name):
 
     write_type_names(root, folder_name_generated, 'types-after-removal')
 
-    # Pretty print the XML from the root element
     pretty_print_xml(root, 0)
-
 
     as_string = ET.tostring(root, encoding='unicode')
 
@@ -57,6 +59,19 @@ def process_pkg(folder_name):
         f.write(as_string)
 
     write_token_counts(folder_name_generated)
+
+
+# q: root is a xml document, remove all elements with tag 'slot' and for which the attribute 'internalName' is not in slots_to_be_retained
+
+
+def remove_slots(root, parent_map, slots_to_be_retained):
+    for slot in root.findall('.//slot'):
+        internal_name = slot.get('internalName')
+        if internal_name not in slots_to_be_retained:
+            slot_parent = parent_map[slot]
+            parent = root if slot_parent is None else slot_parent
+            parent.remove(slot)
+
 
 
 def write_token_counts(folder_name):

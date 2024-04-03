@@ -1,1 +1,1 @@
-tokens thinned-out.xml: 30844
+tokens thinned-out.xml: 24672
