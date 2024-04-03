@@ -3360,6 +3360,20 @@
             </typeDef>
           </types>
           <apps>["cf.cplace.platform"]</apps>
+          <rootPage>
+            <page>
+              <name>Root Page</name>
+              <id>oc5ld732smm7i3hl6tpsihwnz</id>
+              <custom>
+                <type>default.page</type>
+                <attributes />
+              </custom>
+              <widgetContainer>
+                <widgetsLayout />
+                <widgets />
+              </widgetContainer>
+            </page>
+          </rootPage>
         </workspace>
       </slot>
     </slots>

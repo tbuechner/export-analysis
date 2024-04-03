@@ -1,6 +1,8 @@
 import json
 import os
+import string
 import xml
+import random
 
 from xml.dom import minidom
 
@@ -79,6 +81,31 @@ def add_mandatory_elements(root, parent_map):
         constraint_factory = attribute.find('.//constraintFactory')
         if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
             parent_map.get(attribute).remove(attribute)
+
+    workspaces = root.findall('.//workspace')
+    for workspace in workspaces:
+        root_page = ET.Element('rootPage')
+        workspace.append(root_page)
+        page = ET.Element('page')
+        root_page.append(page)
+        add_element(page, 'name', 'Root Page')
+        id = ''.join(random.choices(string.ascii_lowercase + string.digits, k=25))
+        add_element(page, 'id', id)
+
+        custom = ET.Element('custom')
+        page.append(custom)
+        add_element(custom, 'type', 'default.page')
+        attributes = ET.Element('attributes')
+        custom.append(attributes)
+
+        widget_container = ET.Element('widgetContainer')
+        page.append(widget_container)
+        widgets_layout = ET.Element('widgetsLayout')
+        widget_container.append(widgets_layout)
+        widgets = ET.Element('widgets')
+        widget_container.append(widgets)
+
+
 
 
 def add_element(package, element_name, text=None):
