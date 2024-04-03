@@ -23,7 +23,6 @@ def add_reference_constraint_def_class(constraint_factory):
     add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
 
 
-
 def add_mandatory_elements(root):
     package = root.find('.//package')
     add_element(package, 'cplaceRelease', '24.1')
@@ -60,6 +59,20 @@ def add_mandatory_elements(root):
             add_reference_constraint_def_class(constraint_factory)
         else:
             print(constraint_factory.get('type'))
+
+    type_defs = root.findall('.//typeDef')
+    for type_def in type_defs:
+        applies_to = ET.Element('appliesTo')
+        type_def.append(applies_to)
+        key = ET.Element('key')
+        key.text = 'page'
+        applies_to.append(key)
+
+        localized_page_names_mode = ET.Element('localizedPageNamesMode')
+        type_def.append(localized_page_names_mode)
+        key = ET.Element('key')
+        key.text = 'none'
+        localized_page_names_mode.append(key)
 
 
 def add_element(package, element_name, text=None):

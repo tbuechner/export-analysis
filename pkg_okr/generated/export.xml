@@ -231,6 +231,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.set</name>
@@ -356,6 +362,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.objective</name>
@@ -529,6 +541,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.keyResult</name>
@@ -1235,6 +1253,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.progress</name>
@@ -1699,6 +1723,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.task</name>
@@ -1971,6 +2001,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.updateKeyResult</name>
@@ -2154,6 +2190,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.organizationalUnit</name>
@@ -2226,6 +2268,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.okrDashboard</name>
@@ -2237,6 +2285,12 @@
                 <en>OKR Dashboard</en>
                 <de>OKR Dashboard</de>
               </localizedNamePlural>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.myDashboard</name>
@@ -2268,6 +2322,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.strategyDashbaord</name>
@@ -2299,6 +2359,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.cyclesDashboard</name>
@@ -2330,6 +2396,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.meetingsDashbaord</name>
@@ -2361,6 +2433,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.okrManualDashboard</name>
@@ -2392,6 +2470,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.administrationDashboard</name>
@@ -2443,6 +2527,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.priority</name>
@@ -2526,6 +2616,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.meeting</name>
@@ -2734,6 +2830,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.simpleCalendar.eventClassConfiguration</name>
@@ -2837,6 +2939,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.simpleCalendar.eventTypeConfiguration</name>
@@ -2980,6 +3088,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.enumerationIcons.page</name>
@@ -2991,6 +3105,12 @@
                 <en>Icons for enumeration values</en>
                 <de>Icons für Aufzählungswerte</de>
               </localizedNamePlural>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.settings</name>
@@ -3078,6 +3198,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.topic</name>
@@ -3263,6 +3389,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.selectNextCycle</name>
@@ -3291,6 +3423,12 @@
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
             </typeDef>
           </types>
           <apps>["cf.cplace.platform"]</apps>
