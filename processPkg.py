@@ -12,6 +12,26 @@ import textwrap
 from util import remove, remove_empty_elements, write_json_to_file, write_token_count
 
 
+def add_mandatory_elements(root):
+    package = root.find('.//package')
+    add_element(package, 'cplaceRelease', '24.1')
+    add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
+
+    add_element(root, 'maps')
+
+    # find all workspace elements
+    workspaces = root.findall('.//workspace')
+    for workspace in workspaces:
+        add_element(workspace, 'apps', '["cf.cplace.platform"]')
+
+
+def add_element(package, element_name, text=None):
+    new_element = ET.Element(element_name)
+    if text is not None:
+        new_element.text = text
+    package.append(new_element)
+
+
 def process_pkg(folder_name):
 
     folder_name_generated = folder_name + '/generated'
@@ -53,15 +73,19 @@ def process_pkg(folder_name):
 
     pretty_print_xml(root, 0)
 
-    as_string = ET.tostring(root, encoding='unicode')
-
     with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
-        f.write(as_string)
+        f.write(ET.tostring(root, encoding='unicode'))
 
     write_token_counts(folder_name_generated)
 
+    add_mandatory_elements(root)
+    pretty_print_xml(root, 0)
 
-# q: root is a xml document, remove all elements with tag 'slot' and for which the attribute 'internalName' is not in slots_to_be_retained
+    with open(folder_name_generated + '/export.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    # zip export.xml into package.zip
+    os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
 
 
 def remove_slots(root, parent_map, slots_to_be_retained):
@@ -71,7 +95,6 @@ def remove_slots(root, parent_map, slots_to_be_retained):
             slot_parent = parent_map[slot]
             parent = root if slot_parent is None else slot_parent
             parent.remove(slot)
-
 
 
 def write_token_counts(folder_name):
@@ -207,7 +230,6 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/attributes/duplicatesAreAllowed')
     remove(root, parent_map, './/attributes/showCreateNewButton')
     remove(root, parent_map, './/attributes/derivedAttributeDef')
-
 
 
 def rewrite_localized_name_attributes(doc):
