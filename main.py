@@ -9,11 +9,9 @@ warnings.filterwarnings("ignore")
 
 process_pkg('pkg_okr')
 
-process_ws_export('ws_okr-small')
-
-process_ws_export('ws_okr')
-
-process_ws_export('ws_largeSolutionSAFe')
+# process_ws_export('ws_okr-small')
+# process_ws_export('ws_okr')
+# process_ws_export('ws_largeSolutionSAFe')
 
 expand_prompts()
 

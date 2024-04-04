@@ -1,0 +1,7 @@
+The following xml schema represents describes an xml format for specifying data models:
+
+```
+{{ load_file('pkg_okr/schema.xsd') }}
+```
+
+Explain the schema in your own words. What is the purpose of the schema? What does it describe? What are the different parts of the schema?

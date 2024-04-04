@@ -1,0 +1,7 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('pkg_okr/generated/thinned-out-compressed.xml') }}
+```
+
+Generate an xml schema which captures this data model.

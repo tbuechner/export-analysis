@@ -37,30 +37,55 @@ def add_mandatory_elements(root, parent_map):
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
 
-    constraint_factories = root.findall('.//constraintFactory')
-    for constraint_factory in constraint_factories:
-        if constraint_factory.get('type') == 'textEnumerationConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
-        elif constraint_factory.get('type') == 'stringConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
-        elif constraint_factory.get('type') == 'dateConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef')
-        elif constraint_factory.get('type') == 'numberConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
-        elif constraint_factory.get('type') == 'richStringConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef')
-        elif constraint_factory.get('type') == 'booleanConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef')
-        elif constraint_factory.get('type') == 'colorConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
-        elif constraint_factory.get('type') == 'localizedStringConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef')
-        elif constraint_factory.get('type') == 'dynamicEnumerationConstraint':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef')
-        elif constraint_factory.get('type') == 'referenceConstraint':
-            add_reference_constraint_def_class(constraint_factory)
-        else:
-            print(constraint_factory.get('type'))
+    for constraint_factory in root.findall('.//textEnumerationConstraint'):
+        constraint_factory.set('type', 'textEnumerationConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+
+    for constraint_factory in root.findall('.//stringConstraint'):
+        constraint_factory.set('type', 'stringConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+
+    for constraint_factory in root.findall('.//dateConstraint'):
+        constraint_factory.set('type', 'dateConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef')
+
+    for constraint_factory in root.findall('.//numberConstraint'):
+        constraint_factory.set('type', 'numberConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+
+    for constraint_factory in root.findall('.//richStringConstraint'):
+        constraint_factory.set('type', 'richStringConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef')
+
+    for constraint_factory in root.findall('.//booleanConstraint'):
+        constraint_factory.set('type', 'booleanConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef')
+
+    for constraint_factory in root.findall('.//colorConstraint'):
+        constraint_factory.set('type', 'colorConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+
+    for constraint_factory in root.findall('.//localizedStringConstraint'):
+        constraint_factory.set('type', 'localizedStringConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef')
+
+    for constraint_factory in root.findall('.//dynamicEnumerationConstraint'):
+        constraint_factory.set('type', 'dynamicEnumerationConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef')
+
+    for constraint_factory in root.findall('.//referenceConstraint'):
+        constraint_factory.set('type', 'referenceConstraint')
+        constraint_factory.tag = 'constraintFactory'
+        add_reference_constraint_def_class(constraint_factory)
 
     type_defs = root.findall('.//typeDef')
     for type_def in type_defs:
@@ -81,8 +106,19 @@ def add_mandatory_elements(root, parent_map):
     attributes = root.findall('.//attributes')
     for attribute in attributes:
         constraint_factory = attribute.find('.//constraintFactory')
-        if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
-            parent_map.get(attribute).remove(attribute)
+        if constraint_factory is not None:
+            if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
+                parent_map.get(attribute).remove(attribute)
+
+    multiplicities = root.findall('.//multiplicity')
+    for multiplicity in multiplicities:
+        key = multiplicity.get('key')
+        # if key is not None
+        if key is not None:
+            key_element = ET.Element('key')
+            key_element.text = key
+            multiplicity.append(key_element)
+            del multiplicity.attrib['key']
 
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
@@ -115,6 +151,24 @@ def add_element(package, element_name, text=None):
     package.append(new_element)
 
 
+def rewrite(root, parent_map):
+    constraint_factories = root.findall('.//constraintFactory')
+    for constraint_factory in constraint_factories:
+        # set constraint_factory tag to the value of the attribute `type`
+        constraint_factory.tag = constraint_factory.get('type')
+        # remove the attribute `type`
+        del constraint_factory.attrib['type']
+
+    multiplicities = root.findall('.//multiplicity')
+    for multiplicity in multiplicities:
+        key = multiplicity.find('.//key')
+        if key is not None:
+            # set the attribute `key` of multiplicity to the value of the tag `key`
+            multiplicity.set('key', key.text)
+            # remove the tag `key`
+            multiplicity.remove(key)
+
+
 def process_pkg(folder_name):
 
     folder_name_generated = folder_name + '/generated'
@@ -145,6 +199,7 @@ def process_pkg(folder_name):
     remove_slots(root, parent_map, slots_to_be_retained)
 
     remove_generic_elements(root, parent_map)
+    rewrite(root, parent_map)
 
     for t in types_to_be_removed:
         remove(root, parent_map, './/typeDef[name="' + t + '"]')
@@ -156,6 +211,10 @@ def process_pkg(folder_name):
     pretty_print_xml(root, 0)
 
     with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    remove_characters_between_xml_elements(root)
+    with open(folder_name_generated + '/thinned-out-compressed.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
 
     write_token_counts(folder_name_generated)
@@ -184,6 +243,7 @@ def remove_slots(root, parent_map, slots_to_be_retained):
 def write_token_counts(folder_name):
     with open(folder_name + '/' + 'token-counts.txt', 'w') as f:
         write_token_count(f, folder_name, "thinned-out.xml")
+        write_token_count(f, folder_name, "thinned-out-compressed.xml")
 
 
 def pretty_print_xml(elem, level=0, indentation="  "):
@@ -211,6 +271,23 @@ def pretty_print_xml(elem, level=0, indentation="  "):
             elem.tail = indent
 
 
+def remove_characters_between_xml_elements(elem):
+    """
+    Recursively remove all characters between XML elements.
+
+    Parameters:
+    - elem: The XML element to process.
+    """
+    if len(elem):
+        elem.text = None
+        elem.tail = None
+        for child_elem in elem:
+            remove_characters_between_xml_elements(child_elem)
+    else:
+        if elem.tail:
+            elem.tail = None
+
+
 def write_type_names(root, folder_name, file_name):
     type_names = []
     for name in root.findall('.//types/typeDef/name'):
@@ -223,6 +300,8 @@ def write_type_names(root, folder_name, file_name):
 
 def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/workspace/pages')
+
+    remove(root, parent_map, './/slot/shareable')
 
     remove(root, parent_map, './/workspace/pluginSpaceConfigurations')
     remove(root, parent_map, './/workspace/rootPage')
@@ -314,6 +393,13 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/attributes/duplicatesAreAllowed')
     remove(root, parent_map, './/attributes/showCreateNewButton')
     remove(root, parent_map, './/attributes/derivedAttributeDef')
+
+    attributes = root.findall('.//attributes')
+    for attribute in attributes:
+        constraint_factory = attribute.find('.//constraintFactory')
+        if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
+            parent_map.get(attribute).remove(attribute)
+
 
 
 def rewrite_localized_name_attributes(doc):

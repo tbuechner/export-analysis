@@ -1,0 +1,244 @@
+The following xml schema represents describes an xml format for specifying data models:
+
+```
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="de" type="xs:string"/>
+  <xs:element name="en" type="xs:string"/>
+  <xs:element name="key" type="xs:string"/>
+  <xs:element name="multiplicity">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="key" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="de" minOccurs="0"/>
+        <xs:element ref="en" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localizedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="de"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localizedShortName">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="en" minOccurs="0"/>
+        <xs:element ref="de" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="shortHelp" type="xs:string"/>
+  <xs:element name="stringConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="language" type="xs:string"/>
+  <xs:element name="value">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="language" minOccurs="0"/>
+        <xs:element ref="value" minOccurs="0"/>
+        <xs:element ref="localizations" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="key"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localizations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="elements" type="xs:string"/>
+  <xs:element name="element2icon">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="element2localizedLabel">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textEnumerationConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+        <xs:element ref="defaultValues" minOccurs="0"/>
+        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="element2icon"/>
+        <xs:element ref="element2localizedLabel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="defaultValues" type="xs:string"/>
+  <xs:element name="typeNames" type="xs:string"/>
+  <xs:element name="entityClass" type="xs:string"/>
+  <xs:element name="localizedInverseRoleName" type="xs:string"/>
+  <xs:element name="sameWorkspace" type="xs:string"/>
+  <xs:element name="isHierarchy" type="xs:string"/>
+  <xs:element name="referenceConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+        <xs:element ref="defaultValues" minOccurs="0"/>
+        <xs:element ref="typeNames" minOccurs="0"/>
+        <xs:element ref="entityClass"/>
+        <xs:element ref="localizedInverseRoleName"/>
+        <xs:element ref="sameWorkspace"/>
+        <xs:element ref="isHierarchy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specificity" type="xs:string"/>
+  <xs:element name="dateFormat" type="xs:string"/>
+  <xs:element name="dateConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+        <xs:element ref="specificity"/>
+        <xs:element ref="dateFormat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localizedNameSingular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="de"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localizedNamePlural">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="en" minOccurs="0"/>
+        <xs:element ref="de" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="iconName" type="xs:string"/>
+  <xs:element name="attributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="localizedName"/>
+        <xs:element ref="localizedShortName"/>
+        <xs:element ref="shortHelp"/>
+        <xs:element ref="stringConstraint" minOccurs="0"/>
+        <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
+        <xs:element ref="referenceConstraint" minOccurs="0"/>
+        <xs:element ref="dateConstraint" minOccurs="0"/>
+        <xs:element ref="numberConstraint" minOccurs="0"/>
+        <xs:element ref="richStringConstraint" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="precision" type="xs:byte"/>
+  <xs:element name="localizedTextAfterSupplier" type="xs:string"/>
+  <xs:element name="numberConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+        <xs:element ref="precision"/>
+        <xs:element ref="localizedTextAfterSupplier"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="richStringConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="multiplicity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="typeDef">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="localizedNameSingular"/>
+        <xs:element ref="localizedNamePlural"/>
+        <xs:element ref="iconName"/>
+        <xs:element ref="attributes" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="types">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="typeDef" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="workspace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="types"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="slot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="workspace"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="internalName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="shortname" type="xs:string"/>
+  <xs:element name="slots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="slot"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="package">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="shortname"/>
+        <xs:element ref="slots"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="internalName"/>
+      <xs:attribute type="xs:byte" name="version"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="solutionManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="package"/>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="xmlVersion"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+
+How to encode in the schema, that the element `multiplicity` can only contain the values `exactlyOne`, `maximalOne`, `atLeastOne` for the attribute `key`?

@@ -11,7 +11,6 @@
           <de>Objectives Key Results</de>
           <en>Objectives Key Results</en>
         </name>
-        <shareable>false</shareable>
         <workspace>
           <name>OKR</name>
           <types>
@@ -34,11 +33,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.quarter</name>
@@ -48,11 +46,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.status</name>
@@ -62,10 +59,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <elements>#15 Next</elements>
                   <elements>#25 Current</elements>
                   <elements>#35 Closed</elements>
@@ -157,7 +153,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.cyclesDashboard</name>
@@ -167,17 +163,16 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <defaultValues>lpage/u6t0du1tsgeax1xsba85ycm3t</defaultValues>
                   <typeNames>cf.cplace.solution.okr.cyclesDashboard</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.start</name>
@@ -187,13 +182,12 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <dateConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
+                </dateConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.end</name>
@@ -203,13 +197,12 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <dateConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
+                </dateConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.statusForNameGenerationPattern</name>
@@ -219,131 +212,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.set</name>
-              <localizedNameSingular>
-                <en>Set</en>
-                <de>Set</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Sets</en>
-                <de>Sets</de>
-              </localizedNamePlural>
-              <iconName>fa-align-justify</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.cycle</name>
-                <localizedName>
-                  <en>Cycle</en>
-                  <de>Zyklus</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.cycle</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.level</name>
-                <localizedName>
-                  <en>Level</en>
-                  <de>Level</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <elements>Organization</elements>
-                  <elements>Department</elements>
-                  <elements>Team</elements>
-                  <element2icon />
-                  <element2localizedLabel />
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.setLead</name>
-                <localizedName>
-                  <en>Set Lead</en>
-                  <de>Set Leiter</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>false</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.setContributors</name>
-                <localizedName>
-                  <en>Set Contributor</en>
-                  <de>Set Mitarbeiter</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>false</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.organizationalUnit</name>
-                <localizedName>
-                  <en>Organizational Unit</en>
-                  <de>Organisationseinheit</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.parentSet</name>
-                <localizedName>
-                  <en>Parent Set</en>
-                  <de>Übergeordnetes Set</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.set</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
             </typeDef>
             <typeDef>
@@ -368,13 +240,12 @@
                   <de>Nr.</de>
                 </localizedShortName>
                 <shortHelp />
-                <constraintFactory type="numberConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <numberConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                </constraintFactory>
+                </numberConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
@@ -384,11 +255,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.set</name>
@@ -398,16 +268,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.set</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.accomplished</name>
@@ -417,10 +286,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <defaultValues>s#25 - no</defaultValues>
                   <elements>#15 - yes</elements>
                   <elements>#25 - no</elements>
@@ -478,7 +346,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.cycle</name>
@@ -488,16 +356,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.cycle</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.description</name>
@@ -507,11 +374,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="richStringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <richStringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </richStringConstraint>
               </attributes>
             </typeDef>
             <typeDef>
@@ -536,13 +402,12 @@
                   <de>Nr.</de>
                 </localizedShortName>
                 <shortHelp />
-                <constraintFactory type="numberConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <numberConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                </constraintFactory>
+                </numberConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
@@ -552,11 +417,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.progressIndicator</name>
@@ -566,10 +430,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <elements>#15 green</elements>
                   <elements>#25 yellow</elements>
                   <elements>#35 red</elements>
@@ -678,7 +541,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.confidenceLevel</name>
@@ -688,10 +551,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <defaultValues>s0.5</defaultValues>
                   <elements>0.1</elements>
                   <elements>0.2</elements>
@@ -957,7 +819,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.gradingForecast</name>
@@ -967,10 +829,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <elements>0.1</elements>
                   <elements>0.2</elements>
                   <elements>0.3</elements>
@@ -1024,7 +885,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.smallSupport</name>
@@ -1034,14 +895,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.bigSupport</name>
@@ -1051,14 +912,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.giveBigSupport</name>
@@ -1068,14 +929,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.keyResult</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.receiveBigSupport</name>
@@ -1085,14 +946,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.keyResult</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.objective</name>
@@ -1102,16 +963,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.objective</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.progress</name>
@@ -1121,16 +981,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.progress</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.set</name>
@@ -1140,16 +999,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.set</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.cycle</name>
@@ -1159,16 +1017,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.cycle</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.organizationalUnit</name>
@@ -1178,16 +1035,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.lastUpdate</name>
@@ -1197,13 +1053,12 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <dateConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
+                </dateConstraint>
               </attributes>
             </typeDef>
             <typeDef>
@@ -1225,11 +1080,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.problem</name>
@@ -1239,11 +1093,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.lessonsLearned</name>
@@ -1253,11 +1106,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.nextSteps</name>
@@ -1267,11 +1119,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.keyResult</name>
@@ -1281,16 +1132,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.keyResult</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.cycle</name>
@@ -1300,16 +1150,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.cycle</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.objective</name>
@@ -1319,16 +1168,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.objective</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.smallSupport</name>
@@ -1338,14 +1186,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.bigSupport</name>
@@ -1355,14 +1203,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
+                <referenceConstraint>
                   <multiplicity />
                   <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.progressIndicator</name>
@@ -1372,10 +1220,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <elements>#15 green</elements>
                   <elements>#25 yellow</elements>
                   <elements>#35 red</elements>
@@ -1484,7 +1331,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.confidenceLevel</name>
@@ -1494,10 +1341,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <defaultValues>s0.5</defaultValues>
                   <elements>0.1</elements>
                   <elements>0.2</elements>
@@ -1552,7 +1398,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.gradingForecast</name>
@@ -1562,10 +1408,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <elements>0.1</elements>
                   <elements>0.2</elements>
                   <elements>0.3</elements>
@@ -1619,7 +1464,7 @@
                     </entry>
                   </element2icon>
                   <element2localizedLabel />
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.lastUpdate</name>
@@ -1629,13 +1474,12 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <dateConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
+                </dateConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.set</name>
@@ -1645,16 +1489,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.set</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
             </typeDef>
             <typeDef>
@@ -1676,11 +1519,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.digitalBoard.responsible</name>
@@ -1690,15 +1532,14 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>false</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.digitalBoard.description</name>
@@ -1708,11 +1549,10 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
+                <stringConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
+                </stringConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.digitalBoard.status</name>
@@ -1722,10 +1562,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <defaultValues>s#15 planned</defaultValues>
                   <elements>#15 planned</elements>
                   <elements>#25 in progress</elements>
@@ -1818,7 +1657,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.digitalBoard.dueDate</name>
@@ -1828,13 +1667,12 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
+                <dateConstraint>
+                  <multiplicity key="maximalOne">
+</multiplicity>
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
+                </dateConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.keyResult</name>
@@ -1844,16 +1682,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.keyResult</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
               <attributes>
                 <name>cf.cplace.digitalBoard.escalationLevel</name>
@@ -1863,10 +1700,9 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <textEnumerationConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <defaultValues>s#15 - none</defaultValues>
                   <elements>#15 - none</elements>
                   <elements>#25 - handRaised</elements>
@@ -1920,1272 +1756,7 @@
                       </value>
                     </entry>
                   </element2localizedLabel>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.updateKeyResult</name>
-              <localizedNameSingular>
-                <en>Update Key Result</en>
-                <de>Update Key Result</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Update Key Result</en>
-                <de>Update Key Result</de>
-              </localizedNamePlural>
-              <iconName>fa-list</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.progressUpdated</name>
-                <localizedName>
-                  <en>Progress Updated?</en>
-                  <de>Progress Aktualisiert?</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="booleanConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <defaultValues>bfalse</defaultValues>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.confidenceLevel</name>
-                <localizedName>
-                  <en>Confidence Level</en>
-                  <de>Confidence Level</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>0.0: It is already certain you will not be able to successfully complete the KR. Nothing will help you, no more resources, no change of actions.
-0.1 / 0.2: There is only a slight chance of making the 70%. We really need to crack down on the KR to get to any higher chances of success.
-0.3: There is a high chance of failure already. We must put in more resources / devise an additional action plan to ensure that we get back on track.
-0.4: Progress is happening but slower than anticipated. Our actions did clearly miss the mark of their impact and we start thinking about alternatives / additional measures that could be employed.
-0.5: The KR has not yet been worked on or we still cannot predict in any way what our outcome might be.
-0.6: We are making progress but slowly, could be a little faster or our actions had impact but not yet to that extent as we expected them to have.
-0.7: We are on track, making good progress. There is quite some time with potential uncertainty left but we should be able to cover for things.
-0.8 / 0.9: We are perfectly on schedule, everything is working out as planned, there is not much left that could go wrong at all - if nothing unforeseeable happens we should hit the mark easily.
-1.0: The KR is already fulfilled to at least 70% and whatever will happen will not change the outcome.</en>
-                  <de>0.0: It is already certain you will not be able to successfully complete the KR. Nothing will help you, no more resources, no change of actions.
-0.1 / 0.2: There is only a slight chance of making the 70%. We really need to crack down on the KR to get to any higher chances of success.
-0.3: There is a high chance of failure already. We must put in more resources / devise an additional action plan to ensure that we get back on track.
-0.4: Progress is happening but slower than anticipated. Our actions did clearly miss the mark of their impact and we start thinking about alternatives / additional measures that could be employed.
-0.5: The KR has not yet been worked on or we still cannot predict in any way what our outcome might be.
-0.6: We are making progress but slowly, could be a little faster or our actions had impact but not yet to that extent as we expected them to have.
-0.7: We are on track, making good progress. There is quite some time with potential uncertainty left but we should be able to cover for things.
-0.8 / 0.9: We are perfectly on schedule, everything is working out as planned, there is not much left that could go wrong at all - if nothing unforeseeable happens we should hit the mark easily.
-1.0: The KR is already fulfilled to at least 70% and whatever will happen will not change the outcome.</de>
-                </shortHelp>
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <defaultValues>s0.5</defaultValues>
-                  <elements>0.1</elements>
-                  <elements>0.2</elements>
-                  <elements>0.3</elements>
-                  <elements>0.4</elements>
-                  <elements>0.5</elements>
-                  <elements>0.6</elements>
-                  <elements>0.7</elements>
-                  <elements>0.8</elements>
-                  <elements>0.9</elements>
-                  <elements>1.0</elements>
-                  <element2icon>
-                    <entry>
-                      <key>0.1</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>1.0</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.2</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>0.3</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>0.4</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.5</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.6</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.7</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.8</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.9</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                  </element2icon>
-                  <element2localizedLabel />
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.gradingForecast</name>
-                <localizedName>
-                  <en>Grading Forecast</en>
-                  <de>Fortschritt Vorhersage</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <elements>0.1</elements>
-                  <elements>0.2</elements>
-                  <elements>0.3</elements>
-                  <elements>0.4</elements>
-                  <elements>0.5</elements>
-                  <elements>0.6</elements>
-                  <elements>0.7</elements>
-                  <elements>0.8</elements>
-                  <elements>0.9</elements>
-                  <elements>1.0</elements>
-                  <element2icon>
-                    <entry>
-                      <key>0.1</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>1.0</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.2</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>0.3</key>
-                      <value>circle-001-red</value>
-                    </entry>
-                    <entry>
-                      <key>0.4</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.5</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.6</key>
-                      <value>circle-002-yellow</value>
-                    </entry>
-                    <entry>
-                      <key>0.7</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.8</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                    <entry>
-                      <key>0.9</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                  </element2icon>
-                  <element2localizedLabel />
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.organizationalUnit</name>
-              <localizedNameSingular>
-                <en>Organizational Unit</en>
-                <de>Organizational Unit</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Organizational Units</en>
-                <de>Organizational Units</de>
-              </localizedNamePlural>
-              <iconName>fa-users</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <localizedShortName>
-                  <en>Titles</en>
-                  <de>Titels</de>
-                </localizedShortName>
-                <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.assignedEmployee</name>
-                <localizedName>
-                  <en>Assigned Employee</en>
-                  <de>zugewiesene MitarbeiterInnen</de>
-                </localizedName>
-                <localizedShortName>
-                  <en>Assigned Employee</en>
-                  <de>Zugewiesen MitarbeiterInnen</de>
-                </localizedShortName>
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <entityClass>cf.cplace.platform.assets.group.Principal</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>false</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.organizationalUnit</name>
-                <localizedName>
-                  <en>Parent Organizational Unit</en>
-                  <de>Übergeordnete Organisationseinheit</de>
-                </localizedName>
-                <localizedShortName>
-                  <en>Parent</en>
-                  <de>Übergeordnet</de>
-                </localizedShortName>
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.okrDashboard</name>
-              <localizedNameSingular>
-                <en>OKR Dashboard</en>
-                <de>OKR Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>OKR Dashboard</en>
-                <de>OKR Dashboard</de>
-              </localizedNamePlural>
-              <iconName>fa-rocket</iconName>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.myDashboard</name>
-              <localizedNameSingular>
-                <en>My Dashboard</en>
-                <de>Mein Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>My Dashboard</en>
-                <de>Mein Dashboard</de>
-              </localizedNamePlural>
-              <iconName>fa-user</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.strategyDashbaord</name>
-              <localizedNameSingular>
-                <en>Strategy Dashboard</en>
-                <de>Strategie Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Strategy Dashboard</en>
-                <de>Strategie Dashboard</de>
-              </localizedNamePlural>
-              <iconName>fa-road</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.cyclesDashboard</name>
-              <localizedNameSingular>
-                <en>Cycles Dashboard</en>
-                <de>Zyklen Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Cycles Dashboard</en>
-                <de>Zyklen Dashboard</de>
-              </localizedNamePlural>
-              <iconName>fa-bullseye</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.meetingsDashbaord</name>
-              <localizedNameSingular>
-                <en>Meetings Dashbaord</en>
-                <de>Meetings Dashbaord</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Meetings Dashbaords</en>
-                <de>Meetings Dashboards</de>
-              </localizedNamePlural>
-              <iconName>fa-calendar-alt</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.okrManualDashboard</name>
-              <localizedNameSingular>
-                <en>OKR Manual Dashboard</en>
-                <de>OKR Manual Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>OKR Manual Dashboard</en>
-                <de>OKR Manual Dashboard</de>
-              </localizedNamePlural>
-              <iconName>fa-book</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.administrationDashboard</name>
-              <localizedNameSingular>
-                <en>Administration Dashboard</en>
-                <de>Administration Dashboard</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Administration Dashboard</en>
-                <de>Administration Dashboard</de>
-              </localizedNamePlural>
-              <iconName>cf-cogs</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.okrDashboard</name>
-                <localizedName>
-                  <en>OKR Dashboard</en>
-                  <de>OKR Dashboard</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.okrDashboard</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.settings</name>
-                <localizedName>
-                  <en>Settings</en>
-                  <de>Einstellungen</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.settings</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.priority</name>
-              <localizedNameSingular>
-                <en>Priority</en>
-                <de>Priorität</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Priorities</en>
-                <de>Prioritäten</de>
-              </localizedNamePlural>
-              <iconName>fa-list-ol</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.date</name>
-                <localizedName>
-                  <en>Date</en>
-                  <de>Datum</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <specificity>DAY</specificity>
-                  <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.dimension</name>
-                <localizedName>
-                  <en>Dimension</en>
-                  <de>Dimension</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.strategyDashboard</name>
-                <localizedName>
-                  <en>Strategy</en>
-                  <de>Strategie</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.strategyDashbaord</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.meeting</name>
-              <localizedNameSingular>
-                <en>OKR Meeting</en>
-                <de>OKR Meeting</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Meetings</en>
-                <de>Meetings</de>
-              </localizedNamePlural>
-              <iconName>fa-calendar-alt</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.meetingType</name>
-                <localizedName>
-                  <en>Meeting Type</en>
-                  <de>Meeting Typ</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <defaultValues>s1on1</defaultValues>
-                  <elements>1on1</elements>
-                  <elements>Leadership</elements>
-                  <elements>Workshop</elements>
-                  <element2icon>
-                    <entry>
-                      <key>Leadership</key>
-                      <value>circle-005-lightblue</value>
-                    </entry>
-                    <entry>
-                      <key>Workshop</key>
-                      <value>circle-004-orange</value>
-                    </entry>
-                    <entry>
-                      <key>1on1</key>
-                      <value>circle-003-green</value>
-                    </entry>
-                  </element2icon>
-                  <element2localizedLabel>
-                    <entry>
-                      <key>Leadership</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Leadership</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Leadership</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>Workshop</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Workshop</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Workshop</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>1on1</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>1on1</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>1on1</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                  </element2localizedLabel>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.date</name>
-                <localizedName>
-                  <en>Date</en>
-                  <de>Datum</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="dateConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <specificity>DAY</specificity>
-                  <dateFormat>DAY_YEAR_LONG</dateFormat>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.cycle</name>
-                <localizedName>
-                  <en>Cycle</en>
-                  <de>Zyklus</de>
-                </localizedName>
-                <localizedShortName>
-                  <en>Cycle</en>
-                  <de>Zyklus</de>
-                </localizedShortName>
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.cycle</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.set</name>
-                <localizedName>
-                  <en>Set</en>
-                  <de>Set</de>
-                </localizedName>
-                <localizedShortName>
-                  <en>Sets</en>
-                  <de>Sets</de>
-                </localizedShortName>
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.set</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.meetingsDashbaord</name>
-                <localizedName>
-                  <en>Meeting Dashbaord</en>
-                  <de>Meeting Dashbaord</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <defaultValues>lpage/80ys7f2zyb6co9y45mu7zl2h7</defaultValues>
-                  <typeNames>cf.cplace.solution.okr.meetingsDashbaord</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.simpleCalendar.eventClassConfiguration</name>
-              <localizedNameSingular>
-                <en>Event class configuration</en>
-                <de>Ereignisklassenkonfiguration</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Event class configurations</en>
-                <de>Ereignisklassenkonfigurationen</de>
-              </localizedNamePlural>
-              <iconName>fa-filter</iconName>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.conditionAttributeName</name>
-                <localizedName>
-                  <en>Attribute to be tested</en>
-                  <de>Zu testendes Attribute</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>If the attribute value of an event is equal to the event class' attribute value, the event is assigned to this event class. If the attribute is a reference, the value of "attributeValue" represents the (internal) name of the referred page. Only the first event class fulfilling this condition will be applied.</en>
-                  <de>Gleicht das in der Ereignisklasse angegebene Attribut dem angegeben Wert, so wird eine Ereignisseite dieser Ereignisklasse zugeordnet. Ist das Attribut eine Referenz, so repräsentiert der angegebene Attributwert den (internen) Namen der referenzierten Seite. Trifft keine definierte Ereignisklasse zu, oder sind keine zusätzlichen Ereignisklassen definiert, wird der Ereignistyp selbst als Ereignisklasse zugeordnet.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.conditionValue</name>
-                <localizedName>
-                  <en>Attribute value</en>
-                  <de>Attribut Wert</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>If the attribute value of an event is equal to the event class' attribute value, the event is assigned to this event class. If the attribute is a reference, the value of "attributeValue" represents the (internal) name of the referred page. Only the first event class fulfilling this condition will be applied.</en>
-                  <de>Gleicht das in der Ereignisklasse angegebene Attribut dem angegeben Wert, so wird eine Ereignisseite dieser Ereignisklasse zugeordnet. Ist das Attribut eine Referenz, so repräsentiert der angegebene Attributwert den (internen) Namen der referenzierten Seite. Trifft keine definierte Ereignisklasse zu, oder sind keine zusätzlichen Ereignisklassen definiert, wird der Ereignistyp selbst als Ereignisklasse zugeordnet.</de>
-                </shortHelp>
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.displayName</name>
-                <localizedName>
-                  <en>Display name</en>
-                  <de>Anzeigename</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The display name of the event class which, e.g., is used for the event class selection within the calendar widget.</en>
-                  <de>Der Anzeigename der Ereignisklasse, welcher z.B. bei der Ereignisklassenauswahl des Kalendars verwendet wird.</de>
-                </shortHelp>
-                <constraintFactory type="localizedStringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.color</name>
-                <localizedName>
-                  <en>Color</en>
-                  <de>Farbe</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The color of the event class. This attribute is optional. If it is not defined, the color of the event type will be applied.</en>
-                  <de>Farbe der Ereignisklasse. Dieses Attribut ist optional. Wird es nicht angegeben, wird die Farbe des Ereignistyps als Farbe der Ereignisklasse verwendet.</de>
-                </shortHelp>
-                <constraintFactory type="colorConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.eventType</name>
-                <localizedName>
-                  <en>Parent event type</en>
-                  <de>Übergeordneter Ereignistyp</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.simpleCalendar.eventTypeConfiguration</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>true</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.simpleCalendar.eventTypeConfiguration</name>
-              <localizedNameSingular>
-                <en>Event type configuration</en>
-                <de>Ereignistypkonfiguration</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Event type configurations</en>
-                <de>Ereignistypkonfigurationen</de>
-              </localizedNamePlural>
-              <iconName>fa-calendar</iconName>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.order</name>
-                <localizedName>
-                  <en>Order</en>
-                  <de>Reihenfolge</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The order of the event types which, e.g., is used for the menu within the calendar widget to create new events.</en>
-                  <de>Die Reihenfolge der Ereignistypen, wie sie beispielsweise im Menü zur Erzeugung neuer Ereignisse im Kalendar angezeigt werden.</de>
-                </shortHelp>
-                <constraintFactory type="numberConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <precision>0</precision>
-                  <localizedTextAfterSupplier />
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.eventTypeName</name>
-                <localizedName>
-                  <en>Event type</en>
-                  <de>Ereignistyp</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The cplace type which has to be registered as event type. In order to specifiy the start and end date attributes as well as event classes, you have to save the event type after its value was changed.</en>
-                  <de>Der cplace-Typ, welcher als Ereignistyp registriert werden soll. Um das Start- und Enddatumsattribut als auch Ereignisklassenzu definieren, müssen Sie nach dessen Aktualisierung den Ereignistyp erst speichern</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.startDateAttributeName</name>
-                <localizedName>
-                  <en>Start date attribute</en>
-                  <de>Startdatum-Attribut</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The attribute of the selected cplace type which holds the start date of the event.</en>
-                  <de>Das Attribut des gewählten cPlace-Typs, welches das Startdatum des Ereignisses enthält.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.endDateAttributeName</name>
-                <localizedName>
-                  <en>End date attribute</en>
-                  <de>Enddatum-Attribut</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The attribute of the selected cplace type which holds the end date of the event.</en>
-                  <de>Das Attribut des gewählten cPlace-Typs, welches das Enddatum des Ereignisses enthält.</de>
-                </shortHelp>
-                <constraintFactory type="dynamicEnumerationConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.color</name>
-                <localizedName>
-                  <en>Color</en>
-                  <de>Farbe</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>The color of the event type. This color will be applied if either no event class is specified for this type, or if none of the defined event classes is applicable.</en>
-                  <de>Standardfarbe des Ereignistyps. Diese Farbe wird angewandt, wenn entweder keine Ereignisklassen in der Konfiguration des Typs definiert ist, oder wenn für eine bestimmte Ereignisseite keine Ereignisklasse angewandet werden kann.</de>
-                </shortHelp>
-                <constraintFactory type="colorConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <defaultValues>s#00519e</defaultValues>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.displayNamePattern</name>
-                <localizedName>
-                  <en>Event name generation pattern</en>
-                  <de>Muster zur Erzeugung der Ereignisnamen</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>This pattern is used to generate the names of the events in the calendar. The possible attributes of the pattern will be derived from the event type. Is no pattern defined, the event name will be the name of the underlying page of the event. To use this name as part of the pattern, use $name$ as placeholder.</en>
-                  <de>Das hier angegegebene Muster wird verwendet um die Namen der Ereignisse im Kalender zu erzeugen. Die möglichen Attribute des Musters leiten sich vom Ereignistyp ab. Ist kein Muster angegeben, wird der Name der dem Ereignis zugrunde liegenden Seite verwendet. Möchte man diesen Namen ebenfalls im Muster verwenden, kann $name$ als Platzhalter verwendet werden.</de>
-                </shortHelp>
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.simpleCalendar.eventClasses</name>
-                <localizedName>
-                  <en>Event classes</en>
-                  <de>Ereignisklassen</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp>
-                  <en>Event classes which distinguish the events of the respective type into specific event classes based on the values of attributes. They will be tested for applicability in the defined order. If one event class is applicable, the conditions of the subsequent ones won't be tested. If none of the event classes is applicable, the event type itself will be implicitly interpreted as event class.</en>
-                  <de>Jeder Ereignistyp kann eine beliebige Menge von Ereignisklassen definieren, welche den entsprechenden Ereignistyp noch weiter anhand bestimmter Attributwerte unterteilen können. Die Ereignisklassen werden dabei in der definierten Reihenfolge auf deren Anwendbarkeit getestet.</de>
-                </shortHelp>
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <typeNames>cf.cplace.simpleCalendar.eventClassConfiguration</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.enumerationIcons.page</name>
-              <localizedNameSingular>
-                <en>Icons for enumeration values</en>
-                <de>Icons für Aufzählungswerte</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Icons for enumeration values</en>
-                <de>Icons für Aufzählungswerte</de>
-              </localizedNamePlural>
-              <iconName>fa-paint-brush</iconName>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.settings</name>
-              <localizedNameSingular>
-                <en>Settings</en>
-                <de>Einstellungen</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Settings</en>
-                <de>Einstellungen</de>
-              </localizedNamePlural>
-              <iconName>fa-list</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.currentCycle</name>
-                <localizedName>
-                  <en>Current Cycle</en>
-                  <de>Aktueller Zyklus</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.cycle</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.reader</name>
-                <localizedName>
-                  <en>Reader</en>
-                  <de>Leser</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <typeNames>default.group</typeNames>
-                  <entityClass>cf.cplace.platform.assets.group.Group</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>false</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.editors</name>
-                <localizedName>
-                  <en>Editors</en>
-                  <de>Bearbeiter</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity />
-                  <typeNames>default.group</typeNames>
-                  <entityClass>cf.cplace.platform.assets.group.Group</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>false</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.cycleTemplate</name>
-                <localizedName>
-                  <en>Cycle Template</en>
-                  <de>Cycle-Template</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>maximalOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.cycle</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.okr.topic</name>
-              <localizedNameSingular>
-                <en>Topic</en>
-                <de>Thema</de>
-              </localizedNameSingular>
-              <localizedNamePlural>
-                <en>Topics</en>
-                <de>Themen</de>
-              </localizedNamePlural>
-              <iconName>fa-lightbulb</iconName>
-              <attributes>
-                <name>cf.cplace.solution.okr.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.status</name>
-                <localizedName>
-                  <en>Status</en>
-                  <de>Status</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="textEnumerationConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <defaultValues>s#15 - submitted</defaultValues>
-                  <elements>#15 - submitted</elements>
-                  <elements>#25 - backlog</elements>
-                  <elements>#35 - accepted</elements>
-                  <elements>#45 - declined</elements>
-                  <element2icon>
-                    <entry>
-                      <key>#35 - accepted</key>
-                      <value>harvey-ball-green-100</value>
-                    </entry>
-                    <entry>
-                      <key>#15 - submitted</key>
-                      <value>harvey-ball-amber-000</value>
-                    </entry>
-                    <entry>
-                      <key>#25 - backlog</key>
-                      <value>harvey-ball-green-000</value>
-                    </entry>
-                    <entry>
-                      <key>#45 - declined</key>
-                      <value>harvey-ball-red-100</value>
-                    </entry>
-                  </element2icon>
-                  <element2localizedLabel>
-                    <entry>
-                      <key>#35 - accepted</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Übernommen</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Accepted</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>#15 - submitted</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Eingereicht</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Submitted</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>#25 - backlog</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Backlog</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Backlog</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>#45 - declined</key>
-                      <value>
-                        <localizations>
-                          <entry>
-                            <key>de</key>
-                            <value>
-                              <language>de</language>
-                              <value>Abgelehnt</value>
-                            </value>
-                          </entry>
-                          <entry>
-                            <key>en</key>
-                            <value>
-                              <language>en</language>
-                              <value>Declined</value>
-                            </value>
-                          </entry>
-                        </localizations>
-                      </value>
-                    </entry>
-                  </element2localizedLabel>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.description</name>
-                <localizedName>
-                  <en>Decription</en>
-                  <de>Beschreibung</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="stringConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                </constraintFactory>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.okr.organizationalUnit</name>
-                <localizedName>
-                  <en>Organizational Unit</en>
-                  <de>Organisationseinheit</de>
-                </localizedName>
-                <localizedShortName />
-                <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
-                  <typeNames>cf.cplace.solution.okr.organizationalUnit</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                  <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </textEnumerationConstraint>
               </attributes>
             </typeDef>
             <typeDef>
@@ -3204,16 +1775,15 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <constraintFactory type="referenceConstraint">
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
+                <referenceConstraint>
+                  <multiplicity key="exactlyOne">
+</multiplicity>
                   <typeNames>cf.cplace.solution.okr.cycle</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
-                </constraintFactory>
+                </referenceConstraint>
               </attributes>
             </typeDef>
           </types>
