@@ -1,4 +1,4 @@
-The following xml schema represents describes an xml format for specifying data models:
+The following xml schema represents describes a xml format for specifying data models:
 
 ```
 {{ load_file('pkg_okr/schema.xsd') }}
