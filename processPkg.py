@@ -76,6 +76,8 @@ def add_mandatory_elements(root, parent_map):
         key.text = 'none'
         localized_page_names_mode.append(key)
 
+        add_element(type_def, 'showNewButton', 'true')
+
     attributes = root.findall('.//attributes')
     for attribute in attributes:
         constraint_factory = attribute.find('.//constraintFactory')
@@ -104,8 +106,6 @@ def add_mandatory_elements(root, parent_map):
         widget_container.append(widgets_layout)
         widgets = ET.Element('widgets')
         widget_container.append(widgets)
-
-
 
 
 def add_element(package, element_name, text=None):
@@ -257,7 +257,7 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/typeDef/autocompleteDetailsPattern')
     remove(root, parent_map, './/typeDef/displayNameGenerationPattern')
     remove(root, parent_map, './/typeDef/nameGenerationPattern')
-    remove(root, parent_map, './/typeDef/iconName')
+    # remove(root, parent_map, './/typeDef/iconName')
     remove(root, parent_map, './/typeDef/cplaceJSChangeListeners')
     remove(root, parent_map, './/typeDef/cplaceJSPageActions')
 

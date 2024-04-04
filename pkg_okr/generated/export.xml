@@ -25,6 +25,7 @@
                 <en>Cycles</en>
                 <de>Zyklen</de>
               </localizedNamePlural>
+              <iconName>fa-redo</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.year</name>
                 <localizedName>
@@ -237,6 +238,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.set</name>
@@ -248,6 +250,7 @@
                 <en>Sets</en>
                 <de>Sets</de>
               </localizedNamePlural>
+              <iconName>fa-align-justify</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.cycle</name>
                 <localizedName>
@@ -368,6 +371,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.objective</name>
@@ -379,6 +383,7 @@
                 <en>Objectives</en>
                 <de>Objectives</de>
               </localizedNamePlural>
+              <iconName>fa-bullseye</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.number</name>
                 <localizedName>
@@ -547,6 +552,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.keyResult</name>
@@ -558,6 +564,7 @@
                 <en>Key Results</en>
                 <de>Schlüsselergebnisse</de>
               </localizedNamePlural>
+              <iconName>fa-key</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.number</name>
                 <localizedName>
@@ -1259,6 +1266,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.progress</name>
@@ -1270,6 +1278,7 @@
                 <en>Progress</en>
                 <de>Fortschritt</de>
               </localizedNamePlural>
+              <iconName>fa-folder</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.result</name>
                 <localizedName>
@@ -1729,6 +1738,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.task</name>
@@ -1740,6 +1750,7 @@
                 <en>Tasks</en>
                 <de>Aufgaben</de>
               </localizedNamePlural>
+              <iconName>cf-task</iconName>
               <attributes>
                 <name>cf.cplace.digitalBoard.title</name>
                 <localizedName>
@@ -2007,6 +2018,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.updateKeyResult</name>
@@ -2018,6 +2030,7 @@
                 <en>Update Key Result</en>
                 <de>Update Key Result</de>
               </localizedNamePlural>
+              <iconName>fa-list</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.progressUpdated</name>
                 <localizedName>
@@ -2196,6 +2209,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.organizationalUnit</name>
@@ -2207,6 +2221,7 @@
                 <en>Organizational Units</en>
                 <de>Organizational Units</de>
               </localizedNamePlural>
+              <iconName>fa-users</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
                 <localizedName>
@@ -2274,6 +2289,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.okrDashboard</name>
@@ -2285,12 +2301,14 @@
                 <en>OKR Dashboard</en>
                 <de>OKR Dashboard</de>
               </localizedNamePlural>
+              <iconName>fa-rocket</iconName>
               <appliesTo>
                 <key>page</key>
               </appliesTo>
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.myDashboard</name>
@@ -2302,6 +2320,7 @@
                 <en>My Dashboard</en>
                 <de>Mein Dashboard</de>
               </localizedNamePlural>
+              <iconName>fa-user</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2328,6 +2347,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.strategyDashbaord</name>
@@ -2339,6 +2359,7 @@
                 <en>Strategy Dashboard</en>
                 <de>Strategie Dashboard</de>
               </localizedNamePlural>
+              <iconName>fa-road</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2365,6 +2386,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.cyclesDashboard</name>
@@ -2376,6 +2398,7 @@
                 <en>Cycles Dashboard</en>
                 <de>Zyklen Dashboard</de>
               </localizedNamePlural>
+              <iconName>fa-bullseye</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2402,6 +2425,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.meetingsDashbaord</name>
@@ -2413,6 +2437,7 @@
                 <en>Meetings Dashbaords</en>
                 <de>Meetings Dashboards</de>
               </localizedNamePlural>
+              <iconName>fa-calendar-alt</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2439,6 +2464,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.okrManualDashboard</name>
@@ -2450,6 +2476,7 @@
                 <en>OKR Manual Dashboard</en>
                 <de>OKR Manual Dashboard</de>
               </localizedNamePlural>
+              <iconName>fa-book</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2476,6 +2503,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.administrationDashboard</name>
@@ -2487,6 +2515,7 @@
                 <en>Administration Dashboard</en>
                 <de>Administration Dashboard</de>
               </localizedNamePlural>
+              <iconName>cf-cogs</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.okrDashboard</name>
                 <localizedName>
@@ -2533,6 +2562,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.priority</name>
@@ -2544,6 +2574,7 @@
                 <en>Priorities</en>
                 <de>Prioritäten</de>
               </localizedNamePlural>
+              <iconName>fa-list-ol</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.date</name>
                 <localizedName>
@@ -2622,6 +2653,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.meeting</name>
@@ -2633,6 +2665,7 @@
                 <en>Meetings</en>
                 <de>Meetings</de>
               </localizedNamePlural>
+              <iconName>fa-calendar-alt</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
                 <localizedName>
@@ -2836,6 +2869,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.simpleCalendar.eventClassConfiguration</name>
@@ -2847,6 +2881,7 @@
                 <en>Event class configurations</en>
                 <de>Ereignisklassenkonfigurationen</de>
               </localizedNamePlural>
+              <iconName>fa-filter</iconName>
               <attributes>
                 <name>cf.cplace.simpleCalendar.conditionValue</name>
                 <localizedName>
@@ -2927,6 +2962,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.simpleCalendar.eventTypeConfiguration</name>
@@ -2938,6 +2974,7 @@
                 <en>Event type configurations</en>
                 <de>Ereignistypkonfigurationen</de>
               </localizedNamePlural>
+              <iconName>fa-calendar</iconName>
               <attributes>
                 <name>cf.cplace.simpleCalendar.order</name>
                 <localizedName>
@@ -3022,6 +3059,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.enumerationIcons.page</name>
@@ -3033,12 +3071,14 @@
                 <en>Icons for enumeration values</en>
                 <de>Icons für Aufzählungswerte</de>
               </localizedNamePlural>
+              <iconName>fa-paint-brush</iconName>
               <appliesTo>
                 <key>page</key>
               </appliesTo>
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.settings</name>
@@ -3050,6 +3090,7 @@
                 <en>Settings</en>
                 <de>Einstellungen</de>
               </localizedNamePlural>
+              <iconName>fa-list</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.currentCycle</name>
                 <localizedName>
@@ -3132,6 +3173,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.topic</name>
@@ -3143,6 +3185,7 @@
                 <en>Topics</en>
                 <de>Themen</de>
               </localizedNamePlural>
+              <iconName>fa-lightbulb</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
                 <localizedName>
@@ -3323,6 +3366,7 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
             <typeDef>
               <name>cf.cplace.solution.okr.selectNextCycle</name>
@@ -3331,6 +3375,7 @@
                 <de>Select next Cycle</de>
               </localizedNameSingular>
               <localizedNamePlural />
+              <iconName>fa-list</iconName>
               <attributes>
                 <name>cf.cplace.solution.okr.nextCycle</name>
                 <localizedName>
@@ -3357,13 +3402,14 @@
               <localizedPageNamesMode>
                 <key>none</key>
               </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
             </typeDef>
           </types>
           <apps>["cf.cplace.platform"]</apps>
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>oc5ld732smm7i3hl6tpsihwnz</id>
+              <id>7vfmmwh5yqiljul8aavl5sh2x</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
