@@ -165,7 +165,13 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="iconName" type="xs:string"/>
+  <xs:element name="iconName" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+        'iconName' is the name of the icon that represents the type in the user interface. It is a Font Awesome icon name.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="attributes">
     <xs:complexType>
       <xs:all>
