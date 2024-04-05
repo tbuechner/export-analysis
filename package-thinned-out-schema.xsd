@@ -1,6 +1,13 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="de" type="xs:string"/>
   <xs:element name="en" type="xs:string"/>
+  <xs:simpleType name="EntityClassType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
+      <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
+      <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:element name="multiplicity">
     <xs:annotation>
       <xs:documentation>
@@ -102,7 +109,16 @@
   </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
   <xs:element name="typeNames" type="xs:string"/>
-  <xs:element name="entityClass" type="xs:string"/>
+  <xs:element name="entityClass" type="EntityClassType">
+    <xs:annotation>
+      <xs:documentation>
+        The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
+        - 'cf.cplace.platform.assets.group.Group' if the target is a group,
+        - 'cf.cplace.platform.assets.group.Person' if the target is a user,
+        - 'cf.cplace.platform.assets.file.Page' otherwise.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="localizedInverseRoleName" type="xs:string"/>
   <xs:element name="sameWorkspace" type="xs:string"/>
   <xs:element name="isHierarchy" type="xs:string"/>
@@ -110,11 +126,6 @@
     <xs:annotation>
       <xs:documentation>
         The 'referenceConstraint' element is used to define an attribute which is a reference attribute or relationship between entities in the data model.
-
-        The 'entityClass' attribute specifies the class of the entity to which the reference points. It can have the following values:
-        - 'cf.cplace.platform.assets.group.Group' if the target is a group,
-        - 'cf.cplace.platform.assets.group.Person' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Page' otherwise.
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
@@ -124,16 +135,8 @@
         <xs:element ref="localizedInverseRoleName"/>
         <xs:element ref="sameWorkspace"/>
         <xs:element ref="isHierarchy"/>
+        <xs:element ref="entityClass"/>
       </xs:sequence>
-      <xs:attribute name="entityClass" use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
-            <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
-            <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="specificity" type="xs:string"/>
