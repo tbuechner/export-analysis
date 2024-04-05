@@ -1,4 +1,4 @@
-<solutionManagement xmlVersion="1.8">
+<solutionManagement xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd">
   <package internalName="cf.cplace.template.okr" version="10">
     <name>
       <de>Solution Template - Objectives &amp; Key Results</de>

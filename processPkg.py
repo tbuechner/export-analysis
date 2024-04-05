@@ -221,6 +221,9 @@ def add_element(package, element_name, text=None):
 
 
 def rewrite(root, parent_map):
+    root.set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+    root.set('xsi:noNamespaceSchemaLocation', "../../package-thinned-out-schema.xsd")
+
     constraint_factories = root.findall('.//constraintFactory')
     for constraint_factory in constraint_factories:
         # set constraint_factory tag to the value of the attribute `type`

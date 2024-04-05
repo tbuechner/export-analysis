@@ -1,2 +1,2 @@
-tokens thinned-out.xml: 3073
-tokens thinned-out-compressed.xml: 2190
+tokens thinned-out.xml: 3103
+tokens thinned-out-compressed.xml: 2220

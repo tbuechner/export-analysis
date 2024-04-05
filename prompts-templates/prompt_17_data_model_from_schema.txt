@@ -1,7 +1,7 @@
 The following xml schema represents describes a xml format for specifying data models:
 
 ```
-{{ load_file('pkg_okr/schema.xsd') }}
+{{ load_file('package-thinned-out-schema.xsd') }}
 ```
 
 The following xml document is an example of a data model specified in the format described by the schema:

@@ -1,4 +1,4 @@
-<solutionManagement xmlVersion="1.8">
+<solutionManagement xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd">
   <package internalName="cf.cplace.template.okr" version="10">
     <name>
       <de>Solution Template - Objectives &amp; Key Results</de>
@@ -508,7 +508,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>0101155hy7qhgq067n0ib1c58</id>
+              <id>t0f2o81ayd44zufyc4emvnbq7</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
