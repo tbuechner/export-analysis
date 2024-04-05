@@ -58,7 +58,11 @@ def process_pkg(folder_name):
 
     remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed)
 
+    rewrite_pages(root, parent_map)
+
     remove_empty_elements(root)
+
+    pretty_print_xml(root, 0)
 
     with open(folder_name_generated + '/after-page-removal.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
@@ -404,6 +408,58 @@ def remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed
         for attribute in root.findall(xpath):
             attributes = parent_map[attribute]
             attributes.remove(attribute)
+
+
+def rewrite_pages(root, parent_map):
+    for attribute in root.findall('.//workspace/pages/page/custom/attributes/attribute'):
+        attribute_name = attribute.find('.//name').text
+        # set the attribute 'name' of the attribute element to the value of attribute_name
+        attribute.set('name', attribute_name)
+        # remove the name element
+        attribute.remove(attribute.find('.//name'))
+        values = attribute.find('.//values')
+        for value in values:
+            if value.text is not None:
+                if value.text.startswith('s'):
+                    # create a new element with the tag 'stringValue' and the text value.text
+                    string_value = ET.Element('string')
+                    string_value.set('value', value.text[1:])
+                    attribute.append(string_value)
+                    values.remove(value)
+                elif value.text.startswith('d'):
+                    number_value = ET.Element('number')
+                    number_value.set('value', value.text[1:])
+                    attribute.append(number_value)
+                    values.remove(value)
+                elif value.text.startswith('b'):
+                    boolean_value = ET.Element('boolean')
+                    boolean_value.set('value', value.text[1:])
+                    attribute.append(boolean_value)
+                    values.remove(value)
+                elif value.text.startswith('l'):
+                    reference_value = ET.Element('reference')
+                    uid = value.text[1:]
+                    # uid is of the form entityType/id - split the string at the first occurrence of '/'
+                    entity_type, id = uid.split('/', 1)
+                    # set the attribute 'entityType' of the referenceValue element to the value of entity_type
+                    reference_value.set('entityType', entity_type)
+                    # set the attribute 'id' of the referenceValue element to the value of id
+                    reference_value.set('id', id)
+                    attribute.append(reference_value)
+                    values.remove(value)
+                elif value.text.startswith('a'):
+                    date_value = ET.Element('date')
+                    date_value.set('value', value.text[1:])
+                    attribute.append(date_value)
+                    values.remove(value)
+                elif value.text.startswith('r'):
+                    rich_string_value = ET.Element('richString')
+                    rich_string_value.text = value.text[1:]
+                    attribute.append(rich_string_value)
+                    values.remove(value)
+                else:
+                    print("unknown value type: " + value.text)
+        attribute.remove(values)
 
 
 def remove_all_pages(root, parent_map):

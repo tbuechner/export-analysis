@@ -14,6 +14,8 @@ def remove(root, parent_map, xpath):
 
 
 def is_empty(element):
+    if element.attrib:
+        return False
     return (not element.text or element.text.isspace()) and not element.tail and len(element) == 0
 
 
@@ -24,7 +26,10 @@ def remove_empty_elements(element, parent=None):
 
     # If the element is empty and it's not the root element, remove it
     if parent is not None and is_empty(element):
-        util.remove(element)
+        # generate a string representation of the element
+        element_str = ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8')
+        print("Removing empty element: " + element_str)
+        parent.remove(element)
 
     # If the element is equals to "{}", remove it
     if element.text == "{}":
