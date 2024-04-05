@@ -461,6 +461,14 @@ def rewrite_pages(root, parent_map):
                     print("unknown value type: " + value.text)
         attribute.remove(values)
 
+    for attributes in root.findall('.//workspace/pages/page/custom/attributes'):
+        custom = parent_map[attributes]
+        # move all children of attributes to custom
+        for attribute in list(attributes):
+            custom.append(attribute)
+
+        custom.remove(attributes)
+
 
 def remove_all_pages(root, parent_map):
     remove(root, parent_map, './/workspace/pages')
