@@ -33,10 +33,8 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <stringConstraint>
-</stringConstraint>
-                <multiplicity key="exactlyOne">
-</multiplicity>
+                <stringConstraint />
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.quarter</name>
@@ -46,10 +44,8 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <stringConstraint>
-</stringConstraint>
-                <multiplicity key="exactlyOne">
-</multiplicity>
+                <stringConstraint />
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.status</name>
@@ -152,8 +148,7 @@
                     </entry>
                   </element2localizedLabel>
                 </textEnumerationConstraint>
-                <multiplicity key="exactlyOne">
-</multiplicity>
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.start</name>
@@ -167,8 +162,7 @@
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
                 </dateConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.end</name>
@@ -182,8 +176,7 @@
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
                 </dateConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
             </typeDef>
             <typeDef>
@@ -212,8 +205,7 @@
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
                 </numberConstraint>
-                <multiplicity key="exactlyOne">
-</multiplicity>
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
@@ -223,10 +215,8 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <stringConstraint>
-</stringConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <stringConstraint />
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.accomplished</name>
@@ -295,8 +285,7 @@
                     </entry>
                   </element2localizedLabel>
                 </textEnumerationConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.description</name>
@@ -306,10 +295,8 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <richStringConstraint>
-</richStringConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <richStringConstraint />
+                <multiplicity key="maximalOne" />
               </attributes>
             </typeDef>
             <typeDef>
@@ -338,8 +325,7 @@
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
                 </numberConstraint>
-                <multiplicity key="exactlyOne">
-</multiplicity>
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.title</name>
@@ -349,10 +335,8 @@
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
-                <stringConstraint>
-</stringConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <stringConstraint />
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.gradingForecast</name>
@@ -417,8 +401,7 @@
                   </element2icon>
                   <element2localizedLabel />
                 </textEnumerationConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.progress</name>
@@ -435,8 +418,7 @@
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>false</isHierarchy>
                 </referenceConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.lastUpdate</name>
@@ -450,8 +432,7 @@
                   <specificity>DAY</specificity>
                   <dateFormat>DAY_YEAR_LONG</dateFormat>
                 </dateConstraint>
-                <multiplicity key="maximalOne">
-</multiplicity>
+                <multiplicity key="maximalOne" />
               </attributes>
             </typeDef>
           </types>

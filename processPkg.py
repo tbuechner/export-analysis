@@ -270,20 +270,30 @@ def pretty_print_xml(elem, level=0, indentation="  "):
     - level: The current level in the tree (used for indentation).
     - indentation: The string used for indentation, defaulting to two spaces.
     """
-    # Add indentation
     indent = "\n" + level * indentation
-    if len(elem):
+    child_indent = "\n" + (level + 1) * indentation
+
+    # Handling element text
+    if len(elem) > 0 or elem.text:  # If the element has children or text
         if not elem.text or not elem.text.strip():
-            elem.text = indent + indentation
-        if not elem.tail or not elem.tail.strip():
+            elem.text = child_indent if len(elem) > 0 else ""
+    else:  # Element has no children and no text
+        if level > 0 and (not elem.tail or not elem.tail.strip()):
             elem.tail = indent
-        for elem in elem:
-            pretty_print_xml(elem, level+1, indentation)
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = indent
-    else:
-        if level and (not elem.tail or not elem.tail.strip()):
-            elem.tail = indent
+        return  # No further processing for truly empty elements
+
+    # Iterating through children if any
+    for child in list(elem):
+        pretty_print_xml(child, level + 1, indentation)
+
+    # Adjusting tail for the last child
+    if len(elem) > 0:
+        if not elem[-1].tail or not elem[-1].tail.strip():
+            elem[-1].tail = indent
+
+    # Handling tail text for this element
+    if level > 0 and (not elem.tail or not elem.tail.strip()):
+        elem.tail = indent
 
 
 def remove_characters_between_xml_elements(elem):
