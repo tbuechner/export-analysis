@@ -1,0 +1,152 @@
+<solutionManagement xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../package-thinned-out-schema.xsd">
+    <package internalName="cf.cplace.riskManagement" version="1">
+        <name>
+            <de>Risikomanagement-Anwendung</de>
+            <en>Risk Management Application</en>
+        </name>
+        <shortname />
+        <slots>
+            <slot internalName="cf.cplace.riskManagement.risks">
+                <name>
+                    <de>Risiken</de>
+                    <en>Risks</en>
+                </name>
+                <workspace>
+                    <name>RiskManagement</name>
+                    <types>
+                        <typeDef>
+                            <name>cf.cplace.riskManagement.risk</name>
+                            <localizedNameSingular>
+                                <en>Risk</en>
+                                <de>Risiko</de>
+                            </localizedNameSingular>
+                            <localizedNamePlural>
+                                <en>Risks</en>
+                                <de>Risiken</de>
+                            </localizedNamePlural>
+                            <iconName>fa-exclamation-triangle</iconName>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.name</name>
+                                <localizedName>
+                                    <en>Name</en>
+                                    <de>Name</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <stringConstraint />
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.description</name>
+                                <localizedName>
+                                    <en>Description</en>
+                                    <de>Beschreibung</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <richStringConstraint />
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.probability</name>
+                                <localizedName>
+                                    <en>Probability</en>
+                                    <de>Wahrscheinlichkeit</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <numberConstraint>
+                                    <precision>2</precision>
+                                    <localizedTextAfterSupplier />
+                                </numberConstraint>
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.impact</name>
+                                <localizedName>
+                                    <en>Impact</en>
+                                    <de>Auswirkung</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <numberConstraint>
+                                    <precision>2</precision>
+                                    <localizedTextAfterSupplier />
+                                </numberConstraint>
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.level</name>
+                                <localizedName>
+                                    <en>Risk Level</en>
+                                    <de>Risikostufe</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <numberConstraint>
+                                    <precision>1</precision>
+                                    <localizedTextAfterSupplier />
+                                </numberConstraint>
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.risk.mitigations</name>
+                                <localizedName>
+                                    <en>Mitigations</en>
+                                    <de>Minderungsmaßnahmen</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <referenceConstraint>
+                                    <typeNames>cf.cplace.riskManagement.mitigation</typeNames>
+                                    <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                                    <localizedInverseRoleName />
+                                    <sameWorkspace>true</sameWorkspace>
+                                    <isHierarchy>false</isHierarchy>
+                                </referenceConstraint>
+                                <multiplicity key="anyNumber" />
+                            </attributes>
+                        </typeDef>
+                        <typeDef>
+                            <name>cf.cplace.riskManagement.mitigation</name>
+                            <localizedNameSingular>
+                                <en>Mitigation</en>
+                                <de>Minderungsmaßnahme</de>
+                            </localizedNameSingular>
+                            <localizedNamePlural>
+                                <en>Mitigations</en>
+                                <de>Minderungsmaßnahmen</de>
+                            </localizedNamePlural>
+                            <iconName>fa-shield-alt</iconName>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.mitigation.description</name>
+                                <localizedName>
+                                    <en>Description</en>
+                                    <de>Beschreibung</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <richStringConstraint />
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                            <attributes>
+                                <name>cf.cplace.riskManagement.mitigation.cost</name>
+                                <localizedName>
+                                    <en>Cost</en>
+                                    <de>Kosten</de>
+                                </localizedName>
+                                <localizedShortName />
+                                <shortHelp />
+                                <numberConstraint>
+                                    <precision>2</precision>
+                                    <localizedTextAfterSupplier />
+                                </numberConstraint>
+                                <multiplicity key="exactlyOne" />
+                            </attributes>
+                        </typeDef>
+                    </types>
+                </workspace>
+            </slot>
+        </slots>
+    </package>
+</solutionManagement>

@@ -71,16 +71,46 @@ def process_pkg(folder_name):
 
     write_token_counts(folder_name_generated)
 
-    parent_map = {c: p for p in tree.iter() for c in p}
-    add_mandatory_elements(root, parent_map)
-
-    pretty_print_xml(root, 0)
+    rewrite_to_pkg_format(root, tree)
 
     with open(folder_name_generated + '/export.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
 
     # zip export.xml into package.zip
     os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
+
+
+def rewrite_to_pkg_format(root, tree):
+    parent_map = {c: p for p in tree.iter() for c in p}
+    add_mandatory_elements(root, parent_map)
+    pretty_print_xml(root, 0)
+
+
+def generate_pkgs():
+    # for all files in folder 'generated-pkgs'
+    folder_name = 'generated-pkgs'
+    # do not walk the directory tree recursively, only on first level
+    for file in os.listdir(folder_name):
+        # if the file is a .zip file
+        if file.endswith('.xml') and not file.endswith('-rewritten.xml'):
+            # strip file of the extension
+            file = file[:-4]
+
+            pkg_folder_name = folder_name + '/' + file
+
+            if os.path.exists(pkg_folder_name):
+                os.system("rm -r " + pkg_folder_name)
+
+            os.mkdir(pkg_folder_name)
+
+            tree = ET.parse(folder_name + '/' + file + '.xml')
+            root = tree.getroot()
+            rewrite_to_pkg_format(root, tree)
+
+            with open(pkg_folder_name + '/' + 'export.xml', 'w') as f:
+                f.write(ET.tostring(root, encoding='unicode'))
+
+            os.system("zip -j " + pkg_folder_name + "/" + file + ".zip " + pkg_folder_name + "/" + "export.xml")
 
 
 def add_reference_constraint_def_class(constraint_factory):
@@ -105,7 +135,6 @@ def add_mandatory_elements(root, parent_map):
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
-
 
     for constraint_factory in root.findall('.//textEnumerationConstraint'):
         rewrite_constraint_factory(constraint_factory, parent_map, 'textEnumerationConstraint')
@@ -175,10 +204,13 @@ def add_mandatory_elements(root, parent_map):
         key = multiplicity.get('key')
         # if key is not None
         if key is not None:
-            key_element = ET.Element('key')
-            key_element.text = key
-            multiplicity.append(key_element)
-            del multiplicity.attrib['key']
+            if key == 'anyNumber':
+                del multiplicity.attrib['key']
+            else:
+                key_element = ET.Element('key')
+                key_element.text = key
+                multiplicity.append(key_element)
+                del multiplicity.attrib['key']
 
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
