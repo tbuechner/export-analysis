@@ -37,54 +37,45 @@ def add_mandatory_elements(root, parent_map):
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
 
+
     for constraint_factory in root.findall('.//textEnumerationConstraint'):
-        constraint_factory.set('type', 'textEnumerationConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'textEnumerationConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
 
     for constraint_factory in root.findall('.//stringConstraint'):
-        constraint_factory.set('type', 'stringConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'stringConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
 
     for constraint_factory in root.findall('.//dateConstraint'):
-        constraint_factory.set('type', 'dateConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'dateConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef')
 
     for constraint_factory in root.findall('.//numberConstraint'):
-        constraint_factory.set('type', 'numberConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'numberConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
 
     for constraint_factory in root.findall('.//richStringConstraint'):
-        constraint_factory.set('type', 'richStringConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'richStringConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef')
 
     for constraint_factory in root.findall('.//booleanConstraint'):
-        constraint_factory.set('type', 'booleanConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'booleanConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef')
 
     for constraint_factory in root.findall('.//colorConstraint'):
-        constraint_factory.set('type', 'colorConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'colorConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
 
     for constraint_factory in root.findall('.//localizedStringConstraint'):
-        constraint_factory.set('type', 'localizedStringConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'localizedStringConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef')
 
     for constraint_factory in root.findall('.//dynamicEnumerationConstraint'):
-        constraint_factory.set('type', 'dynamicEnumerationConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'dynamicEnumerationConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef')
 
     for constraint_factory in root.findall('.//referenceConstraint'):
-        constraint_factory.set('type', 'referenceConstraint')
-        constraint_factory.tag = 'constraintFactory'
+        rewrite_constraint_factory(constraint_factory, parent_map, 'referenceConstraint')
         add_reference_constraint_def_class(constraint_factory)
 
     type_defs = root.findall('.//typeDef')
@@ -144,6 +135,15 @@ def add_mandatory_elements(root, parent_map):
         widget_container.append(widgets)
 
 
+def rewrite_constraint_factory(constraint_factory, parent_map, constraint_name):
+    attribute = parent_map[constraint_factory]
+    multiplicity = attribute.find('.//multiplicity')
+    constraint_factory.append(multiplicity)
+    attribute.remove(multiplicity)
+    constraint_factory.set('type', constraint_name)
+    constraint_factory.tag = 'constraintFactory'
+
+
 def add_element(package, element_name, text=None):
     new_element = ET.Element(element_name)
     if text is not None:
@@ -163,13 +163,18 @@ def rewrite(root, parent_map):
     for multiplicity in multiplicities:
         key = multiplicity.find('.//key')
         if key is None:
-            multiplicity.set('key', 'any')
+            multiplicity.set('key', 'anyNumber')
         else:
             # set the attribute `key` of multiplicity to the value of the tag `key`
             multiplicity.set('key', key.text)
             # remove the tag `key`
             multiplicity.remove(key)
 
+        constraint = parent_map[multiplicity]
+        attribute = parent_map[constraint]
+        # move the multiplicity element to the attribute element
+        attribute.append(multiplicity)
+        constraint.remove(multiplicity)
 
 
 def process_pkg(folder_name):
