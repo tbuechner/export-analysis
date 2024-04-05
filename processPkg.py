@@ -185,6 +185,9 @@ def process_pkg(folder_name):
     with open(folder_name + '/types-to-be-removed.txt') as f:
         types_to_be_removed = f.read().splitlines()
 
+    with open(folder_name + '/attributes-to-be-removed.txt') as f:
+        attributes_to_be_removed = f.read().splitlines()
+
     with open(folder_name + '/slots-to-be-retained.txt') as f:
         slots_to_be_retained = f.read().splitlines()
 
@@ -204,9 +207,13 @@ def process_pkg(folder_name):
     for t in types_to_be_removed:
         remove(root, parent_map, './/typeDef[name="' + t + '"]')
 
+    for a in attributes_to_be_removed:
+        remove(root, parent_map, './/typeDef/attributes[name="' + a + '"]')
+
     remove_empty_elements(root)
 
     write_type_names(root, folder_name_generated, 'types-after-removal')
+    write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
 
     pretty_print_xml(root, 0)
 
@@ -295,6 +302,16 @@ def write_type_names(root, folder_name, file_name):
 
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for item in type_names:
+            f.write("%s\n" % item)
+
+
+def write_attribute_names(root, folder_name, file_name):
+    attribute_names = []
+    for name in root.findall('.//types/typeDef/attributes/name'):
+        attribute_names.append(name.text)
+
+    with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
+        for item in attribute_names:
             f.write("%s\n" % item)
 
 

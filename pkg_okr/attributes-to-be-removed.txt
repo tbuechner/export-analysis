@@ -1,0 +1,12 @@
+cf.cplace.solution.okr.cyclesDashboard
+cf.cplace.solution.okr.statusForNameGenerationPattern
+cf.cplace.solution.okr.set
+cf.cplace.solution.okr.cycle
+cf.cplace.solution.okr.progressIndicator
+cf.cplace.solution.okr.confidenceLevel
+cf.cplace.solution.okr.objective
+cf.cplace.solution.okr.organizationalUnit
+cf.cplace.solution.okr.bigSupport
+cf.cplace.solution.okr.giveBigSupport
+cf.cplace.solution.okr.receiveBigSupport
+cf.cplace.solution.okr.smallSupport

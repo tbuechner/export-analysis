@@ -4,4 +4,10 @@ The following xml schema represents describes a xml format for specifying data m
 {{ load_file('pkg_okr/schema.xsd') }}
 ```
 
+The following xml document is an example of a data model specified in the format described by the schema:
+
+```
+{{ load_file('pkg_okr/generated/thinned-out-compressed.xml') }}
+```
+
 Explain the schema in your own words. What is the purpose of the schema? What does it describe? What are the different parts of the schema?

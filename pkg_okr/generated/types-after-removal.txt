@@ -1,6 +1,3 @@
 cf.cplace.solution.okr.cycle
 cf.cplace.solution.okr.objective
 cf.cplace.solution.okr.keyResult
-cf.cplace.solution.okr.progress
-cf.cplace.solution.okr.task
-cf.cplace.solution.okr.selectNextCycle

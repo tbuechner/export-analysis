@@ -18,3 +18,7 @@ cf.cplace.solution.okr.topic
 cf.cplace.solution.okr.meeting
 cf.cplace.solution.okr.set
 cf.cplace.solution.okr.priority
+
+cf.cplace.solution.okr.progress
+cf.cplace.solution.okr.task
+cf.cplace.solution.okr.selectNextCycle
