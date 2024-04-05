@@ -10,9 +10,10 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:attribute name="key" use="optional">
+      <xs:attribute name="key" use="required">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="any"/>
             <xs:enumeration value="exactlyOne"/>
             <xs:enumeration value="maximalOne"/>
             <xs:enumeration value="atLeastOne"/>

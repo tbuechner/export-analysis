@@ -162,11 +162,14 @@ def rewrite(root, parent_map):
     multiplicities = root.findall('.//multiplicity')
     for multiplicity in multiplicities:
         key = multiplicity.find('.//key')
-        if key is not None:
+        if key is None:
+            multiplicity.set('key', 'any')
+        else:
             # set the attribute `key` of multiplicity to the value of the tag `key`
             multiplicity.set('key', key.text)
             # remove the tag `key`
             multiplicity.remove(key)
+
 
 
 def process_pkg(folder_name):
