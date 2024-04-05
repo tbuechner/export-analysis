@@ -215,6 +215,41 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="page">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="custom">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="type" type="xs:string"/>
+              <xs:element name="attributes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="attribute" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="name"/>
+                          <xs:element name="values">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="value" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="types">
     <xs:complexType>
       <xs:sequence>
@@ -222,10 +257,18 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="pages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="page" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="workspace">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>
+        <xs:element ref="pages"/>
         <xs:element ref="types"/>
       </xs:sequence>
     </xs:complexType>

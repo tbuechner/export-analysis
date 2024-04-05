@@ -397,6 +397,7 @@ def remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed
     remove(root, parent_map, './/workspace/pages/page/widgetContainer')
     remove(root, parent_map, './/workspace/pages/page/pageInPackageInclusion')
     remove(root, parent_map, './/workspace/pages/page/layoutName')
+    remove(root, parent_map, './/workspace/pages/page/nameGenerationCounter')
 
     for attribute_name in attributes_to_be_removed:
         xpath = './/workspace/pages/page/custom/attributes/attribute[name="' + attribute_name + '"]'

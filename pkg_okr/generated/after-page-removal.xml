@@ -52,7 +52,6 @@
                         <page>
                             <name>2022 / Q4</name>
                             <id>2cjgg2tqtaraifv3913nuvki5</id>
-                            <layoutName>cf.cplace.solution.okr.layouts.demoCycle</layoutName>
                             <custom>
                                 <type>cf.cplace.solution.okr.cycle</type>
                                 <attributes>
@@ -536,7 +535,6 @@
                         <page>
                             <name>2022 / Q2</name>
                             <id>mldjl7i4skgaxi6rlmrnd5ic1</id>
-                            <layoutName>cf.cplace.solution.okr.layouts.demoCycle</layoutName>
                             <custom>
                                 <type>cf.cplace.solution.okr.cycle</type>
                                 <attributes>
@@ -1320,7 +1318,6 @@
                         <page>
                             <name>O1 Improve our sales performance across the whole team</name>
                             <id>ruekwaf3u39nh6y04qhcks5u6</id>
-                            <nameGenerationCounter>0</nameGenerationCounter>
                             <custom>
                                 <type>cf.cplace.solution.okr.objective</type>
                                 <attributes>
@@ -1370,7 +1367,6 @@
                         <page>
                             <name>KR1 Maintain a sales pipeline of qualified leads valued at least $500K quarterly.</name>
                             <id>2p3algprbzi97wvgoxgmfwpo5</id>
-                            <nameGenerationCounter>0</nameGenerationCounter>
                             <custom>
                                 <type>cf.cplace.solution.okr.keyResult</type>
                                 <attributes>
@@ -1552,7 +1548,6 @@
                         <page>
                             <name>2022 / Q3</name>
                             <id>t75y3xt31azzinv29p9fh00c9</id>
-                            <layoutName>cf.cplace.solution.okr.layouts.demoCycle</layoutName>
                             <custom>
                                 <type>cf.cplace.solution.okr.cycle</type>
                                 <attributes>
@@ -2379,7 +2374,6 @@
                         <page>
                             <name>2023 / Q1 / Current</name>
                             <id>tanwi9kw84mge6cm4qy85pob4</id>
-                            <layoutName>cf.cplace.solution.okr.layouts.demoCycle</layoutName>
                             <custom>
                                 <type>cf.cplace.solution.okr.cycle</type>
                                 <attributes>
