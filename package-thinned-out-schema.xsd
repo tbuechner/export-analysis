@@ -48,11 +48,6 @@
   </xs:element>
   <xs:element name="shortHelp" type="xs:string"/>
   <xs:element name="stringConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="multiplicity"/>
-      </xs:sequence>
-    </xs:complexType>
   </xs:element>
   <xs:element name="language" type="xs:string"/>
   <xs:element name="value">
@@ -98,7 +93,6 @@
   <xs:element name="textEnumerationConstraint">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="multiplicity"/>
         <xs:element ref="defaultValues" minOccurs="0"/>
         <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="element2icon"/>
@@ -125,7 +119,6 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="multiplicity"/>
         <xs:element ref="defaultValues" minOccurs="0"/>
         <xs:element ref="typeNames" minOccurs="0"/>
         <xs:element ref="localizedInverseRoleName"/>
@@ -148,7 +141,6 @@
   <xs:element name="dateConstraint">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="multiplicity"/>
         <xs:element ref="specificity"/>
         <xs:element ref="dateFormat"/>
       </xs:sequence>
@@ -178,6 +170,7 @@
         <xs:element ref="localizedName"/>
         <xs:element ref="localizedShortName"/>
         <xs:element ref="shortHelp"/>
+        <xs:element ref="multiplicity"/>
         <xs:element ref="stringConstraint" minOccurs="0"/>
         <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
         <xs:element ref="referenceConstraint" minOccurs="0"/>
@@ -192,18 +185,12 @@
   <xs:element name="numberConstraint">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="multiplicity"/>
         <xs:element ref="precision"/>
         <xs:element ref="localizedTextAfterSupplier"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="richStringConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="multiplicity"/>
-      </xs:sequence>
-    </xs:complexType>
   </xs:element>
   <xs:element name="typeDef">
     <xs:complexType>
