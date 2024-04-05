@@ -129,14 +129,14 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:sequence>
+      <xs:all>
         <xs:element ref="defaultValues" minOccurs="0"/>
         <xs:element ref="typeNames" minOccurs="0"/>
         <xs:element ref="localizedInverseRoleName"/>
         <xs:element ref="sameWorkspace"/>
         <xs:element ref="isHierarchy"/>
         <xs:element ref="entityClass"/>
-      </xs:sequence>
+      </xs:all>
     </xs:complexType>
   </xs:element>
   <xs:element name="specificity" type="xs:string"/>
@@ -168,19 +168,19 @@
   <xs:element name="iconName" type="xs:string"/>
   <xs:element name="attributes">
     <xs:complexType>
-      <xs:sequence>
+      <xs:all>
         <xs:element ref="name"/>
         <xs:element ref="localizedName"/>
         <xs:element ref="localizedShortName"/>
         <xs:element ref="shortHelp"/>
-        <xs:element ref="multiplicity"/>
         <xs:element ref="stringConstraint" minOccurs="0"/>
         <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
         <xs:element ref="referenceConstraint" minOccurs="0"/>
         <xs:element ref="dateConstraint" minOccurs="0"/>
         <xs:element ref="numberConstraint" minOccurs="0"/>
         <xs:element ref="richStringConstraint" minOccurs="0"/>
-      </xs:sequence>
+        <xs:element ref="multiplicity"/>
+      </xs:all>
     </xs:complexType>
   </xs:element>
   <xs:element name="precision" type="xs:byte"/>
