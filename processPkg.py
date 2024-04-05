@@ -47,6 +47,7 @@ def process_pkg(folder_name):
     remove_slots(root, parent_map, slots_to_be_retained)
 
     remove_generic_elements(root, parent_map)
+
     rewrite(root, parent_map)
 
     for t in types_to_be_removed:
@@ -55,7 +56,14 @@ def process_pkg(folder_name):
     for a in attributes_to_be_removed:
         remove(root, parent_map, './/typeDef/attributes[name="' + a + '"]')
 
+    remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed)
+
     remove_empty_elements(root)
+
+    with open(folder_name_generated + '/after-page-removal.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    remove_all_pages(root, parent_map)
 
     write_type_names(root, folder_name_generated, 'types-after-removal')
     write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
@@ -125,6 +133,11 @@ def add_reference_constraint_def_class(constraint_factory):
 
 
 def add_mandatory_elements(root, parent_map):
+    if 'xmlns:xsi' in root.attrib:
+        del root.attrib['xmlns:xsi']
+    if 'xsi:noNamespaceSchemaLocation' in root.attrib:
+        del root.attrib['xsi:noNamespaceSchemaLocation']
+
     package = root.find('.//package')
     add_element(package, 'cplaceRelease', '24.1')
     add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
@@ -368,9 +381,35 @@ def write_attribute_names(root, folder_name, file_name):
             f.write("%s\n" % item)
 
 
-def remove_generic_elements(root, parent_map):
+def remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed):
+    for type_name in types_to_be_removed:
+        xpath = './/workspace/pages/page/custom[type="' + type_name + '"]'
+        for custom in root.findall(xpath):
+            page = parent_map[custom]
+            pages = parent_map[page]
+            pages.remove(page)
+
+    remove(root, parent_map, './/workspace/pages/page/localizedName')
+    remove(root, parent_map, './/workspace/pages/page/content')
+    remove(root, parent_map, './/workspace/pages/page/tags')
+    remove(root, parent_map, './/workspace/pages/page/orderable')
+    remove(root, parent_map, './/workspace/pages/page/attachements')
+    remove(root, parent_map, './/workspace/pages/page/widgetContainer')
+    remove(root, parent_map, './/workspace/pages/page/pageInPackageInclusion')
+    remove(root, parent_map, './/workspace/pages/page/layoutName')
+
+    for attribute_name in attributes_to_be_removed:
+        xpath = './/workspace/pages/page/custom/attributes/attribute[name="' + attribute_name + '"]'
+        for attribute in root.findall(xpath):
+            attributes = parent_map[attribute]
+            attributes.remove(attribute)
+
+
+def remove_all_pages(root, parent_map):
     remove(root, parent_map, './/workspace/pages')
 
+
+def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/slot/shareable')
 
     remove(root, parent_map, './/workspace/pluginSpaceConfigurations')
@@ -447,24 +486,24 @@ def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/constraintFactory/attributeDefClass')
     remove(root, parent_map, './/constraintFactory/dynamicEnumerationProviderClass')
 
-    remove(root, parent_map, './/attributes/alternativeValueRepresentation')
-    remove(root, parent_map, './/attributes/cplaceJSValidator')
-    remove(root, parent_map, './/attributes/readOnly')
-    remove(root, parent_map, './/attributes/queryableForScripting')
-    remove(root, parent_map, './/attributes/queryableByApp')
-    remove(root, parent_map, './/attributes/showInColumnSelection')
-    remove(root, parent_map, './/attributes/tableColumnWidth')
-    remove(root, parent_map, './/attributes/showValuesWithLineBreak')
-    remove(root, parent_map, './/attributes/showInNewDialog')
-    remove(root, parent_map, './/attributes/showInAttributesWidget')
-    remove(root, parent_map, './/attributes/showInTables')
-    remove(root, parent_map, './/attributes/isFixed')
+    remove(root, parent_map, './/typeDef/attributes/alternativeValueRepresentation')
+    remove(root, parent_map, './/typeDef/attributes/cplaceJSValidator')
+    remove(root, parent_map, './/typeDef/attributes/readOnly')
+    remove(root, parent_map, './/typeDef/attributes/queryableForScripting')
+    remove(root, parent_map, './/typeDef/attributes/queryableByApp')
+    remove(root, parent_map, './/typeDef/attributes/showInColumnSelection')
+    remove(root, parent_map, './/typeDef/attributes/tableColumnWidth')
+    remove(root, parent_map, './/typeDef/attributes/showValuesWithLineBreak')
+    remove(root, parent_map, './/typeDef/attributes/showInNewDialog')
+    remove(root, parent_map, './/typeDef/attributes/showInAttributesWidget')
+    remove(root, parent_map, './/typeDef/attributes/showInTables')
+    remove(root, parent_map, './/typeDef/attributes/isFixed')
 
-    remove(root, parent_map, './/attributes/duplicatesAreAllowed')
-    remove(root, parent_map, './/attributes/showCreateNewButton')
-    remove(root, parent_map, './/attributes/derivedAttributeDef')
+    remove(root, parent_map, './/typeDef/attributes/duplicatesAreAllowed')
+    remove(root, parent_map, './/typeDef/attributes/showCreateNewButton')
+    remove(root, parent_map, './/typeDef/attributes/derivedAttributeDef')
 
-    attributes = root.findall('.//attributes')
+    attributes = root.findall('.//typeDef/attributes')
     for attribute in attributes:
         constraint_factory = attribute.find('.//constraintFactory')
         if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
