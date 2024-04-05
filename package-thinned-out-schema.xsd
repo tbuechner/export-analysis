@@ -224,22 +224,36 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="type" type="xs:string"/>
-                    <xs:sequence>
-                      <xs:element name="attribute" maxOccurs="unbounded">
-                        <xs:complexType>
-                          <xs:sequence>
-                            <xs:element name="values">
-                              <xs:complexType>
-                                <xs:sequence>
-                                  <xs:element name="value" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
-                                </xs:sequence>
-                              </xs:complexType>
-                            </xs:element>
-                          </xs:sequence>
-                          <xs:attribute type="xs:string" name="name"/>
-                        </xs:complexType>
-                      </xs:element>
-                    </xs:sequence>
+                    <xs:element name="attribute" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="number" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="xs:integer" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reference" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="entityType" type="xs:string" use="required"/>
+                              <xs:attribute name="id" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="string" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="date" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="value" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="richString" minOccurs="0">
+                          </xs:element>
+                        </xs:choice>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
