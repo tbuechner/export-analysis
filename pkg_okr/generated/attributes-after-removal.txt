@@ -10,5 +10,5 @@ cf.cplace.solution.okr.description
 cf.cplace.solution.okr.number
 cf.cplace.solution.okr.title
 cf.cplace.solution.okr.gradingForecast
-cf.cplace.solution.okr.progress
+cf.cplace.solution.okr.objective
 cf.cplace.solution.okr.lastUpdate

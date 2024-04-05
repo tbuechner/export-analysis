@@ -404,21 +404,21 @@
                 <multiplicity key="maximalOne" />
               </attributes>
               <attributes>
-                <name>cf.cplace.solution.okr.progress</name>
+                <name>cf.cplace.solution.okr.objective</name>
                 <localizedName>
-                  <en>Progress</en>
-                  <de>Fortschritt</de>
+                  <en>Objective</en>
+                  <de>Objective</de>
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
                 <referenceConstraint>
-                  <typeNames>cf.cplace.solution.okr.progress</typeNames>
+                  <typeNames>cf.cplace.solution.okr.objective</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
+                  <isHierarchy>true</isHierarchy>
                 </referenceConstraint>
-                <multiplicity key="maximalOne" />
+                <multiplicity key="exactlyOne" />
               </attributes>
               <attributes>
                 <name>cf.cplace.solution.okr.lastUpdate</name>

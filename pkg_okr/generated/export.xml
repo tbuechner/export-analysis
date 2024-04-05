@@ -459,21 +459,21 @@
                 </constraintFactory>
               </attributes>
               <attributes>
-                <name>cf.cplace.solution.okr.progress</name>
+                <name>cf.cplace.solution.okr.objective</name>
                 <localizedName>
-                  <en>Progress</en>
-                  <de>Fortschritt</de>
+                  <en>Objective</en>
+                  <de>Objective</de>
                 </localizedName>
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="referenceConstraint">
-                  <typeNames>cf.cplace.solution.okr.progress</typeNames>
+                  <typeNames>cf.cplace.solution.okr.objective</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
-                  <isHierarchy>false</isHierarchy>
+                  <isHierarchy>true</isHierarchy>
                   <multiplicity>
-                    <key>maximalOne</key>
+                    <key>exactlyOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
@@ -508,7 +508,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>9bptaf9i1lmvzihd7uplyghns</id>
+              <id>5ix7xkx4hkq8ee1rachotuskx</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
