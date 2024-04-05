@@ -1,2 +1,3 @@
 tokens thinned-out.xml: 3103
 tokens thinned-out-compressed.xml: 2220
+tokens after-page-removal.xml: 45201

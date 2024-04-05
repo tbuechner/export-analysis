@@ -311,6 +311,7 @@ def write_token_counts(folder_name):
     with open(folder_name + '/' + 'token-counts.txt', 'w') as f:
         write_token_count(f, folder_name, "thinned-out.xml")
         write_token_count(f, folder_name, "thinned-out-compressed.xml")
+        write_token_count(f, folder_name, "after-page-removal.xml")
 
 
 def pretty_print_xml(elem, level=0, indentation="  "):

@@ -331,3 +331,5 @@ The following xml document is an example of a data model specified in the format
 Generate an xml data model following this schema, which implements a risk management application. The application should be able to store risks, which have a name, a description, a probability, an impact, a risk level, and a list of mitigations, which should be a separate type. Each mitigation has a description and a cost.
 
 Use the prefix `cf.cplace.riskManagment` for internal names.
+
+Generate example pages for the data model following the schema as well.
