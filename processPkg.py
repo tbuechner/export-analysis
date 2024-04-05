@@ -14,6 +14,75 @@ import textwrap
 from util import remove, remove_empty_elements, write_json_to_file, write_token_count
 
 
+def process_pkg(folder_name):
+
+    folder_name_generated = folder_name + '/generated'
+
+    print("processing folder: " + folder_name)
+
+    # delete folder folder_name_generated if it exists with all its content
+    if os.path.exists(folder_name_generated):
+        os.system("rm -r " + folder_name_generated)
+
+    # create folder folder_name_generated
+    os.mkdir(folder_name_generated)
+
+    with open(folder_name + '/types-to-be-removed.txt') as f:
+        types_to_be_removed = f.read().splitlines()
+
+    with open(folder_name + '/attributes-to-be-removed.txt') as f:
+        attributes_to_be_removed = f.read().splitlines()
+
+    with open(folder_name + '/slots-to-be-retained.txt') as f:
+        slots_to_be_retained = f.read().splitlines()
+
+    # Load and parse the XML document
+    tree = ET.parse(folder_name + '/export.xml')
+    root = tree.getroot()
+
+    write_type_names(root, folder_name_generated, 'types-all')
+
+    parent_map = {c: p for p in tree.iter() for c in p}
+
+    remove_slots(root, parent_map, slots_to_be_retained)
+
+    remove_generic_elements(root, parent_map)
+    rewrite(root, parent_map)
+
+    for t in types_to_be_removed:
+        remove(root, parent_map, './/typeDef[name="' + t + '"]')
+
+    for a in attributes_to_be_removed:
+        remove(root, parent_map, './/typeDef/attributes[name="' + a + '"]')
+
+    remove_empty_elements(root)
+
+    write_type_names(root, folder_name_generated, 'types-after-removal')
+    write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
+
+    pretty_print_xml(root, 0)
+
+    with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    remove_characters_between_xml_elements(root)
+    with open(folder_name_generated + '/thinned-out-compressed.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    write_token_counts(folder_name_generated)
+
+    parent_map = {c: p for p in tree.iter() for c in p}
+    add_mandatory_elements(root, parent_map)
+
+    pretty_print_xml(root, 0)
+
+    with open(folder_name_generated + '/export.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    # zip export.xml into package.zip
+    os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
+
+
 def add_reference_constraint_def_class(constraint_factory):
     # get child element with tag 'multiplicity'
     multiplicity = constraint_factory.find('.//multiplicity')
@@ -175,75 +244,6 @@ def rewrite(root, parent_map):
         # move the multiplicity element to the attribute element
         attribute.append(multiplicity)
         constraint.remove(multiplicity)
-
-
-def process_pkg(folder_name):
-
-    folder_name_generated = folder_name + '/generated'
-
-    print("processing folder: " + folder_name)
-
-    # delete folder folder_name_generated if it exists with all its content
-    if os.path.exists(folder_name_generated):
-        os.system("rm -r " + folder_name_generated)
-
-    # create folder folder_name_generated
-    os.mkdir(folder_name_generated)
-
-    with open(folder_name + '/types-to-be-removed.txt') as f:
-        types_to_be_removed = f.read().splitlines()
-
-    with open(folder_name + '/attributes-to-be-removed.txt') as f:
-        attributes_to_be_removed = f.read().splitlines()
-
-    with open(folder_name + '/slots-to-be-retained.txt') as f:
-        slots_to_be_retained = f.read().splitlines()
-
-    # Load and parse the XML document
-    tree = ET.parse(folder_name + '/export.xml')
-    root = tree.getroot()
-
-    write_type_names(root, folder_name_generated, 'types-all')
-
-    parent_map = {c: p for p in tree.iter() for c in p}
-
-    remove_slots(root, parent_map, slots_to_be_retained)
-
-    remove_generic_elements(root, parent_map)
-    rewrite(root, parent_map)
-
-    for t in types_to_be_removed:
-        remove(root, parent_map, './/typeDef[name="' + t + '"]')
-
-    for a in attributes_to_be_removed:
-        remove(root, parent_map, './/typeDef/attributes[name="' + a + '"]')
-
-    remove_empty_elements(root)
-
-    write_type_names(root, folder_name_generated, 'types-after-removal')
-    write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
-
-    pretty_print_xml(root, 0)
-
-    with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
-        f.write(ET.tostring(root, encoding='unicode'))
-
-    remove_characters_between_xml_elements(root)
-    with open(folder_name_generated + '/thinned-out-compressed.xml', 'w') as f:
-        f.write(ET.tostring(root, encoding='unicode'))
-
-    write_token_counts(folder_name_generated)
-
-    parent_map = {c: p for p in tree.iter() for c in p}
-    add_mandatory_elements(root, parent_map)
-
-    pretty_print_xml(root, 0)
-
-    with open(folder_name_generated + '/export.xml', 'w') as f:
-        f.write(ET.tostring(root, encoding='unicode'))
-
-    # zip export.xml into package.zip
-    os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
 
 
 def remove_slots(root, parent_map, slots_to_be_retained):
@@ -424,7 +424,6 @@ def remove_generic_elements(root, parent_map):
         constraint_factory = attribute.find('.//constraintFactory')
         if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
             parent_map.get(attribute).remove(attribute)
-
 
 
 def rewrite_localized_name_attributes(doc):
