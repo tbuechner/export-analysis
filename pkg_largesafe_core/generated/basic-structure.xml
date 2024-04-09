@@ -1,1435 +1,1433 @@
-<solutionManagement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="1.8" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd">
-  <package internalName="cfcplace.template.largeSolutionSafe" version="5">
-    <name>
-      <de>Solution Template - Large Solution SAFe</de>
-      <en>Solution Template - Large Solution SAFe</en>
-    </name>
-    <shortname />
-    <slots>
-      <slot internalName="cf.cplace.lsafe.art">
-        <name>
-          <de>ART</de>
-          <en>ART</en>
-        </name>
-        <workspace>
-          <name>Smart Infotainment</name>
-          <types>
-            <typeDef>
-              <name>cf.cplace.solution.safe.program</name>
-              <localizedNameSingular>
-                <en>Program</en>
-                <de>Program</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.productManagement</name>
-                <localizedName>
-                  <en>Product Management</en>
-                  <de>Produktmanagement</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>default.user</typeNames>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.programKey</name>
-                <localizedName>
-                  <en>Key</en>
-                  <de>Key</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solution</name>
-                <localizedName>
-                  <en>Solution</en>
-                  <de>Solution</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.solution</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.safe.feature</name>
-              <localizedNameSingular>
-                <en>Feature</en>
-                <de>Feature</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.program</name>
-                <localizedName>
-                  <en>Program</en>
-                  <de>Programm</de>
-                </localizedName>
-                <referenceConstraint>
-                  <defaultValues>lpage/qg000odouviwwtx4rz2bvaoi8</defaultValues>
-                  <typeNames>cf.cplace.solution.safe.program</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.dependsOn</name>
-                <localizedName>
-                  <en>Depends on features</en>
-                  <de>Abhängig von Features</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.feature</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.status</name>
-                <localizedName>
-                  <en>Status</en>
-                  <de>Status</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#15 - analysis</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.progress</name>
-                <localizedName>
-                  <en>Progress</en>
-                  <de>Fortschritt</de>
-                </localizedName>
-                <numberConstraint>
-                  <defaultValues>d0</defaultValues>
-                </numberConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.programIncrement</name>
-                <localizedName>
-                  <en>Program Increment</en>
-                  <de>Programm-Inkrement</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.plannedStart</name>
-                <localizedName>
-                  <en>Planned Start</en>
-                  <de>Geplanter Start</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.plannedEnd</name>
-                <localizedName>
-                  <en>Planned End</en>
-                  <de>Geplantes Ende</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.safeMilestone</name>
-                <localizedName>
-                  <en>SAFe Milestone</en>
-                  <de>SAFe Meilenstein</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.capability</name>
-                <localizedName>
-                  <en>Capability</en>
-                  <de>Capability</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.capability</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.release</name>
-                <localizedName>
-                  <en>Release</en>
-                  <de>Release</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.release</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.releaseDate</name>
-                <localizedName>
-                  <en>Release Date</en>
-                  <de>Release Datum</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.description</name>
-                <localizedName>
-                  <en>Description</en>
-                  <de>Beschreibung</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.acceptanceCriteria</name>
-                <localizedName>
-                  <en>Acceptance Criteria</en>
-                  <de>Akzeptanzkriterien</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.benefitHypothesis</name>
-                <localizedName>
-                  <en>Benefit Hypothesis</en>
-                  <de>Benefit Hypothesis</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.conflictState</name>
-                <localizedName>
-                  <en>Blocked Feature Conflict</en>
-                  <de>Datumskonflikt</de>
-                </localizedName>
-                <textEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.calculateDateConflicts</name>
-                <localizedName>
-                  <en>Calculate Date Conflicts</en>
-                  <de>Berechne Datumskonflikte</de>
-                </localizedName>
-                <booleanConstraint>
-                  <defaultValues>bfalse</defaultValues>
-                </booleanConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.calculatedConflicts</name>
-                <localizedName>
-                  <en>Features Causing Date Conflict</en>
-                  <de>Features, die Datumskonflikt auslösen</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.feature</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.wsjf</name>
-                <localizedName>
-                  <en>WSJF</en>
-                  <de>WSJF</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.businessValue</name>
-                <localizedName>
-                  <en>Business Value</en>
-                  <de>Business Value</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.timeCriticality</name>
-                <localizedName>
-                  <en>Time Criticality</en>
-                  <de>Time Criticality</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.riskReduction</name>
-                <localizedName>
-                  <en>Risk Reduction</en>
-                  <de>Risk Reduction</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.jobSize</name>
-                <localizedName>
-                  <en>Job Size</en>
-                  <de>Job Size</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.programKey</name>
-                <localizedName>
-                  <en>Program-Key</en>
-                  <de>Program-Key</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.featureType</name>
-                <localizedName>
-                  <en>Feature Type</en>
-                  <de>Feature Type</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>sfeature</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.teams</name>
-                <localizedName>
-                  <en>Teams</en>
-                  <de>Teams</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.team</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.requiresAssistenceOf</name>
-                <localizedName>
-                  <en>Required Assistence of</en>
-                  <de>Hilfe benötigt von</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.role</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.periodStatus</name>
-                <localizedName>
-                  <en>Period Status</en>
-                  <de>Period Status</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.periodStatus</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.iterations</name>
-                <localizedName>
-                  <en>Iterations</en>
-                  <de>Iterations</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.iteration</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.stories</name>
-                <localizedName>
-                  <en>All Stories</en>
-                  <de>Alle Stories</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.story</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.featureOwner</name>
-                <localizedName>
-                  <en>Feature Owner</en>
-                  <de>Feature Owner</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.storyPointsTotal</name>
-                <localizedName>
-                  <en>Story Points Total</en>
-                  <de>Story Points Total</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.storyPointsDone</name>
-                <localizedName>
-                  <en>Story Points Done</en>
-                  <de>Story Points Done</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.numberStoriesTotal</name>
-                <localizedName>
-                  <en>Number of Stories Total</en>
-                  <de>Number of Stories Total</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.numberStoriesOpen</name>
-                <localizedName>
-                  <en>Number of Stories Open</en>
-                  <de>Number of Stories Open</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.numberStoriesDone</name>
-                <localizedName>
-                  <en>Number of Stories Done</en>
-                  <de>Number of Stories Done</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.manualPrioritization</name>
-                <localizedName>
-                  <en>Manual Prioritization</en>
-                  <de>Manuelle Priorisierung</de>
-                </localizedName>
-                <textEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.actualStartDate</name>
-                <localizedName>
-                  <en>Actual End Date</en>
-                  <de>Actual Start Date</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.actualEndDate</name>
-                <localizedName>
-                  <en>Actual End Date</en>
-                  <de>Actual End Date</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.flowTime</name>
-                <localizedName>
-                  <en>Flow Time</en>
-                  <de>Flow Time</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.safe.agileReleaseTrain</name>
-              <localizedNameSingular>
-                <en>Agile Release Train</en>
-                <de>Agile Release Train</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.program</name>
-                <localizedName>
-                  <en>Program</en>
-                  <de>Program</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.program</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.productManager</name>
-                <localizedName>
-                  <en>Product Manager</en>
-                  <de>Produkt Manager</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.artMember</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.releaseTrainEngineer</name>
-                <localizedName>
-                  <en>Release Train Engineer</en>
-                  <de>Release Train Engineer</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.artMember</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.systemArchitect</name>
-                <localizedName>
-                  <en>System Architect</en>
-                  <de>System Architekt</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.artMember</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.visionStatement</name>
-                <localizedName>
-                  <en>Vision Statement</en>
-                  <de>Vision Statement</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.businessOwner</name>
-                <localizedName>
-                  <en>Business Owner</en>
-                  <de>Business Owner</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.keyCustomers</name>
-                <localizedName>
-                  <en>Key Customers</en>
-                  <de>Key Customers</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.successMeasures</name>
-                <localizedName>
-                  <en>Success Measures</en>
-                  <de>Success Measures</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.technicalAssets</name>
-                <localizedName>
-                  <en>Technical Assets</en>
-                  <de>Technical Assets</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.file</name>
-                <localizedName>
-                  <en>File</en>
-                  <de>Datei</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>default.file</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Document</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.artEvents</name>
-                <localizedName>
-                  <en>ART Events</en>
-                  <de>ART Events</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-            </typeDef>
-          </types>
-        </workspace>
-      </slot>
-      <slot internalName="cf.cplace.lsafe.portfolio">
-        <name>
-          <de>Portfolio</de>
-          <en>Portfolio</en>
-        </name>
-        <workspace>
-          <name>Advanced Mobility Technologies Portfolio</name>
-          <types>
-            <typeDef>
-              <name>cf.cplace.solution.safe.epic</name>
-              <localizedNameSingular>
-                <en>Epic</en>
-                <de>Epic</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.name</name>
-                <localizedName>
-                  <en>Name</en>
-                  <de>Name</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.epicOwner</name>
-                <localizedName>
-                  <en>Epic Owner</en>
-                  <de>Epic Owner</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.state</name>
-                <localizedName>
-                  <en>State</en>
-                  <de>Status</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#10 - Draft</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.kanbanState</name>
-                <localizedName>
-                  <en>Kanban Status</en>
-                  <de>Kanban Status</de>
-                </localizedName>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.type</name>
-                <localizedName>
-                  <en>Type</en>
-                  <de>Typ</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#25 - Epic</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.description</name>
-                <localizedName>
-                  <en>Description</en>
-                  <de>Beschreibung</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.businessOutcome</name>
-                <localizedName>
-                  <en>Business Outcome</en>
-                  <de>Geschäftsergebnis</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.leadingIndivators</name>
-                <localizedName>
-                  <en>Leading Indicators</en>
-                  <de>Frühindikatoren</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.nfrs</name>
-                <localizedName>
-                  <en>Nonfunctional Requirements (NFRs)</en>
-                  <de>Nichtfunktionale Anforderungen (NFRs)</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.definitionOfReady</name>
-                <localizedName>
-                  <en>Definition of Ready</en>
-                  <de>Definition of Ready</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.implementationStart</name>
-                <localizedName>
-                  <en>Implementation Start</en>
-                  <de>Implementierungsbeginn</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.implementationEnd</name>
-                <localizedName>
-                  <en>Implementation End</en>
-                  <de>Implementierungsende</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.funnelEntry</name>
-                <localizedName>
-                  <en>Funnel Entry</en>
-                  <de>Eingang</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.jobSize</name>
-                <localizedName>
-                  <en>Job Size</en>
-                  <de>Auftragsgröße</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.businessValue</name>
-                <localizedName>
-                  <en>Business Value</en>
-                  <de>Geschäftswert</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.timeCriticality</name>
-                <localizedName>
-                  <en>Time Criticality</en>
-                  <de>Zeitkritikalität</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.riskReduction</name>
-                <localizedName>
-                  <en>Risk Reduction</en>
-                  <de>Risikoreduktion</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.wsjf</name>
-                <localizedName>
-                  <en>WSJF</en>
-                  <de>WSJF</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.portfolio</name>
-                <localizedName>
-                  <en>Portfolio</en>
-                  <de>Portfolio</de>
-                </localizedName>
-                <referenceConstraint>
-                  <defaultValues>lpage/bmly5ecmejcwdw6evnkjxj8g4</defaultValues>
-                  <typeNames>cf.cplace.solution.safe.portfolio</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.valueStream</name>
-                <localizedName>
-                  <en>Value Stream</en>
-                  <de>Value Stream</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.valueStream</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.dependsOn</name>
-                <localizedName>
-                  <en>Depends on</en>
-                  <de>Hängt ab von</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.epic</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.safeMilestones</name>
-                <localizedName>
-                  <en>Target SAFe Milestones</en>
-                  <de>Ziel SAFe Meilensteinen</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.conflictState</name>
-                <localizedName>
-                  <en>Conflict State</en>
-                  <de>Konfliktstatus</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#15 - none</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.progress</name>
-                <localizedName>
-                  <en>Progress</en>
-                  <de>Fortschritt</de>
-                </localizedName>
-                <numberConstraint>
-                  <defaultValues>d0</defaultValues>
-                </numberConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.totalPlannedImplementationCosts</name>
-                <localizedName>
-                  <en>Total Planned Implementation Costs</en>
-                  <de>Gesamte geplante Implementierungskosten</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.plannedMVPCosts</name>
-                <localizedName>
-                  <en>Planned MVP Costs</en>
-                  <de>Geplante MVP Kosten</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.actualCosts</name>
-                <localizedName>
-                  <en>Actual Costs</en>
-                  <de>Tatsächliche Kosten</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.enterpriseArchitect</name>
-                <localizedName>
-                  <en>Enterprise Architect</en>
-                  <de>Enterprise Architekt</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>default.user</typeNames>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.objective</name>
-                <localizedName>
-                  <en>Strategic Objective</en>
-                  <de>Strategisches Ziel</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.okr.objective</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.implementationPhase</name>
-                <localizedName>
-                  <en>Implementation Phase</en>
-                  <de>Implementierungsphase</de>
-                </localizedName>
-                <textEnumerationConstraint />
-              </attributes>
-            </typeDef>
-            <typeDef>
-              <name>cf.cplace.solution.safe.portfolio</name>
-              <localizedNameSingular>
-                <en>Portfolio</en>
-                <de>Portfolio</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.portfolioConfiguration</name>
-                <localizedName>
-                  <en>Configuration</en>
-                  <de>Konfiguration</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.portfolioConfiguration</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.safeMilestone</name>
-                <localizedName>
-                  <en>SAFe Milestones</en>
-                  <de>SAFe Meilensteine</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-            </typeDef>
-          </types>
-        </workspace>
-      </slot>
-      <slot internalName="cf.cplace.lsafe.scheduler">
-        <name>
-          <de>Scheduler</de>
-          <en>Scheduler</en>
-        </name>
-        <workspace>
-          <name>Scheduler</name>
-          <types />
-        </workspace>
-      </slot>
-      <slot internalName="cf.cplace.lsafe.solution">
-        <name>
-          <de>Solution</de>
-          <en>Solution</en>
-        </name>
-        <workspace>
-          <name>Autonomous Driving Systems</name>
-          <types>
-            <typeDef>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="1.8" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd" internalName="cfcplace.template.largeSolutionSafe" version="5">
+  <name>
+    <de>Solution Template - Large Solution SAFe</de>
+    <en>Solution Template - Large Solution SAFe</en>
+  </name>
+  <shortname />
+  <slots>
+    <slot internalName="cf.cplace.lsafe.art">
+      <name>
+        <de>ART</de>
+        <en>ART</en>
+      </name>
+      <workspace>
+        <name>Smart Infotainment</name>
+        <types>
+          <typeDef>
+            <name>cf.cplace.solution.safe.program</name>
+            <localizedNameSingular>
+              <en>Program</en>
+              <de>Program</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.productManagement</name>
+              <localizedName>
+                <en>Product Management</en>
+                <de>Produktmanagement</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>default.user</typeNames>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.programKey</name>
+              <localizedName>
+                <en>Key</en>
+                <de>Key</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
               <name>cf.cplace.solution.safe.solution</name>
-              <localizedNameSingular>
+              <localizedName>
                 <en>Solution</en>
                 <de>Solution</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.description</name>
-                <localizedName>
-                  <en>Description</en>
-                  <de>Beschreibung</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solutionTrainEngineer</name>
-                <localizedName>
-                  <en>Solution Train Engineer</en>
-                  <de>Solution Train Engineer</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solutionTrainArchitect</name>
-                <localizedName>
-                  <en>Solution Train Architect</en>
-                  <de>Solution Train Architekt</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solutionManagement</name>
-                <localizedName>
-                  <en>Solution Management</en>
-                  <de>Solution Management</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.previousPi</name>
-                <localizedName>
-                  <en>Previous PI</en>
-                  <de>Vorheriges PI</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.currentPi</name>
-                <localizedName>
-                  <en>Current PI</en>
-                  <de>Laufendes PI</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.nextPi</name>
-                <localizedName>
-                  <en>Next PI</en>
-                  <de>Nächstes PI</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.funnelWIPLimit</name>
-                <localizedName>
-                  <en>Funnel WIP Limit</en>
-                  <de>Funnel WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.analyzingWIPLimit</name>
-                <localizedName>
-                  <en>Analyzing WIP Limit</en>
-                  <de>Analyzing WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.backlogWIPLimit</name>
-                <localizedName>
-                  <en>Backlog WIP Limit</en>
-                  <de>Backlog WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.implementingWIPLimit</name>
-                <localizedName>
-                  <en>Implementing WIP Limit</en>
-                  <de>Implementing WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.validatingWIPLimit</name>
-                <localizedName>
-                  <en>Validating WIP Limit</en>
-                  <de>Validating WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.deployingWIPLimit</name>
-                <localizedName>
-                  <en>Deploying WIP Limit</en>
-                  <de>Deploying WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.releasingWIPLimit</name>
-                <localizedName>
-                  <en>Releasing WIP Limit</en>
-                  <de>Releasing WIP Limit</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.shortName</name>
-                <localizedName>
-                  <en>Short Name</en>
-                  <de>Kürzel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.horizon</name>
-                <localizedName>
-                  <en>Horizon</en>
-                  <de>Horizon</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.horizon</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-            </typeDef>
-            <typeDef>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.solution</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+          </typeDef>
+          <typeDef>
+            <name>cf.cplace.solution.safe.feature</name>
+            <localizedNameSingular>
+              <en>Feature</en>
+              <de>Feature</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.title</name>
+              <localizedName>
+                <en>Title</en>
+                <de>Titel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.program</name>
+              <localizedName>
+                <en>Program</en>
+                <de>Programm</de>
+              </localizedName>
+              <referenceConstraint>
+                <defaultValues>lpage/qg000odouviwwtx4rz2bvaoi8</defaultValues>
+                <typeNames>cf.cplace.solution.safe.program</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.dependsOn</name>
+              <localizedName>
+                <en>Depends on features</en>
+                <de>Abhängig von Features</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.feature</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.status</name>
+              <localizedName>
+                <en>Status</en>
+                <de>Status</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#15 - analysis</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.progress</name>
+              <localizedName>
+                <en>Progress</en>
+                <de>Fortschritt</de>
+              </localizedName>
+              <numberConstraint>
+                <defaultValues>d0</defaultValues>
+              </numberConstraint>
+            </attributes>
+            <attributes>
               <name>cf.cplace.solution.safe.programIncrement</name>
-              <localizedNameSingular>
+              <localizedName>
                 <en>Program Increment</en>
-                <de>Program Increment</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solution</name>
-                <localizedName>
-                  <en>Solution</en>
-                  <de>Solution</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.solution</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.startDate</name>
-                <localizedName>
-                  <en>Start Date</en>
-                  <de>Startdatum</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.endDate</name>
-                <localizedName>
-                  <en>End Date</en>
-                  <de>Enddatum</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.predecessor</name>
-                <localizedName>
-                  <en>Predecessor</en>
-                  <de>Vorgänger</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.periodStatus</name>
-                <localizedName>
-                  <en>Period Status</en>
-                  <de>Period Status</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#35 - planned</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.confidenceVote</name>
-                <localizedName>
-                  <en>Confidence Vote</en>
-                  <de>Confidence Vote</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.confidenceVote</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.capacity</name>
-                <localizedName>
-                  <en>Capacity</en>
-                  <de>Capacity</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.confidenceVote.Result</name>
-                <localizedName>
-                  <en>Confidence Vote Result</en>
-                  <de>Confidence Vote Result</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.statsJson</name>
-                <localizedName>
-                  <en>Statistics JSON</en>
-                  <de>Statistics JSON</de>
-                </localizedName>
-                <longConstraint />
-              </attributes>
-            </typeDef>
-            <typeDef>
+                <de>Programm-Inkrement</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.plannedStart</name>
+              <localizedName>
+                <en>Planned Start</en>
+                <de>Geplanter Start</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.plannedEnd</name>
+              <localizedName>
+                <en>Planned End</en>
+                <de>Geplantes Ende</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.safeMilestone</name>
+              <localizedName>
+                <en>SAFe Milestone</en>
+                <de>SAFe Meilenstein</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
               <name>cf.cplace.solution.safe.capability</name>
-              <localizedNameSingular>
+              <localizedName>
                 <en>Capability</en>
                 <de>Capability</de>
-              </localizedNameSingular>
-              <attributes>
-                <name>cf.cplace.solution.safe.title</name>
-                <localizedName>
-                  <en>Title</en>
-                  <de>Titel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solution.reference</name>
-                <localizedName>
-                  <en>Solution</en>
-                  <de>Solution</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.solution</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.description</name>
-                <localizedName>
-                  <en>Description</en>
-                  <de>Beschreibung</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.capabilityType</name>
-                <localizedName>
-                  <en>Capability Type</en>
-                  <de>Capability Type</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>scapability</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.state</name>
-                <localizedName>
-                  <en>State</en>
-                  <de>Status</de>
-                </localizedName>
-                <textEnumerationConstraint>
-                  <defaultValues>s#10 - Draft</defaultValues>
-                </textEnumerationConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.wsjf</name>
-                <localizedName>
-                  <en>WSJF</en>
-                  <de>WSJF</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.businessValue</name>
-                <localizedName>
-                  <en>User Business Value</en>
-                  <de>User Business Value</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.timeCriticality</name>
-                <localizedName>
-                  <en>Time Criticality</en>
-                  <de>Zeitliche Kritikalität</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.riskReduction</name>
-                <localizedName>
-                  <en>Risk Reduction</en>
-                  <de>Risk Reduction</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.jobSize</name>
-                <localizedName>
-                  <en>Job Size</en>
-                  <de>Job Size</de>
-                </localizedName>
-                <numberEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.programIncrement</name>
-                <localizedName>
-                  <en>Program Increment</en>
-                  <de>Program Increment</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.actualStartDate</name>
-                <localizedName>
-                  <en>Actual Start Date</en>
-                  <de>Actual Start Date</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.actualEndDate</name>
-                <localizedName>
-                  <en>Actual End Date</en>
-                  <de>Actual End Date</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.flowTime</name>
-                <localizedName>
-                  <en>Flow time</en>
-                  <de>Flow time</de>
-                </localizedName>
-                <numberConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.program</name>
-                <localizedName>
-                  <en>Program</en>
-                  <de>Program</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.program</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.capabilityowner</name>
-                <localizedName>
-                  <en>Capability Owner</en>
-                  <de>Capability Owner</de>
-                </localizedName>
-                <referenceConstraint>
-                  <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.portfolioEpic</name>
-                <localizedName>
-                  <en>Portfolio Epic</en>
-                  <de>Portfolio Epic</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.epic</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.solutionShortName</name>
-                <localizedName>
-                  <en>Solution Short Name</en>
-                  <de>Solution Kürzel</de>
-                </localizedName>
-                <stringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.plannedStart</name>
-                <localizedName>
-                  <en>Planned Start</en>
-                  <de>Geplanter Start</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.plannedEnd</name>
-                <localizedName>
-                  <en>Planned End</en>
-                  <de>Geplantes Ende</de>
-                </localizedName>
-                <dateConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.iteration</name>
-                <localizedName>
-                  <en>Iterations</en>
-                  <de>Iterations</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.iteration</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.definitionOfReady</name>
-                <localizedName>
-                  <en>Definition of Ready</en>
-                  <de>Definition of Ready</de>
-                </localizedName>
-                <booleanConstraint>
-                  <defaultValues>bfalse</defaultValues>
-                </booleanConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.definitionOfDone</name>
-                <localizedName>
-                  <en>Definition of Done</en>
-                  <de>Definition of Done</de>
-                </localizedName>
-                <booleanConstraint>
-                  <defaultValues>bfalse</defaultValues>
-                </booleanConstraint>
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.acceptanceCriteria</name>
-                <localizedName>
-                  <en>Acceptance Criteria</en>
-                  <de>Akzeptanzkriterien</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.benefitHypothesis</name>
-                <localizedName>
-                  <en>Benefit Hypothesis</en>
-                  <de>Benefit Hypothesis</de>
-                </localizedName>
-                <richStringConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.conflictState</name>
-                <localizedName>
-                  <en>Conflict State</en>
-                  <de>Datumskonflikt</de>
-                </localizedName>
-                <textEnumerationConstraint />
-              </attributes>
-              <attributes>
-                <name>cf.cplace.solution.safe.features</name>
-                <localizedName>
-                  <en>Features</en>
-                  <de>Features</de>
-                </localizedName>
-                <referenceConstraint>
-                  <typeNames>cf.cplace.solution.safe.feature</typeNames>
-                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                  <localizedInverseRoleName />
-                </referenceConstraint>
-              </attributes>
-            </typeDef>
-          </types>
-        </workspace>
-      </slot>
-    </slots>
-  </package>
-</solutionManagement>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.capability</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.release</name>
+              <localizedName>
+                <en>Release</en>
+                <de>Release</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.release</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.releaseDate</name>
+              <localizedName>
+                <en>Release Date</en>
+                <de>Release Datum</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.description</name>
+              <localizedName>
+                <en>Description</en>
+                <de>Beschreibung</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.acceptanceCriteria</name>
+              <localizedName>
+                <en>Acceptance Criteria</en>
+                <de>Akzeptanzkriterien</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.benefitHypothesis</name>
+              <localizedName>
+                <en>Benefit Hypothesis</en>
+                <de>Benefit Hypothesis</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.conflictState</name>
+              <localizedName>
+                <en>Blocked Feature Conflict</en>
+                <de>Datumskonflikt</de>
+              </localizedName>
+              <textEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.calculateDateConflicts</name>
+              <localizedName>
+                <en>Calculate Date Conflicts</en>
+                <de>Berechne Datumskonflikte</de>
+              </localizedName>
+              <booleanConstraint>
+                <defaultValues>bfalse</defaultValues>
+              </booleanConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.calculatedConflicts</name>
+              <localizedName>
+                <en>Features Causing Date Conflict</en>
+                <de>Features, die Datumskonflikt auslösen</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.feature</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.wsjf</name>
+              <localizedName>
+                <en>WSJF</en>
+                <de>WSJF</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.businessValue</name>
+              <localizedName>
+                <en>Business Value</en>
+                <de>Business Value</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.timeCriticality</name>
+              <localizedName>
+                <en>Time Criticality</en>
+                <de>Time Criticality</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.riskReduction</name>
+              <localizedName>
+                <en>Risk Reduction</en>
+                <de>Risk Reduction</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.jobSize</name>
+              <localizedName>
+                <en>Job Size</en>
+                <de>Job Size</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.programKey</name>
+              <localizedName>
+                <en>Program-Key</en>
+                <de>Program-Key</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.featureType</name>
+              <localizedName>
+                <en>Feature Type</en>
+                <de>Feature Type</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>sfeature</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.teams</name>
+              <localizedName>
+                <en>Teams</en>
+                <de>Teams</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.team</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.requiresAssistenceOf</name>
+              <localizedName>
+                <en>Required Assistence of</en>
+                <de>Hilfe benötigt von</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.role</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.periodStatus</name>
+              <localizedName>
+                <en>Period Status</en>
+                <de>Period Status</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.periodStatus</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.iterations</name>
+              <localizedName>
+                <en>Iterations</en>
+                <de>Iterations</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.iteration</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.stories</name>
+              <localizedName>
+                <en>All Stories</en>
+                <de>Alle Stories</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.story</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.featureOwner</name>
+              <localizedName>
+                <en>Feature Owner</en>
+                <de>Feature Owner</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.storyPointsTotal</name>
+              <localizedName>
+                <en>Story Points Total</en>
+                <de>Story Points Total</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.storyPointsDone</name>
+              <localizedName>
+                <en>Story Points Done</en>
+                <de>Story Points Done</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.numberStoriesTotal</name>
+              <localizedName>
+                <en>Number of Stories Total</en>
+                <de>Number of Stories Total</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.numberStoriesOpen</name>
+              <localizedName>
+                <en>Number of Stories Open</en>
+                <de>Number of Stories Open</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.numberStoriesDone</name>
+              <localizedName>
+                <en>Number of Stories Done</en>
+                <de>Number of Stories Done</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.manualPrioritization</name>
+              <localizedName>
+                <en>Manual Prioritization</en>
+                <de>Manuelle Priorisierung</de>
+              </localizedName>
+              <textEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.actualStartDate</name>
+              <localizedName>
+                <en>Actual End Date</en>
+                <de>Actual Start Date</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.actualEndDate</name>
+              <localizedName>
+                <en>Actual End Date</en>
+                <de>Actual End Date</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.flowTime</name>
+              <localizedName>
+                <en>Flow Time</en>
+                <de>Flow Time</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+          </typeDef>
+          <typeDef>
+            <name>cf.cplace.solution.safe.agileReleaseTrain</name>
+            <localizedNameSingular>
+              <en>Agile Release Train</en>
+              <de>Agile Release Train</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.title</name>
+              <localizedName>
+                <en>Title</en>
+                <de>Titel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.program</name>
+              <localizedName>
+                <en>Program</en>
+                <de>Program</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.program</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.productManager</name>
+              <localizedName>
+                <en>Product Manager</en>
+                <de>Produkt Manager</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.artMember</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.releaseTrainEngineer</name>
+              <localizedName>
+                <en>Release Train Engineer</en>
+                <de>Release Train Engineer</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.artMember</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.systemArchitect</name>
+              <localizedName>
+                <en>System Architect</en>
+                <de>System Architekt</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.artMember</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.visionStatement</name>
+              <localizedName>
+                <en>Vision Statement</en>
+                <de>Vision Statement</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.businessOwner</name>
+              <localizedName>
+                <en>Business Owner</en>
+                <de>Business Owner</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.keyCustomers</name>
+              <localizedName>
+                <en>Key Customers</en>
+                <de>Key Customers</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.successMeasures</name>
+              <localizedName>
+                <en>Success Measures</en>
+                <de>Success Measures</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.technicalAssets</name>
+              <localizedName>
+                <en>Technical Assets</en>
+                <de>Technical Assets</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.file</name>
+              <localizedName>
+                <en>File</en>
+                <de>Datei</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>default.file</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Document</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.artEvents</name>
+              <localizedName>
+                <en>ART Events</en>
+                <de>ART Events</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+          </typeDef>
+        </types>
+      </workspace>
+    </slot>
+    <slot internalName="cf.cplace.lsafe.portfolio">
+      <name>
+        <de>Portfolio</de>
+        <en>Portfolio</en>
+      </name>
+      <workspace>
+        <name>Advanced Mobility Technologies Portfolio</name>
+        <types>
+          <typeDef>
+            <name>cf.cplace.solution.safe.epic</name>
+            <localizedNameSingular>
+              <en>Epic</en>
+              <de>Epic</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.name</name>
+              <localizedName>
+                <en>Name</en>
+                <de>Name</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.epicOwner</name>
+              <localizedName>
+                <en>Epic Owner</en>
+                <de>Epic Owner</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.state</name>
+              <localizedName>
+                <en>State</en>
+                <de>Status</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#10 - Draft</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.kanbanState</name>
+              <localizedName>
+                <en>Kanban Status</en>
+                <de>Kanban Status</de>
+              </localizedName>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.type</name>
+              <localizedName>
+                <en>Type</en>
+                <de>Typ</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#25 - Epic</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.description</name>
+              <localizedName>
+                <en>Description</en>
+                <de>Beschreibung</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.businessOutcome</name>
+              <localizedName>
+                <en>Business Outcome</en>
+                <de>Geschäftsergebnis</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.leadingIndivators</name>
+              <localizedName>
+                <en>Leading Indicators</en>
+                <de>Frühindikatoren</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.nfrs</name>
+              <localizedName>
+                <en>Nonfunctional Requirements (NFRs)</en>
+                <de>Nichtfunktionale Anforderungen (NFRs)</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.definitionOfReady</name>
+              <localizedName>
+                <en>Definition of Ready</en>
+                <de>Definition of Ready</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.implementationStart</name>
+              <localizedName>
+                <en>Implementation Start</en>
+                <de>Implementierungsbeginn</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.implementationEnd</name>
+              <localizedName>
+                <en>Implementation End</en>
+                <de>Implementierungsende</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.funnelEntry</name>
+              <localizedName>
+                <en>Funnel Entry</en>
+                <de>Eingang</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.jobSize</name>
+              <localizedName>
+                <en>Job Size</en>
+                <de>Auftragsgröße</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.businessValue</name>
+              <localizedName>
+                <en>Business Value</en>
+                <de>Geschäftswert</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.timeCriticality</name>
+              <localizedName>
+                <en>Time Criticality</en>
+                <de>Zeitkritikalität</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.riskReduction</name>
+              <localizedName>
+                <en>Risk Reduction</en>
+                <de>Risikoreduktion</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.wsjf</name>
+              <localizedName>
+                <en>WSJF</en>
+                <de>WSJF</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.portfolio</name>
+              <localizedName>
+                <en>Portfolio</en>
+                <de>Portfolio</de>
+              </localizedName>
+              <referenceConstraint>
+                <defaultValues>lpage/bmly5ecmejcwdw6evnkjxj8g4</defaultValues>
+                <typeNames>cf.cplace.solution.safe.portfolio</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.valueStream</name>
+              <localizedName>
+                <en>Value Stream</en>
+                <de>Value Stream</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.valueStream</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.dependsOn</name>
+              <localizedName>
+                <en>Depends on</en>
+                <de>Hängt ab von</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.epic</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.safeMilestones</name>
+              <localizedName>
+                <en>Target SAFe Milestones</en>
+                <de>Ziel SAFe Meilensteinen</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.conflictState</name>
+              <localizedName>
+                <en>Conflict State</en>
+                <de>Konfliktstatus</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#15 - none</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.progress</name>
+              <localizedName>
+                <en>Progress</en>
+                <de>Fortschritt</de>
+              </localizedName>
+              <numberConstraint>
+                <defaultValues>d0</defaultValues>
+              </numberConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.totalPlannedImplementationCosts</name>
+              <localizedName>
+                <en>Total Planned Implementation Costs</en>
+                <de>Gesamte geplante Implementierungskosten</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.plannedMVPCosts</name>
+              <localizedName>
+                <en>Planned MVP Costs</en>
+                <de>Geplante MVP Kosten</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.actualCosts</name>
+              <localizedName>
+                <en>Actual Costs</en>
+                <de>Tatsächliche Kosten</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.enterpriseArchitect</name>
+              <localizedName>
+                <en>Enterprise Architect</en>
+                <de>Enterprise Architekt</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>default.user</typeNames>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.objective</name>
+              <localizedName>
+                <en>Strategic Objective</en>
+                <de>Strategisches Ziel</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.okr.objective</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.implementationPhase</name>
+              <localizedName>
+                <en>Implementation Phase</en>
+                <de>Implementierungsphase</de>
+              </localizedName>
+              <textEnumerationConstraint />
+            </attributes>
+          </typeDef>
+          <typeDef>
+            <name>cf.cplace.solution.safe.portfolio</name>
+            <localizedNameSingular>
+              <en>Portfolio</en>
+              <de>Portfolio</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.portfolioConfiguration</name>
+              <localizedName>
+                <en>Configuration</en>
+                <de>Konfiguration</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.portfolioConfiguration</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.safeMilestone</name>
+              <localizedName>
+                <en>SAFe Milestones</en>
+                <de>SAFe Meilensteine</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+          </typeDef>
+        </types>
+      </workspace>
+    </slot>
+    <slot internalName="cf.cplace.lsafe.scheduler">
+      <name>
+        <de>Scheduler</de>
+        <en>Scheduler</en>
+      </name>
+      <workspace>
+        <name>Scheduler</name>
+        <types />
+      </workspace>
+    </slot>
+    <slot internalName="cf.cplace.lsafe.solution">
+      <name>
+        <de>Solution</de>
+        <en>Solution</en>
+      </name>
+      <workspace>
+        <name>Autonomous Driving Systems</name>
+        <types>
+          <typeDef>
+            <name>cf.cplace.solution.safe.solution</name>
+            <localizedNameSingular>
+              <en>Solution</en>
+              <de>Solution</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.description</name>
+              <localizedName>
+                <en>Description</en>
+                <de>Beschreibung</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solutionTrainEngineer</name>
+              <localizedName>
+                <en>Solution Train Engineer</en>
+                <de>Solution Train Engineer</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solutionTrainArchitect</name>
+              <localizedName>
+                <en>Solution Train Architect</en>
+                <de>Solution Train Architekt</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solutionManagement</name>
+              <localizedName>
+                <en>Solution Management</en>
+                <de>Solution Management</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.previousPi</name>
+              <localizedName>
+                <en>Previous PI</en>
+                <de>Vorheriges PI</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.currentPi</name>
+              <localizedName>
+                <en>Current PI</en>
+                <de>Laufendes PI</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.nextPi</name>
+              <localizedName>
+                <en>Next PI</en>
+                <de>Nächstes PI</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.funnelWIPLimit</name>
+              <localizedName>
+                <en>Funnel WIP Limit</en>
+                <de>Funnel WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.analyzingWIPLimit</name>
+              <localizedName>
+                <en>Analyzing WIP Limit</en>
+                <de>Analyzing WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.backlogWIPLimit</name>
+              <localizedName>
+                <en>Backlog WIP Limit</en>
+                <de>Backlog WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.implementingWIPLimit</name>
+              <localizedName>
+                <en>Implementing WIP Limit</en>
+                <de>Implementing WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.validatingWIPLimit</name>
+              <localizedName>
+                <en>Validating WIP Limit</en>
+                <de>Validating WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.deployingWIPLimit</name>
+              <localizedName>
+                <en>Deploying WIP Limit</en>
+                <de>Deploying WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.releasingWIPLimit</name>
+              <localizedName>
+                <en>Releasing WIP Limit</en>
+                <de>Releasing WIP Limit</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.shortName</name>
+              <localizedName>
+                <en>Short Name</en>
+                <de>Kürzel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.horizon</name>
+              <localizedName>
+                <en>Horizon</en>
+                <de>Horizon</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.horizon</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+          </typeDef>
+          <typeDef>
+            <name>cf.cplace.solution.safe.programIncrement</name>
+            <localizedNameSingular>
+              <en>Program Increment</en>
+              <de>Program Increment</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.title</name>
+              <localizedName>
+                <en>Title</en>
+                <de>Titel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solution</name>
+              <localizedName>
+                <en>Solution</en>
+                <de>Solution</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.solution</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.startDate</name>
+              <localizedName>
+                <en>Start Date</en>
+                <de>Startdatum</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.endDate</name>
+              <localizedName>
+                <en>End Date</en>
+                <de>Enddatum</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.predecessor</name>
+              <localizedName>
+                <en>Predecessor</en>
+                <de>Vorgänger</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.periodStatus</name>
+              <localizedName>
+                <en>Period Status</en>
+                <de>Period Status</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#35 - planned</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.confidenceVote</name>
+              <localizedName>
+                <en>Confidence Vote</en>
+                <de>Confidence Vote</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.confidenceVote</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.capacity</name>
+              <localizedName>
+                <en>Capacity</en>
+                <de>Capacity</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.confidenceVote.Result</name>
+              <localizedName>
+                <en>Confidence Vote Result</en>
+                <de>Confidence Vote Result</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.statsJson</name>
+              <localizedName>
+                <en>Statistics JSON</en>
+                <de>Statistics JSON</de>
+              </localizedName>
+              <longConstraint />
+            </attributes>
+          </typeDef>
+          <typeDef>
+            <name>cf.cplace.solution.safe.capability</name>
+            <localizedNameSingular>
+              <en>Capability</en>
+              <de>Capability</de>
+            </localizedNameSingular>
+            <attributes>
+              <name>cf.cplace.solution.safe.title</name>
+              <localizedName>
+                <en>Title</en>
+                <de>Titel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solution.reference</name>
+              <localizedName>
+                <en>Solution</en>
+                <de>Solution</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.solution</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.description</name>
+              <localizedName>
+                <en>Description</en>
+                <de>Beschreibung</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.capabilityType</name>
+              <localizedName>
+                <en>Capability Type</en>
+                <de>Capability Type</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>scapability</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.state</name>
+              <localizedName>
+                <en>State</en>
+                <de>Status</de>
+              </localizedName>
+              <textEnumerationConstraint>
+                <defaultValues>s#10 - Draft</defaultValues>
+              </textEnumerationConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.wsjf</name>
+              <localizedName>
+                <en>WSJF</en>
+                <de>WSJF</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.businessValue</name>
+              <localizedName>
+                <en>User Business Value</en>
+                <de>User Business Value</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.timeCriticality</name>
+              <localizedName>
+                <en>Time Criticality</en>
+                <de>Zeitliche Kritikalität</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.riskReduction</name>
+              <localizedName>
+                <en>Risk Reduction</en>
+                <de>Risk Reduction</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.jobSize</name>
+              <localizedName>
+                <en>Job Size</en>
+                <de>Job Size</de>
+              </localizedName>
+              <numberEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.programIncrement</name>
+              <localizedName>
+                <en>Program Increment</en>
+                <de>Program Increment</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.actualStartDate</name>
+              <localizedName>
+                <en>Actual Start Date</en>
+                <de>Actual Start Date</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.actualEndDate</name>
+              <localizedName>
+                <en>Actual End Date</en>
+                <de>Actual End Date</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.flowTime</name>
+              <localizedName>
+                <en>Flow time</en>
+                <de>Flow time</de>
+              </localizedName>
+              <numberConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.program</name>
+              <localizedName>
+                <en>Program</en>
+                <de>Program</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.program</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.capabilityowner</name>
+              <localizedName>
+                <en>Capability Owner</en>
+                <de>Capability Owner</de>
+              </localizedName>
+              <referenceConstraint>
+                <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.portfolioEpic</name>
+              <localizedName>
+                <en>Portfolio Epic</en>
+                <de>Portfolio Epic</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.epic</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.solutionShortName</name>
+              <localizedName>
+                <en>Solution Short Name</en>
+                <de>Solution Kürzel</de>
+              </localizedName>
+              <stringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.plannedStart</name>
+              <localizedName>
+                <en>Planned Start</en>
+                <de>Geplanter Start</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.plannedEnd</name>
+              <localizedName>
+                <en>Planned End</en>
+                <de>Geplantes Ende</de>
+              </localizedName>
+              <dateConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.iteration</name>
+              <localizedName>
+                <en>Iterations</en>
+                <de>Iterations</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.iteration</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.definitionOfReady</name>
+              <localizedName>
+                <en>Definition of Ready</en>
+                <de>Definition of Ready</de>
+              </localizedName>
+              <booleanConstraint>
+                <defaultValues>bfalse</defaultValues>
+              </booleanConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.definitionOfDone</name>
+              <localizedName>
+                <en>Definition of Done</en>
+                <de>Definition of Done</de>
+              </localizedName>
+              <booleanConstraint>
+                <defaultValues>bfalse</defaultValues>
+              </booleanConstraint>
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.acceptanceCriteria</name>
+              <localizedName>
+                <en>Acceptance Criteria</en>
+                <de>Akzeptanzkriterien</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.benefitHypothesis</name>
+              <localizedName>
+                <en>Benefit Hypothesis</en>
+                <de>Benefit Hypothesis</de>
+              </localizedName>
+              <richStringConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.conflictState</name>
+              <localizedName>
+                <en>Conflict State</en>
+                <de>Datumskonflikt</de>
+              </localizedName>
+              <textEnumerationConstraint />
+            </attributes>
+            <attributes>
+              <name>cf.cplace.solution.safe.features</name>
+              <localizedName>
+                <en>Features</en>
+                <de>Features</de>
+              </localizedName>
+              <referenceConstraint>
+                <typeNames>cf.cplace.solution.safe.feature</typeNames>
+                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                <localizedInverseRoleName />
+              </referenceConstraint>
+            </attributes>
+          </typeDef>
+        </types>
+      </workspace>
+    </slot>
+  </slots>
+</package>

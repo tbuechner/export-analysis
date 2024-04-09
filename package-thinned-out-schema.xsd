@@ -342,16 +342,9 @@
         <xs:element ref="shortname"/>
         <xs:element ref="slots"/>
       </xs:sequence>
+      <xs:attribute type="xs:float" name="xmlVersion"/>
       <xs:attribute type="xs:string" name="internalName"/>
       <xs:attribute type="xs:byte" name="version"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="solutionManagement">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="package"/>
-      </xs:sequence>
-      <xs:attribute type="xs:float" name="xmlVersion"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

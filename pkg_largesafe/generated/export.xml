@@ -1,4 +1,4 @@
-<solutionManagement xmlVersion="1.8">
+<package xmlVersion="1.8">
   <package internalName="cfcplace.template.largeSolutionSafe" version="5">
     <name>
       <de>Solution Template - Large Solution SAFe</de>
@@ -2976,7 +2976,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>zl7vm78dry1u6d6adkiq60f7g</id>
+              <id>b30lvm6wrl531057x90i7t8nt</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -5045,7 +5045,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>scto9ossfn7i8lv6gz4qrczli</id>
+              <id>nchkousx40a543kql89g294o5</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -5070,7 +5070,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>qn1yva2ba6s8kwftjdkiunrip</id>
+              <id>nar053gzzaosfc39rktux6hpp</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -7803,7 +7803,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>qjld25ugo01sqn1dlmsbbsq2f</id>
+              <id>v4lfv5r6dt3ll7tltrzq8p2o9</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -7821,4 +7821,4 @@
     <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
   </package>
   <maps />
-</solutionManagement>
+</package>

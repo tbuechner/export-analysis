@@ -145,7 +145,26 @@ def add_mandatory_elements(root, parent_map):
     if 'xsi:noNamespaceSchemaLocation' in root.attrib:
         del root.attrib['xsi:noNamespaceSchemaLocation']
 
-    package = root.find('.//package')
+    # add a new element with the tag 'package' to the root element
+    package = ET.Element('package')
+
+    # move all children of root under package
+    for child in list(root):
+        package.append(child)
+        root.remove(child)
+
+
+    internal_name = root.get('internalName')
+    if internal_name is not None:
+        package.set('internalName', internal_name)
+        del root.attrib['internalName']
+    version = root.get('version')
+    if version is not None:
+        package.set('version', version)
+        del root.attrib['version']
+
+    root.append(package)
+
     add_element(package, 'cplaceRelease', '24.1')
     add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
 
@@ -275,6 +294,20 @@ def add_element(package, element_name, text=None):
 def rewrite(root, parent_map):
     root.set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
     root.set('xsi:noNamespaceSchemaLocation', "../../package-thinned-out-schema.xsd")
+
+    # move all children of root.package one level up
+    package = root.find('.//package')
+
+    # transfer all attributes of package to root
+    for key, value in package.attrib.items():
+        root.set(key, value)
+
+    for child in list(package):
+        root.append(child)
+        package.remove(child)
+    root.remove(package)
+
+    root.tag = 'package'
 
     constraint_factories = root.findall('.//constraintFactory')
     for constraint_factory in constraint_factories:

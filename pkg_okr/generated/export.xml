@@ -1,4 +1,4 @@
-<solutionManagement xmlVersion="1.8">
+<package xmlVersion="1.8">
   <package internalName="cf.cplace.template.okr" version="10">
     <name>
       <de>Solution Template - Objectives &amp; Key Results</de>
@@ -508,7 +508,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>hgjekj6fcd0f6izlpdom7xw4g</id>
+              <id>u8kpheitnnmfmabqpjekbobfj</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -526,4 +526,4 @@
     <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
   </package>
   <maps />
-</solutionManagement>
+</package>

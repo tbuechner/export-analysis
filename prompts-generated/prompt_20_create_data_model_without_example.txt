@@ -338,23 +338,16 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="package">
+  <xs:element name="solutionManagement">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>
         <xs:element ref="shortname"/>
         <xs:element ref="slots"/>
       </xs:sequence>
+      <xs:attribute type="xs:float" name="xmlVersion"/>
       <xs:attribute type="xs:string" name="internalName"/>
       <xs:attribute type="xs:byte" name="version"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="solutionManagement">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="package"/>
-      </xs:sequence>
-      <xs:attribute type="xs:float" name="xmlVersion"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
