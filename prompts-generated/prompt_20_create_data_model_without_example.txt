@@ -9,6 +9,7 @@ The following xml schema represents describes a xml format for specifying data m
       <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
       <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
       <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
+      <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="multiplicity">
@@ -56,8 +57,17 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="shortHelp" type="xs:string"/>
+  <xs:element name="shortHelp" type="xs:string">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en" minOccurs="0"/>
+        <xs:element ref="de" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="stringConstraint">
+  </xs:element>
+  <xs:element name="longConstraint">
   </xs:element>
   <xs:element name="language" type="xs:string"/>
   <xs:element name="value">
@@ -110,6 +120,18 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="numberEnumerationConstraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="precision"/>
+        <xs:element ref="localizedTextAfterSupplier"/>
+        <xs:element ref="defaultValues" minOccurs="0"/>
+        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="element2icon"/>
+        <xs:element ref="element2localizedLabel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
   <xs:element name="typeNames" type="xs:string"/>
   <xs:element name="entityClass" type="EntityClassType">
@@ -118,6 +140,7 @@ The following xml schema represents describes a xml format for specifying data m
         The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
         - 'cf.cplace.platform.assets.group.Group' if the target is a group,
         - 'cf.cplace.platform.assets.group.Person' if the target is a user,
+        - 'cf.cplace.platform.assets.file.Document' if the target is a user,
         - 'cf.cplace.platform.assets.file.Page' otherwise.
       </xs:documentation>
     </xs:annotation>
@@ -183,22 +206,38 @@ The following xml schema represents describes a xml format for specifying data m
         <xs:element ref="localizedShortName"/>
         <xs:element ref="shortHelp"/>
         <xs:element ref="stringConstraint" minOccurs="0"/>
+        <xs:element ref="longConstraint" minOccurs="0"/>
         <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
+        <xs:element ref="numberEnumerationConstraint" minOccurs="0"/>
         <xs:element ref="referenceConstraint" minOccurs="0"/>
         <xs:element ref="dateConstraint" minOccurs="0"/>
         <xs:element ref="numberConstraint" minOccurs="0"/>
+        <xs:element ref="booleanConstraint" minOccurs="0"/>
         <xs:element ref="richStringConstraint" minOccurs="0"/>
         <xs:element ref="multiplicity"/>
       </xs:all>
     </xs:complexType>
   </xs:element>
   <xs:element name="precision" type="xs:byte"/>
-  <xs:element name="localizedTextAfterSupplier" type="xs:string"/>
+  <xs:element name="localizedTextAfterSupplier" type="xs:string">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en" minOccurs="0"/>
+        <xs:element ref="de" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="numberConstraint">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="precision"/>
         <xs:element ref="localizedTextAfterSupplier"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="booleanConstraint">
+    <xs:complexType>
+      <xs:sequence>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -277,7 +316,7 @@ The following xml schema represents describes a xml format for specifying data m
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>
-        <xs:element ref="pages"/>
+        <xs:element ref="pages" minOccurs="0"/>
         <xs:element ref="types"/>
       </xs:sequence>
     </xs:complexType>
@@ -295,7 +334,7 @@ The following xml schema represents describes a xml format for specifying data m
   <xs:element name="slots">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="slot"/>
+        <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

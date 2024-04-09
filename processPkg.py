@@ -74,12 +74,15 @@ def process_pkg(folder_name):
 
     pretty_print_xml(root, 0)
 
-    with open(folder_name_generated + '/thinned-out.xml', 'w') as f:
-        f.write(ET.tostring(root, encoding='unicode'))
+    write_to_file(root, folder_name_generated, "thinned-out")
 
-    remove_characters_between_xml_elements(root)
-    with open(folder_name_generated + '/thinned-out-compressed.xml', 'w') as f:
-        f.write(ET.tostring(root, encoding='unicode'))
+    # create a deep clone of root
+    root_copy = ET.fromstring(ET.tostring(root))
+    parent_map = {c: p for p in root_copy.iter() for c in p}
+
+    remove_to_basics(root_copy, parent_map)
+    pretty_print_xml(root_copy, 0)
+    write_to_file(root_copy, folder_name_generated, "basic-structure")
 
     write_token_counts(folder_name_generated)
 
@@ -312,6 +315,8 @@ def write_token_counts(folder_name):
         write_token_count(f, folder_name, "thinned-out.xml")
         write_token_count(f, folder_name, "thinned-out-compressed.xml")
         write_token_count(f, folder_name, "after-page-removal.xml")
+        write_token_count(f, folder_name, "basic-structure.xml")
+        write_token_count(f, folder_name, "basic-structure-compressed.xml")
 
 
 def pretty_print_xml(elem, level=0, indentation="  "):
@@ -379,6 +384,15 @@ def write_type_names(root, folder_name, file_name):
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for item in type_names:
             f.write("%s\n" % item)
+
+
+def write_to_file(root, folder_name, file_name):
+    with open(folder_name + '/' + file_name + '.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
+
+    remove_characters_between_xml_elements(root)
+    with open(folder_name + '/' + file_name + '-compressed.xml', 'w') as f:
+        f.write(ET.tostring(root, encoding='unicode'))
 
 
 def write_attribute_names(root, folder_name, file_name):
@@ -483,6 +497,29 @@ def rewrite_pages(root, parent_map):
 
 def remove_all_pages(root, parent_map):
     remove(root, parent_map, './/workspace/pages')
+
+
+def remove_to_basics(root, parent_map):
+    remove(root, parent_map, './/workspace/types/typeDef/localizedNamePlural')
+    remove(root, parent_map, './/workspace/types/typeDef/iconName')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/localizedShortName')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/shortHelp')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/multiplicity')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/referenceConstraint/sameWorkspace')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/referenceConstraint/isHierarchy')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/elements')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/element2icon')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/element2localizedLabel')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/elements')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/element2icon')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/element2localizedLabel')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/precision')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/localizedTextAfterSupplier')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberConstraint/precision')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberConstraint/localizedTextAfterSupplier')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/dateConstraint/specificity')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/dateConstraint/dateFormat')
+    remove(root, parent_map, './/workspace/types/typeDef/attributes/customConstraint')
 
 
 def remove_generic_elements(root, parent_map):

@@ -9,6 +9,7 @@ warnings.filterwarnings("ignore")
 
 process_pkg('pkg_okr')
 process_pkg('pkg_largesafe')
+process_pkg('pkg_largesafe_core')
 
 # process_ws_export('ws_okr-small')
 # process_ws_export('ws_okr')

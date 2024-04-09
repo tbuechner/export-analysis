@@ -1,0 +1,8 @@
+cf.cplace.solution.safe.agileReleaseTrain
+cf.cplace.solution.safe.capability
+cf.cplace.solution.safe.epic
+cf.cplace.solution.safe.feature
+cf.cplace.solution.safe.portfolio
+cf.cplace.solution.safe.program
+cf.cplace.solution.safe.programIncrement
+cf.cplace.solution.safe.solution
