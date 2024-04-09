@@ -369,7 +369,12 @@ def remove_characters_between_xml_elements(elem):
 def write_type_names(root, folder_name, file_name):
     type_names = []
     for name in root.findall('.//types/typeDef/name'):
-        type_names.append(name.text)
+        # only append if not in type_names
+        if name.text not in type_names:
+            type_names.append(name.text)
+
+    # sort the list of type names
+    type_names.sort()
 
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for item in type_names:
@@ -379,7 +384,12 @@ def write_type_names(root, folder_name, file_name):
 def write_attribute_names(root, folder_name, file_name):
     attribute_names = []
     for name in root.findall('.//types/typeDef/attributes/name'):
-        attribute_names.append(name.text)
+        # only append if not in attribute_names
+        if name.text not in attribute_names:
+            attribute_names.append(name.text)
+
+    # sort the list of attribute names
+    attribute_names.sort()
 
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for item in attribute_names:

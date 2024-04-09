@@ -1,3 +1,6 @@
+The following xml schema represents describes a xml format for specifying data models:
+
+```
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="de" type="xs:string"/>
   <xs:element name="en" type="xs:string"/>
@@ -6,7 +9,6 @@
       <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
       <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
       <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
-      <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="multiplicity">
@@ -54,17 +56,8 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="shortHelp" type="xs:string">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="shortHelp" type="xs:string"/>
   <xs:element name="stringConstraint">
-  </xs:element>
-  <xs:element name="longConstraint">
   </xs:element>
   <xs:element name="language" type="xs:string"/>
   <xs:element name="value">
@@ -117,18 +110,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="numberEnumerationConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="precision"/>
-        <xs:element ref="localizedTextAfterSupplier"/>
-        <xs:element ref="defaultValues" minOccurs="0"/>
-        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="element2icon"/>
-        <xs:element ref="element2localizedLabel"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
   <xs:element name="typeNames" type="xs:string"/>
   <xs:element name="entityClass" type="EntityClassType">
@@ -137,7 +118,6 @@
         The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
         - 'cf.cplace.platform.assets.group.Group' if the target is a group,
         - 'cf.cplace.platform.assets.group.Person' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Document' if the target is a user,
         - 'cf.cplace.platform.assets.file.Page' otherwise.
       </xs:documentation>
     </xs:annotation>
@@ -203,38 +183,22 @@
         <xs:element ref="localizedShortName"/>
         <xs:element ref="shortHelp"/>
         <xs:element ref="stringConstraint" minOccurs="0"/>
-        <xs:element ref="longConstraint" minOccurs="0"/>
         <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
-        <xs:element ref="numberEnumerationConstraint" minOccurs="0"/>
         <xs:element ref="referenceConstraint" minOccurs="0"/>
         <xs:element ref="dateConstraint" minOccurs="0"/>
         <xs:element ref="numberConstraint" minOccurs="0"/>
-        <xs:element ref="booleanConstraint" minOccurs="0"/>
         <xs:element ref="richStringConstraint" minOccurs="0"/>
         <xs:element ref="multiplicity"/>
       </xs:all>
     </xs:complexType>
   </xs:element>
   <xs:element name="precision" type="xs:byte"/>
-  <xs:element name="localizedTextAfterSupplier" type="xs:string">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="localizedTextAfterSupplier" type="xs:string"/>
   <xs:element name="numberConstraint">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="precision"/>
         <xs:element ref="localizedTextAfterSupplier"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="booleanConstraint">
-    <xs:complexType>
-      <xs:sequence>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -313,7 +277,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>
-        <xs:element ref="pages" minOccurs="0"/>
+        <xs:element ref="pages"/>
         <xs:element ref="types"/>
       </xs:sequence>
     </xs:complexType>
@@ -331,7 +295,7 @@
   <xs:element name="slots">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="slot"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -355,3 +319,9 @@
     </xs:complexType>
   </xs:element>
 </xs:schema>
+```
+
+
+Generate an xml data model following this schema, which implements a risk management application. The application should be able to store risks, which have a name, a description, a probability, an impact, a risk level, and a list of mitigations, which should be a separate type. Each mitigation has a description and a cost.
+
+Use the prefix `cf.cplace.riskManagment` for internal names.

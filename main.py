@@ -8,6 +8,7 @@ from processExport import process_ws_export
 warnings.filterwarnings("ignore")
 
 process_pkg('pkg_okr')
+process_pkg('pkg_largesafe')
 
 # process_ws_export('ws_okr-small')
 # process_ws_export('ws_okr')
