@@ -3,8 +3,6 @@
         "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "@xmlVersion": "1.8",
         "@xsi:noNamespaceSchemaLocation": "../../package-thinned-out-schema.xsd",
-        "@internalName": "cfcplace.template.largeSolutionSafe",
-        "@version": "5",
         "name": {
             "de": "Solution Template - Large Solution SAFe",
             "en": "Solution Template - Large Solution SAFe"
@@ -3938,6 +3936,8 @@
                     ]
                 }
             ]
-        }
+        },
+        "internalName": "cfcplace.template.largeSolutionSafe",
+        "version": "5"
     }
 }

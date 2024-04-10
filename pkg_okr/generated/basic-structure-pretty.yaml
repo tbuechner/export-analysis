@@ -1,9 +1,8 @@
 package:
-  '@internalName': cf.cplace.template.okr
-  '@version': '10'
   '@xmlVersion': '1.8'
   '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
   '@xsi:noNamespaceSchemaLocation': ../../package-thinned-out-schema.xsd
+  internalName: cf.cplace.template.okr
   name:
     de: Solution Template - Objectives & Key Results
     en: Solution Template - Objectives & Key Results
@@ -313,3 +312,4 @@ package:
           de: "Schl\xFCsselergebnis"
           en: Key Result
         name: cf.cplace.solution.okr.keyResult
+  version: '10'

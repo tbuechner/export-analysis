@@ -159,16 +159,16 @@ def add_mandatory_elements(root, parent_map):
         package.append(child)
         root.remove(child)
 
-    internal_name = root.get('internalName')
-    if internal_name is not None:
-        package.set('internalName', internal_name)
-        del root.attrib['internalName']
-    version = root.get('version')
-    if version is not None:
-        package.set('version', version)
-        del root.attrib['version']
-
     root.append(package)
+
+    internal_name = root.find('.//package/internalName')
+    if internal_name is not None:
+        package.set('internalName', internal_name.text)
+        package.remove(internal_name)
+    version = root.find('.//package/version')
+    if version is not None:
+        package.set('version', version.text)
+        package.remove(version)
 
     add_element(package, 'cplaceRelease', '24.1')
     add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
@@ -335,7 +335,9 @@ def rewrite(root, parent_map):
 
     # transfer all attributes of package to root
     for key, value in package.attrib.items():
-        root.set(key, value)
+        new_element = ET.Element(key)
+        new_element.text = value
+        package.append(new_element)
 
     for child in list(package):
         root.append(child)
@@ -495,6 +497,11 @@ def write_to_file(root, folder_name, file_name):
 
     # convert the xml element to a json object
     json_object = xmltodict.parse(ET.tostring(root, encoding='utf-8'))
+
+    # q: some of the attributes in the generated json start with '@' - what does this mean and why do only some attributes have this prefix?
+
+
+
     # write the json object to a file
     write_json_to_file(folder_name, file_name, json_object)
 

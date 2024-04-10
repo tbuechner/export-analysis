@@ -1,4 +1,4 @@
-<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd" internalName="cf.cplace.template.okr" version="10">
+<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd">
   <name>
     <de>Solution Template - Objectives &amp; Key Results</de>
     <en>Solution Template - Objectives &amp; Key Results</en>
@@ -432,4 +432,6 @@
       </type>
     </slot>
   </slots>
+  <internalName>cf.cplace.template.okr</internalName>
+  <version>10</version>
 </package>

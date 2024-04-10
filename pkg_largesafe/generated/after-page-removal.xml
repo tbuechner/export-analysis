@@ -1,4 +1,4 @@
-<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd" internalName="cfcplace.template.largeSolutionSafe" version="5">
+<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd">
   <name>
     <de>Solution Template - Large Solution SAFe</de>
     <en>Solution Template - Large Solution SAFe</en>
@@ -24121,4 +24121,6 @@
       </type>
     </slot>
   </slots>
+  <internalName>cfcplace.template.largeSolutionSafe</internalName>
+  <version>5</version>
 </package>

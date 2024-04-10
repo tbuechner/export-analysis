@@ -6,7 +6,192 @@ The following xml schema represents describes a xml format for specifying data m
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>
-        <xs:element ref="slots"/>
+        <xs:element name="slots">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="slot" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="name"/>
+                    <xs:element name="pages" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="page" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="name"/>
+                                <xs:element name="id" type="xs:string"/>
+                                <xs:element name="custom">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="type" type="xs:string"/>
+                                      <xs:element name="attribute" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:choice>
+                                            <xs:element name="number" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:attribute name="value" type="xs:integer" use="required"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="reference" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:attribute name="entityType" type="xs:string" use="required"/>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="string" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:attribute name="value" type="xs:string" use="required"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="date" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:attribute name="value" type="xs:string" use="required"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="richString" minOccurs="0">
+                                            </xs:element>
+                                          </xs:choice>
+                                          <xs:attribute name="name" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:sequence>
+                      <xs:element name="type" maxOccurs="unbounded" minOccurs="0">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element ref="name"/>
+                            <xs:element ref="localizedNameSingular"/>
+                            <xs:element ref="localizedNamePlural"/>
+                            <xs:element ref="iconName"/>
+                            <xs:element name="attributes" maxOccurs="unbounded" minOccurs="0">
+                              <xs:complexType>
+                                <xs:all>
+                                  <xs:element ref="name"/>
+                                  <xs:element ref="localizedName"/>
+                                  <xs:element ref="localizedShortName"/>
+                                  <xs:element ref="shortHelp"/>
+                                  <xs:element name="stringConstraint" minOccurs="0">
+                                  </xs:element>
+                                  <xs:element name="longConstraint" minOccurs="0">
+                                  </xs:element>
+                                  <xs:element name="textEnumerationConstraint" minOccurs="0">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element ref="element2icon"/>
+                                        <xs:element ref="element2localizedLabel"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="numberEnumerationConstraint" minOccurs="0">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element ref="precision"/>
+                                        <xs:element ref="localizedTextAfterSupplier"/>
+                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element ref="element2icon"/>
+                                        <xs:element ref="element2localizedLabel"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="referenceConstraint" minOccurs="0">
+                                    <xs:annotation>
+                                      <xs:documentation>
+                                        The 'referenceConstraint' element is used to define an attribute which is a reference attribute or relationship between entities in the data model.
+                                      </xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:all>
+                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element ref="typeNames" minOccurs="0"/>
+                                        <xs:element ref="localizedInverseRoleName"/>
+                                        <xs:element ref="sameWorkspace"/>
+                                        <xs:element ref="isHierarchy"/>
+                                        <xs:element name="entityClass" type="EntityClassType">
+                                          <xs:annotation>
+                                            <xs:documentation>
+                                              The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
+                                              - 'cf.cplace.platform.assets.group.Group' if the target is a group,
+                                              - 'cf.cplace.platform.assets.group.Person' if the target is a user,
+                                              - 'cf.cplace.platform.assets.file.Document' if the target is a user,
+                                              - 'cf.cplace.platform.assets.file.Page' otherwise.
+                                            </xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:all>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="dateConstraint" minOccurs="0">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element ref="specificity"/>
+                                        <xs:element ref="dateFormat"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="numberConstraint" minOccurs="0">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element ref="precision"/>
+                                        <xs:element ref="localizedTextAfterSupplier"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="booleanConstraint" minOccurs="0">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="richStringConstraint" minOccurs="0">
+                                  </xs:element>
+                                  <xs:element name="multiplicity">
+                                    <xs:annotation>
+                                      <xs:documentation>
+                                        The 'multiplicity' element specifies the cardinality constraints for an attribute of the data model.
+                                        It can optionally define constraints on the number of occurrences via the 'key' attribute.
+                                        If the 'key' attribute is not set, the cardinality of the attribute is any number of values.
+                                      </xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:attribute name="key" use="required">
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:string">
+                                            <xs:enumeration value="anyNumber"/>
+                                            <xs:enumeration value="exactlyOne"/>
+                                            <xs:enumeration value="maximalOne"/>
+                                            <xs:enumeration value="atLeastOne"/>
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:attribute>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:all>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="internalName"/>
+                  <xs:attribute type="xs:string" name="workspaceName"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
       <xs:attribute type="xs:float" name="xmlVersion"/>
       <xs:attribute type="xs:string" name="internalName"/>
@@ -31,27 +216,6 @@ The following xml schema represents describes a xml format for specifying data m
       <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
     </xs:restriction>
   </xs:simpleType>
-  <xs:element name="multiplicity">
-    <xs:annotation>
-      <xs:documentation>
-        The 'multiplicity' element specifies the cardinality constraints for an attribute of the data model.
-        It can optionally define constraints on the number of occurrences via the 'key' attribute.
-        If the 'key' attribute is not set, the cardinality of the attribute is any number of values.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:attribute name="key" use="required">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="anyNumber"/>
-            <xs:enumeration value="exactlyOne"/>
-            <xs:enumeration value="maximalOne"/>
-            <xs:enumeration value="atLeastOne"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="localizedName">
     <xs:complexType>
       <xs:sequence>
@@ -75,10 +239,6 @@ The following xml schema represents describes a xml format for specifying data m
         <xs:element ref="de" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
-  </xs:element>
-  <xs:element name="stringConstraint">
-  </xs:element>
-  <xs:element name="longConstraint">
   </xs:element>
   <xs:element name="language" type="xs:string"/>
   <xs:element name="value">
@@ -121,71 +281,13 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="textEnumerationConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="defaultValues" minOccurs="0"/>
-        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="element2icon"/>
-        <xs:element ref="element2localizedLabel"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="numberEnumerationConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="precision"/>
-        <xs:element ref="localizedTextAfterSupplier"/>
-        <xs:element ref="defaultValues" minOccurs="0"/>
-        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="element2icon"/>
-        <xs:element ref="element2localizedLabel"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
   <xs:element name="typeNames" type="xs:string"/>
-  <xs:element name="entityClass" type="EntityClassType">
-    <xs:annotation>
-      <xs:documentation>
-        The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
-        - 'cf.cplace.platform.assets.group.Group' if the target is a group,
-        - 'cf.cplace.platform.assets.group.Person' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Document' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Page' otherwise.
-      </xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="localizedInverseRoleName" type="xs:string"/>
   <xs:element name="sameWorkspace" type="xs:string"/>
   <xs:element name="isHierarchy" type="xs:string"/>
-  <xs:element name="referenceConstraint">
-    <xs:annotation>
-      <xs:documentation>
-        The 'referenceConstraint' element is used to define an attribute which is a reference attribute or relationship between entities in the data model.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="defaultValues" minOccurs="0"/>
-        <xs:element ref="typeNames" minOccurs="0"/>
-        <xs:element ref="localizedInverseRoleName"/>
-        <xs:element ref="sameWorkspace"/>
-        <xs:element ref="isHierarchy"/>
-        <xs:element ref="entityClass"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="specificity" type="xs:string"/>
   <xs:element name="dateFormat" type="xs:string"/>
-  <xs:element name="dateConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="specificity"/>
-        <xs:element ref="dateFormat"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="localizedNameSingular">
     <xs:complexType>
       <xs:sequence>
@@ -209,26 +311,6 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="attributes">
-    <xs:complexType>
-      <xs:all>
-        <xs:element ref="name"/>
-        <xs:element ref="localizedName"/>
-        <xs:element ref="localizedShortName"/>
-        <xs:element ref="shortHelp"/>
-        <xs:element ref="stringConstraint" minOccurs="0"/>
-        <xs:element ref="longConstraint" minOccurs="0"/>
-        <xs:element ref="textEnumerationConstraint" minOccurs="0"/>
-        <xs:element ref="numberEnumerationConstraint" minOccurs="0"/>
-        <xs:element ref="referenceConstraint" minOccurs="0"/>
-        <xs:element ref="dateConstraint" minOccurs="0"/>
-        <xs:element ref="numberConstraint" minOccurs="0"/>
-        <xs:element ref="booleanConstraint" minOccurs="0"/>
-        <xs:element ref="richStringConstraint" minOccurs="0"/>
-        <xs:element ref="multiplicity"/>
-      </xs:all>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="precision" type="xs:byte"/>
   <xs:element name="localizedTextAfterSupplier" type="xs:string">
     <xs:complexType>
@@ -238,111 +320,13 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="numberConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="precision"/>
-        <xs:element ref="localizedTextAfterSupplier"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="booleanConstraint">
-    <xs:complexType>
-      <xs:sequence>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="richStringConstraint">
-  </xs:element>
-  <xs:element name="type">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="name"/>
-        <xs:element ref="localizedNameSingular"/>
-        <xs:element ref="localizedNamePlural"/>
-        <xs:element ref="iconName"/>
-        <xs:element ref="attributes" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="pages">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="page" maxOccurs="unbounded" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element ref="name"/>
-              <xs:element name="id" type="xs:string"/>
-              <xs:element name="custom">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="type" type="xs:string"/>
-                    <xs:element name="attribute" maxOccurs="unbounded">
-                      <xs:complexType>
-                        <xs:choice>
-                          <xs:element name="number" minOccurs="0">
-                            <xs:complexType>
-                              <xs:attribute name="value" type="xs:integer" use="required"/>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element name="reference" minOccurs="0">
-                            <xs:complexType>
-                              <xs:attribute name="entityType" type="xs:string" use="required"/>
-                              <xs:attribute name="id" type="xs:string" use="required"/>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element name="string" minOccurs="0">
-                            <xs:complexType>
-                              <xs:attribute name="value" type="xs:string" use="required"/>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element name="date" minOccurs="0">
-                            <xs:complexType>
-                              <xs:attribute name="value" type="xs:string" use="required"/>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element name="richString" minOccurs="0">
-                          </xs:element>
-                        </xs:choice>
-                        <xs:attribute name="name" type="xs:string" use="required"/>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="slot">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="name"/>
-        <xs:element ref="pages" minOccurs="0"/>
-        <xs:sequence>
-          <xs:element ref="type" maxOccurs="unbounded" minOccurs="0"/>
-        </xs:sequence>
-      </xs:sequence>
-      <xs:attribute type="xs:string" name="internalName"/>
-      <xs:attribute type="xs:string" name="workspaceName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="slots">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
 </xs:schema>
 ```
 
 The following xml document is an example of a data model specified in the format described by the schema:
 
 ```
-<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd" internalName="cf.cplace.template.okr" version="10"><name><de>Solution Template - Objectives &amp; Key Results</de><en>Solution Template - Objectives &amp; Key Results</en></name><slots><slot internalName="cf.cplace.okr.okr" workspaceName="OKR"><name><de>Objectives Key Results</de><en>Objectives Key Results</en></name><type><name>cf.cplace.solution.okr.cycle</name><localizedNameSingular><en>Cycle</en><de>Zyklus</de></localizedNameSingular><localizedNamePlural><en>Cycles</en><de>Zyklen</de></localizedNamePlural><iconName>fa-redo</iconName><attributes><name>cf.cplace.solution.okr.year</name><localizedName><en>Year</en><de>Jahr</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.quarter</name><localizedName><en>Quarter</en><de>Quartal</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.status</name><localizedName><en>Status</en><de>Status</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><elements>#15 Next</elements><elements>#25 Current</elements><elements>#35 Closed</elements><elements>#45 Draft</elements><element2icon /><element2localizedLabel><entry><key>#35 Closed</key><value><localizations><entry><key>de</key><value><language>de</language><value>Geschlossen</value></value></entry><entry><key>en</key><value><language>en</language><value>Closed</value></value></entry></localizations></value></entry><entry><key>#45 Draft</key><value><localizations><entry><key>de</key><value><language>de</language><value>Entwurf</value></value></entry><entry><key>en</key><value><language>en</language><value>Draft</value></value></entry></localizations></value></entry><entry><key>#25 Current</key><value><localizations><entry><key>de</key><value><language>de</language><value>Aktuell</value></value></entry><entry><key>en</key><value><language>en</language><value>Current</value></value></entry></localizations></value></entry><entry><key>#15 Next</key><value><localizations><entry><key>de</key><value><language>de</language><value>Nächster</value></value></entry><entry><key>en</key><value><language>en</language><value>Next</value></value></entry></localizations></value></entry></element2localizedLabel></textEnumerationConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.start</name><localizedName><en>Start</en><de>Start</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.end</name><localizedName><en>End</en><de>Ende</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes></type><type><name>cf.cplace.solution.okr.objective</name><localizedNameSingular><en>Objective</en><de>Objective</de></localizedNameSingular><localizedNamePlural><en>Objectives</en><de>Objectives</de></localizedNamePlural><iconName>fa-bullseye</iconName><attributes><name>cf.cplace.solution.okr.number</name><localizedName><en>Number</en><de>Nummer</de></localizedName><localizedShortName><en>No.</en><de>Nr.</de></localizedShortName><shortHelp /><numberConstraint><precision>-1</precision><localizedTextAfterSupplier /></numberConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.title</name><localizedName><en>Title</en><de>Titel</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.accomplished</name><localizedName><en>Accomplished</en><de>Erreicht</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><defaultValues>s#25 - no</defaultValues><elements>#15 - yes</elements><elements>#25 - no</elements><element2icon><entry><key>#25 - no</key><value>x-103-cplace-square-red-close</value></entry><entry><key>#15 - yes</key><value>x-112-cplace-square-green-check</value></entry></element2icon><element2localizedLabel><entry><key>#25 - no</key><value><localizations><entry><key>de</key><value><language>de</language><value>Nein</value></value></entry><entry><key>en</key><value><language>en</language><value>No</value></value></entry></localizations></value></entry><entry><key>#15 - yes</key><value><localizations><entry><key>de</key><value><language>de</language><value>Ja</value></value></entry><entry><key>en</key><value><language>en</language><value>Yes</value></value></entry></localizations></value></entry></element2localizedLabel></textEnumerationConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.description</name><localizedName><en>Description</en><de>Beschreibung</de></localizedName><localizedShortName /><shortHelp /><richStringConstraint /><multiplicity key="maximalOne" /></attributes></type><type><name>cf.cplace.solution.okr.keyResult</name><localizedNameSingular><en>Key Result</en><de>Schlüsselergebnis</de></localizedNameSingular><localizedNamePlural><en>Key Results</en><de>Schlüsselergebnisse</de></localizedNamePlural><iconName>fa-key</iconName><attributes><name>cf.cplace.solution.okr.number</name><localizedName><en>Number</en><de>Nummer</de></localizedName><localizedShortName><en>No.</en><de>Nr.</de></localizedShortName><shortHelp /><numberConstraint><precision>-1</precision><localizedTextAfterSupplier /></numberConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.title</name><localizedName><en>Title</en><de>Titel</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.gradingForecast</name><localizedName><en>Grading Forecast</en><de>Fortschritt Vorhersage</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><elements>0.1</elements><elements>0.2</elements><elements>0.3</elements><elements>0.4</elements><elements>0.5</elements><elements>0.6</elements><elements>0.7</elements><elements>0.8</elements><elements>0.9</elements><elements>1.0</elements><element2icon><entry><key>0.1</key><value>circle-001-red</value></entry><entry><key>1.0</key><value>circle-003-green</value></entry><entry><key>0.2</key><value>circle-001-red</value></entry><entry><key>0.3</key><value>circle-001-red</value></entry><entry><key>0.4</key><value>circle-002-yellow</value></entry><entry><key>0.5</key><value>circle-002-yellow</value></entry><entry><key>0.6</key><value>circle-002-yellow</value></entry><entry><key>0.7</key><value>circle-003-green</value></entry><entry><key>0.8</key><value>circle-003-green</value></entry><entry><key>0.9</key><value>circle-003-green</value></entry></element2icon><element2localizedLabel /></textEnumerationConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.objective</name><localizedName><en>Objective</en><de>Objective</de></localizedName><localizedShortName /><shortHelp /><referenceConstraint><typeNames>cf.cplace.solution.okr.objective</typeNames><entityClass>cf.cplace.platform.assets.file.Page</entityClass><localizedInverseRoleName /><sameWorkspace>true</sameWorkspace><isHierarchy>true</isHierarchy></referenceConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.lastUpdate</name><localizedName><en>Last Update</en><de>Letztes Update</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes></type></slot></slots></package>
+<package xmlVersion="1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../package-thinned-out-schema.xsd"><name><de>Solution Template - Objectives &amp; Key Results</de><en>Solution Template - Objectives &amp; Key Results</en></name><slots><slot internalName="cf.cplace.okr.okr" workspaceName="OKR"><name><de>Objectives Key Results</de><en>Objectives Key Results</en></name><type><name>cf.cplace.solution.okr.cycle</name><localizedNameSingular><en>Cycle</en><de>Zyklus</de></localizedNameSingular><localizedNamePlural><en>Cycles</en><de>Zyklen</de></localizedNamePlural><iconName>fa-redo</iconName><attributes><name>cf.cplace.solution.okr.year</name><localizedName><en>Year</en><de>Jahr</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.quarter</name><localizedName><en>Quarter</en><de>Quartal</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.status</name><localizedName><en>Status</en><de>Status</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><elements>#15 Next</elements><elements>#25 Current</elements><elements>#35 Closed</elements><elements>#45 Draft</elements><element2icon /><element2localizedLabel><entry><key>#35 Closed</key><value><localizations><entry><key>de</key><value><language>de</language><value>Geschlossen</value></value></entry><entry><key>en</key><value><language>en</language><value>Closed</value></value></entry></localizations></value></entry><entry><key>#45 Draft</key><value><localizations><entry><key>de</key><value><language>de</language><value>Entwurf</value></value></entry><entry><key>en</key><value><language>en</language><value>Draft</value></value></entry></localizations></value></entry><entry><key>#25 Current</key><value><localizations><entry><key>de</key><value><language>de</language><value>Aktuell</value></value></entry><entry><key>en</key><value><language>en</language><value>Current</value></value></entry></localizations></value></entry><entry><key>#15 Next</key><value><localizations><entry><key>de</key><value><language>de</language><value>Nächster</value></value></entry><entry><key>en</key><value><language>en</language><value>Next</value></value></entry></localizations></value></entry></element2localizedLabel></textEnumerationConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.start</name><localizedName><en>Start</en><de>Start</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.end</name><localizedName><en>End</en><de>Ende</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes></type><type><name>cf.cplace.solution.okr.objective</name><localizedNameSingular><en>Objective</en><de>Objective</de></localizedNameSingular><localizedNamePlural><en>Objectives</en><de>Objectives</de></localizedNamePlural><iconName>fa-bullseye</iconName><attributes><name>cf.cplace.solution.okr.number</name><localizedName><en>Number</en><de>Nummer</de></localizedName><localizedShortName><en>No.</en><de>Nr.</de></localizedShortName><shortHelp /><numberConstraint><precision>-1</precision><localizedTextAfterSupplier /></numberConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.title</name><localizedName><en>Title</en><de>Titel</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.accomplished</name><localizedName><en>Accomplished</en><de>Erreicht</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><defaultValues>s#25 - no</defaultValues><elements>#15 - yes</elements><elements>#25 - no</elements><element2icon><entry><key>#25 - no</key><value>x-103-cplace-square-red-close</value></entry><entry><key>#15 - yes</key><value>x-112-cplace-square-green-check</value></entry></element2icon><element2localizedLabel><entry><key>#25 - no</key><value><localizations><entry><key>de</key><value><language>de</language><value>Nein</value></value></entry><entry><key>en</key><value><language>en</language><value>No</value></value></entry></localizations></value></entry><entry><key>#15 - yes</key><value><localizations><entry><key>de</key><value><language>de</language><value>Ja</value></value></entry><entry><key>en</key><value><language>en</language><value>Yes</value></value></entry></localizations></value></entry></element2localizedLabel></textEnumerationConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.description</name><localizedName><en>Description</en><de>Beschreibung</de></localizedName><localizedShortName /><shortHelp /><richStringConstraint /><multiplicity key="maximalOne" /></attributes></type><type><name>cf.cplace.solution.okr.keyResult</name><localizedNameSingular><en>Key Result</en><de>Schlüsselergebnis</de></localizedNameSingular><localizedNamePlural><en>Key Results</en><de>Schlüsselergebnisse</de></localizedNamePlural><iconName>fa-key</iconName><attributes><name>cf.cplace.solution.okr.number</name><localizedName><en>Number</en><de>Nummer</de></localizedName><localizedShortName><en>No.</en><de>Nr.</de></localizedShortName><shortHelp /><numberConstraint><precision>-1</precision><localizedTextAfterSupplier /></numberConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.title</name><localizedName><en>Title</en><de>Titel</de></localizedName><localizedShortName /><shortHelp /><stringConstraint /><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.gradingForecast</name><localizedName><en>Grading Forecast</en><de>Fortschritt Vorhersage</de></localizedName><localizedShortName /><shortHelp /><textEnumerationConstraint><elements>0.1</elements><elements>0.2</elements><elements>0.3</elements><elements>0.4</elements><elements>0.5</elements><elements>0.6</elements><elements>0.7</elements><elements>0.8</elements><elements>0.9</elements><elements>1.0</elements><element2icon><entry><key>0.1</key><value>circle-001-red</value></entry><entry><key>1.0</key><value>circle-003-green</value></entry><entry><key>0.2</key><value>circle-001-red</value></entry><entry><key>0.3</key><value>circle-001-red</value></entry><entry><key>0.4</key><value>circle-002-yellow</value></entry><entry><key>0.5</key><value>circle-002-yellow</value></entry><entry><key>0.6</key><value>circle-002-yellow</value></entry><entry><key>0.7</key><value>circle-003-green</value></entry><entry><key>0.8</key><value>circle-003-green</value></entry><entry><key>0.9</key><value>circle-003-green</value></entry></element2icon><element2localizedLabel /></textEnumerationConstraint><multiplicity key="maximalOne" /></attributes><attributes><name>cf.cplace.solution.okr.objective</name><localizedName><en>Objective</en><de>Objective</de></localizedName><localizedShortName /><shortHelp /><referenceConstraint><typeNames>cf.cplace.solution.okr.objective</typeNames><entityClass>cf.cplace.platform.assets.file.Page</entityClass><localizedInverseRoleName /><sameWorkspace>true</sameWorkspace><isHierarchy>true</isHierarchy></referenceConstraint><multiplicity key="exactlyOne" /></attributes><attributes><name>cf.cplace.solution.okr.lastUpdate</name><localizedName><en>Last Update</en><de>Letztes Update</de></localizedName><localizedShortName /><shortHelp /><dateConstraint><specificity>DAY</specificity><dateFormat>DAY_YEAR_LONG</dateFormat></dateConstraint><multiplicity key="maximalOne" /></attributes></type></slot></slots><internalName>cf.cplace.template.okr</internalName><version>10</version></package>
 ```
 
 

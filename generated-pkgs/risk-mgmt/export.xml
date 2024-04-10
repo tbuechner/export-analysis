@@ -1,0 +1,206 @@
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="1.0" internalName="cf.cplace.riskManagment" version="1" xsi:noNamespaceSchemaLocation="../package-thinned-out-schema.xsd">
+  <package>
+    <name>
+      <de>Risikomanagement Anwendung</de>
+      <en>Risk Management Application</en>
+    </name>
+    <slots>
+      <slot internalName="cf.cplace.riskManagment.risks">
+        <name>
+          <de>Risiken</de>
+          <en>Risks</en>
+        </name>
+        <workspace>
+          <name>Risk Management</name>
+          <types>
+            <typeDef>
+              <name>cf.cplace.riskManagment.risk</name>
+              <localizedNameSingular>
+                <en>Risk</en>
+                <de>Risiko</de>
+              </localizedNameSingular>
+              <localizedNamePlural>
+                <en>Risks</en>
+                <de>Risiken</de>
+              </localizedNamePlural>
+              <iconName>fa-exclamation-triangle</iconName>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.name</name>
+                <localizedName>
+                  <en>Name</en>
+                  <de>Name</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="stringConstraint">
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.description</name>
+                <localizedName>
+                  <en>Description</en>
+                  <de>Beschreibung</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="richStringConstraint">
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.probability</name>
+                <localizedName>
+                  <en>Probability</en>
+                  <de>Wahrscheinlichkeit</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="numberConstraint">
+                  <precision>2</precision>
+                  <localizedTextAfterSupplier />
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.impact</name>
+                <localizedName>
+                  <en>Impact</en>
+                  <de>Auswirkung</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="numberConstraint">
+                  <precision>2</precision>
+                  <localizedTextAfterSupplier />
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.level</name>
+                <localizedName>
+                  <en>Risk Level</en>
+                  <de>Risikostufe</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="stringConstraint">
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.risk.mitigations</name>
+                <localizedName>
+                  <en>Mitigations</en>
+                  <de>Milderungsmaßnahmen</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="referenceConstraint">
+                  <typeNames>cf.cplace.riskManagment.mitigation</typeNames>
+                  <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+                  <localizedInverseRoleName />
+                  <sameWorkspace>true</sameWorkspace>
+                  <isHierarchy>false</isHierarchy>
+                  <multiplicity />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
+            </typeDef>
+            <typeDef>
+              <name>cf.cplace.riskManagment.mitigation</name>
+              <localizedNameSingular>
+                <en>Mitigation</en>
+                <de>Milderungsmaßnahme</de>
+              </localizedNameSingular>
+              <localizedNamePlural>
+                <en>Mitigations</en>
+                <de>Milderungsmaßnahmen</de>
+              </localizedNamePlural>
+              <iconName>fa-shield-alt</iconName>
+              <attributes>
+                <name>cf.cplace.riskManagment.mitigation.description</name>
+                <localizedName>
+                  <en>Description</en>
+                  <de>Beschreibung</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="richStringConstraint">
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <attributes>
+                <name>cf.cplace.riskManagment.mitigation.cost</name>
+                <localizedName>
+                  <en>Cost</en>
+                  <de>Kosten</de>
+                </localizedName>
+                <localizedShortName />
+                <shortHelp />
+                <constraintFactory type="numberConstraint">
+                  <precision>2</precision>
+                  <localizedTextAfterSupplier />
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                </constraintFactory>
+              </attributes>
+              <appliesTo>
+                <key>page</key>
+              </appliesTo>
+              <localizedPageNamesMode>
+                <key>none</key>
+              </localizedPageNamesMode>
+              <showNewButton>true</showNewButton>
+            </typeDef>
+          </types>
+          <apps>["cf.cplace.platform"]</apps>
+          <rootPage>
+            <page>
+              <name>Root Page</name>
+              <id>00bnsq2wwcnmjwlo2aorp6m2g</id>
+              <custom>
+                <type>default.page</type>
+                <attributes />
+              </custom>
+              <widgetContainer>
+                <widgetsLayout />
+                <widgets />
+              </widgetContainer>
+            </page>
+          </rootPage>
+        </workspace>
+      </slot>
+    </slots>
+    <cplaceRelease>24.1</cplaceRelease>
+    <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
+  </package>
+  <maps />
+</package>

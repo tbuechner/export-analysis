@@ -1,9 +1,8 @@
 package:
-  '@internalName': cfcplace.template.largeSolutionSafe
-  '@version': '5'
   '@xmlVersion': '1.8'
   '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
   '@xsi:noNamespaceSchemaLocation': ../../package-thinned-out-schema.xsd
+  internalName: cfcplace.template.largeSolutionSafe
   name:
     de: Solution Template - Large Solution SAFe
     en: Solution Template - Large Solution SAFe
@@ -2815,3 +2814,4 @@ package:
           de: Capability
           en: Capability
         name: cf.cplace.solution.safe.capability
+  version: '5'
