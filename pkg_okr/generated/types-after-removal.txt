@@ -1,3 +1,0 @@
-cf.cplace.solution.okr.cycle
-cf.cplace.solution.okr.keyResult
-cf.cplace.solution.okr.objective

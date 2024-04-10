@@ -42,7 +42,7 @@ def process_pkg(folder_name):
 
     write_type_names(root, folder_name_generated, 'types-all')
 
-    parent_map = {c: p for p in tree.iter() for c in p}
+    parent_map = get_parent_map(root)
 
     remove_slots(root, parent_map, slots_to_be_retained)
 
@@ -50,11 +50,13 @@ def process_pkg(folder_name):
 
     rewrite(root, parent_map)
 
+    parent_map = get_parent_map(root)
+
     for t in types_to_be_removed:
-        remove(root, parent_map, './/typeDef[name="' + t + '"]')
+        remove(root, parent_map, './/type[name="' + t + '"]')
 
     for a in attributes_to_be_removed:
-        remove(root, parent_map, './/typeDef/attributes[name="' + a + '"]')
+        remove(root, parent_map, './/type/attributes[name="' + a + '"]')
 
     remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed)
 
@@ -93,6 +95,10 @@ def process_pkg(folder_name):
 
     # zip export.xml into package.zip
     os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
+
+
+def get_parent_map(root):
+    return {c: p for p in root.iter() for c in p}
 
 
 def rewrite_to_pkg_format(root, tree):
@@ -185,9 +191,19 @@ def add_mandatory_elements(root, parent_map):
             slot_str = ET.tostring(slot, encoding='utf-8', method='xml').decode('utf-8')
             print("slot without workspaceName: " + slot_str)
 
-        types = slot.find('.//types')
-        workspace.append(types)
-        slot.remove(types)
+        new_types_element = ET.Element('types')
+        workspace.append(new_types_element)
+
+        parent_map = get_parent_map(root)
+
+        types = slot.findall('.//type')
+        for type_element in types:
+            type_element.tag = 'typeDef'
+            new_types_element.append(type_element)
+            type_parent = parent_map[type_element]
+            type_parent.remove(type_element)
+
+
 
     # find all workspace elements
     workspaces = root.findall('.//workspace')
@@ -255,7 +271,7 @@ def add_mandatory_elements(root, parent_map):
         constraint_factory = attribute.find('.//constraintFactory')
         if constraint_factory is not None:
             if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
-                parent_map.get(attribute).remove(attribute)
+                parent_map[attribute].remove(attribute)
 
     multiplicities = root.findall('.//multiplicity')
     for multiplicity in multiplicities:
@@ -328,6 +344,8 @@ def rewrite(root, parent_map):
 
     root.tag = 'package'
 
+    parent_map = get_parent_map(root)
+
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
         slot = parent_map[workspace]
@@ -341,6 +359,21 @@ def rewrite(root, parent_map):
 
         slot.remove(workspace)
 
+    parent_map = get_parent_map(root)
+
+    for type_def in root.findall('.//typeDef'):
+        types = parent_map[type_def]
+        slot = parent_map[types]
+        slot.append(type_def)
+        types.remove(type_def)
+        type_def.tag = 'type'
+
+    parent_map = get_parent_map(root)
+
+    types_elements = root.findall('.//types')
+    for types in types_elements:
+        slot = parent_map[types]
+        slot.remove(types)
 
     constraint_factories = root.findall('.//constraintFactory')
     for constraint_factory in constraint_factories:
@@ -687,7 +720,7 @@ def remove_generic_elements(root, parent_map):
     for attribute in attributes:
         constraint_factory = attribute.find('.//constraintFactory')
         if constraint_factory.get('type') == 'dynamicEnumerationConstraint':
-            parent_map.get(attribute).remove(attribute)
+            parent_map[attribute].remove(attribute)
 
 
 def rewrite_localized_name_attributes(doc):
