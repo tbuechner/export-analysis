@@ -7234,26 +7234,50 @@
             <element>
               <value>#15 - analysis</value>
               <icon>harvey-ball-green-000</icon>
+              <localizedName>
+                <de>Analyse</de>
+                <en>Analysis</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - backlog</value>
               <icon>harvey-ball-green-025</icon>
+              <localizedName>
+                <de>Backlog</de>
+                <en>Backlog</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - in progress</value>
               <icon>harvey-ball-green-050</icon>
+              <localizedName>
+                <de>In Bearbeitung</de>
+                <en>In Progress</en>
+              </localizedName>
             </element>
             <element>
               <value>#45 - done</value>
               <icon>harvey-ball-green-100</icon>
+              <localizedName>
+                <de>Erledigt</de>
+                <en>Done</en>
+              </localizedName>
             </element>
             <element>
               <value>#55 - released</value>
               <icon>harvey-ball-green-100</icon>
+              <localizedName>
+                <de>Ausgeliefert</de>
+                <en>Released</en>
+              </localizedName>
             </element>
             <element>
               <value>#65 - obsolete</value>
-              <icon>harvey-ball-green-100</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Nicht benötigt</de>
+                <en>Obsolete</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -7437,6 +7461,10 @@
             <element>
               <value>#25 - conflict</value>
               <icon>lightning-001-red</icon>
+              <localizedName>
+                <de>Ungelöster Konflikt</de>
+                <en>Unresolved Conflict</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -7502,13 +7530,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7526,13 +7603,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7550,13 +7676,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7574,13 +7749,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7614,10 +7838,18 @@
             <element>
               <value>feature</value>
               <icon>circle-005-lightblue</icon>
+              <localizedName>
+                <de>Feature</de>
+                <en>Feature</en>
+              </localizedName>
             </element>
             <element>
               <value>enabler</value>
               <icon>circle-002-yellow</icon>
+              <localizedName>
+                <de>Enabler</de>
+                <en>Enabler</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -7808,14 +8040,26 @@
             <element>
               <value>high</value>
               <icon>trend-010-upwards</icon>
+              <localizedName>
+                <de>Hoch</de>
+                <en>High</en>
+              </localizedName>
             </element>
             <element>
               <value>medium</value>
               <icon>trend-020-equal</icon>
+              <localizedName>
+                <de>Medium</de>
+                <en>Medium</en>
+              </localizedName>
             </element>
             <element>
               <value>low</value>
               <icon>trend-030-downwards</icon>
+              <localizedName>
+                <de>Niedrig</de>
+                <en>Low</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -7964,15 +8208,27 @@
           <textEnumerationConstraint>
             <element>
               <value>#15 - PI Meilenstein</value>
-              <icon>trend-030-downwards</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>PI Meilenstein</de>
+                <en>PI Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Fixiertes Datum</value>
-              <icon>trend-030-downwards</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Fixiertes Datum</de>
+                <en>Fixed-Date Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Learning Meilenstein</value>
-              <icon>trend-030-downwards</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Learning Meilenstein</de>
+                <en>Learning Milestone</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -8258,22 +8514,42 @@
             <element>
               <value>#10 - analysis</value>
               <icon>harvey-ball-000</icon>
+              <localizedName>
+                <de>Analyse</de>
+                <en>Analysis</en>
+              </localizedName>
             </element>
             <element>
               <value>#20 - backlog</value>
               <icon>harvey-ball-025</icon>
+              <localizedName>
+                <de>Backlog</de>
+                <en>Backlog</en>
+              </localizedName>
             </element>
             <element>
               <value>#40 - in progress</value>
               <icon>harvey-ball-075</icon>
+              <localizedName>
+                <de>In Bearbeitung</de>
+                <en>In Progress</en>
+              </localizedName>
             </element>
             <element>
               <value>#50 - done</value>
               <icon>harvey-ball-100</icon>
+              <localizedName>
+                <de>Fertig</de>
+                <en>Done</en>
+              </localizedName>
             </element>
             <element>
               <value>#60 - obsolete</value>
-              <icon>harvey-ball-100</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Nicht benötigt</de>
+                <en>Obsolete</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -8829,14 +9105,26 @@
             <element>
               <value>#15 - requested</value>
               <icon>harvey-ball-green-000</icon>
+              <localizedName>
+                <de>Angefragt</de>
+                <en>Requested</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - accepted</value>
               <icon>harvey-ball-green-100</icon>
+              <localizedName>
+                <de>Akzeptiert</de>
+                <en>Accepted</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - resolved</value>
               <icon>harvey-ball-green-100</icon>
+              <localizedName>
+                <de>Erledigt</de>
+                <en>Resolved</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -9012,13 +9300,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -9033,13 +9370,62 @@
           <numberEnumerationConstraint>
             <precision>-1</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -9787,34 +10173,66 @@
             <element>
               <value>#10 - Draft</value>
               <icon>cf.cplace.enumerationIcons|draft-svgrepo-com</icon>
+              <localizedName>
+                <de>Entwurf</de>
+                <en>Draft</en>
+              </localizedName>
             </element>
             <element>
               <value>#15 - Funnel</value>
               <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <localizedName>
+                <de>Funnel</de>
+                <en>Funnel</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Reviewing</value>
               <icon>cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com</icon>
+              <localizedName>
+                <de>Überprüfung</de>
+                <en>Reviewing</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Analyzing</value>
               <icon>cf.cplace.enumerationIcons|analyze-svgrepo-com</icon>
+              <localizedName>
+                <de>Analyse</de>
+                <en>Analyzing</en>
+              </localizedName>
             </element>
             <element>
               <value>#45 - Backlog</value>
               <icon>cf.cplace.enumerationIcons|backlog-svgrepo-com</icon>
+              <localizedName>
+                <de>Backlog</de>
+                <en>Backlog</en>
+              </localizedName>
             </element>
             <element>
               <value>#55 - Implementing</value>
               <icon>cf.cplace.enumerationIcons|process-graph-svgrepo-com</icon>
+              <localizedName>
+                <de>Implementierung</de>
+                <en>Implementing</en>
+              </localizedName>
             </element>
             <element>
               <value>#65 - Done</value>
               <icon>cf.cplace.enumerationIcons|shield-done-svgrepo-com</icon>
+              <localizedName>
+                <de>Abgeschlossen</de>
+                <en>Done</en>
+              </localizedName>
             </element>
             <element>
               <value>#75 - Archived</value>
               <icon>cf.cplace.enumerationIcons|archive-svgrepo-com</icon>
+              <localizedName>
+                <de>Archiviert</de>
+                <en>Archived</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -9850,10 +10268,18 @@
             <element>
               <value>#15 - Enabler</value>
               <icon>circle-002-yellow</icon>
+              <localizedName>
+                <de>Befähiger</de>
+                <en>Enabler</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Epic</value>
               <icon>circle-005-lightblue</icon>
+              <localizedName>
+                <de>Epic</de>
+                <en>Epic</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -10003,13 +10429,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -10027,13 +10502,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -10051,13 +10575,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -10072,13 +10645,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -10180,19 +10802,35 @@
             <defaultValues>s#15 - none</defaultValues>
             <element>
               <value>#15 - none</value>
-              <icon>circle-005-lightblue</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>keine Konflikte</de>
+                <en>no conflicts</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - potential</value>
               <icon>x-111-cplace-exclamation-triangle</icon>
+              <localizedName>
+                <de>Mögliche Konflikt</de>
+                <en>Potential Conflict</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - date</value>
               <icon>lightning-001-red</icon>
+              <localizedName>
+                <de>Datumskonflikt</de>
+                <en>Date Conflict</en>
+              </localizedName>
             </element>
             <element>
               <value>#45 - accept</value>
               <icon>x-112-cplace-square-green-check</icon>
+              <localizedName>
+                <de>Akzeptierter Konflikt</de>
+                <en>Accepted Conflict</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -10312,10 +10950,18 @@
             <element>
               <value>#15 - MVP</value>
               <icon>page-no-status</icon>
+              <localizedName>
+                <de>MVP</de>
+                <en>MVP</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Persevere</value>
               <icon>page-not-relevant</icon>
+              <localizedName>
+                <de>Persevere</de>
+                <en>Persevere</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -10855,15 +11501,27 @@
           <textEnumerationConstraint>
             <element>
               <value>#15 - PI Milestone</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>PI Meilenstein</de>
+                <en>PI Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Fixed-date Milestone</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Fixiertes Datum</de>
+                <en>Fixed-Date Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Learning Milestone</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Learning Meilenstein</de>
+                <en>Learning Milestone</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -10932,15 +11590,27 @@
           <textEnumerationConstraint>
             <element>
               <value>#25 - SPR</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Strategisches Portfolio Review</de>
+                <en>Strategic Portfolio Review</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Portfolio Sync</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Portfolio Sync</de>
+                <en>Portfolio Sync</en>
+              </localizedName>
             </element>
             <element>
               <value>#45 - PB</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Participatory Budgeting</de>
+                <en>Participatory Budgeting</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -11006,10 +11676,38 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>0.0</elements>
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
+            <element>
+              <value>0.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -21125,15 +21823,27 @@
             <defaultValues>s#35 - planned</defaultValues>
             <element>
               <value>#15 - done</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Abgeschlossen</de>
+                <en>Done</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - active</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Aktiv</de>
+                <en>Active</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - planned</value>
-              <icon>page-not-relevant</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Geplant</de>
+                <en>Planned</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -21349,10 +22059,18 @@
             <element>
               <value>capability</value>
               <icon>circle-005-lightblue</icon>
+              <localizedName>
+                <de>Capability</de>
+                <en>Capability</en>
+              </localizedName>
             </element>
             <element>
               <value>enabler</value>
               <icon>circle-002-yellow</icon>
+              <localizedName>
+                <de>Enabler</de>
+                <en>Enabler</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -21370,38 +22088,74 @@
             <element>
               <value>#10 - Draft</value>
               <icon>cf.cplace.enumerationIcons|draft-svgrepo-com</icon>
+              <localizedName>
+                <de>Entwurf</de>
+                <en>Draft</en>
+              </localizedName>
             </element>
             <element>
               <value>#15 - Funnel</value>
               <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <localizedName>
+                <de>Funnel</de>
+                <en>Funnel</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Analyzing</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Analyzing</de>
+                <en>Analyzing</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Backlog</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Backlog</de>
+                <en>Backlog</en>
+              </localizedName>
             </element>
             <element>
               <value>#45 - Implementing</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Implementing</de>
+                <en>Implementing</en>
+              </localizedName>
             </element>
             <element>
               <value>#55 - Validating</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Validating on staging</de>
+                <en>Validating on staging</en>
+              </localizedName>
             </element>
             <element>
               <value>#65 - Deploying</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Deploying to production</de>
+                <en>Deploying to production</en>
+              </localizedName>
             </element>
             <element>
               <value>#75 - Releasing</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Releasing</de>
+                <en>Releasing</en>
+              </localizedName>
             </element>
             <element>
               <value>#85 - Done</value>
-              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Done</de>
+                <en>Done</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -21431,13 +22185,62 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -21452,13 +22255,62 @@
           <numberEnumerationConstraint>
             <precision>-1</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -21473,13 +22325,62 @@
           <numberEnumerationConstraint>
             <precision>-1</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -21494,13 +22395,62 @@
           <numberEnumerationConstraint>
             <precision>-1</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>5.0</elements>
-            <elements>8.0</elements>
-            <elements>13.0</elements>
-            <elements>20.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>13.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>20.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -21744,6 +22694,10 @@
             <element>
               <value>#25 - conflict</value>
               <icon>lightning-001-red</icon>
+              <localizedName>
+                <de>Ungelöster Konflikt</de>
+                <en>Unresolved Conflict</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -21822,11 +22776,19 @@
           <textEnumerationConstraint>
             <element>
               <value>blocked by</value>
-              <icon>lightning-001-red</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>blockiert durch</de>
+                <en>blocked by</en>
+              </localizedName>
             </element>
             <element>
               <value>related to</value>
-              <icon>lightning-001-red</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>verbunden mit</de>
+                <en>related to</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -21862,14 +22824,26 @@
             <element>
               <value>15 - identified</value>
               <icon>lightning-009-white</icon>
+              <localizedName>
+                <de>Identifziert</de>
+                <en>Identified</en>
+              </localizedName>
             </element>
             <element>
               <value>25 - conflict</value>
               <icon>lightning-001-red</icon>
+              <localizedName>
+                <de>Konflikt</de>
+                <en>Conflict</en>
+              </localizedName>
             </element>
             <element>
               <value>35 - resolved</value>
               <icon>x-112-cplace-square-green-check</icon>
+              <localizedName>
+                <de>Konflikt gelöst</de>
+                <en>Conflict resolved</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -21961,15 +22935,27 @@
           <textEnumerationConstraint>
             <element>
               <value>#15 - PI Meilenstein</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>PI Meilenstein</de>
+                <en>PI Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Fixiertes Datum</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Fixiertes Datum</de>
+                <en>Fixed-Date Milestone</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Learning Meilenstein</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Learning Meilenstein</de>
+                <en>Learning Milestone</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
@@ -22183,15 +23169,27 @@
           <textEnumerationConstraint>
             <element>
               <value>#15 - Solution</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Solution</de>
+                <en>Solution</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Program</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Program</de>
+                <en>Program</en>
+              </localizedName>
             </element>
             <element>
               <value>#35 - Team</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Team</de>
+                <en>Team</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -22229,17 +23227,94 @@
           <numberEnumerationConstraint>
             <precision>0</precision>
             <localizedTextAfterSupplier />
-            <elements>0.0</elements>
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>4.0</elements>
-            <elements>5.0</elements>
-            <elements>6.0</elements>
-            <elements>7.0</elements>
-            <elements>8.0</elements>
-            <elements>9.0</elements>
-            <elements>10.0</elements>
+            <element>
+              <value>0.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>4.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>6.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>7.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>9.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>10.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -22257,16 +23332,86 @@
           <numberEnumerationConstraint>
             <precision>-1</precision>
             <localizedTextAfterSupplier />
-            <elements>1.0</elements>
-            <elements>2.0</elements>
-            <elements>3.0</elements>
-            <elements>4.0</elements>
-            <elements>5.0</elements>
-            <elements>6.0</elements>
-            <elements>7.0</elements>
-            <elements>8.0</elements>
-            <elements>9.0</elements>
-            <elements>10.0</elements>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>2.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>3.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>4.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>5.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>6.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>7.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>8.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>9.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
+            <element>
+              <value>10.0</value>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
+            </element>
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -22281,11 +23426,19 @@
           <textEnumerationConstraint>
             <element>
               <value>#15 - Committed</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Committed</de>
+                <en>Committed</en>
+              </localizedName>
             </element>
             <element>
               <value>#25 - Uncommitted</value>
-              <icon>x-112-cplace-square-green-check</icon>
+              <icon>circle-003-green</icon>
+              <localizedName>
+                <de>Uncommitted</de>
+                <en>Uncommitted</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
@@ -22413,10 +23566,18 @@
             <element>
               <value>Accepted</value>
               <icon>circle-003-green</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
             </element>
             <element>
               <value>Not Accepted</value>
               <icon>circle-001-red</icon>
+              <localizedName>
+                <de>toolbarButtonGraphics TIFF</de>
+                <en>toolbarButtonGraphics TIFF</en>
+              </localizedName>
             </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>

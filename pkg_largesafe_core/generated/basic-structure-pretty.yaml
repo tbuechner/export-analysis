@@ -107,16 +107,34 @@ package:
             defaultValues: s#15 - analysis
             element:
             - icon: harvey-ball-green-000
+              localizedName:
+                de: Analyse
+                en: Analysis
               value: '#15 - analysis'
             - icon: harvey-ball-green-025
+              localizedName:
+                de: Backlog
+                en: Backlog
               value: '#25 - backlog'
             - icon: harvey-ball-green-050
+              localizedName:
+                de: In Bearbeitung
+                en: In Progress
               value: '#35 - in progress'
             - icon: harvey-ball-green-100
+              localizedName:
+                de: Erledigt
+                en: Done
               value: '#45 - done'
             - icon: harvey-ball-green-100
+              localizedName:
+                de: Ausgeliefert
+                en: Released
               value: '#55 - released'
-            - icon: harvey-ball-green-100
+            - icon: circle-003-green
+              localizedName:
+                de: "Nicht ben\xF6tigt"
+                en: Obsolete
               value: '#65 - obsolete'
         - localizedName:
             de: Fortschritt
@@ -251,6 +269,9 @@ package:
           textEnumerationConstraint:
             element:
               icon: lightning-001-red
+              localizedName:
+                de: "Ungel\xF6ster Konflikt"
+                en: Unresolved Conflict
               value: '#25 - conflict'
         - booleanConstraint:
             defaultValues: bfalse
@@ -295,14 +316,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -315,14 +364,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -335,14 +412,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -355,14 +460,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -389,8 +522,14 @@ package:
             defaultValues: sfeature
             element:
             - icon: circle-005-lightblue
+              localizedName:
+                de: Feature
+                en: Feature
               value: feature
             - icon: circle-002-yellow
+              localizedName:
+                de: Enabler
+                en: Enabler
               value: enabler
         - localizedName:
             de: Teams
@@ -531,10 +670,19 @@ package:
           textEnumerationConstraint:
             element:
             - icon: trend-010-upwards
+              localizedName:
+                de: Hoch
+                en: High
               value: high
             - icon: trend-020-equal
+              localizedName:
+                de: Medium
+                en: Medium
               value: medium
             - icon: trend-030-downwards
+              localizedName:
+                de: Niedrig
+                en: Low
               value: low
         - dateConstraint:
             dateFormat: DAY_YEAR_LONG
@@ -752,20 +900,44 @@ package:
             defaultValues: s#10 - Draft
             element:
             - icon: cf.cplace.enumerationIcons|draft-svgrepo-com
+              localizedName:
+                de: Entwurf
+                en: Draft
               value: '#10 - Draft'
             - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              localizedName:
+                de: Funnel
+                en: Funnel
               value: '#15 - Funnel'
             - icon: cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com
+              localizedName:
+                de: "\xDCberpr\xFCfung"
+                en: Reviewing
               value: '#25 - Reviewing'
             - icon: cf.cplace.enumerationIcons|analyze-svgrepo-com
+              localizedName:
+                de: Analyse
+                en: Analyzing
               value: '#35 - Analyzing'
             - icon: cf.cplace.enumerationIcons|backlog-svgrepo-com
+              localizedName:
+                de: Backlog
+                en: Backlog
               value: '#45 - Backlog'
             - icon: cf.cplace.enumerationIcons|process-graph-svgrepo-com
+              localizedName:
+                de: Implementierung
+                en: Implementing
               value: '#55 - Implementing'
             - icon: cf.cplace.enumerationIcons|shield-done-svgrepo-com
+              localizedName:
+                de: Abgeschlossen
+                en: Done
               value: '#65 - Done'
             - icon: cf.cplace.enumerationIcons|archive-svgrepo-com
+              localizedName:
+                de: Archiviert
+                en: Archived
               value: '#75 - Archived'
         - customConstraint:
             additionalConstraintData: "{\"workflowData\":{\"workflowStates\":\"[{\\\
@@ -985,8 +1157,14 @@ package:
             defaultValues: s#25 - Epic
             element:
             - icon: circle-002-yellow
+              localizedName:
+                de: "Bef\xE4higer"
+                en: Enabler
               value: '#15 - Enabler'
             - icon: circle-005-lightblue
+              localizedName:
+                de: Epic
+                en: Epic
               value: '#25 - Epic'
         - localizedName:
             de: Beschreibung
@@ -1117,14 +1295,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -1137,14 +1343,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -1157,14 +1391,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -1175,14 +1437,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -1261,13 +1551,25 @@ package:
           textEnumerationConstraint:
             defaultValues: s#15 - none
             element:
-            - icon: circle-005-lightblue
+            - icon: circle-003-green
+              localizedName:
+                de: keine Konflikte
+                en: no conflicts
               value: '#15 - none'
             - icon: x-111-cplace-exclamation-triangle
+              localizedName:
+                de: "M\xF6gliche Konflikt"
+                en: Potential Conflict
               value: '#25 - potential'
             - icon: lightning-001-red
+              localizedName:
+                de: Datumskonflikt
+                en: Date Conflict
               value: '#35 - date'
             - icon: x-112-cplace-square-green-check
+              localizedName:
+                de: Akzeptierter Konflikt
+                en: Accepted Conflict
               value: '#45 - accept'
         - localizedName:
             de: Fortschritt
@@ -1354,8 +1656,14 @@ package:
           textEnumerationConstraint:
             element:
             - icon: page-no-status
+              localizedName:
+                de: MVP
+                en: MVP
               value: '#15 - MVP'
             - icon: page-not-relevant
+              localizedName:
+                de: Persevere
+                en: Persevere
               value: '#25 - Persevere'
         iconName: cf-pase
         localizedNamePlural:
@@ -1659,11 +1967,20 @@ package:
           textEnumerationConstraint:
             defaultValues: s#35 - planned
             element:
-            - icon: page-not-relevant
+            - icon: circle-003-green
+              localizedName:
+                de: Abgeschlossen
+                en: Done
               value: '#15 - done'
-            - icon: page-not-relevant
+            - icon: circle-003-green
+              localizedName:
+                de: Aktiv
+                en: Active
               value: '#25 - active'
-            - icon: page-not-relevant
+            - icon: circle-003-green
+              localizedName:
+                de: Geplant
+                en: Planned
               value: '#35 - planned'
         - localizedName:
             de: Confidence Vote
@@ -1759,8 +2076,14 @@ package:
             defaultValues: scapability
             element:
             - icon: circle-005-lightblue
+              localizedName:
+                de: Capability
+                en: Capability
               value: capability
             - icon: circle-002-yellow
+              localizedName:
+                de: Enabler
+                en: Enabler
               value: enabler
         - localizedName:
             de: Status
@@ -1773,22 +2096,49 @@ package:
             defaultValues: s#10 - Draft
             element:
             - icon: cf.cplace.enumerationIcons|draft-svgrepo-com
+              localizedName:
+                de: Entwurf
+                en: Draft
               value: '#10 - Draft'
             - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              localizedName:
+                de: Funnel
+                en: Funnel
               value: '#15 - Funnel'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Analyzing
+                en: Analyzing
               value: '#25 - Analyzing'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Backlog
+                en: Backlog
               value: '#35 - Backlog'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Implementing
+                en: Implementing
               value: '#45 - Implementing'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Validating on staging
+                en: Validating on staging
               value: '#55 - Validating'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Deploying to production
+                en: Deploying to production
               value: '#65 - Deploying'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Releasing
+                en: Releasing
               value: '#75 - Releasing'
-            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+            - icon: circle-003-green
+              localizedName:
+                de: Done
+                en: Done
               value: '#85 - Done'
         - localizedName:
             de: WSJF
@@ -1807,14 +2157,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '0'
           shortHelp: null
@@ -1825,14 +2203,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '-1'
           shortHelp: null
@@ -1843,14 +2249,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '-1'
           shortHelp: null
@@ -1861,14 +2295,42 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            elements:
-            - '1.0'
-            - '2.0'
-            - '3.0'
-            - '5.0'
-            - '8.0'
-            - '13.0'
-            - '20.0'
+            element:
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '1.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '2.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '3.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '5.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '8.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '13.0'
+            - icon: circle-003-green
+              localizedName:
+                de: toolbarButtonGraphics TIFF
+                en: toolbarButtonGraphics TIFF
+              value: '20.0'
             localizedTextAfterSupplier: null
             precision: '-1'
           shortHelp: null
@@ -2052,6 +2514,9 @@ package:
           textEnumerationConstraint:
             element:
               icon: lightning-001-red
+              localizedName:
+                de: "Ungel\xF6ster Konflikt"
+                en: Unresolved Conflict
               value: '#25 - conflict'
         - localizedName:
             de: Features

@@ -216,6 +216,78 @@ def add_mandatory_elements(root, parent_map):
         rewrite_constraint_factory(constraint_factory, parent_map, 'textEnumerationConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
 
+        element_to_icon = {}
+        element_to_localized_names = {}
+        for element in constraint_factory.findall('.//element'):
+            value = element.find('.//value').text
+
+            new_element = ET.Element('elements')
+            new_element.text = value
+            constraint_factory.append(new_element)
+
+            icon_element = element.find('.//icon')
+            if icon_element is not None:
+                icon = icon_element.text
+                element_to_icon[value] = icon
+
+            localized_names = []
+            for localized_name in element.findall('.//localizedName'):
+                # iterate over all children of localized_name
+                for child in list(localized_name):
+                    language = child.tag
+                    label = child.text
+                    localized_names.append({language: label})
+            element_to_localized_names[value] = localized_names
+
+            parent_map[element].remove(element)
+
+        new_element_to_icon = ET.Element('element2icon')
+        constraint_factory.append(new_element_to_icon)
+        for key, value in element_to_icon.items():
+            entry = ET.Element('entry')
+            new_element_to_icon.append(entry)
+            key_element = ET.Element('key')
+            key_element.text = key
+            entry.append(key_element)
+            value_element = ET.Element('value')
+            value_element.text = value
+            entry.append(value_element)
+
+        new_element_to_localized_names = ET.Element('element2localizedLabel')
+        constraint_factory.append(new_element_to_localized_names)
+        for key, value in element_to_localized_names.items():
+            entry = ET.Element('entry')
+            new_element_to_localized_names.append(entry)
+            key_element = ET.Element('key')
+            key_element.text = key
+            entry.append(key_element)
+            value_element = ET.Element('value')
+            entry.append(value_element)
+            localizations = ET.Element('localizations')
+            value_element.append(localizations)
+            for localized_name in value:
+                for key in localized_name:
+                    entry = ET.Element('entry')
+                    localizations.append(entry)
+                    key_element = ET.Element('key')
+                    key_element.text = key
+                    entry.append(key_element)
+                    value_element = ET.Element('value')
+
+                    value_language_element = ET.Element('language')
+                    value_language_element.text = key
+                    value_element.append(value_language_element)
+
+                    value_value_element = ET.Element('value')
+                    value_value_element.text = localized_name.get(key)
+                    value_element.append(value_value_element)
+
+                    entry.append(value_element)
+
+    for constraint_factory in root.findall('.//numberEnumerationConstraint'):
+        rewrite_constraint_factory(constraint_factory, parent_map, 'numberEnumerationConstraint')
+        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+
     for constraint_factory in root.findall('.//stringConstraint'):
         rewrite_constraint_factory(constraint_factory, parent_map, 'stringConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
@@ -442,39 +514,43 @@ def rewrite(root, parent_map):
         parent_map[element_to_localized_label].remove(element_to_localized_label)
 
     for element in root.findall('.//textEnumerationConstraint/elements'):
-        element_value = element.text
-        elements.append(element_value)
-        # if element_value is in element2icon
-        if element_value in element2icon:
-            icon = element2icon[element_value]
-        if element_value in element2localized_labels:
-            localized_labels = element2localized_labels[element_value]
-
-        new_element = ET.Element('element')
-        new_value = ET.Element('value')
-        new_value.text = element_value
-        new_element.append(new_value)
-        if icon is not None:
-            add_element(new_element, 'icon', icon)
-
-        if localized_labels is not None:
-            new_localized_name = ET.Element('localizedName')
-            for localized_label in localized_labels:
-                new_localization = ET.Element(localized_label.get('language'))
-                new_localization.text = localized_label.get('label')
-                new_localized_name.append(new_localization)
-            new_element.append(new_localized_name)
-
-        parent_map[element].append(new_element)
-        parent_map[element].remove(element)
-
+        rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map)
 
     for element in root.findall('.//numberEnumerationConstraint/elements'):
-        elements.append(element.text)
+        rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map)
 
-    print(elements)
-    print(element2icon)
-    print(element2localized_labels)
+    # print(elements)
+    # print(element2icon)
+    # print(element2localized_labels)
+
+
+def rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map):
+    element_value = element.text
+    elements.append(element_value)
+    # if element_value is in element2icon
+    if element_value in element2icon:
+        icon = element2icon[element_value]
+    if element_value in element2localized_labels:
+        localized_labels = element2localized_labels[element_value]
+        # print(localized_labels)
+    new_element = ET.Element('element')
+    new_value = ET.Element('value')
+    new_value.text = element_value
+    new_element.append(new_value)
+    if icon is not None:
+        add_element(new_element, 'icon', icon)
+    if localized_labels is not None:
+        new_localized_name = ET.Element('localizedName')
+        for localized_label in localized_labels:
+            # iterate over all keys of localized_label
+            for key in localized_label:
+                new_localization = ET.Element(key)
+                new_localization.text = localized_label.get(key)
+                new_localized_name.append(new_localization)
+        new_element.append(new_localized_name)
+        # print(new_localized_name)
+    parent_map[element].append(new_element)
+    parent_map[element].remove(element)
 
 
 def remove_slots(root, parent_map, slots_to_be_retained):

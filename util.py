@@ -28,7 +28,7 @@ def remove_empty_elements(element, parent=None):
     if parent is not None and is_empty(element):
         # generate a string representation of the element
         element_str = ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8')
-        print("Removing empty element: " + element_str)
+        # print("Removing empty element: " + element_str)
         parent.remove(element)
 
     # If the element is equals to "{}", remove it

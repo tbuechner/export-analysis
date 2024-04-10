@@ -86,9 +86,7 @@
                                     <xs:complexType>
                                       <xs:sequence>
                                         <xs:element ref="defaultValues" minOccurs="0"/>
-                                        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
-                                        <xs:element ref="element2icon"/>
-                                        <xs:element ref="element2localizedLabel"/>
+                                        <xs:element ref="element" maxOccurs="unbounded" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
@@ -98,9 +96,7 @@
                                         <xs:element ref="precision"/>
                                         <xs:element ref="localizedTextAfterSupplier"/>
                                         <xs:element ref="defaultValues" minOccurs="0"/>
-                                        <xs:element ref="elements" maxOccurs="unbounded" minOccurs="0"/>
-                                        <xs:element ref="element2icon"/>
-                                        <xs:element ref="element2localizedLabel"/>
+                                        <xs:element ref="element" maxOccurs="unbounded" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
@@ -259,18 +255,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="elements" type="xs:string"/>
-  <xs:element name="element2icon">
-    <xs:complexType mixed="true">
+  <xs:element name="element" maxOccurs="unbounded" minOccurs="0">
+    <xs:complexType>
       <xs:sequence>
-        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="element2localizedLabel">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element type="xs:string" name="value"/>
+        <xs:element type="xs:string" name="icon"/>
+        <xs:element name="localizedName">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="de"/>
+              <xs:element type="xs:string" name="en"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

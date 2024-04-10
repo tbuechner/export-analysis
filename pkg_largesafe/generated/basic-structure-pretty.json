@@ -153,27 +153,51 @@
                                         "element": [
                                             {
                                                 "value": "#15 - analysis",
-                                                "icon": "harvey-ball-green-000"
+                                                "icon": "harvey-ball-green-000",
+                                                "localizedName": {
+                                                    "de": "Analyse",
+                                                    "en": "Analysis"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - backlog",
-                                                "icon": "harvey-ball-green-025"
+                                                "icon": "harvey-ball-green-025",
+                                                "localizedName": {
+                                                    "de": "Backlog",
+                                                    "en": "Backlog"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - in progress",
-                                                "icon": "harvey-ball-green-050"
+                                                "icon": "harvey-ball-green-050",
+                                                "localizedName": {
+                                                    "de": "In Bearbeitung",
+                                                    "en": "In Progress"
+                                                }
                                             },
                                             {
                                                 "value": "#45 - done",
-                                                "icon": "harvey-ball-green-100"
+                                                "icon": "harvey-ball-green-100",
+                                                "localizedName": {
+                                                    "de": "Erledigt",
+                                                    "en": "Done"
+                                                }
                                             },
                                             {
                                                 "value": "#55 - released",
-                                                "icon": "harvey-ball-green-100"
+                                                "icon": "harvey-ball-green-100",
+                                                "localizedName": {
+                                                    "de": "Ausgeliefert",
+                                                    "en": "Released"
+                                                }
                                             },
                                             {
                                                 "value": "#65 - obsolete",
-                                                "icon": "harvey-ball-green-100"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Nicht ben\u00f6tigt",
+                                                    "en": "Obsolete"
+                                                }
                                             }
                                         ]
                                     },
@@ -357,7 +381,11 @@
                                     "textEnumerationConstraint": {
                                         "element": {
                                             "value": "#25 - conflict",
-                                            "icon": "lightning-001-red"
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
                                     },
                                     "multiplicity": "maximalOne"
@@ -423,14 +451,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -449,14 +526,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -475,14 +601,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -501,14 +676,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -543,11 +767,19 @@
                                         "element": [
                                             {
                                                 "value": "feature",
-                                                "icon": "circle-005-lightblue"
+                                                "icon": "circle-005-lightblue",
+                                                "localizedName": {
+                                                    "de": "Feature",
+                                                    "en": "Feature"
+                                                }
                                             },
                                             {
                                                 "value": "enabler",
-                                                "icon": "circle-002-yellow"
+                                                "icon": "circle-002-yellow",
+                                                "localizedName": {
+                                                    "de": "Enabler",
+                                                    "en": "Enabler"
+                                                }
                                             }
                                         ]
                                     },
@@ -739,15 +971,27 @@
                                         "element": [
                                             {
                                                 "value": "high",
-                                                "icon": "trend-010-upwards"
+                                                "icon": "trend-010-upwards",
+                                                "localizedName": {
+                                                    "de": "Hoch",
+                                                    "en": "High"
+                                                }
                                             },
                                             {
                                                 "value": "medium",
-                                                "icon": "trend-020-equal"
+                                                "icon": "trend-020-equal",
+                                                "localizedName": {
+                                                    "de": "Medium",
+                                                    "en": "Medium"
+                                                }
                                             },
                                             {
                                                 "value": "low",
-                                                "icon": "trend-030-downwards"
+                                                "icon": "trend-030-downwards",
+                                                "localizedName": {
+                                                    "de": "Niedrig",
+                                                    "en": "Low"
+                                                }
                                             }
                                         ]
                                     },
@@ -902,15 +1146,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - PI Meilenstein",
-                                                "icon": "trend-030-downwards"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "PI Meilenstein",
+                                                    "en": "PI Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Fixiertes Datum",
-                                                "icon": "trend-030-downwards"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Fixiertes Datum",
+                                                    "en": "Fixed-Date Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Learning Meilenstein",
-                                                "icon": "trend-030-downwards"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Learning Meilenstein",
+                                                    "en": "Learning Milestone"
+                                                }
                                             }
                                         ]
                                     },
@@ -1201,23 +1457,43 @@
                                         "element": [
                                             {
                                                 "value": "#10 - analysis",
-                                                "icon": "harvey-ball-000"
+                                                "icon": "harvey-ball-000",
+                                                "localizedName": {
+                                                    "de": "Analyse",
+                                                    "en": "Analysis"
+                                                }
                                             },
                                             {
                                                 "value": "#20 - backlog",
-                                                "icon": "harvey-ball-025"
+                                                "icon": "harvey-ball-025",
+                                                "localizedName": {
+                                                    "de": "Backlog",
+                                                    "en": "Backlog"
+                                                }
                                             },
                                             {
                                                 "value": "#40 - in progress",
-                                                "icon": "harvey-ball-075"
+                                                "icon": "harvey-ball-075",
+                                                "localizedName": {
+                                                    "de": "In Bearbeitung",
+                                                    "en": "In Progress"
+                                                }
                                             },
                                             {
                                                 "value": "#50 - done",
-                                                "icon": "harvey-ball-100"
+                                                "icon": "harvey-ball-100",
+                                                "localizedName": {
+                                                    "de": "Fertig",
+                                                    "en": "Done"
+                                                }
                                             },
                                             {
                                                 "value": "#60 - obsolete",
-                                                "icon": "harvey-ball-100"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Nicht ben\u00f6tigt",
+                                                    "en": "Obsolete"
+                                                }
                                             }
                                         ]
                                     },
@@ -1786,15 +2062,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - requested",
-                                                "icon": "harvey-ball-green-000"
+                                                "icon": "harvey-ball-green-000",
+                                                "localizedName": {
+                                                    "de": "Angefragt",
+                                                    "en": "Requested"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - accepted",
-                                                "icon": "harvey-ball-green-100"
+                                                "icon": "harvey-ball-green-100",
+                                                "localizedName": {
+                                                    "de": "Akzeptiert",
+                                                    "en": "Accepted"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - resolved",
-                                                "icon": "harvey-ball-green-100"
+                                                "icon": "harvey-ball-green-100",
+                                                "localizedName": {
+                                                    "de": "Erledigt",
+                                                    "en": "Resolved"
+                                                }
                                             }
                                         ]
                                     },
@@ -1973,14 +2261,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -1996,14 +2333,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -2117,35 +2503,67 @@
                                         "element": [
                                             {
                                                 "value": "#10 - Draft",
-                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Entwurf",
+                                                    "en": "Draft"
+                                                }
                                             },
                                             {
                                                 "value": "#15 - Funnel",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Funnel",
+                                                    "en": "Funnel"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Reviewing",
-                                                "icon": "cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "\u00dcberpr\u00fcfung",
+                                                    "en": "Reviewing"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Analyzing",
-                                                "icon": "cf.cplace.enumerationIcons|analyze-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|analyze-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Analyse",
+                                                    "en": "Analyzing"
+                                                }
                                             },
                                             {
                                                 "value": "#45 - Backlog",
-                                                "icon": "cf.cplace.enumerationIcons|backlog-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|backlog-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Backlog",
+                                                    "en": "Backlog"
+                                                }
                                             },
                                             {
                                                 "value": "#55 - Implementing",
-                                                "icon": "cf.cplace.enumerationIcons|process-graph-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|process-graph-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Implementierung",
+                                                    "en": "Implementing"
+                                                }
                                             },
                                             {
                                                 "value": "#65 - Done",
-                                                "icon": "cf.cplace.enumerationIcons|shield-done-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|shield-done-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Abgeschlossen",
+                                                    "en": "Done"
+                                                }
                                             },
                                             {
                                                 "value": "#75 - Archived",
-                                                "icon": "cf.cplace.enumerationIcons|archive-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|archive-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Archiviert",
+                                                    "en": "Archived"
+                                                }
                                             }
                                         ]
                                     },
@@ -2182,11 +2600,19 @@
                                         "element": [
                                             {
                                                 "value": "#15 - Enabler",
-                                                "icon": "circle-002-yellow"
+                                                "icon": "circle-002-yellow",
+                                                "localizedName": {
+                                                    "de": "Bef\u00e4higer",
+                                                    "en": "Enabler"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Epic",
-                                                "icon": "circle-005-lightblue"
+                                                "icon": "circle-005-lightblue",
+                                                "localizedName": {
+                                                    "de": "Epic",
+                                                    "en": "Epic"
+                                                }
                                             }
                                         ]
                                     },
@@ -2321,14 +2747,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -2347,14 +2822,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -2373,14 +2897,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -2396,14 +2969,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -2507,19 +3129,35 @@
                                         "element": [
                                             {
                                                 "value": "#15 - none",
-                                                "icon": "circle-005-lightblue"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "keine Konflikte",
+                                                    "en": "no conflicts"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - potential",
-                                                "icon": "x-111-cplace-exclamation-triangle"
+                                                "icon": "x-111-cplace-exclamation-triangle",
+                                                "localizedName": {
+                                                    "de": "M\u00f6gliche Konflikt",
+                                                    "en": "Potential Conflict"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - date",
-                                                "icon": "lightning-001-red"
+                                                "icon": "lightning-001-red",
+                                                "localizedName": {
+                                                    "de": "Datumskonflikt",
+                                                    "en": "Date Conflict"
+                                                }
                                             },
                                             {
                                                 "value": "#45 - accept",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "x-112-cplace-square-green-check",
+                                                "localizedName": {
+                                                    "de": "Akzeptierter Konflikt",
+                                                    "en": "Accepted Conflict"
+                                                }
                                             }
                                         ]
                                     },
@@ -2640,11 +3278,19 @@
                                         "element": [
                                             {
                                                 "value": "#15 - MVP",
-                                                "icon": "page-no-status"
+                                                "icon": "page-no-status",
+                                                "localizedName": {
+                                                    "de": "MVP",
+                                                    "en": "MVP"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Persevere",
-                                                "icon": "page-not-relevant"
+                                                "icon": "page-not-relevant",
+                                                "localizedName": {
+                                                    "de": "Persevere",
+                                                    "en": "Persevere"
+                                                }
                                             }
                                         ]
                                     },
@@ -3198,15 +3844,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - PI Milestone",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "PI Meilenstein",
+                                                    "en": "PI Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Fixed-date Milestone",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Fixiertes Datum",
+                                                    "en": "Fixed-Date Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Learning Milestone",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Learning Meilenstein",
+                                                    "en": "Learning Milestone"
+                                                }
                                             }
                                         ]
                                     },
@@ -3279,15 +3937,27 @@
                                         "element": [
                                             {
                                                 "value": "#25 - SPR",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Strategisches Portfolio Review",
+                                                    "en": "Strategic Portfolio Review"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Portfolio Sync",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Portfolio Sync",
+                                                    "en": "Portfolio Sync"
+                                                }
                                             },
                                             {
                                                 "value": "#45 - PB",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Participatory Budgeting",
+                                                    "en": "Participatory Budgeting"
+                                                }
                                             }
                                         ]
                                     },
@@ -3356,11 +4026,39 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "0.0",
-                                            "1.0",
-                                            "2.0",
-                                            "3.0"
+                                        "element": [
+                                            {
+                                                "value": "0.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "exactlyOne"
@@ -3733,15 +4431,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - done",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Abgeschlossen",
+                                                    "en": "Done"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - active",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Aktiv",
+                                                    "en": "Active"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - planned",
-                                                "icon": "page-not-relevant"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Geplant",
+                                                    "en": "Planned"
+                                                }
                                             }
                                         ]
                                     },
@@ -3962,11 +4672,19 @@
                                         "element": [
                                             {
                                                 "value": "capability",
-                                                "icon": "circle-005-lightblue"
+                                                "icon": "circle-005-lightblue",
+                                                "localizedName": {
+                                                    "de": "Capability",
+                                                    "en": "Capability"
+                                                }
                                             },
                                             {
                                                 "value": "enabler",
-                                                "icon": "circle-002-yellow"
+                                                "icon": "circle-002-yellow",
+                                                "localizedName": {
+                                                    "de": "Enabler",
+                                                    "en": "Enabler"
+                                                }
                                             }
                                         ]
                                     },
@@ -3985,39 +4703,75 @@
                                         "element": [
                                             {
                                                 "value": "#10 - Draft",
-                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Entwurf",
+                                                    "en": "Draft"
+                                                }
                                             },
                                             {
                                                 "value": "#15 - Funnel",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com",
+                                                "localizedName": {
+                                                    "de": "Funnel",
+                                                    "en": "Funnel"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Analyzing",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Analyzing",
+                                                    "en": "Analyzing"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Backlog",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Backlog",
+                                                    "en": "Backlog"
+                                                }
                                             },
                                             {
                                                 "value": "#45 - Implementing",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Implementing",
+                                                    "en": "Implementing"
+                                                }
                                             },
                                             {
                                                 "value": "#55 - Validating",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Validating on staging",
+                                                    "en": "Validating on staging"
+                                                }
                                             },
                                             {
                                                 "value": "#65 - Deploying",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Deploying to production",
+                                                    "en": "Deploying to production"
+                                                }
                                             },
                                             {
                                                 "value": "#75 - Releasing",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Releasing",
+                                                    "en": "Releasing"
+                                                }
                                             },
                                             {
                                                 "value": "#85 - Done",
-                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Done",
+                                                    "en": "Done"
+                                                }
                                             }
                                         ]
                                     },
@@ -4048,14 +4802,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4071,14 +4874,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4094,14 +4946,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4117,14 +5018,63 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "5.0",
-                                            "8.0",
-                                            "13.0",
-                                            "20.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "13.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "20.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4368,7 +5318,11 @@
                                     "textEnumerationConstraint": {
                                         "element": {
                                             "value": "#25 - conflict",
-                                            "icon": "lightning-001-red"
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
                                     },
                                     "multiplicity": "maximalOne"
@@ -4450,11 +5404,19 @@
                                         "element": [
                                             {
                                                 "value": "blocked by",
-                                                "icon": "lightning-001-red"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "blockiert durch",
+                                                    "en": "blocked by"
+                                                }
                                             },
                                             {
                                                 "value": "related to",
-                                                "icon": "lightning-001-red"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "verbunden mit",
+                                                    "en": "related to"
+                                                }
                                             }
                                         ]
                                     },
@@ -4493,15 +5455,27 @@
                                         "element": [
                                             {
                                                 "value": "15 - identified",
-                                                "icon": "lightning-009-white"
+                                                "icon": "lightning-009-white",
+                                                "localizedName": {
+                                                    "de": "Identifziert",
+                                                    "en": "Identified"
+                                                }
                                             },
                                             {
                                                 "value": "25 - conflict",
-                                                "icon": "lightning-001-red"
+                                                "icon": "lightning-001-red",
+                                                "localizedName": {
+                                                    "de": "Konflikt",
+                                                    "en": "Conflict"
+                                                }
                                             },
                                             {
                                                 "value": "35 - resolved",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "x-112-cplace-square-green-check",
+                                                "localizedName": {
+                                                    "de": "Konflikt gel\u00f6st",
+                                                    "en": "Conflict resolved"
+                                                }
                                             }
                                         ]
                                     },
@@ -4597,15 +5571,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - PI Meilenstein",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "PI Meilenstein",
+                                                    "en": "PI Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Fixiertes Datum",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Fixiertes Datum",
+                                                    "en": "Fixed-Date Milestone"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Learning Meilenstein",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Learning Meilenstein",
+                                                    "en": "Learning Milestone"
+                                                }
                                             }
                                         ]
                                     },
@@ -4833,15 +5819,27 @@
                                         "element": [
                                             {
                                                 "value": "#15 - Solution",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Solution",
+                                                    "en": "Solution"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Program",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Program",
+                                                    "en": "Program"
+                                                }
                                             },
                                             {
                                                 "value": "#35 - Team",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Team",
+                                                    "en": "Team"
+                                                }
                                             }
                                         ]
                                     },
@@ -4882,18 +5880,95 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "0.0",
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "4.0",
-                                            "5.0",
-                                            "6.0",
-                                            "7.0",
-                                            "8.0",
-                                            "9.0",
-                                            "10.0"
+                                        "element": [
+                                            {
+                                                "value": "0.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "4.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "6.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "7.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "9.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "10.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4912,17 +5987,87 @@
                                     "numberEnumerationConstraint": {
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null,
-                                        "elements": [
-                                            "1.0",
-                                            "2.0",
-                                            "3.0",
-                                            "4.0",
-                                            "5.0",
-                                            "6.0",
-                                            "7.0",
-                                            "8.0",
-                                            "9.0",
-                                            "10.0"
+                                        "element": [
+                                            {
+                                                "value": "1.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "2.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "3.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "4.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "5.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "6.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "7.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "8.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "9.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            },
+                                            {
+                                                "value": "10.0",
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
+                                            }
                                         ]
                                     },
                                     "multiplicity": "maximalOne"
@@ -4939,11 +6084,19 @@
                                         "element": [
                                             {
                                                 "value": "#15 - Committed",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Committed",
+                                                    "en": "Committed"
+                                                }
                                             },
                                             {
                                                 "value": "#25 - Uncommitted",
-                                                "icon": "x-112-cplace-square-green-check"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "Uncommitted",
+                                                    "en": "Uncommitted"
+                                                }
                                             }
                                         ]
                                     },
@@ -5076,11 +6229,19 @@
                                         "element": [
                                             {
                                                 "value": "Accepted",
-                                                "icon": "circle-003-green"
+                                                "icon": "circle-003-green",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
                                             },
                                             {
                                                 "value": "Not Accepted",
-                                                "icon": "circle-001-red"
+                                                "icon": "circle-001-red",
+                                                "localizedName": {
+                                                    "de": "toolbarButtonGraphics TIFF",
+                                                    "en": "toolbarButtonGraphics TIFF"
+                                                }
                                             }
                                         ]
                                     },

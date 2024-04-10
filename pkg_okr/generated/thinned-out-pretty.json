@@ -62,19 +62,35 @@
                                     "element": [
                                         {
                                             "value": "#15 Next",
-                                            "icon": "harvey-ball-red-100"
+                                            "icon": "harvey-ball-red-100",
+                                            "localizedName": {
+                                                "de": "N\u00e4chster",
+                                                "en": "Next"
+                                            }
                                         },
                                         {
                                             "value": "#25 Current",
-                                            "icon": "harvey-ball-red-100"
+                                            "icon": "harvey-ball-red-100",
+                                            "localizedName": {
+                                                "de": "Aktuell",
+                                                "en": "Current"
+                                            }
                                         },
                                         {
                                             "value": "#35 Closed",
-                                            "icon": "harvey-ball-red-100"
+                                            "icon": "harvey-ball-red-100",
+                                            "localizedName": {
+                                                "de": "Geschlossen",
+                                                "en": "Closed"
+                                            }
                                         },
                                         {
                                             "value": "#45 Draft",
-                                            "icon": "harvey-ball-red-100"
+                                            "icon": "harvey-ball-red-100",
+                                            "localizedName": {
+                                                "de": "Entwurf",
+                                                "en": "Draft"
+                                            }
                                         }
                                     ]
                                 },
@@ -163,11 +179,19 @@
                                     "element": [
                                         {
                                             "value": "#15 - yes",
-                                            "icon": "x-112-cplace-square-green-check"
+                                            "icon": "x-112-cplace-square-green-check",
+                                            "localizedName": {
+                                                "de": "Ja",
+                                                "en": "Yes"
+                                            }
                                         },
                                         {
                                             "value": "#25 - no",
-                                            "icon": "x-103-cplace-square-red-close"
+                                            "icon": "x-103-cplace-square-red-close",
+                                            "localizedName": {
+                                                "de": "Nein",
+                                                "en": "No"
+                                            }
                                         }
                                     ]
                                 },
@@ -238,43 +262,83 @@
                                     "element": [
                                         {
                                             "value": "0.1",
-                                            "icon": "circle-001-red"
+                                            "icon": "circle-001-red",
+                                            "localizedName": {
+                                                "de": "0.1",
+                                                "en": "0.1"
+                                            }
                                         },
                                         {
                                             "value": "0.2",
-                                            "icon": "circle-001-red"
+                                            "icon": "circle-001-red",
+                                            "localizedName": {
+                                                "de": "0.2",
+                                                "en": "0.2"
+                                            }
                                         },
                                         {
                                             "value": "0.3",
-                                            "icon": "circle-001-red"
+                                            "icon": "circle-001-red",
+                                            "localizedName": {
+                                                "de": "0.3",
+                                                "en": "0.3"
+                                            }
                                         },
                                         {
                                             "value": "0.4",
-                                            "icon": "circle-002-yellow"
+                                            "icon": "circle-002-yellow",
+                                            "localizedName": {
+                                                "de": "0.4",
+                                                "en": "0.4"
+                                            }
                                         },
                                         {
                                             "value": "0.5",
-                                            "icon": "circle-002-yellow"
+                                            "icon": "circle-002-yellow",
+                                            "localizedName": {
+                                                "de": "0.5",
+                                                "en": "0.5"
+                                            }
                                         },
                                         {
                                             "value": "0.6",
-                                            "icon": "circle-002-yellow"
+                                            "icon": "circle-002-yellow",
+                                            "localizedName": {
+                                                "de": "0.6",
+                                                "en": "0.6"
+                                            }
                                         },
                                         {
                                             "value": "0.7",
-                                            "icon": "circle-003-green"
+                                            "icon": "circle-003-green",
+                                            "localizedName": {
+                                                "de": "0.7",
+                                                "en": "0.7"
+                                            }
                                         },
                                         {
                                             "value": "0.8",
-                                            "icon": "circle-003-green"
+                                            "icon": "circle-003-green",
+                                            "localizedName": {
+                                                "de": "0.8",
+                                                "en": "0.8"
+                                            }
                                         },
                                         {
                                             "value": "0.9",
-                                            "icon": "circle-003-green"
+                                            "icon": "circle-003-green",
+                                            "localizedName": {
+                                                "de": "0.9",
+                                                "en": "0.9"
+                                            }
                                         },
                                         {
                                             "value": "1.0",
-                                            "icon": "circle-003-green"
+                                            "icon": "circle-003-green",
+                                            "localizedName": {
+                                                "de": "1.0",
+                                                "en": "1.0"
+                                            }
                                         }
                                     ]
                                 },
