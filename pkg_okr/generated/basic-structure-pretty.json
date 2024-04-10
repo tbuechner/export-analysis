@@ -37,9 +37,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "stringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.quarter",
@@ -50,9 +48,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "stringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.status",
@@ -167,9 +163,7 @@
                                         ]
                                     }
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.start",
@@ -183,9 +177,7 @@
                                     "specificity": "DAY",
                                     "dateFormat": "DAY_YEAR_LONG"
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.end",
@@ -199,9 +191,7 @@
                                     "specificity": "DAY",
                                     "dateFormat": "DAY_YEAR_LONG"
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         ]
                     },
@@ -232,9 +222,7 @@
                                     "precision": "-1",
                                     "localizedTextAfterSupplier": null
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.title",
@@ -245,9 +233,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "stringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.accomplished",
@@ -326,9 +312,7 @@
                                         ]
                                     }
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.description",
@@ -339,9 +323,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "richStringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         ]
                     },
@@ -372,9 +354,7 @@
                                     "precision": "-1",
                                     "localizedTextAfterSupplier": null
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.title",
@@ -385,9 +365,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "stringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.gradingForecast",
@@ -456,9 +434,7 @@
                                     },
                                     "element2localizedLabel": null
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.objective",
@@ -475,9 +451,7 @@
                                     "sameWorkspace": "true",
                                     "isHierarchy": "true"
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             },
                             {
                                 "name": "cf.cplace.solution.okr.lastUpdate",
@@ -491,9 +465,7 @@
                                     "specificity": "DAY",
                                     "dateFormat": "DAY_YEAR_LONG"
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         ]
                     }

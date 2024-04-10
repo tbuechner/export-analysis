@@ -18,8 +18,7 @@ package:
             de: Jahr
             en: Year
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.year
           shortHelp: null
           stringConstraint: null
@@ -27,8 +26,7 @@ package:
             de: Quartal
             en: Quarter
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.quarter
           shortHelp: null
           stringConstraint: null
@@ -36,8 +34,7 @@ package:
             de: Status
             en: Status
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.status
           shortHelp: null
           textEnumerationConstraint:
@@ -104,8 +101,7 @@ package:
             de: Start
             en: Start
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.start
           shortHelp: null
         - dateConstraint:
@@ -115,8 +111,7 @@ package:
             de: Ende
             en: End
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.end
           shortHelp: null
         iconName: fa-redo
@@ -134,8 +129,7 @@ package:
           localizedShortName:
             de: Nr.
             en: No.
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.number
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -145,8 +139,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.title
           shortHelp: null
           stringConstraint: null
@@ -154,8 +147,7 @@ package:
             de: Erreicht
             en: Accomplished
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.accomplished
           shortHelp: null
           textEnumerationConstraint:
@@ -199,8 +191,7 @@ package:
             de: Beschreibung
             en: Description
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.description
           richStringConstraint: null
           shortHelp: null
@@ -219,8 +210,7 @@ package:
           localizedShortName:
             de: Nr.
             en: No.
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.number
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -230,8 +220,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.title
           shortHelp: null
           stringConstraint: null
@@ -239,8 +228,7 @@ package:
             de: Fortschritt Vorhersage
             en: Grading Forecast
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.gradingForecast
           shortHelp: null
           textEnumerationConstraint:
@@ -282,8 +270,7 @@ package:
             de: Objective
             en: Objective
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.okr.objective
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -299,8 +286,7 @@ package:
             de: Letztes Update
             en: Last Update
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.okr.lastUpdate
           shortHelp: null
         iconName: fa-key

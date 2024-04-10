@@ -44,9 +44,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programKey",
@@ -60,9 +58,7 @@
                                     },
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solution",
@@ -79,9 +75,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -106,9 +100,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.program",
@@ -126,9 +118,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.dependsOn",
@@ -148,9 +138,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.status",
@@ -337,9 +325,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.progress",
@@ -357,9 +343,7 @@
                                             "de": "%"
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programIncrement",
@@ -376,9 +360,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedStart",
@@ -392,9 +374,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedEnd",
@@ -408,9 +388,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.safeMilestone",
@@ -427,9 +405,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.capability",
@@ -446,9 +422,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.release",
@@ -465,9 +439,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.releaseDate",
@@ -481,9 +453,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -494,9 +464,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.acceptanceCriteria",
@@ -510,9 +478,7 @@
                                     },
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.benefitHypothesis",
@@ -523,9 +489,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.conflictState",
@@ -572,9 +536,7 @@
                                             }
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.calculateDateConflicts",
@@ -587,9 +549,7 @@
                                     "booleanConstraint": {
                                         "defaultValues": "bfalse"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.calculatedConflicts",
@@ -606,9 +566,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.wsjf",
@@ -625,9 +583,7 @@
                                         "precision": "2",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessValue",
@@ -655,9 +611,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.timeCriticality",
@@ -685,9 +639,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.riskReduction",
@@ -715,9 +667,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.jobSize",
@@ -745,9 +695,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programKey",
@@ -761,9 +709,7 @@
                                     },
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.featureType",
@@ -845,9 +791,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.teams",
@@ -867,9 +811,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.requiresAssistenceOf",
@@ -886,9 +828,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.periodStatus",
@@ -905,9 +845,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.iterations",
@@ -924,9 +862,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.stories",
@@ -943,9 +879,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.featureOwner",
@@ -961,9 +895,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.storyPointsTotal",
@@ -977,9 +909,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.storyPointsDone",
@@ -993,9 +923,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.numberStoriesTotal",
@@ -1009,9 +937,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.numberStoriesOpen",
@@ -1025,9 +951,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.numberStoriesDone",
@@ -1041,9 +965,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.manualPrioritization",
@@ -1149,9 +1071,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualStartDate",
@@ -1165,9 +1085,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualEndDate",
@@ -1181,9 +1099,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.flowTime",
@@ -1197,9 +1113,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -1224,9 +1138,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.releaseDate",
@@ -1240,9 +1152,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.program",
@@ -1259,9 +1169,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -1286,9 +1194,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.date",
@@ -1302,9 +1208,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.type",
@@ -1395,9 +1299,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.program",
@@ -1414,9 +1316,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedStart",
@@ -1430,9 +1330,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedEnd",
@@ -1446,9 +1344,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -1473,9 +1369,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.program",
@@ -1492,9 +1386,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "true"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.productManager",
@@ -1514,9 +1406,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.releaseTrainEngineer",
@@ -1536,9 +1426,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.systemArchitect",
@@ -1558,9 +1446,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.visionStatement",
@@ -1571,9 +1457,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessOwner",
@@ -1584,9 +1468,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.keyCustomers",
@@ -1597,9 +1479,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.successMeasures",
@@ -1610,9 +1490,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.technicalAssets",
@@ -1623,9 +1501,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.file",
@@ -1642,9 +1518,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.artEvents",
@@ -1655,9 +1529,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -1682,9 +1554,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.iteration",
@@ -1701,9 +1571,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.status",
@@ -1862,9 +1730,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.storyPoints",
@@ -1878,9 +1744,7 @@
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.priority",
@@ -1894,9 +1758,7 @@
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.team",
@@ -1913,9 +1775,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.feature",
@@ -1932,9 +1792,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.dependsOn",
@@ -1951,9 +1809,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programKey",
@@ -1964,9 +1820,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.periodStatus",
@@ -1983,9 +1837,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -1996,9 +1848,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2023,9 +1873,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.capacity",
@@ -2039,9 +1887,7 @@
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.agileReleaseTrain",
@@ -2061,9 +1907,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.location",
@@ -2074,9 +1918,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.file",
@@ -2092,9 +1934,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2125,9 +1965,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.role",
@@ -2144,9 +1982,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.agileReleaseTrain",
@@ -2166,9 +2002,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.team",
@@ -2185,9 +2019,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2212,9 +2044,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.artMember",
@@ -2231,9 +2061,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2260,9 +2088,7 @@
                                     "precision": "0",
                                     "localizedTextAfterSupplier": null
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         },
                         {
@@ -2286,9 +2112,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programIncrement",
@@ -2305,9 +2129,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.startDate",
@@ -2321,9 +2143,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.endDate",
@@ -2337,9 +2157,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -2370,9 +2188,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.agileReleaseTrain",
@@ -2392,9 +2208,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2419,9 +2233,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.origin",
@@ -2438,9 +2250,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "true"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -2451,9 +2261,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.requestedBy",
@@ -2472,9 +2280,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.status",
@@ -2581,9 +2387,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.role",
@@ -2600,9 +2404,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.team",
@@ -2619,9 +2421,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.iteration",
@@ -2638,9 +2438,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.originIteration",
@@ -2657,9 +2455,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2689,9 +2485,7 @@
                                     "sameWorkspace": "true",
                                     "isHierarchy": "true"
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             }
                         },
                         {
@@ -2715,9 +2509,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programIncrement",
@@ -2737,9 +2529,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.team",
@@ -2756,9 +2546,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessValue",
@@ -2786,9 +2574,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualValue",
@@ -2813,9 +2599,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -2826,9 +2610,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -2857,9 +2639,7 @@
                                     "sameWorkspace": "true",
                                     "isHierarchy": "true"
                                 },
-                                "multiplicity": {
-                                    "@key": "exactlyOne"
-                                }
+                                "multiplicity": "exactlyOne"
                             }
                         }
                     ]
@@ -2896,9 +2676,7 @@
                                         "de": "A short name for the epic."
                                     },
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.epicOwner",
@@ -2917,9 +2695,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.state",
@@ -3166,9 +2942,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.kanbanState",
@@ -3186,9 +2960,7 @@
                                         "constraintName": "cf.cplace.workflow.workflowConstraint",
                                         "additionalConstraintData": "{\"workflowData\":{\"workflowStates\":\"[{\\\"internalName\\\":\\\"#15 - Funnel\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Trichter\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Funnel\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#25 - Reviewing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"\u00dcberpr\u00fcfung\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Reviewing\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#35 - Analyzing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Analyse\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Analyzation\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#45 - Backlog\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Backlog\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Backlog\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#55 - Implementing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Implementierung\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Implementing\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Abgeschlossen\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Done\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#75 - Archived\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Archiviert\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Archived\\\"}}},\\\"isDefault\\\":false,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"internalName\\\":\\\"#10 - Draft\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Entwurf\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Draft\\\"}}},\\\"color\\\":\\\"#5d3636\\\",\\\"isDefault\\\":true,\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false}]\",\"workflowTransitions\":\"[{\\\"previousStateName\\\":\\\"#35 - Analyzing\\\",\\\"nextStateName\\\":\\\"#45 - Backlog\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Ins Backlog\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"To Backlog\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#45 - Backlog\\\",\\\"nextStateName\\\":\\\"#55 - Implementing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"In Implementierung\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"To Implementation\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#55 - Implementing\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Abschlie\u00dfen\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Done\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#65 - Done\\\",\\\"nextStateName\\\":\\\"#75 - Archived\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Archivieren\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Archive\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#10 - Draft\\\",\\\"nextStateName\\\":\\\"#15 - Funnel\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"In Portfolio Kanban \u00fcberf\u00fchren\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Transfer to Portfolio Kanban\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"In Portfolio Kanban \u00fcberf\u00fchrt\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Transfered to Portfolio Kanban\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"{\\\\\\\"version\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"script\\\\\\\":\\\\\\\"let today \\\\\\\\u003d new DateTime();\\\\\\\\n\\\\\\\\ncplace.actions().updatePage(page, {\\\\\\\\n    customAttributes: {\\\\\\\\n        \\\\\\\\u0027cf.cplace.solution.safe.funnelEntry\\\\\\\\u0027: today\\\\\\\\n    }\\\\\\\\n});\\\\\\\",\\\\\\\"contextEntityId\\\\\\\":\\\\\\\"z13ltttp6i6bs485hozpnczg5\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"upgradeAck\\\\\\\":true}\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#10 - Draft\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Nicht relevant\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Not relevant\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#15 - Funnel\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Nicht relevant\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Not relevant\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#25 - Reviewing\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Nicht relevant\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Not relevant\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#35 - Analyzing\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Nicht relevant\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Not relevant\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#45 - Backlog\\\",\\\"nextStateName\\\":\\\"#65 - Done\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Nicht relevant\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Not relevant\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#25 - Reviewing\\\",\\\"nextStateName\\\":\\\"#35 - Analyzing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"In Analyse\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"To Analyze\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"{\\\\\\\"version\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"script\\\\\\\":\\\\\\\"const DEBUG \\\\\\\\u003d false;\\\\\\\\n\\\\\\\\nconst PORTFOLIO \\\\\\\\u003d {\\\\\\\\n  TYPE: \\\\\\\\u0027cf.cplace.solution.safe.portfolio\\\\\\\\u0027,\\\\\\\\n  ATTR: {\\\\\\\\n    CONFIG: \\\\\\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\\\\\u0027\\\\\\\\n  }\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst EPIC \\\\\\\\u003d {\\\\\\\\n  TYPE: \\\\\\\\u0027cf.cplace.solution.safe.epic\\\\\\\\u0027,\\\\\\\\n  ATTR: {\\\\\\\\n    PORTFOLIO: \\\\\\\\u0027cf.cplace.solution.safe.portfolio\\\\\\\\u0027,\\\\\\\\n    STATE: \\\\\\\\u0027cf.cplace.solution.safe.state\\\\\\\\u0027\\\\\\\\n  }\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst CONFIGURATION \\\\\\\\u003d {\\\\\\\\n  WIP_REVIEW: \\\\\\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\\\\\u0027,\\\\\\\\n  WIP_ANALYZE: \\\\\\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\\\\\u0027,\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst config \\\\\\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\\\\\n\\\\\\\\nif (!config) {\\\\\\\\n  return;\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst wipLimit \\\\\\\\u003d config.get(CONFIGURATION.WIP_ANALYZE);\\\\\\\\n\\\\\\\\nif (!wipLimit || wipLimit \\\\\\\\u003c 0) {\\\\\\\\n  return\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst search \\\\\\\\u003d new Search();\\\\\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\\\\\n\\\\\\\\nif (search.getHitCount() \\\\\\\\u003e\\\\\\\\u003d wipLimit) {\\\\\\\\n  return {\\\\\\\\n    reason: messages.get(\\\\\\\\u0027wip-limit-reached\\\\\\\\u0027)\\\\\\\\n  }\\\\\\\\n}\\\\\\\",\\\\\\\"contextEntityId\\\\\\\":\\\\\\\"juxz0x0mw19l7gtv7vpkr3hqj\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"upgradeAck\\\\\\\":true}\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false},{\\\"previousStateName\\\":\\\"#15 - Funnel\\\",\\\"nextStateName\\\":\\\"#25 - Reviewing\\\",\\\"displayName\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"In \u00dcberpr\u00fcfung\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"In Review\\\"}}},\\\"confirm\\\":false,\\\"successMessage\\\":{\\\"localizations\\\":{\\\"de\\\":{\\\"language\\\":\\\"de\\\",\\\"value\\\":\\\"Erfolg\\\"},\\\"en\\\":{\\\"language\\\":\\\"en\\\",\\\"value\\\":\\\"Success\\\"}}},\\\"executeValidators\\\":false,\\\"condition\\\":\\\"{\\\\\\\"version\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"script\\\\\\\":\\\\\\\"const DEBUG \\\\\\\\u003d false;\\\\\\\\n\\\\\\\\nconst PORTFOLIO \\\\\\\\u003d {\\\\\\\\n  TYPE: \\\\\\\\u0027cf.cplace.solution.safe.portfolio\\\\\\\\u0027,\\\\\\\\n  ATTR: {\\\\\\\\n    CONFIG: \\\\\\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\\\\\u0027\\\\\\\\n  }\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst EPIC \\\\\\\\u003d {\\\\\\\\n  TYPE: \\\\\\\\u0027cf.cplace.solution.safe.epic\\\\\\\\u0027,\\\\\\\\n  ATTR: {\\\\\\\\n    PORTFOLIO: \\\\\\\\u0027cf.cplace.solution.safe.portfolio\\\\\\\\u0027,\\\\\\\\n    STATE: \\\\\\\\u0027cf.cplace.solution.safe.state\\\\\\\\u0027\\\\\\\\n  }\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst CONFIGURATION \\\\\\\\u003d {\\\\\\\\n  WIP_REVIEW: \\\\\\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\\\\\u0027,\\\\\\\\n  WIP_ANALYZE: \\\\\\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\\\\\u0027,\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst config \\\\\\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\\\\\n\\\\\\\\nif (!config) {\\\\\\\\n  return;\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst wipLimit \\\\\\\\u003d config.get(CONFIGURATION.WIP_REVIEW);\\\\\\\\n\\\\\\\\nif (!wipLimit || wipLimit \\\\\\\\u003c 0) {\\\\\\\\n  return\\\\\\\\n}\\\\\\\\n\\\\\\\\nconst search \\\\\\\\u003d new Search();\\\\\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\\\\\n\\\\\\\\nif (search.getHitCount() \\\\\\\\u003e\\\\\\\\u003d wipLimit) {\\\\\\\\n  return {\\\\\\\\n    reason: messages.get(\\\\\\\\u0027wip-limit-reached\\\\\\\\u0027)\\\\\\\\n  }\\\\\\\\n}\\\\\\\",\\\\\\\"contextEntityId\\\\\\\":\\\\\\\"t0csp8daja3otfi216iavqq4u\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"upgradeAck\\\\\\\":true}\\\",\\\"actions\\\":\\\"\\\",\\\"isFixed\\\":false}]\"}}"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.type",
@@ -3267,9 +3039,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -3283,9 +3053,7 @@
                                         "de": "An elevator pitch (value statement) that describes the epic in a clear and concise way.\n\n- For <customers>\n- Who<do something>\n- The <solution>\n- Is a <something - the \"how\">\n- That <provides this value>\n- Unlike <competitor, current solution or non-existing solution>\n- Our solution <does something better - the \"why\">"
                                     },
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessOutcome",
@@ -3299,9 +3067,7 @@
                                         "de": "The measurable benefits that the business can anticipate if the epic hypothesis is proven to be correct."
                                     },
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.leadingIndivators",
@@ -3315,9 +3081,7 @@
                                         "de": "The early measures that will help predict the business outcome hypothesis. For more on this topic, see the Innovation Accounting advanced topic article."
                                     },
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.nfrs",
@@ -3334,9 +3098,7 @@
                                         "de": "Nonfunctional requirements (NFRs) associated with the epic."
                                     },
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.definitionOfReady",
@@ -3347,9 +3109,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.implementationStart",
@@ -3366,9 +3126,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.implementationEnd",
@@ -3385,9 +3143,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.funnelEntry",
@@ -3401,9 +3157,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.jobSize",
@@ -3428,9 +3182,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessValue",
@@ -3458,9 +3210,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.timeCriticality",
@@ -3488,9 +3238,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.riskReduction",
@@ -3515,9 +3263,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.wsjf",
@@ -3531,9 +3277,7 @@
                                         "precision": "2",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.portfolio",
@@ -3551,9 +3295,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.valueStream",
@@ -3570,9 +3312,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.dependsOn",
@@ -3589,9 +3329,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.safeMilestones",
@@ -3611,9 +3349,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.conflictState",
@@ -3744,9 +3480,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.progress",
@@ -3764,9 +3498,7 @@
                                             "de": "%"
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.totalPlannedImplementationCosts",
@@ -3783,9 +3515,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedMVPCosts",
@@ -3799,9 +3529,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualCosts",
@@ -3815,9 +3543,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.enterpriseArchitect",
@@ -3834,9 +3560,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.objective",
@@ -3856,9 +3580,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.implementationPhase",
@@ -3939,9 +3661,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -3972,9 +3692,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualCosts",
@@ -3988,9 +3706,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.totalPlannedImplementationCosts",
@@ -4007,9 +3723,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.progress",
@@ -4026,9 +3740,7 @@
                                             "de": "%"
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.epic",
@@ -4048,9 +3760,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "true"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.accumulatedActualCosts",
@@ -4064,9 +3774,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.accumulatedPlannedCosts",
@@ -4083,9 +3791,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.earnedValue",
@@ -4099,9 +3805,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -4132,9 +3836,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.safeMilestone",
@@ -4151,9 +3853,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 }
                             ]
                         },
@@ -4178,9 +3878,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.customer",
@@ -4191,9 +3889,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.channels",
@@ -4204,9 +3900,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.customerRelationships",
@@ -4217,9 +3911,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.budget",
@@ -4233,9 +3925,7 @@
                                         "precision": "-1",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.kpis",
@@ -4246,9 +3936,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solution",
@@ -4265,9 +3953,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.portfolioCanvas",
@@ -4284,9 +3970,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "atLeastOne"
-                                    }
+                                    "multiplicity": "atLeastOne"
                                 }
                             ]
                         },
@@ -4321,9 +4005,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.kanbanWipLimitAnalyze",
@@ -4344,9 +4026,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.conflictToleranceDays",
@@ -4370,9 +4050,7 @@
                                             "de": "Tage"
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -4396,9 +4074,7 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "richStringConstraint": null,
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         },
                         {
@@ -4426,9 +4102,7 @@
                                     "sameWorkspace": "false",
                                     "isHierarchy": "false"
                                 },
-                                "multiplicity": {
-                                    "@key": "anyNumber"
-                                }
+                                "multiplicity": "anyNumber"
                             }
                         },
                         {
@@ -4476,9 +4150,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.revenueStream",
@@ -4489,9 +4161,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.costStructure",
@@ -4502,9 +4172,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.keyAcitivities",
@@ -4515,9 +4183,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -4622,9 +4288,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.date",
@@ -4638,9 +4302,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.isRoadmapRelevant",
@@ -4653,9 +4315,7 @@
                                     "booleanConstraint": {
                                         "defaultValues": "bfalse"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -4683,9 +4343,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.type",
@@ -4776,9 +4434,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.protocol",
@@ -4789,9 +4445,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.participants",
@@ -4807,9 +4461,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 }
                             ]
                         },
@@ -4834,9 +4486,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.horizon",
@@ -4858,9 +4508,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         }
@@ -4903,9 +4551,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solutionTrainEngineer",
@@ -4921,9 +4567,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solutionTrainArchitect",
@@ -4939,9 +4583,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solutionManagement",
@@ -4957,9 +4599,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.previousPi",
@@ -4976,9 +4616,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.currentPi",
@@ -4995,9 +4633,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.nextPi",
@@ -5014,9 +4650,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.funnelWIPLimit",
@@ -5030,9 +4664,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.analyzingWIPLimit",
@@ -5046,9 +4678,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.backlogWIPLimit",
@@ -5062,9 +4692,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.implementingWIPLimit",
@@ -5078,9 +4706,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.validatingWIPLimit",
@@ -5094,9 +4720,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.deployingWIPLimit",
@@ -5110,9 +4734,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.releasingWIPLimit",
@@ -5126,9 +4748,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.shortName",
@@ -5139,9 +4759,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.horizon",
@@ -5158,9 +4776,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -5185,9 +4801,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solution",
@@ -5204,9 +4818,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.startDate",
@@ -5220,9 +4832,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.endDate",
@@ -5236,9 +4846,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.predecessor",
@@ -5255,9 +4863,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.periodStatus",
@@ -5349,9 +4955,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote",
@@ -5368,9 +4972,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.capacity",
@@ -5387,9 +4989,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.Result",
@@ -5403,9 +5003,7 @@
                                     },
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.statsJson",
@@ -5416,9 +5014,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -5443,9 +5039,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programIncrement",
@@ -5462,9 +5056,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.startDate",
@@ -5478,9 +5070,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.endDate",
@@ -5494,9 +5084,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.predecessor",
@@ -5513,9 +5101,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -5540,9 +5126,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solution.reference",
@@ -5559,9 +5143,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -5572,9 +5154,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.capabilityType",
@@ -5656,9 +5236,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.state",
@@ -5894,9 +5472,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.wsjf",
@@ -5910,9 +5486,7 @@
                                         "precision": "2",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessValue",
@@ -5937,9 +5511,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.timeCriticality",
@@ -5964,9 +5536,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.riskReduction",
@@ -5991,9 +5561,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.jobSize",
@@ -6018,9 +5586,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.programIncrement",
@@ -6037,9 +5603,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualStartDate",
@@ -6053,9 +5617,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualEndDate",
@@ -6069,9 +5631,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.flowTime",
@@ -6085,9 +5645,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.program",
@@ -6104,9 +5662,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.capabilityowner",
@@ -6125,9 +5681,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.portfolioEpic",
@@ -6144,9 +5698,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solutionShortName",
@@ -6157,9 +5709,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedStart",
@@ -6173,9 +5723,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedEnd",
@@ -6189,9 +5737,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.iteration",
@@ -6211,9 +5757,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.definitionOfReady",
@@ -6229,9 +5773,7 @@
                                     "booleanConstraint": {
                                         "defaultValues": "bfalse"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.definitionOfDone",
@@ -6247,9 +5789,7 @@
                                     "booleanConstraint": {
                                         "defaultValues": "bfalse"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.acceptanceCriteria",
@@ -6260,9 +5800,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.benefitHypothesis",
@@ -6273,9 +5811,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.conflictState",
@@ -6322,9 +5858,7 @@
                                             }
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.features",
@@ -6341,9 +5875,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "anyNumber"
-                                    }
+                                    "multiplicity": "anyNumber"
                                 }
                             ]
                         },
@@ -6368,9 +5900,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.successor",
@@ -6390,9 +5920,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.type",
@@ -6462,9 +5990,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.predecessor",
@@ -6484,9 +6010,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.status",
@@ -6593,9 +6117,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.description",
@@ -6606,9 +6128,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedStartA",
@@ -6622,9 +6142,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedEndB",
@@ -6638,9 +6156,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -6665,9 +6181,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.date",
@@ -6681,9 +6195,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.type",
@@ -6774,9 +6286,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.relevantFor",
@@ -6796,9 +6306,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedStart",
@@ -6812,9 +6320,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.plannedEnd",
@@ -6828,9 +6334,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -6857,9 +6361,7 @@
                                     "precision": "0",
                                     "localizedTextAfterSupplier": null
                                 },
-                                "multiplicity": {
-                                    "@key": "maximalOne"
-                                }
+                                "multiplicity": "maximalOne"
                             }
                         },
                         {
@@ -6883,9 +6385,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.snapshotDate",
@@ -6899,9 +6399,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.SAFeLevel.Reference",
@@ -6922,9 +6420,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.timebox",
@@ -6944,9 +6440,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.jsonMetricData",
@@ -6957,9 +6451,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "longConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -6984,9 +6476,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.timebox",
@@ -7006,9 +6496,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.SAFeLevel",
@@ -7099,9 +6587,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.SAFeLevel.Reference",
@@ -7122,9 +6608,7 @@
                                         "sameWorkspace": "false",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.businessValue",
@@ -7156,9 +6640,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.actualValue",
@@ -7189,9 +6671,7 @@
                                         "element2icon": null,
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.commitment",
@@ -7258,9 +6738,7 @@
                                             ]
                                         }
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.statement",
@@ -7271,9 +6749,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "richStringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         },
@@ -7298,9 +6774,7 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "stringConstraint": null,
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.startDate",
@@ -7314,9 +6788,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.endDate",
@@ -7330,9 +6802,7 @@
                                         "specificity": "DAY",
                                         "dateFormat": "DAY_YEAR_LONG"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.solution",
@@ -7349,9 +6819,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "exactlyOne"
-                                    }
+                                    "multiplicity": "exactlyOne"
                                 }
                             ]
                         },
@@ -7385,9 +6853,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.result",
@@ -7416,9 +6882,7 @@
                                         },
                                         "element2localizedLabel": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.oneFinger",
@@ -7438,9 +6902,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.twoFingers",
@@ -7460,9 +6922,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.threeFingers",
@@ -7482,9 +6942,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.fourFingers",
@@ -7504,9 +6962,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.fiveFingers",
@@ -7526,9 +6982,7 @@
                                         "precision": "0",
                                         "localizedTextAfterSupplier": null
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 },
                                 {
                                     "name": "cf.cplace.solution.safe.confidenceVote.solution",
@@ -7545,9 +6999,7 @@
                                         "sameWorkspace": "true",
                                         "isHierarchy": "false"
                                     },
-                                    "multiplicity": {
-                                        "@key": "maximalOne"
-                                    }
+                                    "multiplicity": "maximalOne"
                                 }
                             ]
                         }

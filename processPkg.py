@@ -280,16 +280,13 @@ def add_mandatory_elements(root, parent_map):
 
     multiplicities = root.findall('.//multiplicity')
     for multiplicity in multiplicities:
-        key = multiplicity.get('key')
+        key = multiplicity.text
         # if key is not None
         if key is not None:
-            if key == 'anyNumber':
-                del multiplicity.attrib['key']
-            else:
-                key_element = ET.Element('key')
-                key_element.text = key
-                multiplicity.append(key_element)
-                del multiplicity.attrib['key']
+            key_element = ET.Element('key')
+            key_element.text = key
+            multiplicity.append(key_element)
+            multiplicity.text = None
 
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
@@ -407,10 +404,9 @@ def rewrite(root, parent_map):
     for multiplicity in multiplicities:
         key = multiplicity.find('.//key')
         if key is None:
-            multiplicity.set('key', 'anyNumber')
+            multiplicity.text = 'anyNumber'
         else:
-            # set the attribute `key` of multiplicity to the value of the tag `key`
-            multiplicity.set('key', key.text)
+            multiplicity.text = key.text
             # remove the tag `key`
             multiplicity.remove(key)
 

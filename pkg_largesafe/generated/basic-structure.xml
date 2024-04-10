@@ -37,7 +37,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programKey</name>
@@ -51,7 +51,7 @@
           </localizedShortName>
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solution</name>
@@ -68,7 +68,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -91,7 +91,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.program</name>
@@ -109,7 +109,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.dependsOn</name>
@@ -129,7 +129,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.status</name>
@@ -298,7 +298,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.progress</name>
@@ -316,7 +316,7 @@
               <de>%</de>
             </localizedTextAfterSupplier>
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programIncrement</name>
@@ -333,7 +333,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedStart</name>
@@ -347,7 +347,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedEnd</name>
@@ -361,7 +361,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.safeMilestone</name>
@@ -378,7 +378,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.capability</name>
@@ -395,7 +395,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.release</name>
@@ -412,7 +412,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.releaseDate</name>
@@ -426,7 +426,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -437,7 +437,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.acceptanceCriteria</name>
@@ -451,7 +451,7 @@
           </localizedShortName>
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.benefitHypothesis</name>
@@ -462,7 +462,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.conflictState</name>
@@ -507,7 +507,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.calculateDateConflicts</name>
@@ -520,7 +520,7 @@
           <booleanConstraint>
             <defaultValues>bfalse</defaultValues>
           </booleanConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.calculatedConflicts</name>
@@ -537,7 +537,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.wsjf</name>
@@ -554,7 +554,7 @@
             <precision>2</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessValue</name>
@@ -580,7 +580,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.timeCriticality</name>
@@ -606,7 +606,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.riskReduction</name>
@@ -632,7 +632,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.jobSize</name>
@@ -658,7 +658,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programKey</name>
@@ -672,7 +672,7 @@
           </localizedShortName>
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.featureType</name>
@@ -744,7 +744,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.teams</name>
@@ -764,7 +764,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.requiresAssistenceOf</name>
@@ -781,7 +781,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.periodStatus</name>
@@ -798,7 +798,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.iterations</name>
@@ -815,7 +815,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.stories</name>
@@ -832,7 +832,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.featureOwner</name>
@@ -848,7 +848,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.storyPointsTotal</name>
@@ -862,7 +862,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.storyPointsDone</name>
@@ -876,7 +876,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.numberStoriesTotal</name>
@@ -890,7 +890,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.numberStoriesOpen</name>
@@ -904,7 +904,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.numberStoriesDone</name>
@@ -918,7 +918,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.manualPrioritization</name>
@@ -1012,7 +1012,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualStartDate</name>
@@ -1026,7 +1026,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualEndDate</name>
@@ -1040,7 +1040,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.flowTime</name>
@@ -1054,7 +1054,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1077,7 +1077,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.releaseDate</name>
@@ -1091,7 +1091,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.program</name>
@@ -1108,7 +1108,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1131,7 +1131,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.date</name>
@@ -1145,7 +1145,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.type</name>
@@ -1226,7 +1226,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.program</name>
@@ -1243,7 +1243,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedStart</name>
@@ -1257,7 +1257,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedEnd</name>
@@ -1271,7 +1271,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1294,7 +1294,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.program</name>
@@ -1311,7 +1311,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.productManager</name>
@@ -1331,7 +1331,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.releaseTrainEngineer</name>
@@ -1351,7 +1351,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.systemArchitect</name>
@@ -1371,7 +1371,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.visionStatement</name>
@@ -1382,7 +1382,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessOwner</name>
@@ -1393,7 +1393,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.keyCustomers</name>
@@ -1404,7 +1404,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.successMeasures</name>
@@ -1415,7 +1415,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.technicalAssets</name>
@@ -1426,7 +1426,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.file</name>
@@ -1443,7 +1443,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.artEvents</name>
@@ -1454,7 +1454,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1477,7 +1477,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.iteration</name>
@@ -1494,7 +1494,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.status</name>
@@ -1637,7 +1637,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.storyPoints</name>
@@ -1651,7 +1651,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.priority</name>
@@ -1665,7 +1665,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.team</name>
@@ -1682,7 +1682,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.feature</name>
@@ -1699,7 +1699,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.dependsOn</name>
@@ -1716,7 +1716,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programKey</name>
@@ -1727,7 +1727,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.periodStatus</name>
@@ -1744,7 +1744,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -1755,7 +1755,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1778,7 +1778,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.capacity</name>
@@ -1792,7 +1792,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.agileReleaseTrain</name>
@@ -1812,7 +1812,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.location</name>
@@ -1823,7 +1823,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.file</name>
@@ -1839,7 +1839,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1868,7 +1868,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.role</name>
@@ -1885,7 +1885,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.agileReleaseTrain</name>
@@ -1905,7 +1905,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.team</name>
@@ -1922,7 +1922,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1945,7 +1945,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.artMember</name>
@@ -1962,7 +1962,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -1988,7 +1988,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2011,7 +2011,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programIncrement</name>
@@ -2028,7 +2028,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.startDate</name>
@@ -2042,7 +2042,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.endDate</name>
@@ -2056,7 +2056,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2085,7 +2085,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.agileReleaseTrain</name>
@@ -2105,7 +2105,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2128,7 +2128,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.origin</name>
@@ -2145,7 +2145,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -2156,7 +2156,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.requestedBy</name>
@@ -2175,7 +2175,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.status</name>
@@ -2270,7 +2270,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.role</name>
@@ -2287,7 +2287,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.team</name>
@@ -2304,7 +2304,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.iteration</name>
@@ -2321,7 +2321,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.originIteration</name>
@@ -2338,7 +2338,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2367,7 +2367,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2390,7 +2390,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programIncrement</name>
@@ -2410,7 +2410,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.team</name>
@@ -2427,7 +2427,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessValue</name>
@@ -2453,7 +2453,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualValue</name>
@@ -2476,7 +2476,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -2487,7 +2487,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -2515,7 +2515,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
     </slot>
@@ -2549,7 +2549,7 @@
             <de>A short name for the epic.</de>
           </shortHelp>
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.epicOwner</name>
@@ -2568,7 +2568,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.state</name>
@@ -2793,7 +2793,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.kanbanState</name>
@@ -2811,7 +2811,7 @@
             <constraintName>cf.cplace.workflow.workflowConstraint</constraintName>
             <additionalConstraintData>{"workflowData":{"workflowStates":"[{\"internalName\":\"#15 - Funnel\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Trichter\"},\"en\":{\"language\":\"en\",\"value\":\"Funnel\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#25 - Reviewing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Überprüfung\"},\"en\":{\"language\":\"en\",\"value\":\"Reviewing\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#35 - Analyzing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Analyse\"},\"en\":{\"language\":\"en\",\"value\":\"Analyzation\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#45 - Backlog\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Backlog\"},\"en\":{\"language\":\"en\",\"value\":\"Backlog\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#55 - Implementing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Implementierung\"},\"en\":{\"language\":\"en\",\"value\":\"Implementing\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Abgeschlossen\"},\"en\":{\"language\":\"en\",\"value\":\"Done\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#75 - Archived\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Archiviert\"},\"en\":{\"language\":\"en\",\"value\":\"Archived\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#10 - Draft\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Entwurf\"},\"en\":{\"language\":\"en\",\"value\":\"Draft\"}}},\"color\":\"#5d3636\",\"isDefault\":true,\"actions\":\"\",\"isFixed\":false}]","workflowTransitions":"[{\"previousStateName\":\"#35 - Analyzing\",\"nextStateName\":\"#45 - Backlog\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Ins Backlog\"},\"en\":{\"language\":\"en\",\"value\":\"To Backlog\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#45 - Backlog\",\"nextStateName\":\"#55 - Implementing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Implementierung\"},\"en\":{\"language\":\"en\",\"value\":\"To Implementation\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#55 - Implementing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Abschließen\"},\"en\":{\"language\":\"en\",\"value\":\"Done\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#65 - Done\",\"nextStateName\":\"#75 - Archived\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Archivieren\"},\"en\":{\"language\":\"en\",\"value\":\"Archive\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#10 - Draft\",\"nextStateName\":\"#15 - Funnel\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Portfolio Kanban überführen\"},\"en\":{\"language\":\"en\",\"value\":\"Transfer to Portfolio Kanban\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Portfolio Kanban überführt\"},\"en\":{\"language\":\"en\",\"value\":\"Transfered to Portfolio Kanban\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"let today \\\\u003d new DateTime();\\\\n\\\\ncplace.actions().updatePage(page, {\\\\n    customAttributes: {\\\\n        \\\\u0027cf.cplace.solution.safe.funnelEntry\\\\u0027: today\\\\n    }\\\\n});\\\",\\\"contextEntityId\\\":\\\"z13ltttp6i6bs485hozpnczg5\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"isFixed\":false},{\"previousStateName\":\"#10 - Draft\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#15 - Funnel\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#25 - Reviewing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#35 - Analyzing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#45 - Backlog\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#25 - Reviewing\",\"nextStateName\":\"#35 - Analyzing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Analyse\"},\"en\":{\"language\":\"en\",\"value\":\"To Analyze\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"const DEBUG \\\\u003d false;\\\\n\\\\nconst PORTFOLIO \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n  ATTR: {\\\\n    CONFIG: \\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst EPIC \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.epic\\\\u0027,\\\\n  ATTR: {\\\\n    PORTFOLIO: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n    STATE: \\\\u0027cf.cplace.solution.safe.state\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst CONFIGURATION \\\\u003d {\\\\n  WIP_REVIEW: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\u0027,\\\\n  WIP_ANALYZE: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\u0027,\\\\n}\\\\n\\\\nconst config \\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\n\\\\nif (!config) {\\\\n  return;\\\\n}\\\\n\\\\nconst wipLimit \\\\u003d config.get(CONFIGURATION.WIP_ANALYZE);\\\\n\\\\nif (!wipLimit || wipLimit \\\\u003c 0) {\\\\n  return\\\\n}\\\\n\\\\nconst search \\\\u003d new Search();\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\n\\\\nif (search.getHitCount() \\\\u003e\\\\u003d wipLimit) {\\\\n  return {\\\\n    reason: messages.get(\\\\u0027wip-limit-reached\\\\u0027)\\\\n  }\\\\n}\\\",\\\"contextEntityId\\\":\\\"juxz0x0mw19l7gtv7vpkr3hqj\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#15 - Funnel\",\"nextStateName\":\"#25 - Reviewing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Überprüfung\"},\"en\":{\"language\":\"en\",\"value\":\"In Review\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"const DEBUG \\\\u003d false;\\\\n\\\\nconst PORTFOLIO \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n  ATTR: {\\\\n    CONFIG: \\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst EPIC \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.epic\\\\u0027,\\\\n  ATTR: {\\\\n    PORTFOLIO: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n    STATE: \\\\u0027cf.cplace.solution.safe.state\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst CONFIGURATION \\\\u003d {\\\\n  WIP_REVIEW: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\u0027,\\\\n  WIP_ANALYZE: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\u0027,\\\\n}\\\\n\\\\nconst config \\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\n\\\\nif (!config) {\\\\n  return;\\\\n}\\\\n\\\\nconst wipLimit \\\\u003d config.get(CONFIGURATION.WIP_REVIEW);\\\\n\\\\nif (!wipLimit || wipLimit \\\\u003c 0) {\\\\n  return\\\\n}\\\\n\\\\nconst search \\\\u003d new Search();\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\n\\\\nif (search.getHitCount() \\\\u003e\\\\u003d wipLimit) {\\\\n  return {\\\\n    reason: messages.get(\\\\u0027wip-limit-reached\\\\u0027)\\\\n  }\\\\n}\\\",\\\"contextEntityId\\\":\\\"t0csp8daja3otfi216iavqq4u\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"actions\":\"\",\"isFixed\":false}]"}}</additionalConstraintData>
           </customConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.type</name>
@@ -2880,7 +2880,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -2910,7 +2910,7 @@
 - Our solution &lt;does something better - the "why"&gt;</de>
           </shortHelp>
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessOutcome</name>
@@ -2924,7 +2924,7 @@
             <de>The measurable benefits that the business can anticipate if the epic hypothesis is proven to be correct.</de>
           </shortHelp>
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.leadingIndivators</name>
@@ -2938,7 +2938,7 @@
             <de>The early measures that will help predict the business outcome hypothesis. For more on this topic, see the Innovation Accounting advanced topic article.</de>
           </shortHelp>
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.nfrs</name>
@@ -2955,7 +2955,7 @@
             <de>Nonfunctional requirements (NFRs) associated with the epic.</de>
           </shortHelp>
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.definitionOfReady</name>
@@ -2966,7 +2966,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.implementationStart</name>
@@ -2983,7 +2983,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.implementationEnd</name>
@@ -3000,7 +3000,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.funnelEntry</name>
@@ -3014,7 +3014,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.jobSize</name>
@@ -3037,7 +3037,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessValue</name>
@@ -3063,7 +3063,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.timeCriticality</name>
@@ -3089,7 +3089,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.riskReduction</name>
@@ -3112,7 +3112,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.wsjf</name>
@@ -3126,7 +3126,7 @@
             <precision>2</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.portfolio</name>
@@ -3144,7 +3144,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.valueStream</name>
@@ -3161,7 +3161,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.dependsOn</name>
@@ -3178,7 +3178,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.safeMilestones</name>
@@ -3198,7 +3198,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.conflictState</name>
@@ -3315,7 +3315,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.progress</name>
@@ -3333,7 +3333,7 @@
               <de>%</de>
             </localizedTextAfterSupplier>
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.totalPlannedImplementationCosts</name>
@@ -3350,7 +3350,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedMVPCosts</name>
@@ -3364,7 +3364,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualCosts</name>
@@ -3378,7 +3378,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.enterpriseArchitect</name>
@@ -3395,7 +3395,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.objective</name>
@@ -3415,7 +3415,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.implementationPhase</name>
@@ -3486,7 +3486,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3515,7 +3515,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualCosts</name>
@@ -3529,7 +3529,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.totalPlannedImplementationCosts</name>
@@ -3546,7 +3546,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.progress</name>
@@ -3563,7 +3563,7 @@
               <de>%</de>
             </localizedTextAfterSupplier>
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.epic</name>
@@ -3583,7 +3583,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.accumulatedActualCosts</name>
@@ -3597,7 +3597,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.accumulatedPlannedCosts</name>
@@ -3614,7 +3614,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.earnedValue</name>
@@ -3628,7 +3628,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3657,7 +3657,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.safeMilestone</name>
@@ -3674,7 +3674,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3697,7 +3697,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.customer</name>
@@ -3708,7 +3708,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.channels</name>
@@ -3719,7 +3719,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.customerRelationships</name>
@@ -3730,7 +3730,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.budget</name>
@@ -3744,7 +3744,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.kpis</name>
@@ -3755,7 +3755,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solution</name>
@@ -3772,7 +3772,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.portfolioCanvas</name>
@@ -3789,7 +3789,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="atLeastOne" />
+          <multiplicity>atLeastOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3822,7 +3822,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.kanbanWipLimitAnalyze</name>
@@ -3843,7 +3843,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.conflictToleranceDays</name>
@@ -3867,7 +3867,7 @@
               <de>Tage</de>
             </localizedTextAfterSupplier>
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3890,7 +3890,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3918,7 +3918,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
       </type>
       <type>
@@ -3965,7 +3965,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.revenueStream</name>
@@ -3976,7 +3976,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.costStructure</name>
@@ -3987,7 +3987,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.keyAcitivities</name>
@@ -3998,7 +3998,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4091,7 +4091,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.date</name>
@@ -4105,7 +4105,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.isRoadmapRelevant</name>
@@ -4118,7 +4118,7 @@
           <booleanConstraint>
             <defaultValues>bfalse</defaultValues>
           </booleanConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4144,7 +4144,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.type</name>
@@ -4225,7 +4225,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.protocol</name>
@@ -4236,7 +4236,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.participants</name>
@@ -4252,7 +4252,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4275,7 +4275,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.horizon</name>
@@ -4295,7 +4295,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
     </slot>
@@ -4334,7 +4334,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solutionTrainEngineer</name>
@@ -4350,7 +4350,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solutionTrainArchitect</name>
@@ -4366,7 +4366,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solutionManagement</name>
@@ -4382,7 +4382,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.previousPi</name>
@@ -4399,7 +4399,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.currentPi</name>
@@ -4416,7 +4416,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.nextPi</name>
@@ -4433,7 +4433,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.funnelWIPLimit</name>
@@ -4447,7 +4447,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.analyzingWIPLimit</name>
@@ -4461,7 +4461,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.backlogWIPLimit</name>
@@ -4475,7 +4475,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.implementingWIPLimit</name>
@@ -4489,7 +4489,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.validatingWIPLimit</name>
@@ -4503,7 +4503,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.deployingWIPLimit</name>
@@ -4517,7 +4517,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.releasingWIPLimit</name>
@@ -4531,7 +4531,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.shortName</name>
@@ -4542,7 +4542,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.horizon</name>
@@ -4559,7 +4559,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4582,7 +4582,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solution</name>
@@ -4599,7 +4599,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.startDate</name>
@@ -4613,7 +4613,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.endDate</name>
@@ -4627,7 +4627,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.predecessor</name>
@@ -4644,7 +4644,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.periodStatus</name>
@@ -4726,7 +4726,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote</name>
@@ -4743,7 +4743,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.capacity</name>
@@ -4760,7 +4760,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.Result</name>
@@ -4774,7 +4774,7 @@
           </localizedShortName>
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.statsJson</name>
@@ -4785,7 +4785,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4808,7 +4808,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programIncrement</name>
@@ -4825,7 +4825,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.startDate</name>
@@ -4839,7 +4839,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.endDate</name>
@@ -4853,7 +4853,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.predecessor</name>
@@ -4870,7 +4870,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -4893,7 +4893,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solution.reference</name>
@@ -4910,7 +4910,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -4921,7 +4921,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.capabilityType</name>
@@ -4993,7 +4993,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.state</name>
@@ -5207,7 +5207,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.wsjf</name>
@@ -5221,7 +5221,7 @@
             <precision>2</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessValue</name>
@@ -5244,7 +5244,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.timeCriticality</name>
@@ -5267,7 +5267,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.riskReduction</name>
@@ -5290,7 +5290,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.jobSize</name>
@@ -5313,7 +5313,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.programIncrement</name>
@@ -5330,7 +5330,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualStartDate</name>
@@ -5344,7 +5344,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualEndDate</name>
@@ -5358,7 +5358,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.flowTime</name>
@@ -5372,7 +5372,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.program</name>
@@ -5389,7 +5389,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.capabilityowner</name>
@@ -5408,7 +5408,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.portfolioEpic</name>
@@ -5425,7 +5425,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solutionShortName</name>
@@ -5436,7 +5436,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedStart</name>
@@ -5450,7 +5450,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedEnd</name>
@@ -5464,7 +5464,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.iteration</name>
@@ -5484,7 +5484,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.definitionOfReady</name>
@@ -5500,7 +5500,7 @@
           <booleanConstraint>
             <defaultValues>bfalse</defaultValues>
           </booleanConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.definitionOfDone</name>
@@ -5516,7 +5516,7 @@
           <booleanConstraint>
             <defaultValues>bfalse</defaultValues>
           </booleanConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.acceptanceCriteria</name>
@@ -5527,7 +5527,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.benefitHypothesis</name>
@@ -5538,7 +5538,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.conflictState</name>
@@ -5583,7 +5583,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.features</name>
@@ -5600,7 +5600,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="anyNumber" />
+          <multiplicity>anyNumber</multiplicity>
         </attributes>
       </type>
       <type>
@@ -5623,7 +5623,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.successor</name>
@@ -5641,7 +5641,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.type</name>
@@ -5705,7 +5705,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.predecessor</name>
@@ -5723,7 +5723,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.status</name>
@@ -5818,7 +5818,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.description</name>
@@ -5829,7 +5829,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedStartA</name>
@@ -5843,7 +5843,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedEndB</name>
@@ -5857,7 +5857,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -5880,7 +5880,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.date</name>
@@ -5894,7 +5894,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.type</name>
@@ -5975,7 +5975,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.relevantFor</name>
@@ -5993,7 +5993,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedStart</name>
@@ -6007,7 +6007,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.plannedEnd</name>
@@ -6021,7 +6021,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -6047,7 +6047,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -6070,7 +6070,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.snapshotDate</name>
@@ -6084,7 +6084,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.SAFeLevel.Reference</name>
@@ -6103,7 +6103,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.timebox</name>
@@ -6121,7 +6121,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.jsonMetricData</name>
@@ -6132,7 +6132,7 @@
           <localizedShortName />
           <shortHelp />
           <longConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -6155,7 +6155,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.timebox</name>
@@ -6173,7 +6173,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.SAFeLevel</name>
@@ -6254,7 +6254,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.SAFeLevel.Reference</name>
@@ -6273,7 +6273,7 @@
             <sameWorkspace>false</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.businessValue</name>
@@ -6303,7 +6303,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.actualValue</name>
@@ -6332,7 +6332,7 @@
             <element2icon />
             <element2localizedLabel />
           </numberEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.commitment</name>
@@ -6391,7 +6391,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.statement</name>
@@ -6402,7 +6402,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -6425,7 +6425,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.startDate</name>
@@ -6439,7 +6439,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.endDate</name>
@@ -6453,7 +6453,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.solution</name>
@@ -6470,7 +6470,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -6502,7 +6502,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.result</name>
@@ -6527,7 +6527,7 @@
             </element2icon>
             <element2localizedLabel />
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.oneFinger</name>
@@ -6547,7 +6547,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.twoFingers</name>
@@ -6567,7 +6567,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.threeFingers</name>
@@ -6587,7 +6587,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.fourFingers</name>
@@ -6607,7 +6607,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.fiveFingers</name>
@@ -6627,7 +6627,7 @@
             <precision>0</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.safe.confidenceVote.solution</name>
@@ -6644,7 +6644,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>false</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
     </slot>

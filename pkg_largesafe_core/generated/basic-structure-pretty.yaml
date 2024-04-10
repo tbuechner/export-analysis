@@ -18,8 +18,7 @@ package:
             de: Produktmanagement
             en: Product Management
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.productManagement
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -34,8 +33,7 @@ package:
           localizedShortName:
             de: Key
             en: Key
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.programKey
           shortHelp: null
           stringConstraint: null
@@ -43,8 +41,7 @@ package:
             de: Solution
             en: Solution
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solution
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -66,8 +63,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.title
           shortHelp: null
           stringConstraint: null
@@ -75,8 +71,7 @@ package:
             de: Programm
             en: Program
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.program
           referenceConstraint:
             defaultValues: lpage/qg000odouviwwtx4rz2bvaoi8
@@ -92,8 +87,7 @@ package:
           localizedShortName:
             de: "Abh\xE4ngig von"
             en: Depends on
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.dependsOn
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -106,8 +100,7 @@ package:
             de: Status
             en: Status
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.status
           shortHelp: null
           textEnumerationConstraint:
@@ -209,8 +202,7 @@ package:
             de: Fortschritt
             en: Progress
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.progress
           numberConstraint:
             defaultValues: d0
@@ -223,8 +215,7 @@ package:
             de: Programm-Inkrement
             en: Program Increment
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.programIncrement
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -240,8 +231,7 @@ package:
             de: Geplanter Start
             en: Planned Start
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.plannedStart
           shortHelp: null
         - dateConstraint:
@@ -251,16 +241,14 @@ package:
             de: Geplantes Ende
             en: Planned End
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.plannedEnd
           shortHelp: null
         - localizedName:
             de: SAFe Meilenstein
             en: SAFe Milestone
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.safeMilestone
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -273,8 +261,7 @@ package:
             de: Capability
             en: Capability
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.capability
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -287,8 +274,7 @@ package:
             de: Release
             en: Release
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.release
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -304,16 +290,14 @@ package:
             de: Release Datum
             en: Release Date
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.releaseDate
           shortHelp: null
         - localizedName:
             de: Beschreibung
             en: Description
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.description
           richStringConstraint: null
           shortHelp: null
@@ -323,8 +307,7 @@ package:
           localizedShortName:
             de: AC
             en: AC
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.acceptanceCriteria
           richStringConstraint: null
           shortHelp: null
@@ -332,8 +315,7 @@ package:
             de: Benefit Hypothesis
             en: Benefit Hypothesis
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.benefitHypothesis
           richStringConstraint: null
           shortHelp: null
@@ -343,8 +325,7 @@ package:
           localizedShortName:
             de: Konflikt
             en: Conflict
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.conflictState
           shortHelp: null
           textEnumerationConstraint:
@@ -373,16 +354,14 @@ package:
             de: Berechne Datumskonflikte
             en: Calculate Date Conflicts
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.calculateDateConflicts
           shortHelp: null
         - localizedName:
             de: "Features, die Datumskonflikt ausl\xF6sen"
             en: Features Causing Date Conflict
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.calculatedConflicts
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -397,8 +376,7 @@ package:
           localizedShortName:
             de: WSJF
             en: WSJF
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.wsjf
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -410,8 +388,7 @@ package:
           localizedShortName:
             de: Business Value
             en: Business Value
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
             element2icon: null
@@ -433,8 +410,7 @@ package:
           localizedShortName:
             de: Time Criticality
             en: Time Criticality
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
             element2icon: null
@@ -456,8 +432,7 @@ package:
           localizedShortName:
             de: Risk Reduction
             en: Risk Reduction
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
             element2icon: null
@@ -479,8 +454,7 @@ package:
           localizedShortName:
             de: Job Size
             en: Job Size
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
             element2icon: null
@@ -502,8 +476,7 @@ package:
           localizedShortName:
             de: Program-Key
             en: Program-Key
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.programKey
           shortHelp: null
           stringConstraint: null
@@ -513,8 +486,7 @@ package:
           localizedShortName:
             de: Feature Type
             en: Feature Type
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.featureType
           shortHelp: null
           textEnumerationConstraint:
@@ -560,8 +532,7 @@ package:
           localizedShortName:
             de: Teams
             en: Teams
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.teams
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -574,8 +545,7 @@ package:
             de: "Hilfe ben\xF6tigt von"
             en: Required Assistence of
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.requiresAssistenceOf
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -588,8 +558,7 @@ package:
             de: Period Status
             en: Period Status
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.periodStatus
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -602,8 +571,7 @@ package:
             de: Iterations
             en: Iterations
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.iterations
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -616,8 +584,7 @@ package:
             de: Alle Stories
             en: All Stories
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.stories
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -630,8 +597,7 @@ package:
             de: Feature Owner
             en: Feature Owner
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.featureOwner
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -643,8 +609,7 @@ package:
             de: Story Points Total
             en: Story Points Total
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.storyPointsTotal
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -654,8 +619,7 @@ package:
             de: Story Points Done
             en: Story Points Done
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.storyPointsDone
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -665,8 +629,7 @@ package:
             de: Number of Stories Total
             en: Number of Stories Total
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.numberStoriesTotal
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -676,8 +639,7 @@ package:
             de: Number of Stories Open
             en: Number of Stories Open
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.numberStoriesOpen
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -687,8 +649,7 @@ package:
             de: Number of Stories Done
             en: Number of Stories Done
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.numberStoriesDone
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -698,8 +659,7 @@ package:
             de: Manuelle Priorisierung
             en: Manual Prioritization
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.manualPrioritization
           shortHelp: null
           textEnumerationConstraint:
@@ -760,8 +720,7 @@ package:
             de: Actual Start Date
             en: Actual End Date
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualStartDate
           shortHelp: null
         - dateConstraint:
@@ -771,16 +730,14 @@ package:
             de: Actual End Date
             en: Actual End Date
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualEndDate
           shortHelp: null
         - localizedName:
             de: Flow Time
             en: Flow Time
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.flowTime
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -799,8 +756,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.title
           shortHelp: null
           stringConstraint: null
@@ -808,8 +764,7 @@ package:
             de: Program
             en: Program
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.program
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -824,8 +779,7 @@ package:
           localizedShortName:
             de: PM
             en: PM
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.productManager
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -840,8 +794,7 @@ package:
           localizedShortName:
             de: RTE
             en: RTE
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.releaseTrainEngineer
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -856,8 +809,7 @@ package:
           localizedShortName:
             de: SA
             en: SA
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.systemArchitect
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -870,8 +822,7 @@ package:
             de: Vision Statement
             en: Vision Statement
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.visionStatement
           richStringConstraint: null
           shortHelp: null
@@ -879,8 +830,7 @@ package:
             de: Business Owner
             en: Business Owner
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessOwner
           richStringConstraint: null
           shortHelp: null
@@ -888,8 +838,7 @@ package:
             de: Key Customers
             en: Key Customers
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.keyCustomers
           richStringConstraint: null
           shortHelp: null
@@ -897,8 +846,7 @@ package:
             de: Success Measures
             en: Success Measures
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.successMeasures
           richStringConstraint: null
           shortHelp: null
@@ -906,8 +854,7 @@ package:
             de: Technical Assets
             en: Technical Assets
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.technicalAssets
           richStringConstraint: null
           shortHelp: null
@@ -915,8 +862,7 @@ package:
             de: Datei
             en: File
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.file
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Document
@@ -929,8 +875,7 @@ package:
             de: ART Events
             en: ART Events
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.artEvents
           richStringConstraint: null
           shortHelp: null
@@ -953,8 +898,7 @@ package:
             de: Name
             en: Name
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.name
           shortHelp:
             de: A short name for the epic.
@@ -964,8 +908,7 @@ package:
             de: Epic Owner
             en: Epic Owner
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.epicOwner
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -979,8 +922,7 @@ package:
             de: Status
             en: State
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.state
           shortHelp: null
           textEnumerationConstraint:
@@ -1314,16 +1256,14 @@ package:
           localizedShortName:
             de: Status
             en: Status
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.kanbanState
           shortHelp: null
         - localizedName:
             de: Typ
             en: Type
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.type
           shortHelp: null
           textEnumerationConstraint:
@@ -1367,8 +1307,7 @@ package:
             de: Beschreibung
             en: Description
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.description
           richStringConstraint: null
           shortHelp:
@@ -1410,8 +1349,7 @@ package:
             de: "Gesch\xE4ftsergebnis"
             en: Business Outcome
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessOutcome
           richStringConstraint: null
           shortHelp:
@@ -1423,8 +1361,7 @@ package:
             de: "Fr\xFChindikatoren"
             en: Leading Indicators
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.leadingIndivators
           richStringConstraint: null
           shortHelp:
@@ -1440,8 +1377,7 @@ package:
           localizedShortName:
             de: NFRs
             en: NFRs
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.nfrs
           richStringConstraint: null
           shortHelp:
@@ -1451,8 +1387,7 @@ package:
             de: Definition of Ready
             en: Definition of Ready
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.definitionOfReady
           richStringConstraint: null
           shortHelp: null
@@ -1465,8 +1400,7 @@ package:
           localizedShortName:
             de: Start
             en: Start
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.implementationStart
           shortHelp: null
         - dateConstraint:
@@ -1478,8 +1412,7 @@ package:
           localizedShortName:
             de: Ende
             en: End
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.implementationEnd
           shortHelp: null
         - dateConstraint:
@@ -1489,16 +1422,14 @@ package:
             de: Eingang
             en: Funnel Entry
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.funnelEntry
           shortHelp: null
         - localizedName:
             de: "Auftragsgr\xF6\xDFe"
             en: Job Size
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
             element2icon: null
@@ -1520,8 +1451,7 @@ package:
           localizedShortName:
             de: Value
             en: Value
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
             element2icon: null
@@ -1543,8 +1473,7 @@ package:
           localizedShortName:
             de: Time
             en: Time
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
             element2icon: null
@@ -1564,8 +1493,7 @@ package:
             de: Risikoreduktion
             en: Risk Reduction
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
             element2icon: null
@@ -1585,8 +1513,7 @@ package:
             de: WSJF
             en: WSJF
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.wsjf
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -1596,8 +1523,7 @@ package:
             de: Portfolio
             en: Portfolio
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.portfolio
           referenceConstraint:
             defaultValues: lpage/bmly5ecmejcwdw6evnkjxj8g4
@@ -1611,8 +1537,7 @@ package:
             de: Value Stream
             en: Value Stream
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.valueStream
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1625,8 +1550,7 @@ package:
             de: "H\xE4ngt ab von"
             en: Depends on
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.dependsOn
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1641,8 +1565,7 @@ package:
           localizedShortName:
             de: SAFe Meilensteine
             en: SAFe Milestones
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.safeMilestones
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1655,8 +1578,7 @@ package:
             de: Konfliktstatus
             en: Conflict State
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.conflictState
           shortHelp: null
           textEnumerationConstraint:
@@ -1728,8 +1650,7 @@ package:
             de: Fortschritt
             en: Progress
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.progress
           numberConstraint:
             defaultValues: d0
@@ -1744,8 +1665,7 @@ package:
           localizedShortName:
             de: Geplante Kosten
             en: Planned Costs
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.totalPlannedImplementationCosts
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -1755,8 +1675,7 @@ package:
             de: Geplante MVP Kosten
             en: Planned MVP Costs
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.plannedMVPCosts
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -1766,8 +1685,7 @@ package:
             de: "Tats\xE4chliche Kosten"
             en: Actual Costs
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualCosts
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -1777,8 +1695,7 @@ package:
             de: Enterprise Architekt
             en: Enterprise Architect
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.enterpriseArchitect
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -1793,8 +1710,7 @@ package:
           localizedShortName:
             de: Ziel
             en: Objective
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.objective
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1809,8 +1725,7 @@ package:
           localizedShortName:
             de: Phase
             en: Phase
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.implementationPhase
           shortHelp: null
           textEnumerationConstraint:
@@ -1862,8 +1777,7 @@ package:
             de: Konfiguration
             en: Configuration
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.portfolioConfiguration
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1876,8 +1790,7 @@ package:
             de: SAFe Meilensteine
             en: SAFe Milestones
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.safeMilestone
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1910,8 +1823,7 @@ package:
             de: Beschreibung
             en: Description
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.description
           richStringConstraint: null
           shortHelp: null
@@ -1919,8 +1831,7 @@ package:
             de: Solution Train Engineer
             en: Solution Train Engineer
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solutionTrainEngineer
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -1932,8 +1843,7 @@ package:
             de: Solution Train Architekt
             en: Solution Train Architect
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solutionTrainArchitect
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -1945,8 +1855,7 @@ package:
             de: Solution Management
             en: Solution Management
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solutionManagement
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -1958,8 +1867,7 @@ package:
             de: Vorheriges PI
             en: Previous PI
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.previousPi
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1972,8 +1880,7 @@ package:
             de: Laufendes PI
             en: Current PI
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.currentPi
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -1986,8 +1893,7 @@ package:
             de: "N\xE4chstes PI"
             en: Next PI
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.nextPi
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2000,8 +1906,7 @@ package:
             de: Funnel WIP Limit
             en: Funnel WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.funnelWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2011,8 +1916,7 @@ package:
             de: Analyzing WIP Limit
             en: Analyzing WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.analyzingWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2022,8 +1926,7 @@ package:
             de: Backlog WIP Limit
             en: Backlog WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.backlogWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2033,8 +1936,7 @@ package:
             de: Implementing WIP Limit
             en: Implementing WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.implementingWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2044,8 +1946,7 @@ package:
             de: Validating WIP Limit
             en: Validating WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.validatingWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2055,8 +1956,7 @@ package:
             de: Deploying WIP Limit
             en: Deploying WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.deployingWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2066,8 +1966,7 @@ package:
             de: Releasing WIP Limit
             en: Releasing WIP Limit
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.releasingWIPLimit
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2077,8 +1976,7 @@ package:
             de: "K\xFCrzel"
             en: Short Name
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.shortName
           shortHelp: null
           stringConstraint: null
@@ -2086,8 +1984,7 @@ package:
             de: Horizon
             en: Horizon
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.horizon
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2109,8 +2006,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.title
           shortHelp: null
           stringConstraint: null
@@ -2118,8 +2014,7 @@ package:
             de: Solution
             en: Solution
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.solution
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2135,8 +2030,7 @@ package:
             de: Startdatum
             en: Start Date
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.startDate
           shortHelp: null
         - dateConstraint:
@@ -2146,16 +2040,14 @@ package:
             de: Enddatum
             en: End Date
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.endDate
           shortHelp: null
         - localizedName:
             de: "Vorg\xE4nger"
             en: Predecessor
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.predecessor
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2168,8 +2060,7 @@ package:
             de: Period Status
             en: Period Status
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.periodStatus
           shortHelp: null
           textEnumerationConstraint:
@@ -2221,8 +2112,7 @@ package:
             de: Confidence Vote
             en: Confidence Vote
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.confidenceVote
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2235,8 +2125,7 @@ package:
             de: Capacity
             en: Capacity
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.capacity
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2250,8 +2139,7 @@ package:
           localizedShortName:
             de: Confidence Vote
             en: Confidence Vote
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.confidenceVote.Result
           shortHelp: null
           stringConstraint: null
@@ -2260,8 +2148,7 @@ package:
             en: Statistics JSON
           localizedShortName: null
           longConstraint: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.statsJson
           shortHelp: null
         iconName: fa-step-forward
@@ -2277,8 +2164,7 @@ package:
             de: Titel
             en: Title
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.title
           shortHelp: null
           stringConstraint: null
@@ -2286,8 +2172,7 @@ package:
             de: Solution
             en: Solution
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solution.reference
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2300,8 +2185,7 @@ package:
             de: Beschreibung
             en: Description
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.description
           richStringConstraint: null
           shortHelp: null
@@ -2311,8 +2195,7 @@ package:
           localizedShortName:
             de: Feature Type
             en: Feature Type
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.capabilityType
           shortHelp: null
           textEnumerationConstraint:
@@ -2356,8 +2239,7 @@ package:
             de: Status
             en: State
           localizedShortName: null
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.state
           shortHelp: null
           textEnumerationConstraint:
@@ -2487,8 +2369,7 @@ package:
             de: WSJF
             en: WSJF
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.wsjf
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2498,8 +2379,7 @@ package:
             de: User Business Value
             en: User Business Value
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
             element2icon: null
@@ -2519,8 +2399,7 @@ package:
             de: "Zeitliche Kritikalit\xE4t"
             en: Time Criticality
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
             element2icon: null
@@ -2540,8 +2419,7 @@ package:
             de: Risk Reduction
             en: Risk Reduction
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
             element2icon: null
@@ -2561,8 +2439,7 @@ package:
             de: Job Size
             en: Job Size
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
             element2icon: null
@@ -2582,8 +2459,7 @@ package:
             de: Program Increment
             en: Program Increment
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.programIncrement
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2599,8 +2475,7 @@ package:
             de: Actual Start Date
             en: Actual Start Date
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualStartDate
           shortHelp: null
         - dateConstraint:
@@ -2610,16 +2485,14 @@ package:
             de: Actual End Date
             en: Actual End Date
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualEndDate
           shortHelp: null
         - localizedName:
             de: Flow time
             en: Flow time
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.flowTime
           numberConstraint:
             localizedTextAfterSupplier: null
@@ -2629,8 +2502,7 @@ package:
             de: Program
             en: Program
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.program
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2645,8 +2517,7 @@ package:
           localizedShortName:
             de: Owner
             en: Owner
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.capabilityowner
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.group.Person
@@ -2658,8 +2529,7 @@ package:
             de: Portfolio Epic
             en: Portfolio Epic
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.portfolioEpic
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2672,8 +2542,7 @@ package:
             de: "Solution K\xFCrzel"
             en: Solution Short Name
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.solutionShortName
           shortHelp: null
           stringConstraint: null
@@ -2684,8 +2553,7 @@ package:
             de: Geplanter Start
             en: Planned Start
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.plannedStart
           shortHelp: null
         - dateConstraint:
@@ -2695,16 +2563,14 @@ package:
             de: Geplantes Ende
             en: Planned End
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.plannedEnd
           shortHelp: null
         - localizedName:
             de: Iterations
             en: Iterations
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.iteration
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page
@@ -2727,8 +2593,7 @@ package:
           localizedShortName:
             de: DoR
             en: DoR
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.definitionOfReady
           shortHelp: null
         - booleanConstraint:
@@ -2739,16 +2604,14 @@ package:
           localizedShortName:
             de: DoD
             en: DoD
-          multiplicity:
-            '@key': exactlyOne
+          multiplicity: exactlyOne
           name: cf.cplace.solution.safe.definitionOfDone
           shortHelp: null
         - localizedName:
             de: Akzeptanzkriterien
             en: Acceptance Criteria
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.acceptanceCriteria
           richStringConstraint: null
           shortHelp: null
@@ -2756,8 +2619,7 @@ package:
             de: Benefit Hypothesis
             en: Benefit Hypothesis
           localizedShortName: null
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.benefitHypothesis
           richStringConstraint: null
           shortHelp: null
@@ -2767,8 +2629,7 @@ package:
           localizedShortName:
             de: Konflikt
             en: Conflict
-          multiplicity:
-            '@key': maximalOne
+          multiplicity: maximalOne
           name: cf.cplace.solution.safe.conflictState
           shortHelp: null
           textEnumerationConstraint:
@@ -2795,8 +2656,7 @@ package:
             de: Features
             en: Features
           localizedShortName: null
-          multiplicity:
-            '@key': anyNumber
+          multiplicity: anyNumber
           name: cf.cplace.solution.safe.features
           referenceConstraint:
             entityClass: cf.cplace.platform.assets.file.Page

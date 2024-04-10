@@ -31,7 +31,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.quarter</name>
@@ -42,7 +42,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.status</name>
@@ -145,7 +145,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.start</name>
@@ -159,7 +159,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.end</name>
@@ -173,7 +173,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -202,7 +202,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.title</name>
@@ -213,7 +213,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.accomplished</name>
@@ -282,7 +282,7 @@
               </entry>
             </element2localizedLabel>
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.description</name>
@@ -293,7 +293,7 @@
           <localizedShortName />
           <shortHelp />
           <richStringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
       <type>
@@ -322,7 +322,7 @@
             <precision>-1</precision>
             <localizedTextAfterSupplier />
           </numberConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.title</name>
@@ -333,7 +333,7 @@
           <localizedShortName />
           <shortHelp />
           <stringConstraint />
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.gradingForecast</name>
@@ -398,7 +398,7 @@
             </element2icon>
             <element2localizedLabel />
           </textEnumerationConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.objective</name>
@@ -415,7 +415,7 @@
             <sameWorkspace>true</sameWorkspace>
             <isHierarchy>true</isHierarchy>
           </referenceConstraint>
-          <multiplicity key="exactlyOne" />
+          <multiplicity>exactlyOne</multiplicity>
         </attributes>
         <attributes>
           <name>cf.cplace.solution.okr.lastUpdate</name>
@@ -429,7 +429,7 @@
             <specificity>DAY</specificity>
             <dateFormat>DAY_YEAR_LONG</dateFormat>
           </dateConstraint>
-          <multiplicity key="maximalOne" />
+          <multiplicity>maximalOne</multiplicity>
         </attributes>
       </type>
     </slot>
