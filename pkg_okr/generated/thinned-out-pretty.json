@@ -59,109 +59,24 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "elements": [
-                                        "#15 Next",
-                                        "#25 Current",
-                                        "#35 Closed",
-                                        "#45 Draft"
-                                    ],
-                                    "element2icon": null,
-                                    "element2localizedLabel": {
-                                        "entry": [
-                                            {
-                                                "key": "#35 Closed",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Geschlossen"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Closed"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "key": "#45 Draft",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Entwurf"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Draft"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "key": "#25 Current",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Aktuell"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Current"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "key": "#15 Next",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "N\u00e4chster"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Next"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
+                                    "element": [
+                                        {
+                                            "value": "#15 Next",
+                                            "icon": "harvey-ball-red-100"
+                                        },
+                                        {
+                                            "value": "#25 Current",
+                                            "icon": "harvey-ball-red-100"
+                                        },
+                                        {
+                                            "value": "#35 Closed",
+                                            "icon": "harvey-ball-red-100"
+                                        },
+                                        {
+                                            "value": "#45 Draft",
+                                            "icon": "harvey-ball-red-100"
+                                        }
+                                    ]
                                 },
                                 "multiplicity": "exactlyOne"
                             },
@@ -245,72 +160,16 @@
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
                                     "defaultValues": "s#25 - no",
-                                    "elements": [
-                                        "#15 - yes",
-                                        "#25 - no"
-                                    ],
-                                    "element2icon": {
-                                        "entry": [
-                                            {
-                                                "key": "#25 - no",
-                                                "value": "x-103-cplace-square-red-close"
-                                            },
-                                            {
-                                                "key": "#15 - yes",
-                                                "value": "x-112-cplace-square-green-check"
-                                            }
-                                        ]
-                                    },
-                                    "element2localizedLabel": {
-                                        "entry": [
-                                            {
-                                                "key": "#25 - no",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Nein"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "No"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "key": "#15 - yes",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Ja"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Yes"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
+                                    "element": [
+                                        {
+                                            "value": "#15 - yes",
+                                            "icon": "x-112-cplace-square-green-check"
+                                        },
+                                        {
+                                            "value": "#25 - no",
+                                            "icon": "x-103-cplace-square-red-close"
+                                        }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },
@@ -376,63 +235,48 @@
                                 "localizedShortName": null,
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "elements": [
-                                        "0.1",
-                                        "0.2",
-                                        "0.3",
-                                        "0.4",
-                                        "0.5",
-                                        "0.6",
-                                        "0.7",
-                                        "0.8",
-                                        "0.9",
-                                        "1.0"
-                                    ],
-                                    "element2icon": {
-                                        "entry": [
-                                            {
-                                                "key": "0.1",
-                                                "value": "circle-001-red"
-                                            },
-                                            {
-                                                "key": "1.0",
-                                                "value": "circle-003-green"
-                                            },
-                                            {
-                                                "key": "0.2",
-                                                "value": "circle-001-red"
-                                            },
-                                            {
-                                                "key": "0.3",
-                                                "value": "circle-001-red"
-                                            },
-                                            {
-                                                "key": "0.4",
-                                                "value": "circle-002-yellow"
-                                            },
-                                            {
-                                                "key": "0.5",
-                                                "value": "circle-002-yellow"
-                                            },
-                                            {
-                                                "key": "0.6",
-                                                "value": "circle-002-yellow"
-                                            },
-                                            {
-                                                "key": "0.7",
-                                                "value": "circle-003-green"
-                                            },
-                                            {
-                                                "key": "0.8",
-                                                "value": "circle-003-green"
-                                            },
-                                            {
-                                                "key": "0.9",
-                                                "value": "circle-003-green"
-                                            }
-                                        ]
-                                    },
-                                    "element2localizedLabel": null
+                                    "element": [
+                                        {
+                                            "value": "0.1",
+                                            "icon": "circle-001-red"
+                                        },
+                                        {
+                                            "value": "0.2",
+                                            "icon": "circle-001-red"
+                                        },
+                                        {
+                                            "value": "0.3",
+                                            "icon": "circle-001-red"
+                                        },
+                                        {
+                                            "value": "0.4",
+                                            "icon": "circle-002-yellow"
+                                        },
+                                        {
+                                            "value": "0.5",
+                                            "icon": "circle-002-yellow"
+                                        },
+                                        {
+                                            "value": "0.6",
+                                            "icon": "circle-002-yellow"
+                                        },
+                                        {
+                                            "value": "0.7",
+                                            "icon": "circle-003-green"
+                                        },
+                                        {
+                                            "value": "0.8",
+                                            "icon": "circle-003-green"
+                                        },
+                                        {
+                                            "value": "0.9",
+                                            "icon": "circle-003-green"
+                                        },
+                                        {
+                                            "value": "1.0",
+                                            "icon": "circle-003-green"
+                                        }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },

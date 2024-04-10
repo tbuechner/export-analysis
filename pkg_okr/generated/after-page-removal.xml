@@ -3871,97 +3871,22 @@
           <localizedShortName />
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>#15 Next</elements>
-            <elements>#25 Current</elements>
-            <elements>#35 Closed</elements>
-            <elements>#45 Draft</elements>
-            <element2icon />
-            <element2localizedLabel>
-              <entry>
-                <key>#35 Closed</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Geschlossen</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Closed</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#45 Draft</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Entwurf</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Draft</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 Current</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Aktuell</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Current</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 Next</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Nächster</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Next</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 Next</value>
+              <icon>harvey-ball-red-100</icon>
+            </element>
+            <element>
+              <value>#25 Current</value>
+              <icon>harvey-ball-red-100</icon>
+            </element>
+            <element>
+              <value>#35 Closed</value>
+              <icon>harvey-ball-red-100</icon>
+            </element>
+            <element>
+              <value>#45 Draft</value>
+              <icon>harvey-ball-red-100</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -4043,62 +3968,14 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#25 - no</defaultValues>
-            <elements>#15 - yes</elements>
-            <elements>#25 - no</elements>
-            <element2icon>
-              <entry>
-                <key>#25 - no</key>
-                <value>x-103-cplace-square-red-close</value>
-              </entry>
-              <entry>
-                <key>#15 - yes</key>
-                <value>x-112-cplace-square-green-check</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#25 - no</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Nein</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>No</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - yes</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Ja</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Yes</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - yes</value>
+              <icon>x-112-cplace-square-green-check</icon>
+            </element>
+            <element>
+              <value>#25 - no</value>
+              <icon>x-103-cplace-square-red-close</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -4162,59 +4039,46 @@
           <localizedShortName />
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>0.1</elements>
-            <elements>0.2</elements>
-            <elements>0.3</elements>
-            <elements>0.4</elements>
-            <elements>0.5</elements>
-            <elements>0.6</elements>
-            <elements>0.7</elements>
-            <elements>0.8</elements>
-            <elements>0.9</elements>
-            <elements>1.0</elements>
-            <element2icon>
-              <entry>
-                <key>0.1</key>
-                <value>circle-001-red</value>
-              </entry>
-              <entry>
-                <key>1.0</key>
-                <value>circle-003-green</value>
-              </entry>
-              <entry>
-                <key>0.2</key>
-                <value>circle-001-red</value>
-              </entry>
-              <entry>
-                <key>0.3</key>
-                <value>circle-001-red</value>
-              </entry>
-              <entry>
-                <key>0.4</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>0.5</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>0.6</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>0.7</key>
-                <value>circle-003-green</value>
-              </entry>
-              <entry>
-                <key>0.8</key>
-                <value>circle-003-green</value>
-              </entry>
-              <entry>
-                <key>0.9</key>
-                <value>circle-003-green</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel />
+            <element>
+              <value>0.1</value>
+              <icon>circle-001-red</icon>
+            </element>
+            <element>
+              <value>0.2</value>
+              <icon>circle-001-red</icon>
+            </element>
+            <element>
+              <value>0.3</value>
+              <icon>circle-001-red</icon>
+            </element>
+            <element>
+              <value>0.4</value>
+              <icon>circle-002-yellow</icon>
+            </element>
+            <element>
+              <value>0.5</value>
+              <icon>circle-002-yellow</icon>
+            </element>
+            <element>
+              <value>0.6</value>
+              <icon>circle-002-yellow</icon>
+            </element>
+            <element>
+              <value>0.7</value>
+              <icon>circle-003-green</icon>
+            </element>
+            <element>
+              <value>0.8</value>
+              <icon>circle-003-green</icon>
+            </element>
+            <element>
+              <value>0.9</value>
+              <icon>circle-003-green</icon>
+            </element>
+            <element>
+              <value>1.0</value>
+              <icon>circle-003-green</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>

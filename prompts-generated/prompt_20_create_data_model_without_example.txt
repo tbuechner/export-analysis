@@ -158,7 +158,7 @@ The following xml schema represents describes a xml format for specifying data m
                                   </xs:element>
                                   <xs:element name="richStringConstraint" minOccurs="0">
                                   </xs:element>
-                                  <xs:element name="multiplicity">
+                                  <xs:element name="multiplicity" type="Multiplicity">
                                     <xs:annotation>
                                       <xs:documentation>
                                         The 'multiplicity' element specifies the cardinality constraints for an attribute of the data model.
@@ -166,18 +166,6 @@ The following xml schema represents describes a xml format for specifying data m
                                         If the 'key' attribute is not set, the cardinality of the attribute is any number of values.
                                       </xs:documentation>
                                     </xs:annotation>
-                                    <xs:complexType>
-                                      <xs:attribute name="key" use="required">
-                                        <xs:simpleType>
-                                          <xs:restriction base="xs:string">
-                                            <xs:enumeration value="anyNumber"/>
-                                            <xs:enumeration value="exactlyOne"/>
-                                            <xs:enumeration value="maximalOne"/>
-                                            <xs:enumeration value="atLeastOne"/>
-                                          </xs:restriction>
-                                        </xs:simpleType>
-                                      </xs:attribute>
-                                    </xs:complexType>
                                   </xs:element>
                                 </xs:all>
                               </xs:complexType>
@@ -214,6 +202,14 @@ The following xml schema represents describes a xml format for specifying data m
       <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
       <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
       <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Multiplicity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="atLeastOne"/>
+      <xs:enumeration value="maximalOne"/>
+      <xs:enumeration value="exactlyOne"/>
+      <xs:enumeration value="anyNumber"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="localizedName">

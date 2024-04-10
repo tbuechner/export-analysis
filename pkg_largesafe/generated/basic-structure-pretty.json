@@ -150,180 +150,32 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#15 - analysis",
-                                        "elements": [
-                                            "#15 - analysis",
-                                            "#25 - backlog",
-                                            "#35 - in progress",
-                                            "#45 - done",
-                                            "#55 - released",
-                                            "#65 - obsolete"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - in progress",
-                                                    "value": "harvey-ball-green-050"
-                                                },
-                                                {
-                                                    "key": "#15 - analysis",
-                                                    "value": "harvey-ball-green-000"
-                                                },
-                                                {
-                                                    "key": "#45 - done",
-                                                    "value": "harvey-ball-green-100"
-                                                },
-                                                {
-                                                    "key": "#55 - released",
-                                                    "value": "harvey-ball-green-100"
-                                                },
-                                                {
-                                                    "key": "#25 - backlog",
-                                                    "value": "harvey-ball-green-025"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - in progress",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "In Bearbeitung"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "In Progress"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#65 - obsolete",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Nicht ben\u00f6tigt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Obsolete"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - analysis",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Analyse"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Analysis"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#45 - done",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Erledigt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Done"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#55 - released",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Ausgeliefert"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Released"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - backlog",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - analysis",
+                                                "icon": "harvey-ball-green-000"
+                                            },
+                                            {
+                                                "value": "#25 - backlog",
+                                                "icon": "harvey-ball-green-025"
+                                            },
+                                            {
+                                                "value": "#35 - in progress",
+                                                "icon": "harvey-ball-green-050"
+                                            },
+                                            {
+                                                "value": "#45 - done",
+                                                "icon": "harvey-ball-green-100"
+                                            },
+                                            {
+                                                "value": "#55 - released",
+                                                "icon": "harvey-ball-green-100"
+                                            },
+                                            {
+                                                "value": "#65 - obsolete",
+                                                "icon": "harvey-ball-green-100"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -503,37 +355,9 @@
                                     },
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": "#25 - conflict",
-                                        "element2icon": {
-                                            "entry": {
-                                                "key": "#25 - conflict",
-                                                "value": "lightning-001-red"
-                                            }
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": {
-                                                "key": "#25 - conflict",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Blockiert (vermutlich)"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Blocked (likely)"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
+                                        "element": {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red"
                                         }
                                     },
                                     "multiplicity": "maximalOne"
@@ -607,9 +431,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -635,9 +457,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -663,9 +483,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -691,9 +509,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -724,72 +540,16 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "sfeature",
-                                        "elements": [
-                                            "feature",
-                                            "enabler"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "enabler",
-                                                    "value": "circle-002-yellow"
-                                                },
-                                                {
-                                                    "key": "feature",
-                                                    "value": "circle-005-lightblue"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "enabler",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Enabler"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Enabler"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "feature",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Feature"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Feature"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "feature",
+                                                "icon": "circle-005-lightblue"
+                                            },
+                                            {
+                                                "value": "enabler",
+                                                "icon": "circle-002-yellow"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -976,100 +736,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "high",
-                                            "medium",
-                                            "low"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "high",
-                                                    "value": "trend-010-upwards"
-                                                },
-                                                {
-                                                    "key": "medium",
-                                                    "value": "trend-020-equal"
-                                                },
-                                                {
-                                                    "key": "low",
-                                                    "value": "trend-030-downwards"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "high",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Hoch"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "High"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "medium",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Medium"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Medium"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "low",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Niedrig"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Low"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "high",
+                                                "icon": "trend-010-upwards"
+                                            },
+                                            {
+                                                "value": "medium",
+                                                "icon": "trend-020-equal"
+                                            },
+                                            {
+                                                "value": "low",
+                                                "icon": "trend-030-downwards"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -1219,85 +899,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - PI Meilenstein",
-                                            "#25 - Fixiertes Datum",
-                                            "#35 - Learning Meilenstein"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - Learning Meilenstein",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Learning Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Learning Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Fixiertes Datum",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Fixiertes Datum"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Fixed-Date Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - PI Meilenstein",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "PI Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "PI Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - PI Meilenstein",
+                                                "icon": "trend-030-downwards"
+                                            },
+                                            {
+                                                "value": "#25 - Fixiertes Datum",
+                                                "icon": "trend-030-downwards"
+                                            },
+                                            {
+                                                "value": "#35 - Learning Meilenstein",
+                                                "icon": "trend-030-downwards"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -1583,152 +1198,28 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#10 - analysis",
-                                        "elements": [
-                                            "#10 - analysis",
-                                            "#20 - backlog",
-                                            "#40 - in progress",
-                                            "#50 - done",
-                                            "#60 - obsolete"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#20 - backlog",
-                                                    "value": "harvey-ball-025"
-                                                },
-                                                {
-                                                    "key": "#50 - done",
-                                                    "value": "harvey-ball-100"
-                                                },
-                                                {
-                                                    "key": "#40 - in progress",
-                                                    "value": "harvey-ball-075"
-                                                },
-                                                {
-                                                    "key": "#10 - analysis",
-                                                    "value": "harvey-ball-000"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#20 - backlog",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#60 - obsolete",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Nicht ben\u00f6tigt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Obsolete"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#40 - in progress",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "In Bearbeitung"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "In Progress"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#10 - analysis",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Analyse"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Analysis"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#50 - done",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Fertig"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Done"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#10 - analysis",
+                                                "icon": "harvey-ball-000"
+                                            },
+                                            {
+                                                "value": "#20 - backlog",
+                                                "icon": "harvey-ball-025"
+                                            },
+                                            {
+                                                "value": "#40 - in progress",
+                                                "icon": "harvey-ball-075"
+                                            },
+                                            {
+                                                "value": "#50 - done",
+                                                "icon": "harvey-ball-100"
+                                            },
+                                            {
+                                                "value": "#60 - obsolete",
+                                                "icon": "harvey-ball-100"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -2292,100 +1783,20 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#15 - requested",
-                                        "elements": [
-                                            "#15 - requested",
-                                            "#25 - accepted",
-                                            "#35 - resolved"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - accepted",
-                                                    "value": "harvey-ball-green-100"
-                                                },
-                                                {
-                                                    "key": "#15 - requested",
-                                                    "value": "harvey-ball-green-000"
-                                                },
-                                                {
-                                                    "key": "#35 - resolved",
-                                                    "value": "harvey-ball-green-100"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - accepted",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Akzeptiert"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Accepted"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - requested",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Angefragt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Requested"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - resolved",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Erledigt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Resolved"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - requested",
+                                                "icon": "harvey-ball-green-000"
+                                            },
+                                            {
+                                                "value": "#25 - accepted",
+                                                "icon": "harvey-ball-green-100"
+                                            },
+                                            {
+                                                "value": "#35 - resolved",
+                                                "icon": "harvey-ball-green-100"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -2570,9 +1981,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -2595,9 +2004,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -2707,240 +2114,40 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#10 - Draft",
-                                        "elements": [
-                                            "#10 - Draft",
-                                            "#15 - Funnel",
-                                            "#25 - Reviewing",
-                                            "#35 - Analyzing",
-                                            "#45 - Backlog",
-                                            "#55 - Implementing",
-                                            "#65 - Done",
-                                            "#75 - Archived"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - Reviewing",
-                                                    "value": "cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#55 - Implementing",
-                                                    "value": "cf.cplace.enumerationIcons|process-graph-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#15 - Funnel",
-                                                    "value": "cf.cplace.enumerationIcons|filter-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#45 - Backlog",
-                                                    "value": "cf.cplace.enumerationIcons|backlog-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#10 - Draft",
-                                                    "value": "cf.cplace.enumerationIcons|draft-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#35 - Analyzing",
-                                                    "value": "cf.cplace.enumerationIcons|analyze-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#75 - Archived",
-                                                    "value": "cf.cplace.enumerationIcons|archive-svgrepo-com"
-                                                },
-                                                {
-                                                    "key": "#65 - Done",
-                                                    "value": "cf.cplace.enumerationIcons|shield-done-svgrepo-com"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - Reviewing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "\u00dcberpr\u00fcfung"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Reviewing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#55 - Implementing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Implementierung"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Implementing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - Funnel",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Trichter"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Funnel"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#45 - Backlog",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#10 - Draft",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Entwurf"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Draft"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - Analyzing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Analyse"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Analyzing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#75 - Archived",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Archiviert"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Archived"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#65 - Done",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Abgeschlossen"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Done"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#10 - Draft",
+                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#15 - Funnel",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#25 - Reviewing",
+                                                "icon": "cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#35 - Analyzing",
+                                                "icon": "cf.cplace.enumerationIcons|analyze-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#45 - Backlog",
+                                                "icon": "cf.cplace.enumerationIcons|backlog-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#55 - Implementing",
+                                                "icon": "cf.cplace.enumerationIcons|process-graph-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#65 - Done",
+                                                "icon": "cf.cplace.enumerationIcons|shield-done-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#75 - Archived",
+                                                "icon": "cf.cplace.enumerationIcons|archive-svgrepo-com"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -2972,72 +2179,16 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#25 - Epic",
-                                        "elements": [
-                                            "#15 - Enabler",
-                                            "#25 - Epic"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#15 - Enabler",
-                                                    "value": "circle-002-yellow"
-                                                },
-                                                {
-                                                    "key": "#25 - Epic",
-                                                    "value": "circle-005-lightblue"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#15 - Enabler",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Bef\u00e4higer"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Enabler"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Epic",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Epic"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Epic"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - Enabler",
+                                                "icon": "circle-002-yellow"
+                                            },
+                                            {
+                                                "value": "#25 - Epic",
+                                                "icon": "circle-005-lightblue"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -3178,9 +2329,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -3206,9 +2355,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -3234,9 +2381,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -3259,9 +2404,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -3361,124 +2504,24 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#15 - none",
-                                        "elements": [
-                                            "#15 - none",
-                                            "#25 - potential",
-                                            "#35 - date",
-                                            "#45 - accept"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - date",
-                                                    "value": "lightning-001-red"
-                                                },
-                                                {
-                                                    "key": "#25 - potential",
-                                                    "value": "x-111-cplace-exclamation-triangle"
-                                                },
-                                                {
-                                                    "key": "#45 - accept",
-                                                    "value": "x-112-cplace-square-green-check"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - date",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Datumskonflikt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Date Conflict"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - potential",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "M\u00f6gliche Konflikt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Potential Conflict"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#45 - accept",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Akzeptierter Konflikt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Accepted Conflict"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - none",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "keine Konflikte"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "no conflicts"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - none",
+                                                "icon": "circle-005-lightblue"
+                                            },
+                                            {
+                                                "value": "#25 - potential",
+                                                "icon": "x-111-cplace-exclamation-triangle"
+                                            },
+                                            {
+                                                "value": "#35 - date",
+                                                "icon": "lightning-001-red"
+                                            },
+                                            {
+                                                "value": "#45 - accept",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -3594,72 +2637,16 @@
                                     },
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - MVP",
-                                            "#25 - Persevere"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "#15 - MVP",
-                                                    "value": "page-no-status"
-                                                },
-                                                {
-                                                    "key": "#25 - Persevere",
-                                                    "value": "page-not-relevant"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#15 - MVP",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "MVP"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "MVP"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Persevere",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Persevere"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Persevere"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - MVP",
+                                                "icon": "page-no-status"
+                                            },
+                                            {
+                                                "value": "#25 - Persevere",
+                                                "icon": "page-not-relevant"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 }
@@ -4208,85 +3195,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - PI Milestone",
-                                            "#25 - Fixed-date Milestone",
-                                            "#35 - Learning Milestone"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - Fixed-date Milestone",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Fixiertes Datum"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Fixed-Date Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - PI Milestone",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "PI Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "PI Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - Learning Milestone",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Learning Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Learning Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - PI Milestone",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#25 - Fixed-date Milestone",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#35 - Learning Milestone",
+                                                "icon": "page-not-relevant"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -4354,85 +3276,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#25 - SPR",
-                                            "#35 - Portfolio Sync",
-                                            "#45 - PB"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#45 - PB",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Participatory Budgeting"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Participatory Budgeting"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - SPR",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Strategisches Portfolio Review"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Strategic Portfolio Review"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - Portfolio Sync",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Portfolio Sync"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Portfolio Sync"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#25 - SPR",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#35 - Portfolio Sync",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#45 - PB",
+                                                "icon": "page-not-relevant"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -4504,9 +3361,7 @@
                                             "1.0",
                                             "2.0",
                                             "3.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 }
@@ -4875,85 +3730,20 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#35 - planned",
-                                        "elements": [
-                                            "#15 - done",
-                                            "#25 - active",
-                                            "#35 - planned"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - active",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Aktiv"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Active"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - done",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Abgeschlossen"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Done"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - planned",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Geplant"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Planned"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - done",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#25 - active",
+                                                "icon": "page-not-relevant"
+                                            },
+                                            {
+                                                "value": "#35 - planned",
+                                                "icon": "page-not-relevant"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -5169,72 +3959,16 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "scapability",
-                                        "elements": [
-                                            "capability",
-                                            "enabler"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "enabler",
-                                                    "value": "circle-002-yellow"
-                                                },
-                                                {
-                                                    "key": "capability",
-                                                    "value": "circle-005-lightblue"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "enabler",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Enabler"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Enabler"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "capability",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Capability"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Capability"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "capability",
+                                                "icon": "circle-005-lightblue"
+                                            },
+                                            {
+                                                "value": "enabler",
+                                                "icon": "circle-002-yellow"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -5248,229 +3982,44 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s#10 - Draft",
-                                        "elements": [
-                                            "#10 - Draft",
-                                            "#15 - Funnel",
-                                            "#25 - Analyzing",
-                                            "#35 - Backlog",
-                                            "#45 - Implementing",
-                                            "#55 - Validating",
-                                            "#65 - Deploying",
-                                            "#75 - Releasing",
-                                            "#85 - Done"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#55 - Validating",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Validating on staging"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Validating on staging"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#85 - Done",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Done"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Done"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - Funnel",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Funnel"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Funnel"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#10 - Draft",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Entwurf"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Draft"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#65 - Deploying",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Deploying to production"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Deploying to production"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#75 - Releasing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Releasing"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Releasing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#35 - Backlog",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Backlog"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#45 - Implementing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Implementing"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Implementing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Analyzing",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Analyzing"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Analyzing"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#10 - Draft",
+                                                "icon": "cf.cplace.enumerationIcons|draft-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#15 - Funnel",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#25 - Analyzing",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#35 - Backlog",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#45 - Implementing",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#55 - Validating",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#65 - Deploying",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#75 - Releasing",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            },
+                                            {
+                                                "value": "#85 - Done",
+                                                "icon": "cf.cplace.enumerationIcons|filter-svgrepo-com"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -5507,9 +4056,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -5532,9 +4079,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -5557,9 +4102,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -5582,9 +4125,7 @@
                                             "8.0",
                                             "13.0",
                                             "20.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -5825,37 +4366,9 @@
                                     },
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": "#25 - conflict",
-                                        "element2icon": {
-                                            "entry": {
-                                                "key": "#25 - conflict",
-                                                "value": "lightning-001-red"
-                                            }
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": {
-                                                "key": "#25 - conflict",
-                                                "value": {
-                                                    "localizations": {
-                                                        "entry": [
-                                                            {
-                                                                "key": "de",
-                                                                "value": {
-                                                                    "language": "de",
-                                                                    "value": "Ungel\u00f6ster Konflikt"
-                                                                }
-                                                            },
-                                                            {
-                                                                "key": "en",
-                                                                "value": {
-                                                                    "language": "en",
-                                                                    "value": "Unresolved Conflict"
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
+                                        "element": {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red"
                                         }
                                     },
                                     "multiplicity": "maximalOne"
@@ -5934,61 +4447,16 @@
                                         "de": "\"Verbunden mit\" - lose Abh\u00e4ngigkeit ohne potentielle Konflikte\n\"Blockiert durch\" - Abh\u00e4ngigkeit, die zeitliche Konflikte ausl\u00f6sen kann"
                                     },
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "blocked by",
-                                            "related to"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "blocked by",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "blockiert durch"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "blocked by"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "related to",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "verbunden mit"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "related to"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "blocked by",
+                                                "icon": "lightning-001-red"
+                                            },
+                                            {
+                                                "value": "related to",
+                                                "icon": "lightning-001-red"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -6022,100 +4490,20 @@
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
                                         "defaultValues": "s15 - identified",
-                                        "elements": [
-                                            "15 - identified",
-                                            "25 - conflict",
-                                            "35 - resolved"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "15 - identified",
-                                                    "value": "lightning-009-white"
-                                                },
-                                                {
-                                                    "key": "25 - conflict",
-                                                    "value": "lightning-001-red"
-                                                },
-                                                {
-                                                    "key": "35 - resolved",
-                                                    "value": "x-112-cplace-square-green-check"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "15 - identified",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Identifziert"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Identified"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "25 - conflict",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Konflikt"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Conflict"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "35 - resolved",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Konflikt gel\u00f6st"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Conflict resolved"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "15 - identified",
+                                                "icon": "lightning-009-white"
+                                            },
+                                            {
+                                                "value": "25 - conflict",
+                                                "icon": "lightning-001-red"
+                                            },
+                                            {
+                                                "value": "35 - resolved",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -6206,85 +4594,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - PI Meilenstein",
-                                            "#25 - Fixiertes Datum",
-                                            "#35 - Learning Meilenstein"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - Learning Meilenstein",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Learning Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Learning Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Fixiertes Datum",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Fixiertes Datum"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Fixed-Date Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - PI Meilenstein",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "PI Meilenstein"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "PI Milestone"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - PI Meilenstein",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            },
+                                            {
+                                                "value": "#25 - Fixiertes Datum",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            },
+                                            {
+                                                "value": "#35 - Learning Meilenstein",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "exactlyOne"
                                 },
@@ -6507,85 +4830,20 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - Solution",
-                                            "#25 - Program",
-                                            "#35 - Team"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#35 - Team",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Team"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Team"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - Solution",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Solution"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Solution"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#25 - Program",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Program"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Program"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - Solution",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            },
+                                            {
+                                                "value": "#25 - Program",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            },
+                                            {
+                                                "value": "#35 - Team",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -6636,9 +4894,7 @@
                                             "8.0",
                                             "9.0",
                                             "10.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -6667,9 +4923,7 @@
                                             "8.0",
                                             "9.0",
                                             "10.0"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": null
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -6682,61 +4936,16 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "#15 - Committed",
-                                            "#25 - Uncommitted"
-                                        ],
-                                        "element2icon": null,
-                                        "element2localizedLabel": {
-                                            "entry": [
-                                                {
-                                                    "key": "#25 - Uncommitted",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Uncommitted"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Uncommitted"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "key": "#15 - Committed",
-                                                    "value": {
-                                                        "localizations": {
-                                                            "entry": [
-                                                                {
-                                                                    "key": "de",
-                                                                    "value": {
-                                                                        "language": "de",
-                                                                        "value": "Committed"
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "key": "en",
-                                                                    "value": {
-                                                                        "language": "en",
-                                                                        "value": "Committed"
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "element": [
+                                            {
+                                                "value": "#15 - Committed",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            },
+                                            {
+                                                "value": "#25 - Uncommitted",
+                                                "icon": "x-112-cplace-square-green-check"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },
@@ -6864,23 +5073,16 @@
                                     "localizedShortName": null,
                                     "shortHelp": null,
                                     "textEnumerationConstraint": {
-                                        "elements": [
-                                            "Accepted",
-                                            "Not Accepted"
-                                        ],
-                                        "element2icon": {
-                                            "entry": [
-                                                {
-                                                    "key": "Not Accepted",
-                                                    "value": "circle-001-red"
-                                                },
-                                                {
-                                                    "key": "Accepted",
-                                                    "value": "circle-003-green"
-                                                }
-                                            ]
-                                        },
-                                        "element2localizedLabel": null
+                                        "element": [
+                                            {
+                                                "value": "Accepted",
+                                                "icon": "circle-003-green"
+                                            },
+                                            {
+                                                "value": "Not Accepted",
+                                                "icon": "circle-001-red"
+                                            }
+                                        ]
                                     },
                                     "multiplicity": "maximalOne"
                                 },

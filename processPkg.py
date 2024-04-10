@@ -208,9 +208,6 @@ def add_mandatory_elements(root, parent_map):
             type_parent = parent_map[type_element]
             type_parent.remove(type_element)
 
-
-
-    # find all workspace elements
     workspaces = root.findall('.//workspace')
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
@@ -415,6 +412,69 @@ def rewrite(root, parent_map):
         # move the multiplicity element to the attribute element
         attribute.append(multiplicity)
         constraint.remove(multiplicity)
+
+    parent_map = get_parent_map(root)
+
+    element2localized_labels = {}
+    element2icon = {}
+    elements = []
+
+    for element_to_icon in root.findall('.//element2icon/entry'):
+        element = element_to_icon.find('.//key').text
+        icon = element_to_icon.find('.//value').text
+        element2icon[element] = icon
+
+    for element_to_icon in root.findall('.//element2icon'):
+        parent_map[element_to_icon].remove(element_to_icon)
+
+    for element_to_localized_label in root.findall('.//element2localizedLabel/entry'):
+        element = element_to_localized_label.find('.//key').text
+        localized_labels = []
+        for entry in element_to_localized_label.findall('.//value/localizations/entry'):
+            language = entry.find('.//key').text
+            label = entry.find('.//value/value').text
+            localized_label = {language: label}
+            localized_labels.append(localized_label)
+        element2localized_labels[element] = localized_labels
+        parent_map[element_to_localized_label].remove(element_to_localized_label)
+
+    for element_to_localized_label in root.findall('.//element2localizedLabel'):
+        parent_map[element_to_localized_label].remove(element_to_localized_label)
+
+    for element in root.findall('.//textEnumerationConstraint/elements'):
+        element_value = element.text
+        elements.append(element_value)
+        # if element_value is in element2icon
+        if element_value in element2icon:
+            icon = element2icon[element_value]
+        if element_value in element2localized_labels:
+            localized_labels = element2localized_labels[element_value]
+
+        new_element = ET.Element('element')
+        new_value = ET.Element('value')
+        new_value.text = element_value
+        new_element.append(new_value)
+        if icon is not None:
+            add_element(new_element, 'icon', icon)
+
+        if localized_labels is not None:
+            new_localized_name = ET.Element('localizedName')
+            for localized_label in localized_labels:
+                new_localization = ET.Element(localized_label.get('language'))
+                new_localization.text = localized_label.get('label')
+                new_localized_name.append(new_localization)
+            new_element.append(new_localized_name)
+
+        parent_map[element].append(new_element)
+        parent_map[element].remove(element)
+
+
+    for element in root.findall('.//numberEnumerationConstraint/elements'):
+        elements.append(element.text)
+
+    print(elements)
+    print(element2icon)
+    print(element2localized_labels)
 
 
 def remove_slots(root, parent_map, slots_to_be_retained):

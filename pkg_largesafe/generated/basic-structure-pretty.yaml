@@ -105,99 +105,19 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#15 - analysis
-            element2icon:
-              entry:
-              - key: '#35 - in progress'
-                value: harvey-ball-green-050
-              - key: '#15 - analysis'
-                value: harvey-ball-green-000
-              - key: '#45 - done'
-                value: harvey-ball-green-100
-              - key: '#55 - released'
-                value: harvey-ball-green-100
-              - key: '#25 - backlog'
-                value: harvey-ball-green-025
-            element2localizedLabel:
-              entry:
-              - key: '#35 - in progress'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: In Bearbeitung
-                    - key: en
-                      value:
-                        language: en
-                        value: In Progress
-              - key: '#65 - obsolete'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "Nicht ben\xF6tigt"
-                    - key: en
-                      value:
-                        language: en
-                        value: Obsolete
-              - key: '#15 - analysis'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Analyse
-                    - key: en
-                      value:
-                        language: en
-                        value: Analysis
-              - key: '#45 - done'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Erledigt
-                    - key: en
-                      value:
-                        language: en
-                        value: Done
-              - key: '#55 - released'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Ausgeliefert
-                    - key: en
-                      value:
-                        language: en
-                        value: Released
-              - key: '#25 - backlog'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Backlog
-                    - key: en
-                      value:
-                        language: en
-                        value: Backlog
-            elements:
-            - '#15 - analysis'
-            - '#25 - backlog'
-            - '#35 - in progress'
-            - '#45 - done'
-            - '#55 - released'
-            - '#65 - obsolete'
+            element:
+            - icon: harvey-ball-green-000
+              value: '#15 - analysis'
+            - icon: harvey-ball-green-025
+              value: '#25 - backlog'
+            - icon: harvey-ball-green-050
+              value: '#35 - in progress'
+            - icon: harvey-ball-green-100
+              value: '#45 - done'
+            - icon: harvey-ball-green-100
+              value: '#55 - released'
+            - icon: harvey-ball-green-100
+              value: '#65 - obsolete'
         - localizedName:
             de: Fortschritt
             en: Progress
@@ -329,25 +249,9 @@ package:
           name: cf.cplace.solution.safe.conflictState
           shortHelp: null
           textEnumerationConstraint:
-            element2icon:
-              entry:
-                key: '#25 - conflict'
-                value: lightning-001-red
-            element2localizedLabel:
-              entry:
-                key: '#25 - conflict'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Blockiert (vermutlich)
-                    - key: en
-                      value:
-                        language: en
-                        value: Blocked (likely)
-            elements: '#25 - conflict'
+            element:
+              icon: lightning-001-red
+              value: '#25 - conflict'
         - booleanConstraint:
             defaultValues: bfalse
           localizedName:
@@ -391,8 +295,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -413,8 +315,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -435,8 +335,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -457,8 +355,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -491,41 +387,11 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: sfeature
-            element2icon:
-              entry:
-              - key: enabler
-                value: circle-002-yellow
-              - key: feature
-                value: circle-005-lightblue
-            element2localizedLabel:
-              entry:
-              - key: enabler
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Enabler
-                    - key: en
-                      value:
-                        language: en
-                        value: Enabler
-              - key: feature
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Feature
-                    - key: en
-                      value:
-                        language: en
-                        value: Feature
-            elements:
-            - feature
-            - enabler
+            element:
+            - icon: circle-005-lightblue
+              value: feature
+            - icon: circle-002-yellow
+              value: enabler
         - localizedName:
             de: Teams
             en: Teams
@@ -663,56 +529,13 @@ package:
           name: cf.cplace.solution.safe.manualPrioritization
           shortHelp: null
           textEnumerationConstraint:
-            element2icon:
-              entry:
-              - key: high
-                value: trend-010-upwards
-              - key: medium
-                value: trend-020-equal
-              - key: low
-                value: trend-030-downwards
-            element2localizedLabel:
-              entry:
-              - key: high
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Hoch
-                    - key: en
-                      value:
-                        language: en
-                        value: High
-              - key: medium
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Medium
-                    - key: en
-                      value:
-                        language: en
-                        value: Medium
-              - key: low
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Niedrig
-                    - key: en
-                      value:
-                        language: en
-                        value: Low
-            elements:
-            - high
-            - medium
-            - low
+            element:
+            - icon: trend-010-upwards
+              value: high
+            - icon: trend-020-equal
+              value: medium
+            - icon: trend-030-downwards
+              value: low
         - dateConstraint:
             dateFormat: DAY_YEAR_LONG
             specificity: DAY
@@ -818,49 +641,13 @@ package:
           name: cf.cplace.solution.safe.type
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#35 - Learning Meilenstein'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Learning Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: Learning Milestone
-              - key: '#25 - Fixiertes Datum'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Fixiertes Datum
-                    - key: en
-                      value:
-                        language: en
-                        value: Fixed-Date Milestone
-              - key: '#15 - PI Meilenstein'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: PI Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: PI Milestone
-            elements:
-            - '#15 - PI Meilenstein'
-            - '#25 - Fixiertes Datum'
-            - '#35 - Learning Meilenstein'
+            element:
+            - icon: trend-030-downwards
+              value: '#15 - PI Meilenstein'
+            - icon: trend-030-downwards
+              value: '#25 - Fixiertes Datum'
+            - icon: trend-030-downwards
+              value: '#35 - Learning Meilenstein'
         - localizedName:
             de: Programm
             en: Program
@@ -1069,84 +856,17 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#10 - analysis
-            element2icon:
-              entry:
-              - key: '#20 - backlog'
-                value: harvey-ball-025
-              - key: '#50 - done'
-                value: harvey-ball-100
-              - key: '#40 - in progress'
-                value: harvey-ball-075
-              - key: '#10 - analysis'
-                value: harvey-ball-000
-            element2localizedLabel:
-              entry:
-              - key: '#20 - backlog'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Backlog
-                    - key: en
-                      value:
-                        language: en
-                        value: Backlog
-              - key: '#60 - obsolete'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "Nicht ben\xF6tigt"
-                    - key: en
-                      value:
-                        language: en
-                        value: Obsolete
-              - key: '#40 - in progress'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: In Bearbeitung
-                    - key: en
-                      value:
-                        language: en
-                        value: In Progress
-              - key: '#10 - analysis'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Analyse
-                    - key: en
-                      value:
-                        language: en
-                        value: Analysis
-              - key: '#50 - done'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Fertig
-                    - key: en
-                      value:
-                        language: en
-                        value: Done
-            elements:
-            - '#10 - analysis'
-            - '#20 - backlog'
-            - '#40 - in progress'
-            - '#50 - done'
-            - '#60 - obsolete'
+            element:
+            - icon: harvey-ball-000
+              value: '#10 - analysis'
+            - icon: harvey-ball-025
+              value: '#20 - backlog'
+            - icon: harvey-ball-075
+              value: '#40 - in progress'
+            - icon: harvey-ball-100
+              value: '#50 - done'
+            - icon: harvey-ball-100
+              value: '#60 - obsolete'
         - localizedName:
             de: Story Points
             en: Story Points
@@ -1557,56 +1277,13 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#15 - requested
-            element2icon:
-              entry:
-              - key: '#25 - accepted'
-                value: harvey-ball-green-100
-              - key: '#15 - requested'
-                value: harvey-ball-green-000
-              - key: '#35 - resolved'
-                value: harvey-ball-green-100
-            element2localizedLabel:
-              entry:
-              - key: '#25 - accepted'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Akzeptiert
-                    - key: en
-                      value:
-                        language: en
-                        value: Accepted
-              - key: '#15 - requested'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Angefragt
-                    - key: en
-                      value:
-                        language: en
-                        value: Requested
-              - key: '#35 - resolved'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Erledigt
-                    - key: en
-                      value:
-                        language: en
-                        value: Resolved
-            elements:
-            - '#15 - requested'
-            - '#25 - accepted'
-            - '#35 - resolved'
+            element:
+            - icon: harvey-ball-green-000
+              value: '#15 - requested'
+            - icon: harvey-ball-green-100
+              value: '#25 - accepted'
+            - icon: harvey-ball-green-100
+              value: '#35 - resolved'
         - localizedName:
             de: Rolle
             en: Role
@@ -1735,8 +1412,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -1755,8 +1430,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -1845,131 +1518,23 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#10 - Draft
-            element2icon:
-              entry:
-              - key: '#25 - Reviewing'
-                value: cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com
-              - key: '#55 - Implementing'
-                value: cf.cplace.enumerationIcons|process-graph-svgrepo-com
-              - key: '#15 - Funnel'
-                value: cf.cplace.enumerationIcons|filter-svgrepo-com
-              - key: '#45 - Backlog'
-                value: cf.cplace.enumerationIcons|backlog-svgrepo-com
-              - key: '#10 - Draft'
-                value: cf.cplace.enumerationIcons|draft-svgrepo-com
-              - key: '#35 - Analyzing'
-                value: cf.cplace.enumerationIcons|analyze-svgrepo-com
-              - key: '#75 - Archived'
-                value: cf.cplace.enumerationIcons|archive-svgrepo-com
-              - key: '#65 - Done'
-                value: cf.cplace.enumerationIcons|shield-done-svgrepo-com
-            element2localizedLabel:
-              entry:
-              - key: '#25 - Reviewing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "\xDCberpr\xFCfung"
-                    - key: en
-                      value:
-                        language: en
-                        value: Reviewing
-              - key: '#55 - Implementing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Implementierung
-                    - key: en
-                      value:
-                        language: en
-                        value: Implementing
-              - key: '#15 - Funnel'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Trichter
-                    - key: en
-                      value:
-                        language: en
-                        value: Funnel
-              - key: '#45 - Backlog'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Backlog
-                    - key: en
-                      value:
-                        language: en
-                        value: Backlog
-              - key: '#10 - Draft'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Entwurf
-                    - key: en
-                      value:
-                        language: en
-                        value: Draft
-              - key: '#35 - Analyzing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Analyse
-                    - key: en
-                      value:
-                        language: en
-                        value: Analyzing
-              - key: '#75 - Archived'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Archiviert
-                    - key: en
-                      value:
-                        language: en
-                        value: Archived
-              - key: '#65 - Done'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Abgeschlossen
-                    - key: en
-                      value:
-                        language: en
-                        value: Done
-            elements:
-            - '#10 - Draft'
-            - '#15 - Funnel'
-            - '#25 - Reviewing'
-            - '#35 - Analyzing'
-            - '#45 - Backlog'
-            - '#55 - Implementing'
-            - '#65 - Done'
-            - '#75 - Archived'
+            element:
+            - icon: cf.cplace.enumerationIcons|draft-svgrepo-com
+              value: '#10 - Draft'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#15 - Funnel'
+            - icon: cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com
+              value: '#25 - Reviewing'
+            - icon: cf.cplace.enumerationIcons|analyze-svgrepo-com
+              value: '#35 - Analyzing'
+            - icon: cf.cplace.enumerationIcons|backlog-svgrepo-com
+              value: '#45 - Backlog'
+            - icon: cf.cplace.enumerationIcons|process-graph-svgrepo-com
+              value: '#55 - Implementing'
+            - icon: cf.cplace.enumerationIcons|shield-done-svgrepo-com
+              value: '#65 - Done'
+            - icon: cf.cplace.enumerationIcons|archive-svgrepo-com
+              value: '#75 - Archived'
         - customConstraint:
             additionalConstraintData: "{\"workflowData\":{\"workflowStates\":\"[{\\\
               \"internalName\\\":\\\"#15 - Funnel\\\",\\\"displayName\\\":{\\\"localizations\\\
@@ -2186,41 +1751,11 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#25 - Epic
-            element2icon:
-              entry:
-              - key: '#15 - Enabler'
-                value: circle-002-yellow
-              - key: '#25 - Epic'
-                value: circle-005-lightblue
-            element2localizedLabel:
-              entry:
-              - key: '#15 - Enabler'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "Bef\xE4higer"
-                    - key: en
-                      value:
-                        language: en
-                        value: Enabler
-              - key: '#25 - Epic'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Epic
-                    - key: en
-                      value:
-                        language: en
-                        value: Epic
-            elements:
-            - '#15 - Enabler'
-            - '#25 - Epic'
+            element:
+            - icon: circle-002-yellow
+              value: '#15 - Enabler'
+            - icon: circle-005-lightblue
+              value: '#25 - Epic'
         - localizedName:
             de: Beschreibung
             en: Description
@@ -2350,8 +1885,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -2372,8 +1905,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -2394,8 +1925,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -2414,8 +1943,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -2501,69 +2028,15 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#15 - none
-            element2icon:
-              entry:
-              - key: '#35 - date'
-                value: lightning-001-red
-              - key: '#25 - potential'
-                value: x-111-cplace-exclamation-triangle
-              - key: '#45 - accept'
-                value: x-112-cplace-square-green-check
-            element2localizedLabel:
-              entry:
-              - key: '#35 - date'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Datumskonflikt
-                    - key: en
-                      value:
-                        language: en
-                        value: Date Conflict
-              - key: '#25 - potential'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "M\xF6gliche Konflikt"
-                    - key: en
-                      value:
-                        language: en
-                        value: Potential Conflict
-              - key: '#45 - accept'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Akzeptierter Konflikt
-                    - key: en
-                      value:
-                        language: en
-                        value: Accepted Conflict
-              - key: '#15 - none'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: keine Konflikte
-                    - key: en
-                      value:
-                        language: en
-                        value: no conflicts
-            elements:
-            - '#15 - none'
-            - '#25 - potential'
-            - '#35 - date'
-            - '#45 - accept'
+            element:
+            - icon: circle-005-lightblue
+              value: '#15 - none'
+            - icon: x-111-cplace-exclamation-triangle
+              value: '#25 - potential'
+            - icon: lightning-001-red
+              value: '#35 - date'
+            - icon: x-112-cplace-square-green-check
+              value: '#45 - accept'
         - localizedName:
             de: Fortschritt
             en: Progress
@@ -2647,41 +2120,11 @@ package:
           name: cf.cplace.solution.safe.implementationPhase
           shortHelp: null
           textEnumerationConstraint:
-            element2icon:
-              entry:
-              - key: '#15 - MVP'
-                value: page-no-status
-              - key: '#25 - Persevere'
-                value: page-not-relevant
-            element2localizedLabel:
-              entry:
-              - key: '#15 - MVP'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: MVP
-                    - key: en
-                      value:
-                        language: en
-                        value: MVP
-              - key: '#25 - Persevere'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Persevere
-                    - key: en
-                      value:
-                        language: en
-                        value: Persevere
-            elements:
-            - '#15 - MVP'
-            - '#25 - Persevere'
+            element:
+            - icon: page-no-status
+              value: '#15 - MVP'
+            - icon: page-not-relevant
+              value: '#25 - Persevere'
         iconName: cf-pase
         localizedNamePlural:
           de: Epics
@@ -3076,49 +2519,13 @@ package:
           name: cf.cplace.solution.safe.type
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#25 - Fixed-date Milestone'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Fixiertes Datum
-                    - key: en
-                      value:
-                        language: en
-                        value: Fixed-Date Milestone
-              - key: '#15 - PI Milestone'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: PI Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: PI Milestone
-              - key: '#35 - Learning Milestone'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Learning Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: Learning Milestone
-            elements:
-            - '#15 - PI Milestone'
-            - '#25 - Fixed-date Milestone'
-            - '#35 - Learning Milestone'
+            element:
+            - icon: page-not-relevant
+              value: '#15 - PI Milestone'
+            - icon: page-not-relevant
+              value: '#25 - Fixed-date Milestone'
+            - icon: page-not-relevant
+              value: '#35 - Learning Milestone'
         - dateConstraint:
             dateFormat: DAY_YEAR_LONG
             specificity: DAY
@@ -3165,49 +2572,13 @@ package:
           name: cf.cplace.solution.safe.type
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#45 - PB'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Participatory Budgeting
-                    - key: en
-                      value:
-                        language: en
-                        value: Participatory Budgeting
-              - key: '#25 - SPR'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Strategisches Portfolio Review
-                    - key: en
-                      value:
-                        language: en
-                        value: Strategic Portfolio Review
-              - key: '#35 - Portfolio Sync'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Portfolio Sync
-                    - key: en
-                      value:
-                        language: en
-                        value: Portfolio Sync
-            elements:
-            - '#25 - SPR'
-            - '#35 - Portfolio Sync'
-            - '#45 - PB'
+            element:
+            - icon: page-not-relevant
+              value: '#25 - SPR'
+            - icon: page-not-relevant
+              value: '#35 - Portfolio Sync'
+            - icon: page-not-relevant
+              value: '#45 - PB'
         - localizedName:
             de: Protokoll
             en: Protocol
@@ -3252,8 +2623,6 @@ package:
           multiplicity: exactlyOne
           name: cf.cplace.solution.safe.horizon
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '0.0'
             - '1.0'
@@ -3528,49 +2897,13 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#35 - planned
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#25 - active'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Aktiv
-                    - key: en
-                      value:
-                        language: en
-                        value: Active
-              - key: '#15 - done'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Abgeschlossen
-                    - key: en
-                      value:
-                        language: en
-                        value: Done
-              - key: '#35 - planned'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Geplant
-                    - key: en
-                      value:
-                        language: en
-                        value: Planned
-            elements:
-            - '#15 - done'
-            - '#25 - active'
-            - '#35 - planned'
+            element:
+            - icon: page-not-relevant
+              value: '#15 - done'
+            - icon: page-not-relevant
+              value: '#25 - active'
+            - icon: page-not-relevant
+              value: '#35 - planned'
         - localizedName:
             de: Confidence Vote
             en: Confidence Vote
@@ -3726,41 +3059,11 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: scapability
-            element2icon:
-              entry:
-              - key: enabler
-                value: circle-002-yellow
-              - key: capability
-                value: circle-005-lightblue
-            element2localizedLabel:
-              entry:
-              - key: enabler
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Enabler
-                    - key: en
-                      value:
-                        language: en
-                        value: Enabler
-              - key: capability
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Capability
-                    - key: en
-                      value:
-                        language: en
-                        value: Capability
-            elements:
-            - capability
-            - enabler
+            element:
+            - icon: circle-005-lightblue
+              value: capability
+            - icon: circle-002-yellow
+              value: enabler
         - localizedName:
             de: Status
             en: State
@@ -3770,127 +3073,25 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s#10 - Draft
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#55 - Validating'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Validating on staging
-                    - key: en
-                      value:
-                        language: en
-                        value: Validating on staging
-              - key: '#85 - Done'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Done
-                    - key: en
-                      value:
-                        language: en
-                        value: Done
-              - key: '#15 - Funnel'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Funnel
-                    - key: en
-                      value:
-                        language: en
-                        value: Funnel
-              - key: '#10 - Draft'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Entwurf
-                    - key: en
-                      value:
-                        language: en
-                        value: Draft
-              - key: '#65 - Deploying'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Deploying to production
-                    - key: en
-                      value:
-                        language: en
-                        value: Deploying to production
-              - key: '#75 - Releasing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Releasing
-                    - key: en
-                      value:
-                        language: en
-                        value: Releasing
-              - key: '#35 - Backlog'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Backlog
-                    - key: en
-                      value:
-                        language: en
-                        value: Backlog
-              - key: '#45 - Implementing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Implementing
-                    - key: en
-                      value:
-                        language: en
-                        value: Implementing
-              - key: '#25 - Analyzing'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Analyzing
-                    - key: en
-                      value:
-                        language: en
-                        value: Analyzing
-            elements:
-            - '#10 - Draft'
-            - '#15 - Funnel'
-            - '#25 - Analyzing'
-            - '#35 - Backlog'
-            - '#45 - Implementing'
-            - '#55 - Validating'
-            - '#65 - Deploying'
-            - '#75 - Releasing'
-            - '#85 - Done'
+            element:
+            - icon: cf.cplace.enumerationIcons|draft-svgrepo-com
+              value: '#10 - Draft'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#15 - Funnel'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#25 - Analyzing'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#35 - Backlog'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#45 - Implementing'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#55 - Validating'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#65 - Deploying'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#75 - Releasing'
+            - icon: cf.cplace.enumerationIcons|filter-svgrepo-com
+              value: '#85 - Done'
         - localizedName:
             de: WSJF
             en: WSJF
@@ -3908,8 +3109,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -3928,8 +3127,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.timeCriticality
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -3948,8 +3145,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.riskReduction
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -3968,8 +3163,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.jobSize
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -4159,25 +3352,9 @@ package:
           name: cf.cplace.solution.safe.conflictState
           shortHelp: null
           textEnumerationConstraint:
-            element2icon:
-              entry:
-                key: '#25 - conflict'
-                value: lightning-001-red
-            element2localizedLabel:
-              entry:
-                key: '#25 - conflict'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "Ungel\xF6ster Konflikt"
-                    - key: en
-                      value:
-                        language: en
-                        value: Unresolved Conflict
-            elements: '#25 - conflict'
+            element:
+              icon: lightning-001-red
+              value: '#25 - conflict'
         - localizedName:
             de: Features
             en: Features
@@ -4237,36 +3414,11 @@ package:
 
               "blocked by" - dependency that can lead to timing conflicts'
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: blocked by
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: blockiert durch
-                    - key: en
-                      value:
-                        language: en
-                        value: blocked by
-              - key: related to
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: verbunden mit
-                    - key: en
-                      value:
-                        language: en
-                        value: related to
-            elements:
-            - blocked by
-            - related to
+            element:
+            - icon: lightning-001-red
+              value: blocked by
+            - icon: lightning-001-red
+              value: related to
         - localizedName:
             de: B
             en: B
@@ -4291,56 +3443,13 @@ package:
           shortHelp: null
           textEnumerationConstraint:
             defaultValues: s15 - identified
-            element2icon:
-              entry:
-              - key: 15 - identified
-                value: lightning-009-white
-              - key: 25 - conflict
-                value: lightning-001-red
-              - key: 35 - resolved
-                value: x-112-cplace-square-green-check
-            element2localizedLabel:
-              entry:
-              - key: 15 - identified
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Identifziert
-                    - key: en
-                      value:
-                        language: en
-                        value: Identified
-              - key: 25 - conflict
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Konflikt
-                    - key: en
-                      value:
-                        language: en
-                        value: Conflict
-              - key: 35 - resolved
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: "Konflikt gel\xF6st"
-                    - key: en
-                      value:
-                        language: en
-                        value: Conflict resolved
-            elements:
-            - 15 - identified
-            - 25 - conflict
-            - 35 - resolved
+            element:
+            - icon: lightning-009-white
+              value: 15 - identified
+            - icon: lightning-001-red
+              value: 25 - conflict
+            - icon: x-112-cplace-square-green-check
+              value: 35 - resolved
         - localizedName:
             de: Beschreibung
             en: Description
@@ -4404,49 +3513,13 @@ package:
           name: cf.cplace.solution.safe.type
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#35 - Learning Meilenstein'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Learning Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: Learning Milestone
-              - key: '#25 - Fixiertes Datum'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Fixiertes Datum
-                    - key: en
-                      value:
-                        language: en
-                        value: Fixed-Date Milestone
-              - key: '#15 - PI Meilenstein'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: PI Meilenstein
-                    - key: en
-                      value:
-                        language: en
-                        value: PI Milestone
-            elements:
-            - '#15 - PI Meilenstein'
-            - '#25 - Fixiertes Datum'
-            - '#35 - Learning Meilenstein'
+            element:
+            - icon: x-112-cplace-square-green-check
+              value: '#15 - PI Meilenstein'
+            - icon: x-112-cplace-square-green-check
+              value: '#25 - Fixiertes Datum'
+            - icon: x-112-cplace-square-green-check
+              value: '#35 - Learning Meilenstein'
         - localizedName:
             de: "Relevant F\xFCr"
             en: Relevant For
@@ -4607,49 +3680,13 @@ package:
           name: cf.cplace.solution.safe.SAFeLevel
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#35 - Team'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Team
-                    - key: en
-                      value:
-                        language: en
-                        value: Team
-              - key: '#15 - Solution'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Solution
-                    - key: en
-                      value:
-                        language: en
-                        value: Solution
-              - key: '#25 - Program'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Program
-                    - key: en
-                      value:
-                        language: en
-                        value: Program
-            elements:
-            - '#15 - Solution'
-            - '#25 - Program'
-            - '#35 - Team'
+            element:
+            - icon: x-112-cplace-square-green-check
+              value: '#15 - Solution'
+            - icon: x-112-cplace-square-green-check
+              value: '#25 - Program'
+            - icon: x-112-cplace-square-green-check
+              value: '#35 - Team'
         - localizedName:
             de: SAFe Level Reference
             en: SAFe Level Reference
@@ -4675,8 +3712,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.businessValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '0.0'
             - '1.0'
@@ -4701,8 +3736,6 @@ package:
           multiplicity: maximalOne
           name: cf.cplace.solution.safe.actualValue
           numberEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel: null
             elements:
             - '1.0'
             - '2.0'
@@ -4725,36 +3758,11 @@ package:
           name: cf.cplace.solution.safe.commitment
           shortHelp: null
           textEnumerationConstraint:
-            element2icon: null
-            element2localizedLabel:
-              entry:
-              - key: '#25 - Uncommitted'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Uncommitted
-                    - key: en
-                      value:
-                        language: en
-                        value: Uncommitted
-              - key: '#15 - Committed'
-                value:
-                  localizations:
-                    entry:
-                    - key: de
-                      value:
-                        language: de
-                        value: Committed
-                    - key: en
-                      value:
-                        language: en
-                        value: Committed
-            elements:
-            - '#15 - Committed'
-            - '#25 - Uncommitted'
+            element:
+            - icon: x-112-cplace-square-green-check
+              value: '#15 - Committed'
+            - icon: x-112-cplace-square-green-check
+              value: '#25 - Uncommitted'
         - localizedName:
             de: Statement
             en: Statement
@@ -4845,16 +3853,11 @@ package:
           name: cf.cplace.solution.safe.confidenceVote.result
           shortHelp: null
           textEnumerationConstraint:
-            element2icon:
-              entry:
-              - key: Not Accepted
-                value: circle-001-red
-              - key: Accepted
-                value: circle-003-green
-            element2localizedLabel: null
-            elements:
-            - Accepted
-            - Not Accepted
+            element:
+            - icon: circle-003-green
+              value: Accepted
+            - icon: circle-001-red
+              value: Not Accepted
         - localizedName:
             de: One Finger
             en: One Finger

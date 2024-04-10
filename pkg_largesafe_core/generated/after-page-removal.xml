@@ -4995,162 +4995,30 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#15 - analysis</defaultValues>
-            <elements>#15 - analysis</elements>
-            <elements>#25 - backlog</elements>
-            <elements>#35 - in progress</elements>
-            <elements>#45 - done</elements>
-            <elements>#55 - released</elements>
-            <elements>#65 - obsolete</elements>
-            <element2icon>
-              <entry>
-                <key>#35 - in progress</key>
-                <value>harvey-ball-green-050</value>
-              </entry>
-              <entry>
-                <key>#15 - analysis</key>
-                <value>harvey-ball-green-000</value>
-              </entry>
-              <entry>
-                <key>#45 - done</key>
-                <value>harvey-ball-green-100</value>
-              </entry>
-              <entry>
-                <key>#55 - released</key>
-                <value>harvey-ball-green-100</value>
-              </entry>
-              <entry>
-                <key>#25 - backlog</key>
-                <value>harvey-ball-green-025</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#35 - in progress</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>In Bearbeitung</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>In Progress</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#65 - obsolete</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Nicht benötigt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Obsolete</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - analysis</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Analyse</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Analysis</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#45 - done</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Erledigt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Done</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#55 - released</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Ausgeliefert</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Released</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 - backlog</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - analysis</value>
+              <icon>harvey-ball-green-000</icon>
+            </element>
+            <element>
+              <value>#25 - backlog</value>
+              <icon>harvey-ball-green-025</icon>
+            </element>
+            <element>
+              <value>#35 - in progress</value>
+              <icon>harvey-ball-green-050</icon>
+            </element>
+            <element>
+              <value>#45 - done</value>
+              <icon>harvey-ball-green-100</icon>
+            </element>
+            <element>
+              <value>#55 - released</value>
+              <icon>harvey-ball-green-100</icon>
+            </element>
+            <element>
+              <value>#65 - obsolete</value>
+              <icon>harvey-ball-green-100</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -5330,36 +5198,10 @@
           </localizedShortName>
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>#25 - conflict</elements>
-            <element2icon>
-              <entry>
-                <key>#25 - conflict</key>
-                <value>lightning-001-red</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#25 - conflict</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Blockiert (vermutlich)</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Blocked (likely)</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#25 - conflict</value>
+              <icon>lightning-001-red</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -5431,8 +5273,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -5457,8 +5297,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -5483,8 +5321,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -5509,8 +5345,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -5541,62 +5375,14 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>sfeature</defaultValues>
-            <elements>feature</elements>
-            <elements>enabler</elements>
-            <element2icon>
-              <entry>
-                <key>enabler</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>feature</key>
-                <value>circle-005-lightblue</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>enabler</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Enabler</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Enabler</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>feature</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Feature</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Feature</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>feature</value>
+              <icon>circle-005-lightblue</icon>
+            </element>
+            <element>
+              <value>enabler</value>
+              <icon>circle-002-yellow</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -5783,88 +5569,18 @@
           <localizedShortName />
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>high</elements>
-            <elements>medium</elements>
-            <elements>low</elements>
-            <element2icon>
-              <entry>
-                <key>high</key>
-                <value>trend-010-upwards</value>
-              </entry>
-              <entry>
-                <key>medium</key>
-                <value>trend-020-equal</value>
-              </entry>
-              <entry>
-                <key>low</key>
-                <value>trend-030-downwards</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>high</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Hoch</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>High</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>medium</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Medium</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Medium</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>low</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Niedrig</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Low</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>high</value>
+              <icon>trend-010-upwards</icon>
+            </element>
+            <element>
+              <value>medium</value>
+              <icon>trend-020-equal</icon>
+            </element>
+            <element>
+              <value>low</value>
+              <icon>trend-030-downwards</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -6763,218 +6479,38 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#10 - Draft</defaultValues>
-            <elements>#10 - Draft</elements>
-            <elements>#15 - Funnel</elements>
-            <elements>#25 - Reviewing</elements>
-            <elements>#35 - Analyzing</elements>
-            <elements>#45 - Backlog</elements>
-            <elements>#55 - Implementing</elements>
-            <elements>#65 - Done</elements>
-            <elements>#75 - Archived</elements>
-            <element2icon>
-              <entry>
-                <key>#25 - Reviewing</key>
-                <value>cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#55 - Implementing</key>
-                <value>cf.cplace.enumerationIcons|process-graph-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#15 - Funnel</key>
-                <value>cf.cplace.enumerationIcons|filter-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#45 - Backlog</key>
-                <value>cf.cplace.enumerationIcons|backlog-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#10 - Draft</key>
-                <value>cf.cplace.enumerationIcons|draft-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#35 - Analyzing</key>
-                <value>cf.cplace.enumerationIcons|analyze-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#75 - Archived</key>
-                <value>cf.cplace.enumerationIcons|archive-svgrepo-com</value>
-              </entry>
-              <entry>
-                <key>#65 - Done</key>
-                <value>cf.cplace.enumerationIcons|shield-done-svgrepo-com</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#25 - Reviewing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Überprüfung</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Reviewing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#55 - Implementing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Implementierung</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Implementing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - Funnel</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Trichter</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Funnel</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#45 - Backlog</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#10 - Draft</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Entwurf</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Draft</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#35 - Analyzing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Analyse</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Analyzing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#75 - Archived</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Archiviert</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Archived</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#65 - Done</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Abgeschlossen</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Done</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#10 - Draft</value>
+              <icon>cf.cplace.enumerationIcons|draft-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#15 - Funnel</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#25 - Reviewing</value>
+              <icon>cf.cplace.enumerationIcons|magnifying-glass-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#35 - Analyzing</value>
+              <icon>cf.cplace.enumerationIcons|analyze-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#45 - Backlog</value>
+              <icon>cf.cplace.enumerationIcons|backlog-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#55 - Implementing</value>
+              <icon>cf.cplace.enumerationIcons|process-graph-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#65 - Done</value>
+              <icon>cf.cplace.enumerationIcons|shield-done-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#75 - Archived</value>
+              <icon>cf.cplace.enumerationIcons|archive-svgrepo-com</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -7006,62 +6542,14 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#25 - Epic</defaultValues>
-            <elements>#15 - Enabler</elements>
-            <elements>#25 - Epic</elements>
-            <element2icon>
-              <entry>
-                <key>#15 - Enabler</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>#25 - Epic</key>
-                <value>circle-005-lightblue</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#15 - Enabler</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Befähiger</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Enabler</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 - Epic</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Epic</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Epic</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - Enabler</value>
+              <icon>circle-002-yellow</icon>
+            </element>
+            <element>
+              <value>#25 - Epic</value>
+              <icon>circle-005-lightblue</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -7217,8 +6705,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7243,8 +6729,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7269,8 +6753,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7292,8 +6774,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -7393,110 +6873,22 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#15 - none</defaultValues>
-            <elements>#15 - none</elements>
-            <elements>#25 - potential</elements>
-            <elements>#35 - date</elements>
-            <elements>#45 - accept</elements>
-            <element2icon>
-              <entry>
-                <key>#35 - date</key>
-                <value>lightning-001-red</value>
-              </entry>
-              <entry>
-                <key>#25 - potential</key>
-                <value>x-111-cplace-exclamation-triangle</value>
-              </entry>
-              <entry>
-                <key>#45 - accept</key>
-                <value>x-112-cplace-square-green-check</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#35 - date</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Datumskonflikt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Date Conflict</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 - potential</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Mögliche Konflikt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Potential Conflict</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#45 - accept</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Akzeptierter Konflikt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Accepted Conflict</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - none</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>keine Konflikte</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>no conflicts</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - none</value>
+              <icon>circle-005-lightblue</icon>
+            </element>
+            <element>
+              <value>#25 - potential</value>
+              <icon>x-111-cplace-exclamation-triangle</icon>
+            </element>
+            <element>
+              <value>#35 - date</value>
+              <icon>lightning-001-red</icon>
+            </element>
+            <element>
+              <value>#45 - accept</value>
+              <icon>x-112-cplace-square-green-check</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -7612,62 +7004,14 @@
           </localizedShortName>
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>#15 - MVP</elements>
-            <elements>#25 - Persevere</elements>
-            <element2icon>
-              <entry>
-                <key>#15 - MVP</key>
-                <value>page-no-status</value>
-              </entry>
-              <entry>
-                <key>#25 - Persevere</key>
-                <value>page-not-relevant</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#15 - MVP</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>MVP</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>MVP</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 - Persevere</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Persevere</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Persevere</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - MVP</value>
+              <icon>page-no-status</icon>
+            </element>
+            <element>
+              <value>#25 - Persevere</value>
+              <icon>page-not-relevant</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -15826,75 +15170,18 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#35 - planned</defaultValues>
-            <elements>#15 - done</elements>
-            <elements>#25 - active</elements>
-            <elements>#35 - planned</elements>
-            <element2icon />
-            <element2localizedLabel>
-              <entry>
-                <key>#25 - active</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Aktiv</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Active</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - done</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Abgeschlossen</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Done</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#35 - planned</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Geplant</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Planned</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#15 - done</value>
+              <icon>page-not-relevant</icon>
+            </element>
+            <element>
+              <value>#25 - active</value>
+              <icon>page-not-relevant</icon>
+            </element>
+            <element>
+              <value>#35 - planned</value>
+              <icon>page-not-relevant</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -16021,62 +15308,14 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>scapability</defaultValues>
-            <elements>capability</elements>
-            <elements>enabler</elements>
-            <element2icon>
-              <entry>
-                <key>enabler</key>
-                <value>circle-002-yellow</value>
-              </entry>
-              <entry>
-                <key>capability</key>
-                <value>circle-005-lightblue</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>enabler</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Enabler</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Enabler</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>capability</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Capability</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Capability</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>capability</value>
+              <icon>circle-005-lightblue</icon>
+            </element>
+            <element>
+              <value>enabler</value>
+              <icon>circle-002-yellow</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -16090,207 +15329,42 @@
           <shortHelp />
           <textEnumerationConstraint>
             <defaultValues>s#10 - Draft</defaultValues>
-            <elements>#10 - Draft</elements>
-            <elements>#15 - Funnel</elements>
-            <elements>#25 - Analyzing</elements>
-            <elements>#35 - Backlog</elements>
-            <elements>#45 - Implementing</elements>
-            <elements>#55 - Validating</elements>
-            <elements>#65 - Deploying</elements>
-            <elements>#75 - Releasing</elements>
-            <elements>#85 - Done</elements>
-            <element2icon />
-            <element2localizedLabel>
-              <entry>
-                <key>#55 - Validating</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Validating on staging</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Validating on staging</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#85 - Done</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Done</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Done</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#15 - Funnel</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Funnel</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Funnel</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#10 - Draft</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Entwurf</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Draft</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#65 - Deploying</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Deploying to production</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Deploying to production</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#75 - Releasing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Releasing</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Releasing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#35 - Backlog</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Backlog</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#45 - Implementing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Implementing</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Implementing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-              <entry>
-                <key>#25 - Analyzing</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Analyzing</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Analyzing</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#10 - Draft</value>
+              <icon>cf.cplace.enumerationIcons|draft-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#15 - Funnel</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#25 - Analyzing</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#35 - Backlog</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#45 - Implementing</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#55 - Validating</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#65 - Deploying</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#75 - Releasing</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
+            <element>
+              <value>#85 - Done</value>
+              <icon>cf.cplace.enumerationIcons|filter-svgrepo-com</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>exactlyOne</multiplicity>
         </attributes>
@@ -16326,8 +15400,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -16349,8 +15421,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -16372,8 +15442,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -16395,8 +15463,6 @@
             <elements>8.0</elements>
             <elements>13.0</elements>
             <elements>20.0</elements>
-            <element2icon />
-            <element2localizedLabel />
           </numberEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
@@ -16637,36 +15703,10 @@
           </localizedShortName>
           <shortHelp />
           <textEnumerationConstraint>
-            <elements>#25 - conflict</elements>
-            <element2icon>
-              <entry>
-                <key>#25 - conflict</key>
-                <value>lightning-001-red</value>
-              </entry>
-            </element2icon>
-            <element2localizedLabel>
-              <entry>
-                <key>#25 - conflict</key>
-                <value>
-                  <localizations>
-                    <entry>
-                      <key>de</key>
-                      <value>
-                        <language>de</language>
-                        <value>Ungelöster Konflikt</value>
-                      </value>
-                    </entry>
-                    <entry>
-                      <key>en</key>
-                      <value>
-                        <language>en</language>
-                        <value>Unresolved Conflict</value>
-                      </value>
-                    </entry>
-                  </localizations>
-                </value>
-              </entry>
-            </element2localizedLabel>
+            <element>
+              <value>#25 - conflict</value>
+              <icon>lightning-001-red</icon>
+            </element>
           </textEnumerationConstraint>
           <multiplicity>maximalOne</multiplicity>
         </attributes>
