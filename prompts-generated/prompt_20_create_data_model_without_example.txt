@@ -338,7 +338,7 @@ The following xml schema represents describes a xml format for specifying data m
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="solutionManagement">
+  <xs:element name="package">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="name"/>

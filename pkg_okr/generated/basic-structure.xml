@@ -5,155 +5,152 @@
   </name>
   <shortname />
   <slots>
-    <slot internalName="cf.cplace.okr.okr">
+    <slot internalName="cf.cplace.okr.okr" workspaceName="OKR">
       <name>
         <de>Objectives Key Results</de>
         <en>Objectives Key Results</en>
       </name>
-      <workspace>
-        <name>OKR</name>
-        <types>
-          <typeDef>
-            <name>cf.cplace.solution.okr.cycle</name>
-            <localizedNameSingular>
-              <en>Cycle</en>
-              <de>Zyklus</de>
-            </localizedNameSingular>
-            <attributes>
-              <name>cf.cplace.solution.okr.year</name>
-              <localizedName>
-                <en>Year</en>
-                <de>Jahr</de>
-              </localizedName>
-              <stringConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.quarter</name>
-              <localizedName>
-                <en>Quarter</en>
-                <de>Quartal</de>
-              </localizedName>
-              <stringConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.status</name>
-              <localizedName>
-                <en>Status</en>
-                <de>Status</de>
-              </localizedName>
-              <textEnumerationConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.start</name>
-              <localizedName>
-                <en>Start</en>
-                <de>Start</de>
-              </localizedName>
-              <dateConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.end</name>
-              <localizedName>
-                <en>End</en>
-                <de>Ende</de>
-              </localizedName>
-              <dateConstraint />
-            </attributes>
-          </typeDef>
-          <typeDef>
+      <types>
+        <typeDef>
+          <name>cf.cplace.solution.okr.cycle</name>
+          <localizedNameSingular>
+            <en>Cycle</en>
+            <de>Zyklus</de>
+          </localizedNameSingular>
+          <attributes>
+            <name>cf.cplace.solution.okr.year</name>
+            <localizedName>
+              <en>Year</en>
+              <de>Jahr</de>
+            </localizedName>
+            <stringConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.quarter</name>
+            <localizedName>
+              <en>Quarter</en>
+              <de>Quartal</de>
+            </localizedName>
+            <stringConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.status</name>
+            <localizedName>
+              <en>Status</en>
+              <de>Status</de>
+            </localizedName>
+            <textEnumerationConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.start</name>
+            <localizedName>
+              <en>Start</en>
+              <de>Start</de>
+            </localizedName>
+            <dateConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.end</name>
+            <localizedName>
+              <en>End</en>
+              <de>Ende</de>
+            </localizedName>
+            <dateConstraint />
+          </attributes>
+        </typeDef>
+        <typeDef>
+          <name>cf.cplace.solution.okr.objective</name>
+          <localizedNameSingular>
+            <en>Objective</en>
+            <de>Objective</de>
+          </localizedNameSingular>
+          <attributes>
+            <name>cf.cplace.solution.okr.number</name>
+            <localizedName>
+              <en>Number</en>
+              <de>Nummer</de>
+            </localizedName>
+            <numberConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.title</name>
+            <localizedName>
+              <en>Title</en>
+              <de>Titel</de>
+            </localizedName>
+            <stringConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.accomplished</name>
+            <localizedName>
+              <en>Accomplished</en>
+              <de>Erreicht</de>
+            </localizedName>
+            <textEnumerationConstraint>
+              <defaultValues>s#25 - no</defaultValues>
+            </textEnumerationConstraint>
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.description</name>
+            <localizedName>
+              <en>Description</en>
+              <de>Beschreibung</de>
+            </localizedName>
+            <richStringConstraint />
+          </attributes>
+        </typeDef>
+        <typeDef>
+          <name>cf.cplace.solution.okr.keyResult</name>
+          <localizedNameSingular>
+            <en>Key Result</en>
+            <de>Schlüsselergebnis</de>
+          </localizedNameSingular>
+          <attributes>
+            <name>cf.cplace.solution.okr.number</name>
+            <localizedName>
+              <en>Number</en>
+              <de>Nummer</de>
+            </localizedName>
+            <numberConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.title</name>
+            <localizedName>
+              <en>Title</en>
+              <de>Titel</de>
+            </localizedName>
+            <stringConstraint />
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.gradingForecast</name>
+            <localizedName>
+              <en>Grading Forecast</en>
+              <de>Fortschritt Vorhersage</de>
+            </localizedName>
+            <textEnumerationConstraint />
+          </attributes>
+          <attributes>
             <name>cf.cplace.solution.okr.objective</name>
-            <localizedNameSingular>
+            <localizedName>
               <en>Objective</en>
               <de>Objective</de>
-            </localizedNameSingular>
-            <attributes>
-              <name>cf.cplace.solution.okr.number</name>
-              <localizedName>
-                <en>Number</en>
-                <de>Nummer</de>
-              </localizedName>
-              <numberConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.title</name>
-              <localizedName>
-                <en>Title</en>
-                <de>Titel</de>
-              </localizedName>
-              <stringConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.accomplished</name>
-              <localizedName>
-                <en>Accomplished</en>
-                <de>Erreicht</de>
-              </localizedName>
-              <textEnumerationConstraint>
-                <defaultValues>s#25 - no</defaultValues>
-              </textEnumerationConstraint>
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.description</name>
-              <localizedName>
-                <en>Description</en>
-                <de>Beschreibung</de>
-              </localizedName>
-              <richStringConstraint />
-            </attributes>
-          </typeDef>
-          <typeDef>
-            <name>cf.cplace.solution.okr.keyResult</name>
-            <localizedNameSingular>
-              <en>Key Result</en>
-              <de>Schlüsselergebnis</de>
-            </localizedNameSingular>
-            <attributes>
-              <name>cf.cplace.solution.okr.number</name>
-              <localizedName>
-                <en>Number</en>
-                <de>Nummer</de>
-              </localizedName>
-              <numberConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.title</name>
-              <localizedName>
-                <en>Title</en>
-                <de>Titel</de>
-              </localizedName>
-              <stringConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.gradingForecast</name>
-              <localizedName>
-                <en>Grading Forecast</en>
-                <de>Fortschritt Vorhersage</de>
-              </localizedName>
-              <textEnumerationConstraint />
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.objective</name>
-              <localizedName>
-                <en>Objective</en>
-                <de>Objective</de>
-              </localizedName>
-              <referenceConstraint>
-                <typeNames>cf.cplace.solution.okr.objective</typeNames>
-                <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
-                <localizedInverseRoleName />
-              </referenceConstraint>
-            </attributes>
-            <attributes>
-              <name>cf.cplace.solution.okr.lastUpdate</name>
-              <localizedName>
-                <en>Last Update</en>
-                <de>Letztes Update</de>
-              </localizedName>
-              <dateConstraint />
-            </attributes>
-          </typeDef>
-        </types>
-      </workspace>
+            </localizedName>
+            <referenceConstraint>
+              <typeNames>cf.cplace.solution.okr.objective</typeNames>
+              <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
+              <localizedInverseRoleName />
+            </referenceConstraint>
+          </attributes>
+          <attributes>
+            <name>cf.cplace.solution.okr.lastUpdate</name>
+            <localizedName>
+              <en>Last Update</en>
+              <de>Letztes Update</de>
+            </localizedName>
+            <dateConstraint />
+          </attributes>
+        </typeDef>
+      </types>
     </slot>
   </slots>
 </package>

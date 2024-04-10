@@ -67,7 +67,7 @@ def process_pkg(folder_name):
     with open(folder_name_generated + '/after-page-removal.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
 
-    remove_all_pages(root, parent_map)
+    remove_all_pages(root)
 
     write_type_names(root, folder_name_generated, 'types-after-removal')
     write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
@@ -153,7 +153,6 @@ def add_mandatory_elements(root, parent_map):
         package.append(child)
         root.remove(child)
 
-
     internal_name = root.get('internalName')
     if internal_name is not None:
         package.set('internalName', internal_name)
@@ -169,6 +168,26 @@ def add_mandatory_elements(root, parent_map):
     add_element(package, 'publishDate', '2024-01-25T14:49:25.893+01:00')
 
     add_element(root, 'maps')
+
+    slots = root.findall('.//slot')
+    for slot in slots:
+        workspace = ET.Element('workspace')
+        slot.append(workspace)
+        workspace_name_element = ET.Element('name')
+        workspace_name = slot.get('workspaceName')
+        if workspace_name is not None:
+            workspace_name_element.text = workspace_name
+            workspace.append(workspace_name_element)
+
+            del slot.attrib['workspaceName']
+        else:
+            # print string representation of slot
+            slot_str = ET.tostring(slot, encoding='utf-8', method='xml').decode('utf-8')
+            print("slot without workspaceName: " + slot_str)
+
+        types = slot.find('.//types')
+        workspace.append(types)
+        slot.remove(types)
 
     # find all workspace elements
     workspaces = root.findall('.//workspace')
@@ -309,6 +328,20 @@ def rewrite(root, parent_map):
 
     root.tag = 'package'
 
+    workspaces = root.findall('.//workspace')
+    for workspace in workspaces:
+        slot = parent_map[workspace]
+        workspace_name_element = workspace.find('.//name')
+        workspace_name = workspace_name_element.text
+        workspace.remove(workspace_name_element)
+        slot.set('workspaceName', workspace_name)
+        for child in list(workspace):
+            slot.append(child)
+            workspace.remove(child)
+
+        slot.remove(workspace)
+
+
     constraint_factories = root.findall('.//constraintFactory')
     for constraint_factory in constraint_factories:
         # set constraint_factory tag to the value of the attribute `type`
@@ -445,31 +478,31 @@ def write_attribute_names(root, folder_name, file_name):
 
 def remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed):
     for type_name in types_to_be_removed:
-        xpath = './/workspace/pages/page/custom[type="' + type_name + '"]'
+        xpath = './/pages/page/custom[type="' + type_name + '"]'
         for custom in root.findall(xpath):
             page = parent_map[custom]
             pages = parent_map[page]
             pages.remove(page)
 
-    remove(root, parent_map, './/workspace/pages/page/localizedName')
-    remove(root, parent_map, './/workspace/pages/page/content')
-    remove(root, parent_map, './/workspace/pages/page/tags')
-    remove(root, parent_map, './/workspace/pages/page/orderable')
-    remove(root, parent_map, './/workspace/pages/page/attachements')
-    remove(root, parent_map, './/workspace/pages/page/widgetContainer')
-    remove(root, parent_map, './/workspace/pages/page/pageInPackageInclusion')
-    remove(root, parent_map, './/workspace/pages/page/layoutName')
-    remove(root, parent_map, './/workspace/pages/page/nameGenerationCounter')
+    remove(root, parent_map, './/pages/page/localizedName')
+    remove(root, parent_map, './/pages/page/content')
+    remove(root, parent_map, './/pages/page/tags')
+    remove(root, parent_map, './/pages/page/orderable')
+    remove(root, parent_map, './/pages/page/attachements')
+    remove(root, parent_map, './/pages/page/widgetContainer')
+    remove(root, parent_map, './/pages/page/pageInPackageInclusion')
+    remove(root, parent_map, './/pages/page/layoutName')
+    remove(root, parent_map, './/pages/page/nameGenerationCounter')
 
     for attribute_name in attributes_to_be_removed:
-        xpath = './/workspace/pages/page/custom/attributes/attribute[name="' + attribute_name + '"]'
+        xpath = './/pages/page/custom/attributes/attribute[name="' + attribute_name + '"]'
         for attribute in root.findall(xpath):
             attributes = parent_map[attribute]
             attributes.remove(attribute)
 
 
 def rewrite_pages(root, parent_map):
-    for attribute in root.findall('.//workspace/pages/page/custom/attributes/attribute'):
+    for attribute in root.findall('.//pages/page/custom/attributes/attribute'):
         attribute_name = attribute.find('.//name').text
         # set the attribute 'name' of the attribute element to the value of attribute_name
         attribute.set('name', attribute_name)
@@ -519,7 +552,7 @@ def rewrite_pages(root, parent_map):
                     print("unknown value type: " + value.text)
         attribute.remove(values)
 
-    for attributes in root.findall('.//workspace/pages/page/custom/attributes'):
+    for attributes in root.findall('.//pages/page/custom/attributes'):
         custom = parent_map[attributes]
         # move all children of attributes to custom
         for attribute in list(attributes):
@@ -528,31 +561,32 @@ def rewrite_pages(root, parent_map):
         custom.remove(attributes)
 
 
-def remove_all_pages(root, parent_map):
-    remove(root, parent_map, './/workspace/pages')
+def remove_all_pages(root):
+    parent_map = {c: p for p in root.iter() for c in p}
+    remove(root, parent_map, './/pages')
 
 
 def remove_to_basics(root, parent_map):
-    remove(root, parent_map, './/workspace/types/typeDef/localizedNamePlural')
-    remove(root, parent_map, './/workspace/types/typeDef/iconName')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/localizedShortName')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/shortHelp')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/multiplicity')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/referenceConstraint/sameWorkspace')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/referenceConstraint/isHierarchy')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/elements')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/element2icon')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/textEnumerationConstraint/element2localizedLabel')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/elements')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/element2icon')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/element2localizedLabel')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/precision')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberEnumerationConstraint/localizedTextAfterSupplier')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberConstraint/precision')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/numberConstraint/localizedTextAfterSupplier')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/dateConstraint/specificity')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/dateConstraint/dateFormat')
-    remove(root, parent_map, './/workspace/types/typeDef/attributes/customConstraint')
+    remove(root, parent_map, './/types/typeDef/localizedNamePlural')
+    remove(root, parent_map, './/types/typeDef/iconName')
+    remove(root, parent_map, './/types/typeDef/attributes/localizedShortName')
+    remove(root, parent_map, './/types/typeDef/attributes/shortHelp')
+    remove(root, parent_map, './/types/typeDef/attributes/multiplicity')
+    remove(root, parent_map, './/types/typeDef/attributes/referenceConstraint/sameWorkspace')
+    remove(root, parent_map, './/types/typeDef/attributes/referenceConstraint/isHierarchy')
+    remove(root, parent_map, './/types/typeDef/attributes/textEnumerationConstraint/elements')
+    remove(root, parent_map, './/types/typeDef/attributes/textEnumerationConstraint/element2icon')
+    remove(root, parent_map, './/types/typeDef/attributes/textEnumerationConstraint/element2localizedLabel')
+    remove(root, parent_map, './/types/typeDef/attributes/numberEnumerationConstraint/elements')
+    remove(root, parent_map, './/types/typeDef/attributes/numberEnumerationConstraint/element2icon')
+    remove(root, parent_map, './/types/typeDef/attributes/numberEnumerationConstraint/element2localizedLabel')
+    remove(root, parent_map, './/types/typeDef/attributes/numberEnumerationConstraint/precision')
+    remove(root, parent_map, './/types/typeDef/attributes/numberEnumerationConstraint/localizedTextAfterSupplier')
+    remove(root, parent_map, './/types/typeDef/attributes/numberConstraint/precision')
+    remove(root, parent_map, './/types/typeDef/attributes/numberConstraint/localizedTextAfterSupplier')
+    remove(root, parent_map, './/types/typeDef/attributes/dateConstraint/specificity')
+    remove(root, parent_map, './/types/typeDef/attributes/dateConstraint/dateFormat')
+    remove(root, parent_map, './/types/typeDef/attributes/customConstraint')
 
 
 def remove_generic_elements(root, parent_map):
