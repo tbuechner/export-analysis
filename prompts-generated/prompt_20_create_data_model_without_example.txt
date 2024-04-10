@@ -2,6 +2,25 @@ The following xml schema represents describes a xml format for specifying data m
 
 ```
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="package">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="slots"/>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="xmlVersion"/>
+      <xs:attribute type="xs:string" name="internalName"/>
+      <xs:attribute type="xs:byte" name="version"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="de" minOccurs="0"/>
+        <xs:element ref="en" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="de" type="xs:string"/>
   <xs:element name="en" type="xs:string"/>
   <xs:simpleType name="EntityClassType">
@@ -31,14 +50,6 @@ The following xml schema represents describes a xml format for specifying data m
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="name">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="de" minOccurs="0"/>
-        <xs:element ref="en" minOccurs="0"/>
-      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="localizedName">
@@ -318,24 +329,11 @@ The following xml schema represents describes a xml format for specifying data m
       <xs:attribute type="xs:string" name="workspaceName"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="shortname" type="xs:string"/>
   <xs:element name="slots">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="package">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="name"/>
-        <xs:element ref="shortname"/>
-        <xs:element ref="slots"/>
-      </xs:sequence>
-      <xs:attribute type="xs:float" name="xmlVersion"/>
-      <xs:attribute type="xs:string" name="internalName"/>
-      <xs:attribute type="xs:byte" name="version"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

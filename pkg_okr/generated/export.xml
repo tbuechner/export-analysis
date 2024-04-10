@@ -4,7 +4,6 @@
       <de>Solution Template - Objectives &amp; Key Results</de>
       <en>Solution Template - Objectives &amp; Key Results</en>
     </name>
-    <shortname />
     <slots>
       <slot internalName="cf.cplace.okr.okr">
         <name>
@@ -508,7 +507,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>fx0r5pbo04gj3jbcvtoa3sdhs</id>
+              <id>d2ypr69mlew2eeyelbri353h7</id>
               <custom>
                 <type>default.page</type>
                 <attributes />

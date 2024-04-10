@@ -3,7 +3,6 @@
     <de>Solution Template - Large Solution SAFe</de>
     <en>Solution Template - Large Solution SAFe</en>
   </name>
-  <shortname />
   <slots>
     <slot internalName="cf.cplace.lsafe.art" workspaceName="Smart Infotainment">
       <name>

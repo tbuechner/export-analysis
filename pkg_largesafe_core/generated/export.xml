@@ -4,7 +4,6 @@
       <de>Solution Template - Large Solution SAFe</de>
       <en>Solution Template - Large Solution SAFe</en>
     </name>
-    <shortname />
     <slots>
       <slot internalName="cf.cplace.lsafe.art">
         <name>
@@ -1431,7 +1430,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>t2mnknqrzvdm4f9f1sz7u8i43</id>
+              <id>v3ipqdaydzuaf5rdxlz6xr5b6</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -2569,7 +2568,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>ll91iesqdx3p73bmqeqvw1zqi</id>
+              <id>j9fwnpnv35bhi7n2f8gr1a9me</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -2594,7 +2593,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>2s3k5a40ee0acdz1b2ion83c9</id>
+              <id>lhsfbs9nb4k8qje4r1d01ni0b</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -4002,7 +4001,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>q57v7d096g439ye1fd1i0gkzm</id>
+              <id>dnwxmb1aqz8o2v74chsxvp1mh</id>
               <custom>
                 <type>default.page</type>
                 <attributes />

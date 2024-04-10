@@ -3,7 +3,6 @@
     <de>Solution Template - Objectives &amp; Key Results</de>
     <en>Solution Template - Objectives &amp; Key Results</en>
   </name>
-  <shortname />
   <slots>
     <slot internalName="cf.cplace.okr.okr" workspaceName="OKR">
       <name>

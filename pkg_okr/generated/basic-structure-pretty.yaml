@@ -1,0 +1,315 @@
+package:
+  '@internalName': cf.cplace.template.okr
+  '@version': '10'
+  '@xmlVersion': '1.8'
+  '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  '@xsi:noNamespaceSchemaLocation': ../../package-thinned-out-schema.xsd
+  name:
+    de: Solution Template - Objectives & Key Results
+    en: Solution Template - Objectives & Key Results
+  slots:
+    slot:
+      '@internalName': cf.cplace.okr.okr
+      '@workspaceName': OKR
+      name:
+        de: Objectives Key Results
+        en: Objectives Key Results
+      type:
+      - attributes:
+        - localizedName:
+            de: Jahr
+            en: Year
+          localizedShortName: null
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.year
+          shortHelp: null
+          stringConstraint: null
+        - localizedName:
+            de: Quartal
+            en: Quarter
+          localizedShortName: null
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.quarter
+          shortHelp: null
+          stringConstraint: null
+        - localizedName:
+            de: Status
+            en: Status
+          localizedShortName: null
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.status
+          shortHelp: null
+          textEnumerationConstraint:
+            element2icon: null
+            element2localizedLabel:
+              entry:
+              - key: '#35 Closed'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: Geschlossen
+                    - key: en
+                      value:
+                        language: en
+                        value: Closed
+              - key: '#45 Draft'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: Entwurf
+                    - key: en
+                      value:
+                        language: en
+                        value: Draft
+              - key: '#25 Current'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: Aktuell
+                    - key: en
+                      value:
+                        language: en
+                        value: Current
+              - key: '#15 Next'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: "N\xE4chster"
+                    - key: en
+                      value:
+                        language: en
+                        value: Next
+            elements:
+            - '#15 Next'
+            - '#25 Current'
+            - '#35 Closed'
+            - '#45 Draft'
+        - dateConstraint:
+            dateFormat: DAY_YEAR_LONG
+            specificity: DAY
+          localizedName:
+            de: Start
+            en: Start
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.start
+          shortHelp: null
+        - dateConstraint:
+            dateFormat: DAY_YEAR_LONG
+            specificity: DAY
+          localizedName:
+            de: Ende
+            en: End
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.end
+          shortHelp: null
+        iconName: fa-redo
+        localizedNamePlural:
+          de: Zyklen
+          en: Cycles
+        localizedNameSingular:
+          de: Zyklus
+          en: Cycle
+        name: cf.cplace.solution.okr.cycle
+      - attributes:
+        - localizedName:
+            de: Nummer
+            en: Number
+          localizedShortName:
+            de: Nr.
+            en: No.
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.number
+          numberConstraint:
+            localizedTextAfterSupplier: null
+            precision: '-1'
+          shortHelp: null
+        - localizedName:
+            de: Titel
+            en: Title
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.title
+          shortHelp: null
+          stringConstraint: null
+        - localizedName:
+            de: Erreicht
+            en: Accomplished
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.accomplished
+          shortHelp: null
+          textEnumerationConstraint:
+            defaultValues: s#25 - no
+            element2icon:
+              entry:
+              - key: '#25 - no'
+                value: x-103-cplace-square-red-close
+              - key: '#15 - yes'
+                value: x-112-cplace-square-green-check
+            element2localizedLabel:
+              entry:
+              - key: '#25 - no'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: Nein
+                    - key: en
+                      value:
+                        language: en
+                        value: 'No'
+              - key: '#15 - yes'
+                value:
+                  localizations:
+                    entry:
+                    - key: de
+                      value:
+                        language: de
+                        value: Ja
+                    - key: en
+                      value:
+                        language: en
+                        value: 'Yes'
+            elements:
+            - '#15 - yes'
+            - '#25 - no'
+        - localizedName:
+            de: Beschreibung
+            en: Description
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.description
+          richStringConstraint: null
+          shortHelp: null
+        iconName: fa-bullseye
+        localizedNamePlural:
+          de: Objectives
+          en: Objectives
+        localizedNameSingular:
+          de: Objective
+          en: Objective
+        name: cf.cplace.solution.okr.objective
+      - attributes:
+        - localizedName:
+            de: Nummer
+            en: Number
+          localizedShortName:
+            de: Nr.
+            en: No.
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.number
+          numberConstraint:
+            localizedTextAfterSupplier: null
+            precision: '-1'
+          shortHelp: null
+        - localizedName:
+            de: Titel
+            en: Title
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.title
+          shortHelp: null
+          stringConstraint: null
+        - localizedName:
+            de: Fortschritt Vorhersage
+            en: Grading Forecast
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.gradingForecast
+          shortHelp: null
+          textEnumerationConstraint:
+            element2icon:
+              entry:
+              - key: '0.1'
+                value: circle-001-red
+              - key: '1.0'
+                value: circle-003-green
+              - key: '0.2'
+                value: circle-001-red
+              - key: '0.3'
+                value: circle-001-red
+              - key: '0.4'
+                value: circle-002-yellow
+              - key: '0.5'
+                value: circle-002-yellow
+              - key: '0.6'
+                value: circle-002-yellow
+              - key: '0.7'
+                value: circle-003-green
+              - key: '0.8'
+                value: circle-003-green
+              - key: '0.9'
+                value: circle-003-green
+            element2localizedLabel: null
+            elements:
+            - '0.1'
+            - '0.2'
+            - '0.3'
+            - '0.4'
+            - '0.5'
+            - '0.6'
+            - '0.7'
+            - '0.8'
+            - '0.9'
+            - '1.0'
+        - localizedName:
+            de: Objective
+            en: Objective
+          localizedShortName: null
+          multiplicity:
+            '@key': exactlyOne
+          name: cf.cplace.solution.okr.objective
+          referenceConstraint:
+            entityClass: cf.cplace.platform.assets.file.Page
+            isHierarchy: 'true'
+            localizedInverseRoleName: null
+            sameWorkspace: 'true'
+            typeNames: cf.cplace.solution.okr.objective
+          shortHelp: null
+        - dateConstraint:
+            dateFormat: DAY_YEAR_LONG
+            specificity: DAY
+          localizedName:
+            de: Letztes Update
+            en: Last Update
+          localizedShortName: null
+          multiplicity:
+            '@key': maximalOne
+          name: cf.cplace.solution.okr.lastUpdate
+          shortHelp: null
+        iconName: fa-key
+        localizedNamePlural:
+          de: "Schl\xFCsselergebnisse"
+          en: Key Results
+        localizedNameSingular:
+          de: "Schl\xFCsselergebnis"
+          en: Key Result
+        name: cf.cplace.solution.okr.keyResult

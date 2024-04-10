@@ -493,6 +493,10 @@ def write_to_file(root, folder_name, file_name):
     with open(folder_name + '/' + file_name + '-compressed.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
 
+    # convert the xml element to a json object
+    json_object = xmltodict.parse(ET.tostring(root, encoding='utf-8'))
+    # write the json object to a file
+    write_json_to_file(folder_name, file_name, json_object)
 
 def write_attribute_names(root, folder_name, file_name):
     attribute_names = []
@@ -624,6 +628,7 @@ def remove_to_basics(root, parent_map):
 
 def remove_generic_elements(root, parent_map):
     remove(root, parent_map, './/slot/shareable')
+    remove(root, parent_map, './/package/shortname')
 
     remove(root, parent_map, './/workspace/pluginSpaceConfigurations')
     remove(root, parent_map, './/workspace/rootPage')
