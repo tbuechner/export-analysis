@@ -654,66 +654,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -730,66 +860,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -806,66 +1066,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -882,66 +1272,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3095,66 +3615,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3168,66 +3818,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3296,7 +4076,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>9ytby0ryrlwyo3zm1jx6j8dsv</id>
+              <id>6r4eb5r3pqlq1fw5ui4s8y94s</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -3862,66 +4642,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -3938,66 +4848,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -4014,66 +5054,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -4087,66 +5257,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -5585,42 +6885,118 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>0.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>0.0</elements>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>0.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>0.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <appliesTo>
@@ -5636,7 +7012,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>qvolzwxj9l6wy7gwu904vqk8b</id>
+              <id>qzwkktm4ftdwr8wd0ul1j395p</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -5661,7 +7037,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>lqvys5rkvv2kyd3oc4vu6yj9l</id>
+              <id>ggsudqph51sifkv8f9vsef2ma</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -6790,66 +8166,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -6863,66 +8369,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -6936,66 +8572,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -7009,66 +8775,196 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>13.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>20.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>5.0</elements>
+                  <elements>8.0</elements>
+                  <elements>13.0</elements>
+                  <elements>20.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>13.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>20.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -8245,98 +10141,300 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>0</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>0.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>4.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>6.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>7.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>9.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>10.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>0.0</elements>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>4.0</elements>
+                  <elements>5.0</elements>
+                  <elements>6.0</elements>
+                  <elements>7.0</elements>
+                  <elements>8.0</elements>
+                  <elements>9.0</elements>
+                  <elements>10.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>0.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>4.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>6.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>7.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>9.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>10.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>0.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>4.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>6.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>7.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>9.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>10.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -8353,90 +10451,274 @@
                 <constraintFactory type="numberEnumerationConstraint">
                   <precision>-1</precision>
                   <localizedTextAfterSupplier />
-                  <element>
-                    <value>1.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>2.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>3.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>4.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>5.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>6.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>7.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>8.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>9.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
-                  <element>
-                    <value>10.0</value>
-                    <icon>circle-003-green</icon>
-                    <localizedName>
-                      <de>toolbarButtonGraphics TIFF</de>
-                      <en>toolbarButtonGraphics TIFF</en>
-                    </localizedName>
-                  </element>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <elements>1.0</elements>
+                  <elements>2.0</elements>
+                  <elements>3.0</elements>
+                  <elements>4.0</elements>
+                  <elements>5.0</elements>
+                  <elements>6.0</elements>
+                  <elements>7.0</elements>
+                  <elements>8.0</elements>
+                  <elements>9.0</elements>
+                  <elements>10.0</elements>
+                  <element2icon>
+                    <entry>
+                      <key>1.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>4.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>6.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>7.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>9.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                    <entry>
+                      <key>10.0</key>
+                      <value>circle-003-green</value>
+                    </entry>
+                  </element2icon>
+                  <element2localizedLabel>
+                    <entry>
+                      <key>1.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>2.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>3.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>4.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>5.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>6.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>7.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>8.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>9.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                    <entry>
+                      <key>10.0</key>
+                      <value>
+                        <localizations>
+                          <entry>
+                            <key>de</key>
+                            <value>
+                              <language>de</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                          <entry>
+                            <key>en</key>
+                            <value>
+                              <language>en</language>
+                              <value>toolbarButtonGraphics TIFF</value>
+                            </value>
+                          </entry>
+                        </localizations>
+                      </value>
+                    </entry>
+                  </element2localizedLabel>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -8874,7 +11156,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>n9nom71uahn09m9yikgup8zlb</id>
+              <id>d2qz4onbx970ofsz6e6en1o7u</id>
               <custom>
                 <type>default.page</type>
                 <attributes />

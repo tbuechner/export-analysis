@@ -103,7 +103,7 @@ def get_parent_map(root):
 
 def rewrite_to_pkg_format(root, tree):
     parent_map = {c: p for p in tree.iter() for c in p}
-    add_mandatory_elements(root, parent_map)
+    rewrite_to_pkg_format_add_mandatory_elements(root, parent_map)
     pretty_print_xml(root, 0)
 
 
@@ -145,7 +145,7 @@ def add_reference_constraint_def_class(constraint_factory):
     add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
 
 
-def add_mandatory_elements(root, parent_map):
+def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
     if 'xmlns:xsi' in root.attrib:
         del root.attrib['xmlns:xsi']
     if 'xsi:noNamespaceSchemaLocation' in root.attrib:
@@ -216,77 +216,13 @@ def add_mandatory_elements(root, parent_map):
         rewrite_constraint_factory(constraint_factory, parent_map, 'textEnumerationConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
 
-        element_to_icon = {}
-        element_to_localized_names = {}
-        for element in constraint_factory.findall('.//element'):
-            value = element.find('.//value').text
-
-            new_element = ET.Element('elements')
-            new_element.text = value
-            constraint_factory.append(new_element)
-
-            icon_element = element.find('.//icon')
-            if icon_element is not None:
-                icon = icon_element.text
-                element_to_icon[value] = icon
-
-            localized_names = []
-            for localized_name in element.findall('.//localizedName'):
-                # iterate over all children of localized_name
-                for child in list(localized_name):
-                    language = child.tag
-                    label = child.text
-                    localized_names.append({language: label})
-            element_to_localized_names[value] = localized_names
-
-            parent_map[element].remove(element)
-
-        new_element_to_icon = ET.Element('element2icon')
-        constraint_factory.append(new_element_to_icon)
-        for key, value in element_to_icon.items():
-            entry = ET.Element('entry')
-            new_element_to_icon.append(entry)
-            key_element = ET.Element('key')
-            key_element.text = key
-            entry.append(key_element)
-            value_element = ET.Element('value')
-            value_element.text = value
-            entry.append(value_element)
-
-        new_element_to_localized_names = ET.Element('element2localizedLabel')
-        constraint_factory.append(new_element_to_localized_names)
-        for key, value in element_to_localized_names.items():
-            entry = ET.Element('entry')
-            new_element_to_localized_names.append(entry)
-            key_element = ET.Element('key')
-            key_element.text = key
-            entry.append(key_element)
-            value_element = ET.Element('value')
-            entry.append(value_element)
-            localizations = ET.Element('localizations')
-            value_element.append(localizations)
-            for localized_name in value:
-                for key in localized_name:
-                    entry = ET.Element('entry')
-                    localizations.append(entry)
-                    key_element = ET.Element('key')
-                    key_element.text = key
-                    entry.append(key_element)
-                    value_element = ET.Element('value')
-
-                    value_language_element = ET.Element('language')
-                    value_language_element.text = key
-                    value_element.append(value_language_element)
-
-                    value_value_element = ET.Element('value')
-                    value_value_element.text = localized_name.get(key)
-                    value_element.append(value_value_element)
-
-                    entry.append(value_element)
+        rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map)
 
     for constraint_factory in root.findall('.//numberEnumerationConstraint'):
         rewrite_constraint_factory(constraint_factory, parent_map, 'numberEnumerationConstraint')
         add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+
+        rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map)
 
     for constraint_factory in root.findall('.//stringConstraint'):
         rewrite_constraint_factory(constraint_factory, parent_map, 'stringConstraint')
@@ -379,6 +315,74 @@ def add_mandatory_elements(root, parent_map):
         widget_container.append(widgets_layout)
         widgets = ET.Element('widgets')
         widget_container.append(widgets)
+
+
+def rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map):
+    element_to_icon = {}
+    element_to_localized_names = {}
+    for element in constraint_factory.findall('.//element'):
+        value = element.find('.//value').text
+
+        new_element = ET.Element('elements')
+        new_element.text = value
+        constraint_factory.append(new_element)
+
+        icon_element = element.find('.//icon')
+        if icon_element is not None:
+            icon = icon_element.text
+            element_to_icon[value] = icon
+
+        localized_names = []
+        for localized_name in element.findall('.//localizedName'):
+            # iterate over all children of localized_name
+            for child in list(localized_name):
+                language = child.tag
+                label = child.text
+                localized_names.append({language: label})
+        element_to_localized_names[value] = localized_names
+
+        parent_map[element].remove(element)
+    new_element_to_icon = ET.Element('element2icon')
+    constraint_factory.append(new_element_to_icon)
+    for key, value in element_to_icon.items():
+        entry = ET.Element('entry')
+        new_element_to_icon.append(entry)
+        key_element = ET.Element('key')
+        key_element.text = key
+        entry.append(key_element)
+        value_element = ET.Element('value')
+        value_element.text = value
+        entry.append(value_element)
+    new_element_to_localized_names = ET.Element('element2localizedLabel')
+    constraint_factory.append(new_element_to_localized_names)
+    for key, value in element_to_localized_names.items():
+        entry = ET.Element('entry')
+        new_element_to_localized_names.append(entry)
+        key_element = ET.Element('key')
+        key_element.text = key
+        entry.append(key_element)
+        value_element = ET.Element('value')
+        entry.append(value_element)
+        localizations = ET.Element('localizations')
+        value_element.append(localizations)
+        for localized_name in value:
+            for key in localized_name:
+                entry = ET.Element('entry')
+                localizations.append(entry)
+                key_element = ET.Element('key')
+                key_element.text = key
+                entry.append(key_element)
+                value_element = ET.Element('value')
+
+                value_language_element = ET.Element('language')
+                value_language_element.text = key
+                value_element.append(value_language_element)
+
+                value_value_element = ET.Element('value')
+                value_value_element.text = localized_name.get(key)
+                value_element.append(value_value_element)
+
+                entry.append(value_element)
 
 
 def rewrite_constraint_factory(constraint_factory, parent_map, constraint_name):
