@@ -1,5 +1,5 @@
 tokens thinned-out.xml: 2761
 tokens thinned-out-compressed.xml: 2030
-tokens after-page-removal.xml: 44859
+tokens after-page-removal.xml: 44627
 tokens basic-structure.xml: 2761
 tokens basic-structure-compressed.xml: 2030

@@ -483,30 +483,6 @@
           </custom>
         </page>
         <page>
-          <name>Team Flamingo</name>
-          <id>27ogsy5llsuvw71o6rbko0e4k</id>
-          <pageInPackageID>vfbc7cirdgwdj8v9a5qkfigrs</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="11" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="zo5vreo58vi220p332y6fpmjq" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Paris" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Flamingo" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>Allow speech controlled texting feature</name>
           <id>2fq3lra7fy6fpeatvuftv4h15</id>
           <custom>
@@ -2105,30 +2081,6 @@
           </custom>
         </page>
         <page>
-          <name>Team Tiger</name>
-          <id>aj2bc52npsebyorqr1v2fqfpq</id>
-          <pageInPackageID>7oqpyr2laulcxfjl0i4kbc89f</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="15" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="dono7bzsm12ip4vft29n32v4y" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Ludwigsburg" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Tiger" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>Allow users to integrate Siri</name>
           <id>aszt25hm97q9sy0hsx30puqbl</id>
           <custom>
@@ -2270,30 +2222,6 @@
             <attribute name="cf.cplace.solution.safe.team" />
             <attribute name="cf.cplace.solution.safe.title">
               <string value="Provide alerts regarding the obstacles" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
-          <name>Team Elephant</name>
-          <id>c58u7y3h2o3ij45nxxx5roxtt</id>
-          <pageInPackageID>1ezsv9buj18o5gz7mo6nbhf8x</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="25" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="y10szrf6xsdefohtcll5w55hz" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Munich" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Elephant" />
             </attribute>
           </custom>
         </page>
@@ -2642,30 +2570,6 @@
               <string value="Multi-casting: Allows users to listen to multiple radio stations at once, allowing them to switch between different stations quickly and easily" />
             </attribute>
             <attribute name="cf.cplace.solution.safe.wsjf" />
-          </custom>
-        </page>
-        <page>
-          <name>Team Rabbit</name>
-          <id>d5oq5yqhjbo6ja5x68f7bi59i</id>
-          <pageInPackageID>g1peelbadu2rcgsx8rupir4ly</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="17" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="b0z0b7htq5l5ldla277w7tq5p" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Rüsselsheim" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Rabbit" />
-            </attribute>
           </custom>
         </page>
         <page>
@@ -4317,30 +4221,6 @@
           </custom>
         </page>
         <page>
-          <name>Team Zebra</name>
-          <id>me03ho2kwq0obs1zduti4l2ur</id>
-          <pageInPackageID>en62s1lzmhmjzm2v5hgczn3bw</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="13" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="qfu9x2g06nleojmj6bpn1ov8m" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Berlin" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Zebra" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>OS-F78 Navigation: Provides users with turn-by-turn navigation instructions to their destination</name>
           <id>mw9qr72azdvwqgynmjf6qvne7</id>
           <custom>
@@ -4823,30 +4703,6 @@
           </custom>
         </page>
         <page>
-          <name>Team Crocodile</name>
-          <id>oi9aqu3kl7a5ldr5o88591j32</id>
-          <pageInPackageID>1hh33l7qgkm0jjemie26f062b</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="30" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="c1jycqo9rrfvqsdwyw0n1zss4" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Berlin" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Crocodile" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>Control of safety features over smartphone</name>
           <id>ojsbr0vmva8exwlb7tgih26co</id>
           <custom>
@@ -5126,119 +4982,6 @@
             <attribute name="cf.cplace.solution.safe.team" />
             <attribute name="cf.cplace.solution.safe.title">
               <string value="Allow user to access different application" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
-          <name>Agile Release Train</name>
-          <id>fnrv1goqjy89uotq67plr2iaf</id>
-          <pageInPackageID>fbgsotkj1b9veorrgfqybga70</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.agileReleaseTrain</type>
-            <attribute name="cf.cplace.solution.safe.artEvents">
-              <richString>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;table border="0" cellpadding="1" cellspacing="1" class="tricia-default-table" style="width: 100%"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th scope="col"&gt;Weekly&lt;/th&gt;
-			&lt;th scope="col"&gt;&amp;nbsp;&lt;/th&gt;
-			&lt;th scope="col"&gt;&amp;nbsp;&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;td&gt;RTE Sync&lt;/td&gt;
-			&lt;td&gt;Wednesdays&lt;/td&gt;
-			&lt;td&gt;11:30 - 12:30 pm&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table border="0" cellpadding="1" cellspacing="1" class="tricia-default-table" style="width: 100%"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th scope="col"&gt;Bi-Weekly&lt;/th&gt;
-			&lt;th scope="col"&gt;&amp;nbsp;&lt;/th&gt;
-			&lt;th scope="col"&gt;&amp;nbsp;&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;td&gt;Update Meeting RTE &amp;amp; SA&lt;/td&gt;
-			&lt;td&gt;Tuesdays&lt;/td&gt;
-			&lt;td&gt;03:00 - 04:00 pm&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;Update Meeting BO &amp;amp; PM&lt;/td&gt;
-			&lt;td&gt;Fridays&lt;/td&gt;
-			&lt;td&gt;10:00 - 11:00 am&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.businessOwner">
-              <richString>&lt;p&gt;&lt;a href="/large-solution-safe/persons/l6a4nqcwiwozg4fxnj8sq84i5/Albert-Schrumpf"&gt;Albert Schrumpf&lt;/a&gt;,&amp;nbsp;&lt;a href="/large-solution-safe/persons/4w1l3o8qakk8c4dzxug1um3ac/Dr.-Walter-Klene"&gt;Dr. Walter Klene&lt;/a&gt;,&amp;nbsp;&lt;a href="/large-solution-safe/persons/vh1hjl1htyru61jjj3ip9awuy/Dr.-Klaus-Kohl"&gt;Dr. Klaus Kohl&lt;/a&gt;&amp;nbsp;&lt;/p&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="hszac5bgz9w72huwj7o5hsa60" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.keyCustomers">
-              <richString>&lt;p&gt;Business stakeholders,end users,Development team,Product owner,Scrum master,Quality assurance team,Operations team&lt;/p&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.productManager">
-              <reference entityType="page" id="e4cjteeleli9qntqlrni8eiy0" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.program">
-              <reference entityType="page" id="qg000odouviwwtx4rz2bvaoi8" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.releaseTrainEngineer">
-              <reference entityType="page" id="i0htwq5zwddy81180h8b3pgkw" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.successMeasures">
-              <richString>&lt;p&gt;Time to market,Quality,Customer satisfaction,Productivity,Predicitablity,Flexibility,Collaboration&lt;/p&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.systemArchitect">
-              <reference entityType="page" id="5fs3oqaoftbrd9687rxqrqovd" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.technicalAssets">
-              <richString>&lt;p&gt;&lt;img alt="" height="16" src="/large-solution-safe/file/li73uujdu0k0k1rpjcvzymvmn/Smart-Infotainment/Agile-Release-Train-Template/settings.png" width="16"  /&gt;&amp;nbsp;&lt;strong&gt;Development Tools:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li&gt;JDK Dev Environment&lt;/li&gt;
-	&lt;li&gt;Continuous Integration Pipeline&lt;/li&gt;
-	&lt;li&gt;Wikistore&lt;/li&gt;
-	&lt;li&gt;Filestore&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img alt="" height="16" src="/large-solution-safe/file/xqfwidv5mkhie57l77hk74lkt/Smart-Infotainment/Agile-Release-Train-Template/pc-search.png" width="16"  /&gt;&lt;strong&gt;&amp;nbsp;Environments:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li&gt;&lt;strong&gt;DEV:&amp;nbsp;&lt;/strong&gt;https://dev-cplace.cloud.io&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;INT:&amp;nbsp;&lt;/strong&gt;https://int-cplace.cloud.io&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;PROD:&amp;nbsp;&lt;/strong&gt;https://prod-cplace.cloud.io&lt;/li&gt;
-&lt;/ul&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Agile Release Train" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.visionStatement">
-              <richString>&lt;p&gt;FOR &lt;strong&gt;cyclists&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;WHO &lt;strong&gt;want more experience with their bike&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;THE &lt;strong&gt;Mobile OS&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;IS THE&amp;nbsp;&lt;strong&gt;operating system&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;THAT &lt;strong&gt;allows to run provided apps&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;UNLIKE &lt;strong&gt;driver based control units&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OUR &lt;strong&gt;operating system provides the required flexiblity to integrate all kinds of applications.&lt;/strong&gt;&lt;/p&gt;</richString>
             </attribute>
           </custom>
         </page>
@@ -5811,30 +5554,6 @@
           </custom>
         </page>
         <page>
-          <name>Team Bird</name>
-          <id>tj1a0xzc4y9pwzip0mogrub2l</id>
-          <pageInPackageID>13kzs5h4qhravauuw5n7h45t0</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="25" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="dfi49xesrf5rciukckfaifzmz" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Stuttgart" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Bird" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>OS-F58 Automatic pairing: Allows users to automatically connect their devices to their car's Bluetooth system</name>
           <id>tl1c6s1bnurmjealzyx38ok8h</id>
           <custom>
@@ -6124,30 +5843,6 @@
           </custom>
         </page>
         <page>
-          <name>Team fish</name>
-          <id>tu1bmxvwo1l53apspzlefp35x</id>
-          <pageInPackageID>yt0grdbhptr3dcl529pgmzegh</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="12" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="z0zu7tlomu69zm9cr872o7etq" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Frankfurt" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team fish" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>Albert Schrumpf</name>
           <id>um6px05muts030kgoi73v506w</id>
           <pageInPackageID>0xwdiw3e6t4spltkdb8rv5brc</pageInPackageID>
@@ -6218,51 +5913,6 @@
             <attribute name="cf.cplace.solution.safe.team" />
             <attribute name="cf.cplace.solution.safe.title">
               <string value="provide proper rear and front ground view" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
-          <name>Agile Release Train &lt;Template&gt;</name>
-          <id>uquesdwf4g0qtlbeikvtlg8cv</id>
-          <pageInPackageID>axgvjjt6mkzt8gehdufxvuoui</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.agileReleaseTrain</type>
-            <attribute name="cf.cplace.solution.safe.artEvents" />
-            <attribute name="cf.cplace.solution.safe.businessOwner" />
-            <attribute name="cf.cplace.solution.safe.file" />
-            <attribute name="cf.cplace.solution.safe.keyCustomers" />
-            <attribute name="cf.cplace.solution.safe.productManager" />
-            <attribute name="cf.cplace.solution.safe.program" />
-            <attribute name="cf.cplace.solution.safe.releaseTrainEngineer" />
-            <attribute name="cf.cplace.solution.safe.successMeasures" />
-            <attribute name="cf.cplace.solution.safe.systemArchitect" />
-            <attribute name="cf.cplace.solution.safe.technicalAssets">
-              <richString>&lt;p&gt;&lt;img alt="" height="16" src="/large-solution-safe/file/li73uujdu0k0k1rpjcvzymvmn/Smart-Infotainment/Agile-Release-Train-Template/settings.png" width="16"  /&gt;&amp;nbsp;&lt;strong&gt;Development Tools:&amp;nbsp;&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="" height="16" src="/large-solution-safe/file/xqfwidv5mkhie57l77hk74lkt/Smart-Infotainment/Agile-Release-Train-Template/pc-search.png" width="16"  /&gt;&lt;strong&gt;&amp;nbsp;Environments:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</richString>
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Agile Release Train &lt;Template&gt;" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.visionStatement">
-              <richString>&lt;p&gt;FOR ...&lt;/p&gt;
-
-&lt;p&gt;WHO ...&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;THE ...&lt;/p&gt;
-
-&lt;p&gt;IS AN ...&lt;/p&gt;
-
-&lt;p&gt;THAT ...&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;UNLIKE ...&lt;/p&gt;
-
-&lt;p&gt;OUR ...&lt;/p&gt;
-
-&lt;p&gt;SOLUTION ...&lt;/p&gt;</richString>
             </attribute>
           </custom>
         </page>
@@ -6546,54 +6196,6 @@
               <string value="Siri integration: Allows users to use Siri to control their Apple CarPlay system" />
             </attribute>
             <attribute name="cf.cplace.solution.safe.wsjf" />
-          </custom>
-        </page>
-        <page>
-          <name>Team Lion</name>
-          <id>w3l1p9ltyp69vlhw5u06ebdvz</id>
-          <pageInPackageID>qaf79hqtymz6idqyzvacyusbs</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="18" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="6sn8c1esguvdtc49d5rwdhi9u" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Hannover" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Lion" />
-            </attribute>
-          </custom>
-        </page>
-        <page>
-          <name>Team Tortoise</name>
-          <id>w5gh8ls4vd5k1cp6dqj5yp4vj</id>
-          <pageInPackageID>pj1o60cx3ln0g66phffi09oqw</pageInPackageID>
-          <pageInPackageInternalName>cf.cplace.template.esafe</pageInPackageInternalName>
-          <custom>
-            <type>cf.cplace.solution.safe.team</type>
-            <attribute name="cf.cplace.solution.safe.agileReleaseTrain">
-              <reference entityType="page" id="fnrv1goqjy89uotq67plr2iaf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.capacity">
-              <number value="19" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.file">
-              <reference entityType="document" id="gt9i446mll9gzv9i57jc8eccf" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.location">
-              <string value="Wolfsburg" />
-            </attribute>
-            <attribute name="cf.cplace.solution.safe.title">
-              <string value="Team Tortoise" />
-            </attribute>
           </custom>
         </page>
         <page>

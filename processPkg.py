@@ -27,8 +27,9 @@ def process_pkg(folder_name):
     # create folder folder_name_generated
     os.mkdir(folder_name_generated)
 
-    with open(folder_name + '/types-to-be-removed.txt') as f:
-        types_to_be_removed = f.read().splitlines()
+    with open(folder_name + '/types-to-be-retained.txt') as f:
+        types_to_be_retained = f.read().splitlines()
+        types_to_be_retained = [x for x in types_to_be_retained if not x.startswith('-')]
 
     with open(folder_name + '/attributes-to-be-removed.txt') as f:
         attributes_to_be_removed = f.read().splitlines()
@@ -52,13 +53,12 @@ def process_pkg(folder_name):
 
     parent_map = get_parent_map(root)
 
-    for t in types_to_be_removed:
-        remove(root, parent_map, './/type[name="' + t + '"]')
+    remove_types(root, parent_map, types_to_be_retained)
 
     for a in attributes_to_be_removed:
         remove(root, parent_map, './/type/attributes[name="' + a + '"]')
 
-    remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed)
+    remove_pages(root, parent_map, types_to_be_retained, attributes_to_be_removed)
 
     rewrite_pages(root, parent_map)
 
@@ -401,6 +401,14 @@ def add_element(package, element_name, text=None):
     package.append(new_element)
 
 
+def remove_types(root, parent_map, types_to_be_retained):
+    for type_ in root.findall('.//slot/type'):
+        name_element = type_.find('.//name')
+        if name_element.text not in types_to_be_retained:
+            parent = parent_map[type_]
+            parent.remove(type_)
+
+
 def rewrite(root, parent_map):
     root.set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
     root.set('xsi:noNamespaceSchemaLocation', "../../package-thinned-out-schema.xsd")
@@ -676,13 +684,12 @@ def write_attribute_names(root, folder_name, file_name):
             f.write("%s\n" % item)
 
 
-def remove_pages(root, parent_map, types_to_be_removed, attributes_to_be_removed):
-    for type_name in types_to_be_removed:
-        xpath = './/pages/page/custom[type="' + type_name + '"]'
-        for custom in root.findall(xpath):
-            page = parent_map[custom]
-            pages = parent_map[page]
-            pages.remove(page)
+def remove_pages(root, parent_map, types_to_be_retained, attributes_to_be_removed):
+    for page in root.findall('.//pages/page'):
+        type_name = page.find('.//custom/type').text
+        if type_name not in types_to_be_retained:
+            parent = parent_map[page]
+            parent.remove(page)
 
     remove(root, parent_map, './/pages/page/localizedName')
     remove(root, parent_map, './/pages/page/content')

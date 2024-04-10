@@ -727,26 +727,6 @@
           </custom>
         </page>
         <page>
-          <name>KR1 Maintain a sales pipeline of qualified leads valued at least $500K quarterly.</name>
-          <id>2p3algprbzi97wvgoxgmfwpo5</id>
-          <custom>
-            <type>cf.cplace.solution.okr.keyResult</type>
-            <attribute name="cf.cplace.solution.okr.gradingForecast" />
-            <attribute name="cf.cplace.solution.okr.lastUpdate">
-              <date value="1666956060468" />
-            </attribute>
-            <attribute name="cf.cplace.solution.okr.number">
-              <number value="1" />
-            </attribute>
-            <attribute name="cf.cplace.solution.okr.objective">
-              <reference entityType="page" id="ruekwaf3u39nh6y04qhcks5u6" />
-            </attribute>
-            <attribute name="cf.cplace.solution.okr.title">
-              <string value="Maintain a sales pipeline of qualified leads valued at least $500K quarterly." />
-            </attribute>
-          </custom>
-        </page>
-        <page>
           <name>KR2 Double Turnover EMEA Markets</name>
           <id>qqrg0yiqje8ae6qm20jd8eefp</id>
           <custom>
