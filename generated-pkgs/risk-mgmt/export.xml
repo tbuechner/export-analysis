@@ -5,13 +5,12 @@
       <en>Risk Management Application</en>
     </name>
     <slots>
-      <slot internalName="cf.cplace.riskManagment.risks">
+      <slot internalName="cf.cplace.riskManagment.risks" workspaceName="Risk Management">
         <name>
           <de>Risiken</de>
           <en>Risks</en>
         </name>
         <workspace>
-          <name>Risk Management</name>
           <types>
             <typeDef>
               <name>cf.cplace.riskManagment.risk</name>
@@ -185,7 +184,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>00bnsq2wwcnmjwlo2aorp6m2g</id>
+              <id>bx19u8jtjdms36f1dv3d0612t</id>
               <custom>
                 <type>default.page</type>
                 <attributes />

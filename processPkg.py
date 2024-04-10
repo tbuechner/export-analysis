@@ -180,16 +180,21 @@ def add_mandatory_elements(root, parent_map):
         workspace = ET.Element('workspace')
         slot.append(workspace)
         workspace_name_element = ET.Element('name')
-        workspace_name = slot.get('workspaceName')
-        if workspace_name is not None:
+        slot_workspace_name_element = slot.find('workspaceName')
+        if slot_workspace_name_element is not None:
+            workspace_name = slot_workspace_name_element.text
             workspace_name_element.text = workspace_name
             workspace.append(workspace_name_element)
-
-            del slot.attrib['workspaceName']
+            slot.remove(slot_workspace_name_element)
         else:
             # print string representation of slot
             slot_str = ET.tostring(slot, encoding='utf-8', method='xml').decode('utf-8')
             print("slot without workspaceName: " + slot_str)
+
+        slot_internal_name_element = slot.find('internalName')
+        if slot_internal_name_element is not None:
+            slot.set('internalName', slot_internal_name_element.text)
+            slot.remove(slot_internal_name_element)
 
         new_types_element = ET.Element('types')
         workspace.append(new_types_element)
@@ -362,6 +367,20 @@ def rewrite(root, parent_map):
         slot.remove(workspace)
 
     parent_map = get_parent_map(root)
+
+    slots = root.findall('.//slot')
+    for slot in slots:
+        internal_name = slot.get('internalName')
+        workspace_name = slot.get('workspaceName')
+        internal_name_element = ET.Element('internalName')
+        internal_name_element.text = internal_name
+        del slot.attrib['internalName']
+
+        slot.append(internal_name_element)
+        workspace_name_element = ET.Element('workspaceName')
+        workspace_name_element.text = workspace_name
+        slot.append(workspace_name_element)
+        del slot.attrib['workspaceName']
 
     for type_def in root.findall('.//typeDef'):
         types = parent_map[type_def]

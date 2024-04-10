@@ -4,7 +4,7 @@
     <en>Solution Template - Large Solution SAFe</en>
   </name>
   <slots>
-    <slot internalName="cf.cplace.lsafe.art" workspaceName="Smart Infotainment">
+    <slot>
       <name>
         <de>ART</de>
         <en>ART</en>
@@ -4863,6 +4863,8 @@
           </custom>
         </page>
       </pages>
+      <internalName>cf.cplace.lsafe.art</internalName>
+      <workspaceName>Smart Infotainment</workspaceName>
       <type>
         <name>cf.cplace.solution.safe.program</name>
         <localizedNameSingular>
@@ -6093,7 +6095,7 @@
         </attributes>
       </type>
     </slot>
-    <slot internalName="cf.cplace.lsafe.portfolio" workspaceName="Advanced Mobility Technologies Portfolio">
+    <slot>
       <name>
         <de>Portfolio</de>
         <en>Portfolio</en>
@@ -6705,6 +6707,8 @@
           </custom>
         </page>
       </pages>
+      <internalName>cf.cplace.lsafe.portfolio</internalName>
+      <workspaceName>Advanced Mobility Technologies Portfolio</workspaceName>
       <type>
         <name>cf.cplace.solution.safe.epic</name>
         <localizedNameSingular>
@@ -7715,14 +7719,16 @@
         </attributes>
       </type>
     </slot>
-    <slot internalName="cf.cplace.lsafe.scheduler" workspaceName="Scheduler">
+    <slot>
       <name>
         <de>Scheduler</de>
         <en>Scheduler</en>
       </name>
       <pages />
+      <internalName>cf.cplace.lsafe.scheduler</internalName>
+      <workspaceName>Scheduler</workspaceName>
     </slot>
-    <slot internalName="cf.cplace.lsafe.solution" workspaceName="Autonomous Driving Systems">
+    <slot>
       <name>
         <de>Solution</de>
         <en>Solution</en>
@@ -15476,6 +15482,8 @@
           </custom>
         </page>
       </pages>
+      <internalName>cf.cplace.lsafe.solution</internalName>
+      <workspaceName>Autonomous Driving Systems</workspaceName>
       <type>
         <name>cf.cplace.solution.safe.solution</name>
         <localizedNameSingular>

@@ -9,12 +9,12 @@
         },
         "slots": {
             "slot": {
-                "@internalName": "cf.cplace.okr.okr",
-                "@workspaceName": "OKR",
                 "name": {
                     "de": "Objectives Key Results",
                     "en": "Objectives Key Results"
                 },
+                "internalName": "cf.cplace.okr.okr",
+                "workspaceName": "OKR",
                 "type": [
                     {
                         "name": "cf.cplace.solution.okr.cycle",

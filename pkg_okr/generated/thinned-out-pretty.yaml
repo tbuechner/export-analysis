@@ -8,8 +8,7 @@ package:
     en: Solution Template - Objectives & Key Results
   slots:
     slot:
-      '@internalName': cf.cplace.okr.okr
-      '@workspaceName': OKR
+      internalName: cf.cplace.okr.okr
       name:
         de: Objectives Key Results
         en: Objectives Key Results
@@ -312,4 +311,5 @@ package:
           de: "Schl\xFCsselergebnis"
           en: Key Result
         name: cf.cplace.solution.okr.keyResult
+      workspaceName: OKR
   version: '10'

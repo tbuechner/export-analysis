@@ -10,12 +10,12 @@
         "slots": {
             "slot": [
                 {
-                    "@internalName": "cf.cplace.lsafe.art",
-                    "@workspaceName": "Smart Infotainment",
                     "name": {
                         "de": "ART",
                         "en": "ART"
                     },
+                    "internalName": "cf.cplace.lsafe.art",
+                    "workspaceName": "Smart Infotainment",
                     "type": [
                         {
                             "name": "cf.cplace.solution.safe.program",
@@ -2865,12 +2865,12 @@
                     ]
                 },
                 {
-                    "@internalName": "cf.cplace.lsafe.portfolio",
-                    "@workspaceName": "Advanced Mobility Technologies Portfolio",
                     "name": {
                         "de": "Portfolio",
                         "en": "Portfolio"
                     },
+                    "internalName": "cf.cplace.lsafe.portfolio",
+                    "workspaceName": "Advanced Mobility Technologies Portfolio",
                     "type": [
                         {
                             "name": "cf.cplace.solution.safe.epic",
@@ -4867,20 +4867,20 @@
                     ]
                 },
                 {
-                    "@internalName": "cf.cplace.lsafe.scheduler",
-                    "@workspaceName": "Scheduler",
                     "name": {
                         "de": "Scheduler",
                         "en": "Scheduler"
-                    }
+                    },
+                    "internalName": "cf.cplace.lsafe.scheduler",
+                    "workspaceName": "Scheduler"
                 },
                 {
-                    "@internalName": "cf.cplace.lsafe.solution",
-                    "@workspaceName": "Autonomous Driving Systems",
                     "name": {
                         "de": "Solution",
                         "en": "Solution"
                     },
+                    "internalName": "cf.cplace.lsafe.solution",
+                    "workspaceName": "Autonomous Driving Systems",
                     "type": [
                         {
                             "name": "cf.cplace.solution.safe.solution",

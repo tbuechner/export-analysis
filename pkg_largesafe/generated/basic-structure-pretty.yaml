@@ -8,8 +8,7 @@ package:
     en: Solution Template - Large Solution SAFe
   slots:
     slot:
-    - '@internalName': cf.cplace.lsafe.art
-      '@workspaceName': Smart Infotainment
+    - internalName: cf.cplace.lsafe.art
       name:
         de: ART
         en: ART
@@ -1916,8 +1915,8 @@ package:
           de: Package Administration
           en: Package Administration
         name: cf.cplace.solution.safe.packageAdministration
-    - '@internalName': cf.cplace.lsafe.portfolio
-      '@workspaceName': Advanced Mobility Technologies Portfolio
+      workspaceName: Smart Infotainment
+    - internalName: cf.cplace.lsafe.portfolio
       name:
         de: Portfolio
         en: Portfolio
@@ -3447,13 +3446,13 @@ package:
           de: Horizon
           en: Horizon
         name: cf.cplace.solution.safe.horizon
-    - '@internalName': cf.cplace.lsafe.scheduler
-      '@workspaceName': Scheduler
+      workspaceName: Advanced Mobility Technologies Portfolio
+    - internalName: cf.cplace.lsafe.scheduler
       name:
         de: Scheduler
         en: Scheduler
-    - '@internalName': cf.cplace.lsafe.solution
-      '@workspaceName': Autonomous Driving Systems
+      workspaceName: Scheduler
+    - internalName: cf.cplace.lsafe.solution
       name:
         de: Solution
         en: Solution
@@ -5221,4 +5220,5 @@ package:
           de: Confidence Vote
           en: Confidence Vote
         name: cf.cplace.solution.safe.confidenceVote
+      workspaceName: Autonomous Driving Systems
   version: '5'

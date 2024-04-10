@@ -192,10 +192,10 @@ The following xml schema represents describes a xml format for specifying data m
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="internalName" type="xs:string"/>
+        <xs:element name="version" type="xs:string"/>
       </xs:sequence>
       <xs:attribute type="xs:float" name="xmlVersion"/>
-      <xs:attribute type="xs:string" name="internalName"/>
-      <xs:attribute type="xs:byte" name="version"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="name">

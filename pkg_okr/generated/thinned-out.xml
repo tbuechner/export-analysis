@@ -4,11 +4,13 @@
     <en>Solution Template - Objectives &amp; Key Results</en>
   </name>
   <slots>
-    <slot internalName="cf.cplace.okr.okr" workspaceName="OKR">
+    <slot>
       <name>
         <de>Objectives Key Results</de>
         <en>Objectives Key Results</en>
       </name>
+      <internalName>cf.cplace.okr.okr</internalName>
+      <workspaceName>OKR</workspaceName>
       <type>
         <name>cf.cplace.solution.okr.cycle</name>
         <localizedNameSingular>
