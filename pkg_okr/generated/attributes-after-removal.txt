@@ -1,0 +1,12 @@
+cf.cplace.solution.okr.accomplished
+cf.cplace.solution.okr.description
+cf.cplace.solution.okr.end
+cf.cplace.solution.okr.gradingForecast
+cf.cplace.solution.okr.lastUpdate
+cf.cplace.solution.okr.number
+cf.cplace.solution.okr.objective
+cf.cplace.solution.okr.quarter
+cf.cplace.solution.okr.start
+cf.cplace.solution.okr.status
+cf.cplace.solution.okr.title
+cf.cplace.solution.okr.year

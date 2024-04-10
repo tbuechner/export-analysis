@@ -1,11 +1,20 @@
+cf.cplace.assetManagement.styles
+cf.cplace.customization.file
 cf.cplace.enumerationIcons.page
+cf.cplace.landingPage.level0
+cf.cplace.landingPage.level1
+cf.cplace.landingPage.quicklink
+cf.cplace.landingPage.tab
 cf.cplace.simpleCalendar.eventClassConfiguration
 cf.cplace.simpleCalendar.eventTypeConfiguration
 cf.cplace.solution.okr.administrationDashboard
++cf.cplace.solution.okr.cycle
 cf.cplace.solution.okr.cyclesDashboard
++cf.cplace.solution.okr.keyResult
 cf.cplace.solution.okr.meeting
 cf.cplace.solution.okr.meetingsDashbaord
 cf.cplace.solution.okr.myDashboard
++cf.cplace.solution.okr.objective
 cf.cplace.solution.okr.okrDashboard
 cf.cplace.solution.okr.okrManualDashboard
 cf.cplace.solution.okr.organizationalUnit
@@ -18,5 +27,6 @@ cf.cplace.solution.okr.strategyDashbaord
 cf.cplace.solution.okr.task
 cf.cplace.solution.okr.topic
 cf.cplace.solution.okr.updateKeyResult
+cf.cplace.visualDomainModel.graph
 default.file
 default.page

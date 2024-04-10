@@ -40,7 +40,7 @@ def process_pkg(folder_name):
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
-    write_type_names(root, folder_name_generated, 'types-all')
+    write_type_names(root, folder_name_generated, 'types-all', './/types/typeDef/name')
 
     parent_map = get_parent_map(root)
 
@@ -71,7 +71,7 @@ def process_pkg(folder_name):
 
     remove_all_pages(root)
 
-    write_type_names(root, folder_name_generated, 'types-after-removal')
+    write_type_names(root, folder_name_generated, 'types-after-removal', './/type/name')
     write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
 
     pretty_print_xml(root, 0)
@@ -627,9 +627,9 @@ def remove_characters_between_xml_elements(elem):
             elem.tail = None
 
 
-def write_type_names(root, folder_name, file_name):
+def write_type_names(root, folder_name, file_name, xpath):
     type_names = []
-    for name in root.findall('.//types/typeDef/name'):
+    for name in root.findall(xpath):
         # only append if not in type_names
         if name.text not in type_names:
             type_names.append(name.text)
@@ -660,9 +660,10 @@ def write_to_file(root, folder_name, file_name):
     # write the json object to a file
     write_json_to_file(folder_name, file_name, json_object)
 
+
 def write_attribute_names(root, folder_name, file_name):
     attribute_names = []
-    for name in root.findall('.//types/typeDef/attributes/name'):
+    for name in root.findall('.//type/attributes/name'):
         # only append if not in attribute_names
         if name.text not in attribute_names:
             attribute_names.append(name.text)
