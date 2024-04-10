@@ -115,7 +115,17 @@
                                         <xs:element ref="localizedInverseRoleName"/>
                                         <xs:element ref="sameWorkspace"/>
                                         <xs:element ref="isHierarchy"/>
-                                        <xs:element ref="entityClass"/>
+                                        <xs:element name="entityClass" type="EntityClassType">
+                                          <xs:annotation>
+                                            <xs:documentation>
+                                              The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
+                                              - 'cf.cplace.platform.assets.group.Group' if the target is a group,
+                                              - 'cf.cplace.platform.assets.group.Person' if the target is a user,
+                                              - 'cf.cplace.platform.assets.file.Document' if the target is a user,
+                                              - 'cf.cplace.platform.assets.file.Page' otherwise.
+                                            </xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
                                       </xs:all>
                                     </xs:complexType>
                                   </xs:element>
@@ -270,17 +280,6 @@
   </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
   <xs:element name="typeNames" type="xs:string"/>
-  <xs:element name="entityClass" type="EntityClassType">
-    <xs:annotation>
-      <xs:documentation>
-        The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
-        - 'cf.cplace.platform.assets.group.Group' if the target is a group,
-        - 'cf.cplace.platform.assets.group.Person' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Document' if the target is a user,
-        - 'cf.cplace.platform.assets.file.Page' otherwise.
-      </xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="localizedInverseRoleName" type="xs:string"/>
   <xs:element name="sameWorkspace" type="xs:string"/>
   <xs:element name="isHierarchy" type="xs:string"/>
