@@ -42,6 +42,7 @@ def process_pkg(folder_name):
     root = tree.getroot()
 
     write_type_names(root, folder_name_generated, 'types-all', './/types/typeDef/name')
+    write_attribute_names(root, folder_name_generated, 'attributes-all', './/typeDef/attributes/name')
 
     parent_map = get_parent_map(root)
 
@@ -72,7 +73,7 @@ def process_pkg(folder_name):
     remove_all_pages(root)
 
     write_type_names(root, folder_name_generated, 'types-after-removal', './/type/name')
-    write_attribute_names(root, folder_name_generated, 'attributes-after-removal')
+    write_attribute_names(root, folder_name_generated, 'attributes-after-removal', './/type/attributes/name')
 
     pretty_print_xml(root, 0)
 
@@ -669,9 +670,9 @@ def write_to_file(root, folder_name, file_name):
     write_json_to_file(folder_name, file_name, json_object)
 
 
-def write_attribute_names(root, folder_name, file_name):
+def write_attribute_names(root, folder_name, file_name, xpath):
     attribute_names = []
-    for name in root.findall('.//type/attributes/name'):
+    for name in root.findall(xpath):
         # only append if not in attribute_names
         if name.text not in attribute_names:
             attribute_names.append(name.text)
