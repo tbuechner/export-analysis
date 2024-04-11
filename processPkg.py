@@ -27,9 +27,16 @@ def process_pkg(folder_name):
     # create folder folder_name_generated
     os.mkdir(folder_name_generated)
 
-    with open(folder_name + '/types-to-be-retained.txt') as f:
-        types_to_be_retained = f.read().splitlines()
-        types_to_be_retained = [x for x in types_to_be_retained if not x.startswith('-')]
+    with open(folder_name + '/types-and-attributes-to-be-retained.txt') as f:
+        type_name_2_attribute_names = {}
+        lines = f.read().splitlines()
+        for line in lines:
+            if not line.startswith('-'):
+                if not line.startswith('\t'):
+                    type_name = line
+                    type_name_2_attribute_names[type_name] = []
+                else:
+                    type_name_2_attribute_names[type_name].append(line[1:])
 
     with open(folder_name + '/attributes-to-be-removed.txt') as f:
         attributes_to_be_removed = f.read().splitlines()
@@ -55,12 +62,12 @@ def process_pkg(folder_name):
 
     parent_map = get_parent_map(root)
 
-    remove_types(root, parent_map, types_to_be_retained)
+    remove_types(root, parent_map, type_name_2_attribute_names)
 
     for a in attributes_to_be_removed:
         remove(root, parent_map, './/type/attributes[name="' + a + '"]')
 
-    remove_pages(root, parent_map, types_to_be_retained, attributes_to_be_removed)
+    remove_pages(root, parent_map, type_name_2_attribute_names)
 
     rewrite_pages(root, parent_map)
 
@@ -403,10 +410,10 @@ def add_element(package, element_name, text=None):
     package.append(new_element)
 
 
-def remove_types(root, parent_map, types_to_be_retained):
+def remove_types(root, parent_map, type_name_2_attribute_names):
     for type_ in root.findall('.//slot/type'):
         name_element = type_.find('.//name')
-        if name_element.text not in types_to_be_retained:
+        if name_element.text not in type_name_2_attribute_names:
             parent = parent_map[type_]
             parent.remove(type_)
 
@@ -715,12 +722,18 @@ def write_attribute_names(root, folder_name, file_name, xpath):
             f.write("%s\n" % item)
 
 
-def remove_pages(root, parent_map, types_to_be_retained, attributes_to_be_removed):
+def remove_pages(root, parent_map, type_name_2_attribute_names):
     for page in root.findall('.//pages/page'):
         type_name = page.find('.//custom/type').text
-        if type_name not in types_to_be_retained:
+        if type_name not in type_name_2_attribute_names:
             parent = parent_map[page]
             parent.remove(page)
+        else:
+            attributes = page.find('.//custom/attributes')
+            for attribute in attributes:
+                attribute_name = attribute.find('.//name').text
+                if attribute_name not in type_name_2_attribute_names[type_name]:
+                    attributes.remove(attribute)
 
     remove(root, parent_map, './/pages/page/localizedName')
     remove(root, parent_map, './/pages/page/content')
@@ -731,12 +744,6 @@ def remove_pages(root, parent_map, types_to_be_retained, attributes_to_be_remove
     remove(root, parent_map, './/pages/page/pageInPackageInclusion')
     remove(root, parent_map, './/pages/page/layoutName')
     remove(root, parent_map, './/pages/page/nameGenerationCounter')
-
-    for attribute_name in attributes_to_be_removed:
-        xpath = './/pages/page/custom/attributes/attribute[name="' + attribute_name + '"]'
-        for attribute in root.findall(xpath):
-            attributes = parent_map[attribute]
-            attributes.remove(attribute)
 
 
 def rewrite_pages(root, parent_map):
