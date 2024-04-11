@@ -41,8 +41,9 @@ def process_pkg(folder_name):
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
-    write_type_names(root, folder_name_generated, 'types-all', './/types/typeDef/name')
-    write_attribute_names(root, folder_name_generated, 'attributes-all', './/typeDef/attributes/name')
+    write_type_names(root, folder_name_generated, 'types-all', './/types/typeDef/name', '-')
+    write_attribute_names(root, folder_name_generated, 'attributes-all', './/types/typeDef/attributes/name')
+    write_type_and_attribute_names(root, folder_name_generated, 'types-and-attributes-all', './/types/typeDef', '-')
 
     parent_map = get_parent_map(root)
 
@@ -636,7 +637,35 @@ def remove_characters_between_xml_elements(elem):
             elem.tail = None
 
 
-def write_type_names(root, folder_name, file_name, xpath):
+def write_type_and_attribute_names(root, folder_name, file_name, xpath, prefix=''):
+    type_names = []
+    type_2_attribute_names = {}
+    for type_element in root.findall(xpath):
+        name_element = type_element.find('.//name')
+        type_name = name_element.text
+        if type_name not in type_names:
+            type_names.append(type_name)
+
+        for attribute_name_element in type_element.findall('.//attributes/name'):
+            attribute_name = attribute_name_element.text
+            if type_name not in type_2_attribute_names:
+                type_2_attribute_names[type_name] = []
+            if attribute_name not in type_2_attribute_names[type_name]:
+                type_2_attribute_names[type_name].append(attribute_name)
+
+    type_names.sort()
+    print(type_names)
+    print(type_2_attribute_names)
+
+    with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
+        for type_name in type_names:
+            f.write(prefix + type_name + "\n")
+            if type_name in type_2_attribute_names:
+                for attribute_name in type_2_attribute_names[type_name]:
+                    f.write("\t" + attribute_name + "\n")
+
+
+def write_type_names(root, folder_name, file_name, xpath, prefix=''):
     type_names = []
     for name in root.findall(xpath):
         # only append if not in type_names
@@ -648,7 +677,8 @@ def write_type_names(root, folder_name, file_name, xpath):
 
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for item in type_names:
-            f.write("%s\n" % item)
+            # prepend prefix to item
+            f.write(prefix + item + "\n")
 
 
 def write_to_file(root, folder_name, file_name):

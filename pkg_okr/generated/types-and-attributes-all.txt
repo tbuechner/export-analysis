@@ -1,0 +1,164 @@
+-cf.cplace.assetManagement.styles
+	parent
+	default.iconName
+	cplaceVersion
+-cf.cplace.customization.file
+	cf.cplace.customization.url
+	cf.cplace.customization.category
+	cf.cplace.customization.sanitizedUrl
+	cf.cplace.customization.type
+-cf.cplace.enumerationIcons.page
+-cf.cplace.landingPage.level0
+	cf.cplace.landingPage.descriptionLocalized
+	cf.cplace.landingPage.thumbnail
+	cf.cplace.landingPage.color
+	cf.cplace.landingPage.order
+	cf.cplace.landingPage.pageReference
+	cf.cplace.landingPage.urlReferenceModal
+	cf.cplace.landingPage.urlReference
+	cf.cplace.landingPage.tabReference
+-cf.cplace.landingPage.level1
+	cf.cplace.landingPage.level0reference
+	cf.cplace.landingPage.pageReference
+	cf.cplace.landingPage.urlReference
+	cf.cplace.landingPage.urlReferenceModal
+	cf.cplace.landingPage.order
+	cf.cplace.landingPage.width
+	cf.cplace.landingPage.isDividerTile
+-cf.cplace.landingPage.quicklink
+	cf.cplace.landingPage.level0reference
+	cf.cplace.landingPage.icon
+	cf.cplace.landingPage.order
+	cf.cplace.landingPage.pageReference
+	cf.cplace.landingPage.urlReference
+	cf.cplace.landingPage.urlReferenceModal
+-cf.cplace.landingPage.tab
+	cf.cplace.landingPage.icon
+	cf.cplace.landingPage.order
+-cf.cplace.simpleCalendar.eventClassConfiguration
+	cf.cplace.simpleCalendar.conditionAttributeName
+	cf.cplace.simpleCalendar.conditionValue
+	cf.cplace.simpleCalendar.displayName
+	cf.cplace.simpleCalendar.color
+	cf.cplace.simpleCalendar.eventType
+-cf.cplace.simpleCalendar.eventTypeConfiguration
+	cf.cplace.simpleCalendar.order
+	cf.cplace.simpleCalendar.eventTypeName
+	cf.cplace.simpleCalendar.startDateAttributeName
+	cf.cplace.simpleCalendar.endDateAttributeName
+	cf.cplace.simpleCalendar.color
+	cf.cplace.simpleCalendar.displayNamePattern
+	cf.cplace.simpleCalendar.eventClasses
+-cf.cplace.solution.okr.administrationDashboard
+	cf.cplace.solution.okr.okrDashboard
+	cf.cplace.solution.okr.settings
+-cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.year
+	cf.cplace.solution.okr.quarter
+	cf.cplace.solution.okr.status
+	cf.cplace.solution.okr.cyclesDashboard
+	cf.cplace.solution.okr.start
+	cf.cplace.solution.okr.end
+	cf.cplace.solution.okr.statusForNameGenerationPattern
+-cf.cplace.solution.okr.cyclesDashboard
+	cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.keyResult
+	cf.cplace.solution.okr.number
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.progressIndicator
+	cf.cplace.solution.okr.confidenceLevel
+	cf.cplace.solution.okr.gradingForecast
+	cf.cplace.solution.okr.smallSupport
+	cf.cplace.solution.okr.bigSupport
+	cf.cplace.solution.okr.giveBigSupport
+	cf.cplace.solution.okr.receiveBigSupport
+	cf.cplace.solution.okr.objective
+	cf.cplace.solution.okr.progress
+	cf.cplace.solution.okr.set
+	cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.organizationalUnit
+	cf.cplace.solution.okr.lastUpdate
+-cf.cplace.solution.okr.meeting
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.meetingType
+	cf.cplace.solution.okr.date
+	cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.set
+	cf.cplace.solution.okr.meetingsDashbaord
+-cf.cplace.solution.okr.meetingsDashbaord
+	cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.myDashboard
+	cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.objective
+	cf.cplace.solution.okr.number
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.set
+	cf.cplace.solution.okr.accomplished
+	cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.description
+-cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.okrManualDashboard
+	cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.organizationalUnit
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.assignedEmployee
+	cf.cplace.solution.okr.organizationalUnit
+-cf.cplace.solution.okr.priority
+	cf.cplace.solution.okr.date
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.dimension
+	cf.cplace.solution.okr.strategyDashboard
+-cf.cplace.solution.okr.progress
+	cf.cplace.solution.okr.result
+	cf.cplace.solution.okr.problem
+	cf.cplace.solution.okr.lessonsLearned
+	cf.cplace.solution.okr.nextSteps
+	cf.cplace.solution.okr.keyResult
+	cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.objective
+	cf.cplace.solution.okr.smallSupport
+	cf.cplace.solution.okr.bigSupport
+	cf.cplace.solution.okr.progressIndicator
+	cf.cplace.solution.okr.confidenceLevel
+	cf.cplace.solution.okr.gradingForecast
+	cf.cplace.solution.okr.lastUpdate
+	cf.cplace.solution.okr.set
+-cf.cplace.solution.okr.selectNextCycle
+	cf.cplace.solution.okr.nextCycle
+-cf.cplace.solution.okr.set
+	cf.cplace.solution.okr.cycle
+	cf.cplace.solution.okr.level
+	cf.cplace.solution.okr.setLead
+	cf.cplace.solution.okr.setContributors
+	cf.cplace.solution.okr.organizationalUnit
+	cf.cplace.solution.okr.parentSet
+-cf.cplace.solution.okr.settings
+	cf.cplace.solution.okr.currentCycle
+	cf.cplace.solution.okr.reader
+	cf.cplace.solution.okr.editors
+	cf.cplace.solution.okr.cycleTemplate
+-cf.cplace.solution.okr.strategyDashbaord
+	cf.cplace.solution.okr.okrDashboard
+-cf.cplace.solution.okr.task
+	cf.cplace.digitalBoard.title
+	cf.cplace.digitalBoard.responsible
+	cf.cplace.digitalBoard.description
+	cf.cplace.digitalBoard.status
+	cf.cplace.digitalBoard.dueDate
+	cf.cplace.solution.okr.keyResult
+	cf.cplace.digitalBoard.escalationLevel
+-cf.cplace.solution.okr.topic
+	cf.cplace.solution.okr.title
+	cf.cplace.solution.okr.status
+	cf.cplace.solution.okr.description
+	cf.cplace.solution.okr.organizationalUnit
+-cf.cplace.solution.okr.updateKeyResult
+	cf.cplace.solution.okr.progressUpdated
+	cf.cplace.solution.okr.confidenceLevel
+	cf.cplace.solution.okr.gradingForecast
+-cf.cplace.visualDomainModel.graph
+	cf.cplace.visualDomainModel.graph.json
+-default.file
+-default.page
+	default.parent
+	default.iconName
