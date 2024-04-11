@@ -37,9 +37,7 @@ def process_pkg(folder_name):
                     type_name_2_attribute_names[type_name] = []
                 else:
                     type_name_2_attribute_names[type_name].append(line[1:])
-
-    with open(folder_name + '/attributes-to-be-removed.txt') as f:
-        attributes_to_be_removed = f.read().splitlines()
+    # print(type_name_2_attribute_names)
 
     with open(folder_name + '/slots-to-be-retained.txt') as f:
         slots_to_be_retained = f.read().splitlines()
@@ -62,10 +60,7 @@ def process_pkg(folder_name):
 
     parent_map = get_parent_map(root)
 
-    remove_types(root, parent_map, type_name_2_attribute_names)
-
-    for a in attributes_to_be_removed:
-        remove(root, parent_map, './/type/attributes[name="' + a + '"]')
+    remove_types_and_attributes(root, parent_map, type_name_2_attribute_names)
 
     remove_pages(root, parent_map, type_name_2_attribute_names)
 
@@ -410,12 +405,27 @@ def add_element(package, element_name, text=None):
     package.append(new_element)
 
 
-def remove_types(root, parent_map, type_name_2_attribute_names):
+def remove_types_and_attributes(root, parent_map, type_name_2_attribute_names):
     for type_ in root.findall('.//slot/type'):
         name_element = type_.find('.//name')
-        if name_element.text not in type_name_2_attribute_names:
+        type_name = name_element.text
+        if type_name not in type_name_2_attribute_names:
             parent = parent_map[type_]
             parent.remove(type_)
+        else:
+            attribute_names = type_name_2_attribute_names[type_name]
+            # if attribute_names has one element and this element is 'all'
+            if len(attribute_names) == 0:
+                pass
+            else:
+                attributes_to_be_removed = []
+                for attribute in type_.findall('.//attributes'):
+                    attribute_name = attribute.find('.//name').text
+                    if attribute_name not in attribute_names:
+                        attributes_to_be_removed.append(attribute)
+                for attribute in attributes_to_be_removed:
+                    type_.remove(attribute)
+
 
 
 def rewrite(root, parent_map):
@@ -661,8 +671,8 @@ def write_type_and_attribute_names(root, folder_name, file_name, xpath, prefix='
                 type_2_attribute_names[type_name].append(attribute_name)
 
     type_names.sort()
-    print(type_names)
-    print(type_2_attribute_names)
+    # print(type_names)
+    # print(type_2_attribute_names)
 
     with open(folder_name + '/' +  file_name + '.txt', 'w') as f:
         for type_name in type_names:
@@ -729,10 +739,29 @@ def remove_pages(root, parent_map, type_name_2_attribute_names):
             parent = parent_map[page]
             parent.remove(page)
         else:
-            attributes = page.find('.//custom/attributes')
-            for attribute in attributes:
-                attribute_name = attribute.find('.//name').text
-                if attribute_name not in type_name_2_attribute_names[type_name]:
+            attribute_names = type_name_2_attribute_names[type_name]
+            # if attribute_names has one element and this element is 'all'
+            if len(attribute_names) == 0:
+                pass
+            else:
+                custom = page.find('.//custom')
+                attributes = custom.find('.//attributes')
+
+                attributesToBeRemoved = []
+
+                for attribute in attributes:
+                    attribute_name = attribute.find('.//name').text
+                    if attribute_name not in attribute_names:
+                        # print("type " + type_name + " - removing attribute: " + attribute_name + " from page " + page.find('.//id').text)
+                        # test if attribute is a child of attributes
+                        # print(parent_map[attribute] == attributes)
+                        attributesToBeRemoved.append(attribute)
+                        # attributes.remove(attribute)
+                        # print textual representation of page
+                        # page_str = ET.tostring(page, encoding='utf-8', method='xml').decode('utf-8')
+                        # print(page_str)
+
+                for attribute in attributesToBeRemoved:
                     attributes.remove(attribute)
 
     remove(root, parent_map, './/pages/page/localizedName')
