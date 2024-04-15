@@ -27,17 +27,7 @@ def process_pkg(folder_name):
     # create folder folder_name_generated
     os.mkdir(folder_name_generated)
 
-    with open(folder_name + '/types-and-attributes-to-be-retained.txt') as f:
-        type_name_2_attribute_names = {}
-        lines = f.read().splitlines()
-        for line in lines:
-            if not line.startswith('-'):
-                if not line.startswith('\t'):
-                    type_name = line
-                    type_name_2_attribute_names[type_name] = []
-                else:
-                    type_name_2_attribute_names[type_name].append(line[1:])
-    # print(type_name_2_attribute_names)
+    type_name_2_attribute_names = get_type_name_2_attribute_names(folder_name)
 
     with open(folder_name + '/slots-to-be-retained.txt') as f:
         slots_to_be_retained = f.read().splitlines()
@@ -97,6 +87,21 @@ def process_pkg(folder_name):
 
     # zip export.xml into package.zip
     os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
+
+
+def get_type_name_2_attribute_names(folder_name):
+    with open(folder_name + '/types-and-attributes-to-be-retained.txt') as f:
+        type_name_2_attribute_names = {}
+        lines = f.read().splitlines()
+        for line in lines:
+            if not line.startswith('-'):
+                if not line.startswith('\t'):
+                    type_name = line
+                    type_name_2_attribute_names[type_name] = []
+                else:
+                    type_name_2_attribute_names[type_name].append(line[1:])
+    # print(type_name_2_attribute_names)
+    return type_name_2_attribute_names
 
 
 def get_parent_map(root):
