@@ -71,16 +71,16 @@
                             <xs:element name="localizedNameSingular">
                               <xs:complexType>
                                 <xs:sequence>
-                                  <xs:element ref="en"/>
-                                  <xs:element ref="de"/>
+                                  <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                  <xs:element name="de" type="xs:string" minOccurs="0"/>
                                 </xs:sequence>
                               </xs:complexType>
                             </xs:element>
                             <xs:element name="localizedNamePlural">
                               <xs:complexType mixed="true">
                                 <xs:sequence>
-                                  <xs:element ref="en" minOccurs="0"/>
-                                  <xs:element ref="de" minOccurs="0"/>
+                                  <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                  <xs:element name="de" type="xs:string" minOccurs="0"/>
                                 </xs:sequence>
                               </xs:complexType>
                             </xs:element>
@@ -99,16 +99,16 @@
                                   <xs:element name="localizedShortName">
                                     <xs:complexType mixed="true">
                                       <xs:sequence>
-                                        <xs:element ref="en" minOccurs="0"/>
-                                        <xs:element ref="de" minOccurs="0"/>
+                                        <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="de" type="xs:string" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
                                   <xs:element name="shortHelp" type="xs:string">
                                     <xs:complexType>
                                       <xs:sequence>
-                                        <xs:element ref="en" minOccurs="0"/>
-                                        <xs:element ref="de" minOccurs="0"/>
+                                        <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="de" type="xs:string" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
@@ -232,18 +232,16 @@
   <xs:element name="name">
     <xs:complexType mixed="true">
       <xs:sequence>
-        <xs:element ref="de" minOccurs="0"/>
-        <xs:element ref="en" minOccurs="0"/>
+        <xs:element name="de" type="xs:string" minOccurs="0"/>
+        <xs:element name="en" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="de" type="xs:string"/>
-  <xs:element name="en" type="xs:string"/>
   <xs:element name="localizedName">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="en"/>
-        <xs:element ref="de"/>
+        <xs:element name="en" type="xs:string" minOccurs="0"/>
+        <xs:element name="de" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -256,19 +254,17 @@
         <xs:element name="localizations" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+              <xs:element name="entry" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="key" type="xs:string"/>
+                    <xs:element ref="value"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="key" type="xs:string"/>
-  <xs:element name="entry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="key"/>
-        <xs:element ref="value"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -293,8 +289,8 @@
   <xs:element name="localizedTextAfterSupplier" type="xs:string">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
+        <xs:element name="en" type="xs:string" minOccurs="0"/>
+        <xs:element name="de" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
