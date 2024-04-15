@@ -46,8 +46,6 @@ def process_pkg(folder_name):
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
-    write_type_names(root, folder_name_generated, 'types-all', './/types/typeDef/name', '-')
-    write_attribute_names(root, folder_name_generated, 'attributes-all', './/types/typeDef/attributes/name')
     write_type_and_attribute_names(root, folder_name_generated, 'types-and-attributes-all', './/types/typeDef', '-')
 
     parent_map = get_parent_map(root)
