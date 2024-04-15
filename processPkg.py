@@ -72,7 +72,7 @@ def process_pkg(folder_name):
 
     # create a deep clone of root
     root_copy = ET.fromstring(ET.tostring(root))
-    parent_map = {c: p for p in root_copy.iter() for c in p}
+    parent_map = get_parent_map(root_copy)
 
     remove_to_basics(root_copy, parent_map)
     pretty_print_xml(root_copy, 0)
@@ -109,7 +109,7 @@ def get_parent_map(root):
 
 
 def rewrite_to_pkg_format(root, tree):
-    parent_map = {c: p for p in tree.iter() for c in p}
+    parent_map = get_parent_map(root)
     rewrite_to_pkg_format_add_mandatory_elements(root, parent_map)
     pretty_print_xml(root, 0)
 
@@ -839,7 +839,7 @@ def rewrite_pages(root, parent_map):
 
 
 def remove_all_pages(root):
-    parent_map = {c: p for p in root.iter() for c in p}
+    parent_map = get_parent_map(root)
     remove(root, parent_map, './/pages')
 
 
