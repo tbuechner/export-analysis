@@ -113,7 +113,7 @@
                                         <xs:element ref="localizedInverseRoleName"/>
                                         <xs:element ref="sameWorkspace"/>
                                         <xs:element ref="isHierarchy"/>
-                                        <xs:element name="entityClass" type="EntityClassType">
+                                        <xs:element name="entityClass">
                                           <xs:annotation>
                                             <xs:documentation>
                                               The 'entityClass' element specifies the class of the entity to which the reference points. It can have the following values:
@@ -123,6 +123,14 @@
                                               - 'cf.cplace.platform.assets.file.Page' otherwise.
                                             </xs:documentation>
                                           </xs:annotation>
+                                          <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                              <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
+                                              <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
+                                              <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
+                                              <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
+                                            </xs:restriction>
+                                          </xs:simpleType>
                                         </xs:element>
                                       </xs:all>
                                     </xs:complexType>
@@ -151,7 +159,7 @@
                                   </xs:element>
                                   <xs:element name="richStringConstraint" minOccurs="0">
                                   </xs:element>
-                                  <xs:element name="multiplicity" type="Multiplicity">
+                                  <xs:element name="multiplicity">
                                     <xs:annotation>
                                       <xs:documentation>
                                         The 'multiplicity' element specifies the cardinality constraints for an attribute of the data model.
@@ -159,6 +167,14 @@
                                         If the 'key' attribute is not set, the cardinality of the attribute is any number of values.
                                       </xs:documentation>
                                     </xs:annotation>
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:enumeration value="atLeastOne"/>
+                                        <xs:enumeration value="maximalOne"/>
+                                        <xs:enumeration value="exactlyOne"/>
+                                        <xs:enumeration value="anyNumber"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
                                   </xs:element>
                                 </xs:all>
                               </xs:complexType>
@@ -189,22 +205,6 @@
   </xs:element>
   <xs:element name="de" type="xs:string"/>
   <xs:element name="en" type="xs:string"/>
-  <xs:simpleType name="EntityClassType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="cf.cplace.platform.assets.group.Group"/>
-      <xs:enumeration value="cf.cplace.platform.assets.group.Person"/>
-      <xs:enumeration value="cf.cplace.platform.assets.file.Page"/>
-      <xs:enumeration value="cf.cplace.platform.assets.file.Document"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="Multiplicity">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="atLeastOne"/>
-      <xs:enumeration value="maximalOne"/>
-      <xs:enumeration value="exactlyOne"/>
-      <xs:enumeration value="anyNumber"/>
-    </xs:restriction>
-  </xs:simpleType>
   <xs:element name="localizedName">
     <xs:complexType>
       <xs:sequence>
