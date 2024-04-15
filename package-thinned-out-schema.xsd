@@ -143,10 +143,10 @@
                                     <xs:complexType>
                                       <xs:all>
                                         <xs:element ref="defaultValues" minOccurs="0"/>
-                                        <xs:element ref="typeNames" minOccurs="0"/>
-                                        <xs:element ref="localizedInverseRoleName"/>
-                                        <xs:element ref="sameWorkspace"/>
-                                        <xs:element ref="isHierarchy"/>
+                                        <xs:element name="typeNames" type="xs:string"/>
+                                        <xs:element name="localizedInverseRoleName" type="xs:string"/>
+                                        <xs:element name="sameWorkspace" type="xs:string"/>
+                                        <xs:element name="isHierarchy" type="xs:string"/>
                                         <xs:element name="entityClass">
                                           <xs:annotation>
                                             <xs:documentation>
@@ -172,8 +172,8 @@
                                   <xs:element name="dateConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
-                                        <xs:element ref="specificity"/>
-                                        <xs:element ref="dateFormat"/>
+                                        <xs:element name="specificity" type="xs:string"/>
+                                        <xs:element name="dateFormat" type="xs:string"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
@@ -289,12 +289,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="defaultValues" type="xs:string"/>
-  <xs:element name="typeNames" type="xs:string"/>
-  <xs:element name="localizedInverseRoleName" type="xs:string"/>
-  <xs:element name="sameWorkspace" type="xs:string"/>
-  <xs:element name="isHierarchy" type="xs:string"/>
-  <xs:element name="specificity" type="xs:string"/>
-  <xs:element name="dateFormat" type="xs:string"/>
   <xs:element name="precision" type="xs:byte"/>
   <xs:element name="localizedTextAfterSupplier" type="xs:string">
     <xs:complexType>
