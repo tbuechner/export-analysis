@@ -2,21 +2,42 @@
   <xs:element name="package">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="name"/>
+        <xs:element name="name">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element name="de" type="xs:string" minOccurs="0"/>
+              <xs:element name="en" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="slots">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="slot" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element ref="name"/>
+                    <xs:element name="name">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="de" type="xs:string" minOccurs="0"/>
+                          <xs:element name="en" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
                     <xs:element name="pages" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="page" maxOccurs="unbounded" minOccurs="0">
                             <xs:complexType>
                               <xs:sequence>
-                                <xs:element ref="name"/>
+                                <xs:element name="name">
+                                  <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                      <xs:element name="de" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
                                 <xs:element name="id" type="xs:string"/>
                                 <xs:element name="custom">
                                   <xs:complexType>
@@ -67,7 +88,14 @@
                       <xs:element name="type" maxOccurs="unbounded" minOccurs="0">
                         <xs:complexType>
                           <xs:sequence>
-                            <xs:element ref="name"/>
+                            <xs:element name="name">
+                              <xs:complexType mixed="true">
+                                <xs:sequence>
+                                  <xs:element name="de" type="xs:string" minOccurs="0"/>
+                                  <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
                             <xs:element name="localizedNameSingular">
                               <xs:complexType>
                                 <xs:sequence>
@@ -94,7 +122,14 @@
                             <xs:element name="attributes" maxOccurs="unbounded" minOccurs="0">
                               <xs:complexType>
                                 <xs:all>
-                                  <xs:element ref="name"/>
+                                  <xs:element name="name">
+                                    <xs:complexType mixed="true">
+                                      <xs:sequence>
+                                        <xs:element name="de" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
                                   <xs:element name="localizedName">
                                     <xs:complexType>
                                       <xs:sequence>
@@ -126,7 +161,7 @@
                                   <xs:element name="textEnumerationConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
-                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
                                         <xs:element ref="element" maxOccurs="unbounded" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
@@ -134,9 +169,16 @@
                                   <xs:element name="numberEnumerationConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
-                                        <xs:element ref="precision"/>
-                                        <xs:element ref="localizedTextAfterSupplier"/>
-                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element name="precision" type="xs:byte"/>
+                                        <xs:element name="localizedTextAfterSupplier" type="xs:string">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                              <xs:element name="de" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
                                         <xs:element ref="element" maxOccurs="unbounded" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
@@ -149,7 +191,7 @@
                                     </xs:annotation>
                                     <xs:complexType>
                                       <xs:all>
-                                        <xs:element ref="defaultValues" minOccurs="0"/>
+                                        <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
                                         <xs:element name="typeNames" type="xs:string"/>
                                         <xs:element name="localizedInverseRoleName" type="xs:string"/>
                                         <xs:element name="sameWorkspace" type="xs:string"/>
@@ -187,8 +229,15 @@
                                   <xs:element name="numberConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
-                                        <xs:element ref="precision"/>
-                                        <xs:element ref="localizedTextAfterSupplier"/>
+                                        <xs:element name="precision" type="xs:byte"/>
+                                        <xs:element name="localizedTextAfterSupplier" type="xs:string">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="en" type="xs:string" minOccurs="0"/>
+                                              <xs:element name="de" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>
@@ -236,14 +285,6 @@
       <xs:attribute type="xs:float" name="xmlVersion"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="name">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element name="de" type="xs:string" minOccurs="0"/>
-        <xs:element name="en" type="xs:string" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="element">
     <xs:complexType>
       <xs:sequence>
@@ -257,16 +298,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="defaultValues" type="xs:string"/>
-  <xs:element name="precision" type="xs:byte"/>
-  <xs:element name="localizedTextAfterSupplier" type="xs:string">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="en" type="xs:string" minOccurs="0"/>
-        <xs:element name="de" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
