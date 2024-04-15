@@ -68,16 +68,50 @@
                         <xs:complexType>
                           <xs:sequence>
                             <xs:element ref="name"/>
-                            <xs:element ref="localizedNameSingular"/>
-                            <xs:element ref="localizedNamePlural"/>
-                            <xs:element ref="iconName"/>
+                            <xs:element name="localizedNameSingular">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element ref="en"/>
+                                  <xs:element ref="de"/>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="localizedNamePlural">
+                              <xs:complexType mixed="true">
+                                <xs:sequence>
+                                  <xs:element ref="en" minOccurs="0"/>
+                                  <xs:element ref="de" minOccurs="0"/>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="iconName" type="xs:string">
+                              <xs:annotation>
+                                <xs:documentation>
+                                  'iconName' is the name of the icon that represents the type in the user interface. It is a Font Awesome icon name.
+                                </xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
                             <xs:element name="attributes" maxOccurs="unbounded" minOccurs="0">
                               <xs:complexType>
                                 <xs:all>
                                   <xs:element ref="name"/>
                                   <xs:element ref="localizedName"/>
-                                  <xs:element ref="localizedShortName"/>
-                                  <xs:element ref="shortHelp"/>
+                                  <xs:element name="localizedShortName">
+                                    <xs:complexType mixed="true">
+                                      <xs:sequence>
+                                        <xs:element ref="en" minOccurs="0"/>
+                                        <xs:element ref="de" minOccurs="0"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="shortHelp" type="xs:string">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element ref="en" minOccurs="0"/>
+                                        <xs:element ref="de" minOccurs="0"/>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
                                   <xs:element name="stringConstraint" minOccurs="0">
                                   </xs:element>
                                   <xs:element name="longConstraint" minOccurs="0">
@@ -213,29 +247,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="localizedShortName">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="shortHelp" type="xs:string">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="language" type="xs:string"/>
   <xs:element name="value">
     <xs:complexType mixed="true">
       <xs:sequence>
         <xs:element ref="language" minOccurs="0"/>
         <xs:element ref="value" minOccurs="0"/>
-        <xs:element ref="localizations" minOccurs="0"/>
+        <xs:element name="localizations" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -245,13 +269,6 @@
       <xs:sequence>
         <xs:element ref="key"/>
         <xs:element ref="value"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="localizations">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -278,29 +295,6 @@
   <xs:element name="isHierarchy" type="xs:string"/>
   <xs:element name="specificity" type="xs:string"/>
   <xs:element name="dateFormat" type="xs:string"/>
-  <xs:element name="localizedNameSingular">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="en"/>
-        <xs:element ref="de"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="localizedNamePlural">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element ref="en" minOccurs="0"/>
-        <xs:element ref="de" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="iconName" type="xs:string">
-    <xs:annotation>
-      <xs:documentation>
-        'iconName' is the name of the icon that represents the type in the user interface. It is a Font Awesome icon name.
-      </xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="precision" type="xs:byte"/>
   <xs:element name="localizedTextAfterSupplier" type="xs:string">
     <xs:complexType>
