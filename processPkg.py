@@ -29,12 +29,13 @@ def process_pkg(folder_name):
 
     type_name_2_attribute_names = get_type_name_2_attribute_names(folder_name)
 
-    with open(folder_name + '/slots-to-be-retained.txt') as f:
-        slots_to_be_retained = f.read().splitlines()
-
     # Load and parse the XML document
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
+
+    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-all')
+
+    slots_to_be_retained = get_slots_to_be_retained(folder_name)
 
     write_type_and_attribute_names(root, folder_name_generated, 'types-and-attributes-all', './/types/typeDef', '-')
 
@@ -49,6 +50,8 @@ def process_pkg(folder_name):
     parent_map = get_parent_map(root)
 
     remove_types_and_attributes(root, parent_map, type_name_2_attribute_names)
+
+    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-after-removal')
 
     remove_pages(root, parent_map, type_name_2_attribute_names)
 
@@ -87,6 +90,12 @@ def process_pkg(folder_name):
 
     # zip export.xml into package.zip
     os.system("zip -j " + folder_name_generated + "/package.zip " + folder_name_generated + "/export.xml")
+
+
+def get_slots_to_be_retained(folder_name):
+    with open(folder_name + '/slots-to-be-retained.txt') as f:
+        slots_to_be_retained = f.read().splitlines()
+    return slots_to_be_retained
 
 
 def get_type_name_2_attribute_names(folder_name):
@@ -655,6 +664,24 @@ def remove_characters_between_xml_elements(elem):
     else:
         if elem.tail:
             elem.tail = None
+
+
+def write_slot_and_type_names(root, folder_name_generated, file_name):
+    slot_2_type_names = {}
+    for slot in root.findall('.//slot'):
+        # read attribute 'internalName' of slot
+        slot_name = slot.get('internalName')
+        type_names = []
+        for type_ in slot.findall('.//typeDef'):
+            type_name = type_.find('.//name').text
+            type_names.append(type_name)
+        slot_2_type_names[slot_name] = type_names
+    print(slot_2_type_names)
+    with open(folder_name_generated + '/' + file_name + '.txt', 'w') as f:
+        for slot_name in slot_2_type_names:
+            f.write(slot_name + "\n")
+            for type_name in slot_2_type_names[slot_name]:
+                f.write("\t" + type_name + "\n")
 
 
 def write_type_and_attribute_names(root, folder_name, file_name, xpath, prefix=''):
