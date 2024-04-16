@@ -4,6 +4,8 @@
       <de>Solution Template - Objectives &amp; Key Results</de>
       <en>Solution Template - Objectives &amp; Key Results</en>
     </name>
+    <cplaceRelease>24.1</cplaceRelease>
+    <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
     <slots>
       <slot internalName="cf.cplace.okr.okr">
         <name>
@@ -735,7 +737,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>jovtrw7knoj3qf7brwgcxi0kw</id>
+              <id>75fzgmqm1e9gqfkp79y2yivja</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -749,8 +751,6 @@
         </workspace>
       </slot>
     </slots>
-    <cplaceRelease>24.1</cplaceRelease>
-    <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
   </package>
   <maps />
 </package>

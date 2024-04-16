@@ -4,6 +4,8 @@
       <de>Solution Template - Large Solution SAFe</de>
       <en>Solution Template - Large Solution SAFe</en>
     </name>
+    <cplaceRelease>24.1</cplaceRelease>
+    <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
     <slots>
       <slot internalName="cf.cplace.lsafe.art">
         <name>
@@ -2158,7 +2160,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>197lno1wgvnylhwktlx0u79ko</id>
+              <id>hkv8g0jwccn4cmiqw00jo393j</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -4020,7 +4022,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>2j49khv5n81st8ue6r363g2jl</id>
+              <id>e558h5nqobv1jbydaevz4sait</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -4045,7 +4047,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>oe5bx6s4z3i4ome056j7rlcqm</id>
+              <id>craxe18sslegvw6g1nvw4vi7w</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -6221,7 +6223,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>xomj544p5nkizvrlkfvwvcwu4</id>
+              <id>jy22xmg6evm0vutcbodqrp4hi</id>
               <custom>
                 <type>default.page</type>
                 <attributes />
@@ -6235,8 +6237,6 @@
         </workspace>
       </slot>
     </slots>
-    <cplaceRelease>24.1</cplaceRelease>
-    <publishDate>2024-01-25T14:49:25.893+01:00</publishDate>
   </package>
   <maps />
 </package>

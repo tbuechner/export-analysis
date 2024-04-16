@@ -1,5 +1,5 @@
-tokens thinned-out.xml: 28471
-tokens thinned-out-compressed.xml: 21938
-tokens after-page-removal.xml: 186972
-tokens basic-structure.xml: 28471
-tokens basic-structure-compressed.xml: 21938
+tokens thinned-out.xml: 28463
+tokens thinned-out-compressed.xml: 21934
+tokens after-page-removal.xml: 186964
+tokens basic-structure.xml: 28463
+tokens basic-structure-compressed.xml: 21934

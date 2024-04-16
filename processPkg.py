@@ -191,6 +191,21 @@ def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
 
     add_element(root, 'maps')
 
+    slots = add_element(root.find('.//package'), 'slots')
+
+    parent_map = get_parent_map(root)
+
+    for slot in root.findall('.//slot'):
+        parent_map[slot].remove(slot)
+        slots.append(slot)
+
+    parent_map = get_parent_map(root)
+
+    # print textual representation of root
+    root_str = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
+    print(root_str)
+
+
     slots = root.findall('.//slot')
     for slot in slots:
         workspace = ET.Element('workspace')
@@ -415,6 +430,7 @@ def add_element(package, element_name, text=None):
     if text is not None:
         new_element.text = text
     package.append(new_element)
+    return new_element
 
 
 def remove_types_and_attributes(root, parent_map, type_name_2_attribute_names):
@@ -437,7 +453,6 @@ def remove_types_and_attributes(root, parent_map, type_name_2_attribute_names):
                         attributes_to_be_removed.append(attribute)
                 for attribute in attributes_to_be_removed:
                     type_.remove(attribute)
-
 
 
 def rewrite(root, parent_map):
@@ -565,6 +580,13 @@ def rewrite(root, parent_map):
     # print(elements)
     # print(element2icon)
     # print(element2localized_labels)
+
+    # move slots one level up
+    for slot in root.findall('.//slot'):
+        root.append(slot)
+
+    for slots in root.findall('.//slots'):
+        root.remove(slots)
 
 
 def rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map):
