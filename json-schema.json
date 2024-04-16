@@ -1,81 +1,361 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "OKR Meta Model Schema",
-  "description": "JSON Schema representation of the OKR meta model, with conditionals for attributes",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "types": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/TypeDefinition"
-      }
-    }
-  },
-  "definitions": {
-    "TypeDefinition": {
+    "package": {
       "type": "object",
       "properties": {
-        "name": {"type": "string"},
-        "localizedNameSingular": {
+        "name": {
           "type": "object",
           "properties": {
-            "de": {"type": "string"},
-            "en": {"type": "string"}
-          },
-          "required": ["de", "en"]
-        },
-        "localizedNamePlural": {
-          "type": "object",
-          "properties": {
-            "de": {"type": "string"},
-            "en": {"type": "string"}
-          },
-          "required": ["de", "en"]
-        },
-        "description": {"type": ["string", "null"]},
-        "attributeDefinitions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AttributeDefinition"
+            "de": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
           }
-        }
-      },
-      "required": ["name", "attributeDefinitions"]
-    },
-    "AttributeDefinition": {
-      "type": "object",
-      "properties": {
-        "name": {"type": "string"},
-        "localizedName": {
+        },
+        "slots": {
           "type": "object",
           "properties": {
-            "de": {"type": "string"},
-            "en": {"type": "string"}
-          },
-          "required": ["de", "en"]
+            "slot": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "object",
+                    "properties": {
+                      "de": {
+                        "type": "string"
+                      },
+                      "en": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "internalName": {
+                    "type": "string"
+                  },
+                  "workspaceName": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "localizedNameSingular": {
+                          "type": "object",
+                          "properties": {
+                            "en": {
+                              "type": "string"
+                            },
+                            "de": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "localizedNamePlural": {
+                          "type": "object",
+                          "properties": {
+                            "en": {
+                              "type": "string"
+                            },
+                            "de": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "iconName": {
+                          "type": "string"
+                        },
+                        "attributes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "localizedName": {
+                                "type": "object",
+                                "properties": {
+                                  "en": {
+                                    "type": "string"
+                                  },
+                                  "de": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "localizedShortName": {
+                                "type": [
+                                  "object",
+                                  "null"
+                                ],
+                                "properties": {
+                                  "en": {
+                                    "type": "string"
+                                  },
+                                  "de": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "shortHelp": {
+                                "type": [
+                                  "object",
+                                  "null"
+                                ],
+                                "properties": {
+                                  "en": {
+                                    "type": "string"
+                                  },
+                                  "de": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "referenceConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "typeNames": {
+                                    "type": "string"
+                                  },
+                                  "entityClass": {
+                                    "type": "string"
+                                  },
+                                  "localizedInverseRoleName": {
+                                    "type": "null"
+                                  },
+                                  "sameWorkspace": {
+                                    "type": "string"
+                                  },
+                                  "isHierarchy": {
+                                    "type": "string"
+                                  },
+                                  "defaultValues": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "multiplicity": {
+                                "type": "string"
+                              },
+                              "stringConstraint": {
+                                "type": "null"
+                              },
+                              "textEnumerationConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "defaultValues": {
+                                    "type": "string"
+                                  },
+                                  "element": {
+                                    "type": "object",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "string"
+                                        },
+                                        "icon": {
+                                          "type": "string"
+                                        },
+                                        "localizedName": {
+                                          "type": "object",
+                                          "properties": {
+                                            "de": {
+                                              "type": "string"
+                                            },
+                                            "en": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "icon",
+                                        "localizedName"
+                                      ]
+                                    },
+                                    "properties": {
+                                      "value": {
+                                        "type": "string"
+                                      },
+                                      "icon": {
+                                        "type": "string"
+                                      },
+                                      "localizedName": {
+                                        "type": "object",
+                                        "properties": {
+                                          "de": {
+                                            "type": "string"
+                                          },
+                                          "en": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "numberConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "defaultValues": {
+                                    "type": "string"
+                                  },
+                                  "precision": {
+                                    "type": "string"
+                                  },
+                                  "localizedTextAfterSupplier": {
+                                    "type": [
+                                      "object",
+                                      "null"
+                                    ],
+                                    "properties": {
+                                      "en": {
+                                        "type": "string"
+                                      },
+                                      "de": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "dateConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "specificity": {
+                                    "type": "string"
+                                  },
+                                  "dateFormat": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "richStringConstraint": {
+                                "type": "null"
+                              },
+                              "booleanConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "defaultValues": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "numberEnumerationConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "precision": {
+                                    "type": "string"
+                                  },
+                                  "localizedTextAfterSupplier": {
+                                    "type": "null"
+                                  },
+                                  "element": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "string"
+                                        },
+                                        "icon": {
+                                          "type": "string"
+                                        },
+                                        "localizedName": {
+                                          "type": "object",
+                                          "properties": {
+                                            "de": {
+                                              "type": "string"
+                                            },
+                                            "en": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "icon",
+                                        "localizedName"
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "customConstraint": {
+                                "type": "object",
+                                "properties": {
+                                  "defaultValues": {
+                                    "type": "string"
+                                  },
+                                  "constraintName": {
+                                    "type": "string"
+                                  },
+                                  "additionalConstraintData": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "longConstraint": {
+                                "type": "null"
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "localizedName",
+                              "localizedShortName",
+                              "shortHelp",
+                              "multiplicity",
+                              "referenceConstraint",
+                              "stringConstraint",
+                              "dateConstraint",
+                              "richStringConstraint",
+                              "textEnumerationConstraint",
+                              "numberConstraint",
+                              "numberEnumerationConstraint",
+                              "booleanConstraint"
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "localizedNameSingular",
+                        "localizedNamePlural",
+                        "iconName",
+                        "attributes"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "name",
+                  "internalName",
+                  "workspaceName",
+                  "type"
+                ]
+              }
+            }
+          }
         },
-        "multiplicity": {"type": "string", "enum": ["exactlyOne", "maximalOne", null]},
-        "typeConstraint": {"type": "string", "enum": ["Text", "Number", "Date", "TextEnumeration", "Link", "RichString"]}
-      },
-      "required": ["name", "typeConstraint"],
-      "if": {
-        "properties": {"typeConstraint": {"const": "Link"}}
-      },
-      "then": {
-        "properties": {
-          "linkEntityKind": {"type": "string"},
-          "linkTypeName": {"type": "string"},
-          "linkSameWorkspace": {"type": "boolean"},
-          "linkIsHierarchy": {"type": "boolean"}
+        "internalName": {
+          "type": "string"
         },
-        "required": ["linkEntityKind", "linkTypeName", "linkSameWorkspace", "linkIsHierarchy"]
-      },
-      "else": {
-        "properties": {
-          "linkEntityKind": {"type": "null"},
-          "linkTypeName": {"type": "null"},
-          "linkSameWorkspace": {"type": "null"},
-          "linkIsHierarchy": {"type": "null"}
+        "version": {
+          "type": "string"
         }
       }
     }

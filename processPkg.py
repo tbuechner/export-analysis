@@ -33,7 +33,7 @@ def process_pkg(folder_name):
     tree = ET.parse(folder_name + '/export.xml')
     root = tree.getroot()
 
-    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-all')
+    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-all', './/typeDef', lambda slot: slot.get('internalName'))
 
     slots_to_be_retained = get_slots_to_be_retained(folder_name)
 
@@ -51,7 +51,7 @@ def process_pkg(folder_name):
 
     remove_types_and_attributes(root, parent_map, type_name_2_attribute_names)
 
-    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-after-removal')
+    write_slot_and_type_names(root, folder_name_generated, 'slots-and-types-after-removal', 'type', lambda slot: slot.find('internalName').text)
 
     remove_pages(root, parent_map, type_name_2_attribute_names)
 
@@ -666,17 +666,17 @@ def remove_characters_between_xml_elements(elem):
             elem.tail = None
 
 
-def write_slot_and_type_names(root, folder_name_generated, file_name):
+def write_slot_and_type_names(root, folder_name_generated, file_name, find_type_xpath, get_slot_name_func):
     slot_2_type_names = {}
     for slot in root.findall('.//slot'):
         # read attribute 'internalName' of slot
-        slot_name = slot.get('internalName')
+        slot_name = get_slot_name_func(slot)
         type_names = []
-        for type_ in slot.findall('.//typeDef'):
+        for type_ in slot.findall(find_type_xpath):
             type_name = type_.find('.//name').text
             type_names.append(type_name)
         slot_2_type_names[slot_name] = type_names
-    print(slot_2_type_names)
+    # print(slot_2_type_names)
     with open(folder_name_generated + '/' + file_name + '.txt', 'w') as f:
         for slot_name in slot_2_type_names:
             f.write(slot_name + "\n")

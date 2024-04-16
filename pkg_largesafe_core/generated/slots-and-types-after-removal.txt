@@ -1,0 +1,12 @@
+cf.cplace.lsafe.art
+	cf.cplace.solution.safe.program
+	cf.cplace.solution.safe.feature
+	cf.cplace.solution.safe.agileReleaseTrain
+cf.cplace.lsafe.portfolio
+	cf.cplace.solution.safe.epic
+	cf.cplace.solution.safe.portfolio
+cf.cplace.lsafe.scheduler
+cf.cplace.lsafe.solution
+	cf.cplace.solution.safe.solution
+	cf.cplace.solution.safe.programIncrement
+	cf.cplace.solution.safe.capability

@@ -195,7 +195,7 @@ The following xml schema represents describes a xml format for specifying data m
                                     <xs:complexType>
                                       <xs:all>
                                         <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
-                                        <xs:element name="typeNames" type="xs:string"/>
+                                        <xs:element name="typeNames" type="xs:string" minOccurs="0"/>
                                         <xs:element name="localizedInverseRoleName" type="xs:string"/>
                                         <xs:element name="sameWorkspace" type="xs:string"/>
                                         <xs:element name="isHierarchy" type="xs:string"/>
@@ -232,8 +232,9 @@ The following xml schema represents describes a xml format for specifying data m
                                   <xs:element name="numberConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
+                                        <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
                                         <xs:element name="precision" type="xs:byte"/>
-                                        <xs:element name="localizedTextAfterSupplier" type="xs:string">
+                                        <xs:element name="localizedTextAfterSupplier">
                                           <xs:complexType>
                                             <xs:sequence>
                                               <xs:element name="en" type="xs:string" minOccurs="0"/>
@@ -247,6 +248,7 @@ The following xml schema represents describes a xml format for specifying data m
                                   <xs:element name="booleanConstraint" minOccurs="0">
                                     <xs:complexType>
                                       <xs:sequence>
+                                        <xs:element name="defaultValues" type="xs:string" minOccurs="0"/>
                                       </xs:sequence>
                                     </xs:complexType>
                                   </xs:element>

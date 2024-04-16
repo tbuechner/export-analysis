@@ -1,0 +1,44 @@
+cf.cplace.lsafe.art
+	cf.cplace.solution.safe.program
+	cf.cplace.solution.safe.feature
+	cf.cplace.solution.safe.release
+	cf.cplace.solution.safe.safeMilestone
+	cf.cplace.solution.safe.agileReleaseTrain
+	cf.cplace.solution.safe.story
+	cf.cplace.solution.safe.team
+	cf.cplace.solution.safe.artMember
+	cf.cplace.solution.safe.role
+	cf.cplace.solution.safe.periodStatus
+	cf.cplace.solution.safe.iteration
+	cf.cplace.solution.safe.ARTsync
+	cf.cplace.solution.safe.assistance
+	cf.cplace.solution.safe.programKanban
+	cf.cplace.solution.safe.piObjectives
+	cf.cplace.solution.safe.packageAdministration
+cf.cplace.lsafe.portfolio
+	cf.cplace.solution.safe.epic
+	cf.cplace.solution.safe.epicCosts
+	cf.cplace.solution.safe.portfolio
+	cf.cplace.solution.safe.valueStream
+	cf.cplace.solution.safe.portfolioConfiguration
+	cf.cplace.solution.safe.keyPartner
+	cf.cplace.solution.safe.keyResources
+	cf.cplace.solution.safe.costStructure
+	cf.cplace.solution.safe.revenueStream
+	cf.cplace.solution.safe.portfolioCanvas
+	cf.cplace.solution.safe.safeMilestone
+	cf.cplace.solution.safe.event
+	cf.cplace.solution.safe.horizon
+cf.cplace.lsafe.scheduler
+cf.cplace.lsafe.solution
+	cf.cplace.solution.safe.solution
+	cf.cplace.solution.safe.programIncrement
+	cf.cplace.solution.safe.iteration
+	cf.cplace.solution.safe.capability
+	cf.cplace.solution.safe.dependency
+	cf.cplace.solution.safe.safeMilestone
+	cf.cplace.solution.safe.periodStatus
+	cf.cplace.solution.safe.flowMetric
+	cf.cplace.solution.safe.objective
+	cf.cplace.solution.safe.event
+	cf.cplace.solution.safe.confidenceVote
