@@ -201,11 +201,6 @@ def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
 
     parent_map = get_parent_map(root)
 
-    # print textual representation of root
-    root_str = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
-    print(root_str)
-
-
     slots = root.findall('.//slot')
     for slot in slots:
         workspace = ET.Element('workspace')
@@ -758,12 +753,7 @@ def write_to_file(root, folder_name, file_name):
     with open(folder_name + '/' + file_name + '-compressed.xml', 'w') as f:
         f.write(ET.tostring(root, encoding='unicode'))
 
-    # convert the xml element to a json object
-    json_object = xmltodict.parse(ET.tostring(root, encoding='utf-8'))
-
-    # q: some of the attributes in the generated json start with '@' - what does this mean and why do only some attributes have this prefix?
-
-
+    json_object = xmltodict.parse(ET.tostring(root, encoding='utf-8'), force_list=('slot', 'type', 'attributes', 'element'))
 
     # write the json object to a file
     write_json_to_file(folder_name, file_name, json_object)

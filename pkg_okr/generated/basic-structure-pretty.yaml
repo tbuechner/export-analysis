@@ -7,7 +7,7 @@ package:
     de: Solution Template - Objectives & Key Results
     en: Solution Template - Objectives & Key Results
   slot:
-    internalName: cf.cplace.okr.okr
+  - internalName: cf.cplace.okr.okr
     name:
       de: Objectives Key Results
       en: Objectives Key Results
