@@ -267,7 +267,7 @@ package:
         shortHelp: null
         textEnumerationConstraint:
           element:
-            icon: lightning-001-red
+          - icon: lightning-001-red
             localizedName:
               de: "Ungel\xF6ster Konflikt"
               en: Unresolved Conflict
@@ -1290,7 +1290,7 @@ package:
         en: Role
       name: cf.cplace.solution.safe.role
     - attributes:
-        localizedName:
+      - localizedName:
           de: Order
           en: Order
         localizedShortName: null
@@ -1525,7 +1525,7 @@ package:
         en: Assistance
       name: cf.cplace.solution.safe.assistance
     - attributes:
-        localizedName:
+      - localizedName:
           de: Elternseite
           en: Parent
         localizedShortName: null
@@ -1694,7 +1694,7 @@ package:
         en: PI Objective
       name: cf.cplace.solution.safe.piObjectives
     - attributes:
-        localizedName:
+      - localizedName:
           de: Parent
           en: Parent
         localizedShortName: null
@@ -2803,7 +2803,7 @@ package:
         en: Portfolio Konfiguration
       name: cf.cplace.solution.safe.portfolioConfiguration
     - attributes:
-        localizedName:
+      - localizedName:
           de: Partner-Homepage
           en: Partner Homepage
         localizedShortName: null
@@ -2820,7 +2820,7 @@ package:
         en: Key Partner
       name: cf.cplace.solution.safe.keyPartner
     - attributes:
-        localizedName:
+      - localizedName:
           de: Verantwortlich(e)
           en: Responsible(s)
         localizedShortName: null
@@ -3928,7 +3928,7 @@ package:
         shortHelp: null
         textEnumerationConstraint:
           element:
-            icon: lightning-001-red
+          - icon: lightning-001-red
             localizedName:
               de: "Ungel\xF6ster Konflikt"
               en: Unresolved Conflict
@@ -4166,7 +4166,7 @@ package:
         en: SAFe Milestone
       name: cf.cplace.solution.safe.safeMilestone
     - attributes:
-        localizedName:
+      - localizedName:
           de: Order
           en: Order
         localizedShortName: null

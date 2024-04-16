@@ -380,14 +380,16 @@
                                 },
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "element": {
-                                        "value": "#25 - conflict",
-                                        "icon": "lightning-001-red",
-                                        "localizedName": {
-                                            "de": "Ungel\u00f6ster Konflikt",
-                                            "en": "Unresolved Conflict"
+                                    "element": [
+                                        {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
-                                    }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },
@@ -1844,20 +1846,22 @@
                             "de": "Period Status"
                         },
                         "iconName": "fa-list",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.order",
-                            "localizedName": {
-                                "en": "Order",
-                                "de": "Order"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "numberConstraint": {
-                                "precision": "0",
-                                "localizedTextAfterSupplier": null
-                            },
-                            "multiplicity": "maximalOne"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.order",
+                                "localizedName": {
+                                    "en": "Order",
+                                    "de": "Order"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "numberConstraint": {
+                                    "precision": "0",
+                                    "localizedTextAfterSupplier": null
+                                },
+                                "multiplicity": "maximalOne"
+                            }
+                        ]
                     },
                     {
                         "name": "cf.cplace.solution.safe.iteration",
@@ -2170,23 +2174,25 @@
                             "de": "Programm-Kanban Dashboard"
                         },
                         "iconName": "fa-desktop",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.parent",
-                            "localizedName": {
-                                "en": "Parent",
-                                "de": "Elternseite"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "referenceConstraint": {
-                                "typeNames": "cf.cplace.solution.safe.program",
-                                "entityClass": "cf.cplace.platform.assets.file.Page",
-                                "localizedInverseRoleName": null,
-                                "sameWorkspace": "true",
-                                "isHierarchy": "true"
-                            },
-                            "multiplicity": "exactlyOne"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.parent",
+                                "localizedName": {
+                                    "en": "Parent",
+                                    "de": "Elternseite"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "referenceConstraint": {
+                                    "typeNames": "cf.cplace.solution.safe.program",
+                                    "entityClass": "cf.cplace.platform.assets.file.Page",
+                                    "localizedInverseRoleName": null,
+                                    "sameWorkspace": "true",
+                                    "isHierarchy": "true"
+                                },
+                                "multiplicity": "exactlyOne"
+                            }
+                        ]
                     },
                     {
                         "name": "cf.cplace.solution.safe.piObjectives",
@@ -2419,22 +2425,24 @@
                             "de": "Package Administrations"
                         },
                         "iconName": "fa-list",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.parent",
-                            "localizedName": {
-                                "en": "Parent",
-                                "de": "Parent"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "referenceConstraint": {
-                                "entityClass": "cf.cplace.platform.assets.file.Page",
-                                "localizedInverseRoleName": null,
-                                "sameWorkspace": "true",
-                                "isHierarchy": "true"
-                            },
-                            "multiplicity": "exactlyOne"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.parent",
+                                "localizedName": {
+                                    "en": "Parent",
+                                    "de": "Parent"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "referenceConstraint": {
+                                    "entityClass": "cf.cplace.platform.assets.file.Page",
+                                    "localizedInverseRoleName": null,
+                                    "sameWorkspace": "true",
+                                    "isHierarchy": "true"
+                                },
+                                "multiplicity": "exactlyOne"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3699,17 +3707,19 @@
                             "de": "Schl\u00fcsselpartner"
                         },
                         "iconName": "fa-handshake",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.homepage",
-                            "localizedName": {
-                                "en": "Partner Homepage",
-                                "de": "Partner-Homepage"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "richStringConstraint": null,
-                            "multiplicity": "maximalOne"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.homepage",
+                                "localizedName": {
+                                    "en": "Partner Homepage",
+                                    "de": "Partner-Homepage"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "richStringConstraint": null,
+                                "multiplicity": "maximalOne"
+                            }
+                        ]
                     },
                     {
                         "name": "cf.cplace.solution.safe.keyResources",
@@ -3722,22 +3732,24 @@
                             "de": "Schl\u00fcsselressourcen"
                         },
                         "iconName": "cf-engine-alt",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.responsible",
-                            "localizedName": {
-                                "en": "Responsible(s)",
-                                "de": "Verantwortlich(e)"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "referenceConstraint": {
-                                "entityClass": "cf.cplace.platform.assets.group.Person",
-                                "localizedInverseRoleName": null,
-                                "sameWorkspace": "false",
-                                "isHierarchy": "false"
-                            },
-                            "multiplicity": "anyNumber"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.responsible",
+                                "localizedName": {
+                                    "en": "Responsible(s)",
+                                    "de": "Verantwortlich(e)"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "referenceConstraint": {
+                                    "entityClass": "cf.cplace.platform.assets.group.Person",
+                                    "localizedInverseRoleName": null,
+                                    "sameWorkspace": "false",
+                                    "isHierarchy": "false"
+                                },
+                                "multiplicity": "anyNumber"
+                            }
+                        ]
                     },
                     {
                         "name": "cf.cplace.solution.safe.costStructure",
@@ -5317,14 +5329,16 @@
                                 },
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "element": {
-                                        "value": "#25 - conflict",
-                                        "icon": "lightning-001-red",
-                                        "localizedName": {
-                                            "de": "Ungel\u00f6ster Konflikt",
-                                            "en": "Unresolved Conflict"
+                                    "element": [
+                                        {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
-                                    }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },
@@ -5659,20 +5673,22 @@
                             "de": "Period Status"
                         },
                         "iconName": "fa-list",
-                        "attributes": {
-                            "name": "cf.cplace.solution.safe.order",
-                            "localizedName": {
-                                "en": "Order",
-                                "de": "Order"
-                            },
-                            "localizedShortName": null,
-                            "shortHelp": null,
-                            "numberConstraint": {
-                                "precision": "0",
-                                "localizedTextAfterSupplier": null
-                            },
-                            "multiplicity": "maximalOne"
-                        }
+                        "attributes": [
+                            {
+                                "name": "cf.cplace.solution.safe.order",
+                                "localizedName": {
+                                    "en": "Order",
+                                    "de": "Order"
+                                },
+                                "localizedShortName": null,
+                                "shortHelp": null,
+                                "numberConstraint": {
+                                    "precision": "0",
+                                    "localizedTextAfterSupplier": null
+                                },
+                                "multiplicity": "maximalOne"
+                            }
+                        ]
                     },
                     {
                         "name": "cf.cplace.solution.safe.flowMetric",

@@ -267,7 +267,7 @@ package:
         shortHelp: null
         textEnumerationConstraint:
           element:
-            icon: lightning-001-red
+          - icon: lightning-001-red
             localizedName:
               de: "Ungel\xF6ster Konflikt"
               en: Unresolved Conflict
@@ -2504,7 +2504,7 @@ package:
         shortHelp: null
         textEnumerationConstraint:
           element:
-            icon: lightning-001-red
+          - icon: lightning-001-red
             localizedName:
               de: "Ungel\xF6ster Konflikt"
               en: Unresolved Conflict

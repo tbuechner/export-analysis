@@ -515,13 +515,6 @@ def rewrite(root, parent_map):
         slot = parent_map[types]
         slot.remove(types)
 
-    constraint_factories = root.findall('.//constraintFactory')
-    for constraint_factory in constraint_factories:
-        # set constraint_factory tag to the value of the attribute `type`
-        constraint_factory.tag = constraint_factory.get('type')
-        # remove the attribute `type`
-        del constraint_factory.attrib['type']
-
     multiplicities = root.findall('.//multiplicity')
     for multiplicity in multiplicities:
         key = multiplicity.find('.//key')
@@ -537,6 +530,13 @@ def rewrite(root, parent_map):
         # move the multiplicity element to the attribute element
         attribute.append(multiplicity)
         constraint.remove(multiplicity)
+
+    constraint_factories = root.findall('.//constraintFactory')
+    for constraint_factory in constraint_factories:
+        # set constraint_factory tag to the value of the attribute `type`
+        constraint_factory.tag = constraint_factory.get('type')
+        # remove the attribute `type`
+        del constraint_factory.attrib['type']
 
     parent_map = get_parent_map(root)
 
@@ -582,6 +582,9 @@ def rewrite(root, parent_map):
 
     for slots in root.findall('.//slots'):
         root.remove(slots)
+
+
+
 
 
 def rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map):

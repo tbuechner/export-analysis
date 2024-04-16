@@ -380,14 +380,16 @@
                                 },
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "element": {
-                                        "value": "#25 - conflict",
-                                        "icon": "lightning-001-red",
-                                        "localizedName": {
-                                            "de": "Ungel\u00f6ster Konflikt",
-                                            "en": "Unresolved Conflict"
+                                    "element": [
+                                        {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
-                                    }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },
@@ -3302,14 +3304,16 @@
                                 },
                                 "shortHelp": null,
                                 "textEnumerationConstraint": {
-                                    "element": {
-                                        "value": "#25 - conflict",
-                                        "icon": "lightning-001-red",
-                                        "localizedName": {
-                                            "de": "Ungel\u00f6ster Konflikt",
-                                            "en": "Unresolved Conflict"
+                                    "element": [
+                                        {
+                                            "value": "#25 - conflict",
+                                            "icon": "lightning-001-red",
+                                            "localizedName": {
+                                                "de": "Ungel\u00f6ster Konflikt",
+                                                "en": "Unresolved Conflict"
+                                            }
                                         }
-                                    }
+                                    ]
                                 },
                                 "multiplicity": "maximalOne"
                             },
