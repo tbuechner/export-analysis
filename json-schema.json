@@ -1,365 +1,266 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "package": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "object",
-          "properties": {
-            "de": {
-              "type": "string"
-            },
-            "en": {
-              "type": "string"
-            }
+  "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": {
+  "package": {
+    "type": "object", "properties": {
+      "name": {
+        "type": "object", "properties": {
+          "de": {
+            "type": "string"
+          }, "en": {
+            "type": "string"
           }
-        },
-        "slot": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "object",
-                "properties": {
-                  "de": {
-                    "type": "string"
-                  },
-                  "en": {
-                    "type": "string"
-                  }
+        }
+      }, "slot": {
+        "type": "array", "items": {
+          "type": "object", "properties": {
+            "name": {
+              "type": "object", "properties": {
+                "de": {
+                  "type": "string"
+                }, "en": {
+                  "type": "string"
                 }
-              },
-              "internalName": {
-                "type": "string"
-              },
-              "workspaceName": {
-                "type": "string"
-              },
-              "type": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "localizedNameSingular": {
-                      "type": "object",
-                      "properties": {
-                        "en": {
-                          "type": "string"
-                        },
-                        "de": {
-                          "type": "string"
-                        }
+              }
+            }, "internalName": {
+              "type": "string"
+            }, "workspaceName": {
+              "type": "string"
+            }, "type": {
+              "type": "array", "items": {
+                "type": "object", "properties": {
+                  "name": {
+                    "type": "string"
+                  }, "localizedNameSingular": {
+                    "type": "object", "properties": {
+                      "en": {
+                        "type": "string"
+                      }, "de": {
+                        "type": "string"
                       }
-                    },
-                    "localizedNamePlural": {
-                      "type": "object",
-                      "properties": {
-                        "en": {
-                          "type": "string"
-                        },
-                        "de": {
-                          "type": "string"
-                        }
+                    }
+                  }, "localizedNamePlural": {
+                    "type": "object", "properties": {
+                      "en": {
+                        "type": "string"
+                      }, "de": {
+                        "type": "string"
                       }
-                    },
-                    "iconName": {
-                      "type": "string"
-                    },
-                    "attributes": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "localizedName": {
-                            "type": "object",
-                            "properties": {
-                              "en": {
+                    }
+                  }, "iconName": {
+                    "type": "string"
+                  }, "attributes": {
+                    "type": "array", "items": {
+                      "type": "object", "properties": {
+                        "name": {
+                          "type": "string"
+                        }, "localizedName": {
+                          "type": "object", "properties": {
+                            "en": {
+                              "type": "string"
+                            }, "de": {
+                              "type": "string"
+                            }
+                          }
+                        }, "localizedShortName": {
+                          "type": [
+                            "object",
+                            "null"
+                          ], "properties": {
+                            "en": {
+                              "type": "string"
+                            }, "de": {
+                              "type": "string"
+                            }
+                          }
+                        }, "shortHelp": {
+                          "type": [
+                            "object",
+                            "null"
+                          ], "properties": {
+                            "en": {
+                              "type": "string"
+                            }, "de": {
+                              "type": "string"
+                            }
+                          }
+                        }, "constraint": {
+                          "oneOf": [
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "reference"
+                              }, "typeNames": {
                                 "type": "string"
-                              },
-                              "de": {
+                              }, "entityClass": {
+                                "type": "string"
+                              }, "localizedInverseRoleName": {
+                                "type": "null"
+                              }, "sameWorkspace": {
+                                "type": "string"
+                              }, "isHierarchy": {
+                                "type": "string"
+                              }, "defaultValues": {
                                 "type": "string"
                               }
                             }
-                          },
-                          "localizedShortName": {
-                            "type": [
-                              "object",
-                              "null"
-                            ],
-                            "properties": {
-                              "en": {
-                                "type": "string"
-                              },
-                              "de": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "shortHelp": {
-                            "type": [
-                              "object",
-                              "null"
-                            ],
-                            "properties": {
-                              "en": {
-                                "type": "string"
-                              },
-                              "de": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "constraint": {
-                            "oneOf": [
-                              {
-                              "type": "object",
-                              "properties": {
-                                "attributeType": {
-                                  "const": "reference"
-                                },
-                                "typeNames": {
-                                  "type": "string"
-                                },
-                                "entityClass": {
-                                  "type": "string"
-                                },
-                                "localizedInverseRoleName": {
-                                  "type": "null"
-                                },
-                                "sameWorkspace": {
-                                  "type": "string"
-                                },
-                                "isHierarchy": {
-                                  "type": "string"
-                                },
-                                "defaultValues": {
-                                  "type": "string"
-                                }
-                              }
                             },
-                              {
-                              "type": "object",
-                              "properties": {
-                                "attributeType": {
-                                  "const": "string"
-                                }
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "string"
                               }
-                            }, {
-                              "type": "object",
-                              "properties": {
-                                "attributeType": {
-                                  "const": "textEnumeration"
-                                },
-                                "defaultValues": {
-                                  "type": "string"
-                                },
-                                "element": {
-                                  "type": "object",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "value": {
-                                        "type": "string"
-                                      },
-                                      "icon": {
-                                        "type": "string"
-                                      },
-                                      "localizedName": {
-                                        "type": "object",
-                                        "properties": {
-                                          "de": {
-                                            "type": "string"
-                                          },
-                                          "en": {
-                                            "type": "string"
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "required": [
-                                      "value",
-                                      "icon",
-                                      "localizedName"
-                                    ]
-                                  },
-                                  "properties": {
+                            }, "additionalProperties": false
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "textEnumeration"
+                              }, "defaultValues": {
+                                "type": "string"
+                              }, "element": {
+                                "type": "array", "items": {
+                                  "type": "object", "properties": {
                                     "value": {
                                       "type": "string"
-                                    },
-                                    "icon": {
+                                    }, "icon": {
                                       "type": "string"
-                                    },
-                                    "localizedName": {
-                                      "type": "object",
-                                      "properties": {
+                                    }, "localizedName": {
+                                      "type": "object", "properties": {
                                         "de": {
                                           "type": "string"
-                                        },
-                                        "en": {
+                                        }, "en": {
                                           "type": "string"
                                         }
                                       }
                                     }
+                                  }, "additionalProperties": false
+                                }
+                              }
+                            }, "additionalProperties": false
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "number"
+                              }, "defaultValues": {
+                                "type": "string"
+                              }, "precision": {
+                                "type": "string"
+                              }, "localizedTextAfterSupplier": {
+                                "type": [
+                                  "object",
+                                  "null"
+                                ], "properties": {
+                                  "en": {
+                                    "type": "string"
+                                  }, "de": {
+                                    "type": "string"
                                   }
                                 }
                               }
-                            }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "number"
-                                  },
-                                  "defaultValues": {
-                                    "type": "string"
-                                  },
-                                  "precision": {
-                                    "type": "string"
-                                  },
-                                  "localizedTextAfterSupplier": {
-                                    "type": [
-                                      "object",
-                                      "null"
-                                    ],
-                                    "properties": {
-                                      "en": {
-                                        "type": "string"
-                                      },
-                                      "de": {
-                                        "type": "string"
+                            }
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "date"
+                              }, "specificity": {
+                                "type": "string"
+                              }, "dateFormat": {
+                                "type": "string"
+                              }
+                            }
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "richString"
+                              }
+                            }
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "boolean"
+                              }, "defaultValues": {
+                                "type": "string"
+                              }
+                            }
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "numberEnumeration"
+                              }, "precision": {
+                                "type": "string"
+                              }, "localizedTextAfterSupplier": {
+                                "type": "null"
+                              }, "element": {
+                                "type": "array", "items": {
+                                  "type": "object", "properties": {
+                                    "value": {
+                                      "type": "string"
+                                    }, "icon": {
+                                      "type": "string"
+                                    }, "localizedName": {
+                                      "type": "object", "properties": {
+                                        "de": {
+                                          "type": "string"
+                                        }, "en": {
+                                          "type": "string"
+                                        }
                                       }
                                     }
-                                  }
-                                }
-                              }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "date"
-                                  },
-                                  "specificity": {
-                                    "type": "string"
-                                  },
-                                  "dateFormat": {
-                                    "type": "string"
-                                  }
-                                }
-                              }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "richString"
-                                  }
-                                }
-                              }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "boolean"
-                                  },
-                                  "defaultValues": {
-                                    "type": "string"
-                                  }
-                                }
-                              }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "numberEnumeration"
-                                  },
-                                  "precision": {
-                                    "type": "string"
-                                  },
-                                  "localizedTextAfterSupplier": {
-                                    "type": "null"
-                                  },
-                                  "element": {
-                                    "type": "array",
-                                    "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "value": {
-                                          "type": "string"
-                                        },
-                                        "icon": {
-                                          "type": "string"
-                                        },
-                                        "localizedName": {
-                                          "type": "object",
-                                          "properties": {
-                                            "de": {
-                                              "type": "string"
-                                            },
-                                            "en": {
-                                              "type": "string"
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "required": [
-                                        "value",
-                                        "icon",
-                                        "localizedName"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }, {
-                                "type": "object",
-                                "properties": {
-                                  "attributeType": {
-                                    "const": "long"
-                                  }
+                                  }, "required": [
+                                    "value",
+                                    "icon",
+                                    "localizedName"
+                                  ]
                                 }
                               }
-                            ]
-                          },
-                          "multiplicity": {
-                            "type": "string",
-                            "enum": [
-                              "maximalOne",
-                              "exactlyOne",
-                              "anyNumber",
-                              "atLeastOne"
-                            ]
-                          }
+                            }
+                            },
+                            {
+                              "type": "object", "properties": {
+                              "attributeType": {
+                                "const": "long"
+                              }
+                            }
+                            }
+                          ]
+                        }, "multiplicity": {
+                          "type": "string", "enum": [
+                            "maximalOne",
+                            "exactlyOne",
+                            "anyNumber",
+                            "atLeastOne"
+                          ]
                         }
                       }
                     }
-                  },
-                  "required": [
-                    "name",
-                    "localizedNameSingular",
-                    "localizedNamePlural",
-                    "iconName",
-                    "attributes"
-                  ]
-                }
+                  }
+                }, "required": [
+                  "name",
+                  "localizedNameSingular",
+                  "localizedNamePlural",
+                  "iconName",
+                  "attributes"
+                ]
               }
-            },
-            "required": [
-              "name",
-              "internalName",
-              "workspaceName",
-              "type"
-            ]
-          }
-        },
-        "internalName": {
-          "type": "string"
-        },
-        "version": {
-          "type": "string"
+            }
+          }, "required": [
+            "name",
+            "internalName",
+            "workspaceName",
+            "type"
+          ]
         }
+      }, "internalName": {
+        "type": "string"
+      }, "version": {
+        "type": "string"
       }
     }
   }
+}
 }
