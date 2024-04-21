@@ -31,7 +31,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -42,7 +44,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -53,7 +57,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>#15 Next</value>
             <icon>harvey-ball-red-100</icon>
@@ -86,7 +90,8 @@
               <en>Draft</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -97,10 +102,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -111,10 +117,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -140,10 +147,11 @@
           <de>Nr.</de>
         </localizedShortName>
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>-1</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -154,7 +162,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -165,7 +175,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#25 - no</defaultValues>
           <element>
             <value>#15 - yes</value>
@@ -183,7 +193,8 @@
               <en>No</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -194,7 +205,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -220,10 +233,11 @@
           <de>Nr.</de>
         </localizedShortName>
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>-1</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -234,7 +248,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -245,7 +261,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>0.1</value>
             <icon>circle-001-red</icon>
@@ -326,7 +342,8 @@
               <en>1.0</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -337,13 +354,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.okr.objective</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>true</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -354,10 +372,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>

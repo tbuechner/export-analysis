@@ -38,7 +38,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -53,7 +53,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -68,7 +68,7 @@
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                   <elements>#15 Next</elements>
                   <elements>#25 Current</elements>
                   <elements>#35 Closed</elements>
@@ -188,12 +188,12 @@
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="dateConstraint">
-                  <specificity>DAY</specificity>
-                  <dateFormat>DAY_YEAR_LONG</dateFormat>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
+                  <specificity>DAY</specificity>
+                  <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -205,12 +205,12 @@
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="dateConstraint">
-                  <specificity>DAY</specificity>
-                  <dateFormat>DAY_YEAR_LONG</dateFormat>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
+                  <specificity>DAY</specificity>
+                  <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <appliesTo>
@@ -244,12 +244,12 @@
                 </localizedShortName>
                 <shortHelp />
                 <constraintFactory type="numberConstraint">
-                  <precision>-1</precision>
-                  <localizedTextAfterSupplier />
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <precision>-1</precision>
+                  <localizedTextAfterSupplier />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiNumberAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -264,7 +264,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -276,11 +276,11 @@
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="textEnumerationConstraint">
-                  <defaultValues>s#25 - no</defaultValues>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <defaultValues>s#25 - no</defaultValues>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                   <elements>#15 - yes</elements>
                   <elements>#25 - no</elements>
                   <element2icon>
@@ -351,7 +351,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiRichStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <appliesTo>
@@ -385,12 +385,12 @@
                 </localizedShortName>
                 <shortHelp />
                 <constraintFactory type="numberConstraint">
-                  <precision>-1</precision>
-                  <localizedTextAfterSupplier />
                   <multiplicity>
                     <key>exactlyOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef</attributeDefClass>
+                  <precision>-1</precision>
+                  <localizedTextAfterSupplier />
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiNumberAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -405,7 +405,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <attributes>
@@ -420,7 +420,7 @@
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleStringAttributeDef</attributeDefClass>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiStringAttributeDef</attributeDefClass>
                   <elements>0.1</elements>
                   <elements>0.2</elements>
                   <elements>0.3</elements>
@@ -696,14 +696,14 @@
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="referenceConstraint">
+                  <multiplicity>
+                    <key>exactlyOne</key>
+                  </multiplicity>
                   <typeNames>cf.cplace.solution.okr.objective</typeNames>
                   <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
                   <localizedInverseRoleName />
                   <sameWorkspace>true</sameWorkspace>
                   <isHierarchy>true</isHierarchy>
-                  <multiplicity>
-                    <key>exactlyOne</key>
-                  </multiplicity>
                   <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
@@ -716,12 +716,12 @@
                 <localizedShortName />
                 <shortHelp />
                 <constraintFactory type="dateConstraint">
-                  <specificity>DAY</specificity>
-                  <dateFormat>DAY_YEAR_LONG</dateFormat>
                   <multiplicity>
                     <key>maximalOne</key>
                   </multiplicity>
-                  <attributeDefClass>cf.cplace.platform.assets.custom.def.SingleDateAttributeDef</attributeDefClass>
+                  <specificity>DAY</specificity>
+                  <dateFormat>DAY_YEAR_LONG</dateFormat>
+                  <attributeDefClass>cf.cplace.platform.assets.custom.def.MultiDateAttributeDef</attributeDefClass>
                 </constraintFactory>
               </attributes>
               <appliesTo>
@@ -737,7 +737,7 @@
           <rootPage>
             <page>
               <name>Root Page</name>
-              <id>key6gof663omb7rd3n91fut0l</id>
+              <id>3pdbh50p0au8utlpkocmlzlfl</id>
               <custom>
                 <type>default.page</type>
                 <attributes />

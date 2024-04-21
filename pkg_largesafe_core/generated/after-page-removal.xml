@@ -4727,13 +4727,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>default.user</typeNames>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -4747,7 +4748,9 @@
           <de>Key</de>
         </localizedShortName>
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -4758,13 +4761,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.solution</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -4787,7 +4791,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -4798,14 +4804,15 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <defaultValues>lpage/qg000odouviwwtx4rz2bvaoi8</defaultValues>
           <typeNames>cf.cplace.solution.safe.program</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4819,13 +4826,14 @@
           <de>Abhängig von</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.feature</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -4836,7 +4844,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#15 - analysis</defaultValues>
           <element>
             <value>#15 - analysis</value>
@@ -4886,7 +4894,8 @@
               <en>Obsolete</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -4897,14 +4906,15 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <defaultValues>d0</defaultValues>
           <precision>0</precision>
           <localizedTextAfterSupplier>
             <en>%</en>
             <de>%</de>
           </localizedTextAfterSupplier>
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4915,13 +4925,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4932,10 +4943,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4946,10 +4958,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4960,13 +4973,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -4977,13 +4991,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.capability</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -4994,13 +5009,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.release</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5011,10 +5027,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5025,7 +5042,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5039,7 +5058,9 @@
           <de>AC</de>
         </localizedShortName>
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5050,7 +5071,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5064,7 +5087,7 @@
           <de>Konflikt</de>
         </localizedShortName>
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>#25 - conflict</value>
             <icon>lightning-001-red</icon>
@@ -5073,7 +5096,8 @@
               <en>Unresolved Conflict</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5084,9 +5108,10 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <booleanConstraint>
+        <constraint>
           <defaultValues>bfalse</defaultValues>
-        </booleanConstraint>
+          <attributeType>boolean</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -5097,13 +5122,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.feature</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -5117,10 +5143,11 @@
           <de>WSJF</de>
         </localizedShortName>
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>2</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5134,7 +5161,7 @@
           <de>Business Value</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -5193,7 +5220,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5207,7 +5235,7 @@
           <de>Time Criticality</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -5266,7 +5294,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5280,7 +5309,7 @@
           <de>Risk Reduction</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -5339,7 +5368,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5353,7 +5383,7 @@
           <de>Job Size</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -5412,7 +5442,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5426,7 +5457,9 @@
           <de>Program-Key</de>
         </localizedShortName>
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5440,7 +5473,7 @@
           <de>Feature Type</de>
         </localizedShortName>
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>sfeature</defaultValues>
           <element>
             <value>feature</value>
@@ -5458,7 +5491,8 @@
               <en>Enabler</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -5472,13 +5506,14 @@
           <de>Teams</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.team</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -5489,13 +5524,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.role</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5506,13 +5542,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.periodStatus</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5523,13 +5560,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.iteration</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -5540,13 +5578,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.story</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -5557,12 +5596,13 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5573,10 +5613,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5587,10 +5628,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5601,10 +5643,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5615,10 +5658,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5629,10 +5673,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5643,7 +5688,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>high</value>
             <icon>trend-010-upwards</icon>
@@ -5668,7 +5713,8 @@
               <en>Low</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5679,10 +5725,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5693,10 +5740,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5707,10 +5755,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -5733,7 +5782,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -5744,13 +5795,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.program</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>true</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5764,13 +5816,14 @@
           <de>PM</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.artMember</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5784,13 +5837,14 @@
           <de>RTE</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.artMember</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5804,13 +5858,14 @@
           <de>SA</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.artMember</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5821,7 +5876,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5832,7 +5889,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5843,7 +5902,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5854,7 +5915,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5865,7 +5928,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5876,13 +5941,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>default.file</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Document</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -5893,7 +5959,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -6534,7 +6602,9 @@
           <en>A short name for the epic.</en>
           <de>A short name for the epic.</de>
         </shortHelp>
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -6548,12 +6618,13 @@
           <en>The name of the epic owner.</en>
           <de>The name of the epic owner.</de>
         </shortHelp>
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6564,7 +6635,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#10 - Draft</defaultValues>
           <element>
             <value>#10 - Draft</value>
@@ -6630,7 +6701,8 @@
               <en>Archived</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -6644,11 +6716,12 @@
           <de>Status</de>
         </localizedShortName>
         <shortHelp />
-        <customConstraint>
+        <constraint>
           <defaultValues>s#10 - Draft</defaultValues>
           <constraintName>cf.cplace.workflow.workflowConstraint</constraintName>
           <additionalConstraintData>{"workflowData":{"workflowStates":"[{\"internalName\":\"#15 - Funnel\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Trichter\"},\"en\":{\"language\":\"en\",\"value\":\"Funnel\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#25 - Reviewing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Überprüfung\"},\"en\":{\"language\":\"en\",\"value\":\"Reviewing\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#35 - Analyzing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Analyse\"},\"en\":{\"language\":\"en\",\"value\":\"Analyzation\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#45 - Backlog\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Backlog\"},\"en\":{\"language\":\"en\",\"value\":\"Backlog\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#55 - Implementing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Implementierung\"},\"en\":{\"language\":\"en\",\"value\":\"Implementing\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Abgeschlossen\"},\"en\":{\"language\":\"en\",\"value\":\"Done\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#75 - Archived\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Archiviert\"},\"en\":{\"language\":\"en\",\"value\":\"Archived\"}}},\"isDefault\":false,\"actions\":\"\",\"isFixed\":false},{\"internalName\":\"#10 - Draft\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Entwurf\"},\"en\":{\"language\":\"en\",\"value\":\"Draft\"}}},\"color\":\"#5d3636\",\"isDefault\":true,\"actions\":\"\",\"isFixed\":false}]","workflowTransitions":"[{\"previousStateName\":\"#35 - Analyzing\",\"nextStateName\":\"#45 - Backlog\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Ins Backlog\"},\"en\":{\"language\":\"en\",\"value\":\"To Backlog\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#45 - Backlog\",\"nextStateName\":\"#55 - Implementing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Implementierung\"},\"en\":{\"language\":\"en\",\"value\":\"To Implementation\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#55 - Implementing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Abschließen\"},\"en\":{\"language\":\"en\",\"value\":\"Done\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#65 - Done\",\"nextStateName\":\"#75 - Archived\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Archivieren\"},\"en\":{\"language\":\"en\",\"value\":\"Archive\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#10 - Draft\",\"nextStateName\":\"#15 - Funnel\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Portfolio Kanban überführen\"},\"en\":{\"language\":\"en\",\"value\":\"Transfer to Portfolio Kanban\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Portfolio Kanban überführt\"},\"en\":{\"language\":\"en\",\"value\":\"Transfered to Portfolio Kanban\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"let today \\\\u003d new DateTime();\\\\n\\\\ncplace.actions().updatePage(page, {\\\\n    customAttributes: {\\\\n        \\\\u0027cf.cplace.solution.safe.funnelEntry\\\\u0027: today\\\\n    }\\\\n});\\\",\\\"contextEntityId\\\":\\\"z13ltttp6i6bs485hozpnczg5\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"isFixed\":false},{\"previousStateName\":\"#10 - Draft\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#15 - Funnel\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#25 - Reviewing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#35 - Analyzing\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#45 - Backlog\",\"nextStateName\":\"#65 - Done\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Nicht relevant\"},\"en\":{\"language\":\"en\",\"value\":\"Not relevant\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#25 - Reviewing\",\"nextStateName\":\"#35 - Analyzing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Analyse\"},\"en\":{\"language\":\"en\",\"value\":\"To Analyze\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"const DEBUG \\\\u003d false;\\\\n\\\\nconst PORTFOLIO \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n  ATTR: {\\\\n    CONFIG: \\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst EPIC \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.epic\\\\u0027,\\\\n  ATTR: {\\\\n    PORTFOLIO: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n    STATE: \\\\u0027cf.cplace.solution.safe.state\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst CONFIGURATION \\\\u003d {\\\\n  WIP_REVIEW: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\u0027,\\\\n  WIP_ANALYZE: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\u0027,\\\\n}\\\\n\\\\nconst config \\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\n\\\\nif (!config) {\\\\n  return;\\\\n}\\\\n\\\\nconst wipLimit \\\\u003d config.get(CONFIGURATION.WIP_ANALYZE);\\\\n\\\\nif (!wipLimit || wipLimit \\\\u003c 0) {\\\\n  return\\\\n}\\\\n\\\\nconst search \\\\u003d new Search();\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\n\\\\nif (search.getHitCount() \\\\u003e\\\\u003d wipLimit) {\\\\n  return {\\\\n    reason: messages.get(\\\\u0027wip-limit-reached\\\\u0027)\\\\n  }\\\\n}\\\",\\\"contextEntityId\\\":\\\"juxz0x0mw19l7gtv7vpkr3hqj\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"actions\":\"\",\"isFixed\":false},{\"previousStateName\":\"#15 - Funnel\",\"nextStateName\":\"#25 - Reviewing\",\"displayName\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"In Überprüfung\"},\"en\":{\"language\":\"en\",\"value\":\"In Review\"}}},\"confirm\":false,\"successMessage\":{\"localizations\":{\"de\":{\"language\":\"de\",\"value\":\"Erfolg\"},\"en\":{\"language\":\"en\",\"value\":\"Success\"}}},\"executeValidators\":false,\"condition\":\"{\\\"version\\\":\\\"1\\\",\\\"script\\\":\\\"const DEBUG \\\\u003d false;\\\\n\\\\nconst PORTFOLIO \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n  ATTR: {\\\\n    CONFIG: \\\\u0027cf.cplace.solution.safe.portfolioConfiguration\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst EPIC \\\\u003d {\\\\n  TYPE: \\\\u0027cf.cplace.solution.safe.epic\\\\u0027,\\\\n  ATTR: {\\\\n    PORTFOLIO: \\\\u0027cf.cplace.solution.safe.portfolio\\\\u0027,\\\\n    STATE: \\\\u0027cf.cplace.solution.safe.state\\\\u0027\\\\n  }\\\\n}\\\\n\\\\nconst CONFIGURATION \\\\u003d {\\\\n  WIP_REVIEW: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitReview\\\\u0027,\\\\n  WIP_ANALYZE: \\\\u0027cf.cplace.solution.safe.kanbanWipLimitAnalyze\\\\u0027,\\\\n}\\\\n\\\\nconst config \\\\u003d page.getOptional(EPIC.ATTR.PORTFOLIO).get(PORTFOLIO.ATTR.CONFIG)\\\\n\\\\nif (!config) {\\\\n  return;\\\\n}\\\\n\\\\nconst wipLimit \\\\u003d config.get(CONFIGURATION.WIP_REVIEW);\\\\n\\\\nif (!wipLimit || wipLimit \\\\u003c 0) {\\\\n  return\\\\n}\\\\n\\\\nconst search \\\\u003d new Search();\\\\nsearch.add(Filters.and(Filters.type(EPIC.TYPE), Filters.customAttribute(EPIC.ATTR.STATE).eq(transition.nextStateInternalName)))\\\\n\\\\nif (search.getHitCount() \\\\u003e\\\\u003d wipLimit) {\\\\n  return {\\\\n    reason: messages.get(\\\\u0027wip-limit-reached\\\\u0027)\\\\n  }\\\\n}\\\",\\\"contextEntityId\\\":\\\"t0csp8daja3otfi216iavqq4u\\\",\\\"description\\\":\\\"\\\",\\\"upgradeAck\\\":true}\",\"actions\":\"\",\"isFixed\":false}]"}}</additionalConstraintData>
-        </customConstraint>
+          <attributeType>custom</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -6659,7 +6732,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#25 - Epic</defaultValues>
           <element>
             <value>#15 - Enabler</value>
@@ -6677,7 +6750,8 @@
               <en>Epic</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -6707,7 +6781,9 @@
 - Unlike &lt;competitor, current solution or non-existing solution&gt;
 - Our solution &lt;does something better - the "why"&gt;</de>
         </shortHelp>
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6721,7 +6797,9 @@
           <en>The measurable benefits that the business can anticipate if the epic hypothesis is proven to be correct.</en>
           <de>The measurable benefits that the business can anticipate if the epic hypothesis is proven to be correct.</de>
         </shortHelp>
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6735,7 +6813,9 @@
           <en>The early measures that will help predict the business outcome hypothesis. For more on this topic, see the Innovation Accounting advanced topic article.</en>
           <de>The early measures that will help predict the business outcome hypothesis. For more on this topic, see the Innovation Accounting advanced topic article.</de>
         </shortHelp>
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6752,7 +6832,9 @@
           <en>Nonfunctional requirements (NFRs) associated with the epic.</en>
           <de>Nonfunctional requirements (NFRs) associated with the epic.</de>
         </shortHelp>
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6763,7 +6845,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6777,10 +6861,11 @@
           <de>Start</de>
         </localizedShortName>
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6794,10 +6879,11 @@
           <de>Ende</de>
         </localizedShortName>
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6808,10 +6894,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6822,7 +6909,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -6881,7 +6968,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6895,7 +6983,7 @@
           <de>Value</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -6954,7 +7042,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -6968,7 +7057,7 @@
           <de>Time</de>
         </localizedShortName>
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -7027,7 +7116,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7038,7 +7128,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -7097,7 +7187,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7108,10 +7199,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>2</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7122,14 +7214,15 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <defaultValues>lpage/bmly5ecmejcwdw6evnkjxj8g4</defaultValues>
           <typeNames>cf.cplace.solution.safe.portfolio</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -7140,13 +7233,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.valueStream</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7157,13 +7251,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.epic</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -7177,13 +7272,14 @@
           <de>SAFe Meilensteine</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -7194,7 +7290,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#15 - none</defaultValues>
           <element>
             <value>#15 - none</value>
@@ -7228,7 +7324,8 @@
               <en>Accepted Conflict</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -7239,14 +7336,15 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <defaultValues>d0</defaultValues>
           <precision>0</precision>
           <localizedTextAfterSupplier>
             <en>%</en>
             <de>%</de>
           </localizedTextAfterSupplier>
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -7260,10 +7358,11 @@
           <de>Geplante Kosten</de>
         </localizedShortName>
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7274,10 +7373,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7288,10 +7388,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7302,13 +7403,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>default.user</typeNames>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7322,13 +7424,14 @@
           <de>Ziel</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.okr.objective</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -7342,7 +7445,7 @@
           <de>Phase</de>
         </localizedShortName>
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>#15 - MVP</value>
             <icon>page-no-status</icon>
@@ -7359,7 +7462,8 @@
               <en>Persevere</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -7382,13 +7486,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.portfolioConfiguration</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -7399,13 +7504,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.safeMilestone</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
     </type>
@@ -15194,7 +15300,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15205,12 +15313,13 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15221,12 +15330,13 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15237,12 +15347,13 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15253,13 +15364,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15270,13 +15382,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15287,13 +15400,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15304,10 +15418,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15318,10 +15433,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15332,10 +15448,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15346,10 +15463,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15360,10 +15478,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15374,10 +15493,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15388,10 +15508,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15402,7 +15523,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15413,13 +15536,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.horizon</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -15442,7 +15566,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15453,13 +15579,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.solution</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15470,10 +15597,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15484,10 +15612,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15498,13 +15627,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15515,7 +15645,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#35 - planned</defaultValues>
           <element>
             <value>#15 - done</value>
@@ -15541,7 +15671,8 @@
               <en>Planned</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15552,13 +15683,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.confidenceVote</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15572,10 +15704,11 @@
           <en>Capacity defined by Solution Train Engineer</en>
           <de>Capacity defined by Solution Train Engineer</de>
         </shortHelp>
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15589,7 +15722,9 @@
           <de>Confidence Vote</de>
         </localizedShortName>
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15600,7 +15735,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <longConstraint />
+        <constraint>
+          <attributeType>long</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
     </type>
@@ -15623,7 +15760,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15634,13 +15773,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.solution</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15651,7 +15791,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15665,7 +15807,7 @@
           <de>Feature Type</de>
         </localizedShortName>
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>scapability</defaultValues>
           <element>
             <value>capability</value>
@@ -15683,7 +15825,8 @@
               <en>Enabler</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15694,7 +15837,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <defaultValues>s#10 - Draft</defaultValues>
           <element>
             <value>#10 - Draft</value>
@@ -15768,7 +15911,8 @@
               <en>Done</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -15779,10 +15923,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>2</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15793,7 +15938,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -15852,7 +15997,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15863,7 +16009,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>-1</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -15922,7 +16068,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -15933,7 +16080,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>-1</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -15992,7 +16139,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16003,7 +16151,7 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberEnumerationConstraint>
+        <constraint>
           <precision>-1</precision>
           <localizedTextAfterSupplier />
           <element>
@@ -16062,7 +16210,8 @@
               <en>toolbarButtonGraphics TIFF</en>
             </localizedName>
           </element>
-        </numberEnumerationConstraint>
+          <attributeType>numberEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16073,13 +16222,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.programIncrement</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16090,10 +16240,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16104,10 +16255,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16118,10 +16270,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <numberConstraint>
+        <constraint>
           <precision>0</precision>
           <localizedTextAfterSupplier />
-        </numberConstraint>
+          <attributeType>number</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16132,13 +16285,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.program</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -16152,12 +16306,13 @@
           <de>Owner</de>
         </localizedShortName>
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <entityClass>cf.cplace.platform.assets.group.Person</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -16168,13 +16323,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.epic</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16185,7 +16341,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <stringConstraint />
+        <constraint>
+          <attributeType>string</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16196,10 +16354,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16210,10 +16369,11 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <dateConstraint>
+        <constraint>
           <specificity>DAY</specificity>
           <dateFormat>DAY_YEAR_LONG</dateFormat>
-        </dateConstraint>
+          <attributeType>date</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16227,13 +16387,14 @@
           <en>This is a workaround attribute to bypass duplicated type definitions and messed up references in Solution and Program level. For production the references should be derived from Features</en>
           <de>This is a workaround attribute to bypass duplicated type definitions and messed up references in Solution and Program level. For production the references should be derived from Features</de>
         </shortHelp>
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.iteration</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>true</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
       <attributes>
@@ -16247,9 +16408,10 @@
           <de>DoR</de>
         </localizedShortName>
         <shortHelp />
-        <booleanConstraint>
+        <constraint>
           <defaultValues>bfalse</defaultValues>
-        </booleanConstraint>
+          <attributeType>boolean</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -16263,9 +16425,10 @@
           <de>DoD</de>
         </localizedShortName>
         <shortHelp />
-        <booleanConstraint>
+        <constraint>
           <defaultValues>bfalse</defaultValues>
-        </booleanConstraint>
+          <attributeType>boolean</attributeType>
+        </constraint>
         <multiplicity>exactlyOne</multiplicity>
       </attributes>
       <attributes>
@@ -16276,7 +16439,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16287,7 +16452,9 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <richStringConstraint />
+        <constraint>
+          <attributeType>richString</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16301,7 +16468,7 @@
           <de>Konflikt</de>
         </localizedShortName>
         <shortHelp />
-        <textEnumerationConstraint>
+        <constraint>
           <element>
             <value>#25 - conflict</value>
             <icon>lightning-001-red</icon>
@@ -16310,7 +16477,8 @@
               <en>Unresolved Conflict</en>
             </localizedName>
           </element>
-        </textEnumerationConstraint>
+          <attributeType>textEnumeration</attributeType>
+        </constraint>
         <multiplicity>maximalOne</multiplicity>
       </attributes>
       <attributes>
@@ -16321,13 +16489,14 @@
         </localizedName>
         <localizedShortName />
         <shortHelp />
-        <referenceConstraint>
+        <constraint>
           <typeNames>cf.cplace.solution.safe.feature</typeNames>
           <entityClass>cf.cplace.platform.assets.file.Page</entityClass>
           <localizedInverseRoleName />
           <sameWorkspace>false</sameWorkspace>
           <isHierarchy>false</isHierarchy>
-        </referenceConstraint>
+          <attributeType>reference</attributeType>
+        </constraint>
         <multiplicity>anyNumber</multiplicity>
       </attributes>
     </type>

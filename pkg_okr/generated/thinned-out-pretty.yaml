@@ -13,30 +13,26 @@ package:
       en: Objectives Key Results
     type:
     - attributes:
-      - localizedName:
+      - constraint:
+          attributeType: string
+        localizedName:
           de: Jahr
           en: Year
         localizedShortName: null
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.year
         shortHelp: null
-        stringConstraint: null
-      - localizedName:
+      - constraint:
+          attributeType: string
+        localizedName:
           de: Quartal
           en: Quarter
         localizedShortName: null
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.quarter
         shortHelp: null
-        stringConstraint: null
-      - localizedName:
-          de: Status
-          en: Status
-        localizedShortName: null
-        multiplicity: exactlyOne
-        name: cf.cplace.solution.okr.status
-        shortHelp: null
-        textEnumerationConstraint:
+      - constraint:
+          attributeType: textEnumeration
           element:
           - icon: harvey-ball-red-100
             localizedName:
@@ -58,7 +54,15 @@ package:
               de: Entwurf
               en: Draft
             value: '#45 Draft'
-      - dateConstraint:
+        localizedName:
+          de: Status
+          en: Status
+        localizedShortName: null
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.status
+        shortHelp: null
+      - constraint:
+          attributeType: date
           dateFormat: DAY_YEAR_LONG
           specificity: DAY
         localizedName:
@@ -68,7 +72,8 @@ package:
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.start
         shortHelp: null
-      - dateConstraint:
+      - constraint:
+          attributeType: date
           dateFormat: DAY_YEAR_LONG
           specificity: DAY
         localizedName:
@@ -87,7 +92,11 @@ package:
         en: Cycle
       name: cf.cplace.solution.okr.cycle
     - attributes:
-      - localizedName:
+      - constraint:
+          attributeType: number
+          localizedTextAfterSupplier: null
+          precision: '-1'
+        localizedName:
           de: Nummer
           en: Number
         localizedShortName:
@@ -95,26 +104,18 @@ package:
           en: No.
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.number
-        numberConstraint:
-          localizedTextAfterSupplier: null
-          precision: '-1'
         shortHelp: null
-      - localizedName:
+      - constraint:
+          attributeType: string
+        localizedName:
           de: Titel
           en: Title
         localizedShortName: null
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.title
         shortHelp: null
-        stringConstraint: null
-      - localizedName:
-          de: Erreicht
-          en: Accomplished
-        localizedShortName: null
-        multiplicity: maximalOne
-        name: cf.cplace.solution.okr.accomplished
-        shortHelp: null
-        textEnumerationConstraint:
+      - constraint:
+          attributeType: textEnumeration
           defaultValues: s#25 - no
           element:
           - icon: x-112-cplace-square-green-check
@@ -127,13 +128,21 @@ package:
               de: Nein
               en: 'No'
             value: '#25 - no'
-      - localizedName:
+        localizedName:
+          de: Erreicht
+          en: Accomplished
+        localizedShortName: null
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.accomplished
+        shortHelp: null
+      - constraint:
+          attributeType: richString
+        localizedName:
           de: Beschreibung
           en: Description
         localizedShortName: null
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.description
-        richStringConstraint: null
         shortHelp: null
       iconName: fa-bullseye
       localizedNamePlural:
@@ -144,7 +153,11 @@ package:
         en: Objective
       name: cf.cplace.solution.okr.objective
     - attributes:
-      - localizedName:
+      - constraint:
+          attributeType: number
+          localizedTextAfterSupplier: null
+          precision: '-1'
+        localizedName:
           de: Nummer
           en: Number
         localizedShortName:
@@ -152,26 +165,18 @@ package:
           en: No.
         multiplicity: exactlyOne
         name: cf.cplace.solution.okr.number
-        numberConstraint:
-          localizedTextAfterSupplier: null
-          precision: '-1'
         shortHelp: null
-      - localizedName:
+      - constraint:
+          attributeType: string
+        localizedName:
           de: Titel
           en: Title
         localizedShortName: null
         multiplicity: maximalOne
         name: cf.cplace.solution.okr.title
         shortHelp: null
-        stringConstraint: null
-      - localizedName:
-          de: Fortschritt Vorhersage
-          en: Grading Forecast
-        localizedShortName: null
-        multiplicity: maximalOne
-        name: cf.cplace.solution.okr.gradingForecast
-        shortHelp: null
-        textEnumerationConstraint:
+      - constraint:
+          attributeType: textEnumeration
           element:
           - icon: circle-001-red
             localizedName:
@@ -223,20 +228,29 @@ package:
               de: '1.0'
               en: '1.0'
             value: '1.0'
-      - localizedName:
-          de: Objective
-          en: Objective
+        localizedName:
+          de: Fortschritt Vorhersage
+          en: Grading Forecast
         localizedShortName: null
-        multiplicity: exactlyOne
-        name: cf.cplace.solution.okr.objective
-        referenceConstraint:
+        multiplicity: maximalOne
+        name: cf.cplace.solution.okr.gradingForecast
+        shortHelp: null
+      - constraint:
+          attributeType: reference
           entityClass: cf.cplace.platform.assets.file.Page
           isHierarchy: 'true'
           localizedInverseRoleName: null
           sameWorkspace: 'true'
           typeNames: cf.cplace.solution.okr.objective
+        localizedName:
+          de: Objective
+          en: Objective
+        localizedShortName: null
+        multiplicity: exactlyOne
+        name: cf.cplace.solution.okr.objective
         shortHelp: null
-      - dateConstraint:
+      - constraint:
+          attributeType: date
           dateFormat: DAY_YEAR_LONG
           specificity: DAY
         localizedName:

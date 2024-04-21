@@ -150,17 +150,6 @@ def generate_pkgs():
             os.system("zip -j " + pkg_folder_name + "/" + file + ".zip " + pkg_folder_name + "/" + "export.xml")
 
 
-def add_reference_constraint_def_class(constraint_factory):
-    # get child element with tag 'multiplicity'
-    multiplicity = constraint_factory.find('.//multiplicity')
-    key = multiplicity.find('.//key')
-    if key is not None:
-        if key.text == 'exactlyOne' or key.text == 'maximalOne':
-            add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef')
-            return
-    add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
-
-
 def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
     if 'xmlns:xsi' in root.attrib:
         del root.attrib['xmlns:xsi']
@@ -238,53 +227,113 @@ def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
     for workspace in workspaces:
         add_element(workspace, 'apps', '["cf.cplace.platform"]')
 
-    for constraint_factory in root.findall('.//textEnumerationConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'textEnumerationConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+    for constraint in root.findall('.//constraint'):
+        # read the value of the element with tag 'attributeType'
+        attribute_type_element = constraint.find('.//attributeType')
+        attribute_type = attribute_type_element.text
 
-        rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map)
+        if attribute_type == 'string':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'stringConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiStringAttributeDef')
 
-    for constraint_factory in root.findall('.//numberEnumerationConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'numberEnumerationConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+        elif attribute_type == 'long':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'longConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiStringAttributeDef')
 
-        rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map)
+        elif attribute_type == 'number':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'numberConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiNumberAttributeDef')
 
-    for constraint_factory in root.findall('.//stringConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'stringConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+        elif attribute_type == 'date':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'dateConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiDateAttributeDef')
 
-    for constraint_factory in root.findall('.//dateConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'dateConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDateAttributeDef')
+        elif attribute_type == 'richString':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'richStringConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiRichStringAttributeDef')
 
-    for constraint_factory in root.findall('.//numberConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'numberConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef')
+        elif attribute_type == 'boolean':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'booleanConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiBooleanAttributeDef')
 
-    for constraint_factory in root.findall('.//richStringConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'richStringConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleRichStringAttributeDef')
+        elif attribute_type == 'textEnumeration':
+            constraint_factory = rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'textEnumerationConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiStringAttributeDef')
 
-    for constraint_factory in root.findall('.//booleanConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'booleanConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleBooleanAttributeDef')
+            rewrite_to_pkg_format_enumeration_values(constraint_factory)
 
-    for constraint_factory in root.findall('.//colorConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'colorConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef')
+        elif attribute_type == 'numberEnumeration':
+            constraint_factory = rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'numberEnumerationConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleNumberAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiNumberAttributeDef')
 
-    for constraint_factory in root.findall('.//localizedStringConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'localizedStringConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef')
+            rewrite_to_pkg_format_enumeration_values(constraint_factory)
 
-    for constraint_factory in root.findall('.//dynamicEnumerationConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'dynamicEnumerationConstraint')
-        add_element(constraint_factory, 'attributeDefClass', 'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef')
+        elif attribute_type == 'localizedString':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'localizedStringConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleLocalizedStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiLocalizedStringAttributeDef')
 
-    for constraint_factory in root.findall('.//referenceConstraint'):
-        rewrite_constraint_factory(constraint_factory, parent_map, 'referenceConstraint')
-        add_reference_constraint_def_class(constraint_factory)
+        elif attribute_type == 'dynamicEnumeration':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'dynamicEnumerationConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleDynamicEnumerationAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiDynamicEnumerationAttributeDef')
+
+        elif attribute_type == 'reference':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'referenceConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleReferenceAttributeDef$SingleCustomReferenceAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiReferenceAttributeDef$MultiCustomReferenceAttributeDef')
+
+        elif attribute_type == 'color':
+            rewrite_constraint_factory_to_pkg(
+                constraint,
+                parent_map,
+                'colorConstraint',
+                'cf.cplace.platform.assets.custom.def.SingleStringAttributeDef',
+                'cf.cplace.platform.assets.custom.def.MultiStringAttributeDef')
+
+        else:
+            print('Unknown attribute type: ' + attribute_type)
 
     type_defs = root.findall('.//typeDef')
     for type_def in type_defs:
@@ -343,10 +392,18 @@ def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
         widget_container.append(widgets)
 
 
-def rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map):
+def rewrite_to_pkg_format_enumeration_values(constraint_factory):
+    parent_map = get_parent_map(constraint_factory)
     element_to_icon = {}
     element_to_localized_names = {}
+
+    # print text representation of constraint_factory
+    print(ET.tostring(constraint_factory, encoding='utf-8', method='xml').decode('utf-8'))
+
     for element in constraint_factory.findall('.//element'):
+
+        print("element: " + ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8'))
+
         value = element.find('.//value').text
 
         new_element = ET.Element('elements')
@@ -411,13 +468,32 @@ def rewrite_to_pkg_format_enumeration_values(constraint_factory, parent_map):
                 entry.append(value_element)
 
 
-def rewrite_constraint_factory(constraint_factory, parent_map, constraint_name):
-    attribute = parent_map[constraint_factory]
+def rewrite_constraint_factory_to_pkg(constraint, parent_map, constraint_name, single_def_class, multi_def_class):
+    attribute = parent_map[constraint]
+    constraint_factory = ET.Element('constraintFactory')
+    constraint_factory.set('type', constraint_name)
+    attribute.append(constraint_factory)
     multiplicity = attribute.find('.//multiplicity')
     constraint_factory.append(multiplicity)
     attribute.remove(multiplicity)
-    constraint_factory.set('type', constraint_name)
-    constraint_factory.tag = 'constraintFactory'
+    attribute.remove(constraint)
+
+    # move alle children of constraint to constraint_factory
+    for child in list(constraint):
+        if not child.tag == 'attributeType':
+            constraint_factory.append(child)
+            constraint.remove(child)
+
+    # get child element with tag 'multiplicity'
+    multiplicity = constraint_factory.find('.//multiplicity')
+    key = multiplicity.find('.//key')
+    if key is not None:
+        if key.text == 'exactlyOne' or key.text == 'maximalOne':
+            add_element(constraint_factory, 'attributeDefClass', single_def_class)
+            return
+    add_element(constraint_factory, 'attributeDefClass', multi_def_class)
+
+    return constraint_factory
 
 
 def add_element(package, element_name, text=None):
@@ -515,29 +591,6 @@ def rewrite(root, parent_map):
         slot = parent_map[types]
         slot.remove(types)
 
-    multiplicities = root.findall('.//multiplicity')
-    for multiplicity in multiplicities:
-        key = multiplicity.find('.//key')
-        if key is None:
-            multiplicity.text = 'anyNumber'
-        else:
-            multiplicity.text = key.text
-            # remove the tag `key`
-            multiplicity.remove(key)
-
-        constraint = parent_map[multiplicity]
-        attribute = parent_map[constraint]
-        # move the multiplicity element to the attribute element
-        attribute.append(multiplicity)
-        constraint.remove(multiplicity)
-
-    constraint_factories = root.findall('.//constraintFactory')
-    for constraint_factory in constraint_factories:
-        # set constraint_factory tag to the value of the attribute `type`
-        constraint_factory.tag = constraint_factory.get('type')
-        # remove the attribute `type`
-        del constraint_factory.attrib['type']
-
     parent_map = get_parent_map(root)
 
     element2localized_labels = {}
@@ -566,15 +619,40 @@ def rewrite(root, parent_map):
     for element_to_localized_label in root.findall('.//element2localizedLabel'):
         parent_map[element_to_localized_label].remove(element_to_localized_label)
 
-    for element in root.findall('.//textEnumerationConstraint/elements'):
+    for element in root.findall('.//constraintFactory[@type="textEnumerationConstraint"]/elements'):
         rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map)
 
-    for element in root.findall('.//numberEnumerationConstraint/elements'):
+    for element in root.findall('.//constraintFactory[@type="numberEnumerationConstraint"]/elements'):
         rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map)
 
     # print(elements)
     # print(element2icon)
     # print(element2localized_labels)
+
+    multiplicities = root.findall('.//multiplicity')
+    for multiplicity in multiplicities:
+        key = multiplicity.find('.//key')
+        if key is None:
+            multiplicity.text = 'anyNumber'
+        else:
+            multiplicity.text = key.text
+            # remove the tag `key`
+            multiplicity.remove(key)
+
+        constraint = parent_map[multiplicity]
+        attribute = parent_map[constraint]
+        # move the multiplicity element to the attribute element
+        attribute.append(multiplicity)
+        constraint.remove(multiplicity)
+
+        constraint_factories = root.findall('.//constraintFactory')
+        for constraint_factory in constraint_factories:
+            constraint_factory.tag = 'constraint'
+            constraint_type = constraint_factory.get('type')
+            # remove the suffix 'Constraint' from the constraint_type
+            constraint_type = constraint_type[:-10]
+            add_element(constraint_factory, 'attributeType', constraint_type)
+            del constraint_factory.attrib['type']
 
     # move slots one level up
     for slot in root.findall('.//slot'):
@@ -582,9 +660,6 @@ def rewrite(root, parent_map):
 
     for slots in root.findall('.//slots'):
         root.remove(slots)
-
-
-
 
 
 def rewrite_enumeration_element(element, element2icon, element2localized_labels, elements, icon, localized_labels, parent_map):
@@ -614,6 +689,9 @@ def rewrite_enumeration_element(element, element2icon, element2localized_labels,
         # print(new_localized_name)
     parent_map[element].append(new_element)
     parent_map[element].remove(element)
+
+    # print a textual representation of the element
+    # print(ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8'))
 
 
 def remove_slots(root, parent_map, slots_to_be_retained):
