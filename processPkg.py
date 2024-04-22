@@ -375,6 +375,11 @@ def rewrite_to_pkg_format_add_mandatory_elements(root, parent_map):
         page = ET.Element('page')
         root_page.append(page)
         add_element(page, 'name', 'Root Page')
+
+        # q: how to generate a random id, which is based on a seed and is deterministic?
+        # a: use random.seed(seed) to set the seed
+
+        random.seed(42)
         id = ''.join(random.choices(string.ascii_lowercase + string.digits, k=25))
         add_element(page, 'id', id)
 
@@ -398,11 +403,11 @@ def rewrite_to_pkg_format_enumeration_values(constraint_factory):
     element_to_localized_names = {}
 
     # print text representation of constraint_factory
-    print(ET.tostring(constraint_factory, encoding='utf-8', method='xml').decode('utf-8'))
+    # print(ET.tostring(constraint_factory, encoding='utf-8', method='xml').decode('utf-8'))
 
     for element in constraint_factory.findall('.//element'):
 
-        print("element: " + ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8'))
+        # print("element: " + ET.tostring(element, encoding='utf-8', method='xml').decode('utf-8'))
 
         value = element.find('.//value').text
 

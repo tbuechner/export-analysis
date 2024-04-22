@@ -1,0 +1,13 @@
+The following json schema represents describes a json format for specifying data models:
+
+```
+{{ load_file('json-schema.json') }}
+```
+
+The following json document is an example of a data model specified in the format described by the schema:
+
+```
+{{ load_file('pkg_okr/generated/thinned-out-compressed.json') }}
+```
+
+Explain the schema in your own words. What is the purpose of the schema? What does it describe? What are the different parts of the schema?

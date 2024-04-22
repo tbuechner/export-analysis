@@ -1,0 +1,20 @@
+The following json schema represents describes a json format for specifying data models:
+
+```
+{{ load_file('json-schema.json') }}
+```
+
+The following json document is an example of a data model specified in the format described by the schema:
+
+```
+{{ load_file('pkg_okr/generated/thinned-out-compressed.json') }}
+```
+
+The following code represents a data model of an application:
+
+```
+{{ load_file('pkg_largesafe_core/generated/basic-structure-compressed.json') }}
+```
+
+What would be potential extensions of the data model to enable additional capabilities?
+
