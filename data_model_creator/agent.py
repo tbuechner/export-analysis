@@ -8,7 +8,6 @@ from langchain_core.language_models import LanguageModelLike
 
 from models import TypeDefinitions
 from tools.attribute import get_attribute_tools
-from tools.data import get_data_tools
 from tools.type import get_type_tools
 
 
@@ -36,7 +35,6 @@ def create_data_model_agent(
     tools = []
     tools.extend(get_type_tools(type_definitions))
     tools.extend(get_attribute_tools(type_definitions))
-    tools.extend(get_data_tools(type_definitions))
 
     agent = create_openai_tools_agent(llm, tools, prompt)
     # Create an agent executor by passing in the agent and tools

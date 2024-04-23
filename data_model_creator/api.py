@@ -59,9 +59,5 @@ def invoke(input: str):
         },
     )
 
-    return {
-        "output": result["output"],
-        "data_models": json.loads(
-            json.dumps(type_definitions, default=pydantic_encoder)
-        )
-    }
+    print("type_definitions: " + json.dumps(type_definitions, default=pydantic_encoder))
+    print("output: " + result["output"])
