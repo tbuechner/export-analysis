@@ -13,30 +13,6 @@ from agent import create_data_model_agent
 from models import TypeDefinitions
 
 
-
-class Input(BaseModel):
-    data_models: Optional[dict] = {}
-    history: Optional[List[Union[HumanMessage, AIMessage, FunctionMessage]]]
-    input: str
-
-
-class Wrapper:
-    def __init__(self, wrapped_class):
-        self.wrapped_class = wrapped_class
-
-    def __getattr__(self, attr):
-        original_func = getattr(self.wrapped_class, attr)
-
-        def wrapper(*args, **kwargs):
-            print(f"Calling function: {attr}")
-            print(f"Arguments: {args}, {kwargs}")
-            result = original_func(*args, **kwargs)
-            print(f"Response: {result}")
-            return result
-
-        return wrapper
-
-
 def invoke(input: str):
     type_definitions: TypeDefinitions = {}
 
