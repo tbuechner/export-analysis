@@ -11,6 +11,7 @@ from langchain_openai import AzureChatOpenAI
 from pydantic.json import pydantic_encoder
 
 from data_model_creator.tools.models import TypeDefinitions
+from data_model_creator.tools.package import get_search_tools
 from tools.attribute import get_attribute_tools
 from tools.type import get_type_tools
 
@@ -21,6 +22,8 @@ def invoke(input: str):
     llm = AzureChatOpenAI(
         temperature=0.0, model="gpt-35-turbo", api_version="2024-02-01"
     )
+
+
     # llm.client = Wrapper(llm.client)
 
     agent_executor = create_data_model_agent(llm, type_definitions, verbose=True)
@@ -65,6 +68,7 @@ def create_data_model_agent(
     tools = []
     tools.extend(get_type_tools(type_definitions))
     tools.extend(get_attribute_tools(type_definitions))
+    # tools.extend(get_search_tools())
 
     agent = create_openai_tools_agent(llm, tools, prompt)
     # Create an agent executor by passing in the agent and tools
