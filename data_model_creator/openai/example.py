@@ -7,8 +7,7 @@ import requests
 from openai.lib.azure import AzureOpenAI
 
 
-
-def provide_user_specific_recommendations(user_input, user_id):
+def provide_user_specific_recommendations():
     customer_profile = {
         "name": "John Doe",
         "location": {
@@ -32,13 +31,7 @@ def provide_user_specific_recommendations(user_input, user_id):
         "user_rank": "Gold",  # based on some internal ranking system
     }
 
-    if customer_profile is None:
-        return "I couldn't find your profile. Could you please verify your user ID?"
-
     customer_profile_str = json.dumps(customer_profile)
-
-    food_preference = customer_profile.get('preferences', {}).get('food', [])[0] if customer_profile.get('preferences', {}).get('food') else None
-
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -47,7 +40,7 @@ def provide_user_specific_recommendations(user_input, user_id):
                 "role": "system",
                 "content": f"You are a sophisticated AI assistant, a specialist in user intent detection and interpretation. Your task is to perceive and respond to the user's needs, even when they're expressed in an indirect or direct manner. You excel in recognizing subtle cues: for example, if a user states they are 'hungry', you should assume they are seeking nearby dining options such as a restaurant or a cafe. If they indicate feeling 'tired', 'weary', or mention a long journey, interpret this as a request for accommodation options like hotels or guest houses. However, remember to navigate the fine line of interpretation and assumption: if a user's intent is unclear or can be interpreted in multiple ways, do not hesitate to politely ask for additional clarification. Make sure to tailor your responses to the user based on their preferences and past experiences which can be found here {customer_profile_str}"
             },
-            {"role": "user", "content": user_input}
+            {"role": "user", "content": "I'm hungry"}
         ],
         temperature=0,
         tools=[
@@ -105,7 +98,5 @@ client = AzureOpenAI(
     azure_deployment = "gpt-35-turbo",
     api_key=api_key)
 
-user_id = "user1234"
-user_input = "I'm hungry"
-output = provide_user_specific_recommendations(user_input, user_id)
+output = provide_user_specific_recommendations()
 print(output)
