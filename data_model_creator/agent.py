@@ -6,7 +6,7 @@ from langchain_core.messages import SystemMessage
 from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_core.language_models import LanguageModelLike
 
-from models import TypeDefinitions
+from data_model_creator.tools.models import TypeDefinitions
 from tools.attribute import get_attribute_tools
 from tools.type import get_type_tools
 

@@ -6,7 +6,7 @@ from langchain.pydantic_v1 import BaseModel, Field
 from langchain_core.tools import BaseTool
 from pydantic.json import pydantic_encoder
 
-from data_model_creator.models import Type, TypeDefinitions
+from data_model_creator.tools.models import Type, TypeDefinitions
 
 
 class CreateDataModelInput(BaseModel):

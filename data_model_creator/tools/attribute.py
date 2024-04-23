@@ -1,12 +1,11 @@
 import json
 from pydantic.json import pydantic_encoder
-from enum import Enum
 from typing import List, Optional, Sequence
 
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain_core.tools import BaseTool, StructuredTool, ToolException
 
-from data_model_creator.models import (
+from data_model_creator.tools.models import (
     Attribute,
     AttributeType,
     AttributeTypeValues,
