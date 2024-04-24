@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the person"
+    },
+    "major": {
+      "type": "string",
+      "description": "Major subject."
+    },
+    "school": {
+      "type": "string",
+      "description": "The university name."
+    },
+    "grades": {
+      "type": "integer",
+      "description": "GPA of the student."
+    },
+    "club": {
+      "type": "string",
+      "description": "School club for extracurricular activities. "
+    }
+  }
+}
