@@ -1,0 +1,4 @@
+Generate a data model for a risk management application.
+
+Risks should have a description, an impact and a probability. Use the prefix `cf.cplace.solution.risk.` for internal names.
+

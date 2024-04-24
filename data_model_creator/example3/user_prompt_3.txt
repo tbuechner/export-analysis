@@ -1,0 +1,1 @@
+I am interested in a data model for a risk management application. What types and attributes do you propose for a risk management application?
