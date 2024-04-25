@@ -22,31 +22,22 @@ def call_ai():
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": user_prompt}
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
         ],
         temperature=0,
-        tools=[
-            {
+        tools=[{
                 "type": "function",
                 "function" :     {
                     'name': 'generate_data_model',
                     'description': 'Generate a data model from the body of the input text',
                     'parameters': parameters
-                }
-            }
-        ],
+                }}],
     )
 
     response_str = str(response)
-    print("Response:", response_str)
+    print("Full response:", response_str)
 
-    tool_params = []
     for choice in response.choices:
         message = choice.message
         if message.tool_calls:
@@ -55,20 +46,14 @@ def call_ai():
                 print(tool_call.function.arguments)
 
         if message.content:
-            print("Answer")
+            print("Answer:")
             print(message.content)
 
 
-
-
 load_dotenv()
-
 api_key = os.environ.get("AZURE_OPENAI_API_KEY", "<your OpenAI API key if not set as env var>")
-
 azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "https://api.openai.com")
-
-print("API Key:", api_key)
-
+# print("API Key:", api_key)
 client = AzureOpenAI(
     api_version="2024-02-01",
     azure_endpoint = azure_openai_endpoint,
