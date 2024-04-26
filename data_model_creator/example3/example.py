@@ -8,6 +8,17 @@ from openai.lib.azure import AzureOpenAI
 
 def call_ai():
 
+    load_dotenv()
+    api_key = os.environ.get("AZURE_OPENAI_API_KEY", "<your OpenAI API key if not set as env var>")
+    # print("API Key:", api_key)
+    azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "https://api.openai.com")
+    # print("Azure OpenAI Endpoint:", azure_openai_endpoint)
+    client = AzureOpenAI(
+        api_version="2024-02-01",
+        azure_endpoint = azure_openai_endpoint,
+        azure_deployment = "gpt-35-turbo",
+        api_key=api_key)
+
     with open("user_prompt.txt", "r") as file:
         user_prompt = file.read()
 
@@ -49,15 +60,5 @@ def call_ai():
             print("Answer:")
             print(message.content)
 
-
-load_dotenv()
-api_key = os.environ.get("AZURE_OPENAI_API_KEY", "<your OpenAI API key if not set as env var>")
-azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "https://api.openai.com")
-# print("API Key:", api_key)
-client = AzureOpenAI(
-    api_version="2024-02-01",
-    azure_endpoint = azure_openai_endpoint,
-    azure_deployment = "gpt-35-turbo",
-    api_key=api_key)
 
 call_ai()

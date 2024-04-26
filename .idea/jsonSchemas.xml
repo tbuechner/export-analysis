@@ -3,17 +3,35 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
-        <entry key="AI - Data Models">
+        <entry key="Data Models">
           <value>
             <SchemaInfo>
               <option name="generatedName" value="New Schema" />
-              <option name="name" value="AI - Data Models" />
+              <option name="name" value="Data Models" />
               <option name="relativePathToSchema" value="json-schema.json" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
                     <option name="path" value="*thinned*.json" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="Data Models - Rewritten">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="Data Models - Rewritten" />
+              <option name="relativePathToSchema" value="json-schema-rewritten.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="*rewritten*.json" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>

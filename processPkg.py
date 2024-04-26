@@ -76,6 +76,11 @@ def process_pkg(folder_name):
     # create a deep clone of root
     root_copy = ET.fromstring(ET.tostring(root))
     parent_map = get_parent_map(root_copy)
+    rewrite_to_json(root_copy, parent_map, folder_name_generated, "rewritten")
+
+    # create a deep clone of root
+    root_copy = ET.fromstring(ET.tostring(root))
+    parent_map = get_parent_map(root_copy)
 
     remove_to_basics(root_copy, parent_map)
     pretty_print_xml(root_copy, 0)
@@ -116,6 +121,45 @@ def get_type_name_2_attribute_names(folder_name):
 def get_parent_map(root):
     return {c: p for p in root.iter() for c in p}
 
+
+def rewrite_to_json(root, parent_map, folder_name, file_name):
+    remove_attribute(root, 'xmlVersion')
+    remove_attribute(root, 'xmlns:xsi')
+    remove_attribute(root, 'xsi:noNamespaceSchemaLocation')
+    remove_attribute(root, '{http://www.w3.org/2001/XMLSchema-instance}noNamespaceSchemaLocation')
+
+    name = root.find('./name')
+    name.tag = 'localizedName'
+
+    for slot in root.findall('.//slot'):
+        # rename the tag 'slot' to 'slots'
+        slot.tag = 'slots'
+
+        name_ = slot.find('.name')
+        name_.tag = 'localizedName'
+
+        for type_ in slot.findall('.//type'):
+            print("type: " + ET.tostring(type_, encoding='utf-8').decode('utf-8'))
+
+            # rename the tag 'type' to 'types'
+            type_.tag = 'types'
+
+            for attribute in type_.findall('.//attributes'):
+                # rename the tag 'attributes' to 'attributes'
+                attribute.tag = 'attributes'
+
+                for element in attribute.findall('.//element'):
+                    # rename the tag 'element' to 'elements'
+                    element.tag = 'elements'
+
+    json_object = xmltodict.parse(ET.tostring(root, encoding='utf-8'), force_list=('slots', 'types', 'attributes', 'elements'))
+    # write the json object to a file
+    write_json_to_file(folder_name, file_name, json_object)
+
+
+def remove_attribute(element, attribute_name):
+    if attribute_name in element.attrib:
+        del element.attrib[attribute_name]
 
 def rewrite_to_pkg_format(root, tree):
     parent_map = get_parent_map(root)
