@@ -139,7 +139,6 @@ def rewrite_to_json(root, parent_map, folder_name, file_name):
         name_.tag = 'localizedName'
 
         for type_ in slot.findall('.//type'):
-            print("type: " + ET.tostring(type_, encoding='utf-8').decode('utf-8'))
 
             # rename the tag 'type' to 'types'
             type_.tag = 'types'
