@@ -1,0 +1,15 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('ws_okr/generated/types-compressed.json') }}
+```
+
+It follows this schema:
+
+```
+{{ load_file('json-schema.json') }}
+```
+
+Give me a summary of the data model. What are the capabilities of the application? What are the main entities and their relationships? What are the main attributes of each entity? What are the main operations that can be performed with the application?
+
+Give me a list of the types and the attributes and what they represent.

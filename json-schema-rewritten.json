@@ -15,6 +15,10 @@
               "type": "string"
             }
           },
+          "required": [
+            "de",
+            "en"
+          ],
           "additionalProperties": false
         },
         "slots": {
@@ -32,6 +36,10 @@
                     "type": "string"
                   }
                 },
+                "required": [
+                  "de",
+                  "en"
+                ],
                 "additionalProperties": false
               },
               "internalName": {
@@ -58,6 +66,10 @@
                           "type": "string"
                         }
                       },
+                      "required": [
+                        "de",
+                        "en"
+                      ],
                       "additionalProperties": false
                     },
                     "localizedNamePlural": {
@@ -70,6 +82,10 @@
                           "type": "string"
                         }
                       },
+                      "required": [
+                        "de",
+                        "en"
+                      ],
                       "additionalProperties": false
                     },
                     "iconName": {
@@ -93,6 +109,10 @@
                                 "type": "string"
                               }
                             },
+                            "required": [
+                              "de",
+                              "en"
+                            ],
                             "additionalProperties": false
                           },
                           "localizedShortName": {
@@ -108,6 +128,10 @@
                                 "type": "string"
                               }
                             },
+                            "required": [
+                              "de",
+                              "en"
+                            ],
                             "additionalProperties": false
                           },
                           "shortHelp": {
@@ -123,6 +147,10 @@
                                 "type": "string"
                               }
                             },
+                            "required": [
+                              "de",
+                              "en"
+                            ],
                             "additionalProperties": false
                           },
                           "constraint": {
@@ -138,9 +166,6 @@
                                   },
                                   "entityClass": {
                                     "type": "string"
-                                  },
-                                  "localizedInverseRoleName": {
-                                    "type": "null"
                                   },
                                   "sameWorkspace": {
                                     "type": "string"
@@ -227,6 +252,10 @@
                                         "type": "string"
                                       }
                                     },
+                                    "required": [
+                                      "de",
+                                      "en"
+                                    ],
                                     "additionalProperties": false
                                   }
                                 },
@@ -301,6 +330,10 @@
                                               "type": "string"
                                             }
                                           },
+                                          "required": [
+                                            "de",
+                                            "en"
+                                          ],
                                           "additionalProperties": false
                                         }
                                       },

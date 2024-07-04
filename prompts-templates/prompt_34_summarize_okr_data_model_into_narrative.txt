@@ -1,0 +1,20 @@
+The following code contains a representation of a data model of an application:
+
+```
+{{ load_file('ws_okr/generated/types-compressed.json') }}
+```
+
+It follows this schema:
+
+```
+{{ load_file('json-schema.json') }}
+```
+
+Give me a summary of the data model.
+What are the capabilities of the application?
+What are the main operations that can be performed with the application?
+What are the use cases of the application?
+
+The capabilites and use cases should be described in a way that is understandable to a non-technical person.
+
+The capabilities and use cases should cover most of the data model.
